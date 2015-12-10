@@ -1,0 +1,27 @@
+{
+  "name": "apollo-ui",
+  "version": "0.0.1",
+  "description": "HTML and CSS framework to implement the Apollo visual language.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.imshealth.com:2222/apollo/ui-platform.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "framework",
+    "design",
+    "pattern",
+    "library"
+  ],
+  "author": "David Baughman <dbaughman@us.imshealth.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
