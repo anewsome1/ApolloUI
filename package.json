@@ -22,6 +22,9 @@
   "author": "David Baughman <dbaughman@us.imshealth.com>",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.1.1"
   }
 }
