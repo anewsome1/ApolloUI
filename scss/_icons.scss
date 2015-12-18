@@ -6,6 +6,7 @@ $icon-svg-id: $icon-family;
 
 @include font-face($icon-family, $icon-cdn-path, $icon-svg-id);
 
+// Base icon definition
 .icon {
   display: inline-block;
   font-family: $icon-family;
@@ -20,7 +21,7 @@ $icon-svg-id: $icon-family;
   -moz-osx-font-smoothing: grayscale;
 }
 
-// Iterate through `$icons` map and create
+// Iterate through `$icons` map and create class for each character
 @each $name, $character in $icons {
   .icon-#{ $name }::before {
     content: $character;
