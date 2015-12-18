@@ -1,4 +1,4 @@
-@mixin font-face($family, $path, $svg-id) {
+@mixin font-face($family, $path, $svg-id, $weight: 'normal', $style: 'normal' ) {
   @font-face {
     font-family: $family;
     src: url('#{ $path }.eot');
@@ -6,7 +6,7 @@
          url('#{ $path }.woff') format('woff'),
          url('#{ $path }.ttf') format('truetype'),
          url('#{ $path }.svg##{ $svg-id }') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: $weight;
+    font-style: $style;
   }
 }
