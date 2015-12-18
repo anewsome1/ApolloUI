@@ -5,12 +5,12 @@ var browserSync = require( 'browser-sync' );
 
 
 gulp.task( 'serve', [ 'default' ], function() {
-    browserSync.init({
-        server: 'dist'
-    });
+  browserSync.init({
+    server: 'dist'
+  });
 
-    gulp.watch( 'scss/**/*.scss', [ 'styles' ] );
-    gulp.watch( 'docs/**/*', [ 'docs' ] );
+  gulp.watch( 'scss/**/*.scss', [ 'styles' ] );
+  gulp.watch( 'docs/**/*', [ 'docs' ] );
 });
 
 
