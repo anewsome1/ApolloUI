@@ -16,7 +16,7 @@ gulp.task( 'serve', [ 'default' ], function() {
 
 gulp.task( 'styles', function () {
   gulp.src( 'scss/apollo.scss' )
-    .pipe( sass({ outputStyle: 'compressed' }) )
+    .pipe( sass({ outputStyle: 'expanded' }) ) // expanded for development
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });

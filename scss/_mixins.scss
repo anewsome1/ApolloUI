@@ -1,3 +1,5 @@
+
+/// Creates font-face declaration with optional font weight and style
 @mixin font-face($family, $path, $svg-id, $weight: 'normal', $style: 'normal' ) {
   @font-face {
     font-family: $family;
