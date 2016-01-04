@@ -16,7 +16,11 @@ gulp.task( 'serve', [ 'default' ], function() {
 
 gulp.task( 'styles', function () {
   gulp.src( 'scss/apollo.scss' )
-    .pipe( sass({ outputStyle: 'expanded' }) ) // expanded for development
+    .pipe( sass({ 
+        includePaths: [ 'node_modules' ],
+        outputStyle: 'expanded'  // expanded for development
+      })
+      .on( 'error', sass.logError ))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });
