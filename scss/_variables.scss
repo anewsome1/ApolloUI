@@ -22,3 +22,39 @@ $orange:            #ff940c;
 
 $font-family-serif: 'Merriweather', serif;
 $font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
+
+
+///
+/// Forms
+///
+
+$shadow-hover: 8px 8px 16px rgba(0, 0, 0, .15);
+$shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
+$transition-: .25s cubic-bezier(.000, .000, .500, 1);
+
+
+
+///
+/// Buttons
+/// 
+$btn-font-weight: normal;
+$input-btn-border-width: 1px;
+
+
+$btn-variants: (
+  primary: (
+    bg: $blue,
+    color: #fff,
+    bg-active: $navy,
+    color-active: #fff
+  ),
+  secondary: (
+    bg: $gray-lighter,
+    color: #fff,
+    bg-active: $navy,
+    color-active: #fff
+  )
+);
+
+
+

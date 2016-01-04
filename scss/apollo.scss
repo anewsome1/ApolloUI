@@ -1,8 +1,13 @@
 // Scaffolding
 @import 'variables';
 @import 'mixins';
+@import 'bootstrap/scss/bootstrap-reboot';
+
+// Grid
+@import 'bootstrap/scss/bootstrap-grid';
 
 // Core styles
+@import 'fonts';
 @import 'icons';
 
 // Components

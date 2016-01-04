@@ -1,0 +1,19 @@
+@import 'font-map';
+
+
+@each $font-family, $family-props in $font-faces {
+  $font-path: map-get($family-props, path);
+  $font-weights: map-get($family-props, weights);
+
+  @each $weight, $weight-props in $font-weights {
+    $font-weight: map-get($weight-props, weight);
+    $svg-id: map-get($weight-props, id);
+
+    @include font-face($font-family, $font-path, $svg-id, $font-weight);
+
+  }
+
+
+
+}
+

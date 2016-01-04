@@ -1,0 +1,33 @@
+$font-faces: (
+  'Proxima Nova': (
+    path: '//cdn.ims.io/design/font/0.5/proxima-nova',
+    weights: (
+      thin: (
+        weight: 100,
+        id: 'proxima_novathin'
+      ),
+      regular: (
+        weight: 400,
+        id: 'proxima_novaregular'
+      ),
+      regular-italic: (
+        weight: 400,
+        id: 'proxima_novaregular_it',
+        style: italic
+      ),
+      semibold: (
+        weight: 600,
+        id: 'proxima_novasemibold'
+      )
+    )
+  )//,
+  // 'Merriweather': (
+  //   path: '//cdn.ims.io/design/font/0.5/merriweather',
+  //   weights: (
+
+  //   )
+  // ),
+  // 'nexxucons': (
+
+  // )
+);
