@@ -22,7 +22,7 @@ $orange:            #ff940c;
 
 $font-family-serif: 'Merriweather', serif;
 $font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
-
+$font-family-base: $font-family-sans-serif;
 
 ///
 /// Forms
@@ -36,7 +36,8 @@ $transition-: .25s cubic-bezier(.000, .000, .500, 1);
 
 ///
 /// Buttons
-/// 
+///
+
 $btn-font-weight: normal;
 $input-btn-border-width: 1px;
 
