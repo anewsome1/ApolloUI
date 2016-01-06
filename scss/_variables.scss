@@ -20,42 +20,80 @@ $orange:            #ff940c;
 /// Typography
 ///
 
-$font-family-serif: 'Merriweather', serif;
+$font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif;
 $font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
+$headings-font-family: $font-family-serif;
+
+$font-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);
 
 ///
-/// Forms
+/// Transitions
+///
+
+$transition-fast: .25s cubic-bezier(0, 0, .5, 1);
+
+
+///
+/// Lighting
 ///
 
 $shadow-hover: 8px 8px 16px rgba(0, 0, 0, .15);
 $shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
-$transition-: .25s cubic-bezier(.000, .000, .500, 1);
 
+
+///
+/// Component sizing
+///
+
+$component-font-size: 14px;
+$border-width: 1px;
+$padding-base-vertical: 10px;
+$padding-base-horizontal: 17px;
 
 
 ///
 /// Buttons
 ///
 
-$btn-font-weight: normal;
-$input-btn-border-width: 1px;
+$button-font-weight: normal;
+$button-font-size: $component-font-size;
 
-
-$btn-variants: (
+$button-variants: (
   primary: (
     bg: $blue,
     color: #fff,
+    border-color: transparent,
     bg-active: $navy,
-    color-active: #fff
+    color-active: #fff,
+    bg-disabled: #c5ddff,
+    color-disabled: #8dbbff
   ),
   secondary: (
-    bg: $gray-lighter,
-    color: #fff,
-    bg-active: $navy,
-    color-active: #fff
+    bg: #fff,
+    color: $charcoal,
+    border-color: $gray,
+    bg-active: $charcoal,
+    color-active: #fff,
+    bg-disabled: #fff,
+    color-disabled: #b3b3b3
   )
 );
+
+
+///
+/// Forms
+///
 
 
 

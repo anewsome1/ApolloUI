@@ -17,3 +17,8 @@ highlighter:    rouge
 
 kramdown:
   auto_ids:     true
+
+collections:
+  - core
+  - components
+  - templates

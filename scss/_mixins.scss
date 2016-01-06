@@ -1,13 +1,13 @@
 
 /// Creates font-face declaration with optional font weight and style
-@mixin font-face($family, $path, $svg-id, $weight: 'normal', $style: 'normal') {
+@mixin font-face($family, $path, $svg-id, $filename: '', $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;
-    src: url('#{ $path }.eot');
-    src: url('#{ $path }.eot?#iefix') format('embedded-opentype'),
-         url('#{ $path }.woff') format('woff'),
-         url('#{ $path }.ttf') format('truetype'),
-         url('#{ $path }.svg##{ $svg-id }') format('svg');
+    src: url('#{ $path }#{ $filename }.eot');
+    src: url('#{ $path }#{ $filename }.eot?#iefix') format('embedded-opentype'),
+         url('#{ $path }#{ $filename }.woff') format('woff'),
+         url('#{ $path }#{ $filename }.ttf') format('truetype'),
+         url('#{ $path }#{ $filename }.svg##{ $svg-id }') format('svg');
     font-weight: $weight;
     font-style: $style;
   }
