@@ -1,0 +1,34 @@
+///
+/// Colors
+///
+
+$background:        #e9e9e9;
+$tag:               #268bd2;
+$attr-name:         #999;
+$attr-value:        #1b1;
+$contents:          #657b83;
+
+
+///
+/// Classes
+///
+
+.highlight {
+  padding: $grid-gutter-width / 2;
+  background-color: $background;
+  color: $contents;
+
+  .nt {
+    color: $tag;
+    font-weight: bold;
+  }
+
+  .na {
+    color: $attr-name;
+  }
+
+  .s {
+    color: $attr-value;
+  }
+
+}
