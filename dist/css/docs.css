@@ -1,0 +1,42 @@
+.docs-nav {
+  background: #444;
+}
+
+.docs-nav-item {
+  display: inline-block;
+}
+
+.highlight {
+  padding: 16px;
+  margin-bottom: 0;
+  background-color: #e9e9e9;
+  border: 1px solid #ccc;
+  color: #657b83;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+}
+
+.highlight .nt {
+  color: #268bd2;
+  font-weight: bold;
+}
+
+.highlight .na {
+  color: #999;
+}
+
+.highlight .s {
+  color: #1b1;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.docs-example-rendered {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
