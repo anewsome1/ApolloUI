@@ -1,0 +1,64 @@
+{
+  "props": {
+    "charcoal": {
+      "value": "#3a4f5a",
+      "type": "color",
+      "category": "ui"
+    },
+    "gray": {
+      "value": "#ced3d6",
+      "type": "color",
+      "category": "ui"
+    },
+    "gray-lighter": {
+      "value": "#e3ebef",
+      "type": "color",
+      "category": "ui"
+    },
+    "atmosphere": {
+      "value": "#25b4ff",
+      "type": "color",
+      "category": "ui"
+    },
+    "atmosphere-hover": {
+      "value": "#20a6ec",
+      "type": "color",
+      "category": "ui"
+    },
+    "navy": {
+      "value": "#1c2980",
+      "type": "color",
+      "category": "ui"
+    },
+    "teal": {
+      "value": "#37dad3",
+      "type": "color",
+      "category": "ui"
+    },
+    "blue": {
+      "value": "#297dfd",
+      "type": "color",
+      "category": "ui"
+    },
+    "yellow": {
+      "value": "#ffcf32",
+      "type": "color",
+      "category": "ui"
+    },
+    "green": {
+      "value": "#20c22f",
+      "type": "color",
+      "category": "ui"
+    },
+    "coral": {
+      "value": "#fb4f39",
+      "type": "color",
+      "category": "ui"
+    },
+    "orange": {
+      "value": "#ff940c",
+      "type": "color",
+      "category": "ui"
+    }
+  }
+}
