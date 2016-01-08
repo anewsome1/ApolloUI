@@ -1,0 +1,40 @@
+///
+/// Variables
+///
+
+// Colors
+$background:        #e9e9e9;
+$tag:               #268bd2;
+$attr-name:         #999;
+$attr-value:        #1b1;
+$contents:          #657b83;
+
+///
+/// Classes
+///
+
+.highlight {
+  padding: $spacer;
+  margin-bottom: 0;
+  background-color: $background;
+  border: 1px solid #ccc;
+  color: $contents;
+
+  pre {
+    margin-bottom: 0;
+  }
+
+  .nt {
+    color: $tag;
+    font-weight: bold;
+  }
+
+  .na {
+    color: $attr-name;
+  }
+
+  .s {
+    color: $attr-value;
+  }
+
+}
