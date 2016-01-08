@@ -1,20 +1,17 @@
-.button {
+.btn {
   display: inline-block;
   padding: $padding-base-vertical $padding-base-horizontal;
   border: $border-width solid transparent;
   font-family: $font-family-sans-serif;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
   line-height: normal;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  transition: box-shadow $transition-fast,
-              background-color $transition-fast,
-              border-color $transition-fast,
-              color $transition-fast;
+  transition: all $transition-fast;
 
   &,
   &:hover,
@@ -22,7 +19,8 @@
     text-decoration: none;
   }
 
-  &:hover {
+  &:hover,
+  &.hover {
     box-shadow: $shadow-hover;
   }
 
@@ -30,40 +28,45 @@
     outline: none;
   }
 
-  &:active {
+  &:active,
+  &.active {
     box-shadow: $shadow-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     border-color: transparent;
     box-shadow: none;
     cursor: not-allowed;
   }
 }
 
-@each $button-name, $button-props in $button-variants {
-  .button-#{ $button-name } {
-    border-color: map-get($button-props, border-color);
-    background-color: map-get($button-props, bg);
+@each $btn-name, $btn-props in $btn-variants {
+  .btn-#{ $btn-name } {
+    border-color: map-get($btn-props, border-color);
+    background-color: map-get($btn-props, bg);
 
     &,
     &:hover,
     &:focus {
-      color: map-get($button-props, color);
+      color: map-get($btn-props, color);
     }
 
-    &:hover {
+    &:hover,
+    &.hover {
       border-color: transparent;
     }
 
-    &:active {
-      background-color: map-get($button-props, bg-active);
-      color: map-get($button-props, color-active);
+    &:active,
+    &.active {
+      background-color: map-get($btn-props, bg-active);
+      color: map-get($btn-props, color-active);
     }
 
-    &:disabled {
-      background-color: map-get($button-props, bg-disabled);
-      color: map-get($button-props, color-disabled);
+    &:disabled,
+    &.disabled {
+      background-color: map-get($btn-props, bg-disabled);
+      color: map-get($btn-props, color-disabled);
     }
   }
 }

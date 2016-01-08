@@ -3,14 +3,26 @@ layout: base
 ---
 {% assign section_groups = site.core | group_by: 'category' | sort: 'order' %}
 
-{{ page.content }}
+<aside class="docs-sidebar">
 
-{% for group in section_groups %}
-  <h2>{{ group.name | capitalize }}</h2>
-  {% for item in group.items %}
-    <h3 id="{{ item.title | slugify }}">{{ item.title }}</h3>
-    <p>{{ item.description }}</p>
-    <div class="docs-example-rendered">{{ item.content }}</div>
-    {% highlight html %}{{ item.content }}{% endhighlight %}
+</aside>
+
+<main class="docs-content container">
+  <div class="row">
+    <div class="col-sm-6">
+      {{ page.content }}
+    </div>
+  </div>
+
+  {% for group in section_groups %}
+    <section class="" id="{{ group.name | slugify }}">
+    <h2>{{ group.name | capitalize }}</h2>
+    {% for item in group.items %}
+      <h3 id="{{ item.title | slugify }}">{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+      <div class="docs-example-rendered">{{ item.content }}</div>
+      <div class="docs-example-code">{% highlight html %}{{ item.content }}{% endhighlight %}</div>
+    {% endfor %}
+    </section>
   {% endfor %}
-{% endfor %}
+</main>

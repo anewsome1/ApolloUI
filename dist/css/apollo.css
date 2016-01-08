@@ -2455,7 +2455,7 @@ output {
   content: "";
 }
 
-.button {
+.btn {
   display: inline-block;
   padding: 10px 17px;
   border: 1px solid transparent;
@@ -2468,92 +2468,73 @@ output {
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  transition: box-shadow 0.25s cubic-bezier(0, 0, 0.5, 1), background-color 0.25s cubic-bezier(0, 0, 0.5, 1), border-color 0.25s cubic-bezier(0, 0, 0.5, 1), color 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.button, .button:hover, .button:focus {
+.btn, .btn:hover, .btn:focus {
   text-decoration: none;
 }
 
-.button:hover {
+.btn:hover, .btn.hover {
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.button:focus {
+.btn:focus {
   outline: none;
 }
 
-.button:active {
+.btn:active, .btn.active {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.button:disabled {
+.btn:disabled, .btn.disabled {
   border-color: transparent;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.button-primary {
+.btn-primary {
   border-color: transparent;
   background-color: #297dfd;
 }
 
-.button-primary, .button-primary:hover, .button-primary:focus {
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
   color: #fff;
 }
 
-.button-primary:hover {
+.btn-primary:hover, .btn-primary.hover {
   border-color: transparent;
 }
 
-.button-primary:active {
+.btn-primary:active, .btn-primary.active {
   background-color: #1c2980;
   color: #fff;
 }
 
-.button-primary:disabled {
+.btn-primary:disabled, .btn-primary.disabled {
   background-color: #c5ddff;
   color: #8dbbff;
 }
 
-.button-secondary {
+.btn-secondary {
   border-color: #ced3d6;
   background-color: #fff;
 }
 
-.button-secondary, .button-secondary:hover, .button-secondary:focus {
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
   color: #3a4f5a;
 }
 
-.button-secondary:hover {
+.btn-secondary:hover, .btn-secondary.hover {
   border-color: transparent;
 }
 
-.button-secondary:active {
+.btn-secondary:active, .btn-secondary.active {
   background-color: #3a4f5a;
   color: #fff;
 }
 
-.button-secondary:disabled {
+.btn-secondary:disabled, .btn-secondary.disabled {
   background-color: #fff;
   color: #b3b3b3;
-}
-
-.highlight {
-  padding: 0.9375rem;
-  background-color: #e9e9e9;
-  color: #657b83;
-}
-
-.highlight .nt {
-  color: #268bd2;
-  font-weight: bold;
-}
-
-.highlight .na {
-  color: #999;
-}
-
-.highlight .s {
-  color: #1b1;
 }

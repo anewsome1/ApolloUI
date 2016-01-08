@@ -66,10 +66,10 @@ $padding-base-horizontal: 17px;
 /// Buttons
 ///
 
-$button-font-weight: normal;
-$button-font-size: $component-font-size;
+$btn-font-weight: normal;
+$btn-font-size: $component-font-size;
 
-$button-variants: (
+$btn-variants: (
   primary: (
     bg: $blue,
     color: #fff,
