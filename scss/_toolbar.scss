@@ -1,0 +1,56 @@
+.toolbar {
+  background-color: $toolbar-bg;
+  height: $toolbar-height;
+  box-shadow: $shadow-hover;
+
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+
+  .toolbar-brand,
+  .toolbar-item > a {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+      color: $toolbar-link-color;
+    }
+  }
+
+  .toolbar-brand {
+    display: block;
+    float: left;
+    padding-top: $toolbar-brand-padding-y;
+    padding-bottom: $toolbar-brand-padding-y;
+    margin-right: $grid-gutter-width;
+    font-size: $toolbar-brand-size;
+    line-height: 1;
+  }
+
+  .toolbar-links {
+    @include clearfix();
+    display: block;
+    float: left;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .toolbar-item {
+    display: block;
+    float: left;
+
+    > a {
+      display: block;
+      line-height: 1;
+      padding: $toolbar-link-padding-y $toolbar-link-padding-x;
+    }
+
+    &.active > a {
+      background-color: darken($toolbar-bg, 10%);
+    }
+  }
+
+}
