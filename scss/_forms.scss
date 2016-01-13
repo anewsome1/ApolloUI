@@ -1,0 +1,31 @@
+.form-field {
+  display: block;
+  width: 100%;
+  padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
+  border: $border-width solid $gray-lighter;
+  font-size: $form-font-size;
+  line-height: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all $transition-fast;
+
+
+
+  &:focus,
+  &.focus {
+    border-color: transparent;
+    outline: none;
+    box-shadow: $shadow-hover;
+}
+
+  &:disabled,
+  &.disabled {
+    border-color: transparent;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+input:placeholder-shown {
+  color: $green;
+}
