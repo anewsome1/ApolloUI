@@ -1,0 +1,4 @@
+
+@function calc-padding-y($parent-height, $child-height) {
+  @return (($parent-height - $child-height) / 2)
+}
