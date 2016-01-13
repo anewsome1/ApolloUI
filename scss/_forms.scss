@@ -10,6 +10,9 @@
   transition: all $transition-fast;
 
 
+  &:placeholder-shown {
+    color: $orange;
+  }
 
   &:focus,
   &.focus {
@@ -24,8 +27,4 @@
     box-shadow: none;
     cursor: not-allowed;
   }
-}
-
-input:placeholder-shown {
-  color: $green;
 }

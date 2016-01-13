@@ -238,10 +238,6 @@ html {
   width: device-width;
 }
 
-@-o-viewport {
-  width: device-width;
-}
-
 @-webkit-viewport {
   width: device-width;
 }
@@ -358,7 +354,8 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -2635,7 +2632,10 @@ mark,
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -2719,6 +2719,10 @@ mark,
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
+.form-field:placeholder-shown {
+  color: #ff940c;
+}
+
 .form-field:focus, .form-field.focus {
   border-color: transparent;
   outline: none;
@@ -2729,10 +2733,6 @@ mark,
   border-color: transparent;
   box-shadow: none;
   cursor: not-allowed;
-}
-
-input:placeholder-shown {
-  color: #20c22f;
 }
 
 .toolbar {

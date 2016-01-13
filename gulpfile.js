@@ -1,5 +1,6 @@
 var gulp = require( 'gulp' );
 var sass = require( 'gulp-sass' );
+var postcss = require( 'gulp-postcss' );
 var autoprefixer = require( 'autoprefixer' );
 var browserSync = require( 'browser-sync' );
 var theo = require( 'theo' );
@@ -23,6 +24,11 @@ gulp.task( 'apollo-styles', function () {
         outputStyle: 'expanded'  // expanded for development
       })
       .on( 'error', sass.logError ))
+    .pipe( postcss([
+      autoprefixer({
+        browsers: [ 'last 2 versions' ]
+      })
+    ]))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });
@@ -35,6 +41,11 @@ gulp.task( 'docs-styles', function () {
         outputStyle: 'expanded'  // expanded for development
       })
       .on( 'error', sass.logError ))
+    .pipe( postcss([
+      autoprefixer({
+        browsers: [ 'last 2 versions' ]
+      })
+    ]))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });
