@@ -1,5 +1,8 @@
 // Scaffolding
+@import 'functions';
+@import 'bootstrap/scss/variables';
 @import 'variables';
+@import 'bootstrap/scss/mixins';
 @import 'mixins';
 @import 'bootstrap/scss/bootstrap-reboot';
 
@@ -8,7 +11,10 @@
 
 // Core styles
 @import 'fonts';
+@import 'bootstrap/scss/type';
 @import 'icons';
 @import 'buttons';
+@import 'forms';
 
 // Components
+@import 'toolbar';

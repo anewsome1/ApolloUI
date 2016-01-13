@@ -1,13 +1,14 @@
-<nav class="docs-nav">
-  <div class="container">
-    <ul class="docs-nav-list">
-      <li class="docs-nav-item {% if page.title == 'Core Styles' %}active{% endif %}">
+<nav class="toolbar">
+  <div class="container-fluid">
+    <a class="toolbar-brand" href="/">Apollo UI</a>
+    <ul class="toolbar-links">
+      <li class="toolbar-item {% if page.url == '/core/' %}active{% endif %}">
         <a href="/core/">Core Styles</a>
       </li>
-      <li class="docs-nav-item {% if page.title == 'Components' %}active{% endif %}">
+      <li class="toolbar-item {% if page.url == '/components/' %}active{% endif %}">
         <a href="/components/">Components</a>
       </li>
-      <li class="docs-nav-item {% if page.title == 'Templates' %}active{% endif %}">
+      <li class="toolbar-item {% if page.url == '/templates/' %}active{% endif %}">
         <a href="/templates/">Templates</a>
       </li>
     </ul>

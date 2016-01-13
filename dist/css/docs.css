@@ -1,17 +1,9 @@
-.docs-nav {
-  background: #444;
-}
-
-.docs-nav-item {
-  display: inline-block;
-}
-
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #e9e9e9;
+  background-color: #e3ebef;
   border: 1px solid #ccc;
-  color: #657b83;
+  color: #ced3d6;
 }
 
 .highlight pre {
@@ -19,16 +11,16 @@
 }
 
 .highlight .nt {
-  color: #268bd2;
+  color: #297dfd;
   font-weight: bold;
 }
 
 .highlight .na {
-  color: #999;
+  color: #3a4f5a;
 }
 
 .highlight .s {
-  color: #1b1;
+  color: #20c22f;
 }
 
 html,

@@ -2,29 +2,33 @@
 /// Colors
 ///
 
-$charcoal:          #3a4f5a;
-$gray:              #ced3d6;
-$gray-lighter:      #e3ebef;
-$atmosphere:        #25b4ff;
-$atmosphere-hover:  #20a6ec;
-$navy:              #1c2980;
-$teal:              #37dad3;
-$blue:              #297dfd;
-$yellow:            #ffcf32;
-$green:             #20c22f;
-$coral:             #fb4f39;
-$orange:            #ff940c;
+@import 'colors';
 
 
 ///
 /// Typography
 ///
 
-$font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif;
+// Font families
 $font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
-$headings-font-family: $font-family-serif;
 
+// Sizing scale
+$font-size-root: 16px;          // Applies to `<html>` element
+
+$font-size-base: 1rem;          // ~16px
+$font-size-lg:   1.5rem;        // ~24px
+$font-size-sm:   .75rem;        // ~12px
+$font-size-xs:   .5625rem;      // ~9px
+
+$font-size-h1: 5.063rem;        // ~81px
+$font-size-h2: 3.375rem;        // ~54px
+$font-size-h3: 2.25rem;         // ~36px
+$font-size-h4: $font-size-lg;
+$font-size-h5: $font-size-base;
+$font-size-h6: $font-size-sm;
+
+// Weights
 $font-weights: (
   thin: 100,
   extra-light: 200,
@@ -56,18 +60,26 @@ $shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
 /// Component sizing
 ///
 
-$component-font-size: 14px;
-$border-width: 1px;
-$padding-base-vertical: 10px;
-$padding-base-horizontal: 17px;
+$form-height: 1.875rem;  // ~30px + border thickness = 32px 
+$form-font-size: $font-size-base;
+// Use for middle-aligned text
+$form-padding-vertical: calc-padding-y($form-height, $form-font-size);
+// Use for baseline-aligned text
+$form-padding-top: .5625rem;  // ~9px
+$form-padding-bottom: .4375rem;  // ~7px
+$form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
+$form-border-width: 1px;
 
 
 ///
 /// Buttons
 ///
 
+$btn-padding-horizontal: 2.063rem;  // ~33px + border thickness = 32px
 $btn-font-weight: normal;
-$btn-font-size: $component-font-size;
+$btn-font-size: $form-font-size;
+$btn-height: $form-height;
+
 
 $btn-variants: (
   primary: (
@@ -94,6 +106,26 @@ $btn-variants: (
 ///
 /// Forms
 ///
+
+
+
+///
+/// Toolbar
+/// 
+
+// Sizing
+$toolbar-height: 5.625rem; // ~90px
+$toolbar-brand-size: $font-size-h4;
+$toolbar-brand-padding-y: calc-padding-y($toolbar-height, $toolbar-brand-size);
+$toolbar-link-size: $font-size-base;
+$toolbar-link-padding-y: calc-padding-y($toolbar-height, $toolbar-link-size);
+$toolbar-link-padding-x: $grid-gutter-width / 2;
+
+
+// Themes
+$toolbar-bg: $blue;
+$toolbar-link-color: #fff;
+
 
 
 

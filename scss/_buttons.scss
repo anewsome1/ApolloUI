@@ -1,14 +1,13 @@
 .btn {
   display: inline-block;
-  padding: $padding-base-vertical $padding-base-horizontal;
+  padding: $form-padding-top $btn-padding-horizontal $form-padding-bottom;
   border: $border-width solid transparent;
   font-family: $font-family-sans-serif;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
-  line-height: normal;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
   cursor: pointer;
   user-select: none;
   transition: all $transition-fast;

@@ -1,6 +1,6 @@
 var gulp = require( 'gulp' );
 var sass = require( 'gulp-sass' );
-var autoprefixer = require( 'gulp-autoprefixer' );
+var autoprefixer = require( 'autoprefixer' );
 var browserSync = require( 'browser-sync' );
 var theo = require( 'theo' );
 
@@ -31,7 +31,7 @@ gulp.task( 'apollo-styles', function () {
 gulp.task( 'docs-styles', function () {
   gulp.src( 'docs/_scss/docs.scss' )
     .pipe( sass({ 
-        includePaths: [ 'node_modules', 'scss' ],
+        includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
       })
       .on( 'error', sass.logError ))
