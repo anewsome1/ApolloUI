@@ -4,25 +4,25 @@ $font-faces: (
     weights: (
       thin: (
         name: 'proximanova-thin',
-        weight: map-get($font-weights, thin),
+        weight: $font-thin,
         id: 'proxima_novathin',
         style: normal
       ),
       regular: (
         name: 'proximanova-regular',
-        weight: map-get($font-weights, normal),
+        weight: $font-normal,
         id: 'proxima_novaregular',
         style: normal
       ),
       regular-italic: (
         name: 'proximanova-regularitalic',
-        weight: map-get($font-weights, normal),
+        weight: $font-normal,
         id: 'proxima_novaregular_it',
         style: italic
       ),
       semibold: (
         name: 'proximanova-semibold',
-        weight: map-get($font-weights, semi-bold),
+        weight: $font-semi-bold,
         id: 'proxima_novasemibold',
         style: normal
       )
@@ -33,7 +33,7 @@ $font-faces: (
     weights: (
       regular: (
         name: 'merriweather-regular',
-        weight: map-get($font-weights, normal),
+        weight: $font-normal,
         style: normal
       )
     )

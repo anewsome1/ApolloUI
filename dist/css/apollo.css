@@ -1408,7 +1408,7 @@ h5 {
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .h1 {
@@ -1432,7 +1432,7 @@ h6 {
 }
 
 .h6 {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .lead {
@@ -2625,8 +2625,7 @@ mark,
   display: inline-block;
   padding: 0.5625rem 2.063rem 0.4375rem;
   border: 1px solid transparent;
-  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
   text-align: center;
@@ -2712,15 +2711,12 @@ mark,
   width: 100%;
   padding: 0.5625rem 0.5rem 0.4375rem;
   border: 1px solid #e3ebef;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: normal;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.form-field:placeholder-shown {
-  color: #ff940c;
+  height: 2rem;
 }
 
 .form-field:focus, .form-field.focus {
@@ -2730,14 +2726,19 @@ mark,
 }
 
 .form-field:disabled, .form-field.disabled {
-  border-color: transparent;
+  background-color: #e3ebef;
   box-shadow: none;
   cursor: not-allowed;
 }
 
+.form-field + .form-field {
+  margin-top: 1rem;
+}
+
 .toolbar {
+  height: 5.5rem;
+  overflow: hidden;
   background-color: #297dfd;
-  height: 5.625rem;
   box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -2759,8 +2760,8 @@ mark,
 .toolbar .toolbar-brand {
   display: block;
   float: left;
-  padding-top: 2.0625rem;
-  padding-bottom: 2.0625rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin-right: 1.875rem;
   font-size: 1.5rem;
   line-height: 1;
@@ -2786,10 +2787,7 @@ mark,
 
 .toolbar .toolbar-item > a {
   display: block;
+  font-size: 0.875rem;
   line-height: 1;
   padding: 2.3125rem 0.9375rem;
-}
-
-.toolbar .toolbar-item.active > a {
-  background-color: #0261f1;
 }

@@ -4,15 +4,16 @@
   padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
   border: $border-width solid $gray-lighter;
   font-size: $form-font-size;
-  line-height: 1;
+  line-height: $form-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all $transition-fast;
+  height: $form-height;
 
-
+  &,
   &:placeholder-shown {
-    color: $orange;
   }
+
 
   &:focus,
   &.focus {
@@ -23,8 +24,14 @@
 
   &:disabled,
   &.disabled {
-    border-color: transparent;
+    background-color: $gray-lighter;
     box-shadow: none;
     cursor: not-allowed;
   }
+
+  & + & {
+    margin-top: $font-size-base;
+  }
 }
+
+

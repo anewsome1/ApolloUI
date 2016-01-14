@@ -1,6 +1,7 @@
 .toolbar {
-  background-color: $toolbar-bg;
   height: $toolbar-height;
+  overflow: hidden;
+  background-color: $toolbar-bg;
   box-shadow: $shadow-hover;
 
   a,
@@ -44,12 +45,13 @@
 
     > a {
       display: block;
+      font-size: $toolbar-link-size;
       line-height: 1;
       padding: $toolbar-link-padding-y $toolbar-link-padding-x;
     }
 
     &.active > a {
-      background-color: darken($toolbar-bg, 10%);
+      // background-color: darken($toolbar-bg, 10%);
     }
   }
 

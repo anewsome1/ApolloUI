@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Core Styles | Apollo UI</title>
+  <title>Styles | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,7 @@
     <a class="toolbar-brand" href="/">Apollo UI</a>
     <ul class="toolbar-links">
       <li class="toolbar-item active">
-        <a href="/core/">Core Styles</a>
+        <a href="/styles/">Styles</a>
       </li>
       <li class="toolbar-item ">
         <a href="/components/">Components</a>
@@ -40,12 +40,11 @@
 </aside>
 
 <main class="docs-content container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      <h1>Core Styles</h1>
-<p>These styles include the basic HTML tags, such as headings, buttons, form controls or lists.</p>
-    </div>
-  </div>
+  <h1>Styles</h1>
+
+<p>This section covers basic HTML tags, such as headings, buttons, form controls or lists.  Think of these as the building blocks that can either be used on their own or to create components or layouts.</p>
+
+<p>Groups of tags are included in cases where a single element should not exist on its own.  For example, an <code>&lt;input&gt;</code> tag should usually be accompanied by a <code>&lt;label&gt;</code>, so those two are demonstrated as a single pattern.</p>
 
   
     <section class="" id="buttons">
@@ -82,10 +81,13 @@
     <section class="" id="forms">
     <h2>Forms</h2>
     
-      <h3 id="form-fields">Form fields</h3>
+      <h3 id="input-control">Input control</h3>
       <p>(Description goes here for form fields)</p>
-      <div class="docs-example-rendered"><input class="form-field" type="text" placeholder="What's your name?"></input></div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"What's your name?"</span><span class="nt">&gt;&lt;/input&gt;</span></code></pre></figure></div>
+      <div class="docs-example-rendered"><input class="form-field" type="text" placeholder="What is your name?"></input>
+<input class="form-field" type="text" placeholder="What is your quest?" disabled></input>
+</div>
+      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"What is your name?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"What is your quest?"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;/input&gt;</span></code></pre></figure></div>
     
     </section>
   

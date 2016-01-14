@@ -19,6 +19,6 @@ kramdown:
   auto_ids:     true
 
 collections:
-  - core
+  - styles
   - components
   - templates

@@ -1,9 +1,9 @@
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #e3ebef;
+  background-color: #f5f5f5;
   border: 1px solid #ccc;
-  color: #ced3d6;
+  color: #3a4f5a;
 }
 
 .highlight pre {
@@ -16,11 +16,11 @@
 }
 
 .highlight .na {
-  color: #3a4f5a;
+  color: #37dad3;
 }
 
 .highlight .s {
-  color: #20c22f;
+  color: #25b4ff;
 }
 
 html,

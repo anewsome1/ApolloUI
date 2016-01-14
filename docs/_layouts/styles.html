@@ -1,18 +1,14 @@
 ---
 layout: base
 ---
-{% assign section_groups = site.core | group_by: 'category' | sort: 'order' %}
+{% assign section_groups = site.styles | group_by: 'category' | sort: 'order' %}
 
 <aside class="docs-sidebar">
 
 </aside>
 
 <main class="docs-content container-fluid">
-  <div class="row">
-    <div class="col-sm-6">
-      {{ page.content }}
-    </div>
-  </div>
+  {{ page.content }}
 
   {% for group in section_groups %}
     <section class="" id="{{ group.name | slugify }}">
