@@ -12,3 +12,19 @@
     font-style: $style;
   }
 }
+
+/// Background colors
+@mixin bg-color($bg-color, $text-color: null, $link-color: null) {
+  background-color: $bg-color;
+  @if($text-color) {
+    color: $text-color;
+  }
+  @if($link-color) {
+    a,
+    a:hover,
+    a:active,
+    a:visited {
+      color: $link-color;
+    }
+  }
+}

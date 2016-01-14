@@ -1,3 +1,8 @@
+.form-group {
+  @include clearfix();
+  margin-bottom: $spacer;
+}
+
 .form-field {
   display: block;
   width: 100%;

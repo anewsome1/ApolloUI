@@ -28,7 +28,20 @@ body {
   height: 100%;
 }
 
+.docs-section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.docs-section h2 {
+  margin-bottom: 16px;
+}
+
 .docs-example-rendered {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.docs-example-code {
+  margin-bottom: 32px;
 }

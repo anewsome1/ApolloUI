@@ -11,7 +11,7 @@ layout: base
   {{ page.content }}
 
   {% for group in section_groups %}
-    <section class="" id="{{ group.name | slugify }}">
+    <section class="docs-section" id="{{ group.name | slugify }}">
     <h2>{{ group.name | capitalize }}</h2>
     {% for item in group.items %}
       <h3 id="{{ item.title | slugify }}">{{ item.title }}</h3>

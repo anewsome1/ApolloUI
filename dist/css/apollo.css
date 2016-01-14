@@ -2621,6 +2621,18 @@ mark,
   content: "";
 }
 
+.bg-charcoal {
+  background-color: #3a4f5a;
+  color: #fff;
+}
+
+.bg-charcoal a,
+.bg-charcoal a:hover,
+.bg-charcoal a:active,
+.bg-charcoal a:visited {
+  color: #25b4ff;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5625rem 2.063rem 0.4375rem;
@@ -2704,6 +2716,16 @@ mark,
 .btn-secondary:disabled, .btn-secondary.disabled {
   background-color: #fff;
   color: #b3b3b3;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .form-field {

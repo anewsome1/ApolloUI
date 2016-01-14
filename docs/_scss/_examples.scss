@@ -8,11 +8,21 @@ body {
   //
 }
 
+// Each category, e.g. 'buttons'
+.docs-section {
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+
+  h2 {
+    margin-bottom: $spacer;
+  }
+}
+
 .docs-example-rendered {
   padding-top: $spacer;
   padding-bottom: $spacer;
 }
 
 .docs-example-code {
-  // width: 50%;
+  margin-bottom: $spacer * 2;
 }

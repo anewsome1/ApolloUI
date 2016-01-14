@@ -1,0 +1,3 @@
+.bg-charcoal {
+  @include bg-color($bg-color: $charcoal, $text-color: #fff, $link-color: $atmosphere);
+}

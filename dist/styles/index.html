@@ -33,6 +33,7 @@
   </div>
 </nav>
 
+
     
 
 <aside class="docs-sidebar">
@@ -47,7 +48,22 @@
 <p>Groups of tags are included in cases where a single element should not exist on its own.  For example, an <code>&lt;input&gt;</code> tag should usually be accompanied by a <code>&lt;label&gt;</code>, so those two are demonstrated as a single pattern.</p>
 
   
-    <section class="" id="buttons">
+    <section class="docs-section" id="backgrounds">
+    <h2>Backgrounds</h2>
+    
+      <h3 id="background-colors">Background Colors</h3>
+      <p></p>
+      <div class="docs-example-rendered"><div class="bg-charcoal">
+  <p>Here's some text and <a href="#0">a link</a>.</p>
+</div>
+</div>
+      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-charcoal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Here's some text and <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>a link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+    
+    </section>
+  
+    <section class="docs-section" id="buttons">
     <h2>Buttons</h2>
     
       <h3 id="button-colors">Button Colors</h3>
@@ -78,16 +94,40 @@
     
     </section>
   
-    <section class="" id="forms">
+    <section class="docs-section" id="forms">
     <h2>Forms</h2>
     
-      <h3 id="input-control">Input control</h3>
-      <p>(Description goes here for form fields)</p>
-      <div class="docs-example-rendered"><input class="form-field" type="text" placeholder="What is your name?"></input>
-<input class="form-field" type="text" placeholder="What is your quest?" disabled></input>
+      <h3 id="basic-form">Basic form</h3>
+      <p>Forms are used to gather input from the user.</p>
+      <div class="docs-example-rendered"><form>
+<div class="form-group">
+  <label for="username">Username</label>
+  <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
 </div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"What is your name?"</span><span class="nt">&gt;&lt;/input&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"What is your quest?"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;/input&gt;</span></code></pre></figure></div>
+<div class="form-group">
+  <label for="password">Password</label>
+  <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+</div>
+<div class="form-group">
+  <button class="btn btn-primary" type="submit">Sign in</button>
+  <button class="btn btn-secondary" type="cancel">Cancel</button>
+</div>
+</form>
+</div>
+      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
     
     </section>
   

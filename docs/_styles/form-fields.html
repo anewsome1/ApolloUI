@@ -1,8 +1,20 @@
 ---
-title: Input control
+title: Basic form
 category: forms
 order: 1
-description: (Description goes here for form fields)
+description: Forms are used to gather input from the user.
 ---
-<input class="form-field" type="text" placeholder="What is your name?"></input>
-<input class="form-field" type="text" placeholder="What is your quest?" disabled></input>
+<form>
+<div class="form-group">
+  <label for="username">Username</label>
+  <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
+</div>
+<div class="form-group">
+  <label for="password">Password</label>
+  <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+</div>
+<div class="form-group">
+  <button class="btn btn-primary" type="submit">Sign in</button>
+  <button class="btn btn-secondary" type="cancel">Cancel</button>
+</div>
+</form>
