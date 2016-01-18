@@ -2,7 +2,7 @@
   padding: 16px;
   margin-bottom: 0;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  border: 1px solid #ced3d6;
   color: #3a4f5a;
 }
 
@@ -12,7 +12,6 @@
 
 .highlight .nt {
   color: #297dfd;
-  font-weight: bold;
 }
 
 .highlight .na {
@@ -23,9 +22,52 @@
   color: #25b4ff;
 }
 
+.highlight .c {
+  color: #ced3d6;
+}
+
 html,
 body {
   height: 100%;
+}
+
+.docs-sidebar {
+  position: fixed;
+  top: 0;
+  width: 15rem;
+  height: 100%;
+  padding-top: 5.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f7f7f9;
+  border-right: 1px solid #e3ebef;
+}
+
+.docs-content {
+  padding-top: 16px;
+  margin-left: 15rem;
+}
+
+.docs-page-nav,
+.docs-page-subnav {
+  padding-left: 0.9375rem;
+}
+
+.docs-page-nav-item,
+.docs-page-subnav-item {
+  list-style-type: none;
+}
+
+.docs-page-nav {
+  padding-top: 16px;
+}
+
+.docs-page-nav-item {
+  margin-bottom: 16px;
+}
+
+.docs-page-nav-category {
+  font-weight: 600;
 }
 
 .docs-section {
@@ -35,6 +77,10 @@ body {
 
 .docs-section h2 {
   margin-bottom: 16px;
+}
+
+.docs-section h3 {
+  padding-top: 16px;
 }
 
 .docs-example-rendered {

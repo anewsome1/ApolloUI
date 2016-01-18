@@ -36,102 +36,244 @@
 
     
 
-<aside class="docs-sidebar">
+<div class="docs">
+  <aside class="docs-sidebar padding-top-toolbar">
+    <ul class="docs-page-nav" role="navigation">
+    
+    
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Backgrounds</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#background-colors">Background Colors</a></li>
+          
+        </ul>
+      </li>
+    
+    
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Buttons</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#button-overview">Button Overview</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#button-colors">Button Colors</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#button-states">Button States</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#button-sizes">Button Sizes</a></li>
+          
+        </ul>
+      </li>
+    
+    
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Forms</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#basic-form">Basic form</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#checkboxes">Checkboxes</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#radio-buttons">Radio buttons</a></li>
+          
+        </ul>
+      </li>
+    
+    </ul>
+  </aside>
 
-</aside>
-
-<main class="docs-content container-fluid">
-  <h1>Styles</h1>
+  <main class="docs-content container-fluid">
+    <h1>Styles</h1>
 
 <p>This section covers basic HTML tags, such as headings, buttons, form controls or lists.  Think of these as the building blocks that can either be used on their own or to create components or layouts.</p>
 
 <p>Groups of tags are included in cases where a single element should not exist on its own.  For example, an <code>&lt;input&gt;</code> tag should usually be accompanied by a <code>&lt;label&gt;</code>, so those two are demonstrated as a single pattern.</p>
 
-  
-    <section class="docs-section" id="backgrounds">
-    <h2>Backgrounds</h2>
     
-      <h3 id="background-colors">Background Colors</h3>
-      <p></p>
-      <div class="docs-example-rendered"><div class="bg-charcoal">
+    
+      <section class="docs-section" id="backgrounds">
+      <h2>Backgrounds</h2>
+      
+        <h3 id="background-colors">Background Colors</h3>
+        <p></p>
+        <div class="docs-example-rendered"><div class="bg-charcoal">
   <p>Here's some text and <a href="#0">a link</a>.</p>
 </div>
 </div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-charcoal"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-charcoal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;p&gt;</span>Here's some text and <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>a link<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+      </section>
     
-    </section>
-  
-    <section class="docs-section" id="buttons">
-    <h2>Buttons</h2>
     
-      <h3 id="button-colors">Button Colors</h3>
-      <p></p>
-      <div class="docs-example-rendered"><button class="btn btn-primary">Primary</button>
-<button class="btn btn-secondary">Secondary</button></div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span></code></pre></figure></div>
-    
-      <h3 id="button-states">Button States</h3>
-      <p>Disabled styles are available <code>button</code> and <code>input</code> tags by applying the <code>disabled</code> attribute.  Anchor tags can appear disabled by adding the <code>.disabled</code> class, though this does not actually disable the link.</p>
-      <div class="docs-example-rendered"><button class="btn btn-primary" disabled>Primary</button>
-<a class="btn btn-secondary disabled" href="#0">Secondary</a>
-</div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span></code></pre></figure></div>
-    
-      <h3 id="button-overview">Button Overview</h3>
-      <p>Button styles can be applied to a variety of elements, as shown below.  See? They all look the same =)</p>
-      <div class="docs-example-rendered"><a class="btn btn-primary" href="#0">Anchor tag</a>
+      <section class="docs-section" id="buttons">
+      <h2>Buttons</h2>
+      
+        <h3 id="button-overview">Button Overview</h3>
+        <p>Button styles can be applied to a variety of elements, as shown below.  See? They all look the same =)</p>
+        <div class="docs-example-rendered"><a class="btn btn-primary" href="#0">Anchor tag</a>
 <button class="btn btn-primary">Button tag</button>
 <input class="btn btn-primary" type="button" value="Input tag">
 <input class="btn btn-primary" type="submit" value="Submit tag"></div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Anchor tag<span class="nt">&lt;/a&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Anchor tag<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Button tag<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input tag"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit tag"</span><span class="nt">&gt;</span></code></pre></figure></div>
+      
+        <h3 id="button-colors">Button Colors</h3>
+        <p></p>
+        <div class="docs-example-rendered"><button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button></div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span></code></pre></figure></div>
+      
+        <h3 id="button-states">Button States</h3>
+        <p>Disabled styles are available <code>button</code> and <code>input</code> tags by applying the <code>disabled</code> attribute.  Anchor tags can appear disabled by adding the <code>.disabled</code> class, though this does not actually disable the link.</p>
+        <div class="docs-example-rendered"><button class="btn btn-primary" disabled>Primary</button>
+<a class="btn btn-secondary disabled" href="#0">Secondary</a>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span></code></pre></figure></div>
+      
+        <h3 id="button-sizes">Button Sizes</h3>
+        <p>A compact size is available when buttons need to fit in small spaces.  Buttons with long labels automatically get smaller padding.</p><p>When used with the Modernizr <code>touchevents</code> test, touch-enabled devices will get larger buttons.</p>
+        <div class="docs-example-rendered"><button class="btn btn-primary btn-compact">Edit</button>
+<button class="btn btn-primary">klicken Sie hier</button>
+<span class="touchevents">
+  <button class="btn btn-primary">Edit</button>
+</span>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-compact"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>klicken Sie hier<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"touchevents"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/span&gt;</span></code></pre></figure></div>
+      
+      </section>
     
-    </section>
-  
-    <section class="docs-section" id="forms">
-    <h2>Forms</h2>
     
-      <h3 id="basic-form">Basic form</h3>
-      <p>Forms are used to gather input from the user.</p>
-      <div class="docs-example-rendered"><form>
-<div class="form-group">
-  <label for="username">Username</label>
-  <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
-</div>
-<div class="form-group">
-  <label for="password">Password</label>
-  <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
-</div>
-<div class="form-group">
-  <button class="btn btn-primary" type="submit">Sign in</button>
-  <button class="btn btn-secondary" type="cancel">Cancel</button>
-</div>
+      <section class="docs-section" id="forms">
+      <h2>Forms</h2>
+      
+        <h3 id="basic-form">Basic form</h3>
+        <p>Forms are used to gather input from the user.</p>
+        <div class="docs-example-rendered"><form>
+  <fieldset>
+    <div class="form-group">
+      <label class="form-label" for="username">Username</label>
+      <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="password">Password</label>
+      <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+    </div>
+    <div class="form-group">
+      <label class="form-label disabled" for="email">Email Address</label>
+      <input class="form-field" id="email" type="email" name="email" disabled></input>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Sign in</button>
+      <button class="btn btn-secondary" type="cancel">Cancel</button>
+    </div>
+  </fieldset>
 </form>
 </div>
-      <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label disabled"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+      
+        <h3 id="checkboxes">Checkboxes</h3>
+        <p>See some radio buttons in action!</p>
+        <div class="docs-example-rendered"><form>
+  <fieldset>
+    <div>
+      <input id="check1" name="check1" type="checkbox">
+      <label class="x-inline" for="check1">First option</label>
+    </div>
+    <div>
+      <input id="check2" name="check2" type="checkbox">
+      <label class="x-inline" for="check2">And another</label>
+    </div>
+    <div>
+      <input id="check3" name="check3" type="checkbox" disabled>
+      <label class="x-inline" for="check3">Nope</label>
+    </div>
+  </fieldset>
+</form>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check1"</span> <span class="na">name=</span><span class="s">"check1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check2"</span> <span class="na">name=</span><span class="s">"check2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check3"</span> <span class="na">name=</span><span class="s">"check3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+      
+        <h3 id="radio-buttons">Radio buttons</h3>
+        <p>See some radio buttons in action!</p>
+        <div class="docs-example-rendered"><form>
+  <fieldset>
+    <div>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <label for="optionsRadios1">Option one</label>
+    </div>
+    <div>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      <label for="optionsRadios2">Option two</label>
+    </div>
+    <div>
+      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+      <label for="optionsRadios3">Option three is disabled</label>
+    </div>
+  </fieldset>
+</form>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+      
+      </section>
     
-    </section>
-  
-</main>
+  </main>
+</div>
 
   </body>
 

@@ -8,6 +8,7 @@ $tag:               $blue;
 $attr-name:         $teal;
 $attr-value:        $atmosphere;
 $contents:          $charcoal;
+$comments:          $gray;
 
 ///
 /// Classes
@@ -17,7 +18,7 @@ $contents:          $charcoal;
   padding: $spacer;
   margin-bottom: 0;
   background-color: $background;
-  border: 1px solid #ccc;
+  border: 1px solid $gray;
   color: $contents;
 
   pre {
@@ -26,7 +27,6 @@ $contents:          $charcoal;
 
   .nt {
     color: $tag;
-    font-weight: bold;
   }
 
   .na {
@@ -35,6 +35,10 @@ $contents:          $charcoal;
 
   .s {
     color: $attr-value;
+  }
+
+  .c {
+    color: $comments;
   }
 
 }

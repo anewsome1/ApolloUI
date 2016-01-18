@@ -1,20 +1,79 @@
 
+/// 
+/// Page Layout
+/// 
+
+$docs-sidebar-width: 15rem;
+
 html,
 body {
   height: 100%;
 }
 
-.docs-content {
-  //
+.docs {
+  &-sidebar,
+  &-content {
+  }
 }
 
-// Each category, e.g. 'buttons'
+.docs-sidebar {
+  position: fixed;
+  top: 0;
+  width: $docs-sidebar-width;
+  height: 100%;
+  padding-top: $toolbar-height;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $gray-lightest;
+  border-right: 1px solid $gray-lighter;
+}
+
+.docs-content {
+  padding-top: $spacer;
+  margin-left: $docs-sidebar-width;
+}
+
+
+/// 
+/// Page subnavigation
+/// 
+
+.docs-page-nav,
+.docs-page-subnav {
+  padding-left: $grid-gutter-width / 2;
+  &-item {
+    list-style-type: none;
+  }
+}
+
+.docs-page-nav {
+  padding-top: $spacer;
+
+  &-item {
+    margin-bottom: $spacer;
+  }
+
+  &-category {
+    font-weight: $font-semi-bold;
+  }
+}
+
+
+/// 
+/// Documentation sections
+/// 
+
+
 .docs-section {
   padding-top: $spacer;
   padding-bottom: $spacer;
 
   h2 {
     margin-bottom: $spacer;
+  }
+
+  h3 {
+    padding-top: $spacer;
   }
 }
 

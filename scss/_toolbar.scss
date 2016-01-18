@@ -1,8 +1,15 @@
 .toolbar {
+  position: relative;
+  z-index: $zindex-navbar;
   height: $toolbar-height;
   overflow: hidden;
   background-color: $toolbar-bg;
   box-shadow: $shadow-hover;
+
+  &.toolbar-fixed-top {
+    position: fixed;
+    width: 100%;
+  }
 
   a,
   a:hover,
@@ -54,5 +61,8 @@
       // background-color: darken($toolbar-bg, 10%);
     }
   }
+}
 
+.padding-top-toolbar {
+  padding-top: $toolbar-height;
 }

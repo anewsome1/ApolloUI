@@ -1,5 +1,12 @@
 .btn {
+
+  ///
+  /// Core button styles
+  ///
+
+  position: relative;
   display: inline-block;
+  min-width: $btn-min-width;
   padding: $btn-padding-top $btn-padding-horizontal $btn-padding-bottom;
   border: $border-width solid transparent;
   font-size: $btn-font-size;
@@ -10,6 +17,11 @@
   cursor: pointer;
   user-select: none;
   transition: all $transition-fast;
+
+
+  ///
+  /// Button states
+  ///
 
   &,
   &:hover,
@@ -33,11 +45,53 @@
 
   &:disabled,
   &.disabled {
-    border-color: transparent;
     box-shadow: none;
     cursor: not-allowed;
   }
+
+
+  ///
+  /// Pulse animation
+  ///
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0);
+  }
+  
+  &::before {
+    background-color: rgba(41,125,253,.5);
+  }
+  
+  &::after {
+    border: 1px solid #297DFD;
+  }
+  
+  // using `:focus` instead of `:active` because the latter only applies `onMouseDown`
+  &:focus {
+    &::before {
+      animation: pulse .5s .25s cubic-bezier(0, 0, .5, 1);
+    }
+  
+    &::after {
+      animation: pulse .5s cubic-bezier(0, 0, .5, 1);
+    }
+  }
+
 }
+
+
+///
+/// Button variant styles
+///
 
 @each $btn-name, $btn-props in $btn-variants {
   .btn-#{ $btn-name } {
@@ -65,6 +119,24 @@
     &.disabled {
       background-color: map-get($btn-props, bg-disabled);
       color: map-get($btn-props, color-disabled);
+      border-color: map-get($btn-props, border-disabled);
     }
   }
+}
+
+
+///
+/// Button sizes
+///
+
+.btn-compact {
+  min-width: 0;
+  padding: $btn-sm-padding-vertical $btn-sm-padding-horizontal;
+  font-size: $btn-sm-font-size;
+}
+
+// Larger size for touch-enabled devices
+.touchevents .btn {
+  padding-top: $btn-touch-padding-vertical;
+  padding-bottom: $btn-touch-padding-vertical;
 }

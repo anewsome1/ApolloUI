@@ -3,6 +3,13 @@
   margin-bottom: $spacer;
 }
 
+
+.form-label {
+  &.disabled {
+    color: $gray;
+  }
+}
+
 .form-field {
   display: block;
   width: 100%;
@@ -19,24 +26,89 @@
   &:placeholder-shown {
   }
 
-
+  // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus {
     border-color: transparent;
     outline: none;
     box-shadow: $shadow-hover;
-}
+  }
 
   &:disabled,
   &.disabled {
-    background-color: $gray-lighter;
+    background-color: #f2f2f2; // @TODO: replace with light gray from palette
     box-shadow: none;
     cursor: not-allowed;
   }
+}
 
-  & + & {
-    margin-top: $font-size-base;
+///
+/// Checkbox and Radio controls
+///
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  + label {
+    display: inline-block;
+    // margin-left: $spacer;
+    // margin-right: $spacer;
+
+    &::before {
+      @extend .icon;
+
+      display: inline-block;
+      content: '';
+      width: $checkbox-size;
+      height: $checkbox-size;
+      border: $checkbox-border;
+      margin-right: $checkbox-size / 2;
+      margin-bottom: -.125rem;  // ~2px
+      line-height: .7;
+      background-color: $body-bg;
+      transition: all $transition-fast;
+    }
+  }
+
+  &:hover + label::before {
+    box-shadow: $shadow-hover;
+  }
+
+  &:active + label::before {
+    box-shadow: $shadow-active;
+  }
+
+  &:disabled {
+    &,
+    + label,
+    + label::before {
+      color: lighten($charcoal, 40%);
+      cursor: not-allowed;
+    }
+    + label::before,
+    &:hover + label::before {
+      background-color: lighten($gray, 10%);
+      box-shadow: none;
+    }
   }
 }
 
+input[type="checkbox"] {
+  &:checked + label:before {
+    content: map-get($icons, qualified); // 'qualified' checkmark
+  }
+}
+
+input[type="radio"] {
+  + label {
+    &:before {
+      border-radius: 50%;
+    }
+  }
+  &:checked + label:before {
+    background-color: $charcoal;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+}
 

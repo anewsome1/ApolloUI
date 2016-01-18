@@ -5,6 +5,19 @@
 @import 'colors';
 
 
+$body-color: $charcoal;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                 $blue;
+$link-decoration:            none;
+$link-hover-color:           darken($link-color, 15%);
+$link-hover-decoration:      underline;
+
+
+
 ///
 /// Typography
 ///
@@ -35,6 +48,7 @@ $font-semi-bold: 600;
 
 $line-height: 1.5;
 
+
 ///
 /// Transitions
 ///
@@ -51,12 +65,12 @@ $shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
 
 
 ///
-/// Component sizing
+/// Forms
 ///
 
 $form-height: 2rem;  // ~32px (height set manually)
 $form-line-height: normal;
-$form-font-size: $font-size-sm;  // ~14px
+$form-font-size: $font-size-base;  // ~16px
 // Use for middle-aligned text
 $form-padding-vertical: calc-padding-y($form-height, $form-font-size);
 // Use for baseline-aligned text
@@ -65,19 +79,28 @@ $form-padding-bottom: .4375rem;  // ~7px
 $form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
 $form-border-width: 1px;
 
+// Checkbox
+$checkbox-size: 1rem;
+$checkbox-border: 1px solid $gray;
 
 ///
 /// Buttons
 ///
 
-$btn-padding-horizontal: 2.063rem;  // ~33px + border thickness = 32px
+$btn-min-width: 5.75rem;  // ~92px
 $btn-padding-top: $form-padding-top;
+$btn-padding-horizontal: 1.125rem;  // ~18px
 $btn-padding-bottom: $form-padding-bottom;
 $btn-font-size: $form-font-size;
 $btn-line-height: 1;
 $btn-font-weight: normal;
 $btn-border-width: 1px;
 
+$btn-sm-padding-vertical: .375rem;  // ~6px;
+$btn-sm-padding-horizontal: .8125rem;  // ~13px
+$btn-sm-font-size: $font-size-xs;  // ~12px
+
+$btn-touch-padding-vertical: .9375rem;  // ~15px
 
 $btn-variants: (
   primary: (
@@ -96,15 +119,10 @@ $btn-variants: (
     bg-active: $charcoal,
     color-active: #fff,
     bg-disabled: #fff,
-    color-disabled: #b3b3b3
+    color-disabled: #b3b3b3,
+    border-disabled: #e2e2e2
   )
 );
-
-
-///
-/// Forms
-///
-
 
 
 ///
