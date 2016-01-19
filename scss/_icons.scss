@@ -1,4 +1,5 @@
-@import 'icon-map';
+@charset 'UTF-8';
+@import 'icons.map';
 
 $icon-family: 'nexxucons';
 $icon-cdn-path: '//cdn.ims.io/design/icon-font/1.4.1/';
@@ -11,7 +12,7 @@ $icon-svg-id: $icon-family;
 .icon {
   display: inline-block;
   font-family: $icon-family;
-  font-size: inherit;
+  // font-size: inherit;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -23,7 +24,7 @@ $icon-svg-id: $icon-family;
 }
 
 // Iterate through `$icons` map and create class for each character
-@each $name, $character in $icons {
+@each $name, $character in $_icons-map {
   .icon-#{ $name }::before {
     content: $character;
   }

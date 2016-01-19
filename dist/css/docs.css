@@ -1,8 +1,8 @@
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #f5f5f5;
-  border: 1px solid #ced3d6;
+  background-color: #f7f7f9;
+  border: 1px solid #e3ebef;
   color: #3a4f5a;
 }
 
@@ -34,6 +34,7 @@ body {
 .docs-sidebar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 15rem;
   height: 100%;
   padding-top: 5.5rem;
@@ -45,6 +46,9 @@ body {
 
 .docs-content {
   padding-top: 16px;
+}
+
+.docs-sidebar + .docs-content {
   margin-left: 15rem;
 }
 
@@ -90,4 +94,38 @@ body {
 
 .docs-example-code {
   margin-bottom: 32px;
+}
+
+.docs-icon-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.docs-icon {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  background-color: #f7f7f9;
+  border: 1px solid #fff;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.docs-icon:hover {
+  background-color: #297dfd;
+  color: #fff;
+}
+
+.docs-icon .icon {
+  width: 40%;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.docs-icon-name {
+  padding-top: 16px;
 }

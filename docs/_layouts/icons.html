@@ -1,14 +1,17 @@
 ---
 layout: base
 ---
-{% assign section_groups = site.styles | group_by: 'category' %}
+
+{% assign section_groups = site.icons | group_by: 'category' %}
 
 <div class="docs">
+
   <aside class="docs-sidebar padding-top-toolbar">
     <ul class="docs-page-nav" role="navigation">
     {% for group in section_groups %}
       {% assign group_items = group.items | sort: 'order' %}
-      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">{{ group.name | capitalize }}</h3>
+      <li class="docs-page-nav-item">
+        <h3 class="h5 docs-page-nav-category">{{ group.name | capitalize }}</h3>
         <ul class="docs-page-subnav">
           {% for item in group_items %}
             <li class="docs-page-subnav-item"><a href="#{{ item.title | slugify }}">{{ item.title }}</a></li>
@@ -16,11 +19,20 @@ layout: base
         </ul>
       </li>
     {% endfor %}
+      {% comment %} Manually add links for icon list {% endcomment %}
+      <li class="docs-page-nav-item">
+        <h3 class="h5 docs-page-nav-category">Icon list</h3>
+        <ul class="docs-page-subnav">
+          {% for item in group_items %}
+            <li class="docs-page-subnav-item"><a href="#icon-list">Icon list</a></li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
   </aside>
 
   <main class="docs-content container-fluid">
-    {{ page.content }}
+    {{ content }}
 
     {% for group in section_groups %}
       {% assign group_items = group.items | sort: 'order' %}
@@ -34,5 +46,19 @@ layout: base
       {% endfor %}
       </section>
     {% endfor %}
+
+    {% comment %} SHOW ALL THE ICONS! {% endcomment %}
+    <section class="docs-section" id="icon-list">
+      <h2>Icon list</h2>
+      <p>Below are the {{ site.data._icons | size }} icons that are provided with Apollo UI.</p>
+      <div class="docs-icon-container">
+      {% for icon in site.data._icons %}
+        <div class="docs-icon">
+          <span class="icon icon-{{ icon[0] }}"></span>
+          <span class="docs-icon-name">{{ icon[0] }}</span>
+        </div>
+      {% endfor %}
+      </div>
+    </section>
   </main>
 </div>

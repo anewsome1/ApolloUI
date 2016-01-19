@@ -24,10 +24,13 @@
         <a href="/styles/">Styles</a>
       </li>
       <li class="toolbar-item ">
+        <a href="/icons/">Icons</a>
+      </li>
+      <li class="toolbar-item ">
         <a href="/components/">Components</a>
       </li>
       <li class="toolbar-item ">
-        <a href="/templates/">Templates</a>
+        <a href="/page-templates/">Page Templates</a>
       </li>
     </ul>
   </div>
@@ -40,7 +43,7 @@
   <aside class="docs-sidebar padding-top-toolbar">
     <ul class="docs-page-nav" role="navigation">
     
-    
+      
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Backgrounds</h3>
         <ul class="docs-page-subnav">
           
@@ -49,7 +52,7 @@
         </ul>
       </li>
     
-    
+      
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Buttons</h3>
         <ul class="docs-page-subnav">
           
@@ -64,7 +67,7 @@
         </ul>
       </li>
     
-    
+      
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Forms</h3>
         <ul class="docs-page-subnav">
           
@@ -88,7 +91,7 @@
 <p>Groups of tags are included in cases where a single element should not exist on its own.  For example, an <code>&lt;input&gt;</code> tag should usually be accompanied by a <code>&lt;label&gt;</code>, so those two are demonstrated as a single pattern.</p>
 
     
-    
+      
       <section class="docs-section" id="backgrounds">
       <h2>Backgrounds</h2>
       
@@ -104,12 +107,12 @@
       
       </section>
     
-    
+      
       <section class="docs-section" id="buttons">
       <h2>Buttons</h2>
       
         <h3 id="button-overview">Button Overview</h3>
-        <p>Button styles can be applied to a variety of elements, as shown below.  See? They all look the same =)</p>
+        <p>Button styles can be applied to a variety of elements, as shown below.  In general, it is preferred to use the <code>&lt;a&gt;</code> tag when linking to another document or a section of the current document.  Buttons that perform any other action should use the <code>&lt;button&gt;</code> tag.</p><p>Note that only the <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> tags include the pulse animation.</p>
         <div class="docs-example-rendered"><a class="btn btn-primary" href="#0">Anchor tag</a>
 <button class="btn btn-primary">Button tag</button>
 <input class="btn btn-primary" type="button" value="Input tag">
@@ -150,7 +153,7 @@
       
       </section>
     
-    
+      
       <section class="docs-section" id="forms">
       <h2>Forms</h2>
       
@@ -204,15 +207,15 @@
   <fieldset>
     <div>
       <input id="check1" name="check1" type="checkbox">
-      <label class="x-inline" for="check1">First option</label>
+      <label class="control-label" for="check1">First option</label>
     </div>
     <div>
       <input id="check2" name="check2" type="checkbox">
-      <label class="x-inline" for="check2">And another</label>
+      <label class="control-label" for="check2">And another</label>
     </div>
     <div>
       <input id="check3" name="check3" type="checkbox" disabled>
-      <label class="x-inline" for="check3">Nope</label>
+      <label class="control-label" for="check3">Nope</label>
     </div>
   </fieldset>
 </form>
@@ -221,15 +224,15 @@
   <span class="nt">&lt;fieldset&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check1"</span> <span class="na">name=</span><span class="s">"check1"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"check1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check2"</span> <span class="na">name=</span><span class="s">"check2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"check2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check3"</span> <span class="na">name=</span><span class="s">"check3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"x-inline"</span> <span class="na">for=</span><span class="s">"check3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"check3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
@@ -240,15 +243,15 @@
   <fieldset>
     <div>
       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      <label for="optionsRadios1">Option one</label>
+      <label class="control-label" for="optionsRadios1">Option one</label>
     </div>
     <div>
       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      <label for="optionsRadios2">Option two</label>
+      <label class="control-label" for="optionsRadios2">Option two</label>
     </div>
     <div>
       <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-      <label for="optionsRadios3">Option three is disabled</label>
+      <label class="control-label" for="optionsRadios3">Option three is disabled</label>
     </div>
   </fieldset>
 </form>
@@ -257,15 +260,15 @@
   <span class="nt">&lt;fieldset&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"optionsRadios1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"optionsRadios2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure></div>

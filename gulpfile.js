@@ -68,12 +68,27 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
 });
 
 
-gulp.task( 'theo', function() {
+gulp.task( 'theo-colors', function() {
   gulp.src( '_colors.json')
     .pipe( theo.plugins.transform( 'web' ))
     .pipe( theo.plugins.format( 'scss' ))
     .pipe( gulp.dest( 'scss' ));
 });
 
+gulp.task( 'theo-icons-sass', function() {
+  gulp.src( '_icons.json')
+    .pipe( theo.plugins.transform( 'raw' ))
+    .pipe( theo.plugins.format( 'map.scss' ))
+    .pipe( gulp.dest( 'scss' ));
+});
+
+gulp.task( 'theo-icons-json', function() {
+  gulp.src( '_icons.json')
+    .pipe( theo.plugins.transform( 'raw' ))
+    .pipe( theo.plugins.format( 'json' ))
+    .pipe( gulp.dest( 'docs/_data' ));
+});
+
+gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ] );
 
 gulp.task( 'default', [ 'apollo-styles', 'docs-styles', 'docs' ] );

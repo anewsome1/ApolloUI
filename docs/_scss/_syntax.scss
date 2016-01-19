@@ -3,7 +3,7 @@
 ///
 
 // Colors
-$background:        #f5f5f5;
+$background:        $gray-lightest;
 $tag:               $blue;
 $attr-name:         $teal;
 $attr-value:        $atmosphere;
@@ -18,7 +18,7 @@ $comments:          $gray;
   padding: $spacer;
   margin-bottom: 0;
   background-color: $background;
-  border: 1px solid $gray;
+  border: 1px solid $gray-lighter;
   color: $contents;
 
   pre {

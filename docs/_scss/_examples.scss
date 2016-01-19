@@ -10,15 +10,10 @@ body {
   height: 100%;
 }
 
-.docs {
-  &-sidebar,
-  &-content {
-  }
-}
-
 .docs-sidebar {
   position: fixed;
   top: 0;
+  left: 0;
   width: $docs-sidebar-width;
   height: 100%;
   padding-top: $toolbar-height;
@@ -30,6 +25,9 @@ body {
 
 .docs-content {
   padding-top: $spacer;
+}
+
+.docs-sidebar + .docs-content {
   margin-left: $docs-sidebar-width;
 }
 
@@ -85,3 +83,48 @@ body {
 .docs-example-code {
   margin-bottom: $spacer * 2;
 }
+
+
+///
+/// Icons
+///
+
+.docs-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.docs-icon {
+  display: flex;
+  width: percentage(1 / 5);
+  background-color: $gray-lightest;
+  border: 1px solid #fff;
+  transition: all $transition-fast;
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+
+  .icon {
+    width: 40%;
+    font-size: $font-size-h3;
+    text-align: center;
+  }
+}
+
+.docs-icon-name {
+  padding-top: $spacer;
+}
+
+
+
+
+
+
+
+
+
+
+
+

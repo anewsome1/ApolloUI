@@ -20,5 +20,6 @@ kramdown:
 
 collections:
   - styles
+  - icons
   - components
-  - templates
+  - page-templates
