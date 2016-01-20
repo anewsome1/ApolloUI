@@ -22,7 +22,7 @@ Coming soon.
 
 ## Development server
 
-Before documentation site locally, follow the instructions below to install the necessary dependencies.
+Before running documentation site locally, follow the instructions below to install the necessary dependencies.
 
 ### System dependencies
 
