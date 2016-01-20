@@ -8,9 +8,7 @@ Apollo UI is the CSS framework for implementing the Apollo visual language in we
 
 If you're just looking for a stylesheet to drop into your project, then the place you should look is:
 
-```
-/dist/css/apollo.css
-```
+`/dist/css/apollo.css`
 
 ### Install via package management
 
