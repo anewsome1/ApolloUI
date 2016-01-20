@@ -24,23 +24,16 @@ Coming soon.
 
 Before documentation site locally, follow the instructions below to install the necessary dependencies.
 
-### System dependencies:
+### System dependencies
 
-We highly recommend installing these dependencies using a package management tool, such as APT, YUM or Homebrew (Mac).
+We highly recommend installing the latest version of these dependencies using a package management tool, such as APT, YUM or Homebrew (Mac).  The known good major version for each is noted below.
 
-- Ruby (v2.x.x)
-- RubyGems (v2.x.x)
-- Jekyll (v3.x.x)
-- NodeJS (v4.x.x)
+- [Ruby](https://www.ruby-lang.org) (v2.x.x)
+- [RubyGems](https://rubygems.org/) (v2.x.x)
+- [Jekyll](http://jekyllrb.com/) (v3.x.x)
+- [Node](https://nodejs.org) (v5.x.x)
 
-Not sure whether you have the correct version range installed?  Checking the version of each is a quick way to find out.
-
-```
-ruby --version
-gem --version
-jekyll --version
-node --version
-```
+*Mac users*: OS X ships with Ruby and RubyGems pre-installed, so you should only need to install Jekyll and Node.
 
 ### Node dependencies
 
