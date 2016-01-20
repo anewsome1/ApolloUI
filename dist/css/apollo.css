@@ -2826,6 +2826,16 @@ mark,
   cursor: not-allowed;
 }
 
+.has-error .form-field {
+  border-color: #fb4f39;
+}
+
+.has-error .field-msg {
+  display: block;
+  color: #fff;
+  background-color: #fb4f39;
+}
+
 [type='checkbox'],
 [type='radio'] {
   position: absolute;

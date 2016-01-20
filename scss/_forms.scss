@@ -42,6 +42,19 @@
   }
 }
 
+.has-error {
+  .form-field {
+    border-color: $coral;
+  }
+
+  .field-msg {
+    display: block;
+    color: #fff;
+    background-color: $coral;
+  }
+}
+
+
 ///
 /// Checkbox and Radio controls
 ///

@@ -77,6 +77,8 @@
           
             <li class="docs-page-subnav-item"><a href="#radio-buttons">Radio buttons</a></li>
           
+            <li class="docs-page-subnav-item"><a href="#field-errors">Field errors</a></li>
+          
         </ul>
       </li>
     
@@ -269,6 +271,48 @@
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
       <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+      
+        <h3 id="field-errors">Field errors</h3>
+        <p>Error messages are displayed to the user, like such as.</p>
+        <div class="docs-example-rendered"><form>
+  <fieldset>
+    <div class="form-group has-error">
+      <label class="form-label" for="username">Username</label>
+      <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
+      <div class="field-msg">
+        <p><span class="icon icon-alert"></span>A valid thing must exist</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="password">Password</label>
+      <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Sign in</button>
+      <button class="btn btn-secondary" type="cancel">Cancel</button>
+    </div>
+  </fieldset>
+</form>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-error"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field-msg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-alert"</span><span class="nt">&gt;&lt;/span&gt;</span>A valid thing must exist<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-field"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
