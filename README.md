@@ -33,7 +33,7 @@ We highly recommend installing the latest version of these dependencies using a 
 - [Jekyll](http://jekyllrb.com/) (v3.x.x)
 - [Node](https://nodejs.org) (v5.x.x)
 
-*Mac users*: OS X ships with Ruby and RubyGems pre-installed, so you should only need to install Jekyll and Node.
+**Mac users**: OS X ships with Ruby and RubyGems pre-installed, so you should only need to install Jekyll and Node.
 
 ### Node dependencies
 
