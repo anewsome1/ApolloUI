@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
-  border: $border-width solid $gray-lighter;
+  border: $form-border-width solid $gray-lighter;
   font-size: $form-font-size;
   line-height: $form-line-height;
   white-space: nowrap;
@@ -50,20 +50,22 @@
   .field-msg {
     display: block;
     position: relative;
-    padding: $field-msg-padding $field-msg-padding $field-msg-padding ($field-msg-icon-size + $field-msg-padding);
+    padding: $field-msg-padding-vertical $field-msg-padding-horizontal $field-msg-padding-vertical ($field-msg-icon-size + ($field-msg-padding-horizontal * 1.5));
+    margin-bottom: $field-msg-shadow-height * 2;  // Compensate for box shadow below
     color: #fff;
     font-size: $field-msg-font-size;
     line-height: $field-msg-line-height;
     background-color: $coral;
-    box-shadow: 0 10px 0 0 transparentize($coral, .40),
-                0 20px 0 0 transparentize($coral, .5);
+    box-shadow: 0 $field-msg-shadow-height 0 0 transparentize($coral, .40),
+                0 ($field-msg-shadow-height * 2) 0 0 transparentize($coral, .5);
 
     &::before {
       @extend .icon;
 
       position: absolute;
-      top: calc-padding-y($field-msg-line-height, $field-msg-padding);
-      left: $field-msg-padding;
+      top: 50%;
+      left: $field-msg-padding-horizontal;
+      margin-top: -($field-msg-icon-size / 2);
       content: map-get($_icons-map, 'disabled');
       font-size: $field-msg-icon-size;
       line-height: $field-msg-line-height;

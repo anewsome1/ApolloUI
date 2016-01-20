@@ -2833,18 +2833,20 @@ mark,
 .has-error .field-msg {
   display: block;
   position: relative;
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  padding: 0.6rem 0.5rem 0.6rem 2.25rem;
+  margin-bottom: 1.25rem;
   color: #fff;
   font-size: 1rem;
   line-height: 1rem;
   background-color: #fb4f39;
-  box-shadow: 0 10px 0 0 rgba(251, 79, 57, 0.6), 0 20px 0 0 rgba(251, 79, 57, 0.5);
+  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.6), 0 1.25rem 0 0 rgba(251, 79, 57, 0.5);
 }
 
 .has-error .field-msg::before {
   position: absolute;
-  top: 0.25rem;
+  top: 50%;
   left: 0.5rem;
+  margin-top: -0.75rem;
   content: "~";
   font-size: 1.5rem;
   line-height: 1rem;
