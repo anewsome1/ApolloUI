@@ -1,6 +1,6 @@
 # Apollo UI - CSS Framework
 
-This project provides the CSS framework and accompanying HTML reference for implementing the Apollo visual language to web applications.
+Apollo UI is the CSS framework for implementing the Apollo visual language in web applications.  HTML documentation and examples can be found here (link coming soon) or by running the docs locally (see instructions below).
 
 ## Getting started
 
