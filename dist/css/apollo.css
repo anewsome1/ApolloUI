@@ -1580,7 +1580,7 @@ mark,
   font-style: normal;
 }
 
-.icon, [type='checkbox'] + .control-label::before,
+.icon, .has-error .field-msg::before, [type='checkbox'] + .control-label::before,
 [type='radio'] + .control-label::before {
   display: inline-block;
   font-family: "nexxucons";
@@ -2832,8 +2832,22 @@ mark,
 
 .has-error .field-msg {
   display: block;
+  position: relative;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   color: #fff;
+  font-size: 1rem;
+  line-height: 1rem;
   background-color: #fb4f39;
+  box-shadow: 0 10px 0 0 rgba(251, 79, 57, 0.6), 0 20px 0 0 rgba(251, 79, 57, 0.5);
+}
+
+.has-error .field-msg::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  content: "~";
+  font-size: 1.5rem;
+  line-height: 1rem;
 }
 
 [type='checkbox'],

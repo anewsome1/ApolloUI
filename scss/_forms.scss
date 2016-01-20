@@ -49,8 +49,25 @@
 
   .field-msg {
     display: block;
+    position: relative;
+    padding: $field-msg-padding $field-msg-padding $field-msg-padding ($field-msg-icon-size + $field-msg-padding);
     color: #fff;
+    font-size: $field-msg-font-size;
+    line-height: $field-msg-line-height;
     background-color: $coral;
+    box-shadow: 0 10px 0 0 transparentize($coral, .40),
+                0 20px 0 0 transparentize($coral, .5);
+
+    &::before {
+      @extend .icon;
+
+      position: absolute;
+      top: calc-padding-y($field-msg-line-height, $field-msg-padding);
+      left: $field-msg-padding;
+      content: map-get($_icons-map, 'disabled');
+      font-size: $field-msg-icon-size;
+      line-height: $field-msg-line-height;
+    }
   }
 }
 
