@@ -44,12 +44,15 @@
 
 .has-error {
   .form-field {
+    position: relative;
+    z-index: 1;
     border-color: $coral;
   }
 
   .field-msg {
     display: block;
     position: relative;
+    z-index: 0;
     padding: $field-msg-padding-vertical $field-msg-padding-horizontal $field-msg-padding-vertical ($field-msg-icon-size + ($field-msg-padding-horizontal * 1.5));
     margin-bottom: $field-msg-shadow-height * 2;  // Compensate for box shadow below
     color: #fff;

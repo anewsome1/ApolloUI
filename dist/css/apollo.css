@@ -2827,12 +2827,15 @@ mark,
 }
 
 .has-error .form-field {
+  position: relative;
+  z-index: 1;
   border-color: #fb4f39;
 }
 
 .has-error .field-msg {
   display: block;
   position: relative;
+  z-index: 0;
   padding: 0.6rem 0.5rem 0.6rem 2.25rem;
   margin-bottom: 1.25rem;
   color: #fff;
