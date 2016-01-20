@@ -69,21 +69,21 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
 
 
 gulp.task( 'theo-colors', function() {
-  gulp.src( '_colors.json')
+  gulp.src( 'theo/_color-variables.json')
     .pipe( theo.plugins.transform( 'web' ))
     .pipe( theo.plugins.format( 'scss' ))
     .pipe( gulp.dest( 'scss' ));
 });
 
 gulp.task( 'theo-icons-sass', function() {
-  gulp.src( '_icons.json')
+  gulp.src( 'theo/icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'map.scss' ))
     .pipe( gulp.dest( 'scss' ));
 });
 
 gulp.task( 'theo-icons-json', function() {
-  gulp.src( '_icons.json')
+  gulp.src( 'theo/icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'json' ))
     .pipe( gulp.dest( 'docs/_data' ));
