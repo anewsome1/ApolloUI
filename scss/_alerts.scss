@@ -21,14 +21,6 @@
     }
 
     ///
-    /// Size options
-    ///
-
-    &.alert-sm {
-      // @TODO: make this a thing
-    }
-
-    ///
     /// Alert states, based on `$alert-states` map
     ///
 
@@ -48,6 +40,25 @@
         }
       }
     }
+
+
+    ///
+    /// Size options
+    ///
+
+    &.alert-sm {
+      // @TODO: make this a thing
+    }
+
+
+    ///
+    /// Bottom option
+    ///
+
+    &.alert-bottom {
+      // @TODO: make this a thing
+    }
+
 
   }
 
