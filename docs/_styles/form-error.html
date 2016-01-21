@@ -1,5 +1,5 @@
 ---
-title: Error message
+title: Validation states
 category: forms
 order: 4
 description: Error messages are displayed to the user, like such as.
@@ -7,7 +7,17 @@ description: Error messages are displayed to the user, like such as.
 <form>
   <fieldset>
     <!-- ... -->
-    <div class="form-group has-error">
+    <div class="form-group has-success">
+      <label class="control-label" for="email">Email Address</label>
+      <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+      <p class="form-msg">Looks good!</p>
+    </div>
+    <div class="form-group has-warning">
+      <label class="control-label" for="email">Password</label>
+      <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+      <p class="form-msg">Please enter a valid email address</p>
+    </div>
+    <div class="form-group has-danger">
       <label class="control-label" for="email">Email Address</label>
       <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
       <p class="form-msg">Please enter a valid email address</p>

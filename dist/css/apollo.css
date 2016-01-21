@@ -1555,7 +1555,9 @@ mark,
   font-style: normal;
 }
 
-.icon, .has-error .form-msg::before, [type='checkbox'] + label::before,
+.icon, .alert::before, .has-success .form-msg::before,
+.has-warning .form-msg::before,
+.has-danger .form-msg::before, [type='checkbox'] + label::before,
 [type='radio'] + label::before {
   display: inline-block;
   font-family: "nexxucons";
@@ -2633,6 +2635,70 @@ mark,
   color: #25b4ff;
 }
 
+.alert, .has-success .form-msg,
+.has-warning .form-msg,
+.has-danger .form-msg {
+  display: block;
+  position: relative;
+  z-index: 0;
+  padding: 1rem 0.9375rem 1rem 2.90625rem;
+  margin-bottom: 2.25rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.alert::before, .has-success .form-msg::before,
+.has-warning .form-msg::before,
+.has-danger .form-msg::before {
+  position: absolute;
+  top: 50%;
+  left: 0.9375rem;
+  margin-top: -0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.2rem;
+}
+
+.alert.alert-success, .has-success .form-msg,
+.has-warning .alert-success.form-msg,
+.has-danger .alert-success.form-msg {
+  color: #fff;
+  background-color: #20c22f;
+  box-shadow: 0 0.625rem 0 0 rgba(32, 194, 47, 0.6), 0 1.25rem 0 0 rgba(32, 194, 47, 0.5);
+}
+
+.alert.alert-success::before, .has-success .form-msg::before,
+.has-warning .alert-success.form-msg::before,
+.has-danger .alert-success.form-msg::before {
+  content: "m";
+}
+
+.alert.alert-warning, .has-success .alert-warning.form-msg,
+.has-warning .form-msg,
+.has-danger .alert-warning.form-msg {
+  background-color: #ffcf32;
+  box-shadow: 0 0.625rem 0 0 rgba(255, 207, 50, 0.6), 0 1.25rem 0 0 rgba(255, 207, 50, 0.5);
+}
+
+.alert.alert-warning::before, .has-success .alert-warning.form-msg::before,
+.has-warning .form-msg::before,
+.has-danger .alert-warning.form-msg::before {
+  content: "w";
+}
+
+.alert.alert-danger, .has-success .alert-danger.form-msg,
+.has-warning .alert-danger.form-msg,
+.has-danger .form-msg {
+  color: #fff;
+  background-color: #fb4f39;
+  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.6), 0 1.25rem 0 0 rgba(251, 79, 57, 0.5);
+}
+
+.alert.alert-danger::before, .has-success .alert-danger.form-msg::before,
+.has-warning .alert-danger.form-msg::before,
+.has-danger .form-msg::before {
+  content: "~";
+}
+
 .btn {
   position: relative;
   display: inline-block;
@@ -2801,33 +2867,31 @@ mark,
   cursor: not-allowed;
 }
 
-.has-error .form-control {
+.has-success .form-control,
+.has-warning .form-control,
+.has-danger .form-control {
   position: relative;
   z-index: 1;
   border-color: #fb4f39;
 }
 
-.has-error .form-msg {
-  display: block;
-  position: relative;
-  z-index: 0;
-  padding: 0.6rem 0.5rem 0.6rem 2.25rem;
-  margin-bottom: 1.25rem;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1rem;
-  background-color: #fb4f39;
-  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.6), 0 1.25rem 0 0 rgba(251, 79, 57, 0.5);
+.has-success .form-msg,
+.has-warning .form-msg,
+.has-danger .form-msg {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
-.has-error .form-msg::before {
-  position: absolute;
-  top: 50%;
-  left: 0.5rem;
-  margin-top: -0.75rem;
-  content: "~";
-  font-size: 1.5rem;
-  line-height: 1rem;
+.has-success .form-control {
+  border-color: #20c22f;
+}
+
+.has-warning .form-control {
+  border-color: #ffcf32;
+}
+
+.has-danger .form-control {
+  border-color: #fb4f39;
 }
 
 [type='checkbox'],

@@ -1,11 +1,35 @@
+@import 'color-variables';
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex:               true !default;
+// $enable-rounded:            true !default;
+// $enable-shadows:            false !default;
+// $enable-gradients:          false !default;
+// $enable-transitions:        false !default;
+// $enable-hover-media-query:  false !default;
+// $enable-grid-classes:       true !default;
+
+
+///
+/// Spacing
+///
+
+$spacer: 1rem;
+
 ///
 /// Colors
 ///
 
-@import 'color-variables';
-
-
 $body-color: $charcoal;
+
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-warning: $yellow;
+$brand-danger: $coral;
 
 // Links
 //
@@ -62,6 +86,38 @@ $transition-fast: .25s cubic-bezier(0, 0, .5, 1);
 
 $shadow-hover: 8px 8px 16px rgba(0, 0, 0, .15);
 $shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
+
+
+///
+/// Alerts
+///
+
+// Sizing
+$alert-padding-vertical: $spacer;
+$alert-padding-horizontal: $grid-gutter-width / 2;
+$alert-icon-size: $font-size-lg;
+$alert-font-size: $font-size-base;
+$alert-line-height: $alert-font-size * 1.2;
+$alert-shadow-height: .625rem;  // ~10px
+
+// Colors
+$alert-states: (
+  success: (
+    bg: $brand-success,
+    color: #fff,
+    icon: 'qualified'
+  ),
+  warning: (
+    bg: $brand-warning,
+    color: null,
+    icon: 'alert'
+  ),
+  danger: (
+    bg: $brand-danger,
+    color: #fff,
+    icon: 'disabled'
+  )
+);
 
 
 ///

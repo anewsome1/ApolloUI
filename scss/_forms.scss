@@ -42,39 +42,34 @@
   }
 }
 
-.has-error {
+.has-success,
+.has-warning,
+.has-danger {
   .form-control {
     position: relative;
     z-index: 1;
-    border-color: $coral;
+    border-color: $brand-danger;
   }
-
   .form-msg {
-    display: block;
-    position: relative;
-    z-index: 0;
-    padding: $form-msg-padding-vertical $form-msg-padding-horizontal $form-msg-padding-vertical ($form-msg-icon-size + ($form-msg-padding-horizontal * 1.5));
-    margin-bottom: $form-msg-shadow-height * 2;  // Compensate for box shadow below
-    color: #fff;
-    font-size: $form-msg-font-size;
-    line-height: $form-msg-line-height;
-    background-color: $coral;
-    box-shadow: 0 $form-msg-shadow-height 0 0 transparentize($coral, .40),
-                0 ($form-msg-shadow-height * 2) 0 0 transparentize($coral, .5);
-
-    &::before {
-      @extend .icon;
-
-      position: absolute;
-      top: 50%;
-      left: $form-msg-padding-horizontal;
-      margin-top: -($form-msg-icon-size / 2);
-      content: map-get($_icons-map, 'disabled');
-      font-size: $form-msg-icon-size;
-      line-height: $form-msg-line-height;
-    }
+    @extend .alert;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
 }
+
+@each $state, $props in $alert-states {
+  $state-bg: map-get($props, bg);
+
+  .has-#{ $state } {
+    .form-control {
+      border-color: $state-bg;
+    }
+    .form-msg {
+      @extend .alert-#{ $state };
+    }
+  }  
+}
+
 
 
 ///
