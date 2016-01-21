@@ -32,6 +32,7 @@ gulp.task( 'apollo-styles', function () {
       })
     ]))
     .pipe( gulp.dest( 'dist/css/' ) )
+    .pipe( browserSync.stream() )
     .pipe( postcss([ cssnano() ]))
     .pipe( rename({ 
       suffix: '.min' 

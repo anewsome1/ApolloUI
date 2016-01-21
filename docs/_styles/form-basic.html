@@ -7,16 +7,16 @@ description: Forms are used to gather input from the user.
 <form>
   <fieldset>
     <div class="form-group">
-      <label class="form-label" for="username">Username</label>
-      <input class="form-field" id="username" type="text" name="username" placeholder="What is your username?"></input>
+      <label class="control-label" for="username">Username</label>
+      <input class="form-control" id="username" type="text" name="username" placeholder="What is your username?"></input>
     </div>
     <div class="form-group">
-      <label class="form-label" for="password">Password</label>
-      <input class="form-field" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+      <label class="control-label" for="password">Password</label>
+      <input class="form-control" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
     </div>
     <div class="form-group">
-      <label class="form-label disabled" for="email">Email Address</label>
-      <input class="form-field" id="email" type="email" name="email" disabled></input>
+      <input id="rememberme" name="rememberme" type="checkbox">
+      <label for="rememberme">Remember me</label>
     </div>
     <div class="form-group">
       <button class="btn btn-primary" type="submit">Sign in</button>

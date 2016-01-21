@@ -4,13 +4,13 @@
 }
 
 
-.form-label {
+.control-label {
   &.disabled {
     color: $gray;
   }
 }
 
-.form-field {
+.form-control {
   display: block;
   width: 100%;
   padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
@@ -36,42 +36,42 @@
 
   &:disabled,
   &.disabled {
-    background-color: #f2f2f2; // @TODO: replace with light gray from palette
+    background-color: $gray-lightest; // @TODO: replace with light gray from palette
     box-shadow: none;
     cursor: not-allowed;
   }
 }
 
 .has-error {
-  .form-field {
+  .form-control {
     position: relative;
     z-index: 1;
     border-color: $coral;
   }
 
-  .field-msg {
+  .form-msg {
     display: block;
     position: relative;
     z-index: 0;
-    padding: $field-msg-padding-vertical $field-msg-padding-horizontal $field-msg-padding-vertical ($field-msg-icon-size + ($field-msg-padding-horizontal * 1.5));
-    margin-bottom: $field-msg-shadow-height * 2;  // Compensate for box shadow below
+    padding: $form-msg-padding-vertical $form-msg-padding-horizontal $form-msg-padding-vertical ($form-msg-icon-size + ($form-msg-padding-horizontal * 1.5));
+    margin-bottom: $form-msg-shadow-height * 2;  // Compensate for box shadow below
     color: #fff;
-    font-size: $field-msg-font-size;
-    line-height: $field-msg-line-height;
+    font-size: $form-msg-font-size;
+    line-height: $form-msg-line-height;
     background-color: $coral;
-    box-shadow: 0 $field-msg-shadow-height 0 0 transparentize($coral, .40),
-                0 ($field-msg-shadow-height * 2) 0 0 transparentize($coral, .5);
+    box-shadow: 0 $form-msg-shadow-height 0 0 transparentize($coral, .40),
+                0 ($form-msg-shadow-height * 2) 0 0 transparentize($coral, .5);
 
     &::before {
       @extend .icon;
 
       position: absolute;
       top: 50%;
-      left: $field-msg-padding-horizontal;
-      margin-top: -($field-msg-icon-size / 2);
+      left: $form-msg-padding-horizontal;
+      margin-top: -($form-msg-icon-size / 2);
       content: map-get($_icons-map, 'disabled');
-      font-size: $field-msg-icon-size;
-      line-height: $field-msg-line-height;
+      font-size: $form-msg-icon-size;
+      line-height: $form-msg-line-height;
     }
   }
 }
@@ -85,10 +85,10 @@
 [type='radio'] {
   position: absolute;
   opacity: 0;
-  + .control-label {
+
+  + label {
     display: inline-block;
-    // margin-left: $spacer;
-    // margin-right: $spacer;
+    cursor: pointer;
 
     &::before {
       @extend .icon;
@@ -106,23 +106,28 @@
     }
   }
 
-  &:hover + .control-label::before {
+  &,
+  & + label {
+    cursor: pointer;
+  }
+
+  &:hover + label::before {
     box-shadow: $shadow-hover;
   }
 
-  &:active + .control-label::before {
+  &:active + label::before {
     box-shadow: $shadow-active;
   }
 
   &:disabled {
     &,
-    + .control-label,
-    + .control-label::before {
+    + label,
+    + label::before {
       color: lighten($charcoal, 40%);
       cursor: not-allowed;
     }
-    + .control-label::before,
-    &:hover + .control-label::before {
+    + label::before,
+    &:hover + label::before {
       background-color: lighten($gray, 10%);
       box-shadow: none;
     }
@@ -130,18 +135,18 @@
 }
 
 input[type="checkbox"] {
-  &:checked + .control-label:before {
+  &:checked + label:before {
     content: map-get($_icons-map, qualified); // 'qualified' checkmark
   }
 }
 
 input[type="radio"] {
-  + .control-label {
+  + label {
     &:before {
       border-radius: 50%;
     }
   }
-  &:checked + .control-label:before {
+  &:checked + label:before {
     background-color: $charcoal;
     box-shadow: inset 0 0 0 2px #fff;
   }

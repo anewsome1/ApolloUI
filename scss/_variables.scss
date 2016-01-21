@@ -68,44 +68,44 @@ $shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
 /// Forms
 ///
 
-$form-height: 2rem;  // ~32px (height set manually)
+$form-height: 2rem;               // ~32px (height set manually)
 $form-line-height: normal;
-$form-font-size: $font-size-base;  // ~16px
+$form-font-size: $font-size-base; // ~16px
 $form-padding-vertical: calc-padding-y($form-height, $form-font-size);
-$form-padding-top: .5625rem;  // ~9px
-$form-padding-bottom: .4375rem;  // ~7px
+$form-padding-top: .5625rem;      // ~9px
+$form-padding-bottom: .4375rem;   // ~7px
 $form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
-$form-border-width: 1px;
+$form-border-width: .0625rem;     // ~1px
 
 // Checkbox
-$checkbox-size: 1rem;
+$checkbox-size: 1.1rem;
 $checkbox-border: 1px solid $gray;
 
-// Field message
-$field-msg-padding-vertical: $form-padding-vertical * 1.2;
-$field-msg-padding-horizontal: $form-padding-horizontal;
-$field-msg-icon-size: $font-size-lg;
-$field-msg-font-size: $font-size-base;
-$field-msg-line-height: $field-msg-font-size;
-$field-msg-shadow-height: .625rem;  // ~10px
+// Error message
+$form-msg-padding-vertical: $form-padding-vertical * 1.2;
+$form-msg-padding-horizontal: $form-padding-horizontal;
+$form-msg-icon-size: $font-size-lg;
+$form-msg-font-size: $font-size-base;
+$form-msg-line-height: $form-msg-font-size;
+$form-msg-shadow-height: .625rem;  // ~10px
 
 
 ///
 /// Buttons
 ///
 
-$btn-min-width: 5.75rem;  // ~92px
-$btn-padding-top: $form-padding-top;
-$btn-padding-horizontal: 1.125rem;  // ~18px
-$btn-padding-bottom: $form-padding-bottom;
+$btn-border-width: $form-border-width;
+$btn-min-width: 5.75rem;                // ~92px
+$btn-padding-top: $form-padding-top - $btn-border-width;
+$btn-padding-horizontal: 1.125rem;      // ~18px
+$btn-padding-bottom: $form-padding-bottom - $btn-border-width;
 $btn-font-size: $form-font-size;
 $btn-line-height: 1;
 $btn-font-weight: normal;
-$btn-border-width: 1px;
 
-$btn-sm-padding-vertical: .375rem;  // ~6px;
-$btn-sm-padding-horizontal: .8125rem;  // ~13px
-$btn-sm-font-size: $font-size-xs;  // ~12px
+$btn-sm-padding-vertical: .375rem;      // ~6px;
+$btn-sm-padding-horizontal: .8125rem;   // ~13px
+$btn-sm-font-size: $font-size-xs;       // ~12px
 
 $btn-touch-padding-vertical: .9375rem;  // ~15px
 
