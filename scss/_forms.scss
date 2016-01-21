@@ -52,6 +52,7 @@
   }
   .form-msg {
     @extend .alert;
+    // @TODO: Replace with `.alert-sm` once that's ready
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
