@@ -1,7 +1,9 @@
 var gulp = require( 'gulp' );
+var rename = require( 'gulp-rename' );
 var sass = require( 'gulp-sass' );
 var postcss = require( 'gulp-postcss' );
 var autoprefixer = require( 'autoprefixer' );
+var cssnano = require( 'cssnano' );
 var browserSync = require( 'browser-sync' );
 var theo = require( 'theo' );
 
@@ -29,6 +31,11 @@ gulp.task( 'apollo-styles', function () {
         browsers: [ 'last 2 versions' ]
       })
     ]))
+    .pipe( gulp.dest( 'dist/css/' ) )
+    .pipe( postcss([ cssnano() ]))
+    .pipe( rename({ 
+      suffix: '.min' 
+    }))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });

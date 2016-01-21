@@ -1,6 +1,5 @@
 // Scaffolding
 @import 'functions';
-@import 'animations';
 @import 'bootstrap/scss/variables';
 @import 'variables';
 @import 'bootstrap/scss/mixins';
@@ -20,3 +19,6 @@
 
 // Components
 @import 'toolbar';
+
+// Decoration
+@import 'animations';

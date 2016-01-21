@@ -1,29 +1,4 @@
 @charset "UTF-8";
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
-            transform: translateX(-50%) translateY(-50%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-            transform: translateX(-50%) translateY(-50%) scale(1);
-    opacity: 0;
-  }
-}
-@keyframes pulse {
-  0% {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
-            transform: translateX(-50%) translateY(-50%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-            transform: translateX(-50%) translateY(-50%) scale(1);
-    opacity: 0;
-  }
-}
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -2987,4 +2962,30 @@ input[type="radio"]:checked + .control-label:before {
 
 .padding-top-toolbar {
   padding-top: 5.5rem;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+            transform: translateX(-50%) translateY(-50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+            transform: translateX(-50%) translateY(-50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 0;
+  }
 }
