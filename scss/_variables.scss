@@ -134,8 +134,9 @@ $form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
 $form-border-width: .0625rem;     // ~1px
 
 // Checkbox
-$checkbox-size: 1rem;
+$checkbox-size: 1.2rem;
 $checkbox-border: 1px solid $gray;
+$checkbox-color: $blue;
 
 // Error message
 $form-msg-padding-vertical: $form-padding-vertical * 1.2;
