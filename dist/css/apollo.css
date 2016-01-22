@@ -2666,6 +2666,7 @@ mark,
   margin-top: -0.75rem;
   font-size: 1.5rem;
   line-height: 1.2rem;
+  color: #fff;
 }
 
 .alert::before, .has-success .form-msg::before,
