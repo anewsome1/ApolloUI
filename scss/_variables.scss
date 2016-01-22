@@ -134,7 +134,7 @@ $form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
 $form-border-width: .0625rem;     // ~1px
 
 // Checkbox
-$checkbox-size: 1.1rem;
+$checkbox-size: 1rem;
 $checkbox-border: 1px solid $gray;
 
 // Error message
@@ -193,12 +193,16 @@ $btn-variants: (
 /// 
 
 // Sizing
-$toolbar-height: 5.5rem; // ~88px
+$toolbar-height: 3.75rem; // ~60px
 $toolbar-brand-size: $font-size-h4;
 $toolbar-brand-padding-y: calc-padding-y($toolbar-height, $toolbar-brand-size);
-$toolbar-link-size: $font-size-sm;
+$toolbar-link-size: $font-size-base;
 $toolbar-link-padding-y: calc-padding-y($toolbar-height, $toolbar-link-size);
 $toolbar-link-padding-x: $grid-gutter-width / 2;
+
+$toolbar-jumbo-height: 5.5rem; // ~88px
+$toolbar-jumbo-brand-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-brand-size);
+$toolbar-jumbo-link-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-link-size);
 
 
 // Themes

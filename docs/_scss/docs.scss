@@ -1,8 +1,12 @@
-// Bootstrap variables
+// Bootstrap dependencies
 @import 'bootstrap/scss/variables';
-// Apollo variables
+@import 'bootstrap/scss/mixins';
+// Apollo dependencies
+@import '../../scss/functions';
 @import '../../scss/variables';
+@import '../../scss/mixins';
 
 @import 'variables';
 @import 'syntax';
+@import 'bootstrap/scss/code';
 @import 'examples';

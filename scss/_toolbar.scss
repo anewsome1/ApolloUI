@@ -6,11 +6,6 @@
   background-color: $toolbar-bg;
   box-shadow: $shadow-hover;
 
-  &.toolbar-fixed-top {
-    position: fixed;
-    width: 100%;
-  }
-
   a,
   a:hover,
   a:focus {
@@ -61,8 +56,34 @@
       // background-color: darken($toolbar-bg, 10%);
     }
   }
+
+  &.toolbar-fixed-top {
+    position: fixed;
+    width: 100%;
+  }
+
+  &.toolbar-jumbo {
+    height: $toolbar-jumbo-height;
+
+    .toolbar-brand {
+      padding-top: $toolbar-jumbo-brand-padding-y;
+      padding-bottom: $toolbar-jumbo-brand-padding-y;
+    }
+
+    .toolbar-item {
+      > a {
+        padding-top: $toolbar-jumbo-link-padding-y;
+        padding-bottom: $toolbar-jumbo-link-padding-y;
+      }
+    }
+  }
 }
 
+// Utility for when using toolbar-fixed-top
 .padding-top-toolbar {
   padding-top: $toolbar-height;
+
+  &-jumbo {
+    padding-top: $toolbar-jumbo-height;
+  }
 }
