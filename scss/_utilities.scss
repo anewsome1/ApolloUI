@@ -1,0 +1,10 @@
+.close {
+  @extend .icon;
+
+  background: none;
+  border: 0;
+
+  &::before {
+    content: map-get($_icons-map, clear);
+  }
+}

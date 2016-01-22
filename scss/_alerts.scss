@@ -1,66 +1,69 @@
-  .alert {
-    display: block;
-    position: relative;
-    z-index: 0;
-    padding: $alert-padding-vertical $alert-padding-horizontal $alert-padding-vertical ($alert-icon-size + ($alert-padding-horizontal * 1.5));
-    margin-bottom: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow below
-    // color: #fff;
-    font-size: $alert-font-size;
+.alert {
+  display: block;
+  position: relative;
+  z-index: 0;
+  padding: $alert-padding-vertical $alert-padding-horizontal $alert-padding-vertical ($alert-icon-size + ($alert-padding-horizontal * 1.5));
+  margin-bottom: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow below
+  // color: #fff;
+  font-size: $alert-font-size;
+  // line-height: $alert-line-height;
+  // background-color: $coral;
+
+  // Icons for message and close button
+  &::before,
+  .close {
+    position: absolute;
+    top: 50%;
+    margin-top: -($alert-icon-size / 2);
+    font-size: $alert-icon-size;
     line-height: $alert-line-height;
-    // background-color: $coral;
-
-    &::before {
-      @extend .icon;
-
-      position: absolute;
-      top: 50%;
-      left: $alert-padding-horizontal;
-      margin-top: -($alert-icon-size / 2);
-      font-size: $alert-icon-size;
-      line-height: $alert-line-height;
-    }
-
-    ///
-    /// Alert states, based on `$alert-states` map
-    ///
-
-    @each $state, $state-props in $alert-states {
-      $state-color: map-get($state-props, color);
-      $state-bg: map-get($state-props, bg);
-      $state-icon: map-get($state-props, icon);
-
-      &.alert-#{ $state } {
-        color: map-get($state-props, color);
-        background-color: $state-bg;
-        box-shadow: 0 $alert-shadow-height 0 0 transparentize($state-bg, .40),
-                    0 ($alert-shadow-height * 2) 0 0 transparentize($state-bg, .5);
-
-        &::before {
-          content: map-get($_icons-map, $state-icon);
-        }
-      }
-    }
-
-
-    ///
-    /// Size options
-    ///
-
-    &.alert-sm {
-      // @TODO: make this a thing
-    }
-
-
-    ///
-    /// Bottom option
-    ///
-
-    &.alert-bottom {
-      // @TODO: make this a thing
-    }
-
-
   }
 
+  &::before {
+    @extend .icon;
 
+    left: $alert-padding-horizontal;
+  }
+
+  // Positioning
+  &.alert-bottom {
+    margin-top: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow above
+  }
+
+  // Size options
+  &.alert-sm {
+    // @TODO: make this a thing
+  }
+
+  .close {
+    right: $alert-padding-horizontal;
+  }
+
+  ///
+  /// Alert states, based on `$alert-states` map
+  ///
+
+  @each $state, $state-props in $alert-states {
+    $state-color: map-get($state-props, color);
+    $state-bg: map-get($state-props, bg);
+    $state-icon: map-get($state-props, icon);
+
+    &.alert-#{ $state } {
+      color: map-get($state-props, color);
+      background-color: $state-bg;
+      box-shadow: 0 $alert-shadow-height 0 0 transparentize($state-bg, .5),
+      0 ($alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);
+
+      &.alert-bottom {
+        box-shadow: 0 (-$alert-shadow-height) 0 0 transparentize($state-bg, .5),
+        0 (-$alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);
+      }
+
+      &::before {
+        content: map-get($_icons-map, $state-icon);
+      }
+    }
+  }
+
+}
 

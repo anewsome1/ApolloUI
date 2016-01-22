@@ -1378,175 +1378,6 @@ output {
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-
-h1 {
-  font-size: 5.063rem;
-}
-
-h2 {
-  font-size: 3.375rem;
-}
-
-h3 {
-  font-size: 2.25rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 0.875rem;
-}
-
-.h1 {
-  font-size: 5.063rem;
-}
-
-.h2 {
-  font-size: 3.375rem;
-}
-
-.h3 {
-  font-size: 2.25rem;
-}
-
-.h4 {
-  font-size: 1.5rem;
-}
-
-.h5 {
-  font-size: 1rem;
-}
-
-.h6 {
-  font-size: 0.875rem;
-}
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-.display-1 {
-  font-size: 6rem;
-  font-weight: 300;
-}
-
-.display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-}
-
-.display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
-}
-
-.display-4 {
-  font-size: 3.5rem;
-  font-weight: 300;
-}
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-small,
-.small {
-  font-size: 80%;
-  font-weight: normal;
-}
-
-mark,
-.mark {
-  padding: .2em;
-  background-color: #fcf8e3;
-}
-
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline-item {
-  display: inline-block;
-}
-
-.list-inline-item:not(:last-child) {
-  margin-right: 5px;
-}
-
-.dl-horizontal {
-  margin-right: -1.875rem;
-  margin-left: -1.875rem;
-}
-
-.dl-horizontal::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
-}
-
-.blockquote {
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  border-left: 0.25rem solid #eceeef;
-}
-
-.blockquote-footer {
-  display: block;
-  font-size: 80%;
-  line-height: 1.5;
-  color: #818a91;
-}
-
-.blockquote-footer::before {
-  content: "\2014 \00A0";
-}
-
-.blockquote-reverse {
-  padding-right: 1rem;
-  padding-left: 0;
-  text-align: right;
-  border-right: 0.25rem solid #eceeef;
-  border-left: 0;
-}
-
-.blockquote-reverse .blockquote-footer::before {
-  content: "";
-}
-
-.blockquote-reverse .blockquote-footer::after {
-  content: "\00A0 \2014";
-}
-
 @font-face {
   font-family: "nexxucons";
   src: url("//cdn.ims.io/design/icon-font/1.4.1/nexxucons.eot");
@@ -1555,7 +1386,7 @@ mark,
   font-style: normal;
 }
 
-.icon, .alert::before, .has-success .form-msg::before,
+.icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
 .has-danger .form-msg::before, input[type='checkbox'] + label::before,
 input[type='radio'] + label::before {
@@ -2623,6 +2454,184 @@ input[type='radio'] + label::before {
   content: "";
 }
 
+.close {
+  background: none;
+  border: 0;
+}
+
+.close::before {
+  content: "q";
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1 {
+  font-size: 5.063rem;
+}
+
+h2 {
+  font-size: 3.375rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+.h1 {
+  font-size: 5.063rem;
+}
+
+.h2 {
+  font-size: 3.375rem;
+}
+
+.h3 {
+  font-size: 2.25rem;
+}
+
+.h4 {
+  font-size: 1.5rem;
+}
+
+.h5 {
+  font-size: 1rem;
+}
+
+.h6 {
+  font-size: 0.875rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: normal;
+}
+
+mark,
+.mark {
+  padding: .2em;
+  background-color: #fcf8e3;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.dl-horizontal {
+  margin-right: -1.875rem;
+  margin-left: -1.875rem;
+}
+
+.dl-horizontal::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.blockquote {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-left: 0.25rem solid #eceeef;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 80%;
+  line-height: 1.5;
+  color: #818a91;
+}
+
+.blockquote-footer::before {
+  content: "\2014 \00A0";
+}
+
+.blockquote-reverse {
+  padding-right: 1rem;
+  padding-left: 0;
+  text-align: right;
+  border-right: 0.25rem solid #eceeef;
+  border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer::before {
+  content: "";
+}
+
+.blockquote-reverse .blockquote-footer::after {
+  content: "\00A0 \2014";
+}
+
 .bg-charcoal {
   background-color: #3a4f5a;
   color: #fff;
@@ -2644,18 +2653,37 @@ input[type='radio'] + label::before {
   padding: 1rem 0.9375rem 1rem 2.90625rem;
   margin-bottom: 2.25rem;
   font-size: 1rem;
+}
+
+.alert::before, .has-success .form-msg::before,
+.has-warning .form-msg::before,
+.has-danger .form-msg::before,
+.alert .close, .has-success .form-msg .close,
+.has-warning .form-msg .close,
+.has-danger .form-msg .close {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.75rem;
+  font-size: 1.5rem;
   line-height: 1.2rem;
 }
 
 .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
 .has-danger .form-msg::before {
-  position: absolute;
-  top: 50%;
   left: 0.9375rem;
-  margin-top: -0.75rem;
-  font-size: 1.5rem;
-  line-height: 1.2rem;
+}
+
+.alert.alert-bottom, .has-success .alert-bottom.form-msg,
+.has-warning .alert-bottom.form-msg,
+.has-danger .alert-bottom.form-msg {
+  margin-top: 2.25rem;
+}
+
+.alert .close, .has-success .form-msg .close,
+.has-warning .form-msg .close,
+.has-danger .form-msg .close {
+  right: 0.9375rem;
 }
 
 .alert.alert-success, .has-success .form-msg,
@@ -2663,7 +2691,13 @@ input[type='radio'] + label::before {
 .has-danger .alert-success.form-msg {
   color: #fff;
   background-color: #20c22f;
-  box-shadow: 0 0.625rem 0 0 rgba(32, 194, 47, 0.6), 0 1.25rem 0 0 rgba(32, 194, 47, 0.5);
+  box-shadow: 0 0.625rem 0 0 rgba(32, 194, 47, 0.5), 0 1.25rem 0 0 rgba(32, 194, 47, 0.25);
+}
+
+.alert.alert-success.alert-bottom, .has-success .alert-bottom.form-msg,
+.has-warning .alert-success.alert-bottom.form-msg,
+.has-danger .alert-success.alert-bottom.form-msg {
+  box-shadow: 0 -0.625rem 0 0 rgba(32, 194, 47, 0.5), 0 -1.25rem 0 0 rgba(32, 194, 47, 0.25);
 }
 
 .alert.alert-success::before, .has-success .form-msg::before,
@@ -2676,7 +2710,13 @@ input[type='radio'] + label::before {
 .has-warning .form-msg,
 .has-danger .alert-warning.form-msg {
   background-color: #ffcf32;
-  box-shadow: 0 0.625rem 0 0 rgba(255, 207, 50, 0.6), 0 1.25rem 0 0 rgba(255, 207, 50, 0.5);
+  box-shadow: 0 0.625rem 0 0 rgba(255, 207, 50, 0.5), 0 1.25rem 0 0 rgba(255, 207, 50, 0.25);
+}
+
+.alert.alert-warning.alert-bottom, .has-success .alert-warning.alert-bottom.form-msg,
+.has-warning .alert-bottom.form-msg,
+.has-danger .alert-warning.alert-bottom.form-msg {
+  box-shadow: 0 -0.625rem 0 0 rgba(255, 207, 50, 0.5), 0 -1.25rem 0 0 rgba(255, 207, 50, 0.25);
 }
 
 .alert.alert-warning::before, .has-success .alert-warning.form-msg::before,
@@ -2690,7 +2730,13 @@ input[type='radio'] + label::before {
 .has-danger .form-msg {
   color: #fff;
   background-color: #fb4f39;
-  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.6), 0 1.25rem 0 0 rgba(251, 79, 57, 0.5);
+  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.5), 0 1.25rem 0 0 rgba(251, 79, 57, 0.25);
+}
+
+.alert.alert-danger.alert-bottom, .has-success .alert-danger.alert-bottom.form-msg,
+.has-warning .alert-danger.alert-bottom.form-msg,
+.has-danger .alert-bottom.form-msg {
+  box-shadow: 0 -0.625rem 0 0 rgba(251, 79, 57, 0.5), 0 -1.25rem 0 0 rgba(251, 79, 57, 0.25);
 }
 
 .alert.alert-danger::before, .has-success .alert-danger.form-msg::before,

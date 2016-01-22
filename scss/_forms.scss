@@ -68,7 +68,7 @@
     .form-msg {
       @extend .alert-#{ $state };
     }
-  }  
+  }
 }
 
 
@@ -138,7 +138,7 @@ input[type="checkbox"] {
   + label::before {
     content: map-get($_icons-map, box-unchecked);
   }
-  
+
   &:checked + label::before {
     content: map-get($_icons-map, box-checked);
   }

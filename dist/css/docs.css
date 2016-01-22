@@ -95,12 +95,12 @@ body {
   border-right: 1px solid #e3ebef;
 }
 
-.docs-content {
-  padding-top: 16px;
-}
-
 .docs-sidebar + .docs-content {
   margin-left: 15rem;
+}
+
+.docs-content {
+  padding-top: 16px;
 }
 
 .docs-page-nav,
