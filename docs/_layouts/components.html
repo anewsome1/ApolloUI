@@ -1,9 +1,11 @@
 ---
 layout: base
 ---
-{% assign section_groups = site.styles | group_by: 'category' %}
+
+{% assign section_groups = site.components | group_by: 'category' %}
 
 <div class="docs">
+
   <aside class="docs-sidebar">
     <ul class="docs-page-nav" role="navigation">
     {% for group in section_groups %}
@@ -20,7 +22,7 @@ layout: base
   </aside>
 
   <main class="docs-content container-fluid">
-    {{ page.content }}
+    {{ content }}
 
     {% for group in section_groups %}
       {% assign group_items = group.items | sort: 'order' %}
@@ -29,17 +31,7 @@ layout: base
       {% for item in group_items %}
         <h3 id="{{ item.title | slugify }}">{{ item.title }}</h3>
         <p>{{ item.description }}</p>
-        <div class="docs-example-rendered">
-        {% if item.full %}
-          {{ item.content }}
-        {% else %}
-          <div class="row">
-            <div class="col-md-12 col-lg-8 col-xl-5">
-            {{ item.content }}
-            </div>
-          </div>
-        {% endif %}
-        </div>
+        <div class="docs-example-rendered">{{ item.content }}</div>
         <div class="docs-example-code">{% highlight html %}{{ item.content }}{% endhighlight %}</div>
       {% endfor %}
       </section>

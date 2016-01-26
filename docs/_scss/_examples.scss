@@ -3,7 +3,7 @@
 /// Page Layout
 ///
 
-$docs-sidebar-width: 15rem;
+$docs-sidebar-width: $off-canvas-width;
 
 html,
 body {

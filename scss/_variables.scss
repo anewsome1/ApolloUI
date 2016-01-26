@@ -84,8 +84,8 @@ $transition-fast: .25s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-hover: 8px 8px 16px rgba(0, 0, 0, .15);
-$shadow-active: 4px 4px 8px rgba(0, 0, 0, .15);
+$shadow-hover: 5px 5px 16px rgba(0, 0, 0, .2);
+$shadow-active: 3px 3px 8px rgba(0, 0, 0, .2);
 
 
 ///
@@ -190,26 +190,59 @@ $btn-variants: (
 
 
 ///
+/// Toggle
+///
+
+$toggle-height: 2.75rem;
+$toggle-font-size: $font-size-base;
+$toggle-padding-vertical: calc-padding-y($toggle-height, $toggle-font-size);
+
+
+///
+/// Off-canvas menu
+///
+
+$off-canvas-width: 18rem;  // ~288px
+
+///
 /// Toolbar
 ///
 
-// Sizing
+// Default
 $toolbar-height: 3.75rem; // ~60px
-$toolbar-brand-size: $font-size-h4;
-$toolbar-brand-padding-y: calc-padding-y($toolbar-height, $toolbar-brand-size);
-$toolbar-link-size: $font-size-base;
+$toolbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
+$toolbar-brand-font-size: $font-size-h4;
+$toolbar-brand-padding-y: calc-padding-y($toolbar-height, $toolbar-brand-font-size);
+$toolbar-link-size: $font-size-sm;
 $toolbar-link-padding-y: calc-padding-y($toolbar-height, $toolbar-link-size);
 $toolbar-link-padding-x: $grid-gutter-width / 2;
 
+// Jumbo
 $toolbar-jumbo-height: 5.5rem; // ~88px
-$toolbar-jumbo-brand-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-brand-size);
+$toolbar-jumbo-brand-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-brand-font-size);
 $toolbar-jumbo-link-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-link-size);
 
-
 // Themes
-$toolbar-bg: $blue;
-$toolbar-link-color: #fff;
+$toolbar-variants: (
+  primary: (
+    bg: $blue,
+    color: #fff,
+    color-subdued: transparentize(#fff, .5)
+  ),
+  dark: (
+    bg: $charcoal,
+    color: $gray-lightest,
+    color-subdued: $teal
+  ),
+  light: (
+    bg: $gray-lightest,
+    color: $blue,
+    color-subdued: transparentize($blue, .5)
+  )
+);
 
-
+// Profile
+$profile-img-size: 2.4375rem;  // ~39px
+$profile-img-text-size: $font-size-h4;
 
 

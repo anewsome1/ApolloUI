@@ -1,60 +1,15 @@
 .toolbar {
   position: relative;
   z-index: $zindex-navbar;
-  height: $toolbar-height;
   overflow: hidden;
-  background-color: $toolbar-bg;
+  height: $toolbar-height;
+  background-color: #fff;
   box-shadow: $shadow-hover;
 
   a,
   a:hover,
   a:focus {
     text-decoration: none;
-  }
-
-  .toolbar-brand,
-  .toolbar-item > a {
-    &,
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited {
-      color: $toolbar-link-color;
-    }
-  }
-
-  .toolbar-brand {
-    display: block;
-    float: left;
-    padding-top: $toolbar-brand-padding-y;
-    padding-bottom: $toolbar-brand-padding-y;
-    margin-right: $grid-gutter-width;
-    font-size: $toolbar-brand-size;
-    line-height: 1;
-  }
-
-  .toolbar-links {
-    @include clearfix();
-    display: block;
-    float: left;
-    padding-left: 0;
-    margin-bottom: 0;
-  }
-
-  .toolbar-item {
-    display: block;
-    float: left;
-
-    > a {
-      display: block;
-      font-size: $toolbar-link-size;
-      line-height: 1;
-      padding: $toolbar-link-padding-y $toolbar-link-padding-x;
-    }
-
-    &.active > a {
-      // background-color: darken($toolbar-bg, 10%);
-    }
   }
 
   &.toolbar-fixed-top {
@@ -77,6 +32,91 @@
       }
     }
   }
+
+}
+
+///
+/// Brand (application name)
+///
+
+.toolbar-brand {
+  display: block;
+  float: left;
+  width: $toolbar-brand-width;
+  padding-top: $toolbar-brand-padding-y;
+  padding-bottom: $toolbar-brand-padding-y;
+  font-size: $toolbar-brand-font-size;
+  text-align: center;
+  line-height: 1;
+}
+
+///
+/// Links (nav menu)
+///
+
+.toolbar-links {
+  @include clearfix();
+  display: block;
+  float: left;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.toolbar-item {
+  display: block;
+  float: left;
+
+  > a {
+    display: block;
+    font-size: $toolbar-link-size;
+    line-height: 1;
+    padding: $toolbar-link-padding-y $toolbar-link-padding-x;
+  }
+
+  &.active > a {
+    // background-color: darken($toolbar-bg, 10%);
+  }
+}
+
+///
+/// User profile
+///
+
+.toolbar-profile {
+  position: relative;
+  float: right;
+  margin-top: $toolbar-jumbo-link-padding-y;
+  text-align: right;
+
+  .profile-username,
+  .profile-company {
+    display: block;
+    margin-right: $profile-img-size + ($grid-gutter-width / 2);
+    line-height: 1.2;
+  }
+
+  .profile-username {
+    font-size: $toolbar-link-size;
+  }
+
+  .profile-company {
+    font-size: $toolbar-link-size * .85;
+  }
+
+  .profile-image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: $profile-img-size;
+    height: $profile-img-size;
+    padding-top: calc-padding-y($profile-img-size, $profile-img-text-size);
+    margin-top: -($profile-img-size / 2);
+    font-size: $profile-img-text-size;
+    line-height: 1.1;
+    text-align: center;
+    border-radius: 50%;
+  }
 }
 
 // Utility for when using toolbar-fixed-top
@@ -85,5 +125,37 @@
 
   &-jumbo {
     padding-top: $toolbar-jumbo-height;
+  }
+}
+
+@each $variant, $props in $toolbar-variants {
+  .toolbar-#{ $variant } {
+    background-color: map-get($props, bg);
+
+    .toolbar-brand,
+    .toolbar-item > a {
+      &,
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited {
+        color: map-get($props, color);
+      }
+    }
+
+    .profile-username {
+      font-size: $toolbar-link-size;
+      color: map-get($props, color);
+    }
+
+    .profile-company {
+      font-size: $toolbar-link-size * .85;
+      color: map-get($props, color-subdued);
+    }
+
+    .profile-image {
+      background-color: map-get($props, color);
+      color: map-get($props, bg);
+    }
   }
 }

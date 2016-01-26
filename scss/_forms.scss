@@ -77,8 +77,8 @@
 /// Checkbox and Radio controls
 ///
 
-input[type='checkbox'],
-input[type='radio'] {
+.checkbox input[type='checkbox'],
+.radio input[type='radio'] {
   position: absolute;
   opacity: 0;
 
@@ -134,7 +134,7 @@ input[type='radio'] {
   }
 }
 
-input[type="checkbox"] {
+.checkbox input[type="checkbox"] {
   + label::before {
     content: map-get($_icons-map, box-unchecked);
   }
@@ -144,7 +144,7 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"] {
+.radio input[type="radio"] {
   + label::before {
     content: map-get($_icons-map, radio-unchecked);
     border-radius: 50%;
@@ -152,5 +152,52 @@ input[type="radio"] {
   &:checked + label:before {
     content: map-get($_icons-map, radio-checked);
   }
+
 }
+
+.toggle {
+  display: flex;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+
+    + label {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      padding-top: $toggle-padding-vertical;
+      padding-bottom: $toggle-padding-vertical;
+      line-height: 1;
+      text-align: center;
+      color: $blue;
+      background-color: rgba(255, 255, 255, .75);
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover,
+      &:active {
+        z-index: 2;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: $shadow-hover;
+      }
+
+      &:active {
+        background-color: $charcoal;
+        color: #fff;
+      }
+    }
+
+    &:checked + label {
+      z-index: 2;
+      color: #fff;
+      background-color: $blue;
+      box-shadow: $shadow-hover;
+    }
+  }
+}
+
 

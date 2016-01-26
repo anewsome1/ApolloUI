@@ -86,7 +86,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 15rem;
+  width: 18rem;
   height: 100%;
   padding-top: 5.5rem;
   overflow-x: hidden;
@@ -96,7 +96,7 @@ body {
 }
 
 .docs-sidebar + .docs-content {
-  margin-left: 15rem;
+  margin-left: 18rem;
 }
 
 .docs-content {
