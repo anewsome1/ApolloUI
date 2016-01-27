@@ -10,7 +10,8 @@ var theo = require( 'theo' );
 
 gulp.task( 'serve', [ 'default' ], function() {
   browserSync.init({
-    server: 'dist'
+    server: 'dist',
+    ghostMode: false
   });
 
   gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ] );
@@ -21,7 +22,7 @@ gulp.task( 'serve', [ 'default' ], function() {
 
 gulp.task( 'apollo-styles', function () {
   gulp.src( 'scss/apollo.scss' )
-    .pipe( sass({ 
+    .pipe( sass({
         includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
       })
@@ -34,8 +35,8 @@ gulp.task( 'apollo-styles', function () {
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() )
     .pipe( postcss([ cssnano() ]))
-    .pipe( rename({ 
-      suffix: '.min' 
+    .pipe( rename({
+      suffix: '.min'
     }))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
@@ -44,7 +45,7 @@ gulp.task( 'apollo-styles', function () {
 
 gulp.task( 'docs-styles', function () {
   gulp.src( 'docs/_scss/docs.scss' )
-    .pipe( sass({ 
+    .pipe( sass({
         includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
       })
