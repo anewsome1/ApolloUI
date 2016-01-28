@@ -23,3 +23,5 @@ collections:
   - icons
   - components
   - page-templates
+
+current_version: 0.1.0-dev
