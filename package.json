@@ -4,7 +4,7 @@
   "description": "HTML and CSS framework to implement the Apollo visual language.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pages": "echo \"Nothing to see here, folks.  Just copy and paste\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "theo": "^4.2.0"
-  }
+  },
+  "siteRoot": "dist"
 }
