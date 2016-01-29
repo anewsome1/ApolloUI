@@ -8,7 +8,7 @@ $icon-svg-id: $icon-family;
 @include font-face($family: $icon-family, $path: $icon-cdn-path, $svg-id: $icon-svg-id, $filename: $icon-filename);
 
 // Base icon definition
-.icon {
+%icon-base {
   display: inline-block;
   font-family: $icon-family;
   // font-size: inherit;
@@ -20,6 +20,10 @@ $icon-svg-id: $icon-family;
   speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  @extend %icon-base;
 }
 
 // Iterate through `$icons` map and create class for each character

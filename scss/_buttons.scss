@@ -66,21 +66,21 @@
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%) scale(0);
   }
-  
+
   &::before {
     background-color: rgba(41,125,253,.5);
   }
-  
+
   &::after {
     border: 1px solid #297DFD;
   }
-  
+
   // using `:focus` instead of `:active` because the latter only applies `onMouseDown`
   &:focus {
     &::before {
       animation: pulse .5s .25s cubic-bezier(0, 0, .5, 1);
     }
-  
+
     &::after {
       animation: pulse .5s cubic-bezier(0, 0, .5, 1);
     }

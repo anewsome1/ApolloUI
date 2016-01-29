@@ -199,6 +199,18 @@ $toggle-padding-vertical: calc-padding-y($toggle-height, $toggle-font-size);
 
 
 ///
+/// Dropdowns
+///
+
+$dropdown-toggle-padding: $btn-padding-top $btn-padding-horizontal $btn-padding-bottom;
+$dropdown-item-padding: ($spacer / 3) $btn-padding-horizontal;
+$dropdown-menu-bg: #fff;
+$dropdown-menu-color: $body-color;
+$dropdown-menu-bg-hover: $navy;
+$dropdown-menu-color-hover: #fff;
+
+
+///
 /// Off-canvas menu
 ///
 

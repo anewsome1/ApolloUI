@@ -1389,7 +1389,7 @@ output {
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
 .has-danger .form-msg::before, .checkbox input[type='checkbox'] + label::before,
-.radio input[type='radio'] + label::before {
+.radio input[type='radio'] + label::before, .dropdown-toggle::after {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -3059,6 +3059,62 @@ mark,
   color: #fff;
   background-color: #297dfd;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-toggle {
+  position: relative;
+  padding: 0.5rem 1.125rem 0.375rem;
+  background: none;
+  border: 0;
+  color: #297dfd;
+  outline: none;
+}
+
+.dropdown-toggle::after {
+  margin-left: .125rem;
+  content: "s";
+  vertical-align: text-bottom;
+}
+
+.dropdown-toggle:hover + .dropdown-menu,
+.dropdown-toggle:focus + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  padding: 0;
+  background: #fff;
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu > li {
+  list-style-type: none;
+}
+
+.dropdown-menu > li + li {
+  border-top: 1px solid #e3ebef;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 0.33333rem 1.125rem;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.dropdown-menu > li > a:link, .dropdown-menu > li > a:visited {
+  color: #3a4f5a;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:active {
+  background-color: #1c2980;
+  color: #fff;
+  text-decoration: none;
 }
 
 .toolbar {
