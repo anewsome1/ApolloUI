@@ -13,14 +13,14 @@
 .form-control {
   display: block;
   width: 100%;
+  height: $form-height;
   padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
-  border: $form-border-width solid $gray-lighter;
+  border: $form-border-width solid darken($gray-lighter, 10%);
   font-size: $form-font-size;
   line-height: $form-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all $transition-fast;
-  height: $form-height;
 
   &,
   &:placeholder-shown {
@@ -40,6 +40,17 @@
     box-shadow: none;
     cursor: not-allowed;
   }
+}
+
+select.form-control {
+  // appearance: none;
+  background-color: #fff;
+  // @FIXME: `select` tags don't have ::before or ::after pseudo-elements
+  // &::after {
+  //   @extend %icon-base;
+
+  //   content: map-get($_icons-map, expand);
+  // }
 }
 
 .has-success,
@@ -79,11 +90,10 @@
 
 .checkbox input[type='checkbox'],
 .radio input[type='radio'] {
-  position: absolute;
-  opacity: 0;
+  appearance: none;
 
   + label {
-    display: inline-block;
+    display: inline;
     cursor: pointer;
 
     &::before {
@@ -91,8 +101,8 @@
 
       display: inline-block;
       content: '';
-      width: $checkbox-size;
-      height: $checkbox-size;
+      // width: $checkbox-size;
+      // height: $checkbox-size;
       margin-right: $checkbox-size / 3;
       font-size: $checkbox-size;
       line-height: $checkbox-size;
