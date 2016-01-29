@@ -24,7 +24,6 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
-    "bootstrap": "^4.0.0-alpha.2",
     "browser-sync": "^2.10.1",
     "cssnano": "^3.4.0",
     "fs": "0.0.2",
@@ -36,5 +35,8 @@
     "path": "^0.12.7",
     "shelljs": "^0.5.3",
     "theo": "^4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2"
   }
 }
