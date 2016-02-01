@@ -7,7 +7,7 @@
   position: relative;
   display: inline-block;
   min-width: $btn-min-width;
-  padding: $btn-padding-top $btn-padding-horizontal $btn-padding-bottom;
+  padding: $btn-padding-top $btn-padding-x $btn-padding-bottom;
   border: $border-width solid transparent;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
@@ -131,12 +131,12 @@
 
 .btn-compact {
   min-width: 0;
-  padding: $btn-sm-padding-vertical $btn-sm-padding-horizontal;
+  padding: $btn-sm-padding-y $btn-sm-padding-x;
   font-size: $btn-sm-font-size;
 }
 
 // Larger size for touch-enabled devices
 .touchevents .btn {
-  padding-top: $btn-touch-padding-vertical;
-  padding-bottom: $btn-touch-padding-vertical;
+  padding-top: $btn-touch-padding-y;
+  padding-bottom: $btn-touch-padding-y;
 }

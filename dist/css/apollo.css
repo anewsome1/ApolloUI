@@ -3150,21 +3150,20 @@ textarea.form-control {
 }
 
 .toolbar.toolbar-jumbo .toolbar-brand {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-top: 1.5rem;
 }
 
 .toolbar.toolbar-jumbo .toolbar-item > a {
-  padding-top: 2.3125rem;
-  padding-bottom: 2.3125rem;
+  margin-top: 1.75rem;
 }
 
 .toolbar-brand {
   display: block;
   float: left;
   width: 17.0625rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.375rem;
+  margin-top: 0.625rem;
   font-size: 1.5rem;
   text-align: center;
   line-height: 1;
@@ -3190,15 +3189,16 @@ textarea.form-control {
 
 .toolbar-item > a {
   display: block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1;
-  padding: 1.4375rem 0.9375rem;
+  margin-top: 0.875rem;
+  padding: 0.5rem 1.125rem 0.375rem;
 }
 
 .toolbar-profile {
   position: relative;
   float: right;
-  margin-top: 2.3125rem;
+  margin-top: 1.53125rem;
   text-align: right;
 }
 
@@ -3210,11 +3210,11 @@ textarea.form-control {
 }
 
 .toolbar-profile .profile-username {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .toolbar-profile .profile-company {
-  font-size: 0.74375rem;
+  font-size: 0.85rem;
 }
 
 .toolbar-profile .profile-image {
@@ -3258,12 +3258,12 @@ textarea.form-control {
 }
 
 .toolbar-primary .profile-username {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #fff;
 }
 
 .toolbar-primary .profile-company {
-  font-size: 0.74375rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -3290,12 +3290,12 @@ textarea.form-control {
 }
 
 .toolbar-dark .profile-username {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #f7f7f9;
 }
 
 .toolbar-dark .profile-company {
-  font-size: 0.74375rem;
+  font-size: 0.85rem;
   color: #37dad3;
 }
 
@@ -3318,12 +3318,12 @@ textarea.form-control {
 }
 
 .toolbar-light .profile-username {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #297dfd;
 }
 
 .toolbar-light .profile-company {
-  font-size: 0.74375rem;
+  font-size: 0.85rem;
   color: rgba(41, 125, 253, 0.5);
 }
 

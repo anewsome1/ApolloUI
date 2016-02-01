@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   height: $form-height;
-  padding: $form-padding-top $form-padding-horizontal $form-padding-bottom;
+  padding: $form-padding-top $form-padding-x $form-padding-bottom;
   border: $form-border-width solid darken($gray-lighter, 10%);
   font-size: $form-font-size;
   line-height: $form-line-height;
@@ -182,8 +182,8 @@ textarea.form-control {
       position: relative;
       z-index: 1;
       flex: 1;
-      padding-top: $toggle-padding-vertical;
-      padding-bottom: $toggle-padding-vertical;
+      padding-top: $toggle-padding-y;
+      padding-bottom: $toggle-padding-y;
       line-height: 1;
       text-align: center;
       color: $blue;

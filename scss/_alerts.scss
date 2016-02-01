@@ -2,7 +2,7 @@
   display: block;
   position: relative;
   z-index: 0;
-  padding: $alert-padding-vertical $alert-padding-horizontal $alert-padding-vertical ($alert-icon-size + ($alert-padding-horizontal * 1.5));
+  padding: $alert-padding-y $alert-padding-x $alert-padding-y ($alert-icon-size + ($alert-padding-x * 1.5));
   margin-bottom: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow below
   // color: #fff;
   font-size: $alert-font-size;
@@ -23,7 +23,7 @@
   &::before {
     @extend .icon;
 
-    left: $alert-padding-horizontal;
+    left: $alert-padding-x;
   }
 
   // Positioning
@@ -37,7 +37,7 @@
   }
 
   .close {
-    right: $alert-padding-horizontal;
+    right: $alert-padding-x;
   }
 
   ///

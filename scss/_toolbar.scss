@@ -16,18 +16,17 @@
     width: 100%;
   }
 
+  // Jumbo variation
   &.toolbar-jumbo {
     height: $toolbar-jumbo-height;
 
     .toolbar-brand {
-      padding-top: $toolbar-jumbo-brand-padding-y;
-      padding-bottom: $toolbar-jumbo-brand-padding-y;
+      margin-top: $toolbar-jumbo-brand-margin-top;
     }
 
     .toolbar-item {
       > a {
-        padding-top: $toolbar-jumbo-link-padding-y;
-        padding-bottom: $toolbar-jumbo-link-padding-y;
+        margin-top: $toolbar-jumbo-link-margin-top;
       }
     }
   }
@@ -42,8 +41,9 @@
   display: block;
   float: left;
   width: $toolbar-brand-width;
-  padding-top: $toolbar-brand-padding-y;
-  padding-bottom: $toolbar-brand-padding-y;
+  padding-top: $toolbar-link-padding-top;
+  padding-bottom: $toolbar-link-padding-bottom;
+  margin-top: $toolbar-brand-margin-top;
   font-size: $toolbar-brand-font-size;
   text-align: center;
   line-height: 1;
@@ -67,9 +67,10 @@
 
   > a {
     display: block;
-    font-size: $toolbar-link-size;
+    font-size: $toolbar-link-font-size;
     line-height: 1;
-    padding: $toolbar-link-padding-y $toolbar-link-padding-x;
+    margin-top: $toolbar-link-margin-top;
+    padding: $toolbar-link-padding-top $toolbar-link-padding-x $toolbar-link-padding-bottom;
   }
 
   &.active > a {
@@ -84,7 +85,7 @@
 .toolbar-profile {
   position: relative;
   float: right;
-  margin-top: $toolbar-jumbo-link-padding-y;
+  margin-top: $profile-margin-top;
   text-align: right;
 
   .profile-username,
@@ -95,11 +96,11 @@
   }
 
   .profile-username {
-    font-size: $toolbar-link-size;
+    font-size: $toolbar-link-font-size;
   }
 
   .profile-company {
-    font-size: $toolbar-link-size * .85;
+    font-size: $toolbar-link-font-size * .85;
   }
 
   .profile-image {
@@ -152,12 +153,12 @@
 
     // User profile section
     .profile-username {
-      font-size: $toolbar-link-size;
+      font-size: $toolbar-link-font-size;
       color: map-get($props, color);
     }
 
     .profile-company {
-      font-size: $toolbar-link-size * .85;
+      font-size: $toolbar-link-font-size * .85;
       color: map-get($props, color-subdued);
     }
 

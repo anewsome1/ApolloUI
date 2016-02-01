@@ -93,8 +93,8 @@ $shadow-active: 3px 3px 8px rgba(0, 0, 0, .2);
 ///
 
 // Sizing
-$alert-padding-vertical: $spacer;
-$alert-padding-horizontal: $grid-gutter-width / 2;
+$alert-padding-y: $spacer;
+$alert-padding-x: $grid-gutter-width / 2;
 $alert-icon-size: $font-size-lg;
 $alert-font-size: $font-size-base;
 $alert-line-height: $alert-font-size * 1.2;
@@ -127,10 +127,10 @@ $alert-states: (
 $form-height: 2rem;               // ~32px (height set manually)
 $form-line-height: normal;
 $form-font-size: $font-size-base; // ~16px
-$form-padding-vertical: calc-padding-y($form-height, $form-font-size);
+$form-padding-y: calc-padding-y($form-height, $form-font-size);
 $form-padding-top: .5625rem;      // ~9px
 $form-padding-bottom: .4375rem;   // ~7px
-$form-padding-horizontal: .5rem;  // ~33px + border thickness = 32px
+$form-padding-x: .5rem;  // ~33px + border thickness = 32px
 $form-border-width: .0625rem;     // ~1px
 
 // Checkbox
@@ -139,8 +139,8 @@ $checkbox-border: 1px solid $gray;
 $checkbox-color: $blue;
 
 // Error message
-$form-msg-padding-vertical: $form-padding-vertical * 1.2;
-$form-msg-padding-horizontal: $form-padding-horizontal;
+$form-msg-padding-y: $form-padding-y * 1.2;
+$form-msg-padding-x: $form-padding-x;
 $form-msg-icon-size: $font-size-lg;
 $form-msg-font-size: $font-size-base;
 $form-msg-line-height: $form-msg-font-size;
@@ -154,17 +154,17 @@ $form-msg-shadow-height: .625rem;  // ~10px
 $btn-border-width: $form-border-width;
 $btn-min-width: 5.75rem;                // ~92px
 $btn-padding-top: $form-padding-top - $btn-border-width;
-$btn-padding-horizontal: 1.125rem;      // ~18px
+$btn-padding-x: 1.125rem;      // ~18px
 $btn-padding-bottom: $form-padding-bottom - $btn-border-width;
 $btn-font-size: $form-font-size;
 $btn-line-height: 1;
 $btn-font-weight: normal;
 
-$btn-sm-padding-vertical: .375rem;      // ~6px;
-$btn-sm-padding-horizontal: .8125rem;   // ~13px
+$btn-sm-padding-y: .375rem;      // ~6px;
+$btn-sm-padding-x: .8125rem;   // ~13px
 $btn-sm-font-size: $font-size-xs;       // ~12px
 
-$btn-touch-padding-vertical: .9375rem;  // ~15px
+$btn-touch-padding-y: .9375rem;  // ~15px
 
 $btn-variants: (
   primary: (
@@ -195,15 +195,15 @@ $btn-variants: (
 
 $toggle-height: 2.75rem;
 $toggle-font-size: $font-size-base;
-$toggle-padding-vertical: calc-padding-y($toggle-height, $toggle-font-size);
+$toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 
 
 ///
 /// Dropdowns
 ///
 
-$dropdown-toggle-padding: $btn-padding-top $btn-padding-horizontal $btn-padding-bottom;
-$dropdown-item-padding: ($spacer / 3) $btn-padding-horizontal;
+$dropdown-toggle-padding: $btn-padding-top $btn-padding-x $btn-padding-bottom;
+$dropdown-item-padding: ($spacer / 3) $btn-padding-x;
 $dropdown-menu-bg: #fff;
 $dropdown-menu-color: $body-color;
 $dropdown-menu-bg-hover: $navy;
@@ -224,15 +224,18 @@ $off-canvas-width: 18rem;  // ~288px
 $toolbar-height: 3.75rem; // ~60px
 $toolbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
 $toolbar-brand-font-size: $font-size-h4;
-$toolbar-brand-padding-y: calc-padding-y($toolbar-height, $toolbar-brand-font-size);
-$toolbar-link-size: $font-size-sm;
-$toolbar-link-padding-y: calc-padding-y($toolbar-height, $toolbar-link-size);
-$toolbar-link-padding-x: $grid-gutter-width / 2;
+$toolbar-link-font-size: $font-size-base;
+$toolbar-link-padding-top: $btn-padding-top;
+$toolbar-link-padding-bottom: $btn-padding-bottom;
+$toolbar-link-padding-x: $btn-padding-x;
+$toolbar-brand-margin-top: ($toolbar-height / 2) - ($toolbar-brand-font-size / 2) - $toolbar-link-padding-top;
+$toolbar-link-margin-top: ($toolbar-height / 2) - ($toolbar-link-font-size / 2) - $toolbar-link-padding-top;
 
 // Jumbo
 $toolbar-jumbo-height: 5.5rem; // ~88px
-$toolbar-jumbo-brand-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-brand-font-size);
-$toolbar-jumbo-link-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-link-size);
+$toolbar-jumbo-brand-margin-top: ($toolbar-jumbo-height / 2) - ($toolbar-brand-font-size / 2) - $toolbar-link-padding-top;
+$toolbar-jumbo-link-margin-top: ($toolbar-jumbo-height / 2) - ($toolbar-link-font-size / 2) - $toolbar-link-padding-top;
+
 
 // Themes
 $toolbar-variants: (
@@ -258,5 +261,6 @@ $toolbar-variants: (
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px
 $profile-img-text-size: $font-size-h4;
+$profile-margin-top: ($toolbar-jumbo-height / 2) - ($profile-img-size / 2);
 
 
