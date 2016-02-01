@@ -1,7 +1,6 @@
 .toolbar {
   position: relative;
   z-index: $zindex-navbar;
-  overflow: hidden;
   height: $toolbar-height;
   background-color: #fff;
   box-shadow: $shadow-hover;
@@ -143,6 +142,15 @@
       }
     }
 
+    // Dropdown lists
+    @if map-get($props, dark) {
+      .toolbar-item > .dropdown-toggle:focus {
+        color: $teal;
+      }
+    }
+
+
+    // User profile section
     .profile-username {
       font-size: $toolbar-link-size;
       color: map-get($props, color);

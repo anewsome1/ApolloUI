@@ -15,10 +15,9 @@
 
     margin-left: .125rem;
     content: map-get($_icons-map, expand);
-    vertical-align: text-bottom;
+    vertical-align: bottom;
   }
 
-  &:hover + .dropdown-menu,
   &:focus + .dropdown-menu {
     display: block;
   }
@@ -31,6 +30,7 @@
 .dropdown-menu {
   display: none;
   position: absolute;
+  z-index: $zindex-popover;
   padding: 0;
   background: $dropdown-menu-bg;
   box-shadow: $shadow-hover;

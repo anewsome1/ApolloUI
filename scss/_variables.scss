@@ -237,11 +237,13 @@ $toolbar-jumbo-link-padding-y: calc-padding-y($toolbar-jumbo-height, $toolbar-li
 // Themes
 $toolbar-variants: (
   primary: (
+    dark: true,
     bg: $blue,
     color: #fff,
     color-subdued: transparentize(#fff, .5)
   ),
   dark: (
+    dark: true,
     bg: $charcoal,
     color: $gray-lightest,
     color-subdued: $teal

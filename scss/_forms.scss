@@ -53,6 +53,12 @@ select.form-control {
   // }
 }
 
+textarea.form-control {
+  height: auto;
+  white-space: inherit;
+  overflow: inherit;
+}
+
 .has-success,
 .has-warning,
 .has-danger {

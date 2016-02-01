@@ -2918,6 +2918,12 @@ select.form-control {
   background-color: #fff;
 }
 
+textarea.form-control {
+  height: auto;
+  white-space: inherit;
+  overflow: inherit;
+}
+
 .has-success .form-control,
 .has-warning .form-control,
 .has-danger .form-control {
@@ -3076,10 +3082,9 @@ select.form-control {
 .dropdown-toggle::after {
   margin-left: .125rem;
   content: "s";
-  vertical-align: text-bottom;
+  vertical-align: bottom;
 }
 
-.dropdown-toggle:hover + .dropdown-menu,
 .dropdown-toggle:focus + .dropdown-menu {
   display: block;
 }
@@ -3091,6 +3096,7 @@ select.form-control {
 .dropdown-menu {
   display: none;
   position: absolute;
+  z-index: 1060;
   padding: 0;
   background: #fff;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
@@ -3123,7 +3129,6 @@ select.form-control {
 .toolbar {
   position: relative;
   z-index: 1000;
-  overflow: hidden;
   height: 3.75rem;
   background-color: #fff;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
@@ -3248,6 +3253,10 @@ select.form-control {
   color: #fff;
 }
 
+.toolbar-primary .toolbar-item > .dropdown-toggle:focus {
+  color: #37dad3;
+}
+
 .toolbar-primary .profile-username {
   font-size: 0.875rem;
   color: #fff;
@@ -3274,6 +3283,10 @@ select.form-control {
 .toolbar-dark .toolbar-item > a:focus,
 .toolbar-dark .toolbar-item > a:visited {
   color: #f7f7f9;
+}
+
+.toolbar-dark .toolbar-item > .dropdown-toggle:focus {
+  color: #37dad3;
 }
 
 .toolbar-dark .profile-username {
