@@ -3099,6 +3099,7 @@ textarea.form-control {
   z-index: 1060;
   padding: 0;
   background: #fff;
+  opacity: .9;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
 }
 

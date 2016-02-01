@@ -33,6 +33,7 @@
   z-index: $zindex-popover;
   padding: 0;
   background: $dropdown-menu-bg;
+  opacity: .9;
   box-shadow: $shadow-hover;
 
   > li {
