@@ -1388,8 +1388,7 @@ output {
 
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
-.has-danger .form-msg::before, .checkbox input[type='checkbox'] + label::before,
-.radio input[type='radio'] + label::before, .dropdown-toggle::after {
+.has-danger .form-msg::before, .dropdown-toggle::after {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -2862,6 +2861,11 @@ mark,
   color: #ced3d6;
 }
 
+.control-label.required::after {
+  content: "*";
+  color: #fb4f39;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -2922,77 +2926,6 @@ textarea.form-control {
 
 .has-danger .form-control {
   border-color: #fb4f39;
-}
-
-.checkbox input[type='checkbox'],
-.radio input[type='radio'] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-.checkbox input[type='checkbox'] + label,
-.radio input[type='radio'] + label {
-  display: inline;
-  cursor: pointer;
-}
-
-.checkbox input[type='checkbox'] + label::before,
-.radio input[type='radio'] + label::before {
-  display: inline-block;
-  content: '';
-  margin-right: 0.4rem;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  text-align: center;
-  vertical-align: top;
-  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.checkbox input[type='checkbox']:checked + label::before,
-.radio input[type='radio']:checked + label::before {
-  color: #297dfd;
-}
-
-.checkbox input[type='checkbox'],
-.checkbox input[type='checkbox'] + label,
-.radio input[type='radio'],
-.radio input[type='radio'] + label {
-  cursor: pointer;
-}
-
-.checkbox input[type='checkbox']:disabled,
-.checkbox input[type='checkbox']:disabled + label,
-.checkbox input[type='checkbox']:disabled + label::before,
-.radio input[type='radio']:disabled,
-.radio input[type='radio']:disabled + label,
-.radio input[type='radio']:disabled + label::before {
-  color: #9fb5c1;
-  cursor: not-allowed;
-}
-
-.checkbox input[type='checkbox']:disabled + label::before,
-.checkbox input[type='checkbox']:disabled:hover + label::before,
-.radio input[type='radio']:disabled + label::before,
-.radio input[type='radio']:disabled:hover + label::before {
-  box-shadow: none;
-}
-
-.checkbox input[type="checkbox"] + label::before {
-  content: "";
-}
-
-.checkbox input[type="checkbox"]:checked + label::before {
-  content: "";
-}
-
-.radio input[type="radio"] + label::before {
-  content: "";
-  border-radius: 50%;
-}
-
-.radio input[type="radio"]:checked + label:before {
-  content: "";
 }
 
 .toggle {

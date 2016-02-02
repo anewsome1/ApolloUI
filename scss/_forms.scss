@@ -8,6 +8,11 @@
   &.disabled {
     color: $gray;
   }
+
+  &.required::after {
+    content: "*";
+    color: $brand-danger;
+  }
 }
 
 .form-control {
@@ -94,82 +99,88 @@ textarea.form-control {
 /// Checkbox and Radio controls
 ///
 
-.checkbox input[type='checkbox'],
-.radio input[type='radio'] {
-  appearance: none;
+// !!!
+// @TODO: Remove the code below once we have everyone
+// convinced that customizing controls that are
+// designed to be left alone is a bad idea
+// !!!
 
-  + label {
-    display: inline;
-    cursor: pointer;
+// .checkbox input[type='checkbox'],
+// .radio input[type='radio'] {
+//   appearance: none;
 
-    &::before {
-      @extend .icon;
+//   + label {
+//     display: inline;
+//     cursor: pointer;
 
-      display: inline-block;
-      content: '';
-      // width: $checkbox-size;
-      // height: $checkbox-size;
-      margin-right: $checkbox-size / 3;
-      font-size: $checkbox-size;
-      line-height: $checkbox-size;
-      text-align: center;
-      vertical-align: top;
-      transition: all $transition-fast;
-    }
-  }
+//     &::before {
+//       @extend .icon;
 
-  &:checked + label::before {
-    color: $checkbox-color;
-  }
+//       display: inline-block;
+//       content: '';
+//       // width: $checkbox-size;
+//       // height: $checkbox-size;
+//       margin-right: $checkbox-size / 3;
+//       font-size: $checkbox-size;
+//       line-height: $checkbox-size;
+//       text-align: center;
+//       vertical-align: top;
+//       transition: all $transition-fast;
+//     }
+//   }
 
-  &,
-  & + label {
-    cursor: pointer;
-  }
+//   &:checked + label::before {
+//     color: $checkbox-color;
+//   }
 
-  // &:hover + label::before {
-  //   box-shadow: $shadow-hover;
-  // }
+//   &,
+//   & + label {
+//     cursor: pointer;
+//   }
 
-  // &:active + label::before {
-  //   box-shadow: $shadow-active;
-  // }
+//   // &:hover + label::before {
+//   //   box-shadow: $shadow-hover;
+//   // }
 
-  &:disabled {
-    &,
-    + label,
-    + label::before {
-      color: lighten($charcoal, 40%);
-      cursor: not-allowed;
-    }
-    + label::before,
-    &:hover + label::before {
-      // background-color: $gray-lighter;
-      box-shadow: none;
-    }
-  }
-}
+//   // &:active + label::before {
+//   //   box-shadow: $shadow-active;
+//   // }
 
-.checkbox input[type="checkbox"] {
-  + label::before {
-    content: map-get($_icons-map, box-unchecked);
-  }
+//   &:disabled {
+//     &,
+//     + label,
+//     + label::before {
+//       color: lighten($charcoal, 40%);
+//       cursor: not-allowed;
+//     }
+//     + label::before,
+//     &:hover + label::before {
+//       // background-color: $gray-lighter;
+//       box-shadow: none;
+//     }
+//   }
+// }
 
-  &:checked + label::before {
-    content: map-get($_icons-map, box-checked);
-  }
-}
+// .checkbox input[type="checkbox"] {
+//   + label::before {
+//     content: map-get($_icons-map, box-unchecked);
+//   }
 
-.radio input[type="radio"] {
-  + label::before {
-    content: map-get($_icons-map, radio-unchecked);
-    border-radius: 50%;
-  }
-  &:checked + label:before {
-    content: map-get($_icons-map, radio-checked);
-  }
+//   &:checked + label::before {
+//     content: map-get($_icons-map, box-checked);
+//   }
+// }
 
-}
+// .radio input[type="radio"] {
+//   + label::before {
+//     content: map-get($_icons-map, radio-unchecked);
+//     border-radius: 50%;
+//   }
+//   &:checked + label:before {
+//     content: map-get($_icons-map, radio-checked);
+//   }
+
+// }
 
 .toggle {
   display: flex;
