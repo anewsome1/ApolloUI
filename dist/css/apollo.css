@@ -2651,7 +2651,7 @@ mark,
   position: relative;
   z-index: 0;
   padding: 1rem 0.9375rem 1rem 2.90625rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
@@ -2675,12 +2675,6 @@ mark,
   left: 0.9375rem;
 }
 
-.alert.alert-bottom, .has-success .alert-bottom.form-msg,
-.has-warning .alert-bottom.form-msg,
-.has-danger .alert-bottom.form-msg {
-  margin-top: 2.25rem;
-}
-
 .alert .close, .has-success .form-msg .close,
 .has-warning .form-msg .close,
 .has-danger .form-msg .close {
@@ -2692,13 +2686,6 @@ mark,
 .has-danger .alert-success.form-msg {
   color: #fff;
   background-color: #20c22f;
-  box-shadow: 0 0.625rem 0 0 rgba(32, 194, 47, 0.5), 0 1.25rem 0 0 rgba(32, 194, 47, 0.25);
-}
-
-.alert.alert-success.alert-bottom, .has-success .alert-bottom.form-msg,
-.has-warning .alert-success.alert-bottom.form-msg,
-.has-danger .alert-success.alert-bottom.form-msg {
-  box-shadow: 0 -0.625rem 0 0 rgba(32, 194, 47, 0.5), 0 -1.25rem 0 0 rgba(32, 194, 47, 0.25);
 }
 
 .alert.alert-success::before, .has-success .form-msg::before,
@@ -2711,13 +2698,6 @@ mark,
 .has-warning .form-msg,
 .has-danger .alert-warning.form-msg {
   background-color: #ffcf32;
-  box-shadow: 0 0.625rem 0 0 rgba(255, 207, 50, 0.5), 0 1.25rem 0 0 rgba(255, 207, 50, 0.25);
-}
-
-.alert.alert-warning.alert-bottom, .has-success .alert-warning.alert-bottom.form-msg,
-.has-warning .alert-bottom.form-msg,
-.has-danger .alert-warning.alert-bottom.form-msg {
-  box-shadow: 0 -0.625rem 0 0 rgba(255, 207, 50, 0.5), 0 -1.25rem 0 0 rgba(255, 207, 50, 0.25);
 }
 
 .alert.alert-warning::before, .has-success .alert-warning.form-msg::before,
@@ -2731,13 +2711,6 @@ mark,
 .has-danger .form-msg {
   color: #fff;
   background-color: #fb4f39;
-  box-shadow: 0 0.625rem 0 0 rgba(251, 79, 57, 0.5), 0 1.25rem 0 0 rgba(251, 79, 57, 0.25);
-}
-
-.alert.alert-danger.alert-bottom, .has-success .alert-danger.alert-bottom.form-msg,
-.has-warning .alert-danger.alert-bottom.form-msg,
-.has-danger .alert-bottom.form-msg {
-  box-shadow: 0 -0.625rem 0 0 rgba(251, 79, 57, 0.5), 0 -1.25rem 0 0 rgba(251, 79, 57, 0.25);
 }
 
 .alert.alert-danger::before, .has-success .alert-danger.form-msg::before,
