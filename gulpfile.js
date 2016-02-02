@@ -68,11 +68,12 @@ gulp.task( 'docs', [ 'jekyll' ], function() {
 
 
 gulp.task( 'jekyll', function ( gulpCallBack ) {
-  var spawn = require( 'child_process' ).spawn;
-  var jekyll = spawn( 'jekyll', [ 'build' ], { stdio: 'inherit' });
+  var exec = require( 'child_process' ).exec;
 
-  jekyll.on( 'exit', function( code ) {
-    gulpCallBack( code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+  exec( 'jekyll build', function( err, stdout, stderr ) {
+    console.log( stdout );
+    console.error( stderr );
+    gulpCallBack( err );
   });
 });
 
