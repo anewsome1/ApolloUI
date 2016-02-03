@@ -156,6 +156,11 @@
   font-size: $btn-sm-font-size;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 // Larger size for touch-enabled devices
 .touchevents .btn {
   padding-top: $btn-touch-padding-y;

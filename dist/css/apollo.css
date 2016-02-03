@@ -3214,6 +3214,11 @@ mark,
   font-size: 0.75rem;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 .touchevents .btn {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
