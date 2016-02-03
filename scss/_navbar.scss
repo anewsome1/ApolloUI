@@ -174,12 +174,12 @@
 ///
 
 .command-bar {
-  // position: relative;
-  // z-index: $zindex-navbar;
+  position: relative;
+  z-index: $zindex-navbar;
   padding-top: $command-bar-padding-y;
   padding-bottom: $command-bar-padding-y;
   background-color: $command-bar-bg;
-  // box-shadow: $shadow-hover;
+  box-shadow: $shadow-hover;
 
   &-actions {
     list-style-type: none;
@@ -207,7 +207,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: $zindex-navbar;
+    z-index: $zindex-navbar-fixed;
   }
 }
 

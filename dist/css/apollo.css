@@ -3599,9 +3599,12 @@ textarea.form-control {
 }
 
 .command-bar {
+  position: relative;
+  z-index: 1000;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #f7f7f9;
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
 }
 
 .command-bar-actions {
@@ -3630,7 +3633,7 @@ textarea.form-control {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1030;
 }
 
 .empty-space-icon {
