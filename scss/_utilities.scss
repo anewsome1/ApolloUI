@@ -8,3 +8,31 @@
     content: map-get($_icons-map, clear);
   }
 }
+
+///
+/// Padding and margins
+///
+
+.pad {
+  &-all {
+    padding: $spacer;
+  }
+  &-top {
+    padding-top: $spacer;
+  }
+  &-right {
+    padding-right: $spacer;
+  }
+  &-bottom {
+    padding-bottom: $spacer;
+  }
+  &-left {
+    padding-left: $spacer;
+  }
+  &-x {
+    @extend .pad-right, .pad-left;
+  }
+  &-y {
+    @extend .pad-top, .pad-bottom;
+  }
+}

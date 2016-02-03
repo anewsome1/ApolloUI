@@ -9,8 +9,14 @@
     color: $empty-space-icon-color;
     font-size: $empty-space-icon-size;
     line-height: 1;
+    opacity: .3;
     border: 1px dashed $empty-space-icon-color;
     border-radius: 50%;
+
+    .bg-charcoal & {
+      color: $empty-space-icon-color-dark;
+      border-color: $empty-space-icon-color-dark;
+    }
 
     &::before {
       position: absolute;
@@ -19,9 +25,5 @@
       margin-top: (-$empty-space-icon-size / 2) - .25rem;
       margin-left: (-$empty-space-icon-size / 2);
     }
-  }
-
-  &-message {
-    line-height: 1.2;
   }
 }

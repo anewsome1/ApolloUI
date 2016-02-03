@@ -1727,7 +1727,7 @@ output {
 
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
-.has-danger .form-msg::before, .dropdown-toggle::after {
+.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -2801,6 +2801,26 @@ output {
   content: "q";
 }
 
+.pad-all {
+  padding: 1rem;
+}
+
+.pad-top, .pad-y {
+  padding-top: 1rem;
+}
+
+.pad-right, .pad-x {
+  padding-right: 1rem;
+}
+
+.pad-bottom, .pad-y {
+  padding-bottom: 1rem;
+}
+
+.pad-left, .pad-x {
+  padding-left: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -2979,7 +2999,7 @@ mark,
 .bg-charcoal a:hover,
 .bg-charcoal a:active,
 .bg-charcoal a:visited {
-  color: #25b4ff;
+  color: #37dad3;
 }
 
 .alert, .has-success .form-msg,
@@ -3585,11 +3605,17 @@ textarea.form-control {
   height: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #c3d4dc;
+  color: #373a3c;
   font-size: 3rem;
   line-height: 1;
-  border: 1px dashed #c3d4dc;
+  opacity: .3;
+  border: 1px dashed #373a3c;
   border-radius: 50%;
+}
+
+.bg-charcoal .empty-space-icon {
+  color: #37dad3;
+  border-color: #37dad3;
 }
 
 .empty-space-icon::before {
@@ -3600,8 +3626,24 @@ textarea.form-control {
   margin-left: -1.5rem;
 }
 
-.empty-space-message {
-  line-height: 1.2;
+.breadcrumb {
+  padding-left: 0;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.breadcrumb > li:last-child {
+  font-weight: 600;
+}
+
+.breadcrumb > li + li::before {
+  display: inline-block;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  content: "r";
 }
 
 @-webkit-keyframes pulse {
