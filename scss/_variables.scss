@@ -221,24 +221,24 @@ $off-canvas-width: 18rem;  // ~288px
 ///
 
 // Default
-$toolbar-height: 3.75rem; // ~60px
-$toolbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
-$toolbar-brand-font-size: $font-size-h4;
-$toolbar-link-font-size: $font-size-base;
-$toolbar-link-padding-top: $btn-padding-top;
-$toolbar-link-padding-bottom: $btn-padding-bottom;
-$toolbar-link-padding-x: $btn-padding-x;
-$toolbar-brand-margin-top: ($toolbar-height / 2) - ($toolbar-brand-font-size / 2) - $toolbar-link-padding-top;
-$toolbar-link-margin-top: ($toolbar-height / 2) - ($toolbar-link-font-size / 2) - $toolbar-link-padding-top;
+$navbar-height: 3.75rem; // ~60px
+$navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
+$navbar-brand-font-size: $font-size-h4;
+$navbar-link-font-size: $font-size-base;
+$navbar-link-padding-top: $btn-padding-top;
+$navbar-link-padding-bottom: $btn-padding-bottom;
+$navbar-link-padding-x: $btn-padding-x;
+$navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
+$navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
 
 // Jumbo
-$toolbar-jumbo-height: 5.5rem; // ~88px
-$toolbar-jumbo-brand-margin-top: ($toolbar-jumbo-height / 2) - ($toolbar-brand-font-size / 2) - $toolbar-link-padding-top;
-$toolbar-jumbo-link-margin-top: ($toolbar-jumbo-height / 2) - ($toolbar-link-font-size / 2) - $toolbar-link-padding-top;
+$navbar-jumbo-height: 5.5rem; // ~88px
+$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
+$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
 
 
 // Themes
-$toolbar-variants: (
+$navbar-variants: (
   primary: (
     dark: true,
     bg: $blue,
@@ -261,8 +261,15 @@ $toolbar-variants: (
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px
 $profile-img-text-size: $font-size-h4;
-$profile-margin-top: ($toolbar-jumbo-height / 2) - ($profile-img-size / 2);
+$profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
 
+
+///
+/// Command bar
+///
+
+$command-bar-bg: $gray-lightest;
+$command-bar-padding-y: $spacer;
 
 ///
 /// Empty space

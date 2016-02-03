@@ -1,7 +1,7 @@
-.toolbar {
+.navbar {
   position: relative;
   z-index: $zindex-navbar;
-  height: $toolbar-height;
+  height: $navbar-height;
   background-color: #fff;
   box-shadow: $shadow-hover;
 
@@ -11,22 +11,22 @@
     text-decoration: none;
   }
 
-  &.toolbar-fixed-top {
+  &.navbar-fixed-top {
     position: fixed;
     width: 100%;
   }
 
   // Jumbo variation
-  &.toolbar-jumbo {
-    height: $toolbar-jumbo-height;
+  &.navbar-jumbo {
+    height: $navbar-jumbo-height;
 
-    .toolbar-brand {
-      margin-top: $toolbar-jumbo-brand-margin-top;
+    .navbar-brand {
+      margin-top: $navbar-jumbo-brand-margin-top;
     }
 
-    .toolbar-item {
+    .navbar-item {
       > a {
-        margin-top: $toolbar-jumbo-link-margin-top;
+        margin-top: $navbar-jumbo-link-margin-top;
       }
     }
   }
@@ -37,14 +37,14 @@
 /// Brand (application name)
 ///
 
-.toolbar-brand {
+.navbar-brand {
   display: block;
   float: left;
-  width: $toolbar-brand-width;
-  padding-top: $toolbar-link-padding-top;
-  padding-bottom: $toolbar-link-padding-bottom;
-  margin-top: $toolbar-brand-margin-top;
-  font-size: $toolbar-brand-font-size;
+  width: $navbar-brand-width;
+  padding-top: $navbar-link-padding-top;
+  padding-bottom: $navbar-link-padding-bottom;
+  margin-top: $navbar-brand-margin-top;
+  font-size: $navbar-brand-font-size;
   text-align: center;
   line-height: 1;
 }
@@ -53,7 +53,7 @@
 /// Links (nav menu)
 ///
 
-.toolbar-links {
+.navbar-links {
   @include clearfix();
   display: block;
   float: left;
@@ -61,20 +61,20 @@
   margin-bottom: 0;
 }
 
-.toolbar-item {
+.navbar-item {
   display: block;
   float: left;
 
   > a {
     display: block;
-    font-size: $toolbar-link-font-size;
+    font-size: $navbar-link-font-size;
     line-height: 1;
-    margin-top: $toolbar-link-margin-top;
-    padding: $toolbar-link-padding-top $toolbar-link-padding-x $toolbar-link-padding-bottom;
+    margin-top: $navbar-link-margin-top;
+    padding: $navbar-link-padding-top $navbar-link-padding-x $navbar-link-padding-bottom;
   }
 
   &.active > a {
-    // background-color: darken($toolbar-bg, 10%);
+    // background-color: darken($navbar-bg, 10%);
   }
 }
 
@@ -82,7 +82,7 @@
 /// User profile
 ///
 
-.toolbar-profile {
+.navbar-profile {
   position: relative;
   float: right;
   margin-top: $profile-margin-top;
@@ -96,11 +96,11 @@
   }
 
   .profile-username {
-    font-size: $toolbar-link-font-size;
+    font-size: $navbar-link-font-size;
   }
 
   .profile-company {
-    font-size: $toolbar-link-font-size * .85;
+    font-size: $navbar-link-font-size * .85;
   }
 
   .profile-image {
@@ -119,21 +119,21 @@
   }
 }
 
-// Utility for when using toolbar-fixed-top
+// Utility for when using navbar-fixed-top
 .padding-top-toolbar {
-  padding-top: $toolbar-height;
+  padding-top: $navbar-height;
 
   &-jumbo {
-    padding-top: $toolbar-jumbo-height;
+    padding-top: $navbar-jumbo-height;
   }
 }
 
-@each $variant, $props in $toolbar-variants {
-  .toolbar-#{ $variant } {
+@each $variant, $props in $navbar-variants {
+  .navbar-#{ $variant } {
     background-color: map-get($props, bg);
 
-    .toolbar-brand,
-    .toolbar-item > a {
+    .navbar-brand,
+    .navbar-item > a {
       &,
       &:hover,
       &:active,
@@ -145,7 +145,7 @@
 
     // Dropdown lists
     @if map-get($props, dark) {
-      .toolbar-item > .dropdown-toggle:focus {
+      .navbar-item > .dropdown-toggle:focus {
         color: $teal;
       }
     }
@@ -153,12 +153,12 @@
 
     // User profile section
     .profile-username {
-      font-size: $toolbar-link-font-size;
+      font-size: $navbar-link-font-size;
       color: map-get($props, color);
     }
 
     .profile-company {
-      font-size: $toolbar-link-font-size * .85;
+      font-size: $navbar-link-font-size * .85;
       color: map-get($props, color-subdued);
     }
 
@@ -168,3 +168,46 @@
     }
   }
 }
+
+///
+/// Command bar
+///
+
+.command-bar {
+  // position: relative;
+  // z-index: $zindex-navbar;
+  padding-top: $command-bar-padding-y;
+  padding-bottom: $command-bar-padding-y;
+  background-color: $command-bar-bg;
+  // box-shadow: $shadow-hover;
+
+  &-actions {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    > li {
+      display: inline-block;
+
+      + li {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  &-icon {
+    font-size: $font-size-lg;
+    line-height: $font-size-base;
+    vertical-align: top;
+    padding-right: .5rem;
+  }
+
+  &.command-bar-fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-navbar;
+  }
+}
+
