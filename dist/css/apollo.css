@@ -3195,7 +3195,20 @@ mark,
   border-color: #e2e2e2;
 }
 
-.btn-compact {
+.btn-link {
+  color: #297dfd;
+}
+
+.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
+  background: none;
+  box-shadow: none;
+}
+
+.btn-link:hover, .btn-link:active, .btn-link:focus {
+  color: #0257d7;
+}
+
+.btn-sm {
   min-width: 0;
   padding: 0.375rem 0.8125rem;
   font-size: 0.75rem;
@@ -3601,8 +3614,8 @@ textarea.form-control {
 .command-bar {
   position: relative;
   z-index: 1000;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   background-color: #f7f7f9;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
 }
@@ -3617,14 +3630,9 @@ textarea.form-control {
   display: inline-block;
 }
 
-.command-bar-actions > li + li {
-  margin-left: 1.5rem;
-}
-
 .command-bar-icon {
   font-size: 1.5rem;
-  line-height: 1rem;
-  vertical-align: top;
+  vertical-align: text-bottom;
   padding-right: .5rem;
 }
 

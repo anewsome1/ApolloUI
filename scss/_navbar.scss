@@ -188,17 +188,12 @@
 
     > li {
       display: inline-block;
-
-      + li {
-        margin-left: 1.5rem;
-      }
     }
   }
 
   &-icon {
     font-size: $font-size-lg;
-    line-height: $font-size-base;
-    vertical-align: top;
+    vertical-align: text-bottom;
     padding-right: .5rem;
   }
 

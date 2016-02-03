@@ -85,9 +85,7 @@
       animation: pulse .5s cubic-bezier(0, 0, .5, 1);
     }
   }
-
 }
-
 
 ///
 /// Button variant styles
@@ -124,12 +122,35 @@
   }
 }
 
+///
+/// Link style button
+///
+
+.btn-link {
+  color: $link-color;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus,
+  &:disabled {
+    background: none;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-hover-color;
+  }
+}
+
 
 ///
 /// Button sizes
 ///
 
-.btn-compact {
+.btn-sm {
   min-width: 0;
   padding: $btn-sm-padding-y $btn-sm-padding-x;
   font-size: $btn-sm-font-size;

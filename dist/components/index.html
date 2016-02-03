@@ -16,20 +16,20 @@
 
   <body>
 
-    <nav class="toolbar toolbar-dark">
+    <nav class="navbar navbar-dark">
   <div class="container-fluid">
-    <a class="toolbar-brand" href="/">Apollo UI</a>
-    <ul class="toolbar-links">
-      <li class="toolbar-item ">
+    <a class="navbar-brand" href="/">Apollo UI</a>
+    <ul class="navbar-links">
+      <li class="navbar-item ">
         <a href="/styles/">Styles</a>
       </li>
-      <li class="toolbar-item ">
+      <li class="navbar-item ">
         <a href="/icons/">Icons</a>
       </li>
-      <li class="toolbar-item active">
+      <li class="navbar-item active">
         <a href="/components/">Components</a>
       </li>
-      <li class="toolbar-item ">
+      <li class="navbar-item ">
         <a href="/page-templates/">Page Templates</a>
       </li>
     </ul>
@@ -315,77 +315,63 @@
       
         <h3 id="command-bar">Command bar</h3>
         <p>Navbars can have an optional command bar to support page-specific tasks, actions, etc.</p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#0">Marketing</a>
-    <ul class="navbar-links">
-      <li class="navbar-item">
-        <a href="#0">Lorem Ipsum</a>
-      </li>
-      <li class="navbar-item">
-        <a href="#0">Dolor sit amet</a>
-      </li>
-      <li class="navbar-item">
-        <a href="#0">Consectetur</a>
-      </li>
-      <li class="navbar-item">
-        <a href="#0">Vivamus</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-<div class="command-bar">
+        <div class="docs-example-rendered"><div class="command-bar">
   <div class="container-fluid">
     <ul class="command-bar-actions text-xs-right">
       <li>
-        <a href="#0"><span class="command-bar-icon icon icon-edit"></span>Edit</a>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-edit"></span>
+          Edit
+        </a>
       </li>
       <li>
-        <a href="#0"><span class="command-bar-icon icon icon-trash"></span>Delete</a>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-trash"></span>
+          Delete
+        </a>
       </li>
       <li>
-        <a href="#0"><span class="command-bar-icon icon icon-export"></span>Export</a>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-export"></span>
+          Export
+        </a>
       </li>
       <li>
-        <a href="#0"><span class="command-bar-icon icon icon-merge"></span>Merge</a>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-merge"></span>
+          Merge
+        </a>
       </li>
     </ul>
   </div>
 </div>
 </div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Marketing<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Consectetur<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"command-bar"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"command-bar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"command-bar-actions text-xs-right"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          Edit
+        <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-trash"</span><span class="nt">&gt;&lt;/span&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-trash"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          Delete
+        <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-export"</span><span class="nt">&gt;&lt;/span&gt;</span>Export<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-export"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          Export
+        <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-merge"</span><span class="nt">&gt;&lt;/span&gt;</span>Merge<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-merge"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          Merge
+        <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
