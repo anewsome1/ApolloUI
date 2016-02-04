@@ -1,20 +1,10 @@
 var gulp = require( 'gulp' );
 var rename = require( 'gulp-rename' );
-var sourcemaps = require( 'gulp-sourcemaps' );
-var gutil = require( 'gulp-util' );
-// Styles
 var sass = require( 'gulp-sass' );
 var postcss = require( 'gulp-postcss' );
 var autoprefixer = require( 'autoprefixer' );
 var cssnano = require( 'cssnano' );
-// Scripts
-var browserify = require( 'browserify' );
-var source = require( 'vinyl-source-stream' );
-var buffer = require( 'vinyl-buffer' );
-var uglify = require( 'gulp-uglify' );
-// Dev server
 var browserSync = require( 'browser-sync' );
-// Property processor
 var theo = require( 'theo' );
 
 
@@ -37,18 +27,17 @@ gulp.task( 'apollo-styles', function () {
         outputStyle: 'expanded'  // expanded for development
       })
       .on( 'error', sass.logError ))
-    .pipe( sourcemaps.init() )
     .pipe( postcss([
       autoprefixer({
         browsers: [ 'last 2 versions' ]
       })
     ]))
+    .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() )
     .pipe( postcss([ cssnano() ]))
     .pipe( rename({
       suffix: '.min'
     }))
-    .pipe( sourcemaps.write( './' ))
     .pipe( gulp.dest( 'dist/css/' ) )
     .pipe( browserSync.stream() );
 });
@@ -67,26 +56,6 @@ gulp.task( 'docs-styles', function () {
       })
     ]))
     .pipe( gulp.dest( 'dist/css/' ) )
-    .pipe( browserSync.stream() );
-});
-
-
-gulp.task('apollo-scripts', function () {
-  var b = browserify();
-
-  return b.bundle()
-    .pipe( source( './js/apollo.js' ))
-    .pipe( buffer())
-    .pipe( sourcemaps.init({
-      loadMaps: true
-    }))
-    .pipe( uglify() )
-      .on( 'error', gutil.log )
-    .pipe( rename({
-      suffix: '.min'
-    }))
-    .pipe( sourcemaps.write( './' ))
-    .pipe( gulp.dest( 'dist' ))
     .pipe( browserSync.stream() );
 });
 
@@ -130,8 +99,6 @@ gulp.task( 'theo-icons-json', function() {
     .pipe( gulp.dest( 'docs/_data' ));
 });
 
-gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ]);
-gulp.task( 'styles', [ 'apollo-styles', 'docs-styles' ]);
-gulp.task( 'scripts', [ 'apollo-scripts' ]);
-gulp.task( 'default', [ 'theo', 'styles', 'scripts', 'docs' ]);
-gulp.task( 'build', [ 'default' ]);
+gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ] );
+
+gulp.task( 'default', [ 'apollo-styles', 'docs-styles', 'docs' ] );

@@ -1,5 +1,5 @@
 .highlight {
-  padding: 1rem;
+  padding: 16px;
   margin-bottom: 0;
   background-color: #f7f7f9;
   border: 1px solid #e3ebef;
@@ -100,7 +100,7 @@ body {
 }
 
 .docs-content {
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 
 .docs-page-nav,
@@ -114,11 +114,11 @@ body {
 }
 
 .docs-page-nav {
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 
 .docs-page-nav-item {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .docs-page-nav-category {
@@ -126,25 +126,25 @@ body {
 }
 
 .docs-section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .docs-section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .docs-section h3 {
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 
 .docs-example-rendered {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .docs-example-code {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .docs-icon-container {
@@ -178,5 +178,5 @@ body {
 }
 
 .docs-icon-name {
-  padding-top: 1rem;
+  padding-top: 16px;
 }
