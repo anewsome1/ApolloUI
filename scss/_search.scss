@@ -1,32 +1,27 @@
 .sayt {
 
-  &-box {
-    position: relative;
+  position: relative;
 
-    &::before {
-      @extend %icon-base;
+  &::before {
+    @extend %icon-base;
 
-      position: relative;
-      left: .25rem;
-      z-index: 10;
-      font-size: $sayt-icon-size;
-      line-height: 1.1;
-      content: map-get($_icons-map, search);
+    position: absolute;
+    top: 0;
+    left: .25rem;
+    z-index: 10;
+    font-size: $sayt-icon-size;
+    line-height: 1.1;
+    content: map-get($_icons-map, search);
 
-      .bg-dark & {
-        color: $body-color;
-      }
+    .bg-dark & {
+      color: $body-color;
     }
   }
 
   &-input {
     @extend .form-control;
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: relative;
     padding-left: $sayt-padding-left;
 
     .bg-dark & {
@@ -74,6 +69,19 @@
       color: $teal;
     }
   }
+
+  // @TODO: Revisit dropdown search results to fix
+  // z-index stacking issue with box shadows on the
+  // input field and results
+
+  // &.dropdown {
+  //   .sayt-input:focus {
+  //     + .sayt-results {
+  //       border-top: $border-width solid $gray-lightest;
+  //       box-shadow: $shadow-hover;
+  //     }
+  //   }
+  // }
 
 }
 

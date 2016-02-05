@@ -1727,7 +1727,7 @@ output {
 
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
-.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt-box::before {
+.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -3703,12 +3703,13 @@ textarea.form-control, textarea.sayt-input {
   content: "r";
 }
 
-.sayt-box {
+.sayt {
   position: relative;
 }
 
-.sayt-box::before {
-  position: relative;
+.sayt::before {
+  position: absolute;
+  top: 0;
   left: .25rem;
   z-index: 10;
   font-size: 1.5rem;
@@ -3716,16 +3717,12 @@ textarea.form-control, textarea.sayt-input {
   content: "x";
 }
 
-.bg-dark .sayt-box::before {
+.bg-dark .sayt::before {
   color: #3a4f5a;
 }
 
 .sayt-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
   padding-left: 2.5rem;
 }
 
