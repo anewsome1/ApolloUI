@@ -78,6 +78,7 @@ $line-height: 1.5;
 ///
 
 $transition-fast: .25s cubic-bezier(0, 0, .5, 1);
+$transition-medium: .5s cubic-bezier(0, 0, .5, 1);
 
 
 ///
@@ -211,14 +212,15 @@ $dropdown-menu-color-hover: #fff;
 
 
 ///
-/// Off-canvas menu
+/// Navbar + Off-canvas menu
 ///
+
+/// !!!
+/// @FIXME: vertical alignment of navbar items
+/// (maybe flexbox layout?)
+/// !!!
 
 $off-canvas-width: 18rem;  // ~288px
-
-///
-/// Navbar
-///
 
 // Default
 $navbar-height: 3.75rem; // ~60px
@@ -231,11 +233,18 @@ $navbar-link-padding-x: $btn-padding-x;
 $navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
 $navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
 
+$off-canvas-toggle-size: $navbar-brand-font-size;
+$off-canvas-toggle-padding-top: $navbar-link-padding-top;
+$off-canvas-toggle-padding-bottom: $navbar-link-padding-bottom;
+$off-canvas-toggle-margin-y: $navbar-brand-margin-top;
+
+
 // Jumbo
 $navbar-jumbo-height: 5.5rem; // ~88px
 $navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
 $navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
 
+$off-canvas-jumbo-toggle-margin-y: $navbar-jumbo-brand-margin-top;
 
 // Themes
 $navbar-variants: (

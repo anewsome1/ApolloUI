@@ -1,0 +1,107 @@
+.off-canvas {
+  // @TODO: Replace with opaque bg once
+  // that color is added to the palette
+  @extend .bg-dark;
+  background-color: transparentize(darken($charcoal, 10%),.1);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: $zindex-navbar-fixed;
+  width: $off-canvas-width;
+  height: auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+  box-shadow: $shadow-hover;
+  transition: all $transition-fast;
+
+  &.off-canvas-left {
+    left: -$off-canvas-width;
+
+    &.open {
+      // Use translate3d to engage gpu acceleration
+      transform: translate3d($off-canvas-width,0,0);
+    }
+  }
+
+  ///
+  /// Open and close buttons
+  ///
+
+  &-open,
+  &-close {
+    padding-top: $off-canvas-toggle-padding-top;
+    padding-bottom: $off-canvas-toggle-padding-bottom;
+    margin-top: $off-canvas-toggle-margin-y;
+    margin-bottom: $off-canvas-toggle-margin-y;
+    font-size: $off-canvas-toggle-size;
+    line-height: 1;
+    background: none;
+    border: 0;
+    box-shadow: none;
+
+    &::before {
+      @extend %icon-base;
+    }
+  }
+
+  &-open {
+    position: absolute;
+    top: 0;
+    left: $grid-gutter-width / 2;
+    color: #fff;
+
+    &::before {
+      content: map-get($_icons-map, justified);
+    }
+  }
+
+  &-close::before {
+    color: $teal;
+    content: map-get($_icons-map, backward);
+  }
+
+  ///
+  /// Menu styles
+  ///
+
+  &-menu,
+  &-submenu {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &-menu {
+    padding-top: $spacer;
+
+    a {
+      display: block;
+      margin-left: -$grid-gutter-width / 2;
+      margin-right: -$grid-gutter-width / 2;
+      padding: $btn-padding-top ($grid-gutter-width / 2) $btn-padding-bottom;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        // @TODO: Replace with color from palette
+        background-color: transparentize(darken($charcoal, 15%), .1);
+      }
+
+      .icon {
+        margin-right: $spacer / 2;
+      }
+    }
+  }
+
+  &-submenu {
+    margin-bottom: $spacer * 2;
+  }
+}
+
+.navbar-jumbo {
+  .off-canvas-open,
+  ~ .off-canvas .off-canvas-close {
+      margin-top: $off-canvas-jumbo-toggle-margin-y;
+      margin-bottom: $off-canvas-jumbo-toggle-margin-y;
+  }
+}

@@ -1727,7 +1727,7 @@ output {
 
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
-.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before {
+.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before, .off-canvas-open::before, .off-canvas-close::before {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -2994,15 +2994,15 @@ mark,
   background-color: #f7f7f9;
 }
 
-.bg-dark {
+.bg-dark, .off-canvas {
   background-color: #3a4f5a;
   color: #fff;
 }
 
-.bg-dark a,
-.bg-dark a:hover,
-.bg-dark a:active,
-.bg-dark a:visited {
+.bg-dark a, .off-canvas a,
+.bg-dark a:hover, .off-canvas a:hover,
+.bg-dark a:active, .off-canvas a:active,
+.bg-dark a:visited, .off-canvas a:visited {
   color: #37dad3;
 }
 
@@ -3670,7 +3670,7 @@ textarea.form-control, textarea.sayt-input {
   border-radius: 50%;
 }
 
-.bg-dark .empty-space-icon {
+.bg-dark .empty-space-icon, .off-canvas .empty-space-icon {
   color: #37dad3;
   border-color: #37dad3;
 }
@@ -3717,7 +3717,7 @@ textarea.form-control, textarea.sayt-input {
   content: "x";
 }
 
-.bg-dark .sayt::before {
+.bg-dark .sayt::before, .off-canvas .sayt::before {
   color: #3a4f5a;
 }
 
@@ -3726,7 +3726,7 @@ textarea.form-control, textarea.sayt-input {
   padding-left: 2.5rem;
 }
 
-.bg-dark .sayt-input {
+.bg-dark .sayt-input, .off-canvas .sayt-input {
   color: #3a4f5a;
   background-color: #e3ebef;
 }
@@ -3745,7 +3745,7 @@ textarea.form-control, textarea.sayt-input {
   text-decoration: none;
 }
 
-.bg-dark .sayt-results > li > a, .bg-dark .sayt-results > li > a:link, .bg-dark .sayt-results > li > a:visited, .bg-dark .sayt-results > li > a:hover, .bg-dark .sayt-results > li > a:focus {
+.bg-dark .sayt-results > li > a, .off-canvas .sayt-results > li > a, .bg-dark .sayt-results > li > a:link, .off-canvas .sayt-results > li > a:link, .bg-dark .sayt-results > li > a:visited, .off-canvas .sayt-results > li > a:visited, .bg-dark .sayt-results > li > a:hover, .off-canvas .sayt-results > li > a:hover, .bg-dark .sayt-results > li > a:focus, .off-canvas .sayt-results > li > a:focus {
   color: #fff;
 }
 
@@ -3762,8 +3762,99 @@ textarea.form-control, textarea.sayt-input {
   color: #297dfd;
 }
 
-.bg-dark .sayt-highlight {
+.bg-dark .sayt-highlight, .off-canvas .sayt-highlight {
   color: #37dad3;
+}
+
+.off-canvas {
+  background-color: rgba(38, 52, 59, 0.9);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1030;
+  width: 18rem;
+  height: auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.off-canvas.off-canvas-left {
+  left: -18rem;
+}
+
+.off-canvas.off-canvas-left.open {
+  -webkit-transform: translate3d(18rem, 0, 0);
+          transform: translate3d(18rem, 0, 0);
+}
+
+.off-canvas-open, .off-canvas-close {
+  padding-top: 0.5rem;
+  padding-bottom: 0.375rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.off-canvas-open {
+  position: absolute;
+  top: 0;
+  left: 0.9375rem;
+  color: #fff;
+}
+
+.off-canvas-open::before {
+  content: "";
+}
+
+.off-canvas-close::before {
+  color: #37dad3;
+  content: "p";
+}
+
+.off-canvas-menu, .off-canvas-submenu {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.off-canvas-menu {
+  padding-top: 1rem;
+}
+
+.off-canvas-menu a {
+  display: block;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  padding: 0.5rem 0.9375rem 0.375rem;
+}
+
+.off-canvas-menu a:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(28, 38, 43, 0.9);
+}
+
+.off-canvas-menu a .icon, .off-canvas-menu a .close, .off-canvas-menu a .alert::before, .off-canvas-menu a .has-success .form-msg::before, .has-success .off-canvas-menu a .form-msg::before, .off-canvas-menu a
+.has-warning .form-msg::before,
+.has-warning .off-canvas-menu a .form-msg::before, .off-canvas-menu a
+.has-danger .form-msg::before,
+.has-danger .off-canvas-menu a .form-msg::before {
+  margin-right: 0.5rem;
+}
+
+.off-canvas-submenu {
+  margin-bottom: 2rem;
+}
+
+.navbar-jumbo .off-canvas-open,
+.navbar-jumbo ~ .off-canvas .off-canvas-close {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @-webkit-keyframes pulse {
