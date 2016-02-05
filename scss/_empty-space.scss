@@ -13,7 +13,7 @@
     border: 1px dashed $empty-space-icon-color;
     border-radius: 50%;
 
-    .bg-charcoal & {
+    .bg-dark & {
       color: $empty-space-icon-color-dark;
       border-color: $empty-space-icon-color-dark;
     }

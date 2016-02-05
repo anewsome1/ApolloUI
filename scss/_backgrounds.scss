@@ -1,3 +1,7 @@
-.bg-charcoal {
+.bg-light {
+  @include bg-color($bg-color: $gray-lightest);
+}
+
+.bg-dark {
   @include bg-color($bg-color: $charcoal, $text-color: #fff, $link-color: $teal);
 }

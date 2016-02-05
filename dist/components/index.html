@@ -81,6 +81,15 @@
         </ul>
       </li>
     
+      
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Search</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#search-as-you-type">Search as you type</a></li>
+          
+        </ul>
+      </li>
+    
     </ul>
   </aside>
 
@@ -101,7 +110,7 @@
   <li>Level 3</li>
 </ol>
 <!-- With dark background -->
-<div class="bg-charcoal pad-all">
+<div class="bg-dark pad-all">
   <ol class="breadcrumb">
     <li><a href="#0">Level 1</a></li>
     <li><a href="#0">Level 2</a></li>
@@ -114,7 +123,7 @@
   <span class="nt">&lt;li&gt;</span>Level 3<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span>
 <span class="c">&lt;!-- With dark background --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-charcoal pad-all"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark pad-all"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -135,7 +144,7 @@
   </div>
   <!-- With dark background -->
   <div class="col-xs-6 col-md-4 col-xl-3">
-    <div class="empty-space bg-charcoal pad-all text-xs-center">
+    <div class="empty-space bg-dark pad-all text-xs-center">
       <h3 class="text-center">Lorem Ipsum</h3>
       <span class="empty-space-icon icon icon-clear"></span>
       <p class="empty-space-message">Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -155,7 +164,7 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="c">&lt;!-- With dark background --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-md-4 col-xl-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"empty-space bg-charcoal pad-all text-xs-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"empty-space bg-dark pad-all text-xs-center"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/h3&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"empty-space-icon icon icon-clear"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"empty-space-message"</span><span class="nt">&gt;</span>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.<span class="nt">&lt;/p&gt;</span>
@@ -173,7 +182,7 @@
         <h3 id="dropdowns-overview">Dropdowns overview</h3>
         <p>Description of dropdown lists and why they are handy.</p>
         <div class="docs-example-rendered"><div class="dropdown">
-  <button class="dropdown-toggle">Menu</button>
+  <button class="dropdown-toggle" type="button" id="dropdownDemo1" aria-haspopup="true" aria-expanded="false">Menu</button>
   <ul class="dropdown-menu">
     <li>
       <a href="#">Lorem ipsum</a>
@@ -190,7 +199,7 @@
   </ul>
 </div></div>
         <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownDemo1"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>Menu<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;</span>
@@ -489,6 +498,87 @@
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+      </section>
+    
+      
+      <section class="docs-section" id="search">
+      <h2>Search</h2>
+      
+        <h3 id="search-as-you-type">Search as you type</h3>
+        <p>Use this component to show search results as users type (styles only).</p>
+        <div class="docs-example-rendered"><div class="row">
+  <div class="col-xs-6 col-md-4 col-lg-4 col-xl-3">
+    <div class="sayt">
+      <div class="sayt-box">
+        <input class="sayt-input" type="search" placeholder="Search individuals">
+      </div>
+      <ul class="sayt-results">
+        <li>
+          <a href="#0"><span class="sayt-highlight">Vi</span>atribunali</a>
+        </li>
+        <li>
+          <a href="#0"><span class="sayt-highlight">Vi</span>atryl A</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Example in a dark background -->
+  <div class="col-xs-6 col-md-4 col-lg-4 col-xl-3">
+    <div class="bg-dark">
+      <div class="sayt">
+        <div class="sayt-box">
+          <input class="sayt-input" type="search" placeholder="Search individuals">
+        </div>
+        <ul class="sayt-results">
+          <li>
+            <a href="#0"><span class="sayt-highlight">Vi</span>atribunali</a>
+          </li>
+          <li>
+            <a href="#0"><span class="sayt-highlight">Vi</span>atryl A</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-md-4 col-lg-4 col-xl-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt-box"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sayt-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"sayt-results"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- Example in a dark background --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-md-4 col-lg-4 col-xl-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt-box"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sayt-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"sayt-results"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
       

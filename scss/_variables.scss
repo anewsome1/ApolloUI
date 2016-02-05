@@ -217,7 +217,7 @@ $dropdown-menu-color-hover: #fff;
 $off-canvas-width: 18rem;  // ~288px
 
 ///
-/// Toolbar
+/// Navbar
 ///
 
 // Default
@@ -271,9 +271,11 @@ $profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
 $command-bar-bg: $gray-lightest;
 $command-bar-padding-y: .5rem;
 
+
 ///
 /// Empty space
 ///
+
 $empty-space-icon-size: 3rem;  // ~48px
 $empty-space-icon-color: $gray-dark;
 $empty-space-icon-color-dark: $teal;
@@ -282,9 +284,16 @@ $empty-space-icon-color-dark: $teal;
 ///
 /// Breadcrumbs
 ///
+
 $breadcrumb-font-size: $font-size-base;
 $breadcrumb-spacing: .25rem; // ~4px;
 
 
+///
+/// Search
+///
 
+$sayt-icon-size: $font-size-lg;
+$sayt-padding-left: $sayt-icon-size + $spacer;
+$sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left;
 
