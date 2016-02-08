@@ -9,7 +9,7 @@
   &-handle {
     position: absolute;
     z-index: 10;
-    left: $slider-position;
+    left: $slider-position-min;
     width: $slider-handle-size;
     height: $slider-handle-size;
     margin-top: -$slider-handle-size / 2;
@@ -32,18 +32,28 @@
       cursor: not-allowed;
       box-shadow: $shadow-active;
     }
+
+    & + & {
+      left: $slider-position-max;
+    }
   }
 
   &-fill {
     position: absolute;
     top: 0;
     left: 0;
-    width: $slider-position;
+    width: $slider-position-min;
     height: $slider-height;
     background-color: $slider-fill-bg;
 
     .disabled & {
       background-color: $slider-disabled-fill-bg;
+    }
+
+    .slider-handle:nth-of-type(2) + & {
+      left: $slider-position-min;
+      right: 100% - $slider-position-max;
+      width: auto;
     }
   }
 }

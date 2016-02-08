@@ -148,6 +148,19 @@ body {
   margin-bottom: 32px;
 }
 
+.show-grid .row {
+  margin-bottom: 16px;
+}
+
+.show-grid div[class^='col-'] {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #3a4f5a;
+  border: 1px solid #fff;
+}
+
 .docs-icon-container {
   display: -webkit-flex;
   display: -ms-flexbox;

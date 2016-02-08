@@ -311,7 +311,8 @@ $sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left
 /// Slider
 ///
 
-$slider-position: 35%;  // For demo purposes only
+$slider-position-min: 25%;  // For demo purposes only
+$slider-position-max: 85%;  // For demo purposes only
 
 $slider-height: .1875rem;  // ~3px
 $slider-bg: $gray-lighter;
