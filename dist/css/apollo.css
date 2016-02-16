@@ -3381,6 +3381,10 @@ textarea.form-control, textarea.sayt-input {
   border-bottom: 2px solid #e3ebef;
 }
 
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f7f7f9;
+}
+
 .table tbody + tbody {
   border-top: 2px solid #e3ebef;
 }
@@ -3408,12 +3412,15 @@ textarea.form-control, textarea.sayt-input {
   border-bottom-width: 2px;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f7f7f9;
+.table-hover tbody tr {
+  border-left: .1875rem solid transparent;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .table-hover tbody tr:hover {
-  background-color: #25b4ff;
+  background-color: #e2f5ff;
+  border-left-color: #297dfd;
+  cursor: pointer;
 }
 
 .table-responsive {
