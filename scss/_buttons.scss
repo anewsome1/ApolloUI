@@ -123,11 +123,12 @@
 }
 
 ///
-/// Link style button
+/// Link-style button
 ///
 
 .btn-link {
   color: $link-color;
+  min-width: unset;
 
   &,
   &:hover,
@@ -135,6 +136,7 @@
   &:focus,
   &:disabled {
     background: none;
+    border: 0;
     box-shadow: none;
   }
 
@@ -151,7 +153,7 @@
 ///
 
 .btn-sm {
-  min-width: 0;
+  min-width: unset;
   padding: $btn-sm-padding-y $btn-sm-padding-x;
   font-size: $btn-sm-font-size;
 }

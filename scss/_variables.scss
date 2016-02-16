@@ -199,6 +199,22 @@ $toggle-font-size: $font-size-base;
 $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 
 
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:            .75rem;
+$table-sm-cell-padding:         .3rem;
+
+$table-bg:                      transparent;
+$table-bg-accent:               $gray-lightest;
+$table-bg-hover:                $atmosphere;
+$table-bg-active:               $table-bg-hover;
+
+$table-border-width:            $border-width;
+$table-border-color:            $gray-lighter;
+
+
 ///
 /// Dropdowns
 ///

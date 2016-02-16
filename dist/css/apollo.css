@@ -3201,10 +3201,12 @@ mark,
 
 .btn-link {
   color: #297dfd;
+  min-width: unset;
 }
 
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
   background: none;
+  border: 0;
   box-shadow: none;
 }
 
@@ -3213,7 +3215,7 @@ mark,
 }
 
 .btn-sm {
-  min-width: 0;
+  min-width: unset;
   padding: 0.375rem 0.8125rem;
   font-size: 0.75rem;
 }
@@ -3357,6 +3359,68 @@ textarea.form-control, textarea.sayt-input {
   color: #fff;
   background-color: #297dfd;
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.table thead th {
+  font-weight: normal;
+  text-transform: uppercase;
+  vertical-align: bottom;
+  border-bottom: 2px solid #e3ebef;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #e3ebef;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem;
+}
+
+.table-bordered {
+  border: 1px solid #e3ebef;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #e3ebef;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f7f7f9;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #25b4ff;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: 0.01%;
+  overflow-x: auto;
 }
 
 .dropdown-toggle {
