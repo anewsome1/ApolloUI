@@ -3105,7 +3105,7 @@ mark,
 }
 
 .btn:hover, .btn.hover {
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:focus {
@@ -3113,7 +3113,7 @@ mark,
 }
 
 .btn:active, .btn.active {
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:disabled, .btn.disabled {
@@ -3265,7 +3265,7 @@ mark,
 .form-control:focus, .sayt-input:focus, .form-control.focus, .focus.sayt-input {
   border-color: transparent;
   outline: none;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .form-control:disabled, .sayt-input:disabled, .form-control.disabled, .disabled.sayt-input {
@@ -3346,7 +3346,7 @@ textarea.form-control, textarea.sayt-input {
 
 .toggle input[type="radio"] + label:hover {
   background-color: white;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .toggle input[type="radio"] + label:active {
@@ -3358,7 +3358,7 @@ textarea.form-control, textarea.sayt-input {
   z-index: 2;
   color: #fff;
   background-color: #297dfd;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .table {
@@ -3460,7 +3460,7 @@ textarea.form-control, textarea.sayt-input {
   padding: 0;
   background: #fff;
   opacity: .9;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu > li {
@@ -3492,7 +3492,7 @@ textarea.form-control, textarea.sayt-input {
   z-index: 1000;
   height: 3.75rem;
   background-color: #fff;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .navbar a,
@@ -3699,7 +3699,7 @@ textarea.form-control, textarea.sayt-input {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f7f7f9;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .command-bar-actions {
@@ -3847,7 +3847,7 @@ textarea.form-control, textarea.sayt-input {
   height: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -3949,20 +3949,20 @@ textarea.form-control, textarea.sayt-input {
   border: 1px solid #e3ebef;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-handle:active {
   background-color: #3a4f5a;
   border-color: transparent;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .disabled .slider-handle {
   background-color: #e3ebef;
   cursor: not-allowed;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .slider-handle + .slider-handle {

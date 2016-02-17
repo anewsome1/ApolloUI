@@ -85,8 +85,9 @@ $transition-medium: .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-hover: 5px 5px 16px rgba(0, 0, 0, .2);
-$shadow-active: 3px 3px 8px rgba(0, 0, 0, .2);
+$shadow-color: rgba(0, 0, 0, .2);
+$shadow-hover: .3125rem .3125rem 1rem $shadow-color;
+$shadow-active: .1875rem .1875rem .5rem $shadow-color;
 
 
 ///
