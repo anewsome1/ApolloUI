@@ -1,10 +1,11 @@
 .form-group {
   @include clearfix();
-  margin-bottom: $spacer;
+  margin-bottom: $form-margin-bottom;
 }
 
 
 .control-label {
+  display: block;
   &.disabled {
     color: $gray;
   }
@@ -18,7 +19,7 @@
 .form-control {
   display: block;
   width: 100%;
-  height: $form-height;
+  height: $component-height;
   padding: $form-padding-top $form-padding-x $form-padding-bottom;
   border: $form-border-width solid darken($gray-lighter, 10%);
   font-size: $form-font-size;
@@ -44,6 +45,11 @@
     background-color: $gray-lightest; // @TODO: replace with light gray from palette
     box-shadow: none;
     cursor: not-allowed;
+  }
+
+  &.input-lg {
+    height: $component-height-lg;
+    padding: $input-padding-y-lg $input-padding-x-lg;
   }
 }
 

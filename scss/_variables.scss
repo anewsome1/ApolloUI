@@ -86,8 +86,8 @@ $transition-medium: .5s cubic-bezier(0, 0, .5, 1);
 ///
 
 $shadow-color: rgba(0, 0, 0, .2);
-$shadow-hover: .3125rem .3125rem 1rem $shadow-color;
-$shadow-active: .1875rem .1875rem .5rem $shadow-color;
+$shadow-hover: .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
+$shadow-active: .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -122,6 +122,21 @@ $alert-states: (
 );
 
 
+
+///
+/// @TODO: Refactor variable names where available in Bootstrap
+/// (e.g. `$input-padding-x` instead of `$form-padding-x`)
+///
+
+
+
+
+///
+/// Shared component size
+///
+$component-height: 2rem;
+$component-height-lg: 3rem;
+
 ///
 /// Forms
 ///
@@ -132,8 +147,13 @@ $form-font-size: $font-size-base; // ~16px
 $form-padding-y: calc-padding-y($form-height, $form-font-size);
 $form-padding-top: .5625rem;      // ~9px
 $form-padding-bottom: .4375rem;   // ~7px
-$form-padding-x: .5rem;  // ~33px + border thickness = 32px
+$form-padding-x: .5rem;  // ~8px
 $form-border-width: .0625rem;     // ~1px
+$form-margin-bottom: $spacer;
+
+// Large size
+$input-padding-x-lg: $form-padding-x;
+$input-padding-y-lg: calc-padding-y($component-height-lg, $form-font-size);
 
 // Checkbox
 $checkbox-size: 1.2rem;
@@ -148,25 +168,25 @@ $form-msg-font-size: $font-size-base;
 $form-msg-line-height: $form-msg-font-size;
 $form-msg-shadow-height: .625rem;  // ~10px
 
-
 ///
 /// Buttons
 ///
 
 $btn-border-width: $form-border-width;
-$btn-min-width: 5.75rem;                // ~92px
+$btn-min-width: 5.75rem;  // ~92px
 $btn-padding-top: $form-padding-top - $btn-border-width;
-$btn-padding-x: 1.125rem;      // ~18px
+$btn-padding-x: 1.125rem;  // ~18px
 $btn-padding-bottom: $form-padding-bottom - $btn-border-width;
 $btn-font-size: $form-font-size;
 $btn-line-height: 1;
 $btn-font-weight: normal;
 
-$btn-sm-padding-y: .375rem;      // ~6px;
-$btn-sm-padding-x: .8125rem;   // ~13px
-$btn-sm-font-size: $font-size-xs;       // ~12px
+$btn-sm-padding-y: .375rem;  // ~6px;
+$btn-sm-padding-x: .8125rem;  // ~13px
+$btn-sm-font-size: $font-size-xs;  // ~12px
 
-$btn-touch-padding-y: .9375rem;  // ~15px
+$btn-lg-min-width: 8.75rem;  // ~140px
+$btn-lg-padding-y: .9375rem;  // ~15px
 
 $btn-variants: (
   primary: (
@@ -297,6 +317,13 @@ $profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
 
 $command-bar-bg: $gray-lightest;
 $command-bar-padding-y: .5rem;
+
+
+///
+/// Login component
+///
+
+$login-max-width: 24rem;
 
 
 ///

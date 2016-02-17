@@ -1,0 +1,36 @@
+.login {
+  max-width: $login-max-width;
+  padding: $grid-gutter-width;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $body-bg;
+  box-shadow: $shadow-hover;
+
+  &-brand-logo {
+    @extend .center-block;
+    width: 20%;
+    margin-top: $spacer * 2;
+
+    .hexagon-outer,
+    .hexagon-inner {
+      fill: $brand-primary;
+    }
+
+    .hexagon-outer {
+      opacity: .5;
+    }
+  }
+
+  &-brand-name {
+    text-align: center;
+    font-size: $font-size-h2;
+    font-weight: $font-thin;
+    color: $brand-primary;
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 2;
+
+    .login-brand-logo + & {
+      margin-top: $spacer;
+    }
+  }
+}

@@ -152,11 +152,18 @@
 /// Button sizes
 ///
 
+.btn-lg {
+  // min-width: $btn-lg-min-width;
+  padding-top: $btn-lg-padding-y;
+  padding-bottom: $btn-lg-padding-y;
+}
+
 .btn-sm {
   min-width: unset;
   padding: $btn-sm-padding-y $btn-sm-padding-x;
   font-size: $btn-sm-font-size;
 }
+
 
 .btn-block {
   display: block;
@@ -165,6 +172,6 @@
 
 // Larger size for touch-enabled devices
 .touchevents .btn {
-  padding-top: $btn-touch-padding-y;
-  padding-bottom: $btn-touch-padding-y;
+  padding-top: $btn-lg-padding-y;
+  padding-bottom: $btn-lg-padding-y;
 }

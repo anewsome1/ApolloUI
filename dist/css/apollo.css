@@ -3214,6 +3214,11 @@ mark,
   color: #0257d7;
 }
 
+.btn-lg {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
 .btn-sm {
   min-width: unset;
   padding: 0.375rem 0.8125rem;
@@ -3238,6 +3243,10 @@ mark,
   content: "";
   display: table;
   clear: both;
+}
+
+.control-label {
+  display: block;
 }
 
 .control-label.disabled {
@@ -3272,6 +3281,11 @@ mark,
   background-color: #f7f7f9;
   box-shadow: none;
   cursor: not-allowed;
+}
+
+.form-control.input-lg, .input-lg.sayt-input {
+  height: 3rem;
+  padding: 1rem 0.5rem;
 }
 
 select.form-control, select.sayt-input {
@@ -3774,6 +3788,42 @@ textarea.form-control, textarea.sayt-input {
   content: "r";
 }
 
+.login {
+  max-width: 24rem;
+  padding: 1.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.login-brand-logo {
+  width: 20%;
+  margin-top: 2rem;
+}
+
+.login-brand-logo .hexagon-outer,
+.login-brand-logo .hexagon-inner {
+  fill: #297dfd;
+}
+
+.login-brand-logo .hexagon-outer {
+  opacity: .5;
+}
+
+.login-brand-name {
+  text-align: center;
+  font-size: 3.375rem;
+  font-weight: 100;
+  color: #297dfd;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.login-brand-logo + .login-brand-name {
+  margin-top: 1rem;
+}
+
 .sayt {
   position: relative;
 }
@@ -4020,7 +4070,7 @@ textarea.form-control, textarea.sayt-input {
   clear: both;
 }
 
-.center-block {
+.center-block, .login-brand-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
