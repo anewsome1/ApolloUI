@@ -3789,12 +3789,17 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .login {
-  max-width: 24rem;
   padding: 1.875rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 544px) {
+  .login {
+    max-width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 .login-brand-logo {
