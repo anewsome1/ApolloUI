@@ -6,14 +6,14 @@ description: TODO--Add JS to toggle off-canvas menu.  For now, toggle by adding 
 ---
 <nav class="navbar navbar-primary navbar-jumbo">
   <div class="container-fluid">
-    <button class="off-canvas-open">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
       <span class="sr-only">Open menu</span>
     </button>
    <!-- ... -->
   </div>
 </nav>
-<aside class="off-canvas off-canvas-left">
-  <button class="off-canvas-close">
+<aside class="off-canvas off-canvas-left" id="offcanvas-demo-1">
+  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
     <span class="sr-only">Close menu</span>
   </button>
   <ul class="off-canvas-menu">

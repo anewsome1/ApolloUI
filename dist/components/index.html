@@ -427,14 +427,14 @@
         <p>TODO--Add JS to toggle off-canvas menu.  For now, toggle by adding the class <code>open</code> to <code>aside.off-canvas</code>.</p>
         <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
   <div class="container-fluid">
-    <button class="off-canvas-open">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
       <span class="sr-only">Open menu</span>
     </button>
    <!-- ... -->
   </div>
 </nav>
-<aside class="off-canvas off-canvas-left">
-  <button class="off-canvas-close">
+<aside class="off-canvas off-canvas-left" id="offcanvas-demo-1">
+  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
     <span class="sr-only">Close menu</span>
   </button>
   <ul class="off-canvas-menu">
@@ -478,14 +478,14 @@
 </aside></div>
         <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#offcanvas-demo-1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Open menu<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
    <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"offcanvas-demo-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#offcanvas-demo-1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-menu"</span><span class="nt">&gt;</span>
