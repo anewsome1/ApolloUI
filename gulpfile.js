@@ -1,23 +1,26 @@
-var gulp = require( 'gulp' );
-var rename = require( 'gulp-rename' );
-var sass = require( 'gulp-sass' );
-var postcss = require( 'gulp-postcss' );
-var autoprefixer = require( 'autoprefixer' );
-var cssnano = require( 'cssnano' );
-var browserSync = require( 'browser-sync' );
-var theo = require( 'theo' );
+var gulp          = require( 'gulp' );
+var rename        = require( 'gulp-rename' );
+var sass          = require( 'gulp-sass' );
+var postcss       = require( 'gulp-postcss' );
+var autoprefixer  = require( 'autoprefixer' );
+var cssnano       = require( 'cssnano' );
+var browserSync   = require( 'browser-sync' );
+var theo          = require( 'theo' );
 
 
-gulp.task( 'serve', [ 'default' ], function() {
+gulp.task( 'server', function() {
   browserSync.init({
     server: 'dist',
     ghostMode: false
   });
+});
 
+
+gulp.task( 'watch', function() {
   gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ] );
   gulp.watch( 'docs/**/*.html', [ 'docs' ] );
   gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ] );
-});
+})
 
 
 gulp.task( 'apollo-styles', function () {
@@ -100,5 +103,5 @@ gulp.task( 'theo-icons-json', function() {
 });
 
 gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ] );
-
 gulp.task( 'default', [ 'apollo-styles', 'docs-styles', 'docs' ] );
+gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
