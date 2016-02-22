@@ -1,3 +1,7 @@
+///
+/// Dependencies
+///
+
 var gulp          = require( 'gulp' );
 var rename        = require( 'gulp-rename' );
 var sass          = require( 'gulp-sass' );
@@ -8,6 +12,10 @@ var browserSync   = require( 'browser-sync' );
 var theo          = require( 'theo' );
 
 
+///
+/// Development server
+///
+
 gulp.task( 'server', function() {
   browserSync.init({
     server: 'dist',
@@ -16,12 +24,20 @@ gulp.task( 'server', function() {
 });
 
 
+///
+/// Watch files
+///
+
 gulp.task( 'watch', function() {
   gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ] );
   gulp.watch( 'docs/**/*.html', [ 'docs' ] );
   gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ] );
 })
 
+
+///
+/// SCSS compilation
+///
 
 gulp.task( 'apollo-styles', function () {
   gulp.src( 'scss/apollo.scss' )
@@ -45,7 +61,6 @@ gulp.task( 'apollo-styles', function () {
     .pipe( browserSync.stream() );
 });
 
-
 gulp.task( 'docs-styles', function () {
   gulp.src( 'docs/_scss/docs.scss' )
     .pipe( sass({
@@ -62,6 +77,10 @@ gulp.task( 'docs-styles', function () {
     .pipe( browserSync.stream() );
 });
 
+
+///
+/// Documentation static site generator
+///
 
 gulp.task( 'docs', [ 'jekyll' ], function() {
   gulp.src( 'docs-temp/**/*.html' )
@@ -80,6 +99,10 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
   });
 });
 
+
+///
+/// Theo transformations
+///
 
 gulp.task( 'theo-colors', function() {
   gulp.src( 'theo/_color-variables.json')
@@ -101,6 +124,11 @@ gulp.task( 'theo-icons-json', function() {
     .pipe( theo.plugins.format( 'json' ))
     .pipe( gulp.dest( 'docs/_data' ));
 });
+
+
+///
+/// Conglomerate tasks
+///
 
 gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ] );
 gulp.task( 'default', [ 'apollo-styles', 'docs-styles', 'docs' ] );
