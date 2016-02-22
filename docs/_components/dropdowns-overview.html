@@ -4,8 +4,10 @@ category: dropdowns
 description: Description of dropdown lists and why they are handy.
 ---
 <div class="dropdown">
-  <button class="dropdown-toggle" type="button" id="dropdownDemo1" aria-haspopup="true" aria-expanded="false">Menu</button>
-  <ul class="dropdown-menu">
+  <button class="dropdown-toggle" type="button" id="dropdownDemo1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menu
+  </button>
+  <div class="dropdown-menu" aria-labeledby="dropdownDemo1">
     <li>
       <a href="#">Lorem ipsum</a>
     </li>
@@ -18,5 +20,5 @@ description: Description of dropdown lists and why they are handy.
     <li>
       <a href="#">Vivamus</a>
     </li>
-  </ul>
+  </div>
 </div>

@@ -3459,10 +3459,6 @@ textarea.form-control, textarea.sayt-input {
   vertical-align: bottom;
 }
 
-.dropdown-toggle:focus + .dropdown-menu {
-  display: block;
-}
-
 .dropdown-toggle:focus {
   outline: none;
 }
@@ -3473,8 +3469,11 @@ textarea.form-control, textarea.sayt-input {
   z-index: 1060;
   padding: 0;
   background: #fff;
-  opacity: .9;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu > li {

@@ -1,7 +1,3 @@
-.dropdown {
-
-}
-
 .dropdown-toggle {
   position: relative;
   padding: $dropdown-toggle-padding;
@@ -18,10 +14,6 @@
     vertical-align: bottom;
   }
 
-  &:focus + .dropdown-menu {
-    display: block;
-  }
-
   &:focus {
     outline: none;
   }
@@ -33,8 +25,14 @@
   z-index: $zindex-popover;
   padding: 0;
   background: $dropdown-menu-bg;
-  opacity: .9;
+  // opacity: .9;
   box-shadow: $shadow-hover;
+
+  // Display menu when `.open` class is added
+  // to `.dropdown` parent element via JS
+  .dropdown.open & {
+    display: block;
+  }
 
   > li {
     list-style-type: none;
