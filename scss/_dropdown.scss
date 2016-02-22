@@ -25,7 +25,7 @@
   z-index: $zindex-popover;
   padding: 0;
   background: $dropdown-menu-bg;
-  // opacity: .9;
+  // opacity: .9;  // Opaque background makes links hard to read
   box-shadow: $shadow-hover;
 
   // Display menu when `.open` class is added
