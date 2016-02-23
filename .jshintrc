@@ -1,0 +1,6 @@
+{
+  "camelcase": true,
+  "quotmark": "single",
+  "browserify": true,
+  "node": true
+}

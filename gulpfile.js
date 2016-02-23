@@ -4,11 +4,12 @@
 
 var gulp          = require( 'gulp' );
 var rename        = require( 'gulp-rename' );
+var browserSync   = require( 'browser-sync' );
+var webpack       = require( 'webpack-stream' );
 var sass          = require( 'gulp-sass' );
 var postcss       = require( 'gulp-postcss' );
 var autoprefixer  = require( 'autoprefixer' );
 var cssnano       = require( 'cssnano' );
-var browserSync   = require( 'browser-sync' );
 var theo          = require( 'theo' );
 
 
@@ -34,6 +35,22 @@ gulp.task( 'watch', function() {
   gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ] );
 })
 
+
+///
+/// JS bundler
+///
+
+///
+/// TODO: Figure out what to do with webpack hash
+/// for bundle
+///
+
+gulp.task( 'scripts', function() {
+  return gulp.src( 'js/apollo.js' )
+    .pipe( webpack() )
+    .pipe( rename( 'apollo.js' ))
+    .pipe( gulp.dest( 'dist/js/' ));
+});
 
 ///
 /// SCSS compilation
