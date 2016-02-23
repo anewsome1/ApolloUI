@@ -44,6 +44,10 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/*!
+	 * Apollo JS v0.1.0-dev
+	 */
+
 	var offCanvas = __webpack_require__( 1 );
 
 	$( document ).ready( function() {
@@ -60,13 +64,19 @@
 	var CLASSES = __webpack_require__( 2 ).classes;
 	var SELECTORS = __webpack_require__( 2 ).selectors;
 
+	/**
+	 * Binds a click handler to the given jQuery object
+	 * @param  { Object }   $el   jQuery object which represents the element(s)
+	 *                            that should be bound to toggle the off-canvas menu.
+	 */
 	function bindOffCanvasToggle( $el ) {
-
 	  $el.click( function() {
 	    var targetString = $( this ).data( STRINGS.target );
 	    var $target = $( targetString );
 
 	    $target.toggleClass( CLASSES.open );
+
+	    return false;
 	  });
 	}
 

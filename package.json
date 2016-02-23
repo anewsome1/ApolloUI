@@ -4,7 +4,7 @@
   "description": "HTML and CSS framework to implement the Apollo visual language.",
   "main": "gulpfile.js",
   "scripts": {
-    "change-version": "node node_modules/bootstrap/grunt/change-version.js",
+    "update-version": "node node_modules/bootstrap/grunt/change-version.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,12 +26,12 @@
     "autoprefixer": "^6.2.3",
     "browser-sync": "^2.10.1",
     "cssnano": "^3.4.0",
-    "fs": "0.0.2",
     "gulp": "^3.9.0",
+    "gulp-insert": "^0.5.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
-    "path": "^0.12.7",
+    "gulp-uglify": "^1.5.3",
     "shelljs": "^0.5.3",
     "theo": "^4.2.0",
     "webpack-stream": "^3.1.0"

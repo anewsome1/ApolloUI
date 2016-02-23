@@ -4,13 +4,24 @@
 
 var gulp          = require( 'gulp' );
 var rename        = require( 'gulp-rename' );
+var insert        = require( 'gulp-insert' );
 var browserSync   = require( 'browser-sync' );
 var webpack       = require( 'webpack-stream' );
+var uglify        = require( 'gulp-uglify' );
 var sass          = require( 'gulp-sass' );
 var postcss       = require( 'gulp-postcss' );
 var autoprefixer  = require( 'autoprefixer' );
 var cssnano       = require( 'cssnano' );
 var theo          = require( 'theo' );
+
+
+///
+/// Local variables
+///
+
+var strings = {
+  VERSION: '/*! Apollo JS v0.1.0-dev */'
+};
 
 
 ///
@@ -30,9 +41,10 @@ gulp.task( 'server', function() {
 ///
 
 gulp.task( 'watch', function() {
-  gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ] );
+  gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ]);
+  gulp.watch( 'js/**/*.js', [ 'apollo-scripts' ]);
   gulp.watch( 'docs/**/*.html', [ 'docs' ] );
-  gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ] );
+  gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ]);
 })
 
 
@@ -45,11 +57,21 @@ gulp.task( 'watch', function() {
 /// for bundle
 ///
 
-gulp.task( 'scripts', function() {
-  return gulp.src( 'js/apollo.js' )
-    .pipe( webpack() )
-    .pipe( rename( 'apollo.js' ))
-    .pipe( gulp.dest( 'dist/js/' ));
+gulp.task( 'apollo-scripts', function() {
+  gulp.src( 'js/apollo.js' )
+    .pipe( webpack({
+      output: {
+        filename: 'apollo.js'
+      }
+    }))
+    .pipe( gulp.dest( 'dist/js/' ))
+    .pipe( uglify() )
+    .pipe( insert.prepend( strings.VERSION ))
+    .pipe( rename({
+      suffix: '.min'
+    }))
+    .pipe( gulp.dest( 'dist/js/' ))
+    .pipe( browserSync.stream() );
 });
 
 ///
@@ -68,13 +90,13 @@ gulp.task( 'apollo-styles', function () {
         browsers: [ 'last 2 versions' ]
       })
     ]))
-    .pipe( gulp.dest( 'dist/css/' ) )
+    .pipe( gulp.dest( 'dist/css/' ))
     .pipe( browserSync.stream() )
     .pipe( postcss([ cssnano() ]))
     .pipe( rename({
       suffix: '.min'
     }))
-    .pipe( gulp.dest( 'dist/css/' ) )
+    .pipe( gulp.dest( 'dist/css/' ))
     .pipe( browserSync.stream() );
 });
 
@@ -90,7 +112,7 @@ gulp.task( 'docs-styles', function () {
         browsers: [ 'last 2 versions' ]
       })
     ]))
-    .pipe( gulp.dest( 'dist/css/' ) )
+    .pipe( gulp.dest( 'dist/css/' ))
     .pipe( browserSync.stream() );
 });
 
@@ -147,6 +169,6 @@ gulp.task( 'theo-icons-json', function() {
 /// Conglomerate tasks
 ///
 
-gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ] );
-gulp.task( 'default', [ 'apollo-styles', 'docs-styles', 'docs' ] );
+gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ]);
+gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
