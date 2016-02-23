@@ -23,6 +23,18 @@ var strings = {
   VERSION: '/*! Apollo JS v0.1.0-dev */'
 };
 
+var path = {
+  SCSS_SRC_ALL: 'scss/**/*.scss',
+  SCSS_SRC_MAIN: 'scss/apollo.scss',
+  DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
+  DOCS_SCSS_SRC_MAIN: 'docs/_scss/docs.scss',
+  CSS_DEST: 'dist/css/',
+  JS_SRC_ALL: 'js/**/*.js',
+  JS_SRC_MAIN: 'js/apollo.js',
+  JS_DEST: 'dist/js/',
+  DOCS_PAGE_SRC_ALL: 'docs/**/*.html'
+};
+
 
 ///
 /// Development server
@@ -41,10 +53,10 @@ gulp.task( 'server', function() {
 ///
 
 gulp.task( 'watch', function() {
-  gulp.watch( 'scss/**/*.scss', [ 'apollo-styles' ]);
-  gulp.watch( 'js/**/*.js', [ 'apollo-scripts' ]);
-  gulp.watch( 'docs/**/*.html', [ 'docs' ] );
-  gulp.watch( 'docs/_scss/**/*.scss', [ 'docs-styles' ]);
+  gulp.watch( path.SCSS_SRC_ALL, [ 'apollo-styles' ]);
+  gulp.watch( path.JS_SRC_ALL, [ 'apollo-scripts' ]);
+  gulp.watch( path.DOCS_PAGE_SRC_ALL, [ 'docs' ] );
+  gulp.watch( path.DOCS_SCSS_SRC_ALL, [ 'docs-styles' ]);
 })
 
 
@@ -53,24 +65,24 @@ gulp.task( 'watch', function() {
 ///
 
 ///
-/// TODO: Figure out what to do with webpack hash
+/// TODO: Figure out what to do with webpack [hash]
 /// for bundle
 ///
 
 gulp.task( 'apollo-scripts', function() {
-  gulp.src( 'js/apollo.js' )
+  gulp.src( path.JS_SRC_MAIN )
     .pipe( webpack({
       output: {
         filename: 'apollo.js'
       }
     }))
-    .pipe( gulp.dest( 'dist/js/' ))
+    .pipe( gulp.dest( path.JS_DEST ))
     .pipe( uglify() )
     .pipe( insert.prepend( strings.VERSION ))
     .pipe( rename({
       suffix: '.min'
     }))
-    .pipe( gulp.dest( 'dist/js/' ))
+    .pipe( gulp.dest( path.JS_DEST ))
     .pipe( browserSync.stream() );
 });
 
@@ -79,7 +91,7 @@ gulp.task( 'apollo-scripts', function() {
 ///
 
 gulp.task( 'apollo-styles', function () {
-  gulp.src( 'scss/apollo.scss' )
+  gulp.src( path.SCSS_SRC_MAIN )
     .pipe( sass({
         includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
@@ -90,18 +102,18 @@ gulp.task( 'apollo-styles', function () {
         browsers: [ 'last 2 versions' ]
       })
     ]))
-    .pipe( gulp.dest( 'dist/css/' ))
+    .pipe( gulp.dest( path.CSS_DEST ))
     .pipe( browserSync.stream() )
     .pipe( postcss([ cssnano() ]))
     .pipe( rename({
       suffix: '.min'
     }))
-    .pipe( gulp.dest( 'dist/css/' ))
+    .pipe( gulp.dest( path.CSS_DEST ))
     .pipe( browserSync.stream() );
 });
 
 gulp.task( 'docs-styles', function () {
-  gulp.src( 'docs/_scss/docs.scss' )
+  gulp.src( path.DOCS_SCSS_SRC_MAIN )
     .pipe( sass({
         includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
@@ -112,7 +124,7 @@ gulp.task( 'docs-styles', function () {
         browsers: [ 'last 2 versions' ]
       })
     ]))
-    .pipe( gulp.dest( 'dist/css/' ))
+    .pipe( gulp.dest( path.CSS_DEST ))
     .pipe( browserSync.stream() );
 });
 
