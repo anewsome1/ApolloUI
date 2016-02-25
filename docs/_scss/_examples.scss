@@ -16,7 +16,7 @@ body {
   left: 0;
   width: $docs-sidebar-width;
   height: 100%;
-  padding-top: $navbar-jumbo-height;
+  padding-top: $navbar-height;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: $gray-lightest;
@@ -29,6 +29,7 @@ body {
 
 .docs-content {
   padding-top: $spacer;
+  min-height: 100%;
 }
 
 

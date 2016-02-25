@@ -4,9 +4,9 @@ layout: base
 
 {% assign section_groups = site.icons | group_by: 'category' %}
 
-<div class="docs">
+<div class="docs padding-top-navbar">
 
-  <aside class="docs-sidebar padding-top-toolbar">
+  <aside class="docs-sidebar padding-top-navbar">
     <ul class="docs-page-nav" role="navigation">
     {% for group in section_groups %}
       {% assign group_items = group.items | sort: 'order' %}
