@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@gitlab.imshealth.com:2222/apollo/ui-platform.git"
+    "url": "https://gitlab.imshealth.com/apollo/ui-platform.git"
   },
   "keywords": [
     "html",
