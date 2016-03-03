@@ -1500,18 +1500,21 @@ output {
 .row-xs-top {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
           align-items: flex-start;
 }
 
 .row-xs-center {
   -webkit-align-items: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center;
 }
 
 .row-xs-bottom {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
+              -ms-grid-row-align: flex-end;
           align-items: flex-end;
 }
 
@@ -1519,16 +1522,19 @@ output {
   .row-sm-top {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .row-sm-center {
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
   }
   .row-sm-bottom {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -1537,16 +1543,19 @@ output {
   .row-md-top {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .row-md-center {
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
   }
   .row-md-bottom {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -1555,16 +1564,19 @@ output {
   .row-lg-top {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .row-lg-center {
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
   }
   .row-lg-bottom {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -1573,16 +1585,19 @@ output {
   .row-xl-top {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .row-xl-center {
     -webkit-align-items: center;
         -ms-flex-align: center;
+                -ms-grid-row-align: center;
             align-items: center;
   }
   .row-xl-bottom {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -4040,6 +4055,72 @@ textarea.form-control, textarea.sayt-input {
   left: 25%;
   right: 15%;
   width: auto;
+}
+
+.modal {
+  z-index: 1050;
+  overflow-y: auto;
+}
+
+.modal, .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal.fade {
+  display: none;
+}
+
+.modal.fade.in {
+  display: block;
+}
+
+.modal-dialog {
+  padding: 1.875rem;
+  margin: 10rem auto 0;
+  background-color: #fff;
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  opacity: .5;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+@media (min-width: 544px) {
+  .modal-dialog {
+    width: 18.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 37.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-dialog {
+    width: 56.25rem;
+  }
+}
+
+.fade.in .modal-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.modal-backdrop {
+  z-index: 1040;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.modal-backdrop.fade.in {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @-webkit-keyframes pulse {

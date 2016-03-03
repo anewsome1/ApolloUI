@@ -122,6 +122,28 @@ $alert-states: (
 );
 
 
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:         $grid-gutter-width;
+
+$modal-title-padding:         $spacer;
+$modal-title-line-height:     $line-height;
+
+$modal-content-bg:            #fff;
+// $modal-content-border-color:  rgba(0,0,0,.2);
+
+$modal-backdrop-bg:           #000;
+$modal-backdrop-opacity:      .5;
+$modal-header-border-color:   $gray-lightest;
+$modal-footer-border-color:   $modal-header-border-color;
+
+$modal-lg:                    56.25rem;  // ~900px
+$modal-md:                    37.5rem; // ~600px
+$modal-sm:                    18.75rem; // ~300px
+
+
+
 
 ///
 /// @TODO: Refactor variable names where available in Bootstrap

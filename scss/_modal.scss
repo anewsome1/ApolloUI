@@ -1,0 +1,73 @@
+.modal {
+
+  &,
+  &-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  ///
+  /// Modal container (for page layout)
+  ///
+
+
+  z-index: $zindex-modal;
+  overflow-y: auto;
+
+  &.fade {
+    display: none;
+
+    &.in {
+      display: block;
+    }
+  }
+
+  ///
+  /// Modal contents (for content area)
+  ///
+
+  &-dialog {
+    padding: $modal-inner-padding;
+    margin: 10rem auto 0;
+    background-color: $modal-content-bg;
+    box-shadow: $shadow-hover;
+    opacity: .5;
+    transition: all $transition-fast;
+    transform: scale(.95);
+
+    @include media-breakpoint-up(sm) {
+      width: $modal-sm;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: $modal-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: $modal-lg;
+    }
+
+    .fade.in & {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  ///
+  /// Modal backdrop
+  ///
+
+  &-backdrop {
+    z-index: $zindex-modal-bg;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &.fade.in {
+      background-color: transparentize($modal-backdrop-bg, $modal-backdrop-opacity);
+    }
+  }
+
+}
