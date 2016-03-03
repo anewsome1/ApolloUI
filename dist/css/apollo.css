@@ -4166,6 +4166,15 @@ textarea.form-control, textarea.sayt-input {
   margin-right: -1.875rem;
 }
 
+.modal-image-full + .modal-header,
+.modal-image-full + .modal-body {
+  margin-top: 1.875rem;
+}
+
+.modal-image-full.modal-image-top {
+  margin-top: -1.875rem;
+}
+
 .modal-backdrop {
   z-index: 1040;
   cursor: pointer;

@@ -71,6 +71,15 @@
   &-image-full {
     margin-left: -$modal-inner-padding;
     margin-right: -$modal-inner-padding;
+    
+    & + .modal-header,
+    & + .modal-body {
+      margin-top: $modal-inner-padding;
+    }
+
+    &.modal-image-top {
+      margin-top: -$modal-inner-padding;
+    }
   }
 
   ///
