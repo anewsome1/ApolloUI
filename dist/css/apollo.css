@@ -4157,6 +4157,10 @@ textarea.form-control, textarea.sayt-input {
   }
 }
 
+.modal-login .modal-dialog {
+  max-width: 24rem;
+}
+
 .modal-footer {
   margin-top: 1.875rem;
 }
