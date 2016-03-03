@@ -10,17 +10,20 @@ description: Use modals to display information to the user in a dialog-style ove
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="demo-modal-1">
+<div class="modal modal-md fade" id="demo-modal-1">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="sr-only" data-dismiss="modal" aria-label="Close"></button>
         <h4 class="modal-title">You should read this</h4>
       </div>
       <div class="modal-body">
         <p>After you're done reading this important message, it's time to make a decision.  Use the buttons below to make your decision.  Choose wisely...</p>
       </div>
-      <div class="modal-footer">
+      <div class="modal-image-full">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech">
+      </div>
+      <div class="modal-footer text-xs-right">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary">Action</button>
       </div>
