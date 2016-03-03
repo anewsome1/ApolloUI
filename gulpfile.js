@@ -20,7 +20,7 @@ var theo          = require( 'theo' );
 ///
 
 var strings = {
-  VERSION: '/*! Apollo JS v0.2.1 */'
+  VERSION: '/*! Apollo JS v0.2.2 */'
 };
 
 var path = {
