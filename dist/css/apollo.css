@@ -4205,6 +4205,10 @@ textarea.form-control, textarea.sayt-input {
           animation: orbit-outer 4s linear infinite;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   z-index: 1050;
   overflow-x: hidden;
@@ -4223,12 +4227,8 @@ textarea.form-control, textarea.sayt-input {
   display: none;
 }
 
-.modal.fade.in {
+.modal.in {
   display: block;
-}
-
-.modal-open {
-  overflow: hidden;
 }
 
 .modal-dialog {
@@ -4245,37 +4245,18 @@ textarea.form-control, textarea.sayt-input {
           transform: scale(0.95);
 }
 
-.fade.in .modal-dialog {
+.in .modal-dialog {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-@media (min-width: 544px) {
-  .modal-dialog {
-    max-width: 18.75rem;
-    margin: 10rem auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal-dialog {
-    max-width: 37.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .modal-dialog {
-    max-width: 56.25rem;
-  }
-}
-
-.modal-login .modal-dialog {
-  max-width: 24rem;
-}
-
 .modal-footer {
   margin-top: 1.875rem;
+}
+
+.modal-footer .btn + .btn {
+  margin-left: 0.9375rem;
 }
 
 .modal-image-full {
@@ -4298,8 +4279,28 @@ textarea.form-control, textarea.sayt-input {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.modal-backdrop.fade.in {
+.modal-backdrop.in {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 544px) {
+  .modal-dialog {
+    max-width: 37.5rem;
+    margin: 5rem auto;
+  }
+  .modal-sm .modal-dialog {
+    max-width: 18.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-lg .modal-dialog {
+    max-width: 56.25rem;
+  }
+}
+
+.modal-login .modal-dialog {
+  max-width: 24rem;
 }
 
 @-webkit-keyframes pulse {

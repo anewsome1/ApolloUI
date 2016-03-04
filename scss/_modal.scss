@@ -1,4 +1,20 @@
+///
+/// Disable scrolling on body when modal is open
+///
+
+.modal-open {
+  overflow: hidden;
+}
+
+
+///
+/// Modal container (for page layout)
+///
+
 .modal {
+  z-index: $zindex-modal;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   &,
   &-backdrop {
@@ -9,31 +25,13 @@
     left: 0;
   }
 
-  ///
-  /// Modal container (for page layout)
-  ///
-
-  z-index: $zindex-modal;
-  overflow-x: hidden;
-  overflow-y: auto;
-
   &.fade {
     display: none;
-
-    &.in {
-      display: block;
-    }
   }
 
-
-  ///
-  /// Class added to body when modal opens
-  ///
-
-  &-open {
-    overflow: hidden;
+  &.in {
+    display: block;
   }
-
 
   ///
   /// Modal contents (for content area)
@@ -50,29 +48,10 @@
                 transform $transition-fast;
     transform: scale(.95);
 
-    .fade.in & {
+    .in & {
       opacity: 1;
       transform: scale(1);
     }
-
-    @include media-breakpoint-up(sm) {
-      max-width: $modal-sm;
-      margin: 10rem auto;
-    }
-
-    @include media-breakpoint-up(md) {
-      max-width: $modal-md;
-    }
-
-    @include media-breakpoint-up(lg) {
-      max-width: $modal-lg;
-    }
-
-    // Login form variation
-    .modal-login & {
-      max-width: $login-max-width;
-    }
-
   }
 
   &-header {
@@ -81,34 +60,74 @@
 
   &-footer {
     margin-top: $modal-inner-padding;
-  }
-
-  &-image-full {
-    margin-left: -$modal-inner-padding;
-    margin-right: -$modal-inner-padding;
-    
-    // Add margin when adjacent to modal header or body
-    & + .modal-header,
-    & + .modal-body {
-      margin-top: $modal-inner-padding;
-    }
-
-    &.modal-image-top {
-      margin-top: -$modal-inner-padding;
+    & .btn + .btn {
+      margin-left: $grid-gutter-width / 2;
     }
   }
 
-  ///
-  /// Modal backdrop
-  ///
 
-  &-backdrop {
-    z-index: $zindex-modal-bg;
-    cursor: pointer;
-    transition: all $transition-fast;
+}
 
-    &.fade.in {
-      background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
-    }
+
+///
+/// Full-width images
+///
+
+.modal-image-full {
+  margin-left: -$modal-inner-padding;
+  margin-right: -$modal-inner-padding;
+
+  // Add margin when adjacent to modal header or body
+  & + .modal-header,
+  & + .modal-body {
+    margin-top: $modal-inner-padding;
+  }
+
+  &.modal-image-top {
+    margin-top: -$modal-inner-padding;
   }
 }
+
+
+///
+/// Backdrop (take page out of focus when open)
+///
+
+.modal-backdrop {
+  z-index: $zindex-modal-bg;
+  cursor: pointer;
+  transition: all $transition-fast;
+
+  &.in {
+    background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+  }
+}
+
+
+///
+/// Size variations
+///
+
+.modal-dialog {
+  @include media-breakpoint-up(sm) {
+    max-width: $modal-md;
+    margin: 5rem auto;
+
+    .modal-sm & {
+      max-width: $modal-sm;
+    }
+  }
+
+  // Large option for middle-size screens and up
+  @include media-breakpoint-up(md) {
+    .modal-lg & {
+      max-width: $modal-lg;
+    }
+  }
+
+  // Login form variation
+  .modal-login & {
+    max-width: $login-max-width;
+  }
+}
+
