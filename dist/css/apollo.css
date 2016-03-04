@@ -4147,6 +4147,10 @@ textarea.form-control, textarea.sayt-input {
   margin-top: 1.875rem;
 }
 
+.modal-footer .btn + .btn {
+  margin-left: 0.9375rem;
+}
+
 .modal-image-full {
   margin-left: -1.875rem;
   margin-right: -1.875rem;

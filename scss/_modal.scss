@@ -61,6 +61,9 @@
 
   &-footer {
     margin-top: $modal-inner-padding;
+    & .btn + .btn {
+      margin-left: $grid-gutter-width / 2;
+    }
   }
 
 
