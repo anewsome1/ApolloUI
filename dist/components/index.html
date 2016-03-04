@@ -66,6 +66,17 @@
       </li>
     
       
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Loading indicator</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#basic-spinner">Basic spinner</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#complex-spinner">Complex spinner</a></li>
+          
+        </ul>
+      </li>
+    
+      
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Login</h3>
         <ul class="docs-page-subnav">
           
@@ -254,6 +265,58 @@
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+      </section>
+    
+      
+      <section class="docs-section" id="loading-indicator">
+      <h2>Loading indicator</h2>
+      
+        <h3 id="basic-spinner">Basic spinner</h3>
+        <p>This little beauty will mesmerize users while your application chugs along.</p>
+        <div class="docs-example-rendered"><div class="loading-indicator">
+  <svg class="spinner-inner" viewbox="0 0 64 64">
+    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+  </svg>
+  <svg class="spinner-outer" viewbox="0 0 64 64">
+    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+  </svg>
+</div>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading-indicator"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"spinner-inner"</span> <span class="na">viewbox=</span><span class="s">"0 0 64 64"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;circle</span> <span class="na">class=</span><span class="s">"spinner"</span> <span class="na">r=</span><span class="s">"25%"</span> <span class="na">cx=</span><span class="s">"50%"</span> <span class="na">cy=</span><span class="s">"50%"</span><span class="nt">&gt;&lt;/circle&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"spinner-outer"</span> <span class="na">viewbox=</span><span class="s">"0 0 64 64"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;circle</span> <span class="na">class=</span><span class="s">"spinner"</span> <span class="na">r=</span><span class="s">"25%"</span> <span class="na">cx=</span><span class="s">"50%"</span> <span class="na">cy=</span><span class="s">"50%"</span><span class="nt">&gt;&lt;/circle&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+        <h3 id="complex-spinner">Complex spinner</h3>
+        <p>This one adds more Apollo flair by throwing rotating orbs into the mix.</p>
+        <div class="docs-example-rendered"><div class="loading-indicator loading-complex">
+  <svg class="spinner-inner" viewbox="0 0 64 64">
+    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+  </svg>
+  <svg class="spinner-outer" viewbox="0 0 64 64">
+    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+  </svg>
+  <span class="planet inner"></span>
+  <span class="planet middle"></span>
+  <span class="planet outer"></span>
+</div>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading-indicator loading-complex"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"spinner-inner"</span> <span class="na">viewbox=</span><span class="s">"0 0 64 64"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;circle</span> <span class="na">class=</span><span class="s">"spinner"</span> <span class="na">r=</span><span class="s">"25%"</span> <span class="na">cx=</span><span class="s">"50%"</span> <span class="na">cy=</span><span class="s">"50%"</span><span class="nt">&gt;&lt;/circle&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"spinner-outer"</span> <span class="na">viewbox=</span><span class="s">"0 0 64 64"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;circle</span> <span class="na">class=</span><span class="s">"spinner"</span> <span class="na">r=</span><span class="s">"25%"</span> <span class="na">cx=</span><span class="s">"50%"</span> <span class="na">cy=</span><span class="s">"50%"</span><span class="nt">&gt;&lt;/circle&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"planet inner"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"planet middle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"planet outer"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
       
       </section>
