@@ -377,3 +377,36 @@ $slider-active-handle-bg: $charcoal;
 $slider-disabled-fill-bg: $gray-light;
 $slider-disabled-handle-bg: $gray-lighter;
 
+
+///
+/// Loading indicators
+///
+
+// Animation stuff
+$loader-arc-timing: linear;
+$loader-spin-timing: linear;
+$loader-spin-duration: (4s / 3);
+$loader-grow-duration: 5s;
+
+// Spinner sizes
+$loader-circle-inner: 6.25rem;
+$loader-circle-outer: 10.5rem;
+$loader-svg-radius: 32;
+$loader-arc-stroke: .5;
+$loader-arc-length-min: 2;
+$loader-dasharray-gap: 100;
+$loader-arc-length-max: $loader-dasharray-gap / 2;
+
+// Orbs
+$loader-planet-orbit-inner: 3.75rem;
+$loader-planet-orbit-middle: -6.25rem;
+$loader-planet-orbit-outer: 8.75rem;
+$loader-planet-size-inner: 1.25rem;
+$loader-planet-size-middle: 2.25rem;
+$loader-planet-size-outer: 1.75rem;
+
+// Overall sizes
+$loader-size: $loader-circle-outer;
+$loader-size-complex: ($loader-planet-orbit-outer * 2) + ($loader-planet-size-outer / 2) + $spacer;
+
+
