@@ -2840,7 +2840,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 100;
   line-height: 1.1;
   color: inherit;
 }
@@ -2975,7 +2975,7 @@ mark,
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
-  border-left: 0.25rem solid #eceeef;
+  border-left: 0.25rem solid #e3ebef;
 }
 
 .blockquote-footer {
@@ -2993,7 +2993,7 @@ mark,
   padding-right: 1rem;
   padding-left: 0;
   text-align: right;
-  border-right: 0.25rem solid #eceeef;
+  border-right: 0.25rem solid #e3ebef;
   border-left: 0;
 }
 
@@ -3255,8 +3255,10 @@ mark,
 }
 
 .btn-link {
-  color: #297dfd;
   min-width: unset;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #297dfd;
 }
 
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
@@ -4300,6 +4302,30 @@ textarea.form-control, textarea.sayt-input {
 
 .modal-backdrop.fade.in {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-block {
+  padding: 1.875rem;
+}
+
+.card-block + .card-block {
+  padding-top: 0;
+}
+
+.card-title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.card-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #818a91;
 }
 
 @-webkit-keyframes pulse {

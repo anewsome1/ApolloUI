@@ -1,0 +1,28 @@
+.card {
+  background-color: $card-bg;
+  box-shadow: $shadow-hover;
+}
+
+.card-block {
+  padding: $card-inner-padding;
+
+  & + & {
+    padding-top: 0;
+  }
+}
+
+
+///
+/// Card heading
+///
+
+.card-title {
+  margin-top: $spacer;
+  margin-bottom: 0;
+}
+
+.card-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $text-muted;
+}
