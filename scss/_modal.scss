@@ -27,12 +27,11 @@
 
   &.fade {
     display: none;
-
-    &.in {
-      display: block;
-    }
   }
 
+  &.in {
+    display: block;
+  }
 
   ///
   /// Modal contents (for content area)
@@ -49,7 +48,7 @@
                 transform $transition-fast;
     transform: scale(.95);
 
-    .fade.in & {
+    .in & {
       opacity: 1;
       transform: scale(1);
     }

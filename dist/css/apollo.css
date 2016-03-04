@@ -4119,7 +4119,7 @@ textarea.form-control, textarea.sayt-input {
   display: none;
 }
 
-.modal.fade.in {
+.modal.in {
   display: block;
 }
 
@@ -4137,7 +4137,7 @@ textarea.form-control, textarea.sayt-input {
           transform: scale(0.95);
 }
 
-.fade.in .modal-dialog {
+.in .modal-dialog {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
