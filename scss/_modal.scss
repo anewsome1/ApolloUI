@@ -109,7 +109,7 @@
 .modal-dialog {
   @include media-breakpoint-up(sm) {
     max-width: $modal-md;
-    margin: 10rem auto;
+    margin: 5rem auto;
 
     .modal-sm & {
       max-width: $modal-sm;

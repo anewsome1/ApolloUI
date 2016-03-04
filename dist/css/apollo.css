@@ -4174,7 +4174,7 @@ textarea.form-control, textarea.sayt-input {
 @media (min-width: 544px) {
   .modal-dialog {
     max-width: 37.5rem;
-    margin: 10rem auto;
+    margin: 5rem auto;
   }
   .modal-sm .modal-dialog {
     max-width: 18.75rem;
