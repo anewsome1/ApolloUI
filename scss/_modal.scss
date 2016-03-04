@@ -13,8 +13,8 @@
   /// Modal container (for page layout)
   ///
 
-
   z-index: $zindex-modal;
+  overflow-x: hidden;
   overflow-y: auto;
 
   &.fade {
@@ -24,6 +24,16 @@
       display: block;
     }
   }
+
+
+  ///
+  /// Class added to body when modal opens
+  ///
+
+  &-open {
+    overflow: hidden;
+  }
+
 
   ///
   /// Modal contents (for content area)
@@ -47,7 +57,7 @@
 
     @include media-breakpoint-up(sm) {
       max-width: $modal-sm;
-      margin: 10rem auto 0;
+      margin: 10rem auto;
     }
 
     @include media-breakpoint-up(md) {

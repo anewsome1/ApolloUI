@@ -4099,6 +4099,7 @@ textarea.form-control, textarea.sayt-input {
 
 .modal {
   z-index: 1050;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -4116,6 +4117,10 @@ textarea.form-control, textarea.sayt-input {
 
 .modal.fade.in {
   display: block;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .modal-dialog {
@@ -4141,7 +4146,7 @@ textarea.form-control, textarea.sayt-input {
 @media (min-width: 544px) {
   .modal-dialog {
     max-width: 18.75rem;
-    margin: 10rem auto 0;
+    margin: 10rem auto;
   }
 }
 
