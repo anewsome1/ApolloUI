@@ -4329,6 +4329,45 @@ textarea.form-control, textarea.sayt-input {
   color: #818a91;
 }
 
+.card-success {
+  position: relative;
+}
+
+.card-success::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #20c22f;
+}
+
+.card-warning {
+  position: relative;
+}
+
+.card-warning::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #ffcf32;
+}
+
+.card-danger {
+  position: relative;
+}
+
+.card-danger::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #fb4f39;
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0);

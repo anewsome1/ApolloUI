@@ -26,3 +26,23 @@
   margin-bottom: 0;
   color: $text-muted;
 }
+
+///
+/// Card states
+///
+
+@each $state, $state-props in $alert-states {
+  $state-bg: map-get($state-props, bg);
+
+  .card-#{ $state } {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      content: '';
+      width: 100%;
+      height: .75rem;
+      background-color: $state-bg;
+    }
+  }
+}
