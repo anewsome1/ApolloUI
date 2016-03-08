@@ -1,0 +1,9 @@
+---
+title: Color Palette
+category: colors
+order: 0
+description: "Double Rainbow, all the way"
+---
+{% for color in site.data._palette %}
+  <span class="pad-all" style="display:inline-block;width:15%; height:100%;color:#fff;background-color:{{ color[1] }}">{{ color[0] }}</span>
+{% endfor %}
