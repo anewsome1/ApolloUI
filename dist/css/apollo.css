@@ -3042,7 +3042,7 @@ mark,
 
 .figure-caption {
   font-size: 90%;
-  color: #818a91;
+  color: #949aa0;
 }
 
 .bg-light {
@@ -3318,7 +3318,7 @@ mark,
   width: 100%;
   height: 2rem;
   padding: 0.5625rem 0.5rem 0.4375rem;
-  border: 0.0625rem solid #d0d5d8;
+  border: 0.0625rem solid #afb4b7;
   font-size: 1rem;
   line-height: normal;
   white-space: nowrap;
@@ -3447,7 +3447,7 @@ textarea.form-control, textarea.sayt-input {
   font-weight: normal;
   text-transform: uppercase;
   vertical-align: bottom;
-  border-bottom: 2px solid #eceeef;
+  border-bottom: 2px solid #cacdcf;
 }
 
 .table tbody tr:nth-of-type(odd) {
@@ -3455,7 +3455,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #eceeef;
+  border-top: 2px solid #cacdcf;
 }
 
 .table .table {
@@ -3468,12 +3468,12 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .table-bordered {
-  border: 1px solid #eceeef;
+  border: 1px solid #cacdcf;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #eceeef;
+  border: 1px solid #cacdcf;
 }
 
 .table-bordered thead th,
@@ -3536,7 +3536,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .dropdown-menu > li + li {
-  border-top: 1px solid #eceeef;
+  border-top: 1px solid #cacdcf;
 }
 
 .dropdown-menu > li > a {
@@ -3801,11 +3801,11 @@ textarea.form-control, textarea.sayt-input {
   height: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #373a3c;
+  color: #1f2a31;
   font-size: 3rem;
   line-height: 1;
   opacity: .3;
-  border: 1px dashed #373a3c;
+  border: 1px dashed #1f2a31;
   border-radius: 50%;
 }
 
@@ -3908,7 +3908,7 @@ textarea.form-control, textarea.sayt-input {
 
 .bg-dark .sayt-input, .off-canvas .sayt-input {
   color: #3a4f59;
-  background-color: #eceeef;
+  background-color: #cacdcf;
 }
 
 .sayt-results {
@@ -4043,7 +4043,7 @@ textarea.form-control, textarea.sayt-input {
   height: 0.1875rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: #eceeef;
+  background-color: #cacdcf;
 }
 
 .slider-handle {
@@ -4055,7 +4055,7 @@ textarea.form-control, textarea.sayt-input {
   margin-top: -1rem;
   margin-left: -1rem;
   background-color: #fff;
-  border: 1px solid #eceeef;
+  border: 1px solid #cacdcf;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
@@ -4069,7 +4069,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .disabled .slider-handle {
-  background-color: #eceeef;
+  background-color: #cacdcf;
   cursor: not-allowed;
   box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -4088,7 +4088,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .disabled .slider-fill {
-  background-color: #818a91;
+  background-color: #949aa0;
 }
 
 .slider-handle:nth-of-type(2) + .slider-fill {

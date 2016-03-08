@@ -155,22 +155,36 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
 /// Theo transformations
 ///
 
-gulp.task( 'theo-colors', function() {
-  gulp.src( 'theo/_color-variables.json')
+gulp.task( 'theo-colors-scss', function() {
+  gulp.src( 'theo/_palette.json')
     .pipe( theo.plugins.transform( 'web' ))
     .pipe( theo.plugins.format( 'scss' ))
-    .pipe( gulp.dest( 'scss' ));
+    .pipe( gulp.dest( 'scss/_props' ));
 });
 
-gulp.task( 'theo-icons-sass', function() {
-  gulp.src( 'theo/icons.json')
+gulp.task( 'theo-colors-scss-map', function() {
+  gulp.src( 'theo/_palette.json')
+    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.format( 'map.scss' ))
+    .pipe( gulp.dest( 'scss/_props' ));
+});
+
+gulp.task( 'theo-colors-json', function() {
+  gulp.src( 'theo/_palette.json')
+    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.format( 'json' ))
+    .pipe( gulp.dest( 'docs/_data' ));
+});
+
+gulp.task( 'theo-icons-scss', function() {
+  gulp.src( 'theo/_icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'map.scss' ))
-    .pipe( gulp.dest( 'scss' ));
+    .pipe( gulp.dest( 'scss/_props' ));
 });
 
 gulp.task( 'theo-icons-json', function() {
-  gulp.src( 'theo/icons.json')
+  gulp.src( 'theo/_icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'json' ))
     .pipe( gulp.dest( 'docs/_data' ));
@@ -181,6 +195,6 @@ gulp.task( 'theo-icons-json', function() {
 /// Conglomerate tasks
 ///
 
-gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ]);
-gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
+gulp.task( 'theo', [ 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
+gulp.task( 'default', [ 'theo', 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
