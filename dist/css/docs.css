@@ -2,8 +2,8 @@
   padding: 16px;
   margin-bottom: 0;
   background-color: #f7f7f9;
-  border: 1px solid #e3ebef;
-  color: #3a4f5a;
+  border: 1px solid #eceeef;
+  color: #3a4f59;
 }
 
 .highlight pre {
@@ -11,19 +11,19 @@
 }
 
 .highlight .nt {
-  color: #297dfd;
+  color: #2975e9;
 }
 
 .highlight .na {
-  color: #37dad3;
+  color: #3ed6cf;
 }
 
 .highlight .s {
-  color: #25b4ff;
+  color: #32b5fc;
 }
 
 .highlight .c {
-  color: #ced3d6;
+  color: #2b3a43;
 }
 
 code,
@@ -92,7 +92,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #f7f7f9;
-  border-right: 1px solid #e3ebef;
+  border-right: 1px solid #eceeef;
 }
 
 .docs-sidebar + .docs-content {
@@ -158,7 +158,7 @@ body {
   padding-bottom: 16px;
   text-align: center;
   color: #fff;
-  background-color: #3a4f5a;
+  background-color: #3a4f59;
   border: 1px solid #fff;
 }
 
@@ -182,7 +182,7 @@ body {
 }
 
 .docs-icon:hover {
-  background-color: #297dfd;
+  background-color: #2975e9;
   color: #fff;
 }
 

@@ -1,62 +1,67 @@
 {
   "props": {
-    "charcoal": {
-      "value": "#3a4f5a",
-      "type": "color",
-      "category": "ui"
-    },
-    "gray": {
-      "value": "#ced3d6",
-      "type": "color",
-      "category": "ui"
-    },
-    "gray-lighter": {
-      "value": "#e3ebef",
-      "type": "color",
-      "category": "ui"
-    },
     "atmosphere": {
-      "value": "#25b4ff",
-      "type": "color",
-      "category": "ui"
-    },
-    "atmosphere-hover": {
-      "value": "#20a6ec",
-      "type": "color",
-      "category": "ui"
-    },
-    "navy": {
-      "value": "#1c2980",
-      "type": "color",
-      "category": "ui"
-    },
-    "teal": {
-      "value": "#37dad3",
+      "value": "#32b5fc",
       "type": "color",
       "category": "ui"
     },
     "blue": {
-      "value": "#297dfd",
+      "value": "#2975e9",
+      "type": "color",
+      "category": "ui"
+    },
+    "teal": {
+      "value": "#3ed6cf",
+      "type": "color",
+      "category": "ui"
+    },
+    "gray": {
+      "value": "#2b3a43",
+      "type": "color",
+      "category": "ui"
+    },
+   "charcoal": {
+      "value": "#3a4f59",
+      "type": "color",
+      "category": "ui"
+    },
+    "neutral": {
+      "value": "#f7f5f4",
       "type": "color",
       "category": "ui"
     },
     "yellow": {
-      "value": "#ffcf32",
-      "type": "color",
-      "category": "ui"
-    },
-    "green": {
-      "value": "#20c22f",
+      "value": "#ecdb5d",
       "type": "color",
       "category": "ui"
     },
     "coral": {
-      "value": "#fb4f39",
+      "value": "#f75040",
       "type": "color",
       "category": "ui"
     },
     "orange": {
-      "value": "#ff940c",
+      "value": "#f7922e",
+      "type": "color",
+      "category": "ui"
+    },
+    "green": {
+      "value": "#2cc039",
+      "type": "color",
+      "category": "ui"
+    },
+    "navy": {
+      "value": "#245eb7",
+      "type": "color",
+      "category": "ui"
+    },
+    "ice-blue": {
+      "value": "#32b5fc",
+      "type": "color",
+      "category": "ui"
+    },
+    "aqua": {
+      "value": "#40beba",
       "type": "color",
       "category": "ui"
     }
