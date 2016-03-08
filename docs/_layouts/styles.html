@@ -4,7 +4,7 @@ layout: base
 {% assign section_groups = site.styles | group_by: 'category' %}
 
 <div class="docs padding-top-navbar">
-  <aside class="docs-sidebar">
+  <aside class="docs-sidebar bg-dark">
     <ul class="docs-page-nav" role="navigation">
     {% for group in section_groups %}
       {% assign group_items = group.items | sort: 'order' %}

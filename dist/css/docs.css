@@ -1,8 +1,7 @@
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #f7f7f9;
-  border: 1px solid #cacdcf;
+  background-color: #f7f5f4;
   color: #3a4f59;
 }
 
@@ -91,8 +90,7 @@ body {
   padding-top: 3.75rem;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f7f7f9;
-  border-right: 1px solid #cacdcf;
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .docs-sidebar + .docs-content {
@@ -176,7 +174,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 20%;
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }

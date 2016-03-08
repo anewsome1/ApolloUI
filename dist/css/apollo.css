@@ -3046,7 +3046,7 @@ mark,
 }
 
 .bg-light {
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
 }
 
 .bg-dark, .off-canvas {
@@ -3231,7 +3231,7 @@ mark,
 }
 
 .btn-secondary {
-  border-color: #2b3a43;
+  border-color: #ced2d4;
   background-color: #fff;
 }
 
@@ -3318,7 +3318,7 @@ mark,
   width: 100%;
   height: 2rem;
   padding: 0.5625rem 0.5rem 0.4375rem;
-  border: 0.0625rem solid #afb4b7;
+  border: 0.0625rem solid #ced2d4;
   font-size: 1rem;
   line-height: normal;
   white-space: nowrap;
@@ -3333,7 +3333,7 @@ mark,
 }
 
 .form-control:disabled, .sayt-input:disabled, .form-control.disabled, .disabled.sayt-input {
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -3447,15 +3447,15 @@ textarea.form-control, textarea.sayt-input {
   font-weight: normal;
   text-transform: uppercase;
   vertical-align: bottom;
-  border-bottom: 2px solid #cacdcf;
+  border-bottom: 2px solid #ced2d4;
 }
 
 .table tbody tr:nth-of-type(odd) {
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #cacdcf;
+  border-top: 2px solid #ced2d4;
 }
 
 .table .table {
@@ -3468,12 +3468,12 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .table-bordered {
-  border: 1px solid #cacdcf;
+  border: 1px solid #ced2d4;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #cacdcf;
+  border: 1px solid #ced2d4;
 }
 
 .table-bordered thead th,
@@ -3487,7 +3487,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .table-hover tbody tr:hover {
-  background-color: #ecf8ff;
+  background-color: #c9ecfe;
   border-left-color: #2975e9;
   cursor: pointer;
 }
@@ -3536,7 +3536,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .dropdown-menu > li + li {
-  border-top: 1px solid #cacdcf;
+  border-top: 1px solid #ced2d4;
 }
 
 .dropdown-menu > li > a {
@@ -3711,7 +3711,7 @@ textarea.form-control, textarea.sayt-input {
 .navbar-dark .navbar-item > a:active,
 .navbar-dark .navbar-item > a:focus,
 .navbar-dark .navbar-item > a:visited {
-  color: #f7f7f9;
+  color: #f7f5f4;
 }
 
 .navbar-dark .navbar-item > .dropdown-toggle:focus {
@@ -3720,7 +3720,7 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar-dark .profile-username {
   font-size: 1rem;
-  color: #f7f7f9;
+  color: #f7f5f4;
 }
 
 .navbar-dark .profile-company {
@@ -3729,12 +3729,12 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .navbar-dark .profile-image {
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   color: #3a4f59;
 }
 
 .navbar-light {
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
 }
 
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:active, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:visited,
@@ -3758,7 +3758,7 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar-light .profile-image {
   background-color: #2975e9;
-  color: #f7f7f9;
+  color: #f7f5f4;
 }
 
 .command-bar {
@@ -3766,7 +3766,7 @@ textarea.form-control, textarea.sayt-input {
   z-index: 1000;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
@@ -3908,7 +3908,7 @@ textarea.form-control, textarea.sayt-input {
 
 .bg-dark .sayt-input, .off-canvas .sayt-input {
   color: #3a4f59;
-  background-color: #cacdcf;
+  background-color: #ced2d4;
 }
 
 .sayt-results {

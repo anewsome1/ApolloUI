@@ -136,7 +136,7 @@ $modal-content-bg:            #fff;
 
 $modal-backdrop-bg:           #000;
 $modal-backdrop-opacity:      .4;
-$modal-header-border-color:   $gray-lightest;
+$modal-header-border-color:   $neutral;
 $modal-footer-border-color:   $modal-header-border-color;
 
 $modal-lg:                    56.25rem;  // ~900px
@@ -223,7 +223,7 @@ $btn-variants: (
   secondary: (
     bg: #fff,
     color: $charcoal,
-    border-color: $gray,
+    border-color: $charcoal-lighter,
     bg-active: $charcoal,
     color-active: #fff,
     bg-disabled: #fff,
@@ -250,12 +250,12 @@ $table-cell-padding:            .75rem;
 $table-sm-cell-padding:         .3rem;
 
 $table-bg:                      transparent;
-$table-bg-accent:               $gray-lightest;
-$table-bg-hover:                lighten($atmosphere, 37%);
+$table-bg-accent:               $neutral;
+$table-bg-hover:                $atmosphere-lighter;
 $table-bg-active:               $table-bg-hover;
 
 $table-border-width:            $border-width;
-$table-border-color:            $gray-lighter;
+$table-border-color:            $charcoal-lighter;
 $table-border-color-hover:      $link-color;
 
 
@@ -317,11 +317,11 @@ $navbar-variants: (
   dark: (
     dark: true,
     bg: $charcoal,
-    color: $gray-lightest,
+    color: $neutral,
     color-subdued: $teal
   ),
   light: (
-    bg: $gray-lightest,
+    bg: $neutral,
     color: $blue,
     color-subdued: transparentize($blue, .5)
   )
@@ -337,7 +337,7 @@ $profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
 /// Command bar
 ///
 
-$command-bar-bg: $gray-lightest;
+$command-bar-bg: $neutral;
 $command-bar-padding-y: .5rem;
 
 
