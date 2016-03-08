@@ -3,6 +3,7 @@
 ///
 
 var gulp          = require( 'gulp' );
+var del           = require( 'del' );
 var rename        = require( 'gulp-rename' );
 var insert        = require( 'gulp-insert' );
 var browserSync   = require( 'browser-sync' );
@@ -155,6 +156,13 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
 /// Theo transformations
 ///
 
+gulp.task( 'clean:theo', function() {
+  return del([
+    'scss/_props/*.scss',
+    'docs/_data/*.json'
+  ]);
+});
+
 gulp.task( 'theo-colors-scss', function() {
   gulp.src( 'theo/_palette.json')
     .pipe( theo.plugins.transform( 'web' ))
@@ -195,6 +203,6 @@ gulp.task( 'theo-icons-json', function() {
 /// Conglomerate tasks
 ///
 
-gulp.task( 'theo', [ 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
+gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'default', [ 'theo', 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
