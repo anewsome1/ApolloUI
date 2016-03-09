@@ -1,4 +1,5 @@
-@import 'color-variables';
+@import '_props/palette';
+@import '_props/palette.map';
 
 
 // Options
@@ -135,7 +136,7 @@ $modal-content-bg:            #fff;
 
 $modal-backdrop-bg:           #000;
 $modal-backdrop-opacity:      .4;
-$modal-header-border-color:   $gray-lightest;
+$modal-header-border-color:   $neutral;
 $modal-footer-border-color:   $modal-header-border-color;
 
 $modal-lg:                    56.25rem;  // ~900px
@@ -222,7 +223,7 @@ $btn-variants: (
   secondary: (
     bg: #fff,
     color: $charcoal,
-    border-color: $gray,
+    border-color: $charcoal-lighter,
     bg-active: $charcoal,
     color-active: #fff,
     bg-disabled: #fff,
@@ -249,12 +250,12 @@ $table-cell-padding:            .75rem;
 $table-sm-cell-padding:         .3rem;
 
 $table-bg:                      transparent;
-$table-bg-accent:               $gray-lightest;
-$table-bg-hover:                lighten($atmosphere, 37%);
+$table-bg-accent:               $neutral;
+$table-bg-hover:                $atmosphere-lighter;
 $table-bg-active:               $table-bg-hover;
 
 $table-border-width:            $border-width;
-$table-border-color:            $gray-lighter;
+$table-border-color:            $charcoal-lighter;
 $table-border-color-hover:      $link-color;
 
 
@@ -316,11 +317,11 @@ $navbar-variants: (
   dark: (
     dark: true,
     bg: $charcoal,
-    color: $gray-lightest,
+    color: $neutral,
     color-subdued: $teal
   ),
   light: (
-    bg: $gray-lightest,
+    bg: $neutral,
     color: $blue,
     color-subdued: transparentize($blue, .5)
   )
@@ -336,7 +337,7 @@ $profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
 /// Command bar
 ///
 
-$command-bar-bg: $gray-lightest;
+$command-bar-bg: $neutral;
 $command-bar-padding-y: .5rem;
 
 
@@ -381,7 +382,7 @@ $slider-position-min: 25%;  // For demo purposes only
 $slider-position-max: 85%;  // For demo purposes only
 
 $slider-height: .1875rem;  // ~3px
-$slider-bg: $gray-lighter;
+$slider-bg: $charcoal-lighter;
 
 // Fill
 $slider-fill-bg: $teal;
@@ -389,14 +390,14 @@ $slider-fill-bg: $teal;
 // Handle
 $slider-handle-size: 2rem;  // ~32px
 $slider-handle-bg: #fff;
-$slider-handle-border: $border-width solid $gray-lighter;
+$slider-handle-border: $border-width solid $charcoal-lighter;
 
 // Active
 $slider-active-handle-bg: $charcoal;
 
 // Disabled
 $slider-disabled-fill-bg: $gray-light;
-$slider-disabled-handle-bg: $gray-lighter;
+$slider-disabled-handle-bg: $charcoal-lighter;
 
 
 ///

@@ -1,8 +1,7 @@
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #f7f7f9;
-  border: 1px solid #eceeef;
+  background-color: #f7f5f4;
   color: #3a4f59;
 }
 
@@ -11,19 +10,19 @@
 }
 
 .highlight .nt {
-  color: #2975e9;
+  color: #245eb7;
 }
 
 .highlight .na {
-  color: #3ed6cf;
-}
-
-.highlight .s {
   color: #32b5fc;
 }
 
+.highlight .s {
+  color: #de4839;
+}
+
 .highlight .c {
-  color: #2b3a43;
+  color: #b9b8b7;
 }
 
 code,
@@ -91,8 +90,7 @@ body {
   padding-top: 3.75rem;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f7f7f9;
-  border-right: 1px solid #eceeef;
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .docs-sidebar + .docs-content {
@@ -149,6 +147,22 @@ body {
   margin-bottom: 32px;
 }
 
+.docs-color-block {
+  position: relative;
+  float: left;
+  width: 16.66667%;
+  height: 10rem;
+}
+
+.docs-color-block .docs-color-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: rgba(29, 39, 44, 0.5);
+}
+
 .show-grid .row {
   margin-bottom: 16px;
 }
@@ -176,7 +190,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 20%;
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
