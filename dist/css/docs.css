@@ -147,6 +147,22 @@ body {
   margin-bottom: 32px;
 }
 
+.docs-color-block {
+  position: relative;
+  float: left;
+  width: 16.66667%;
+  height: 10rem;
+}
+
+.docs-color-block .docs-color-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: rgba(29, 39, 44, 0.5);
+}
+
 .show-grid .row {
   margin-bottom: 16px;
 }

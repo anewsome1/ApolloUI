@@ -85,6 +85,29 @@ body {
   margin-bottom: $spacer * 2;
 }
 
+
+///
+/// Color palette
+///
+
+.docs-color-block {
+  position: relative;
+  float: left;
+  width: percentage( 1 / 6 );
+  // margin-bottom: $spacer;
+  height: 10rem;
+
+  .docs-color-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: ($spacer / 2) $spacer;
+    // font-weight: 600;
+    color: #fff;
+    background-color: rgba($charcoal-darker,.5);
+  }
+}
+
 ///
 /// Visible grid
 ///

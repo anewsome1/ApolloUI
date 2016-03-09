@@ -2,8 +2,13 @@
 title: Color Palette
 category: colors
 order: 0
-description: "Double Rainbow, all the way"
+no_code: true
+description: The full color palette is available as named variables when building Apollo UI from the source SCSS modules.  Below are the names for all colors, which correspond to their variable names (e.g. <code>$blue</code> or <code>$charcoal-dark</code>)
 ---
+<div class="clearfix">
 {% for color in site.data._palette %}
-  <span class="pad-all" style="display:inline-block;width:15%; height:100%;color:#fff;background-color:{{ color[1] }}">{{ color[0] }}</span>
+  <div class="docs-color-block" style="background-color:{{ color[1] }};">
+    <div class="docs-color-label">{{ color[0] }}<br>{{ color[1] }}</div>
+  </div>
 {% endfor %}
+</div>

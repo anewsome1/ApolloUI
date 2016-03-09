@@ -32,7 +32,9 @@ layout: base
         <div class="docs-example-rendered {{ item.classes }}">
           {{ item.content }}
         </div>
+        {% unless item.no_code %}
         <div class="docs-example-code">{% highlight html %}{{ item.content }}{% endhighlight %}</div>
+        {% endunless %}
       {% endfor %}
       </section>
     {% endfor %}
