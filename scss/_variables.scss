@@ -67,7 +67,7 @@ $font-size-h5: $font-size-base;
 $font-size-h6: $font-size-sm;
 
 // Weights
-$font-thin: 100;
+$font-light: 300;
 $font-normal: 400;
 $font-semi-bold: 600;
 
@@ -372,6 +372,13 @@ $breadcrumb-spacing: .25rem; // ~4px;
 $sayt-icon-size: $font-size-lg;
 $sayt-padding-left: $sayt-icon-size + $spacer;
 $sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left;
+
+
+///
+/// Jumbotron (Billboard)
+///
+
+$jumbotron-padding: $grid-gutter-width;
 
 
 ///
