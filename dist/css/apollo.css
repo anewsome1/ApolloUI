@@ -3054,10 +3054,7 @@ mark,
   color: #fff;
 }
 
-.bg-dark a, .off-canvas a,
-.bg-dark a:hover, .off-canvas a:hover,
-.bg-dark a:active, .off-canvas a:active,
-.bg-dark a:visited, .off-canvas a:visited {
+.bg-dark a:not(.btn-primary):not(.btn-secondary), .off-canvas a:not(.btn-primary):not(.btn-secondary), .bg-dark a:not(.btn-primary):not(.btn-secondary):hover, .off-canvas a:not(.btn-primary):not(.btn-secondary):hover, .bg-dark a:not(.btn-primary):not(.btn-secondary):active, .off-canvas a:not(.btn-primary):not(.btn-secondary):active, .bg-dark a:not(.btn-primary):not(.btn-secondary):visited, .off-canvas a:not(.btn-primary):not(.btn-secondary):visited {
   color: #3ed6cf;
 }
 
