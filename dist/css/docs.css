@@ -10,19 +10,19 @@
 }
 
 .highlight .nt {
-  color: #2975e9;
+  color: #245eb7;
 }
 
 .highlight .na {
-  color: #3ed6cf;
-}
-
-.highlight .s {
   color: #32b5fc;
 }
 
+.highlight .s {
+  color: #de4839;
+}
+
 .highlight .c {
-  color: #2b3a43;
+  color: #b9b8b7;
 }
 
 code,

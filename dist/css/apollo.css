@@ -4043,7 +4043,7 @@ textarea.form-control, textarea.sayt-input {
   height: 0.1875rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background-color: #cacdcf;
+  background-color: #ced2d4;
 }
 
 .slider-handle {
@@ -4055,7 +4055,7 @@ textarea.form-control, textarea.sayt-input {
   margin-top: -1rem;
   margin-left: -1rem;
   background-color: #fff;
-  border: 1px solid #cacdcf;
+  border: 1px solid #ced2d4;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
@@ -4069,7 +4069,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .disabled .slider-handle {
-  background-color: #cacdcf;
+  background-color: #ced2d4;
   cursor: not-allowed;
   box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
