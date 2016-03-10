@@ -367,6 +367,31 @@ $breadcrumb-font-size: $font-size-base;
 $breadcrumb-spacing: .25rem; // ~4px;
 
 
+
+///
+/// Jumbotron (Billboard)
+///
+
+$jumbotron-padding: $grid-gutter-width * 2;
+
+///
+/// Carousel
+///
+
+$carousel-text-shadow:                        0 .0625rem .125rem rgba(0,0,0,.6);
+
+$carousel-control-color:                      #fff;
+$carousel-control-width:                      $jumbotron-padding;
+$carousel-control-font-size:                  2rem;
+
+$carousel-indicator-active-bg:                #fff;
+$carousel-indicator-inactive-bg:              rgba(#fff, .5);
+$carousel-indicator-border-color:             #fff;
+$carousel-indicator-size:                     .55rem;
+
+$carousel-caption-color:                      #fff;
+
+
 ///
 /// Search
 ///
@@ -374,14 +399,6 @@ $breadcrumb-spacing: .25rem; // ~4px;
 $sayt-icon-size: $font-size-lg;
 $sayt-padding-left: $sayt-icon-size + $spacer;
 $sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left;
-
-
-///
-/// Jumbotron (Billboard)
-///
-
-$jumbotron-padding: $grid-gutter-width;
-
 
 ///
 /// Slider
