@@ -3571,6 +3571,7 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar.navbar-fixed-top {
   position: fixed;
+  z-index: 1030;
   width: 100%;
 }
 
