@@ -3,7 +3,7 @@
   margin-bottom: $jumbotron-padding;
 
   @include media-breakpoint-up(sm) {
-    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+    padding: ($jumbotron-padding * 3) $jumbotron-padding;
   }
 }
 
