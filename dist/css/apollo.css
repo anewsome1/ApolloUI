@@ -4103,8 +4103,8 @@ textarea.form-control, textarea.sayt-input {
   position: relative;
   width: 10.5rem;
   height: 10.5rem;
-  -webkit-animation: grow 5s cubic-bezier(0, 0, 0.5, 1);
-          animation: grow 5s cubic-bezier(0, 0, 0.5, 1);
+  -webkit-animation: grow 0.5s cubic-bezier(0, 0, 0.5, 1);
+          animation: grow 0.5s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .loading-indicator.loading-complex {
@@ -4142,7 +4142,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .spinner-inner .spinner {
-  stroke-width: 0.5;
+  stroke-width: 0.75;
   -webkit-animation: arc-inner 1.33333s linear infinite;
           animation: arc-inner 1.33333s linear infinite;
   -webkit-animation-delay: 0.26667s;
@@ -4163,7 +4163,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .spinner-outer .spinner {
-  stroke-width: 0.29762;
+  stroke-width: 0.44643;
   -webkit-animation: arc-outer 1.33333s linear infinite;
           animation: arc-outer 1.33333s linear infinite;
 }
@@ -4336,17 +4336,9 @@ textarea.form-control, textarea.sayt-input {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  10% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -4355,17 +4347,9 @@ textarea.form-control, textarea.sayt-input {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-  10% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  90% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
   100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

@@ -410,13 +410,13 @@ $slider-disabled-handle-bg: $charcoal-lighter;
 $loader-arc-timing: linear;
 $loader-spin-timing: linear;
 $loader-spin-duration: (4s / 3);
-$loader-grow-duration: 5s;
+$loader-grow-duration: .5s;
 
 // Spinner sizes
 $loader-circle-inner: 6.25rem;
 $loader-circle-outer: 10.5rem;
 $loader-svg-radius: 32;
-$loader-arc-stroke: .5;
+$loader-arc-stroke: .75;
 $loader-arc-length-min: 2;
 $loader-dasharray-gap: 100;
 $loader-arc-length-max: $loader-dasharray-gap / 2;
