@@ -66,11 +66,11 @@ body {
   padding-top: $spacer;
   padding-bottom: $spacer;
 
-  h2 {
+  > h2 {
     margin-bottom: $spacer;
   }
 
-  h3 {
+  > h3 {
     padding-top: $spacer;
   }
 }
@@ -165,15 +165,3 @@ body {
 .docs-icon-name {
   padding-top: $spacer;
 }
-
-
-
-
-
-
-
-
-
-
-
-

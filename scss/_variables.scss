@@ -66,14 +66,48 @@ $font-size-h4: $font-size-lg;
 $font-size-h5: $font-size-base;
 $font-size-h6: $font-size-sm;
 
+$display1-size:               6rem;
+$display2-size:               5.5rem;
+$display3-size:               4.5rem;
+$display4-size:               3.5rem;
+
 // Weights
 $font-light: 300;
 $font-normal: 400;
 $font-semi-bold: 600;
 
-$headings-font-weight: $font-light;
+$display1-weight:             300;
+$display2-weight:             300;
+$display3-weight:             300;
+$display4-weight:             300;
 
-$line-height: 1.5;
+$line-height:                1.5;
+
+$headings-margin-bottom:     ($spacer / 2);
+$headings-font-family:       inherit;
+$headings-font-weight:       $font-light;
+$headings-line-height:       1.1;
+$headings-color:             inherit;
+
+$lead-font-size:             1.25rem;
+$lead-font-weight:           300;
+
+$text-muted:                  $gray-light;
+
+$abbr-border-color:           $gray-light;
+
+$blockquote-small-color:      $gray-light;
+$blockquote-font-size:        ($font-size-base * 1.25);
+$blockquote-border-color:     $gray-lighter;
+
+$hr-border-color:             rgba(0,0,0,.1);
+$hr-border-width:             $border-width;
+
+$dt-font-weight:              bold;
+
+$nested-kbd-font-weight:      bold;
+
+$list-inline-padding:         5px;
 
 
 ///
@@ -124,8 +158,17 @@ $alert-states: (
   )
 );
 
+///
+/// Cards
+///
 
-// Modals
+$card-inner-padding:       $grid-gutter-width;
+$card-bg:                  #fff;
+
+
+///
+/// Modals
+///
 
 // Padding applied to the modal body
 $modal-inner-padding:         $grid-gutter-width;
@@ -211,6 +254,8 @@ $btn-sm-font-size: $font-size-xs;  // ~12px
 
 $btn-lg-min-width: 8.75rem;  // ~140px
 $btn-lg-padding-y: .9375rem;  // ~15px
+
+$btn-link-padding-x: .5rem;
 
 $btn-variants: (
   primary: (
@@ -456,5 +501,3 @@ $loader-planet-size-outer: 1.75rem;
 // Overall sizes
 $loader-size: $loader-circle-outer;
 $loader-size-complex: ($loader-planet-orbit-outer * 2) + ($loader-planet-size-outer / 2) + $spacer;
-
-
