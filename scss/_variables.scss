@@ -72,10 +72,9 @@ $display3-size:               4.5rem;
 $display4-size:               3.5rem;
 
 // Weights
-$font-thin: 100;
+$font-light: 300;
 $font-normal: 400;
 $font-semi-bold: 600;
-
 
 $display1-weight:             300;
 $display2-weight:             300;
@@ -86,7 +85,7 @@ $line-height:                1.5;
 
 $headings-margin-bottom:     ($spacer / 2);
 $headings-font-family:       inherit;
-$headings-font-weight:       $font-thin;
+$headings-font-weight:       $font-light;
 $headings-line-height:       1.1;
 $headings-color:             inherit;
 
@@ -414,6 +413,31 @@ $breadcrumb-font-size: $font-size-base;
 $breadcrumb-spacing: .25rem; // ~4px;
 
 
+
+///
+/// Jumbotron (Billboard)
+///
+
+$jumbotron-padding: $grid-gutter-width * 2;
+
+///
+/// Carousel
+///
+
+$carousel-text-shadow:                        0 .0625rem .125rem rgba(0,0,0,.6);
+
+$carousel-control-color:                      #fff;
+$carousel-control-width:                      $jumbotron-padding;
+$carousel-control-font-size:                  2rem;
+
+$carousel-indicator-active-bg:                #fff;
+$carousel-indicator-inactive-bg:              rgba(#fff, .5);
+$carousel-indicator-border-color:             #fff;
+$carousel-indicator-size:                     .55rem;
+
+$carousel-caption-color:                      #fff;
+
+
 ///
 /// Search
 ///
@@ -421,7 +445,6 @@ $breadcrumb-spacing: .25rem; // ~4px;
 $sayt-icon-size: $font-size-lg;
 $sayt-padding-left: $sayt-icon-size + $spacer;
 $sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left;
-
 
 ///
 /// Slider

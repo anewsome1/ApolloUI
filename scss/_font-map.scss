@@ -2,10 +2,10 @@ $font-faces: (
   'Proxima Nova': (
     path: '//cdn.ims.io/design/font/0.5/proxima-nova/',
     weights: (
-      thin: (
-        name: 'proximanova-thin',
-        weight: $font-thin,
-        id: 'proxima_novathin',
+      light: (
+        name: 'proximanova-light',
+        weight: $font-light,
+        id: 'proxima_novalight',
         style: normal
       ),
       regular: (

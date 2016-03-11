@@ -1694,9 +1694,9 @@ output {
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.svg#proxima_novathin") format("svg");
-  font-weight: 100;
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.svg#proxima_novalight") format("svg");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -1742,7 +1742,8 @@ output {
 
 .icon, .close, .alert::before, .has-success .form-msg::before,
 .has-warning .form-msg::before,
-.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before, .off-canvas-open::before, .off-canvas-close::before {
+.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before, .off-canvas-open::before, .off-canvas-close::before, .carousel-control .icon-prev,
+.carousel-control .icon-next {
   display: inline-block;
   font-family: "nexxucons";
   font-style: normal;
@@ -2840,7 +2841,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.1;
   color: inherit;
 }
@@ -3005,7 +3006,8 @@ mark,
   content: "\00A0 \2014";
 }
 
-.img-fluid {
+.img-fluid, .carousel-inner > .carousel-item > img,
+.carousel-inner > .carousel-item > a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -3054,10 +3056,7 @@ mark,
   color: #fff;
 }
 
-.bg-dark a, .off-canvas a,
-.bg-dark a:hover, .off-canvas a:hover,
-.bg-dark a:active, .off-canvas a:active,
-.bg-dark a:visited, .off-canvas a:visited {
+.bg-dark a:not(.btn-primary):not(.btn-secondary), .off-canvas a:not(.btn-primary):not(.btn-secondary), .bg-dark a:not(.btn-primary):not(.btn-secondary):hover, .off-canvas a:not(.btn-primary):not(.btn-secondary):hover, .bg-dark a:not(.btn-primary):not(.btn-secondary):active, .off-canvas a:not(.btn-primary):not(.btn-secondary):active, .bg-dark a:not(.btn-primary):not(.btn-secondary):visited, .off-canvas a:not(.btn-primary):not(.btn-secondary):visited {
   color: #3ed6cf;
 }
 
@@ -3877,7 +3876,7 @@ textarea.form-control, textarea.sayt-input {
 .login-brand-name {
   text-align: center;
   font-size: 3.375rem;
-  font-weight: 100;
+  font-weight: 300;
   color: #2975e9;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -4380,6 +4379,208 @@ textarea.form-control, textarea.sayt-input {
   width: 100%;
   height: .75rem;
   background-color: #f75040;
+}
+
+.jumbotron {
+  padding: 3.75rem 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 544px) {
+  .jumbotron {
+    padding: 5.625rem 3.75rem;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner > .carousel-item {
+  position: relative;
+  display: none;
+  transition: left 0.5s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.carousel-inner > .carousel-item > img,
+.carousel-inner > .carousel-item > a > img {
+  line-height: 1;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner > .carousel-item {
+    transition: -webkit-transform 0.5s cubic-bezier(0, 0, 0.5, 1);
+    transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1);
+    transition: transform 0.5s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.5s cubic-bezier(0, 0, 0.5, 1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  .carousel-inner > .carousel-item.next, .carousel-inner > .carousel-item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  .carousel-inner > .carousel-item.prev, .carousel-inner > .carousel-item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  .carousel-inner > .carousel-item.next.left, .carousel-inner > .carousel-item.prev.right, .carousel-inner > .carousel-item.active {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.75rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  line-height: 1;
+}
+
+.carousel-control .icon-prev {
+  left: 50%;
+  margin-left: -10px;
+}
+
+.carousel-control .icon-prev::before {
+  content: "p";
+}
+
+.carousel-control .icon-next {
+  right: 50%;
+  margin-right: -10px;
+}
+
+.carousel-control .icon-next::before {
+  content: "r";
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  padding-top: 0.1375rem;
+  padding-bottom: 0.1375rem;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  list-style: none;
+  background-color: rgba(29, 39, 44, 0.2);
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin: 0 0.18333rem;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.55rem;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+@media (min-width: 544px) {
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    font-size: 2rem;
+  }
+  .carousel-control .icon-prev {
+    margin-left: -1rem;
+  }
+  .carousel-control .icon-next {
+    margin-right: -1rem;
+  }
+  .carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 30px;
+  }
 }
 
 @-webkit-keyframes pulse {

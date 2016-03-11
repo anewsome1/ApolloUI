@@ -20,11 +20,13 @@
     color: $text-color;
   }
   @if($link-color) {
-    a,
-    a:hover,
-    a:active,
-    a:visited {
-      color: $link-color;
+    a:not(.btn-primary):not(.btn-secondary) {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $link-color;
+      }
     }
   }
 }
