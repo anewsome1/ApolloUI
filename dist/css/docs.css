@@ -129,11 +129,11 @@ body {
   padding-bottom: 16px;
 }
 
-.docs-section h2 {
+.docs-section > h2 {
   margin-bottom: 16px;
 }
 
-.docs-section h3 {
+.docs-section > h3 {
   padding-top: 16px;
 }
 
