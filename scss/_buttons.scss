@@ -128,8 +128,10 @@
 ///
 
 .btn-link {
-  color: $link-color;
   min-width: unset;
+  padding-right: $btn-link-padding-x;
+  padding-left: $btn-link-padding-x;
+  color: $link-color;
 
   &,
   &:hover,

@@ -279,7 +279,7 @@ p {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #818a91;
+  border-bottom: 1px dotted #949aa0;
 }
 
 address {
@@ -368,7 +368,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #818a91;
+  color: #949aa0;
   text-align: left;
   caption-side: bottom;
 }
@@ -2840,7 +2840,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 100;
   line-height: 1.1;
   color: inherit;
 }
@@ -2975,14 +2975,14 @@ mark,
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
-  border-left: 0.25rem solid #eceeef;
+  border-left: 0.25rem solid #cacdcf;
 }
 
 .blockquote-footer {
   display: block;
   font-size: 80%;
   line-height: 1.5;
-  color: #818a91;
+  color: #949aa0;
 }
 
 .blockquote-footer::before {
@@ -2993,7 +2993,7 @@ mark,
   padding-right: 1rem;
   padding-left: 0;
   text-align: right;
-  border-right: 0.25rem solid #eceeef;
+  border-right: 0.25rem solid #cacdcf;
   border-left: 0;
 }
 
@@ -3256,8 +3256,10 @@ mark,
 }
 
 .btn-link {
-  color: #2975e9;
   min-width: unset;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #2975e9;
 }
 
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
@@ -4305,6 +4307,69 @@ textarea.form-control, textarea.sayt-input {
   max-width: 24rem;
 }
 
+.card {
+  background-color: #fff;
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-block {
+  padding: 1.875rem;
+}
+
+.card-block + .card-block {
+  padding-top: 0;
+}
+
+.card-title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.card-caption {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #949aa0;
+}
+
+.card-success {
+  position: relative;
+}
+
+.card-success::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #2cc039;
+}
+
+.card-warning {
+  position: relative;
+}
+
+.card-warning::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #ecdb5d;
+}
+
+.card-danger {
+  position: relative;
+}
+
+.card-danger::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: .75rem;
+  background-color: #f75040;
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
@@ -4818,7 +4883,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .text-muted {
-  color: #818a91;
+  color: #949aa0;
 }
 
 .text-primary {
