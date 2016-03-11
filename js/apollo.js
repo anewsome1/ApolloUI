@@ -8,6 +8,7 @@
 
 require( '../node_modules/bootstrap/dist/js/umd/dropdown' );
 require( '../node_modules/bootstrap/dist/js/umd/modal' );
+require( '../node_modules/bootstrap/dist/js/umd/carousel' );
 
 
 ///
