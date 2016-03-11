@@ -3951,7 +3951,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .off-canvas {
-  background-color: rgba(38, 52, 58, 0.9);
+  background-color: rgba(43, 59, 67, 0.9);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -3960,8 +3960,11 @@ textarea.form-control, textarea.sayt-input {
   height: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.off-canvas.open {
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .off-canvas.off-canvas-left {
@@ -3971,6 +3974,15 @@ textarea.form-control, textarea.sayt-input {
 .off-canvas.off-canvas-left.open {
   -webkit-transform: translate3d(18rem, 0, 0);
           transform: translate3d(18rem, 0, 0);
+}
+
+.off-canvas.off-canvas-right {
+  right: -18rem;
+}
+
+.off-canvas.off-canvas-right.open {
+  -webkit-transform: translate3d(-18rem, 0, 0);
+          transform: translate3d(-18rem, 0, 0);
 }
 
 .off-canvas-open, .off-canvas-close {

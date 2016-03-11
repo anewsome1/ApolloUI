@@ -2,7 +2,7 @@
   // @TODO: Replace with opaque bg once
   // that color is added to the palette
   @extend .bg-dark;
-  background-color: transparentize(darken($charcoal, 10%),.1);
+  background-color: rgba($charcoal-dark,.9);
 
   position: fixed;
   top: 0;
@@ -12,8 +12,11 @@
   height: auto;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
-  box-shadow: $shadow-hover;
   transition: all $transition-fast;
+
+  &.open {
+      box-shadow: $shadow-hover;    
+  }
 
   &.off-canvas-left {
     left: -$off-canvas-width;
@@ -21,6 +24,15 @@
     &.open {
       // Use translate3d to engage gpu acceleration
       transform: translate3d($off-canvas-width,0,0);
+    }
+  }
+
+  &.off-canvas-right {
+    right: -$off-canvas-width;
+
+    &.open {
+      // Use translate3d to engage gpu acceleration
+      transform: translate3d(-$off-canvas-width,0,0);
     }
   }
 
