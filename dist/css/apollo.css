@@ -1740,9 +1740,7 @@ output {
   font-style: normal;
 }
 
-.icon, .close, .alert::before, .has-success .form-msg::before,
-.has-warning .form-msg::before,
-.has-danger .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before, .off-canvas-open::before, .off-canvas-close::before, .carousel-control .icon-prev,
+.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .sayt::before, .off-canvas-open::before, .off-canvas-close::before, .carousel-control .icon-prev,
 .carousel-control .icon-next {
   display: inline-block;
   font-family: "nexxucons";
@@ -3060,9 +3058,7 @@ mark,
   color: #3ed6cf;
 }
 
-.alert, .has-success .form-msg,
-.has-warning .form-msg,
-.has-danger .form-msg {
+.alert, .form-msg {
   display: block;
   position: relative;
   z-index: 0;
@@ -3071,12 +3067,8 @@ mark,
   font-size: 1rem;
 }
 
-.alert::before, .has-success .form-msg::before,
-.has-warning .form-msg::before,
-.has-danger .form-msg::before,
-.alert .close, .has-success .form-msg .close,
-.has-warning .form-msg .close,
-.has-danger .form-msg .close {
+.alert::before, .form-msg::before,
+.alert .close, .form-msg .close {
   position: absolute;
   top: 50%;
   margin-top: -0.75rem;
@@ -3085,53 +3077,37 @@ mark,
   color: #fff;
 }
 
-.alert::before, .has-success .form-msg::before,
-.has-warning .form-msg::before,
-.has-danger .form-msg::before {
+.alert::before, .form-msg::before {
   left: 0.9375rem;
 }
 
-.alert .close, .has-success .form-msg .close,
-.has-warning .form-msg .close,
-.has-danger .form-msg .close {
+.alert .close, .form-msg .close {
   right: 0.9375rem;
 }
 
-.alert.alert-success, .has-success .form-msg,
-.has-warning .alert-success.form-msg,
-.has-danger .alert-success.form-msg {
-  color: #fff;
+.alert.alert-success, .alert-success.form-msg {
   background-color: #2cc039;
+  color: #fff;
 }
 
-.alert.alert-success::before, .has-success .form-msg::before,
-.has-warning .alert-success.form-msg::before,
-.has-danger .alert-success.form-msg::before {
+.alert.alert-success::before, .alert-success.form-msg::before {
   content: "m";
 }
 
-.alert.alert-warning, .has-success .alert-warning.form-msg,
-.has-warning .form-msg,
-.has-danger .alert-warning.form-msg {
+.alert.alert-warning, .alert-warning.form-msg {
   background-color: #ecdb5d;
 }
 
-.alert.alert-warning::before, .has-success .alert-warning.form-msg::before,
-.has-warning .form-msg::before,
-.has-danger .alert-warning.form-msg::before {
+.alert.alert-warning::before, .alert-warning.form-msg::before {
   content: "w";
 }
 
-.alert.alert-danger, .has-success .alert-danger.form-msg,
-.has-warning .alert-danger.form-msg,
-.has-danger .form-msg {
-  color: #fff;
+.alert.alert-danger, .alert-danger.form-msg {
   background-color: #f75040;
+  color: #fff;
 }
 
-.alert.alert-danger::before, .has-success .alert-danger.form-msg::before,
-.has-warning .alert-danger.form-msg::before,
-.has-danger .form-msg::before {
+.alert.alert-danger::before, .alert-danger.form-msg::before {
   content: "~";
 }
 
@@ -3314,6 +3290,8 @@ mark,
 }
 
 .form-control, .sayt-input {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 2rem;
@@ -3352,33 +3330,47 @@ textarea.form-control, textarea.sayt-input {
   overflow: inherit;
 }
 
-.has-success .form-control, .has-success .sayt-input,
-.has-warning .form-control,
-.has-warning .sayt-input,
-.has-danger .form-control,
-.has-danger .sayt-input {
-  position: relative;
-  z-index: 1;
-  border-color: #f75040;
+.form-msg {
+  padding-top: 0.33333rem;
+  padding-bottom: 0.33333rem;
 }
 
-.has-success .form-msg,
-.has-warning .form-msg,
-.has-danger .form-msg {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.has-success .form-control, .has-success .sayt-input {
+.has-success .form-control, .has-success .sayt-input, .has-success.form-control, .has-success.sayt-input {
   border-color: #2cc039;
 }
 
-.has-warning .form-control, .has-warning .sayt-input {
+.has-success .form-msg, .has-success.form-msg {
+  background-color: #2cc039;
+  color: #fff;
+}
+
+.has-success .form-msg::before, .has-success.form-msg::before {
+  content: "m";
+}
+
+.has-warning .form-control, .has-warning .sayt-input, .has-warning.form-control, .has-warning.sayt-input {
   border-color: #ecdb5d;
 }
 
-.has-danger .form-control, .has-danger .sayt-input {
+.has-warning .form-msg, .has-warning.form-msg {
+  background-color: #ecdb5d;
+}
+
+.has-warning .form-msg::before, .has-warning.form-msg::before {
+  content: "w";
+}
+
+.has-danger .form-control, .has-danger .sayt-input, .has-danger.form-control, .has-danger.sayt-input {
   border-color: #f75040;
+}
+
+.has-danger .form-msg, .has-danger.form-msg {
+  background-color: #f75040;
+  color: #fff;
+}
+
+.has-danger .form-msg::before, .has-danger.form-msg::before {
+  content: "~";
 }
 
 .toggle {
@@ -4031,11 +4023,7 @@ textarea.form-control, textarea.sayt-input {
   background-color: rgba(28, 38, 43, 0.9);
 }
 
-.off-canvas-menu a .icon, .off-canvas-menu a .close, .off-canvas-menu a .alert::before, .off-canvas-menu a .has-success .form-msg::before, .has-success .off-canvas-menu a .form-msg::before, .off-canvas-menu a
-.has-warning .form-msg::before,
-.has-warning .off-canvas-menu a .form-msg::before, .off-canvas-menu a
-.has-danger .form-msg::before,
-.has-danger .off-canvas-menu a .form-msg::before {
+.off-canvas-menu a .icon, .off-canvas-menu a .close, .off-canvas-menu a .alert::before, .off-canvas-menu a .form-msg::before {
   margin-right: 0.5rem;
 }
 

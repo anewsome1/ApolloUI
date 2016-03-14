@@ -17,6 +17,8 @@
 }
 
 .form-control {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: $input-height;
@@ -69,31 +71,28 @@ textarea.form-control {
   overflow: inherit;
 }
 
-.has-success,
-.has-warning,
-.has-danger {
-  .form-control {
-    position: relative;
-    z-index: 1;
-    border-color: $brand-danger;
-  }
-  .form-msg {
-    @extend .alert;
-    // @TODO: Replace with `.alert-sm` once that's ready
-    padding-top: $input-padding-y;
-    padding-bottom: $input-padding-y;
-  }
+.form-msg {
+  @extend .alert;
+  // @TODO: Replace with `.alert-sm` once that's ready
+  padding-top: $input-padding-y * 2 / 3;
+  padding-bottom: $input-padding-y * 2 / 3;
 }
 
-@each $state, $props in $alert-states {
-  $state-bg: map-get($props, bg);
+@each $state, $state-props in $alert-states {
+  $state-color: map-get($state-props, color);
+  $state-bg: map-get($state-props, bg);
+  $state-link-color: map-get($state-props, link);
+  $state-icon: map-get($state-props, icon);
 
   .has-#{ $state } {
-    .form-control {
+    & .form-control,
+    &.form-control {
       border-color: $state-bg;
     }
-    .form-msg {
-      @extend .alert-#{ $state };
+
+    & .form-msg,
+    &.form-msg {
+      @include alert-bg($bg-color: $state-bg, $text-color: $state-color, $icon: $state-icon);
     }
   }
 }

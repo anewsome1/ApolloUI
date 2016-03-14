@@ -839,52 +839,60 @@
         
       
         <h3 id="forms-validation-states">Validation states</h3>
-        <p>Error messages are displayed to the user, like such as.</p>
+        <p>Contextual error messages are displayed to the user below the input field.</p><p>Note that there are two markup options available.  The first is for when you can apply the validation class name to the parent <code>.form-group</code>.  The second is for when you need to apply the validation class name directly to the <code>.form-control</code> and <code>.form-msg</code> elements.</p>
         <div class="docs-example-rendered ">
           <form>
-  <fieldset>
-    <!-- ... -->
-    <div class="form-group has-success">
-      <label class="control-label" for="email">Email Address</label>
-      <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-      <p class="form-msg">Looks good!</p>
-    </div>
-    <div class="form-group has-warning">
-      <label class="control-label" for="email">Password</label>
-      <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-      <p class="form-msg">Please enter a valid email address</p>
-    </div>
-    <div class="form-group has-danger">
-      <label class="control-label" for="email">Email Address</label>
-      <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-      <p class="form-msg">Please enter a valid email address</p>
-    </div>
-    <!-- ... -->
-  </fieldset>
+  <!-- Class applied to `.form-group` -->
+  <div class="form-group has-success">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Looks good!</p>
+  </div>
+  <div class="form-group has-warning">
+    <label class="control-label" for="email">Password</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Please enter a valid email address</p>
+  </div>
+  <div class="form-group has-danger">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Please enter a valid email address</p>
+  </div>
+  <hr>
+  <!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+  <div class="form-group">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control has-danger" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg has-danger">Please enter a valid email address</p>
+  </div>
 </form>
 
         </div>
         
         <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;fieldset&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-success"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Looks good!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-danger"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!-- ... --&gt;</span>
-  <span class="nt">&lt;/fieldset&gt;</span>
+  <span class="c">&lt;!-- Class applied to `.form-group` --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-success"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Looks good!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-danger"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;hr&gt;</span>
+  <span class="c">&lt;!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control has-danger"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"john.doe@example.com"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg has-danger"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
         
       
