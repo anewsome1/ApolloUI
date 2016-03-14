@@ -19,7 +19,10 @@ $enable-flex:               true;
 /// Spacing
 ///
 
-$spacer: 1rem;
+// $spacer:                     1rem;
+// $spacer-x:                   $spacer;
+// $spacer-y:                   $spacer;
+$border-width:               .0625rem;
 
 ///
 /// Colors
@@ -190,11 +193,6 @@ $modal-sm:                    18.75rem; // ~300px
 
 
 
-///
-/// @TODO: Refactor variable names where available in Bootstrap
-/// (e.g. `$input-padding-x` instead of `$form-padding-x`)
-///
-
 
 
 
@@ -204,23 +202,76 @@ $modal-sm:                    18.75rem; // ~300px
 $component-height: 2rem;
 $component-height-lg: 3rem;
 
+
+
+
+///
+/// @TODO: Refactor variable names where available in Bootstrap
+/// (e.g. `$input-padding-x` instead of `$form-padding-x`)
+///
+
+// $form-height: 2rem;               // ~32px (height set manually)
+// $form-line-height: normal;
+// $form-font-size: $font-size-base; // ~16px
+// $form-padding-y: calc-padding-y($form-height, $form-font-size);
+// $form-padding-top: .5625rem;      // ~9px
+// $form-padding-bottom: .4375rem;   // ~7px
+// $form-padding-x: .5rem;  // ~8px
+// $form-border-width: .0625rem;     // ~1px
+// $form-margin-bottom: $spacer;
+
+
+
 ///
 /// Forms
 ///
 
-$form-height: 2rem;               // ~32px (height set manually)
-$form-line-height: normal;
-$form-font-size: $font-size-base; // ~16px
-$form-padding-y: calc-padding-y($form-height, $form-font-size);
-$form-padding-top: .5625rem;      // ~9px
-$form-padding-bottom: .4375rem;   // ~7px
-$form-padding-x: .5rem;  // ~8px
-$form-border-width: .0625rem;     // ~1px
-$form-margin-bottom: $spacer;
+$input-padding-x:                .5rem;
+$input-padding-y:                calc-padding-y($component-height, $font-size-base);
+$input-line-height:              1;
+
+$input-bg:                       #fff;
+$input-bg-disabled:              $gray-lighter;
+
+$input-color:                    $gray;
+$input-color-disabled:           $gray-light;
+$input-border-color:             #ccc;
+$input-btn-border-width:         $border-width; // For form controls and buttons
+
+$input-border-radius:            $border-radius;
+$input-border-radius-lg:         $border-radius-lg;
+$input-border-radius-sm:         $border-radius-sm;
+
+$input-border-focus:             transparent;
+$input-box-shadow-focus:         $shadow-active;
+
+$input-color-placeholder:        #999;
+
+// $input-padding-x-sm:             $input-padding-x;
+// $input-padding-y-sm:             .275rem;
+
+$input-padding-x-lg:             $input-padding-x;
+$input-padding-y-lg:             calc-padding-y($component-height-lg, $font-size-base);
+
+$input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
+$input-height-lg:                (($font-size-base * $input-line-height) + ($input-padding-y-lg * 2));
+// $input-height-sm:                (($font-size-sm * $input-line-height) + ($input-padding-y-sm * 2));
+
+$form-group-margin-bottom:       $spacer-y;
+
+$input-group-addon-bg:           $gray-lighter;
+$input-group-addon-border-color: $input-border-color;
+
+$cursor-disabled:                not-allowed;
+
+
+
+
+
+
+
 
 // Large size
-$input-padding-x-lg: $form-padding-x;
-$input-padding-y-lg: calc-padding-y($component-height-lg, $form-font-size);
 
 // Checkbox
 $checkbox-size: 1.2rem;
@@ -228,25 +279,23 @@ $checkbox-border: 1px solid $gray;
 $checkbox-color: $blue;
 
 // Error message
-$form-msg-padding-y: $form-padding-y * 1.2;
-$form-msg-padding-x: $form-padding-x;
-$form-msg-icon-size: $font-size-lg;
-$form-msg-font-size: $font-size-base;
-$form-msg-line-height: $form-msg-font-size;
-$form-msg-shadow-height: .625rem;  // ~10px
+$input-msg-padding-y: $input-padding-y * 1.2;
+$input-msg-padding-x: $input-padding-x;
+$input-msg-icon-size: $font-size-lg;
+$input-msg-font-size: $font-size-base;
+$input-msg-line-height: $input-msg-font-size;
+$input-msg-shadow-height: .625rem;  // ~10px
 
 ///
 /// Buttons
 ///
 
-$btn-border-width: $form-border-width;
+// $btn-border-width: $border-width;
 $btn-min-width: 5.75rem;  // ~92px
-$btn-padding-top: $form-padding-top - $btn-border-width;
 $btn-padding-x: 1.125rem;  // ~18px
-$btn-padding-bottom: $form-padding-bottom - $btn-border-width;
-$btn-font-size: $form-font-size;
+$btn-padding-y: $input-padding-y - $border-width;
 $btn-line-height: 1;
-$btn-font-weight: normal;
+// $btn-font-weight: normal;
 
 $btn-sm-padding-y: .375rem;  // ~6px;
 $btn-sm-padding-x: .8125rem;  // ~13px
@@ -311,7 +360,7 @@ $table-border-color-hover:      $link-color;
 /// Dropdowns
 ///
 
-$dropdown-toggle-padding: $btn-padding-top $btn-padding-x $btn-padding-bottom;
+$dropdown-toggle-padding: $btn-padding-y $btn-padding-x;
 $dropdown-item-padding: ($spacer / 3) $btn-padding-x;
 $dropdown-menu-bg: #fff;
 $dropdown-menu-color: $body-color;
@@ -335,22 +384,20 @@ $navbar-height: 3.75rem; // ~60px
 $navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
 $navbar-brand-font-size: $font-size-h4;
 $navbar-link-font-size: $font-size-base;
-$navbar-link-padding-top: $btn-padding-top;
-$navbar-link-padding-bottom: $btn-padding-bottom;
+$navbar-link-padding-y: $btn-padding-y;
 $navbar-link-padding-x: $btn-padding-x;
-$navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
-$navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
+$navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
 $off-canvas-toggle-size: $navbar-brand-font-size;
-$off-canvas-toggle-padding-top: $navbar-link-padding-top;
-$off-canvas-toggle-padding-bottom: $navbar-link-padding-bottom;
+$off-canvas-toggle-padding-y: $navbar-link-padding-y;
 $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
 
 
 // Jumbo
 $navbar-jumbo-height: 5.5rem; // ~88px
-$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-top;
-$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-top;
+$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
 $off-canvas-jumbo-toggle-margin-y: $navbar-jumbo-brand-margin-top;
 

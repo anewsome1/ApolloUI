@@ -1,13 +1,13 @@
 .form-group {
   @include clearfix();
-  margin-bottom: $form-margin-bottom;
+  margin-bottom: $form-group-margin-bottom;
 }
 
 
 .control-label {
   display: block;
   &.disabled {
-    color: $gray;
+    color: $input-color-disabled;
   }
 
   &.required::after {
@@ -19,11 +19,10 @@
 .form-control {
   display: block;
   width: 100%;
-  height: $component-height;
-  padding: $form-padding-top $form-padding-x $form-padding-bottom;
-  border: $form-border-width solid $charcoal-lighter;
-  font-size: $form-font-size;
-  line-height: $form-line-height;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  border: $border-width solid $charcoal-lighter;
+  line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all $transition-fast;
@@ -35,20 +34,20 @@
   // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus {
-    border-color: transparent;
+    border-color: $input-border-focus;
     outline: none;
-    box-shadow: $shadow-hover;
+    box-shadow: $input-box-shadow-focus;
   }
 
   &:disabled,
   &.disabled {
-    background-color: $neutral; // @TODO: replace with light gray from palette
+    background-color: $input-bg-disabled; // @TODO: replace with light gray from palette
     box-shadow: none;
     cursor: not-allowed;
   }
 
   &.input-lg {
-    height: $component-height-lg;
+    height: $input-height-lg;
     padding: $input-padding-y-lg $input-padding-x-lg;
   }
 }
@@ -81,8 +80,8 @@ textarea.form-control {
   .form-msg {
     @extend .alert;
     // @TODO: Replace with `.alert-sm` once that's ready
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: $input-padding-y;
+    padding-bottom: $input-padding-y;
   }
 }
 

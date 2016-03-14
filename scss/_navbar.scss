@@ -42,8 +42,8 @@
   display: block;
   float: left;
   width: $navbar-brand-width;
-  padding-top: $navbar-link-padding-top;
-  padding-bottom: $navbar-link-padding-bottom;
+  padding-top: $navbar-link-padding-y;
+  padding-bottom: $navbar-link-padding-y;
   margin-top: $navbar-brand-margin-top;
   font-size: $navbar-brand-font-size;
   text-align: center;
@@ -71,7 +71,7 @@
     font-size: $navbar-link-font-size;
     line-height: 1;
     margin-top: $navbar-link-margin-top;
-    padding: $navbar-link-padding-top $navbar-link-padding-x $navbar-link-padding-bottom;
+    padding: $navbar-link-padding-y $navbar-link-padding-x;
   }
 
   &.active > a {

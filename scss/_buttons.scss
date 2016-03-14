@@ -8,10 +8,8 @@
   z-index: 1;
   display: inline-block;
   min-width: $btn-min-width;
-  padding: $btn-padding-top $btn-padding-x $btn-padding-bottom;
+  padding: $btn-padding-y $btn-padding-x;
   border: $border-width solid transparent;
-  font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   text-align: center;
   white-space: nowrap;

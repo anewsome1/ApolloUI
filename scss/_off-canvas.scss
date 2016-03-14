@@ -15,7 +15,7 @@
   transition: all $transition-fast;
 
   &.open {
-      box-shadow: $shadow-hover;    
+      box-shadow: $shadow-hover;
   }
 
   &.off-canvas-left {
@@ -42,8 +42,8 @@
 
   &-open,
   &-close {
-    padding-top: $off-canvas-toggle-padding-top;
-    padding-bottom: $off-canvas-toggle-padding-bottom;
+    padding-top: $off-canvas-toggle-padding-y;
+    padding-bottom: $off-canvas-toggle-padding-y;
     margin-top: $off-canvas-toggle-margin-y;
     margin-bottom: $off-canvas-toggle-margin-y;
     font-size: $off-canvas-toggle-size;
@@ -90,7 +90,7 @@
       display: block;
       margin-left: -$grid-gutter-width / 2;
       margin-right: -$grid-gutter-width / 2;
-      padding: $btn-padding-top ($grid-gutter-width / 2) $btn-padding-bottom;
+      padding: $btn-padding-y ($grid-gutter-width / 2);
 
       &:hover {
         color: #fff;
