@@ -1,13 +1,13 @@
 .form-group {
   @include clearfix();
-  margin-bottom: $form-margin-bottom;
+  margin-bottom: $form-group-margin-bottom;
 }
 
 
 .control-label {
   display: block;
   &.disabled {
-    color: $gray;
+    color: $input-color-disabled;
   }
 
   &.required::after {
@@ -17,13 +17,14 @@
 }
 
 .form-control {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
-  height: $component-height;
-  padding: $form-padding-top $form-padding-x $form-padding-bottom;
-  border: $form-border-width solid $charcoal-lighter;
-  font-size: $form-font-size;
-  line-height: $form-line-height;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  border: $border-width solid $charcoal-lighter;
+  line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: all $transition-fast;
@@ -35,20 +36,20 @@
   // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus {
-    border-color: transparent;
+    border-color: $input-border-focus;
     outline: none;
-    box-shadow: $shadow-hover;
+    box-shadow: $input-box-shadow-focus;
   }
 
   &:disabled,
   &.disabled {
-    background-color: $neutral; // @TODO: replace with light gray from palette
+    background-color: $input-bg-disabled; // @TODO: replace with light gray from palette
     box-shadow: none;
     cursor: not-allowed;
   }
 
   &.input-lg {
-    height: $component-height-lg;
+    height: $input-height-lg;
     padding: $input-padding-y-lg $input-padding-x-lg;
   }
 }
@@ -70,31 +71,28 @@ textarea.form-control {
   overflow: inherit;
 }
 
-.has-success,
-.has-warning,
-.has-danger {
-  .form-control {
-    position: relative;
-    z-index: 1;
-    border-color: $brand-danger;
-  }
-  .form-msg {
-    @extend .alert;
-    // @TODO: Replace with `.alert-sm` once that's ready
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-  }
+.form-msg {
+  @extend .alert;
+  // @TODO: Replace with `.alert-sm` once that's ready
+  padding-top: $input-padding-y * 2 / 3;
+  padding-bottom: $input-padding-y * 2 / 3;
 }
 
-@each $state, $props in $alert-states {
-  $state-bg: map-get($props, bg);
+@each $state, $state-props in $alert-states {
+  $state-color: map-get($state-props, color);
+  $state-bg: map-get($state-props, bg);
+  $state-link-color: map-get($state-props, link);
+  $state-icon: map-get($state-props, icon);
 
   .has-#{ $state } {
-    .form-control {
+    & .form-control,
+    &.form-control {
       border-color: $state-bg;
     }
-    .form-msg {
-      @extend .alert-#{ $state };
+
+    & .form-msg,
+    &.form-msg {
+      @include alert-bg($bg-color: $state-bg, $text-color: $state-color, $icon: $state-icon);
     }
   }
 }

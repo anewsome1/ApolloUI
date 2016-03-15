@@ -90,7 +90,6 @@ body {
   padding-top: 3.75rem;
   overflow-x: hidden;
   overflow-y: auto;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 .docs-sidebar + .docs-content {

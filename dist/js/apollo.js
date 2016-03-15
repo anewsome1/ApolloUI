@@ -55,13 +55,14 @@
 	__webpack_require__( 1 );
 	__webpack_require__( 3 );
 	__webpack_require__( 4 );
+	__webpack_require__( 5 );
 
 
 	///
 	/// Custom scripts
 	///
 
-	var offCanvas = __webpack_require__( 5 );
+	var offCanvas = __webpack_require__( 6 );
 
 	$( document ).ready( function() {
 	  offCanvas.init();
@@ -69,6 +70,401 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module, __webpack_require__(2)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+	    factory(exports, module, require('./util'));
+	  } else {
+	    var mod = {
+	      exports: {}
+	    };
+	    factory(mod.exports, mod, global.Util);
+	    global.alert = mod.exports;
+	  }
+	})(this, function (exports, module, _util) {
+	  'use strict';
+
+	  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	  var _Util = _interopRequireDefault(_util);
+
+	  /**
+	   * --------------------------------------------------------------------------
+	   * Bootstrap (v4.0.0-alpha.2): alert.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * --------------------------------------------------------------------------
+	   */
+
+	  var Alert = (function ($) {
+
+	    /**
+	     * ------------------------------------------------------------------------
+	     * Constants
+	     * ------------------------------------------------------------------------
+	     */
+
+	    var NAME = 'alert';
+	    var VERSION = '4.0.0-alpha';
+	    var DATA_KEY = 'bs.alert';
+	    var EVENT_KEY = '.' + DATA_KEY;
+	    var DATA_API_KEY = '.data-api';
+	    var JQUERY_NO_CONFLICT = $.fn[NAME];
+	    var TRANSITION_DURATION = 150;
+
+	    var Selector = {
+	      DISMISS: '[data-dismiss="alert"]'
+	    };
+
+	    var Event = {
+	      CLOSE: 'close' + EVENT_KEY,
+	      CLOSED: 'closed' + EVENT_KEY,
+	      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+	    };
+
+	    var ClassName = {
+	      ALERT: 'alert',
+	      FADE: 'fade',
+	      IN: 'in'
+	    };
+
+	    /**
+	     * ------------------------------------------------------------------------
+	     * Class Definition
+	     * ------------------------------------------------------------------------
+	     */
+
+	    var Alert = (function () {
+	      function Alert(element) {
+	        _classCallCheck(this, Alert);
+
+	        this._element = element;
+	      }
+
+	      /**
+	       * ------------------------------------------------------------------------
+	       * Data Api implementation
+	       * ------------------------------------------------------------------------
+	       */
+
+	      // getters
+
+	      _createClass(Alert, [{
+	        key: 'close',
+
+	        // public
+
+	        value: function close(element) {
+	          element = element || this._element;
+
+	          var rootElement = this._getRootElement(element);
+	          var customEvent = this._triggerCloseEvent(rootElement);
+
+	          if (customEvent.isDefaultPrevented()) {
+	            return;
+	          }
+
+	          this._removeElement(rootElement);
+	        }
+	      }, {
+	        key: 'dispose',
+	        value: function dispose() {
+	          $.removeData(this._element, DATA_KEY);
+	          this._element = null;
+	        }
+
+	        // private
+
+	      }, {
+	        key: '_getRootElement',
+	        value: function _getRootElement(element) {
+	          var selector = _Util['default'].getSelectorFromElement(element);
+	          var parent = false;
+
+	          if (selector) {
+	            parent = $(selector)[0];
+	          }
+
+	          if (!parent) {
+	            parent = $(element).closest('.' + ClassName.ALERT)[0];
+	          }
+
+	          return parent;
+	        }
+	      }, {
+	        key: '_triggerCloseEvent',
+	        value: function _triggerCloseEvent(element) {
+	          var closeEvent = $.Event(Event.CLOSE);
+
+	          $(element).trigger(closeEvent);
+	          return closeEvent;
+	        }
+	      }, {
+	        key: '_removeElement',
+	        value: function _removeElement(element) {
+	          $(element).removeClass(ClassName.IN);
+
+	          if (!_Util['default'].supportsTransitionEnd() || !$(element).hasClass(ClassName.FADE)) {
+	            this._destroyElement(element);
+	            return;
+	          }
+
+	          $(element).one(_Util['default'].TRANSITION_END, $.proxy(this._destroyElement, this, element)).emulateTransitionEnd(TRANSITION_DURATION);
+	        }
+	      }, {
+	        key: '_destroyElement',
+	        value: function _destroyElement(element) {
+	          $(element).detach().trigger(Event.CLOSED).remove();
+	        }
+
+	        // static
+
+	      }], [{
+	        key: '_jQueryInterface',
+	        value: function _jQueryInterface(config) {
+	          return this.each(function () {
+	            var $element = $(this);
+	            var data = $element.data(DATA_KEY);
+
+	            if (!data) {
+	              data = new Alert(this);
+	              $element.data(DATA_KEY, data);
+	            }
+
+	            if (config === 'close') {
+	              data[config](this);
+	            }
+	          });
+	        }
+	      }, {
+	        key: '_handleDismiss',
+	        value: function _handleDismiss(alertInstance) {
+	          return function (event) {
+	            if (event) {
+	              event.preventDefault();
+	            }
+
+	            alertInstance.close(this);
+	          };
+	        }
+	      }, {
+	        key: 'VERSION',
+	        get: function get() {
+	          return VERSION;
+	        }
+	      }]);
+
+	      return Alert;
+	    })();
+
+	    $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
+
+	    /**
+	     * ------------------------------------------------------------------------
+	     * jQuery
+	     * ------------------------------------------------------------------------
+	     */
+
+	    $.fn[NAME] = Alert._jQueryInterface;
+	    $.fn[NAME].Constructor = Alert;
+	    $.fn[NAME].noConflict = function () {
+	      $.fn[NAME] = JQUERY_NO_CONFLICT;
+	      return Alert._jQueryInterface;
+	    };
+
+	    return Alert;
+	  })(jQuery);
+
+	  module.exports = Alert;
+	});
+
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
+	    factory(exports, module);
+	  } else {
+	    var mod = {
+	      exports: {}
+	    };
+	    factory(mod.exports, mod);
+	    global.util = mod.exports;
+	  }
+	})(this, function (exports, module) {
+	  /**
+	   * --------------------------------------------------------------------------
+	   * Bootstrap (v4.0.0-alpha.2): util.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * --------------------------------------------------------------------------
+	   */
+
+	  'use strict';
+
+	  var Util = (function ($) {
+
+	    /**
+	     * ------------------------------------------------------------------------
+	     * Private TransitionEnd Helpers
+	     * ------------------------------------------------------------------------
+	     */
+
+	    var transition = false;
+
+	    var TransitionEndEvent = {
+	      WebkitTransition: 'webkitTransitionEnd',
+	      MozTransition: 'transitionend',
+	      OTransition: 'oTransitionEnd otransitionend',
+	      transition: 'transitionend'
+	    };
+
+	    // shoutout AngusCroll (https://goo.gl/pxwQGp)
+	    function toType(obj) {
+	      return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+	    }
+
+	    function isElement(obj) {
+	      return (obj[0] || obj).nodeType;
+	    }
+
+	    function getSpecialTransitionEndEvent() {
+	      return {
+	        bindType: transition.end,
+	        delegateType: transition.end,
+	        handle: function handle(event) {
+	          if ($(event.target).is(this)) {
+	            return event.handleObj.handler.apply(this, arguments);
+	          }
+	        }
+	      };
+	    }
+
+	    function transitionEndTest() {
+	      if (window.QUnit) {
+	        return false;
+	      }
+
+	      var el = document.createElement('bootstrap');
+
+	      for (var _name in TransitionEndEvent) {
+	        if (el.style[_name] !== undefined) {
+	          return { end: TransitionEndEvent[_name] };
+	        }
+	      }
+
+	      return false;
+	    }
+
+	    function transitionEndEmulator(duration) {
+	      var _this = this;
+
+	      var called = false;
+
+	      $(this).one(Util.TRANSITION_END, function () {
+	        called = true;
+	      });
+
+	      setTimeout(function () {
+	        if (!called) {
+	          Util.triggerTransitionEnd(_this);
+	        }
+	      }, duration);
+
+	      return this;
+	    }
+
+	    function setTransitionEndSupport() {
+	      transition = transitionEndTest();
+
+	      $.fn.emulateTransitionEnd = transitionEndEmulator;
+
+	      if (Util.supportsTransitionEnd()) {
+	        $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
+	      }
+	    }
+
+	    /**
+	     * --------------------------------------------------------------------------
+	     * Public Util Api
+	     * --------------------------------------------------------------------------
+	     */
+
+	    var Util = {
+
+	      TRANSITION_END: 'bsTransitionEnd',
+
+	      getUID: function getUID(prefix) {
+	        do {
+	          prefix += ~ ~(Math.random() * 1000000); // "~~" acts like a faster Math.floor() here
+	        } while (document.getElementById(prefix));
+	        return prefix;
+	      },
+
+	      getSelectorFromElement: function getSelectorFromElement(element) {
+	        var selector = element.getAttribute('data-target');
+
+	        if (!selector) {
+	          selector = element.getAttribute('href') || '';
+	          selector = /^#[a-z]/i.test(selector) ? selector : null;
+	        }
+
+	        return selector;
+	      },
+
+	      reflow: function reflow(element) {
+	        new Function('bs', 'return bs')(element.offsetHeight);
+	      },
+
+	      triggerTransitionEnd: function triggerTransitionEnd(element) {
+	        $(element).trigger(transition.end);
+	      },
+
+	      supportsTransitionEnd: function supportsTransitionEnd() {
+	        return Boolean(transition);
+	      },
+
+	      typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
+	        for (var property in configTypes) {
+	          if (configTypes.hasOwnProperty(property)) {
+	            var expectedTypes = configTypes[property];
+	            var value = config[property];
+	            var valueType = undefined;
+
+	            if (value && isElement(value)) {
+	              valueType = 'element';
+	            } else {
+	              valueType = toType(value);
+	            }
+
+	            if (!new RegExp(expectedTypes).test(valueType)) {
+	              throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));
+	            }
+	          }
+	        }
+	      }
+	    };
+
+	    setTransitionEndSupport();
+
+	    return Util;
+	  })(jQuery);
+
+	  module.exports = Util;
+	});
+
+
+/***/ },
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -386,185 +782,7 @@
 
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, module], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else if (typeof exports !== 'undefined' && typeof module !== 'undefined') {
-	    factory(exports, module);
-	  } else {
-	    var mod = {
-	      exports: {}
-	    };
-	    factory(mod.exports, mod);
-	    global.util = mod.exports;
-	  }
-	})(this, function (exports, module) {
-	  /**
-	   * --------------------------------------------------------------------------
-	   * Bootstrap (v4.0.0-alpha.2): util.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-	   * --------------------------------------------------------------------------
-	   */
-
-	  'use strict';
-
-	  var Util = (function ($) {
-
-	    /**
-	     * ------------------------------------------------------------------------
-	     * Private TransitionEnd Helpers
-	     * ------------------------------------------------------------------------
-	     */
-
-	    var transition = false;
-
-	    var TransitionEndEvent = {
-	      WebkitTransition: 'webkitTransitionEnd',
-	      MozTransition: 'transitionend',
-	      OTransition: 'oTransitionEnd otransitionend',
-	      transition: 'transitionend'
-	    };
-
-	    // shoutout AngusCroll (https://goo.gl/pxwQGp)
-	    function toType(obj) {
-	      return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
-	    }
-
-	    function isElement(obj) {
-	      return (obj[0] || obj).nodeType;
-	    }
-
-	    function getSpecialTransitionEndEvent() {
-	      return {
-	        bindType: transition.end,
-	        delegateType: transition.end,
-	        handle: function handle(event) {
-	          if ($(event.target).is(this)) {
-	            return event.handleObj.handler.apply(this, arguments);
-	          }
-	        }
-	      };
-	    }
-
-	    function transitionEndTest() {
-	      if (window.QUnit) {
-	        return false;
-	      }
-
-	      var el = document.createElement('bootstrap');
-
-	      for (var _name in TransitionEndEvent) {
-	        if (el.style[_name] !== undefined) {
-	          return { end: TransitionEndEvent[_name] };
-	        }
-	      }
-
-	      return false;
-	    }
-
-	    function transitionEndEmulator(duration) {
-	      var _this = this;
-
-	      var called = false;
-
-	      $(this).one(Util.TRANSITION_END, function () {
-	        called = true;
-	      });
-
-	      setTimeout(function () {
-	        if (!called) {
-	          Util.triggerTransitionEnd(_this);
-	        }
-	      }, duration);
-
-	      return this;
-	    }
-
-	    function setTransitionEndSupport() {
-	      transition = transitionEndTest();
-
-	      $.fn.emulateTransitionEnd = transitionEndEmulator;
-
-	      if (Util.supportsTransitionEnd()) {
-	        $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
-	      }
-	    }
-
-	    /**
-	     * --------------------------------------------------------------------------
-	     * Public Util Api
-	     * --------------------------------------------------------------------------
-	     */
-
-	    var Util = {
-
-	      TRANSITION_END: 'bsTransitionEnd',
-
-	      getUID: function getUID(prefix) {
-	        do {
-	          prefix += ~ ~(Math.random() * 1000000); // "~~" acts like a faster Math.floor() here
-	        } while (document.getElementById(prefix));
-	        return prefix;
-	      },
-
-	      getSelectorFromElement: function getSelectorFromElement(element) {
-	        var selector = element.getAttribute('data-target');
-
-	        if (!selector) {
-	          selector = element.getAttribute('href') || '';
-	          selector = /^#[a-z]/i.test(selector) ? selector : null;
-	        }
-
-	        return selector;
-	      },
-
-	      reflow: function reflow(element) {
-	        new Function('bs', 'return bs')(element.offsetHeight);
-	      },
-
-	      triggerTransitionEnd: function triggerTransitionEnd(element) {
-	        $(element).trigger(transition.end);
-	      },
-
-	      supportsTransitionEnd: function supportsTransitionEnd() {
-	        return Boolean(transition);
-	      },
-
-	      typeCheckConfig: function typeCheckConfig(componentName, config, configTypes) {
-	        for (var property in configTypes) {
-	          if (configTypes.hasOwnProperty(property)) {
-	            var expectedTypes = configTypes[property];
-	            var value = config[property];
-	            var valueType = undefined;
-
-	            if (value && isElement(value)) {
-	              valueType = 'element';
-	            } else {
-	              valueType = toType(value);
-	            }
-
-	            if (!new RegExp(expectedTypes).test(valueType)) {
-	              throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));
-	            }
-	          }
-	        }
-	      }
-	    };
-
-	    setTransitionEndSupport();
-
-	    return Util;
-	  })(jQuery);
-
-	  module.exports = Util;
-	});
-
-
-/***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -1125,7 +1343,7 @@
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
@@ -1628,14 +1846,14 @@
 
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = window.jQuery;
 
-	var STRINGS = __webpack_require__( 6 ).strings;
-	var CLASSES = __webpack_require__( 6 ).classes;
-	var SELECTORS = __webpack_require__( 6 ).selectors;
+	var STRINGS = __webpack_require__( 7 ).strings;
+	var CLASSES = __webpack_require__( 7 ).classes;
+	var SELECTORS = __webpack_require__( 7 ).selectors;
 
 	/**
 	 * Binds a click handler to the given jQuery object
@@ -1661,7 +1879,7 @@
 
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	module.exports = {

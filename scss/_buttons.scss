@@ -5,12 +5,11 @@
   ///
 
   position: relative;
+  z-index: 1;
   display: inline-block;
   min-width: $btn-min-width;
-  padding: $btn-padding-top $btn-padding-x $btn-padding-bottom;
+  padding: $btn-padding-y $btn-padding-x;
   border: $border-width solid transparent;
-  font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   text-align: center;
   white-space: nowrap;
@@ -61,22 +60,22 @@
     left: 50%;
     top: 50%;
     z-index: -1;
-    width: 140px;
-    height: 140px;
+    width: $btn-pulse-size;
+    height: $btn-pulse-size;
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%) scale(0);
   }
 
   &::before {
-    background-color: rgba(41,125,253,.5);
+    background-color: rgba($blue,.5);
   }
 
   &::after {
-    border: 1px solid #297DFD;
+    border: 1px solid $blue;
   }
 
   // using `:focus` instead of `:active` because the latter only applies `onMouseDown`
-  &:focus {
+  &:not(.disabled):focus {
     &::before {
       animation: pulse .5s .25s cubic-bezier(0, 0, .5, 1);
     }

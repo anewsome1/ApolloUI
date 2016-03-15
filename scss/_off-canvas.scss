@@ -2,7 +2,7 @@
   // @TODO: Replace with opaque bg once
   // that color is added to the palette
   @extend .bg-dark;
-  background-color: transparentize(darken($charcoal, 10%),.1);
+  background-color: rgba($charcoal-dark,.9);
 
   position: fixed;
   top: 0;
@@ -12,8 +12,11 @@
   height: auto;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
-  box-shadow: $shadow-hover;
   transition: all $transition-fast;
+
+  &.open {
+      box-shadow: $shadow-hover;
+  }
 
   &.off-canvas-left {
     left: -$off-canvas-width;
@@ -24,14 +27,23 @@
     }
   }
 
+  &.off-canvas-right {
+    right: -$off-canvas-width;
+
+    &.open {
+      // Use translate3d to engage gpu acceleration
+      transform: translate3d(-$off-canvas-width,0,0);
+    }
+  }
+
   ///
   /// Open and close buttons
   ///
 
   &-open,
   &-close {
-    padding-top: $off-canvas-toggle-padding-top;
-    padding-bottom: $off-canvas-toggle-padding-bottom;
+    padding-top: $off-canvas-toggle-padding-y;
+    padding-bottom: $off-canvas-toggle-padding-y;
     margin-top: $off-canvas-toggle-margin-y;
     margin-bottom: $off-canvas-toggle-margin-y;
     font-size: $off-canvas-toggle-size;
@@ -78,7 +90,7 @@
       display: block;
       margin-left: -$grid-gutter-width / 2;
       margin-right: -$grid-gutter-width / 2;
-      padding: $btn-padding-top ($grid-gutter-width / 2) $btn-padding-bottom;
+      padding: $btn-padding-y ($grid-gutter-width / 2);
 
       &:hover {
         color: #fff;

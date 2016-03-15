@@ -1,6 +1,6 @@
 .loading-indicator {
   position: relative;
-  width: $loader-size;  
+  width: $loader-size;
   height: $loader-size;
   animation: grow $loader-grow-duration cubic-bezier(0.000, 0.000, 0.5, 1.000);
 
@@ -16,14 +16,14 @@
     position: absolute;
     border-radius: 50%;
     background-image: radial-gradient(circle, rgba($teal, .15) 36%, transparent 36%);
-    
+
     .spinner {
       stroke: rgba($teal, .5);
       stroke-alignment: inner;
       fill: transparent;
     }
   }
-  
+
   &-inner {
     z-index: 10;
     width: $loader-circle-inner;
@@ -41,9 +41,9 @@
       stroke-width: $loader-arc-stroke;
       animation: arc-inner $loader-spin-duration $loader-arc-timing infinite;
       animation-delay: $loader-spin-duration * .2;
-    }       
+    }
   }
-  
+
   &-outer {
     width: $loader-circle-outer;
     height: $loader-circle-outer;
@@ -94,7 +94,7 @@
     background-color: rgba($teal, .25);
     animation: orbit-outer 4s linear infinite;
   }
-  
+
 }
 
 
