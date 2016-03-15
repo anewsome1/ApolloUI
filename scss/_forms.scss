@@ -186,25 +186,60 @@ textarea.form-control {
 
 // }
 
+
+///
+/// Toggle (Radio variation)
+///
+
+%toggle-base {
+  position: relative;
+  z-index: 1;
+  padding-top: $toggle-padding-y;
+  padding-bottom: $toggle-padding-y;
+  line-height: 1;
+  text-align: center;
+  color: $blue;
+  background-color: rgba(255, 255, 255, .75);
+  cursor: pointer;
+  transition: all $transition-fast;
+
+}
+
+%toggle-hover {
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: $shadow-hover;
+}
+
+%toggle-active {
+  z-index: 2;
+  color: #fff;
+  background-color: $blue;
+  box-shadow: $shadow-hover;
+}
+
 .toggle {
-  display: flex;
+  @if $enable-flex {
+    display: flex;
+  } @else {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
 
   input[type="radio"] {
     position: absolute;
     opacity: 0;
 
     + label {
-      position: relative;
-      z-index: 1;
-      flex: 1;
-      padding-top: $toggle-padding-y;
-      padding-bottom: $toggle-padding-y;
-      line-height: 1;
-      text-align: center;
-      color: $blue;
-      background-color: rgba(255, 255, 255, .75);
-      cursor: pointer;
-      transition: all $transition-fast;
+      @extend %toggle-base;
+
+      @if $enable-flex {
+        flex: 1;
+      } @else {
+        display: table-cell;
+        width: 50%;
+      }
 
       &:hover,
       &:active {
@@ -212,8 +247,7 @@ textarea.form-control {
       }
 
       &:hover {
-        background-color: rgba(255, 255, 255, 1);
-        box-shadow: $shadow-hover;
+        @extend %toggle-hover;
       }
 
       &:active {
@@ -223,10 +257,11 @@ textarea.form-control {
     }
 
     &:checked + label {
-      z-index: 2;
-      color: #fff;
-      background-color: $blue;
-      box-shadow: $shadow-hover;
+      @extend %toggle-active;
+
+      &:active {
+        background-color: $navy;
+      }
     }
   }
 }

@@ -1,0 +1,122 @@
+///
+/// Base class
+///
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text and removes hover/tab effects
+  &.disabled {
+    color: $nav-disabled-link-color;
+
+    @include plain-hover-focus {
+      color: $nav-disabled-link-hover-color;
+      cursor: $cursor-disabled;
+      background-color: transparent;
+    }
+  }
+}
+
+
+// Nav inline
+
+.nav-inline {
+  .nav-item {
+    display: inline-block;
+  }
+
+  .nav-item + .nav-item,
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
+
+///
+/// Tabs
+///
+
+.nav-tabs {
+  &:not(.tabs-justified) {
+    @include clearfix();
+
+    .nav-item {
+      float: left;
+    }
+
+    .nav-link {
+      min-width: $btn-lg-min-width;
+      padding: $btn-lg-padding-y $btn-padding-x;
+    }
+  }
+
+  &.tabs-justified {
+    @if $enable-flex {
+      display: flex;
+
+      .nav-item {
+        flex: 1;
+      }
+    } @else {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .nav-item {
+        display: table-cell;
+      }
+    }
+  }
+
+  .nav-link {
+    @extend %toggle-base;
+    display: block;
+
+    @include hover-focus {
+      @extend %toggle-hover;
+    }
+
+    &.disabled {
+      @include plain-hover-focus {
+        color: $nav-disabled-link-color;
+        background-color: transparent;
+        border-color: transparent;
+        cursor: $cursor-disabled;
+      }
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.open .nav-link {
+    @include plain-hover-focus {
+
+      @extend %toggle-active;
+    }
+  }
+}
+
+
+///
+/// Tabbable tabs
+///
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
