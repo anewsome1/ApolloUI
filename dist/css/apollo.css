@@ -3411,6 +3411,9 @@ textarea.form-control, textarea.sayt-input {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .toggle input[type="radio"] {
@@ -3586,6 +3589,11 @@ textarea.form-control, textarea.sayt-input {
   margin-left: 1rem;
 }
 
+.nav-tabs .nav-link {
+  min-width: 8.75rem;
+  padding: 0.9375rem 1.125rem;
+}
+
 .nav-tabs:not(.tabs-justified)::after {
   content: "";
   display: table;
@@ -3596,15 +3604,13 @@ textarea.form-control, textarea.sayt-input {
   float: left;
 }
 
-.nav-tabs:not(.tabs-justified) .nav-link {
-  min-width: 8.75rem;
-  padding: 0.9375rem 1.125rem;
-}
-
 .nav-tabs.tabs-justified {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .nav-tabs.tabs-justified .nav-item {

@@ -47,6 +47,12 @@
 ///
 
 .nav-tabs {
+
+  .nav-link {
+    min-width: $btn-lg-min-width;
+    padding: $btn-lg-padding-y $btn-padding-x;
+  }
+
   &:not(.tabs-justified) {
     @include clearfix();
 
@@ -55,14 +61,13 @@
     }
 
     .nav-link {
-      min-width: $btn-lg-min-width;
-      padding: $btn-lg-padding-y $btn-padding-x;
     }
   }
 
   &.tabs-justified {
     @if $enable-flex {
       display: flex;
+      flex-wrap: wrap;
 
       .nav-item {
         flex: 1;

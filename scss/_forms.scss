@@ -225,6 +225,7 @@ textarea.form-control {
 .toggle {
   @if $enable-flex {
     display: flex;
+    flex-wrap: wrap;
   } @else {
     display: table;
     table-layout: fixed;
@@ -242,7 +243,6 @@ textarea.form-control {
         flex: 1;
       } @else {
         display: table-cell;
-        width: 50%;
       }
 
       &:hover,
