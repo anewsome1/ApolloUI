@@ -3402,6 +3402,11 @@ textarea.form-control, textarea.sayt-input {
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+.toggle input[type="radio"]:checked + label:active, .nav-tabs .nav-link.active:active,
+.nav-tabs .nav-item.open .nav-link:active {
+  background-color: #245eb7;
+}
+
 .toggle {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3421,15 +3426,6 @@ textarea.form-control, textarea.sayt-input {
 
 .toggle input[type="radio"] + label:hover, .toggle input[type="radio"] + label:active {
   z-index: 2;
-}
-
-.toggle input[type="radio"] + label:active {
-  background-color: #3a4f59;
-  color: #fff;
-}
-
-.toggle input[type="radio"]:checked + label:active {
-  background-color: #245eb7;
 }
 
 .table {
