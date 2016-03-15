@@ -52,6 +52,14 @@
     opacity: 1;
     transform: scale(1);
   }
+
+  .close {
+    position: absolute;
+    right: $modal-inner-padding / 2;
+    top: $modal-inner-padding / 2;
+    font-size: $font-size-lg;
+    color: $charcoal-light;
+  }
 }
 
 ///
@@ -68,13 +76,6 @@
     margin-bottom: 0;
     margin-right: $modal-inner-padding;
     font-size: $font-size-h4;
-  }
-
-  .close {
-    position: absolute;
-    right: $modal-inner-padding / 2;
-    top: $modal-inner-padding / 2;
-    font-size: $font-size-lg;
   }
 }
 

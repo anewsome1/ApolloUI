@@ -11,6 +11,12 @@
   }
 }
 
+.card-footer {
+  padding: ($card-inner-padding / 2) $card-inner-padding;
+  background-color: $neutral;
+}
+
+
 
 ///
 /// Card heading
@@ -26,6 +32,8 @@
   margin-bottom: 0;
   color: $text-muted;
 }
+
+
 
 ///
 /// Card states

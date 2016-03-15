@@ -4250,6 +4250,14 @@ textarea.form-control, textarea.sayt-input {
           transform: scale(1);
 }
 
+.modal-dialog .close {
+  position: absolute;
+  right: 0.9375rem;
+  top: 0.9375rem;
+  font-size: 1.5rem;
+  color: #9ca7ac;
+}
+
 .modal-content {
   padding: 1.875rem;
 }
@@ -4258,13 +4266,6 @@ textarea.form-control, textarea.sayt-input {
   padding-bottom: 0.9375rem;
   margin-bottom: 0;
   margin-right: 1.875rem;
-  font-size: 1.5rem;
-}
-
-.modal-header .close {
-  position: absolute;
-  right: 0.9375rem;
-  top: 0.9375rem;
   font-size: 1.5rem;
 }
 
@@ -4333,6 +4334,11 @@ textarea.form-control, textarea.sayt-input {
 
 .card-block + .card-block {
   padding-top: 0;
+}
+
+.card-footer {
+  padding: 0.9375rem 1.875rem;
+  background-color: #f7f5f4;
 }
 
 .card-title {
