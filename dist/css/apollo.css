@@ -3425,6 +3425,7 @@ textarea.form-control, textarea.sayt-input {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
+  border: 0.0625rem solid #cef5f6;
 }
 
 .table th,
@@ -3435,18 +3436,18 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .table thead th {
-  font-weight: normal;
-  text-transform: uppercase;
+  font-weight: 600;
   vertical-align: bottom;
-  border-bottom: 0.125rem solid #ced2d4;
+  background-color: rgba(20, 55, 112, 0.05);
+  color: #143770;
 }
 
-.table tbody tr:nth-of-type(odd) {
-  background-color: #f7f5f4;
+.table tbody tr:nth-of-type(even) {
+  background-color: rgba(202, 205, 207, 0.1);
 }
 
 .table tbody + tbody {
-  border-top: 0.125rem solid #ced2d4;
+  border-top: 0.125rem solid #cef5f6;
 }
 
 .table .table {
@@ -3456,20 +3457,6 @@ textarea.form-control, textarea.sayt-input {
 .table-sm th,
 .table-sm td {
   padding: 0.3rem;
-}
-
-.table-bordered {
-  border: 0.0625rem solid #ced2d4;
-}
-
-.table-bordered th,
-.table-bordered td {
-  border: 0.0625rem solid #ced2d4;
-}
-
-.table-bordered thead th,
-.table-bordered thead td {
-  border-bottom-width: 0.125rem;
 }
 
 .table-hover tbody tr {

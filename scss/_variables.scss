@@ -346,13 +346,16 @@ $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 $table-cell-padding:            .75rem;
 $table-sm-cell-padding:         .3rem;
 
+$table-header-bg:               rgba($blue-darker, .05);
+$table-header-color:            $blue-darker;
+
 $table-bg:                      transparent;
-$table-bg-accent:               $neutral;
+$table-bg-accent:               rgba($gray-lighter, .1);
 $table-bg-hover:                $atmosphere-lighter;
 $table-bg-active:               $table-bg-hover;
 
 $table-border-width:            $border-width;
-$table-border-color:            $charcoal-lighter;
+$table-border-color:            $teal-lighter;
 $table-border-color-hover:      $link-color;
 
 

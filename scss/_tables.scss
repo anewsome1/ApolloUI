@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
+  border: $border-width solid $table-border-color;
 
   th,
   td {
@@ -12,15 +13,16 @@
   }
 
   thead th {
-    font-weight: normal;
-    text-transform: uppercase;
+    font-weight: $font-semi-bold;
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    // border-bottom: (2 * $table-border-width) solid $table-border-color;
+    background-color: $table-header-bg;
+    color: $table-header-color;
   }
 
   tbody tr {
 
-    &:nth-of-type(odd) {
+    &:nth-of-type(even) {
       background-color: $table-bg-accent;
     }
   }
@@ -51,21 +53,21 @@
 //
 // Add borders all around the table and between all the columns.
 
-.table-bordered {
-  border: $table-border-width solid $table-border-color;
+// .table-bordered {
+//   border: $table-border-width solid $table-border-color;
 
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
+//   th,
+//   td {
+//     border: $table-border-width solid $table-border-color;
+//   }
 
-  thead {
-    th,
-    td {
-      border-bottom-width: (2 * $table-border-width);
-    }
-  }
-}
+//   thead {
+//     th,
+//     td {
+//       border-bottom-width: (2 * $table-border-width);
+//     }
+//   }
+// }
 
 
 // Hover effect
