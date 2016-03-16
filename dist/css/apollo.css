@@ -3653,12 +3653,12 @@ textarea.form-control, textarea.sayt-input {
   border-radius: 50%;
 }
 
-.padding-top-navbar {
-  padding-top: 3.75rem;
+.margin-top-navbar {
+  margin-top: 3.75rem;
 }
 
-.padding-top-navbar-jumbo {
-  padding-top: 5.5rem;
+.margin-top-navbar-jumbo {
+  margin-top: 5.5rem;
 }
 
 .navbar-primary {
@@ -3784,6 +3784,45 @@ textarea.form-control, textarea.sayt-input {
   left: 0;
   right: 0;
   z-index: 1030;
+}
+
+.navbar-vertical {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 5.5rem;
+  background-color: #2b3b43;
+}
+
+.navbar-vertical-link {
+  display: block;
+  padding: 1rem 0.625rem;
+  font-size: 0.875rem;
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.navbar-vertical-link, .navbar-vertical-link:active, .navbar-vertical-link:visited {
+  color: #ced2d4;
+}
+
+.navbar-vertical-link:hover {
+  background-color: #1d272c;
+}
+
+.navbar-vertical-link.active {
+  color: #3ed6cf;
+  background-color: #0f1416;
+}
+
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before {
+  font-size: 2rem;
+}
+
+.margin-left-navbar-vertical {
+  margin-left: 5.5rem;
 }
 
 .empty-space-icon {

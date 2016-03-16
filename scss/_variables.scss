@@ -437,6 +437,19 @@ $command-bar-padding-y: .5rem;
 
 
 ///
+/// Vertical navbar
+///
+
+$navbar-vertical-width: 5.5rem;
+$navbar-vertical-bg: $charcoal-dark;
+$navbar-vertical-link-color: $charcoal-lighter;
+$navbar-vertical-icon-size: 2rem;
+$navbar-vertical-hover-bg: $charcoal-darker;
+$navbar-vertical-active-color: $teal;
+$navbar-vertical-active-bg: $charcoal-darkest;
+
+
+///
 /// Login component
 ///
 

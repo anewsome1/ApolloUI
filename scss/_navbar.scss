@@ -121,11 +121,11 @@
 }
 
 // Utility for when using navbar-fixed-top
-.padding-top-navbar {
-  padding-top: $navbar-height;
+.margin-top-navbar {
+  margin-top: $navbar-height;
 
   &-jumbo {
-    padding-top: $navbar-jumbo-height;
+    margin-top: $navbar-jumbo-height;
   }
 }
 
@@ -207,3 +207,46 @@
   }
 }
 
+///
+/// Vertical navbar
+///
+.navbar-vertical {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: $navbar-vertical-width;
+  background-color: $navbar-vertical-bg;
+
+  &-link {
+    display: block;
+    padding: $spacer ($grid-gutter-width / 3);
+    font-size: $font-size-sm;
+    text-align: center;
+    transition: all $transition-fast;
+
+    &,
+    &:active,
+    &:visited {
+      color: $navbar-vertical-link-color;
+    }
+
+    &:hover {
+      background-color: $navbar-vertical-hover-bg;
+    }
+
+    &.active {
+      color: $navbar-vertical-active-color;
+      background-color: $navbar-vertical-active-bg;
+    }
+
+    .icon {
+      font-size: $navbar-vertical-icon-size;
+    }
+  }
+}
+
+.margin-left-navbar-vertical {
+  margin-left: $navbar-vertical-width;
+}
