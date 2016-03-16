@@ -219,6 +219,10 @@
   width: $navbar-vertical-width;
   background-color: $navbar-vertical-bg;
 
+  &.navbar-vertical-jumbo {
+    width: $navbar-vertical-jumbo-width;
+  }
+
   &-link {
     display: block;
     padding: $spacer ($grid-gutter-width / 3);
@@ -241,7 +245,17 @@
       background-color: $navbar-vertical-active-bg;
     }
 
+    .icon,
+    &-title {
+      display: block;
+    }
+
+    .icon + &-title {
+      margin-top: $spacer / 4;
+    }
+
     .icon {
+      display: block;
       font-size: $navbar-vertical-icon-size;
     }
   }

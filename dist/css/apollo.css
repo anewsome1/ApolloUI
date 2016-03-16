@@ -3796,6 +3796,10 @@ textarea.form-control, textarea.sayt-input {
   background-color: #2b3b43;
 }
 
+.navbar-vertical.navbar-vertical-jumbo {
+  width: 8.25rem;
+}
+
 .navbar-vertical-link {
   display: block;
   padding: 1rem 0.625rem;
@@ -3817,7 +3821,16 @@ textarea.form-control, textarea.sayt-input {
   background-color: #0f1416;
 }
 
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before, .navbar-vertical-link-title {
+  display: block;
+}
+
+.icon + .navbar-vertical-link-title, .close + .navbar-vertical-link-title, .alert::before + .navbar-vertical-link-title, .form-msg::before + .navbar-vertical-link-title {
+  margin-top: 0.25rem;
+}
+
 .navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before {
+  display: block;
   font-size: 2rem;
 }
 
