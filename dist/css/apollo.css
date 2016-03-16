@@ -321,7 +321,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #1252b3;
+  color: #245eb7;
   text-decoration: underline;
 }
 
@@ -2845,19 +2845,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1 {
-  font-size: 5.063rem;
+  font-size: 2.441rem;
 }
 
 h2 {
-  font-size: 3.375rem;
+  font-size: 1.953rem;
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 1.563rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h5 {
@@ -2869,19 +2869,19 @@ h6 {
 }
 
 .h1 {
-  font-size: 5.063rem;
+  font-size: 2.441rem;
 }
 
 .h2 {
-  font-size: 3.375rem;
+  font-size: 1.953rem;
 }
 
 .h3 {
-  font-size: 2.25rem;
+  font-size: 1.563rem;
 }
 
 .h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .h5 {
@@ -3062,7 +3062,7 @@ mark,
   display: block;
   position: relative;
   z-index: 0;
-  padding: 1rem 0.9375rem 1rem 2.90625rem;
+  padding: 1rem 0.9375rem 1rem 2.65625rem;
   margin-bottom: 1rem;
   font-size: 1rem;
 }
@@ -3071,8 +3071,8 @@ mark,
 .alert .close, .form-msg .close {
   position: absolute;
   top: 50%;
-  margin-top: -0.75rem;
-  font-size: 1.5rem;
+  margin-top: -0.625rem;
+  font-size: 1.25rem;
   line-height: 1.2rem;
   color: #fff;
 }
@@ -3242,7 +3242,7 @@ mark,
 }
 
 .btn-link:hover, .btn-link:active, .btn-link:focus {
-  color: #1252b3;
+  color: #245eb7;
 }
 
 .btn-lg {
@@ -3373,7 +3373,7 @@ textarea.form-control, textarea.sayt-input {
   content: "~";
 }
 
-.toggle input[type="radio"] + label, .nav-tabs .nav-link {
+.toggle input[type="radio"] + label, .nav-tabs.tab-bar .nav-link {
   position: relative;
   z-index: 1;
   padding-top: 0.875rem;
@@ -3386,24 +3386,24 @@ textarea.form-control, textarea.sayt-input {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.toggle input[type="radio"] + label:hover, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
   background-color: white;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.toggle input[type="radio"]:checked + label, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover,
-.nav-tabs .nav-item.open .nav-link,
-.nav-tabs .nav-item.open .nav-link:focus,
-.nav-tabs .nav-item.open .nav-link:hover {
+.toggle input[type="radio"]:checked + label, .nav-tabs.tab-bar .nav-link.active, .nav-tabs.tab-bar .nav-link.active:focus, .nav-tabs.tab-bar .nav-link.active:hover,
+.nav-item.open .nav-tabs.tab-bar .nav-link,
+.nav-item.open .nav-tabs.tab-bar .nav-link:focus,
+.nav-item.open .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
   color: #fff;
   background-color: #2975e9;
   box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.toggle input[type="radio"]:checked + label:active, .nav-tabs .nav-link.active:active,
-.nav-tabs .nav-item.open .nav-link:active {
+.toggle input[type="radio"]:checked + label:active, .nav-tabs.tab-bar .nav-link.active:active,
+.nav-item.open .nav-tabs.tab-bar .nav-link:active {
   background-color: #245eb7;
 }
 
@@ -3590,8 +3590,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .nav-tabs .nav-link {
-  min-width: 8.75rem;
-  padding: 0.9375rem 1.125rem;
+  display: block;
 }
 
 .nav-tabs:not(.tabs-justified)::after {
@@ -3604,7 +3603,11 @@ textarea.form-control, textarea.sayt-input {
   float: left;
 }
 
-.nav-tabs.tabs-justified {
+.nav-tabs:not(.tabs-justified) .nav-link {
+  text-align: center;
+}
+
+.nav-tabs.tab-justified {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3613,17 +3616,53 @@ textarea.form-control, textarea.sayt-input {
           flex-wrap: wrap;
 }
 
-.nav-tabs.tabs-justified .nav-item {
+.nav-tabs.tab-justified .nav-item {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.nav-tabs .nav-link {
-  display: block;
+.nav-tabs:not(.tab-bar) .nav-link {
+  padding: 0.4375rem 1.125rem;
+  font-size: 1.25rem;
+  color: #3a4f59;
 }
 
-.nav-tabs .nav-link.disabled, .nav-tabs .nav-link.disabled:focus, .nav-tabs .nav-link.disabled:hover {
+.bg-dark .nav-tabs:not(.tab-bar) .nav-link, .off-canvas .nav-tabs:not(.tab-bar) .nav-link {
+  color: #fff;
+}
+
+.nav-tabs:not(.tab-bar) .nav-link:hover, .nav-tabs:not(.tab-bar) .nav-link:active {
+  color: #2975e9;
+}
+
+.bg-dark .nav-tabs:not(.tab-bar) .nav-link:hover, .off-canvas .nav-tabs:not(.tab-bar) .nav-link:hover, .bg-dark .nav-tabs:not(.tab-bar) .nav-link:active, .off-canvas .nav-tabs:not(.tab-bar) .nav-link:active {
+  color: #3ed6cf;
+}
+
+.nav-tabs:not(.tab-bar) .nav-link.active, .nav-tabs:not(.tab-bar) .nav-link.active:hover, .nav-tabs:not(.tab-bar) .nav-link.active:active, .nav-tabs:not(.tab-bar) .nav-link.active:visited {
+  color: #2975e9;
+}
+
+.bg-dark .nav-tabs:not(.tab-bar) .nav-link.active, .off-canvas .nav-tabs:not(.tab-bar) .nav-link.active, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:hover, .off-canvas .nav-tabs:not(.tab-bar) .nav-link.active:hover, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:active, .off-canvas .nav-tabs:not(.tab-bar) .nav-link.active:active, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:visited, .off-canvas .nav-tabs:not(.tab-bar) .nav-link.active:visited {
+  color: #3ed6cf;
+}
+
+.nav-tabs:not(.tab-bar) .nav-item:first-of-type .nav-link {
+  padding-left: 0;
+}
+
+.nav-tabs:not(.tab-bar) .nav-item:last-of-type .nav-link {
+  padding-right: 0;
+}
+
+.nav-tabs.tab-bar .nav-link {
+  display: block;
+  min-width: 8.75rem;
+  padding: 0.9375rem 1.125rem;
+}
+
+.nav-tabs.tab-bar .nav-link.disabled, .nav-tabs.tab-bar .nav-link.disabled:focus, .nav-tabs.tab-bar .nav-link.disabled:hover {
   color: #818a91;
   background-color: transparent;
   border-color: transparent;
@@ -3663,7 +3702,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .navbar.navbar-jumbo .navbar-brand {
-  margin-top: 1.5625rem;
+  margin-top: 1.6875rem;
 }
 
 .navbar.navbar-jumbo .navbar-item > a {
@@ -3676,8 +3715,8 @@ textarea.form-control, textarea.sayt-input {
   width: 17.0625rem;
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
-  margin-top: 0.6875rem;
-  font-size: 1.5rem;
+  margin-top: 0.8125rem;
+  font-size: 1.25rem;
   text-align: center;
   line-height: 1;
 }
@@ -3737,9 +3776,9 @@ textarea.form-control, textarea.sayt-input {
   right: 0;
   width: 2.4375rem;
   height: 2.4375rem;
-  padding-top: 0.46875rem;
+  padding-top: 0.59375rem;
   margin-top: -1.21875rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.1;
   text-align: center;
   border-radius: 50%;
@@ -3865,7 +3904,7 @@ textarea.form-control, textarea.sayt-input {
 }
 
 .command-bar-icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   vertical-align: text-bottom;
   padding-right: .5rem;
 }
@@ -3956,7 +3995,7 @@ textarea.form-control, textarea.sayt-input {
 
 .login-brand-name {
   text-align: center;
-  font-size: 3.375rem;
+  font-size: 1.953rem;
   font-weight: 300;
   color: #2975e9;
   margin-top: 2rem;
@@ -3976,7 +4015,7 @@ textarea.form-control, textarea.sayt-input {
   top: 0;
   left: .25rem;
   z-index: 10;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.1;
   content: "x";
 }
@@ -3987,7 +4026,7 @@ textarea.form-control, textarea.sayt-input {
 
 .sayt-input {
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: 2.25rem;
 }
 
 .bg-dark .sayt-input, .off-canvas .sayt-input {
@@ -4002,7 +4041,7 @@ textarea.form-control, textarea.sayt-input {
 
 .sayt-results > li > a {
   display: block;
-  padding: 0.33333rem 0.33333rem 0.33333rem 2.5rem;
+  padding: 0.33333rem 0.33333rem 0.33333rem 2.25rem;
 }
 
 .sayt-results > li > a, .sayt-results > li > a:link, .sayt-results > li > a:visited, .sayt-results > li > a:hover, .sayt-results > li > a:focus {
@@ -4068,9 +4107,9 @@ textarea.form-control, textarea.sayt-input {
 .off-canvas-open, .off-canvas-close {
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
-  margin-top: 0.6875rem;
-  margin-bottom: 0.6875rem;
-  font-size: 1.5rem;
+  margin-top: 0.8125rem;
+  margin-bottom: 0.8125rem;
+  font-size: 1.25rem;
   line-height: 1;
   background: none;
   border: 0;
@@ -4125,8 +4164,8 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar-jumbo .off-canvas-open,
 .navbar-jumbo ~ .off-canvas .off-canvas-close {
-  margin-top: 1.5625rem;
-  margin-bottom: 1.5625rem;
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
 }
 
 .slider {

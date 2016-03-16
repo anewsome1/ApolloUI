@@ -48,9 +48,12 @@
 
 .nav-tabs {
 
+  ///
+  /// Horizontal tabs
+  ///
+
   .nav-link {
-    min-width: $btn-lg-min-width;
-    padding: $btn-lg-padding-y $btn-padding-x;
+    display: block;
   }
 
   &:not(.tabs-justified) {
@@ -61,10 +64,11 @@
     }
 
     .nav-link {
+      text-align: center;
     }
   }
 
-  &.tabs-justified {
+  &.tab-justified {
     @if $enable-flex {
       display: flex;
       flex-wrap: wrap;
@@ -83,9 +87,62 @@
     }
   }
 
-  .nav-link {
+  ///
+  ///  Plain tabs style
+  ///
+  &:not(.tab-bar) {
+    .nav-link {
+      padding: $btn-padding-y $btn-padding-x;
+      // border-top: $border-width * 2 solid transparent;
+      font-size: $font-size-lg;
+      color: $body-color;
+
+      .bg-dark & {
+        color: #fff;
+      }
+
+      &:hover,
+      &:active {
+        color: $link-color;
+
+        .bg-dark & {
+          color: $teal;
+        }
+      }
+
+      &.active {
+        &,
+        &:hover,
+        &:active,
+        &:visited {
+          // border-color: $link-color;
+          color: $link-color;
+
+          .bg-dark & {
+            // border-color: $teal;
+            color: $teal;
+          }
+        }
+      }
+    }
+    .nav-item:first-of-type .nav-link {
+      padding-left: 0;
+    }
+
+    .nav-item:last-of-type .nav-link {
+      padding-right: 0;
+    }
+  }
+
+
+  ///
+  ///  Tab bar style
+  ///
+  &.tab-bar .nav-link {
     @extend %toggle-base;
     display: block;
+    min-width: $btn-lg-min-width;
+    padding: $btn-lg-padding-y $btn-padding-x;
 
     @include hover-focus {
       @extend %toggle-hover;
@@ -99,15 +156,17 @@
         cursor: $cursor-disabled;
       }
     }
-  }
 
-  .nav-link.active,
-  .nav-item.open .nav-link {
-    @include plain-hover-focus {
-
-      @extend %toggle-active;
+    &.active,
+    .nav-item.open & {
+      @include plain-hover-focus {
+        @extend %toggle-active;
+      }
     }
+
   }
+
+
 }
 
 
