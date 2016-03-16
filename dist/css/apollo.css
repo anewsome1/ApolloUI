@@ -3788,6 +3788,8 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar-vertical {
   position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
   top: 0;
   bottom: 0;
   left: 0;
@@ -3802,9 +3804,9 @@ textarea.form-control, textarea.sayt-input {
 
 .navbar-vertical-link {
   display: block;
-  padding: 1rem 0.625rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
   font-size: 0.875rem;
-  text-align: center;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -3825,13 +3827,25 @@ textarea.form-control, textarea.sayt-input {
   display: block;
 }
 
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before,
 .icon + .navbar-vertical-link-title, .close + .navbar-vertical-link-title, .alert::before + .navbar-vertical-link-title, .form-msg::before + .navbar-vertical-link-title {
-  margin-top: 0.25rem;
+  text-align: center;
+}
+
+.icon + .navbar-vertical-link-title, .close + .navbar-vertical-link-title, .alert::before + .navbar-vertical-link-title, .form-msg::before + .navbar-vertical-link-title {
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
 
 .navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before {
   display: block;
+  padding-top: 1rem;
   font-size: 2rem;
+}
+
+.navbar-vertical-link-title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .margin-left-navbar-vertical {
