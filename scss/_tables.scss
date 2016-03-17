@@ -14,17 +14,34 @@
 
   thead th {
     font-weight: $font-semi-bold;
+    line-height: 1;
     vertical-align: bottom;
-    // border-bottom: (2 * $table-border-width) solid $table-border-color;
     background-color: $table-header-bg;
     color: $table-header-color;
   }
 
   tbody tr {
+    transition: all $transition-fast;
 
     &:nth-of-type(even) {
       background-color: $table-bg-accent;
     }
+
+    @each $state, $state-props in $alert-states {
+      $state-bg: map-get($state-props, bg);
+
+      &.table-#{ $state },
+      &.table-#{ $state }-border {
+        > td:first-child {
+          box-shadow: inset .5rem 0 0 -.25rem $state-bg;
+        }
+      }
+
+      &.table-#{ $state } {
+        background-color: rgba($state-bg, .1);
+      }
+    }
+
   }
 
   tbody + tbody {
@@ -76,12 +93,8 @@
 
 .table-hover {
   tbody tr {
-    border-left: .1875rem solid transparent;  // ~3px
-    transition: all $transition-fast;
-
     @include hover {
-      background-color: $table-bg-hover;
-      border-left-color: $link-color;
+      @extend .table-info;
       cursor: pointer;
     }
   }

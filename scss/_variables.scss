@@ -31,6 +31,7 @@ $border-width:               .0625rem;
 $body-color: $charcoal;
 
 $brand-primary: $blue;
+$brand-info: $atmosphere;
 $brand-success: $green;
 $brand-warning: $yellow;
 $brand-danger: $coral;
@@ -144,6 +145,11 @@ $alert-shadow-height: .625rem;  // ~10px
 
 // Colors
 $alert-states: (
+  info: (
+    bg: $brand-info,
+    color: #fff,
+    icon: 'information'
+  ),
   success: (
     bg: $brand-success,
     color: #fff,
@@ -343,8 +349,8 @@ $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            .75rem;
-$table-sm-cell-padding:         .3rem;
+$table-cell-padding:            .5rem ($grid-gutter-width / 2);
+$table-sm-cell-padding:         .3rem ($grid-gutter-width / 2);
 
 $table-header-bg:               rgba($blue-darker, .05);
 $table-header-color:            $blue-darker;
