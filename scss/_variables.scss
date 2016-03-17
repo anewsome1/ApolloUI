@@ -28,22 +28,22 @@ $border-width:               .0625rem;
 /// Colors
 ///
 
-$body-color: $charcoal;
+$body-color:                  $charcoal;
 
-$brand-primary: $blue;
-$brand-info: $atmosphere;
-$brand-success: $green;
-$brand-warning: $yellow;
-$brand-danger: $coral;
+$brand-primary:               $blue;
+$brand-info:                  $atmosphere;
+$brand-success:               $green;
+$brand-warning:               $yellow;
+$brand-danger:                $coral;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                 $blue;
-$link-decoration:            none;
-$link-hover-color:           $navy;
-$link-hover-decoration:      underline;
+$link-color:                  $blue;
+$link-decoration:             none;
+$link-hover-color:            $navy;
+$link-hover-decoration:       underline;
 
 
 
@@ -52,49 +52,49 @@ $link-hover-decoration:      underline;
 ///
 
 // Font families
-$font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
+$font-family-sans-serif:      'Proxima Nova', Helvetica, Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif;
 
 // Sizing scale
-$font-size-root: 16px;          // Applies to `<html>` element
+$font-size-root:              16px;  // Applies to `<html>` element
 
-$font-size-base: 1rem;          // ~16px
-$font-size-lg:   1.25rem;        // ~24px
-$font-size-sm:   .875rem;       // ~14px
-$font-size-xs:   .75rem;        // ~12px
+$font-size-base:              1rem;  // ~16px
+$font-size-lg:                1.25rem;  // ~20px
+$font-size-sm:                .875rem;  // ~14px
+$font-size-xs:                .75rem;  // ~12px
 
-$font-size-h1: 2.441rem;        // ~81px
-$font-size-h2: 1.953rem;        // ~54px
-$font-size-h3: 1.563rem;         // ~36px
-$font-size-h4: $font-size-lg;
-$font-size-h5: $font-size-base;
-$font-size-h6: $font-size-sm;
+$font-size-h1:                2.441rem;  // ~39px
+$font-size-h2:                1.953rem;  // ~31px
+$font-size-h3:                1.563rem;  // ~25px
+$font-size-h4:                $font-size-lg;
+$font-size-h5:                $font-size-base;
+$font-size-h6:                $font-size-sm;
 
-$display1-size:               6rem;
-$display2-size:               5.5rem;
-$display3-size:               4.5rem;
-$display4-size:               3.5rem;
+$display1-size:               5.063rem;  // ~81px
+$display2-size:               3.375rem;  // ~54px
+$display3-size:               2.25rem;  // ~36px
+$display4-size:               1.5rem;  // ~24px
 
 // Weights
-$font-light: 300;
-$font-normal: 400;
-$font-semi-bold: 600;
+$font-light:                  300;
+$font-normal:                 400;
+$font-semi-bold:              600;
 
 $display1-weight:             300;
 $display2-weight:             300;
 $display3-weight:             300;
 $display4-weight:             300;
 
-$line-height:                1.5;
+$line-height:                 1.5;
 
-$headings-margin-bottom:     ($spacer / 2);
-$headings-font-family:       inherit;
-$headings-font-weight:       $font-light;
-$headings-line-height:       1.1;
-$headings-color:             inherit;
+$headings-margin-bottom:      ($spacer / 2);
+$headings-font-family:        inherit;
+$headings-font-weight:        $font-light;
+$headings-line-height:        1.1;
+$headings-color:              inherit;
 
-$lead-font-size:             1.25rem;
-$lead-font-weight:           300;
+$lead-font-size:              1.25rem;
+$lead-font-weight:            300;
 
 $text-muted:                  $gray-light;
 
@@ -118,17 +118,17 @@ $list-inline-padding:         5px;
 /// Transitions
 ///
 
-$transition-fast: .25s cubic-bezier(0, 0, .5, 1);
-$transition-medium: .5s cubic-bezier(0, 0, .5, 1);
+$transition-fast:      .25s cubic-bezier(0, 0, .5, 1);
+$transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 
 
 ///
 /// Lighting
 ///
 
-$shadow-color: rgba(0, 0, 0, .2);
-$shadow-hover: .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
-$shadow-active: .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
+$shadow-color:         rgba(0, 0, 0, .2);
+$shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
+$shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -136,12 +136,12 @@ $shadow-active: .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
 ///
 
 // Sizing
-$alert-padding-y: $spacer;
-$alert-padding-x: $grid-gutter-width / 2;
-$alert-icon-size: $font-size-lg;
-$alert-font-size: $font-size-base;
-$alert-line-height: $alert-font-size * 1.2;
-$alert-shadow-height: .625rem;  // ~10px
+$alert-padding-y:             $spacer;
+$alert-padding-x:             $grid-gutter-width / 2;
+$alert-icon-size:             $font-size-lg;
+$alert-font-size:             $font-size-base;
+$alert-line-height:           $alert-font-size * 1.2;
+$alert-shadow-height:         .625rem;  // ~10px
 
 // Colors
 $alert-states: (
@@ -171,8 +171,8 @@ $alert-states: (
 /// Cards
 ///
 
-$card-inner-padding:       $grid-gutter-width;
-$card-bg:                  #fff;
+$card-inner-padding:          $grid-gutter-width;
+$card-bg:                     #fff;
 
 
 ///
@@ -205,8 +205,8 @@ $modal-sm:                    18.75rem; // ~300px
 ///
 /// Shared component size
 ///
-$component-height: 2rem;
-$component-height-lg: 3rem;
+$component-height:            2rem;
+$component-height-lg:         3rem;
 
 
 

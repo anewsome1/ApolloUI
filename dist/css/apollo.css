@@ -2898,22 +2898,22 @@ h6 {
 }
 
 .display-1 {
-  font-size: 6rem;
+  font-size: 5.063rem;
   font-weight: 300;
 }
 
 .display-2 {
-  font-size: 5.5rem;
+  font-size: 3.375rem;
   font-weight: 300;
 }
 
 .display-3 {
-  font-size: 4.5rem;
+  font-size: 2.25rem;
   font-weight: 300;
 }
 
 .display-4 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -3088,36 +3088,64 @@ mark,
 .alert.alert-info, .alert-info.form-msg {
   background-color: #32b5fc;
   color: #fff;
+  margin-bottom: 1.875rem;
+  box-shadow: 0 0.625rem 0 0 rgba(50, 181, 252, 0.5), 0 1.25rem 0 0 rgba(50, 181, 252, 0.25);
 }
 
 .alert.alert-info::before, .alert-info.form-msg::before {
   content: "5";
 }
 
+.alert.alert-info.alert-bottom, .alert-info.alert-bottom.form-msg {
+  margin-top: 1.875rem;
+  box-shadow: 0 -0.625rem 0 0 rgba(50, 181, 252, 0.5), 0 -1.25rem 0 0 rgba(50, 181, 252, 0.25);
+}
+
 .alert.alert-success, .alert-success.form-msg {
   background-color: #2cc039;
   color: #fff;
+  margin-bottom: 1.875rem;
+  box-shadow: 0 0.625rem 0 0 rgba(44, 192, 57, 0.5), 0 1.25rem 0 0 rgba(44, 192, 57, 0.25);
 }
 
 .alert.alert-success::before, .alert-success.form-msg::before {
   content: "m";
 }
 
+.alert.alert-success.alert-bottom, .alert-success.alert-bottom.form-msg {
+  margin-top: 1.875rem;
+  box-shadow: 0 -0.625rem 0 0 rgba(44, 192, 57, 0.5), 0 -1.25rem 0 0 rgba(44, 192, 57, 0.25);
+}
+
 .alert.alert-warning, .alert-warning.form-msg {
   background-color: #ecdb5d;
+  margin-bottom: 1.875rem;
+  box-shadow: 0 0.625rem 0 0 rgba(236, 219, 93, 0.5), 0 1.25rem 0 0 rgba(236, 219, 93, 0.25);
 }
 
 .alert.alert-warning::before, .alert-warning.form-msg::before {
   content: "w";
 }
 
+.alert.alert-warning.alert-bottom, .alert-warning.alert-bottom.form-msg {
+  margin-top: 1.875rem;
+  box-shadow: 0 -0.625rem 0 0 rgba(236, 219, 93, 0.5), 0 -1.25rem 0 0 rgba(236, 219, 93, 0.25);
+}
+
 .alert.alert-danger, .alert-danger.form-msg {
   background-color: #f75040;
   color: #fff;
+  margin-bottom: 1.875rem;
+  box-shadow: 0 0.625rem 0 0 rgba(247, 80, 64, 0.5), 0 1.25rem 0 0 rgba(247, 80, 64, 0.25);
 }
 
 .alert.alert-danger::before, .alert-danger.form-msg::before {
   content: "~";
+}
+
+.alert.alert-danger.alert-bottom, .alert-danger.alert-bottom.form-msg {
+  margin-top: 1.875rem;
+  box-shadow: 0 -0.625rem 0 0 rgba(247, 80, 64, 0.5), 0 -1.25rem 0 0 rgba(247, 80, 64, 0.25);
 }
 
 .btn {
@@ -3467,8 +3495,11 @@ textarea.form-control, textarea.sayt-input {
   vertical-align: top;
 }
 
-.table thead th {
+.table th {
   font-weight: 600;
+}
+
+.table thead th {
   line-height: 1;
   vertical-align: bottom;
   background-color: rgba(20, 55, 112, 0.05);

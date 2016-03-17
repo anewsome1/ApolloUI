@@ -12,8 +12,11 @@
     // border-top: $table-border-width solid $table-border-color;
   }
 
-  thead th {
+  th {
     font-weight: $font-semi-bold;
+  }
+
+  thead th {
     line-height: 1;
     vertical-align: bottom;
     background-color: $table-header-bg;
