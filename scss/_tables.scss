@@ -4,24 +4,36 @@
   margin-bottom: $spacer;
   border: $border-width solid $table-border-color;
 
+
   th,
   td {
     padding: $table-cell-padding;
     line-height: $line-height;
-    vertical-align: top;
+    vertical-align: middle;
     // border-top: $table-border-width solid $table-border-color;
   }
+
+
+  ///
+  /// Table header
+  ///
 
   th {
     font-weight: $font-semi-bold;
   }
 
   thead th {
+    // padding: $table-sm-cell-padding;
     line-height: 1;
-    vertical-align: bottom;
-    background-color: $table-header-bg;
     color: $table-header-color;
+    background-color: $table-header-bg;
+    vertical-align: bottom;
   }
+
+
+  ///
+  /// Table body
+  ///
 
   tbody tr {
     transition: all $transition-fast;
@@ -72,9 +84,9 @@
 }
 
 
-//
-// Condensed table w/ half padding
-//
+///
+/// Condensed table w/ half padding
+///
 
 .table-sm {
   th,

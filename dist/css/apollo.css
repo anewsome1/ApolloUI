@@ -366,8 +366,8 @@ table {
 }
 
 caption {
-  padding-top: 0.5rem 0.9375rem;
-  padding-bottom: 0.5rem 0.9375rem;
+  padding-top: 1rem 0.9375rem;
+  padding-bottom: 1rem 0.9375rem;
   color: #949aa0;
   text-align: left;
   caption-side: bottom;
@@ -3490,9 +3490,9 @@ textarea.form-control, textarea.sayt-input {
 
 .table th,
 .table td {
-  padding: 0.5rem 0.9375rem;
+  padding: 1rem 0.9375rem;
   line-height: 1.5;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .table th {
@@ -3501,9 +3501,9 @@ textarea.form-control, textarea.sayt-input {
 
 .table thead th {
   line-height: 1;
-  vertical-align: bottom;
-  background-color: rgba(20, 55, 112, 0.05);
   color: #143770;
+  background-color: rgba(20, 55, 112, 0.05);
+  vertical-align: bottom;
 }
 
 .table tbody tr {
@@ -3567,7 +3567,7 @@ textarea.form-control, textarea.sayt-input {
 
 .table-sm th,
 .table-sm td {
-  padding: 0.3rem 0.9375rem;
+  padding: 0.5rem 0.9375rem;
 }
 
 .table-responsive {
