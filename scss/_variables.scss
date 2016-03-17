@@ -28,21 +28,22 @@ $border-width:               .0625rem;
 /// Colors
 ///
 
-$body-color: $charcoal;
+$body-color:                  $charcoal;
 
-$brand-primary: $blue;
-$brand-success: $green;
-$brand-warning: $yellow;
-$brand-danger: $coral;
+$brand-primary:               $blue;
+$brand-info:                  $atmosphere;
+$brand-success:               $green;
+$brand-warning:               $yellow;
+$brand-danger:                $coral;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                 $blue;
-$link-decoration:            none;
-$link-hover-color:           darken($link-color, 15%);
-$link-hover-decoration:      underline;
+$link-color:                  $blue;
+$link-decoration:             none;
+$link-hover-color:            $navy;
+$link-hover-decoration:       underline;
 
 
 
@@ -51,49 +52,49 @@ $link-hover-decoration:      underline;
 ///
 
 // Font families
-$font-family-sans-serif: 'Proxima Nova', Helvetica, Arial, sans-serif;
-$font-family-base: $font-family-sans-serif;
+$font-family-sans-serif:      'Proxima Nova', Helvetica, Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif;
 
 // Sizing scale
-$font-size-root: 16px;          // Applies to `<html>` element
+$font-size-root:              16px;  // Applies to `<html>` element
 
-$font-size-base: 1rem;          // ~16px
-$font-size-lg:   1.5rem;        // ~24px
-$font-size-sm:   .875rem;       // ~14px
-$font-size-xs:   .75rem;        // ~12px
+$font-size-base:              1rem;  // ~16px
+$font-size-lg:                1.25rem;  // ~20px
+$font-size-sm:                .875rem;  // ~14px
+$font-size-xs:                .75rem;  // ~12px
 
-$font-size-h1: 5.063rem;        // ~81px
-$font-size-h2: 3.375rem;        // ~54px
-$font-size-h3: 2.25rem;         // ~36px
-$font-size-h4: $font-size-lg;
-$font-size-h5: $font-size-base;
-$font-size-h6: $font-size-sm;
+$font-size-h1:                2.441rem;  // ~39px
+$font-size-h2:                1.953rem;  // ~31px
+$font-size-h3:                1.563rem;  // ~25px
+$font-size-h4:                $font-size-lg;
+$font-size-h5:                $font-size-base;
+$font-size-h6:                $font-size-sm;
 
-$display1-size:               6rem;
-$display2-size:               5.5rem;
-$display3-size:               4.5rem;
-$display4-size:               3.5rem;
+$display1-size:               5.063rem;  // ~81px
+$display2-size:               3.375rem;  // ~54px
+$display3-size:               2.25rem;  // ~36px
+$display4-size:               1.5rem;  // ~24px
 
 // Weights
-$font-light: 300;
-$font-normal: 400;
-$font-semi-bold: 600;
+$font-light:                  300;
+$font-normal:                 400;
+$font-semi-bold:              600;
 
 $display1-weight:             300;
 $display2-weight:             300;
 $display3-weight:             300;
 $display4-weight:             300;
 
-$line-height:                1.5;
+$line-height:                 1.5;
 
-$headings-margin-bottom:     ($spacer / 2);
-$headings-font-family:       inherit;
-$headings-font-weight:       $font-light;
-$headings-line-height:       1.1;
-$headings-color:             inherit;
+$headings-margin-bottom:      ($spacer / 2);
+$headings-font-family:        inherit;
+$headings-font-weight:        $font-light;
+$headings-line-height:        1.1;
+$headings-color:              inherit;
 
-$lead-font-size:             1.25rem;
-$lead-font-weight:           300;
+$lead-font-size:              1.25rem;
+$lead-font-weight:            $font-light;
 
 $text-muted:                  $gray-light;
 
@@ -103,31 +104,31 @@ $blockquote-small-color:      $gray-light;
 $blockquote-font-size:        ($font-size-base * 1.25);
 $blockquote-border-color:     $gray-lighter;
 
-$hr-border-color:             rgba(0,0,0,.1);
+$hr-border-color:             rgba($charcoal-lighter,.6);
 $hr-border-width:             $border-width;
 
-$dt-font-weight:              bold;
+$dt-font-weight:              $font-semi-bold;
 
-$nested-kbd-font-weight:      bold;
+$nested-kbd-font-weight:      $font-semi-bold;
 
-$list-inline-padding:         5px;
+$list-inline-padding:         .5rem;
 
 
 ///
 /// Transitions
 ///
 
-$transition-fast: .25s cubic-bezier(0, 0, .5, 1);
-$transition-medium: .5s cubic-bezier(0, 0, .5, 1);
+$transition-fast:      .25s cubic-bezier(0, 0, .5, 1);
+$transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 
 
 ///
 /// Lighting
 ///
 
-$shadow-color: rgba(0, 0, 0, .2);
-$shadow-hover: .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
-$shadow-active: .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
+$shadow-color:         rgba(0, 0, 0, .2);
+$shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
+$shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -135,15 +136,20 @@ $shadow-active: .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
 ///
 
 // Sizing
-$alert-padding-y: $spacer;
-$alert-padding-x: $grid-gutter-width / 2;
-$alert-icon-size: $font-size-lg;
-$alert-font-size: $font-size-base;
-$alert-line-height: $alert-font-size * 1.2;
-$alert-shadow-height: .625rem;  // ~10px
+$alert-padding-y:             $spacer;
+$alert-padding-x:             $grid-gutter-width / 2;
+$alert-icon-size:             $font-size-lg;
+$alert-font-size:             $font-size-base;
+$alert-line-height:           $alert-font-size * 1.2;
+$alert-shadow-height:         .625rem;  // ~10px
 
 // Colors
 $alert-states: (
+  info: (
+    bg: $brand-info,
+    color: #fff,
+    icon: 'information'
+  ),
   success: (
     bg: $brand-success,
     color: #fff,
@@ -165,8 +171,8 @@ $alert-states: (
 /// Cards
 ///
 
-$card-inner-padding:       $grid-gutter-width;
-$card-bg:                  #fff;
+$card-inner-padding:          $grid-gutter-width;
+$card-bg:                     #fff;
 
 
 ///
@@ -199,8 +205,8 @@ $modal-sm:                    18.75rem; // ~300px
 ///
 /// Shared component size
 ///
-$component-height: 2rem;
-$component-height-lg: 3rem;
+$component-height:            2rem;
+$component-height-lg:         3rem;
 
 
 
@@ -309,7 +315,7 @@ $btn-link-padding-x: .5rem;
 
 $btn-variants: (
   primary: (
-    bg: $blue,
+    bg: $link-color,
     color: #fff,
     border-color: transparent,
     bg-active: $navy,
@@ -343,17 +349,22 @@ $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            .75rem;
-$table-sm-cell-padding:         .3rem;
+$table-cell-padding:            1rem ($grid-gutter-width / 2);
+$table-sm-cell-padding:         .5rem ($grid-gutter-width / 2);
+
+$table-header-bg:               rgba($blue-darker, .05);
+$table-header-color:            $blue-darker;
 
 $table-bg:                      transparent;
-$table-bg-accent:               $neutral;
+$table-bg-accent:               rgba($gray-lighter, .1);
 $table-bg-hover:                $atmosphere-lighter;
-$table-bg-active:               $table-bg-hover;
+$table-bg-active:               $atmosphere; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
-$table-border-color:            $charcoal-lighter;
+$table-border-color:            $teal-lighter;
 $table-border-color-hover:      $link-color;
+
+$table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 
 
 ///
@@ -489,9 +500,10 @@ $carousel-caption-color:                      #fff;
 /// Search
 ///
 
-$sayt-icon-size: $font-size-lg;
-$sayt-padding-left: $sayt-icon-size + $spacer;
-$sayt-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $sayt-padding-left;
+$search-icon-size: $font-size-lg;
+$search-icon-padding: calc-padding-y($component-height, $search-icon-size);
+$search-padding-left: $search-icon-size + ($search-icon-padding * 2);
+$search-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $search-padding-left;
 
 ///
 /// Slider

@@ -169,7 +169,7 @@
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Search</h3>
         <ul class="docs-page-subnav">
           
-            <li class="docs-page-subnav-item"><a href="#search-search-as-you-type">Search as you type</a></li>
+            <li class="docs-page-subnav-item"><a href="#search-search">Search</a></li>
           
         </ul>
       </li>
@@ -181,6 +181,19 @@
             <li class="docs-page-subnav-item"><a href="#slider-slider">Slider</a></li>
           
             <li class="docs-page-subnav-item"><a href="#slider-slider-range">Slider range</a></li>
+          
+        </ul>
+      </li>
+    
+      
+      <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Tabs</h3>
+        <ul class="docs-page-subnav">
+          
+            <li class="docs-page-subnav-item"><a href="#tabs-basic-tabs">Basic tabs</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#tabs-tabs-bar">Tabs bar</a></li>
+          
+            <li class="docs-page-subnav-item"><a href="#tabs-justified-tabs">Justified tabs</a></li>
           
         </ul>
       </li>
@@ -1563,16 +1576,20 @@
         <p>Off-canvas panels can be used for navigation lists, filters, and more.  Panels can be positioned on the left or right side of the page.</p>
         <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
   <div class="container-fluid">
-    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
       <span class="sr-only">Open menu</span>
     </button>
    <!-- ... -->
   </div>
 </nav>
-<aside class="off-canvas off-canvas-left" id="offcanvas-demo-1">
-  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
+<aside class="off-canvas off-canvas-left" id="off-canvas-demo">
+  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
     <span class="sr-only">Close menu</span>
   </button>
+  <h3 class="off-canvas-title">Panel title</h3>
+  <div class="search">
+    <input class="search-input">
+  </div>
   <ul class="off-canvas-menu">
     <li>Group title 1
       <ul class="off-canvas-submenu">
@@ -1614,16 +1631,20 @@
 </aside></div>
         <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#offcanvas-demo-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Open menu<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
    <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"offcanvas-demo-1"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#offcanvas-demo-1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"off-canvas-demo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-menu"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;li&gt;</span>Group title 1
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-submenu"</span><span class="nt">&gt;</span>
@@ -1670,18 +1691,18 @@
       <section class="docs-section" id="search">
       <h2>Search</h2>
       
-        <h3 id="search-search-as-you-type">Search as you type</h3>
+        <h3 id="search-search">Search</h3>
         <p>Use this component to show search results as users type (styles only).</p>
         <div class="docs-example-rendered"><div class="row">
   <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
-    <div class="sayt">
-      <input class="sayt-input" type="search" placeholder="Search individuals">
-      <ul class="sayt-results">
+    <div class="search">
+      <input class="search-input" type="search" placeholder="Search individuals">
+      <ul class="search-results">
         <li>
-          <a href="#0"><span class="sayt-highlight">Vi</span>atribunali</a>
+          <a href="#0"><span class="search-highlight">Vi</span>atribunali</a>
         </li>
         <li>
-          <a href="#0"><span class="sayt-highlight">Vi</span>atryl A</a>
+          <a href="#0"><span class="search-highlight">Vi</span>atryl A</a>
         </li>
       </ul>
     </div>
@@ -1689,14 +1710,14 @@
   <!-- With dark background -->
   <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
     <div class="bg-dark">
-      <div class="sayt">
-        <input class="sayt-input" type="search" placeholder="Search individuals">
-        <ul class="sayt-results">
+      <div class="search">
+        <input class="search-input" type="search" placeholder="Search individuals">
+        <ul class="search-results">
           <li>
-            <a href="#0"><span class="sayt-highlight">Vi</span>atribunali</a>
+            <a href="#0"><span class="search-highlight">Vi</span>atribunali</a>
           </li>
           <li>
-            <a href="#0"><span class="sayt-highlight">Vi</span>atryl A</a>
+            <a href="#0"><span class="search-highlight">Vi</span>atryl A</a>
           </li>
         </ul>
       </div>
@@ -1706,14 +1727,14 @@
 </div>
         <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6 col-lg-4 col-xl-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sayt-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"sayt-results"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"search-results"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"search-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"search-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -1721,14 +1742,14 @@
   <span class="c">&lt;!-- With dark background --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-6 col-lg-4 col-xl-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sayt"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"sayt-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"sayt-results"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"Search individuals"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"search-results"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;li&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"search-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atribunali<span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sayt-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"search-highlight"</span><span class="nt">&gt;</span>Vi<span class="nt">&lt;/span&gt;</span>atryl A<span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -1816,6 +1837,140 @@
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"slider-fill"</span><span class="nt">&gt;&lt;/span&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"likelyhood"</span> <span class="na">name=</span><span class="s">"likelyhood"</span> <span class="na">type=</span><span class="s">"hidden"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+      </section>
+    
+      
+      <section class="docs-section" id="tabs">
+      <h2>Tabs</h2>
+      
+        <h3 id="tabs-basic-tabs">Basic tabs</h3>
+        <p>Tabs are useful when you want to allow users to only see one chunk of information at a time.  Virtually any content can be used within the <code>.tab-content</code> area.</p>
+        <div class="docs-example-rendered"><!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#tabs-home" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-profile" role="tab">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-messages" role="tab">Messages</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content pad-y">
+  <div class="tab-pane active" id="tabs-home" role="tabpanel">Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR&amp;B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.</div>
+  <div class="tab-pane" id="tabs-profile" role="tabpanel">Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.</div>
+  <div class="tab-pane" id="tabs-messages" role="tabpanel">Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR&B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.</div>
+</div>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-home"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-profile"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-messages"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="c">&lt;!-- Tab panes --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content pad-y"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane active"</span> <span class="na">id=</span><span class="s">"tabs-home"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR<span class="ni">&amp;amp;</span>B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-profile"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-messages"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR<span class="err">&amp;</span>B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+        <h3 id="tabs-tabs-bar">Tabs bar</h3>
+        <p>Tab bar visual treatment for when the tabs need to be more pronounced.</p>
+        <div class="docs-example-rendered"><!-- Nav tabs -->
+<ul class="nav nav-tabs tab-bar" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#tabs-bar-home" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-bar-profile" role="tab">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-bar-messages" role="tab">Messages</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content pad-y">
+  <div class="tab-pane active" id="tabs-bar-home" role="tabpanel">Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR&B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.</div>
+  <div class="tab-pane" id="tabs-bar-profile" role="tabpanel">Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.</div>
+  <div class="tab-pane" id="tabs-bar-messages" role="tabpanel">Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR&B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.</div>
+</div>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs tab-bar"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-bar-home"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-bar-profile"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-bar-messages"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="c">&lt;!-- Tab panes --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content pad-y"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane active"</span> <span class="na">id=</span><span class="s">"tabs-bar-home"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR<span class="err">&amp;</span>B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-bar-profile"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-bar-messages"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR<span class="err">&amp;</span>B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+      
+        <h3 id="tabs-justified-tabs">Justified tabs</h3>
+        <p>Add the <code>.tabs-justified</code> modifier to make the tabs equal width and the row of tabs fill the available space.</p>
+        <div class="docs-example-rendered"><!-- Nav tabs -->
+<ul class="nav nav-tabs tab-bar tab-justified" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#tabs-justified-home" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-justified-profile" role="tab">Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-justified-messages" role="tab">Messages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#tabs-justified-settings" role="tab">Settings</a>
+  </li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content pad-y">
+  <div class="tab-pane active" id="tabs-justified-home" role="tabpanel">Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR&B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.</div>
+  <div class="tab-pane" id="tabs-justified-profile" role="tabpanel">Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.</div>
+  <div class="tab-pane" id="tabs-justified-messages" role="tabpanel">Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR&B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.</div>
+  <div class="tab-pane" id="tabs-justified-settings" role="tabpanel">Franzen gentrify seitan cred DIY, meggings farm-to-table. Kale chips disrupt bespoke pitchfork, knausgaard pork belly gastropub pop-up polaroid vegan tumblr fanny pack. Vinyl art party offal, shoreditch chartreuse VHS post-ironic lo-fi iPhone letterpress kickstarter roof party next level microdosing pabst. Letterpress everyday carry poutine locavore fingerstache, swag tacos banjo shabby chic blog portland kombucha iPhone. Letterpress health goth next level seitan. Photo booth microdosing fashion axe, XOXO fixie pabst tote bag. VHS before they sold out chambray distillery actually letterpress.</div>
+</div>
+</div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs tab-bar tab-justified"</span> <span class="na">role=</span><span class="s">"tablist"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-justified-home"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-justified-profile"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-justified-messages"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span> <span class="na">href=</span><span class="s">"#tabs-justified-settings"</span> <span class="na">role=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="c">&lt;!-- Tab panes --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-content pad-y"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane active"</span> <span class="na">id=</span><span class="s">"tabs-justified-home"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Meh leggings brooklyn bitters, four loko art party ugh skateboard keffiyeh schlitz pinterest selfies tacos celiac tousled. Pickled affogato williamsburg jean shorts, scenester umami sustainable slow-carb franzen shabby chic single-origin coffee narwhal cred drinking vinegar. Crucifix tote bag keytar paleo, before they sold out fingerstache irony. 8-bit normcore banh mi single-origin coffee cred migas, semiotics tilde fap stumptown. Letterpress tumblr listicle 90's. Sustainable gentrify vinyl normcore, thundercats tousled brunch taxidermy salvia direct trade bushwick chillwave austin squid trust fund. PBR<span class="err">&amp;</span>B cliche chicharrones flannel, mixtape art party helvetica fashion axe venmo shabby chic umami tattooed trust fund salvia actually.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-justified-profile"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Raw denim craft beer cronut, truffaut kombucha kogi blog tattooed heirloom shabby chic. Skateboard shabby chic banh mi helvetica godard. Yr neutra slow-carb, freegan art party tote bag taxidermy viral selfies plaid hella celiac hammock. Asymmetrical messenger bag butcher, yr cardigan next level iPhone jean shorts four dollar toast knausgaard shoreditch synth yuccie artisan lo-fi. Twee man braid farm-to-table health goth, roof party cold-pressed meditation try-hard cornhole microdosing. Slow-carb williamsburg DIY next level skateboard XOXO deep v readymade listicle. Fixie master cleanse dreamcatcher slow-carb, truffaut biodiesel bespoke small batch wayfarers health goth gluten-free.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-justified-messages"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Kombucha green juice ramps asymmetrical blog. Hoodie fixie pabst, etsy tumblr put a bird on it authentic meh brunch sriracha intelligentsia literally godard man braid. Sustainable fap kinfolk small batch fixie four loko, whatever plaid pug PBR<span class="err">&amp;</span>B church-key deep v bitters pinterest. Selvage retro franzen helvetica. Hashtag before they sold out echo park wolf craft beer. Deep v truffaut 3 wolf moon, neutra offal yuccie helvetica authentic ennui selvage kickstarter VHS synth locavore jean shorts. Letterpress listicle kogi, kombucha chicharrones pour-over schlitz tilde tote bag williamsburg paleo tumblr XOXO.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane"</span> <span class="na">id=</span><span class="s">"tabs-justified-settings"</span> <span class="na">role=</span><span class="s">"tabpanel"</span><span class="nt">&gt;</span>Franzen gentrify seitan cred DIY, meggings farm-to-table. Kale chips disrupt bespoke pitchfork, knausgaard pork belly gastropub pop-up polaroid vegan tumblr fanny pack. Vinyl art party offal, shoreditch chartreuse VHS post-ironic lo-fi iPhone letterpress kickstarter roof party next level microdosing pabst. Letterpress everyday carry poutine locavore fingerstache, swag tacos banjo shabby chic blog portland kombucha iPhone. Letterpress health goth next level seitan. Photo booth microdosing fashion axe, XOXO fixie pabst tote bag. VHS before they sold out chambray distillery actually letterpress.<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
       
       </section>
