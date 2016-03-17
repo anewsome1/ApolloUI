@@ -10,6 +10,7 @@ require( '../node_modules/bootstrap/dist/js/umd/alert' );
 require( '../node_modules/bootstrap/dist/js/umd/dropdown' );
 require( '../node_modules/bootstrap/dist/js/umd/modal' );
 require( '../node_modules/bootstrap/dist/js/umd/carousel' );
+require( '../node_modules/bootstrap/dist/js/umd/tab' );
 
 
 ///
