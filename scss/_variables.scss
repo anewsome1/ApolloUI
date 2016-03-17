@@ -358,11 +358,13 @@ $table-header-color:            $blue-darker;
 $table-bg:                      transparent;
 $table-bg-accent:               rgba($gray-lighter, .1);
 $table-bg-hover:                $atmosphere-lighter;
-$table-bg-active:               $table-bg-hover;
+$table-bg-active:               $atmosphere; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
 $table-border-color:            $teal-lighter;
 $table-border-color-hover:      $link-color;
+
+$table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 
 
 ///
