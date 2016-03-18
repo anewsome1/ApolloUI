@@ -1,30 +1,32 @@
 .card {
   background-color: $card-bg;
-  box-shadow: $shadow-hover;
+  box-shadow: $shadow-resting;
+  transition: all $transition-fast;
+
+  @include hover-focus {
+    box-shadow: $shadow-hover;
+  }
 }
 
 .card-block {
-  padding: $card-inner-padding;
+  @include clearfix;
+  padding: $card-spacer-y $card-spacer-x;
 
   & + & {
     padding-top: 0;
   }
 }
 
-.card-footer {
-  padding: ($card-inner-padding / 2) $card-inner-padding;
-  background-color: $neutral;
-}
-
-
 
 ///
-/// Card heading
+/// Card title and caption
 ///
 
 .card-title {
-  margin-top: $spacer;
+  margin-top: $card-spacer-y * 2;
   margin-bottom: 0;
+  font-size: $font-size-h2;
+  color: $brand-primary;
 }
 
 .card-caption {
@@ -33,6 +35,17 @@
   color: $text-muted;
 }
 
+
+///
+/// Optional textual caps
+///
+
+.card-header,
+.card-footer {
+  @include clearfix;
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+}
 
 
 ///
@@ -49,8 +62,9 @@
       top: 0;
       content: '';
       width: 100%;
-      height: .75rem;
+      height: $card-spacer-y;
       background-color: $state-bg;
+      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5),
     }
   }
 }

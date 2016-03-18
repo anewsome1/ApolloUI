@@ -3171,7 +3171,7 @@ mark,
 }
 
 .btn:hover, .btn.hover {
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .btn:focus {
@@ -3179,7 +3179,7 @@ mark,
 }
 
 .btn:active, .btn.active {
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
 }
 
 .btn:disabled, .btn.disabled {
@@ -3343,7 +3343,7 @@ mark,
 .form-control:focus, .search-input:focus, .form-control.focus, .focus.search-input {
   border-color: transparent;
   outline: none;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
 }
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
@@ -3439,7 +3439,7 @@ textarea.form-control, textarea.search-input {
 .toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
   background-color: white;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .toggle input[type="radio"]:checked + label, .nav-tabs.tab-bar .nav-link.active, .nav-tabs.tab-bar .nav-link.active:focus, .nav-tabs.tab-bar .nav-link.active:hover,
@@ -3449,7 +3449,7 @@ textarea.form-control, textarea.search-input {
   z-index: 2;
   color: #fff;
   background-color: #2975e9;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .toggle input[type="radio"]:checked + label:active, .nav-tabs.tab-bar .nav-link.active:active,
@@ -3602,7 +3602,7 @@ textarea.form-control, textarea.search-input {
   z-index: 1060;
   padding: 0;
   background: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .dropdown.open .dropdown-menu {
@@ -3759,7 +3759,7 @@ textarea.form-control, textarea.search-input {
   z-index: 1000;
   height: 3.75rem;
   background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .navbar a,
@@ -3967,7 +3967,7 @@ textarea.form-control, textarea.search-input {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f7f5f4;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .command-bar-actions {
@@ -4052,7 +4052,7 @@ textarea.form-control, textarea.search-input {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
   }
 }
 
@@ -4161,7 +4161,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .off-canvas.open {
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .off-canvas.off-canvas-left {
@@ -4282,20 +4282,20 @@ textarea.form-control, textarea.search-input {
   border: 0.0625rem solid #ced2d4;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-handle:active {
   background-color: #3a4f59;
   border-color: transparent;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
 }
 
 .disabled .slider-handle {
   background-color: #ced2d4;
   cursor: not-allowed;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
 }
 
 .slider-handle + .slider-handle {
@@ -4459,7 +4459,7 @@ textarea.form-control, textarea.search-input {
   position: relative;
   margin: 0.9375rem;
   background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
   opacity: .5;
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), transform 0.25s cubic-bezier(0, 0, 0.5, 1);
@@ -4549,31 +4549,52 @@ textarea.form-control, textarea.search-input {
 
 .card {
   background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.0625rem 0.0625rem 0.25rem rgba(29, 39, 44, 0.2);
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.card:focus, .card:hover {
+  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
 }
 
 .card-block {
-  padding: 1.875rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.card-block::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .card-block + .card-block {
   padding-top: 0;
 }
 
-.card-footer {
-  padding: 0.9375rem 1.875rem;
-  background-color: #f7f5f4;
-}
-
 .card-title {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0;
+  font-size: 1.953rem;
+  color: #2975e9;
 }
 
 .card-caption {
   margin-top: 0;
   margin-bottom: 0;
   color: #949aa0;
+}
+
+.card-header,
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: #f7f5f4;
+}
+
+.card-header::after,
+.card-footer::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .card-info {
@@ -4585,8 +4606,9 @@ textarea.form-control, textarea.search-input {
   top: 0;
   content: '';
   width: 100%;
-  height: .75rem;
+  height: 0.75rem;
   background-color: #32b5fc;
+  box-shadow: 0 0.375rem 0 0 rgba(50, 181, 252, 0.5);
 }
 
 .card-success {
@@ -4598,8 +4620,9 @@ textarea.form-control, textarea.search-input {
   top: 0;
   content: '';
   width: 100%;
-  height: .75rem;
+  height: 0.75rem;
   background-color: #2cc039;
+  box-shadow: 0 0.375rem 0 0 rgba(44, 192, 57, 0.5);
 }
 
 .card-warning {
@@ -4611,8 +4634,9 @@ textarea.form-control, textarea.search-input {
   top: 0;
   content: '';
   width: 100%;
-  height: .75rem;
+  height: 0.75rem;
   background-color: #ecdb5d;
+  box-shadow: 0 0.375rem 0 0 rgba(236, 219, 93, 0.5);
 }
 
 .card-danger {
@@ -4624,8 +4648,9 @@ textarea.form-control, textarea.search-input {
   top: 0;
   content: '';
   width: 100%;
-  height: .75rem;
+  height: 0.75rem;
   background-color: #f75040;
+  box-shadow: 0 0.375rem 0 0 rgba(247, 80, 64, 0.5);
 }
 
 .jumbotron {
