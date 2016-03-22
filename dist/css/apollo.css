@@ -4284,6 +4284,24 @@ textarea.form-control, textarea.search-input {
           transform: rotate(180deg);
 }
 
+.bg-dark .card-accordion, .off-canvas .card-accordion, .card-accordion.bg-dark, .card-accordion.off-canvas {
+  background-color: #1d272c;
+}
+
+.bg-dark .card-accordion, .off-canvas .card-accordion,
+.bg-dark .card-accordion .card-header, .off-canvas .card-accordion .card-header, .card-accordion.bg-dark, .card-accordion.off-canvas,
+.card-accordion.bg-dark .card-header, .card-accordion.off-canvas .card-header {
+  border-color: #1d272c;
+}
+
+.bg-dark .card-accordion .card-header, .off-canvas .card-accordion .card-header, .card-accordion.bg-dark .card-header, .card-accordion.off-canvas .card-header {
+  background-color: #2b3b43;
+}
+
+.bg-dark .card-accordion .card-title, .off-canvas .card-accordion .card-title, .card-accordion.bg-dark .card-title, .card-accordion.off-canvas .card-title {
+  color: #3ed6cf;
+}
+
 .card-info {
   position: relative;
 }
@@ -4655,6 +4673,8 @@ textarea.form-control, textarea.search-input {
   z-index: 1030;
   width: 18rem;
   height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);

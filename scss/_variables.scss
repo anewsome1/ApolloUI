@@ -173,15 +173,16 @@ $alert-states: (
 /// Cards
 ///
 
-$card-spacer-x:            1.25rem;
-$card-spacer-y:            .75rem;
-$card-border-width:        $border-width;
-$card-border-color:        rgba($charcoal-darker, .075);
-$card-cap-bg:              rgba($charcoal-darker, .05);
-$card-bg:                  #fff;
+$card-spacer-x:             1.25rem;
+$card-spacer-y:             .75rem;
+$card-border-width:         $border-width;
+$card-border-color:         rgba($charcoal-darker, .075);
+$card-cap-bg:               rgba($charcoal-darker, .05);
+$card-bg:                   #fff;
 
-$card-link-hover-color:    #fff;
-
+$card-inverse-border-color: $charcoal-darker;
+$card-inverse-cap-bg:       $charcoal-dark;
+$card-inverse-bg:           $charcoal-darker;
 
 
 ///

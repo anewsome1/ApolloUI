@@ -101,6 +101,28 @@
       transform: rotate(180deg);
     }
   }
+
+  ///
+  /// Dark background
+  ///
+
+  .bg-dark &,
+  &.bg-dark {
+    background-color: $card-inverse-bg;
+
+    &,
+    .card-header {
+      border-color: $card-inverse-border-color;
+    }
+
+    .card-header {
+      background-color: $card-inverse-cap-bg;
+    }
+
+    .card-title {
+      color: $teal;
+    }
+  }
 }
 
 
