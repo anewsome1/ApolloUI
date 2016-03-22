@@ -2,7 +2,7 @@
 title: Hover rows
 category: tables
 order: 10
-description: If you have your table wired to take some action when a user clicks on a row, adding the <code>table-hover</code> class gives a nice visual indication to the user that the row is clickable.
+description: If you have your table wired to take some action when a user clicks on a row, adding the <code>.table-hover</code> class gives a nice visual indication to the user that the row is clickable.  Add the <code>.table-active</code> class to a row to show that it has been selected.
 ---
 <table class="table table-hover">
   <thead>
@@ -29,7 +29,7 @@ description: If you have your table wired to take some action when a user clicks
       <td>German</td>
       <td><button class="btn btn-secondary btn-sm">Edit</button></td>
     </tr>
-    <tr>
+    <tr class="table-active">
       <td>Sweden</td>
       <td>Stockholm</td>
       <td>9 million</td>
@@ -37,5 +37,4 @@ description: If you have your table wired to take some action when a user clicks
       <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
     </tr>
   </tbody>
-  <caption>This data has not been verified, but we'll use it anyway.</caption>
 </table>
