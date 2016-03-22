@@ -127,9 +127,10 @@ $transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 ///
 
 $shadow-color:         rgba($charcoal-darker, .2);
+$shadow-border:        0 0 0 $border-width $shadow-color;
 $shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
 $shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
-$shadow-resting:        .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
+$shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -175,8 +176,8 @@ $alert-states: (
 $card-spacer-x:            1.25rem;
 $card-spacer-y:            .75rem;
 $card-border-width:        $border-width;
-$card-border-color:        #e5e5e5;
-$card-cap-bg:              $neutral;
+$card-border-color:        rgba($charcoal-darker, .075);
+$card-cap-bg:              rgba($charcoal-darker, .05);
 $card-bg:                  #fff;
 
 $card-link-hover-color:    #fff;
