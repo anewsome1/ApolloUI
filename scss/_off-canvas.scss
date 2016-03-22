@@ -99,7 +99,7 @@
   }
 
   &-menu {
-    padding-top: $spacer;
+    padding-top: $spacer-y;
 
     a {
       display: block;
@@ -115,13 +115,13 @@
       }
 
       .icon {
-        margin-right: $spacer / 2;
+        margin-right: $spacer-x / 2;
       }
     }
   }
 
   &-submenu {
-    margin-bottom: $spacer * 2;
+    margin-bottom: $spacer-y * 2;
   }
 }
 
