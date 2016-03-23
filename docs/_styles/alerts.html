@@ -5,6 +5,10 @@ order: 1
 description: Alerts are super handy
 ---
 
+<div class="alert alert-info" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  Something will happen soon, just FYI.
+</div>
 <div class="alert alert-success" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
   Great job!  You won the thing!
@@ -13,7 +17,9 @@ description: Alerts are super handy
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
   Before you continue, you should know this thing.
 </div>
-<div class="alert alert-danger" role="alert">
+<br>
+<!-- bottom alert style -->
+<div class="alert alert-danger alert-bottom" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-  Ok, something broke and I have no idea what it is.
+  Use <code>.alert-bottom</code> to flip the fade-out styling.
 </div>
