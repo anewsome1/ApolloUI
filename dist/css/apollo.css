@@ -3861,12 +3861,12 @@ textarea.form-control, textarea.search-input {
   border-radius: 50%;
 }
 
-.padding-top-navbar {
-  padding-top: 3.75rem;
+.margin-top-navbar {
+  margin-top: 3.75rem;
 }
 
-.padding-top-navbar-jumbo {
-  padding-top: 5.5rem;
+.margin-top-navbar-jumbo {
+  margin-top: 5.5rem;
 }
 
 .navbar-primary {
@@ -3992,6 +3992,72 @@ textarea.form-control, textarea.search-input {
   left: 0;
   right: 0;
   z-index: 1030;
+}
+
+.navbar-vertical {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 5.5rem;
+  background-color: #2b3b43;
+}
+
+.navbar-vertical.navbar-vertical-jumbo {
+  width: 8.25rem;
+}
+
+.navbar-vertical-link {
+  display: block;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  font-size: 0.875rem;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.navbar-vertical-link, .navbar-vertical-link:active, .navbar-vertical-link:visited {
+  color: #ced2d4;
+}
+
+.navbar-vertical-link:hover {
+  background-color: #1d272c;
+}
+
+.navbar-vertical-link.active {
+  color: #3ed6cf;
+  background-color: #0f1416;
+}
+
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before, .navbar-vertical-link-title {
+  display: block;
+}
+
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before,
+.icon + .navbar-vertical-link-title, .close + .navbar-vertical-link-title, .alert::before + .navbar-vertical-link-title, .form-msg::before + .navbar-vertical-link-title {
+  text-align: center;
+}
+
+.icon + .navbar-vertical-link-title, .close + .navbar-vertical-link-title, .alert::before + .navbar-vertical-link-title, .form-msg::before + .navbar-vertical-link-title {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
+.navbar-vertical-link .icon, .navbar-vertical-link .close, .navbar-vertical-link .alert::before, .navbar-vertical-link .form-msg::before {
+  display: block;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.navbar-vertical-link-title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.margin-left-navbar-vertical {
+  margin-left: 5.5rem;
 }
 
 .breadcrumb {
