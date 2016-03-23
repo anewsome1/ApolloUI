@@ -7,6 +7,8 @@
   z-index: $zindex-navbar-fixed;
   width: $off-canvas-width;
   height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
   transition: all $transition-fast;
@@ -97,7 +99,7 @@
   }
 
   &-menu {
-    padding-top: $spacer;
+    padding-top: $spacer-y;
 
     a {
       display: block;
@@ -113,13 +115,13 @@
       }
 
       .icon {
-        margin-right: $spacer / 2;
+        margin-right: $spacer-x / 2;
       }
     }
   }
 
   &-submenu {
-    margin-bottom: $spacer * 2;
+    margin-bottom: $spacer-y * 2;
   }
 }
 

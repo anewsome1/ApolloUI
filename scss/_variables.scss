@@ -104,7 +104,7 @@ $blockquote-small-color:      $gray-light;
 $blockquote-font-size:        ($font-size-base * 1.25);
 $blockquote-border-color:     $gray-lighter;
 
-$hr-border-color:             rgba($charcoal-darker, .1);
+$hr-border-color:             rgba($charcoal-light, .15);
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              $font-semi-bold;
@@ -126,9 +126,11 @@ $transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:         rgba(0, 0, 0, .2);
+$shadow-color:         rgba($charcoal-darker, .2);
+$shadow-border:        0 0 0 $border-width $shadow-color;
 $shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
 $shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
+$shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -171,8 +173,16 @@ $alert-states: (
 /// Cards
 ///
 
-$card-inner-padding:          $grid-gutter-width;
-$card-bg:                     #fff;
+$card-spacer-x:             1.25rem;
+$card-spacer-y:             .75rem;
+$card-border-width:         $border-width;
+$card-border-color:         rgba($charcoal-darker, .075);
+$card-cap-bg:               rgba($charcoal-darker, .05);
+$card-bg:                   #fff;
+
+$card-inverse-border-color: $charcoal-darker;
+$card-inverse-cap-bg:       $charcoal-dark;
+$card-inverse-bg:           $charcoal-darker;
 
 
 ///
