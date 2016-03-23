@@ -1,8 +1,5 @@
 .off-canvas {
-  // @TODO: Replace with opaque bg once
-  // that color is added to the palette
   @extend .bg-dark;
-  background-color: rgba($charcoal-dark,.9);
 
   position: fixed;
   top: 0;
@@ -10,6 +7,8 @@
   z-index: $zindex-navbar-fixed;
   width: $off-canvas-width;
   height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
   transition: all $transition-fast;
@@ -37,15 +36,20 @@
   }
 
   ///
-  /// Open and close buttons
+  /// Match positiioning of open/close buttons and title
   ///
 
   &-open,
-  &-close {
+  &-close,
+  &-title {
     padding-top: $off-canvas-toggle-padding-y;
     padding-bottom: $off-canvas-toggle-padding-y;
     margin-top: $off-canvas-toggle-margin-y;
     margin-bottom: $off-canvas-toggle-margin-y;
+  }
+
+  &-open,
+  &-close {
     font-size: $off-canvas-toggle-size;
     line-height: 1;
     background: none;
@@ -68,9 +72,20 @@
     }
   }
 
-  &-close::before {
+  &-close {
+    position: absolute;
+    top: 0;
+    right: $grid-gutter-width / 2;
+
+    &::before {
+      color: $teal;
+      content: map-get($_icons-map, clear);
+    }
+  }
+
+  &-title {
+    font-size: $font-size-h4;
     color: $teal;
-    content: map-get($_icons-map, backward);
   }
 
   ///
@@ -84,7 +99,7 @@
   }
 
   &-menu {
-    padding-top: $spacer;
+    padding-top: $spacer-y;
 
     a {
       display: block;
@@ -100,19 +115,21 @@
       }
 
       .icon {
-        margin-right: $spacer / 2;
+        margin-right: $spacer-x / 2;
       }
     }
   }
 
   &-submenu {
-    margin-bottom: $spacer * 2;
+    margin-bottom: $spacer-y * 2;
   }
 }
 
+// Make margins match jumbo navbar
 .navbar-jumbo {
   .off-canvas-open,
-  ~ .off-canvas .off-canvas-close {
+  ~ .off-canvas .off-canvas-close,
+  ~ .off-canvas .off-canvas-title {
       margin-top: $off-canvas-jumbo-toggle-margin-y;
       margin-bottom: $off-canvas-jumbo-toggle-margin-y;
   }

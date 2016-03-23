@@ -33,39 +33,59 @@
     display: block;
   }
 
-  ///
-  /// Modal contents (for content area)
-  ///
 
-  &-dialog {
-    position: relative; // For close button
-    padding: $modal-inner-padding;
-    margin: $grid-gutter-width / 2;
-    background-color: $modal-content-bg;
-    box-shadow: $shadow-hover;
-    opacity: .5;
-    transition: opacity $transition-fast,
-                transform $transition-fast;
-    transform: scale(.95);
+}
 
-    .in & {
-      opacity: 1;
-      transform: scale(1);
-    }
+
+
+.modal-dialog {
+  position: relative; // For close button
+  margin: $grid-gutter-width / 2;
+  background-color: $modal-content-bg;
+  box-shadow: $shadow-hover;
+  opacity: .5;
+  transition: opacity $transition-fast,
+              transform $transition-fast;
+  transform: scale(.95);
+
+  .in & {
+    opacity: 1;
+    transform: scale(1);
   }
 
-  &-header {
-    // TODO: add styles as needed
+  .close {
+    position: absolute;
+    right: $modal-inner-padding / 2;
+    top: $modal-inner-padding / 2;
+    font-size: $font-size-lg;
+    color: $charcoal-light;
   }
+}
 
-  &-footer {
-    margin-top: $modal-inner-padding;
-    & .btn + .btn {
-      margin-left: $grid-gutter-width / 2;
-    }
+///
+/// Modal contents (for content area)
+///
+
+.modal-content {
+  padding: $modal-inner-padding;
+}
+
+.modal-header {
+  .modal-title {
+    padding-bottom: $modal-inner-padding / 2;
+    margin-bottom: 0;
+    margin-right: $modal-inner-padding;
+    font-size: $font-size-h4;
   }
+}
 
-
+.modal-footer {
+  padding: ($modal-inner-padding / 2) $modal-inner-padding;
+  margin: 0 (-$modal-inner-padding) (-$modal-inner-padding);
+  background-color: $neutral;
+  & .btn + .btn {
+    margin-left: $grid-gutter-width / 2;
+  }
 }
 
 

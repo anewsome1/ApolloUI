@@ -1,10 +1,27 @@
 .card {
   background-color: $card-bg;
-  box-shadow: $shadow-hover;
+  box-shadow: $shadow-active;
+  transition: all $transition-fast;
+}
+
+
+
+
+///
+/// Card main sections
+///
+
+
+.card-header,
+.card-footer {
+  @include clearfix;
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
 }
 
 .card-block {
-  padding: $card-inner-padding;
+  @include clearfix;
+  padding: $card-spacer-y $card-spacer-x;
 
   & + & {
     padding-top: 0;
@@ -13,12 +30,14 @@
 
 
 ///
-/// Card heading
+/// Card title and caption
 ///
 
 .card-title {
-  margin-top: $spacer;
+  margin-top: $card-spacer-y * 2;
   margin-bottom: 0;
+  font-size: $font-size-h2;
+  // color: $brand-primary;
 }
 
 .card-caption {
@@ -26,6 +45,86 @@
   margin-bottom: 0;
   color: $text-muted;
 }
+
+
+///
+/// Accordion 
+///
+
+.card-accordion {
+  border: $card-border-width solid $card-border-color;
+  border-top: none;
+  // Eliminate default shadow
+  box-shadow: none;
+
+  // Visiblility
+  .card-block {
+    &.collapse {
+      display: none;
+      height: 0;
+      visibility: hidden;
+    }
+
+    &.collapsing,
+    &.collapse.in {
+      display: block;
+      visibility: visible;
+      overflow: hidden;
+      height: auto;
+      transition: height $transition-fast;
+    }
+  }
+
+  // Borders
+  .card-header {
+    border-top: $card-border-width solid $card-border-color;
+  }
+
+  // Headings
+  .card-title {
+    position: relative;
+    margin: 0;
+    font-size: $font-size-base;
+    color: $link-color;
+    cursor: pointer;
+
+    &::before {
+      @extend %icon-base;
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: map-get($_icons-map, 'collapse');
+      transition: transform $transition-fast;
+    }
+
+    &.collapsed::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  ///
+  /// Dark background
+  ///
+
+  .bg-dark &,
+  &.bg-dark {
+    background-color: $card-inverse-bg;
+
+    &,
+    .card-header {
+      border-color: $card-inverse-border-color;
+    }
+
+    .card-header {
+      background-color: $card-inverse-cap-bg;
+    }
+
+    .card-title {
+      color: $teal;
+    }
+  }
+}
+
 
 ///
 /// Card states
@@ -41,8 +140,9 @@
       top: 0;
       content: '';
       width: 100%;
-      height: .75rem;
+      height: $card-spacer-y;
       background-color: $state-bg;
+      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5),
     }
   }
 }

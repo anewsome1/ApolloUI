@@ -55,6 +55,7 @@
       @include alert-bg($bg-color: $state-bg, $text-color: $state-color, $icon: $state-icon);
 
       margin-bottom: $alert-shadow-height * 3;
+      // TODO: Create mixin for the fade-out box shadow effect
       box-shadow: 0 $alert-shadow-height 0 0 transparentize($state-bg, .5),
                   0 ($alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);
 
