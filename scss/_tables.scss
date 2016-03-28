@@ -6,10 +6,20 @@
 
   th,
   td {
-    padding: $table-cell-padding;
+    padding: $table-cell-padding-y $table-cell-padding-x;
     line-height: $line-height;
     vertical-align: middle;
-    // border-top: $table-border-width solid $table-border-color;
+    &:first-child {
+      padding-left: $table-cell-padding-x * 2;
+    }
+    &:last-child {
+      padding-right: $table-cell-padding-x * 2;
+    }
+  }
+
+  tr {
+    padding-right: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
   }
 
 
@@ -90,7 +100,8 @@
 .table-sm {
   th,
   td {
-    padding: $table-sm-cell-padding;
+    padding-top: $table-sm-cell-padding-y;
+    padding-bottom: $table-sm-cell-padding-y;
   }
 }
 

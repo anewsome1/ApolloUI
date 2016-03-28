@@ -360,8 +360,9 @@ $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            1rem $grid-gutter-width;
-$table-sm-cell-padding:         .5rem ($grid-gutter-width / 2);
+$table-cell-padding-x:          ($grid-gutter-width / 2);
+$table-cell-padding-y:          1rem;
+$table-sm-cell-padding-y:       .5rem;
 
 $table-header-bg:               rgba($blue-darker, .05);
 $table-header-color:            $blue-dark;

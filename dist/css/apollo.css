@@ -366,8 +366,8 @@ table {
 }
 
 caption {
-  padding-top: 1rem 1.875rem;
-  padding-bottom: 1rem 1.875rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   color: #949aa0;
   text-align: left;
   caption-side: bottom;
@@ -3497,9 +3497,24 @@ textarea.form-control, textarea.search-input {
 
 .table th,
 .table td {
-  padding: 1rem 1.875rem;
+  padding: 1rem 0.9375rem;
   line-height: 1.5;
   vertical-align: middle;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: 1.875rem;
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 1.875rem;
+}
+
+.table tr {
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .table th {
@@ -3574,7 +3589,8 @@ textarea.form-control, textarea.search-input {
 
 .table-sm th,
 .table-sm td {
-  padding: 0.5rem 0.9375rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .table-bordered {
