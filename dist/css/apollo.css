@@ -366,8 +366,8 @@ table {
 }
 
 caption {
-  padding-top: 1rem 0.9375rem;
-  padding-bottom: 1rem 0.9375rem;
+  padding-top: 1rem 1.875rem;
+  padding-bottom: 1rem 1.875rem;
   color: #949aa0;
   text-align: left;
   caption-side: bottom;
@@ -3490,7 +3490,7 @@ textarea.form-control, textarea.search-input {
 
 .table th,
 .table td {
-  padding: 1rem 0.9375rem;
+  padding: 1rem 1.875rem;
   line-height: 1.5;
   vertical-align: middle;
 }
@@ -3501,7 +3501,7 @@ textarea.form-control, textarea.search-input {
 
 .table thead th {
   line-height: 1;
-  color: #143770;
+  color: #1e54a8;
   background-color: rgba(20, 55, 112, 0.05);
   vertical-align: bottom;
 }
