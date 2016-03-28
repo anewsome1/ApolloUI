@@ -83,9 +83,6 @@
   padding: ($modal-inner-padding / 2) $modal-inner-padding;
   margin: 0 (-$modal-inner-padding) (-$modal-inner-padding);
   background-color: $neutral;
-  & .btn + .btn {
-    margin-left: $grid-gutter-width / 2;
-  }
 }
 
 

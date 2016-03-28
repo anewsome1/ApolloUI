@@ -3174,6 +3174,12 @@ mark,
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
+@media (min-width: 544px) {
+  .btn + .btn {
+    margin-left: 0.9375rem;
+  }
+}
+
 .btn, .btn:hover, .btn:focus {
   text-decoration: none;
 }
@@ -4235,10 +4241,6 @@ textarea.form-control, textarea.search-input {
   padding: 0.9375rem 1.875rem;
   margin: 0 -1.875rem -1.875rem;
   background-color: #f7f5f4;
-}
-
-.modal-footer .btn + .btn {
-  margin-left: 0.9375rem;
 }
 
 .modal-image-full {
