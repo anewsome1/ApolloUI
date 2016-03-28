@@ -1694,6 +1694,14 @@ output {
 
 @font-face {
   font-family: "Proxima Nova";
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.svg#proxima_novathin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot");
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.svg#proxima_novalight") format("svg");
   font-weight: 300;
@@ -2899,22 +2907,22 @@ h6 {
 
 .display-1 {
   font-size: 5.063rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .display-2 {
   font-size: 3.375rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .display-3 {
   font-size: 2.25rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .display-4 {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 hr {
@@ -3485,7 +3493,6 @@ textarea.form-control, textarea.search-input {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
-  border: 0.0625rem solid #cef5f6;
 }
 
 .table th,
@@ -3568,6 +3575,10 @@ textarea.form-control, textarea.search-input {
 .table-sm th,
 .table-sm td {
   padding: 0.5rem 0.9375rem;
+}
+
+.table-bordered {
+  border: 0.0625rem solid #cef5f6;
 }
 
 .table-responsive {

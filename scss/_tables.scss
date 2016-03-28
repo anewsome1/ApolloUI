@@ -2,7 +2,6 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
-  border: $border-width solid $table-border-color;
 
 
   th,
@@ -100,21 +99,9 @@
 //
 // Add borders all around the table and between all the columns.
 
-// .table-bordered {
-//   border: $table-border-width solid $table-border-color;
-
-//   th,
-//   td {
-//     border: $table-border-width solid $table-border-color;
-//   }
-
-//   thead {
-//     th,
-//     td {
-//       border-bottom-width: (2 * $table-border-width);
-//     }
-//   }
-// }
+.table-bordered {
+  border: $border-width solid $table-border-color;
+}
 
 
 // Hover effect

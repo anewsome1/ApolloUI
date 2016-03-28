@@ -76,14 +76,15 @@ $display3-size:               2.25rem;  // ~36px
 $display4-size:               1.5rem;  // ~24px
 
 // Weights
+$font-thin:                   100;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             $font-thin;
+$display2-weight:             $font-thin;
+$display3-weight:             $font-thin;
+$display4-weight:             $font-thin;
 
 $line-height:                 1.5;
 
