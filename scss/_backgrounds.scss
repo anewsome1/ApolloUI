@@ -3,5 +3,5 @@
 }
 
 .bg-dark {
-  @include bg-color($bg-color: rgba($charcoal-darker, .9), $text-color: rgba(#fff, .9), $link-color: $teal);
+  @include bg-color($bg-color: $charcoal-darker, $text-color: rgba(#fff, .9), $link-color: $teal);
 }
