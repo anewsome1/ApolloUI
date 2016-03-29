@@ -3185,7 +3185,7 @@ mark,
 }
 
 .btn:hover, .btn.hover {
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .btn:focus {
@@ -3193,7 +3193,7 @@ mark,
 }
 
 .btn:active, .btn.active {
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .btn:disabled, .btn.disabled {
@@ -3357,7 +3357,7 @@ mark,
 .form-control:focus, .search-input:focus, .form-control.focus, .focus.search-input {
   border-color: transparent;
   outline: none;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
@@ -3453,7 +3453,7 @@ textarea.form-control, textarea.search-input {
 .toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
   background-color: white;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .toggle input[type="radio"]:checked + label, .nav-tabs.tab-bar .nav-link.active, .nav-tabs.tab-bar .nav-link.active:focus, .nav-tabs.tab-bar .nav-link.active:hover,
@@ -3463,7 +3463,7 @@ textarea.form-control, textarea.search-input {
   z-index: 2;
   color: #fff;
   background-color: #2975e9;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .toggle input[type="radio"]:checked + label:active, .nav-tabs.tab-bar .nav-link.active:active,
@@ -3635,7 +3635,7 @@ textarea.form-control, textarea.search-input {
   z-index: 1060;
   padding: 0;
   background: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .dropdown.open .dropdown-menu {
@@ -3792,7 +3792,7 @@ textarea.form-control, textarea.search-input {
   z-index: 1000;
   height: 3.75rem;
   background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .navbar a,
@@ -4000,7 +4000,7 @@ textarea.form-control, textarea.search-input {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f7f5f4;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .command-bar-actions {
@@ -4134,20 +4134,20 @@ textarea.form-control, textarea.search-input {
   border: 0.0625rem solid #ced2d4;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-handle:active {
   background-color: #3a4f59;
   border-color: transparent;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .disabled .slider-handle {
   background-color: #ced2d4;
   cursor: not-allowed;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
 }
 
 .slider-handle + .slider-handle {
@@ -4203,7 +4203,7 @@ textarea.form-control, textarea.search-input {
   position: relative;
   margin: 0.9375rem;
   background-color: #fff;
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
   opacity: .5;
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), transform 0.25s cubic-bezier(0, 0, 0.5, 1);
@@ -4289,7 +4289,7 @@ textarea.form-control, textarea.search-input {
 
 .card {
   background-color: #fff;
-  box-shadow: 0.1875rem 0.1875rem 0.5rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -4665,7 +4665,7 @@ textarea.form-control, textarea.search-input {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -4776,7 +4776,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .off-canvas.open {
-  box-shadow: 0.3125rem 0.3125rem 1rem rgba(29, 39, 44, 0.2);
+  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
 .off-canvas.off-canvas-left {

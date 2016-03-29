@@ -1,6 +1,6 @@
 .card {
   background-color: $card-bg;
-  box-shadow: $shadow-active;
+  box-shadow: $shadow-hover;
   transition: all $transition-fast;
 }
 
@@ -48,7 +48,7 @@
 
 
 ///
-/// Accordion 
+/// Accordion
 ///
 
 .card-accordion {

@@ -127,11 +127,11 @@ $transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:         rgba($charcoal-darker, .2);
+$shadow-color:         rgba(#000, .25);
 $shadow-border:        0 0 0 $border-width $shadow-color;
-$shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
-$shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
-$shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
+$shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
+$shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
