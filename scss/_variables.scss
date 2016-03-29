@@ -181,6 +181,7 @@ $card-border-color:         rgba($charcoal-darker, .075);
 $card-cap-bg:               rgba($charcoal-darker, .05);
 $card-bg:                   #fff;
 
+// TODO: Add $bg-dark variable and use here for consistency
 $card-inverse-border-color: $charcoal-darker;
 $card-inverse-cap-bg:       $charcoal-dark;
 $card-inverse-bg:           $charcoal-darker;
