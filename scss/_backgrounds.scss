@@ -1,5 +1,5 @@
 .bg-light {
-  @include bg-color($bg-color: rgba($gray-lighter, .1));
+  @include bg-color($bg-color: $neutral);
 }
 
 .bg-dark {
