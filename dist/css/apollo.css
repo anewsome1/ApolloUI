@@ -3822,7 +3822,7 @@ textarea.form-control, textarea.search-input {
 .navbar-brand {
   display: block;
   float: left;
-  width: 17.0625rem;
+  width: 21.0625rem;
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
   margin-top: 0.8125rem;
@@ -4766,7 +4766,7 @@ textarea.form-control, textarea.search-input {
   top: 0;
   bottom: 0;
   z-index: 1030;
-  width: 18rem;
+  width: 22rem;
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
@@ -4780,21 +4780,21 @@ textarea.form-control, textarea.search-input {
 }
 
 .off-canvas.off-canvas-left {
-  left: -18rem;
+  left: -22rem;
 }
 
 .off-canvas.off-canvas-left.open {
-  -webkit-transform: translate3d(18rem, 0, 0);
-          transform: translate3d(18rem, 0, 0);
+  -webkit-transform: translate3d(22rem, 0, 0);
+          transform: translate3d(22rem, 0, 0);
 }
 
 .off-canvas.off-canvas-right {
-  right: -18rem;
+  right: -22rem;
 }
 
 .off-canvas.off-canvas-right.open {
-  -webkit-transform: translate3d(-18rem, 0, 0);
-          transform: translate3d(-18rem, 0, 0);
+  -webkit-transform: translate3d(-22rem, 0, 0);
+          transform: translate3d(-22rem, 0, 0);
 }
 
 .off-canvas-open, .off-canvas-close, .off-canvas-title {
