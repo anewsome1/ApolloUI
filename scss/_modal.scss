@@ -66,22 +66,29 @@
 /// Modal contents (for content area)
 ///
 
-.modal-content {
-  padding: $modal-inner-padding;
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: ($spacer * 2) $modal-inner-padding;
 }
 
 .modal-header {
+  padding: ($spacer * 3) $modal-inner-padding;
   .modal-title {
-    padding-bottom: $modal-inner-padding / 2;
     margin-bottom: 0;
     margin-right: $modal-inner-padding;
-    font-size: $font-size-h4;
+    font-size: $font-size-h2;
+    color: $brand-primary;
+    text-align: center;
   }
 }
 
+.modal-body {
+  padding: 0 $modal-inner-padding ($spacer * 2);
+}
+
 .modal-footer {
-  padding: ($modal-inner-padding / 2) $modal-inner-padding;
-  margin: 0 (-$modal-inner-padding) (-$modal-inner-padding);
+  padding: ($spacer * 2) $modal-inner-padding;
   background-color: $neutral;
 }
 
