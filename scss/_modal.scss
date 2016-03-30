@@ -111,13 +111,14 @@
 ///
 
 .modal-backdrop {
-  z-index: $zindex-modal-bg;
-  cursor: pointer;
-  transition: all $transition-fast;
+  display: none;
+  // z-index: $zindex-modal-bg;
+  // cursor: pointer;
+  // transition: all $transition-fast;
 
-  &.in {
-    background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
-  }
+  // &.in {
+  //   background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+  // }
 }
 
 
@@ -128,7 +129,7 @@
 .modal-dialog {
   @include media-breakpoint-up(sm) {
     max-width: $modal-md;
-    margin: 5rem auto;
+    margin: $navbar-jumbo-height auto;
 
     .modal-sm & {
       max-width: $modal-sm;

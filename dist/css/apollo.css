@@ -4178,7 +4178,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .modal {
-  z-index: 1050;
+  z-index: 1025;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -4258,19 +4258,13 @@ textarea.form-control, textarea.search-input {
 }
 
 .modal-backdrop {
-  z-index: 1040;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.modal-backdrop.in {
-  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
 }
 
 @media (min-width: 544px) {
   .modal-dialog {
     max-width: 37.5rem;
-    margin: 5rem auto;
+    margin: 5.5rem auto;
   }
   .modal-sm .modal-dialog {
     max-width: 18.75rem;

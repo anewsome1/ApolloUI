@@ -393,6 +393,21 @@ $dropdown-menu-color-hover: #fff;
 
 
 ///
+/// Z Index
+///
+
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-navbar-sticky:     1030;
+$zindex-modal-bg:          1020;
+$zindex-modal:             1025;
+
+
+
+///
 /// Navbar + Off-canvas menu
 ///
 
