@@ -1744,6 +1744,8 @@ output {
 .carousel-control .icon-next, .search::before, .off-canvas-open::before, .off-canvas-close::before {
   display: inline-block;
   font-family: "apollo-icons";
+  font-size: inherit;
+  line-height: 1;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;

@@ -11,7 +11,8 @@ $icon-svg-id: $icon-family;
 %icon-base {
   display: inline-block;
   font-family: $icon-family;
-  // font-size: inherit;
+  font-size: inherit;
+  line-height: 1;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
