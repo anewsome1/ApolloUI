@@ -191,6 +191,9 @@ body {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 20%;
   padding: 32px 16px;
   background-color: #f7f5f4;

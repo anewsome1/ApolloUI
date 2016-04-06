@@ -144,6 +144,7 @@ body {
 .docs-icon {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: percentage(1 / 5);
   padding: ($spacer * 2) $spacer;
   background-color: $neutral;
