@@ -150,17 +150,17 @@ $alert-states: (
   info: (
     bg: $brand-info,
     color: #fff,
-    icon: 'information'
+    icon: 'information-circle'
   ),
   success: (
     bg: $brand-success,
     color: #fff,
-    icon: 'qualified'
+    icon: 'check'
   ),
   warning: (
     bg: $brand-warning,
     color: null,
-    icon: 'alert'
+    icon: 'alert-circle'
   ),
   danger: (
     bg: $brand-danger,

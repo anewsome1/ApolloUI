@@ -16,7 +16,7 @@
         display: inline-block;
         padding-left: $breadcrumb-spacing;
         padding-right: $breadcrumb-spacing;
-        content: map-get($_icons-map, forward);
+        content: map-get($_icons-map, 'chevron-right');
       }
     }
   }
