@@ -4605,9 +4605,17 @@ textarea.form-control, textarea.search-input {
   margin-left: -10px;
 }
 
+.carousel-control .icon-prev::before {
+  content: "";
+}
+
 .carousel-control .icon-next {
   right: 50%;
   margin-right: -10px;
+}
+
+.carousel-control .icon-next::before {
+  content: "";
 }
 
 .carousel-indicators {
