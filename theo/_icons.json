@@ -35,1332 +35,1332 @@
       "type": "icon",
       "category": "ui"
     },
-    "annotation": {
+    "animal-health": {
       "value": "'\\e907'",
       "type": "icon",
       "category": "ui"
     },
-    "archive": {
+    "annotation": {
       "value": "'\\e908'",
       "type": "icon",
       "category": "ui"
     },
-    "arrow-down": {
+    "archive": {
       "value": "'\\e909'",
       "type": "icon",
       "category": "ui"
     },
-    "arrow-left": {
+    "arrow-down": {
       "value": "'\\e90a'",
       "type": "icon",
       "category": "ui"
     },
-    "arrow-right": {
+    "arrow-left": {
       "value": "'\\e90b'",
       "type": "icon",
       "category": "ui"
     },
-    "arrow-up": {
+    "arrow-right": {
       "value": "'\\e90c'",
       "type": "icon",
       "category": "ui"
     },
-    "backspace": {
+    "arrow-up": {
       "value": "'\\e90d'",
       "type": "icon",
       "category": "ui"
     },
-    "bed": {
+    "backspace": {
       "value": "'\\e90e'",
       "type": "icon",
       "category": "ui"
     },
-    "blank": {
+    "bed": {
       "value": "'\\e90f'",
       "type": "icon",
       "category": "ui"
     },
-    "book": {
+    "blank": {
       "value": "'\\e910'",
       "type": "icon",
       "category": "ui"
     },
-    "border-all": {
+    "book": {
       "value": "'\\e911'",
       "type": "icon",
       "category": "ui"
     },
-    "border": {
+    "border-all": {
       "value": "'\\e912'",
       "type": "icon",
       "category": "ui"
     },
-    "boxes": {
+    "border": {
       "value": "'\\e913'",
       "type": "icon",
       "category": "ui"
     },
-    "building-office": {
+    "boxes": {
       "value": "'\\e914'",
       "type": "icon",
       "category": "ui"
     },
-    "building": {
+    "building-hospital": {
       "value": "'\\e915'",
       "type": "icon",
       "category": "ui"
     },
-    "calendar-add": {
+    "building-office": {
       "value": "'\\e916'",
       "type": "icon",
       "category": "ui"
     },
-    "calendar-check": {
+    "building": {
       "value": "'\\e917'",
       "type": "icon",
       "category": "ui"
     },
-    "calendar": {
+    "calendar-add": {
       "value": "'\\e918'",
       "type": "icon",
       "category": "ui"
     },
-    "camera": {
+    "calendar-check": {
       "value": "'\\e919'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign-all": {
+    "calendar": {
       "value": "'\\e91a'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign-monitor": {
+    "camera": {
       "value": "'\\e91b'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign-multiple": {
+    "campaign-all": {
       "value": "'\\e91c'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign-target": {
+    "campaign-monitor": {
       "value": "'\\e91d'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign-wave": {
+    "campaign-multiple": {
       "value": "'\\e91e'",
       "type": "icon",
       "category": "ui"
     },
-    "campaign": {
+    "campaign-target": {
       "value": "'\\e91f'",
       "type": "icon",
       "category": "ui"
     },
-    "car-add": {
+    "campaign-wave": {
       "value": "'\\e920'",
       "type": "icon",
       "category": "ui"
     },
-    "car-wash": {
+    "campaign": {
       "value": "'\\e921'",
       "type": "icon",
       "category": "ui"
     },
-    "car": {
+    "car-add": {
       "value": "'\\e922'",
       "type": "icon",
       "category": "ui"
     },
-    "cart": {
+    "car-wash": {
       "value": "'\\e923'",
       "type": "icon",
       "category": "ui"
     },
-    "cell-insert": {
+    "car": {
       "value": "'\\e924'",
       "type": "icon",
       "category": "ui"
     },
-    "cell-merge": {
+    "cart": {
       "value": "'\\e925'",
       "type": "icon",
       "category": "ui"
     },
-    "cell-split": {
+    "cell-insert": {
       "value": "'\\e926'",
       "type": "icon",
       "category": "ui"
     },
-    "chart-bar": {
+    "cell-merge": {
       "value": "'\\e927'",
       "type": "icon",
       "category": "ui"
     },
-    "chart-line": {
+    "cell-split": {
       "value": "'\\e928'",
       "type": "icon",
       "category": "ui"
     },
-    "chart-pie": {
+    "chart-bar": {
       "value": "'\\e929'",
       "type": "icon",
       "category": "ui"
     },
-    "chat-medical": {
+    "chart-line": {
       "value": "'\\e92a'",
       "type": "icon",
       "category": "ui"
     },
-    "chat-reply": {
+    "chart-pie": {
       "value": "'\\e92b'",
       "type": "icon",
       "category": "ui"
     },
-    "chat": {
+    "chat-medical": {
       "value": "'\\e92c'",
       "type": "icon",
       "category": "ui"
     },
-    "check-circle": {
+    "chat-reply": {
       "value": "'\\e92d'",
       "type": "icon",
       "category": "ui"
     },
-    "check-solid": {
+    "chat": {
       "value": "'\\e92e'",
       "type": "icon",
       "category": "ui"
     },
-    "check": {
+    "check-circle": {
       "value": "'\\e92f'",
       "type": "icon",
       "category": "ui"
     },
-    "chevron-down": {
+    "check-solid": {
       "value": "'\\e930'",
       "type": "icon",
       "category": "ui"
     },
-    "chevron-left": {
+    "check": {
       "value": "'\\e931'",
       "type": "icon",
       "category": "ui"
     },
-    "chevron-right": {
+    "chevron-down": {
       "value": "'\\e932'",
       "type": "icon",
       "category": "ui"
     },
-    "chevron-up": {
+    "chevron-left": {
       "value": "'\\e933'",
       "type": "icon",
       "category": "ui"
     },
-    "chevrons-horizontal": {
+    "chevron-right": {
       "value": "'\\e934'",
       "type": "icon",
       "category": "ui"
     },
-    "chevrons-vertical": {
+    "chevron-up": {
       "value": "'\\e935'",
       "type": "icon",
       "category": "ui"
     },
-    "circle-solid": {
+    "chevrons-horizontal": {
       "value": "'\\e936'",
       "type": "icon",
       "category": "ui"
     },
-    "circle": {
+    "chevrons-vertical": {
       "value": "'\\e937'",
       "type": "icon",
       "category": "ui"
     },
-    "clipboard": {
+    "circle-solid": {
       "value": "'\\e938'",
       "type": "icon",
       "category": "ui"
     },
-    "clock": {
+    "circle": {
       "value": "'\\e939'",
       "type": "icon",
       "category": "ui"
     },
-    "close-circle": {
+    "clipboard": {
       "value": "'\\e93a'",
       "type": "icon",
       "category": "ui"
     },
-    "close-solid": {
+    "clock": {
       "value": "'\\e93b'",
       "type": "icon",
       "category": "ui"
     },
-    "close": {
+    "close-circle": {
       "value": "'\\e93c'",
       "type": "icon",
       "category": "ui"
     },
-    "cloud-download": {
+    "close-solid": {
       "value": "'\\e93d'",
       "type": "icon",
       "category": "ui"
     },
-    "cloud-sync": {
+    "close": {
       "value": "'\\e93e'",
       "type": "icon",
       "category": "ui"
     },
-    "cloud-upload": {
+    "cloud-download": {
       "value": "'\\e93f'",
       "type": "icon",
       "category": "ui"
     },
-    "collapse": {
+    "cloud-sync": {
       "value": "'\\e940'",
       "type": "icon",
       "category": "ui"
     },
-    "color-fill": {
+    "cloud-upload": {
       "value": "'\\e941'",
       "type": "icon",
       "category": "ui"
     },
-    "compare": {
+    "collapse": {
       "value": "'\\e942'",
       "type": "icon",
       "category": "ui"
     },
-    "computer": {
+    "color-fill": {
       "value": "'\\e943'",
       "type": "icon",
       "category": "ui"
     },
-    "contact-add": {
+    "compare": {
       "value": "'\\e944'",
       "type": "icon",
       "category": "ui"
     },
-    "contact": {
+    "computer": {
       "value": "'\\e945'",
       "type": "icon",
       "category": "ui"
     },
-    "continue-circle": {
+    "contact-add": {
       "value": "'\\e946'",
       "type": "icon",
       "category": "ui"
     },
-    "copy": {
+    "contact": {
       "value": "'\\e947'",
       "type": "icon",
       "category": "ui"
     },
-    "corporate-finance": {
+    "continue-circle": {
       "value": "'\\e948'",
       "type": "icon",
       "category": "ui"
     },
-    "credit-card": {
+    "copy": {
       "value": "'\\e949'",
       "type": "icon",
       "category": "ui"
     },
-    "crosshairs": {
+    "corporate-finance": {
       "value": "'\\e94a'",
       "type": "icon",
       "category": "ui"
     },
-    "cut": {
+    "credit-card": {
       "value": "'\\e94b'",
       "type": "icon",
       "category": "ui"
     },
-    "database-settings": {
+    "crosshairs": {
       "value": "'\\e94c'",
       "type": "icon",
       "category": "ui"
     },
-    "database": {
+    "cut": {
       "value": "'\\e94d'",
       "type": "icon",
       "category": "ui"
     },
-    "dining": {
+    "database-settings": {
       "value": "'\\e94e'",
       "type": "icon",
       "category": "ui"
     },
-    "disabled": {
+    "database": {
       "value": "'\\e94f'",
       "type": "icon",
       "category": "ui"
     },
-    "document": {
+    "dining": {
       "value": "'\\e950'",
       "type": "icon",
       "category": "ui"
     },
-    "drag": {
+    "disabled": {
       "value": "'\\e951'",
       "type": "icon",
       "category": "ui"
     },
-    "dropdown": {
+    "doctor": {
       "value": "'\\e952'",
       "type": "icon",
       "category": "ui"
     },
-    "edit": {
+    "document": {
       "value": "'\\e953'",
       "type": "icon",
       "category": "ui"
     },
-    "ellipsis-circle": {
+    "drag": {
       "value": "'\\e954'",
       "type": "icon",
       "category": "ui"
     },
-    "email-template": {
+    "dropdown": {
       "value": "'\\e955'",
       "type": "icon",
       "category": "ui"
     },
-    "envelope-open": {
+    "edit": {
       "value": "'\\e956'",
       "type": "icon",
       "category": "ui"
     },
-    "envelope": {
+    "ellipsis-circle": {
       "value": "'\\e957'",
       "type": "icon",
       "category": "ui"
     },
-    "expand": {
+    "email-template": {
       "value": "'\\e958'",
       "type": "icon",
       "category": "ui"
     },
-    "export": {
+    "envelope-open": {
       "value": "'\\e959'",
       "type": "icon",
       "category": "ui"
     },
-    "face-happy": {
+    "envelope": {
       "value": "'\\e95a'",
       "type": "icon",
       "category": "ui"
     },
-    "face-neutral": {
+    "expand": {
       "value": "'\\e95b'",
       "type": "icon",
       "category": "ui"
     },
-    "face-sad": {
+    "export": {
       "value": "'\\e95c'",
       "type": "icon",
       "category": "ui"
     },
-    "facebook": {
+    "face-happy": {
       "value": "'\\e95d'",
       "type": "icon",
       "category": "ui"
     },
-    "factory": {
+    "face-neutral": {
       "value": "'\\e95e'",
       "type": "icon",
       "category": "ui"
     },
-    "fax": {
+    "face-sad": {
       "value": "'\\e95f'",
       "type": "icon",
       "category": "ui"
     },
-    "file-code": {
+    "facebook": {
       "value": "'\\e960'",
       "type": "icon",
       "category": "ui"
     },
-    "file-csv": {
+    "factory": {
       "value": "'\\e961'",
       "type": "icon",
       "category": "ui"
     },
-    "file-excel": {
+    "fax": {
       "value": "'\\e962'",
       "type": "icon",
       "category": "ui"
     },
-    "file-executable": {
+    "file-code": {
       "value": "'\\e963'",
       "type": "icon",
       "category": "ui"
     },
-    "file-pdf": {
+    "file-csv": {
       "value": "'\\e964'",
       "type": "icon",
       "category": "ui"
     },
-    "file-powerpoint": {
+    "file-excel": {
       "value": "'\\e965'",
       "type": "icon",
       "category": "ui"
     },
-    "file-script": {
+    "file-executable": {
       "value": "'\\e966'",
       "type": "icon",
       "category": "ui"
     },
-    "file-star": {
+    "file-pdf": {
       "value": "'\\e967'",
       "type": "icon",
       "category": "ui"
     },
-    "file-text": {
+    "file-powerpoint": {
       "value": "'\\e968'",
       "type": "icon",
       "category": "ui"
     },
-    "file-video": {
+    "file-script": {
       "value": "'\\e969'",
       "type": "icon",
       "category": "ui"
     },
-    "file-word": {
+    "file-star": {
       "value": "'\\e96a'",
       "type": "icon",
       "category": "ui"
     },
-    "file-zip": {
+    "file-text": {
       "value": "'\\e96b'",
       "type": "icon",
       "category": "ui"
     },
-    "filter": {
+    "file-video": {
       "value": "'\\e96c'",
       "type": "icon",
       "category": "ui"
     },
-    "folder-alert": {
+    "file-word": {
       "value": "'\\e96d'",
       "type": "icon",
       "category": "ui"
     },
-    "folder": {
+    "file-zip": {
       "value": "'\\e96e'",
       "type": "icon",
       "category": "ui"
     },
-    "form": {
+    "filter": {
       "value": "'\\e96f'",
       "type": "icon",
       "category": "ui"
     },
-    "gauge-full": {
+    "folder-alert": {
       "value": "'\\e970'",
       "type": "icon",
       "category": "ui"
     },
-    "gauge-half": {
+    "folder": {
       "value": "'\\e971'",
       "type": "icon",
       "category": "ui"
     },
-    "globe": {
+    "form": {
       "value": "'\\e972'",
       "type": "icon",
       "category": "ui"
     },
-    "grid-solid": {
+    "gauge-full": {
       "value": "'\\e973'",
       "type": "icon",
       "category": "ui"
     },
-    "grid": {
+    "gauge-half": {
       "value": "'\\e974'",
       "type": "icon",
       "category": "ui"
     },
-    "group-add": {
+    "globe": {
       "value": "'\\e975'",
       "type": "icon",
       "category": "ui"
     },
-    "group-business": {
+    "grid-solid": {
       "value": "'\\e976'",
       "type": "icon",
       "category": "ui"
     },
-    "group": {
+    "grid": {
       "value": "'\\e977'",
       "type": "icon",
       "category": "ui"
     },
-    "hand-truck": {
+    "group-add": {
       "value": "'\\e978'",
       "type": "icon",
       "category": "ui"
     },
-    "handshake": {
+    "group-business": {
       "value": "'\\e979'",
       "type": "icon",
       "category": "ui"
     },
-    "help-circle": {
+    "group": {
       "value": "'\\e97a'",
       "type": "icon",
       "category": "ui"
     },
-    "hierarchy": {
+    "hand-truck": {
       "value": "'\\e97b'",
       "type": "icon",
       "category": "ui"
     },
-    "home-alt": {
+    "handshake": {
       "value": "'\\e97c'",
       "type": "icon",
       "category": "ui"
     },
-    "home": {
+    "help-circle": {
       "value": "'\\e97d'",
       "type": "icon",
       "category": "ui"
     },
-    "image": {
+    "hierarchy": {
       "value": "'\\e97e'",
       "type": "icon",
       "category": "ui"
     },
-    "import": {
+    "home-alt": {
       "value": "'\\e97f'",
       "type": "icon",
       "category": "ui"
     },
-    "indent": {
+    "home": {
       "value": "'\\e980'",
       "type": "icon",
       "category": "ui"
     },
-    "information-circle": {
+    "image": {
       "value": "'\\e981'",
       "type": "icon",
       "category": "ui"
     },
-    "insert-column": {
+    "import": {
       "value": "'\\e982'",
       "type": "icon",
       "category": "ui"
     },
-    "insert-placeholder": {
+    "indent": {
       "value": "'\\e983'",
       "type": "icon",
       "category": "ui"
     },
-    "insert-row": {
+    "information-circle": {
       "value": "'\\e984'",
       "type": "icon",
       "category": "ui"
     },
-    "internet": {
+    "insert-column": {
       "value": "'\\e985'",
       "type": "icon",
       "category": "ui"
     },
-    "journey-activity-monitor": {
+    "insert-placeholder": {
       "value": "'\\e986'",
       "type": "icon",
       "category": "ui"
     },
-    "journey-filter": {
+    "insert-row": {
       "value": "'\\e987'",
       "type": "icon",
       "category": "ui"
     },
-    "journey-filters-shared": {
+    "internet": {
       "value": "'\\e988'",
       "type": "icon",
       "category": "ui"
     },
-    "journey": {
+    "journey-activity-monitor": {
       "value": "'\\e989'",
       "type": "icon",
       "category": "ui"
     },
-    "key": {
+    "journey-filter": {
       "value": "'\\e98a'",
       "type": "icon",
       "category": "ui"
     },
-    "landing-page": {
+    "journey-filters-shared": {
       "value": "'\\e98b'",
       "type": "icon",
       "category": "ui"
     },
-    "left-to-right": {
+    "journey": {
       "value": "'\\e98c'",
       "type": "icon",
       "category": "ui"
     },
-    "lesson": {
+    "key": {
       "value": "'\\e98d'",
       "type": "icon",
       "category": "ui"
     },
-    "link": {
+    "landing-page": {
       "value": "'\\e98e'",
       "type": "icon",
       "category": "ui"
     },
-    "linkedin": {
+    "left-to-right": {
       "value": "'\\e98f'",
       "type": "icon",
       "category": "ui"
     },
-    "list-bulleted": {
+    "lesson": {
       "value": "'\\e990'",
       "type": "icon",
       "category": "ui"
     },
-    "list-ordered": {
+    "link": {
       "value": "'\\e991'",
       "type": "icon",
       "category": "ui"
     },
-    "load": {
+    "linkedin": {
       "value": "'\\e992'",
       "type": "icon",
       "category": "ui"
     },
-    "loading": {
+    "list-bulleted": {
       "value": "'\\e993'",
       "type": "icon",
       "category": "ui"
     },
-    "location-solid": {
+    "list-ordered": {
       "value": "'\\e994'",
       "type": "icon",
       "category": "ui"
     },
-    "location": {
+    "load": {
       "value": "'\\e995'",
       "type": "icon",
       "category": "ui"
     },
-    "lock": {
+    "loading": {
       "value": "'\\e996'",
       "type": "icon",
       "category": "ui"
     },
-    "mailbox": {
+    "location-solid": {
       "value": "'\\e997'",
       "type": "icon",
       "category": "ui"
     },
-    "map": {
+    "location": {
       "value": "'\\e998'",
       "type": "icon",
       "category": "ui"
     },
-    "menu": {
+    "lock": {
       "value": "'\\e999'",
       "type": "icon",
       "category": "ui"
     },
-    "merge": {
+    "mailbox": {
       "value": "'\\e99a'",
       "type": "icon",
       "category": "ui"
     },
-    "message-alert": {
+    "map": {
       "value": "'\\e99b'",
       "type": "icon",
       "category": "ui"
     },
-    "message-reply": {
+    "menu": {
       "value": "'\\e99c'",
       "type": "icon",
       "category": "ui"
     },
-    "message-user": {
+    "merge": {
       "value": "'\\e99d'",
       "type": "icon",
       "category": "ui"
     },
-    "message-yammer": {
+    "message-alert": {
       "value": "'\\e99e'",
       "type": "icon",
       "category": "ui"
     },
-    "message": {
+    "message-reply": {
       "value": "'\\e99f'",
       "type": "icon",
       "category": "ui"
     },
-    "microphone": {
+    "message-user": {
       "value": "'\\e9a0'",
       "type": "icon",
       "category": "ui"
     },
-    "minus-circle": {
+    "message-yammer": {
       "value": "'\\e9a1'",
       "type": "icon",
       "category": "ui"
     },
-    "minus-solid": {
+    "message": {
       "value": "'\\e9a2'",
       "type": "icon",
       "category": "ui"
     },
-    "minus": {
+    "microphone": {
       "value": "'\\e9a3'",
       "type": "icon",
       "category": "ui"
     },
-    "moon": {
+    "minus-circle": {
       "value": "'\\e9a4'",
       "type": "icon",
       "category": "ui"
     },
-    "network": {
+    "minus-solid": {
       "value": "'\\e9a5'",
       "type": "icon",
       "category": "ui"
     },
-    "news": {
+    "minus": {
       "value": "'\\e9a6'",
       "type": "icon",
       "category": "ui"
     },
-    "notification-settings": {
+    "moon": {
       "value": "'\\e9a7'",
       "type": "icon",
       "category": "ui"
     },
-    "notification": {
+    "network": {
       "value": "'\\e9a8'",
       "type": "icon",
       "category": "ui"
     },
-    "order-descending": {
+    "news": {
       "value": "'\\e9a9'",
       "type": "icon",
       "category": "ui"
     },
-    "outdent": {
+    "notification-settings": {
       "value": "'\\e9aa'",
       "type": "icon",
       "category": "ui"
     },
-    "page-template": {
+    "notification": {
       "value": "'\\e9ab'",
       "type": "icon",
       "category": "ui"
     },
-    "pager": {
+    "order-descending": {
       "value": "'\\e9ac'",
       "type": "icon",
       "category": "ui"
     },
-    "paste": {
+    "outdent": {
       "value": "'\\e9ad'",
       "type": "icon",
       "category": "ui"
     },
-    "pause-circle": {
+    "page-template": {
       "value": "'\\e9ae'",
       "type": "icon",
       "category": "ui"
     },
-    "phone-home": {
+    "pager": {
       "value": "'\\e9af'",
       "type": "icon",
       "category": "ui"
     },
-    "phone-mobile": {
+    "paste": {
       "value": "'\\e9b0'",
       "type": "icon",
       "category": "ui"
     },
-    "phone": {
+    "pause-circle": {
       "value": "'\\e9b1'",
       "type": "icon",
       "category": "ui"
     },
-    "plus-circle": {
+    "pharmacy-chain": {
       "value": "'\\e9b2'",
       "type": "icon",
       "category": "ui"
     },
-    "plus-solid": {
+    "pharmacy": {
       "value": "'\\e9b3'",
       "type": "icon",
       "category": "ui"
     },
-    "plus": {
+    "phone-home": {
       "value": "'\\e9b4'",
       "type": "icon",
       "category": "ui"
     },
-    "presentation": {
+    "phone-mobile": {
       "value": "'\\e9b5'",
       "type": "icon",
       "category": "ui"
     },
-    "print": {
+    "phone": {
       "value": "'\\e9b6'",
       "type": "icon",
       "category": "ui"
     },
-    "profile-reload": {
+    "pill": {
       "value": "'\\e9b7'",
       "type": "icon",
       "category": "ui"
     },
-    "profile": {
+    "plus-circle": {
       "value": "'\\e9b8'",
       "type": "icon",
       "category": "ui"
     },
-    "progress": {
+    "plus-solid": {
       "value": "'\\e9b9'",
       "type": "icon",
       "category": "ui"
     },
-    "project-plan": {
+    "plus": {
       "value": "'\\e9ba'",
       "type": "icon",
       "category": "ui"
     },
-    "queue-settings": {
+    "presentation": {
       "value": "'\\e9bb'",
       "type": "icon",
       "category": "ui"
     },
-    "queue": {
+    "print": {
       "value": "'\\e9bc'",
       "type": "icon",
       "category": "ui"
     },
-    "receipt": {
+    "profile-reload": {
       "value": "'\\e9bd'",
       "type": "icon",
       "category": "ui"
     },
-    "recording": {
+    "profile": {
       "value": "'\\e9be'",
       "type": "icon",
       "category": "ui"
     },
-    "redo": {
+    "progress": {
       "value": "'\\e9bf'",
       "type": "icon",
       "category": "ui"
     },
-    "reload": {
+    "project-plan": {
       "value": "'\\e9c0'",
       "type": "icon",
       "category": "ui"
     },
-    "report-check": {
+    "queue-settings": {
       "value": "'\\e9c1'",
       "type": "icon",
       "category": "ui"
     },
-    "report": {
+    "queue": {
       "value": "'\\e9c2'",
       "type": "icon",
       "category": "ui"
     },
-    "reports": {
+    "receipt": {
       "value": "'\\e9c3'",
       "type": "icon",
       "category": "ui"
     },
-    "right-to-left": {
+    "recording": {
       "value": "'\\e9c4'",
       "type": "icon",
       "category": "ui"
     },
-    "route": {
+    "redo": {
       "value": "'\\e9c5'",
       "type": "icon",
       "category": "ui"
     },
-    "save": {
+    "reload": {
       "value": "'\\e9c6'",
       "type": "icon",
       "category": "ui"
     },
-    "screen": {
+    "report-check": {
       "value": "'\\e9c7'",
       "type": "icon",
       "category": "ui"
     },
-    "search": {
+    "report": {
       "value": "'\\e9c8'",
       "type": "icon",
       "category": "ui"
     },
-    "settings": {
+    "reports": {
       "value": "'\\e9c9'",
       "type": "icon",
       "category": "ui"
     },
-    "share": {
+    "right-to-left": {
       "value": "'\\e9ca'",
       "type": "icon",
       "category": "ui"
     },
-    "shipping": {
+    "route": {
       "value": "'\\e9cb'",
       "type": "icon",
       "category": "ui"
     },
-    "sidebar-expand": {
+    "save": {
       "value": "'\\e9cc'",
       "type": "icon",
       "category": "ui"
     },
-    "signature": {
+    "screen": {
       "value": "'\\e9cd'",
       "type": "icon",
       "category": "ui"
     },
-    "signup": {
+    "search": {
       "value": "'\\e9ce'",
       "type": "icon",
       "category": "ui"
     },
-    "slides": {
+    "settings": {
       "value": "'\\e9cf'",
       "type": "icon",
       "category": "ui"
     },
-    "special-character": {
+    "share": {
       "value": "'\\e9d0'",
       "type": "icon",
       "category": "ui"
     },
-    "spellcheck": {
+    "shipping": {
       "value": "'\\e9d1'",
       "type": "icon",
       "category": "ui"
     },
-    "split": {
+    "sidebar-expand": {
       "value": "'\\e9d2'",
       "type": "icon",
       "category": "ui"
     },
-    "square-solid": {
+    "signature": {
       "value": "'\\e9d3'",
       "type": "icon",
       "category": "ui"
     },
-    "square": {
+    "signup": {
       "value": "'\\e9d4'",
       "type": "icon",
       "category": "ui"
     },
-    "star-solid": {
+    "slides": {
       "value": "'\\e9d5'",
       "type": "icon",
       "category": "ui"
     },
-    "star": {
+    "special-character": {
       "value": "'\\e9d6'",
       "type": "icon",
       "category": "ui"
     },
-    "start-circle": {
+    "spellcheck": {
       "value": "'\\e9d7'",
       "type": "icon",
       "category": "ui"
     },
-    "status": {
+    "split": {
       "value": "'\\e9d8'",
       "type": "icon",
       "category": "ui"
     },
-    "stop-circle": {
+    "square-solid": {
       "value": "'\\e9d9'",
       "type": "icon",
       "category": "ui"
     },
-    "stop-solid": {
+    "square": {
       "value": "'\\e9da'",
       "type": "icon",
       "category": "ui"
     },
-    "stop": {
+    "star-solid": {
       "value": "'\\e9db'",
       "type": "icon",
       "category": "ui"
     },
-    "stopwatch": {
+    "star": {
       "value": "'\\e9dc'",
       "type": "icon",
       "category": "ui"
     },
-    "store-check": {
+    "start-circle": {
       "value": "'\\e9dd'",
       "type": "icon",
       "category": "ui"
     },
-    "survey-monitor": {
+    "status": {
       "value": "'\\e9de'",
       "type": "icon",
       "category": "ui"
     },
-    "survey": {
+    "stethoscope": {
       "value": "'\\e9df'",
       "type": "icon",
       "category": "ui"
     },
-    "sync": {
+    "stop-circle": {
       "value": "'\\e9e0'",
       "type": "icon",
       "category": "ui"
     },
-    "tablet": {
+    "stop-solid": {
       "value": "'\\e9e1'",
       "type": "icon",
       "category": "ui"
     },
-    "tag": {
+    "stop": {
       "value": "'\\e9e2'",
       "type": "icon",
       "category": "ui"
     },
-    "target": {
+    "stopwatch": {
       "value": "'\\e9e3'",
       "type": "icon",
       "category": "ui"
     },
-    "taxi": {
+    "store-check": {
       "value": "'\\e9e4'",
       "type": "icon",
       "category": "ui"
     },
-    "text-bold": {
+    "survey-monitor": {
       "value": "'\\e9e5'",
       "type": "icon",
       "category": "ui"
     },
-    "text-highlight": {
+    "survey": {
       "value": "'\\e9e6'",
       "type": "icon",
       "category": "ui"
     },
-    "text-italic": {
+    "sync": {
       "value": "'\\e9e7'",
       "type": "icon",
       "category": "ui"
     },
-    "text-larger": {
+    "tablet": {
       "value": "'\\e9e8'",
       "type": "icon",
       "category": "ui"
     },
-    "text-remove-formatting": {
+    "tag": {
       "value": "'\\e9e9'",
       "type": "icon",
       "category": "ui"
     },
-    "text-smaller": {
+    "target": {
       "value": "'\\e9ea'",
       "type": "icon",
       "category": "ui"
     },
-    "text-strikethrough": {
+    "taxi": {
       "value": "'\\e9eb'",
       "type": "icon",
       "category": "ui"
     },
-    "text-subscript": {
+    "temperature": {
       "value": "'\\e9ec'",
       "type": "icon",
       "category": "ui"
     },
-    "text-superscript": {
+    "text-bold": {
       "value": "'\\e9ed'",
       "type": "icon",
       "category": "ui"
     },
-    "text-underline": {
+    "text-highlight": {
       "value": "'\\e9ee'",
       "type": "icon",
       "category": "ui"
     },
-    "thumbs-down": {
+    "text-italic": {
       "value": "'\\e9ef'",
       "type": "icon",
       "category": "ui"
     },
-    "thumbs-up": {
+    "text-larger": {
       "value": "'\\e9f0'",
       "type": "icon",
       "category": "ui"
     },
-    "ticket": {
+    "text-remove-formatting": {
       "value": "'\\e9f1'",
       "type": "icon",
       "category": "ui"
     },
-    "to-do": {
+    "text-smaller": {
       "value": "'\\e9f2'",
       "type": "icon",
       "category": "ui"
     },
-    "tool": {
+    "text-strikethrough": {
       "value": "'\\e9f3'",
       "type": "icon",
       "category": "ui"
     },
-    "train": {
+    "text-subscript": {
       "value": "'\\e9f4'",
       "type": "icon",
       "category": "ui"
     },
-    "trash": {
+    "text-superscript": {
       "value": "'\\e9f5'",
       "type": "icon",
       "category": "ui"
     },
-    "trend": {
+    "text-underline": {
       "value": "'\\e9f6'",
       "type": "icon",
       "category": "ui"
     },
-    "trophy": {
+    "thumbs-down": {
       "value": "'\\e9f7'",
       "type": "icon",
       "category": "ui"
     },
-    "twitter": {
+    "thumbs-up": {
       "value": "'\\e9f8'",
       "type": "icon",
       "category": "ui"
     },
-    "undo": {
+    "ticket": {
       "value": "'\\e9f9'",
       "type": "icon",
       "category": "ui"
     },
-    "user-add": {
+    "to-do": {
       "value": "'\\e9fa'",
       "type": "icon",
       "category": "ui"
     },
-    "user-assign": {
+    "tool": {
       "value": "'\\e9fb'",
       "type": "icon",
       "category": "ui"
     },
-    "user-business": {
+    "train": {
       "value": "'\\e9fc'",
       "type": "icon",
       "category": "ui"
     },
-    "user-check": {
+    "trash": {
       "value": "'\\e9fd'",
       "type": "icon",
       "category": "ui"
     },
-    "user-history": {
+    "trend": {
       "value": "'\\e9fe'",
       "type": "icon",
       "category": "ui"
     },
-    "user-message": {
+    "trophy": {
       "value": "'\\e9ff'",
       "type": "icon",
       "category": "ui"
     },
-    "user-review": {
+    "twitter": {
       "value": "'\\ea00'",
       "type": "icon",
       "category": "ui"
     },
-    "user-star": {
+    "undo": {
       "value": "'\\ea01'",
       "type": "icon",
       "category": "ui"
     },
-    "user": {
+    "user-add": {
       "value": "'\\ea02'",
       "type": "icon",
       "category": "ui"
     },
-    "vault": {
+    "user-assign": {
       "value": "'\\ea03'",
       "type": "icon",
       "category": "ui"
     },
-    "video": {
+    "user-business": {
       "value": "'\\ea04'",
       "type": "icon",
       "category": "ui"
     },
-    "view": {
+    "user-check": {
       "value": "'\\ea05'",
       "type": "icon",
       "category": "ui"
     },
-    "yammer": {
+    "user-history": {
       "value": "'\\ea06'",
       "type": "icon",
       "category": "ui"
     },
-    "youtube": {
+    "user-message": {
       "value": "'\\ea07'",
       "type": "icon",
       "category": "ui"
     },
-    "animal-health": {
+    "user-review": {
       "value": "'\\ea08'",
       "type": "icon",
       "category": "ui"
     },
-    "building-hospital": {
+    "user-star": {
       "value": "'\\ea09'",
       "type": "icon",
       "category": "ui"
     },
-    "doctor": {
+    "user": {
       "value": "'\\ea0a'",
       "type": "icon",
       "category": "ui"
     },
-    "pharmacy-chain": {
+    "vault": {
       "value": "'\\ea0b'",
       "type": "icon",
       "category": "ui"
     },
-    "pharmacy": {
+    "veterinarian": {
       "value": "'\\ea0c'",
       "type": "icon",
       "category": "ui"
     },
-    "pill": {
+    "video": {
       "value": "'\\ea0d'",
       "type": "icon",
       "category": "ui"
     },
-    "stethoscope": {
+    "view": {
       "value": "'\\ea0e'",
       "type": "icon",
       "category": "ui"
     },
-    "temperature": {
+    "yammer": {
       "value": "'\\ea0f'",
       "type": "icon",
       "category": "ui"
     },
-    "veterinarian": {
+    "youtube": {
       "value": "'\\ea10'",
       "type": "icon",
       "category": "ui"
