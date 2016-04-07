@@ -1,5 +1,7 @@
+///
+///  Creates font-face declaration with optional font weight and style
+///
 
-/// Creates font-face declaration with optional font weight and style
 @mixin font-face($family, $path, $svg-id, $filename: '', $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;
@@ -13,18 +15,38 @@
   }
 }
 
-/// Background colors
+
+///
+///  Background colors
+///
+
 @mixin bg-color($bg-color, $text-color: null, $link-color: null) {
   background-color: $bg-color;
   @if($text-color) {
     color: $text-color;
   }
   @if($link-color) {
-    a,
-    a:hover,
-    a:active,
-    a:visited {
-      color: $link-color;
+    a:not(.btn-primary):not(.btn-secondary) {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+
+///
+/// Error states
+///
+
+@mixin alert-bg($bg-color, $text-color: null, $link-color: null, $icon: null) {
+  @include bg-color($bg-color, $text-color, $link-color);
+  @if($icon) {
+    &::before {
+      content: map-get($_icons-map, $icon);
     }
   }
 }

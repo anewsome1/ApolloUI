@@ -1,9 +1,8 @@
 .highlight {
   padding: 16px;
   margin-bottom: 0;
-  background-color: #f7f7f9;
-  border: 1px solid #e3ebef;
-  color: #3a4f5a;
+  background-color: #f7f5f4;
+  color: #3a4f59;
 }
 
 .highlight pre {
@@ -11,19 +10,19 @@
 }
 
 .highlight .nt {
-  color: #297dfd;
+  color: #245eb7;
 }
 
 .highlight .na {
-  color: #37dad3;
+  color: #32b5fc;
 }
 
 .highlight .s {
-  color: #25b4ff;
+  color: #de4839;
 }
 
 .highlight .c {
-  color: #ced3d6;
+  color: #b9b8b7;
 }
 
 code,
@@ -52,7 +51,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 pre {
@@ -91,8 +90,6 @@ body {
   padding-top: 3.75rem;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f7f7f9;
-  border-right: 1px solid #e3ebef;
 }
 
 .docs-sidebar + .docs-content {
@@ -131,11 +128,11 @@ body {
   padding-bottom: 16px;
 }
 
-.docs-section h2 {
+.docs-section > h2 {
   margin-bottom: 16px;
 }
 
-.docs-section h3 {
+.docs-section > h3 {
   padding-top: 16px;
 }
 
@@ -149,6 +146,22 @@ body {
   margin-bottom: 32px;
 }
 
+.docs-color-block {
+  position: relative;
+  float: left;
+  width: 16.66667%;
+  height: 10rem;
+}
+
+.docs-color-block .docs-color-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: rgba(29, 39, 44, 0.5);
+}
+
 .show-grid .row {
   margin-bottom: 16px;
 }
@@ -158,8 +171,8 @@ body {
   padding-bottom: 16px;
   text-align: center;
   color: #fff;
-  background-color: #3a4f5a;
-  border: 1px solid #fff;
+  background-color: #3a4f59;
+  border: 0.0625rem solid #fff;
 }
 
 .docs-icon-container {
@@ -176,19 +189,19 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 20%;
-  background-color: #f7f7f9;
+  background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .docs-icon:hover {
-  background-color: #297dfd;
+  background-color: #2975e9;
   color: #fff;
 }
 
 .docs-icon .icon {
   width: 40%;
-  font-size: 2.25rem;
+  font-size: 1.563rem;
   text-align: center;
 }
 

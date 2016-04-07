@@ -3,6 +3,7 @@
 ///
 
 var gulp          = require( 'gulp' );
+var del           = require( 'del' );
 var rename        = require( 'gulp-rename' );
 var insert        = require( 'gulp-insert' );
 var browserSync   = require( 'browser-sync' );
@@ -20,7 +21,7 @@ var theo          = require( 'theo' );
 ///
 
 var strings = {
-  VERSION: '/*! Apollo JS v0.2.2 */'
+  VERSION: '/*! Apollo JS v0.3.0 */'
 };
 
 var path = {
@@ -155,22 +156,43 @@ gulp.task( 'jekyll', function ( gulpCallBack ) {
 /// Theo transformations
 ///
 
-gulp.task( 'theo-colors', function() {
-  gulp.src( 'theo/_color-variables.json')
+gulp.task( 'clean:theo', function() {
+  return del([
+    'scss/_props/*.scss',
+    'docs/_data/*.json'
+  ]);
+});
+
+gulp.task( 'theo-colors-scss', [ 'clean:theo' ], function() {
+  gulp.src( 'theo/_palette.json')
     .pipe( theo.plugins.transform( 'web' ))
     .pipe( theo.plugins.format( 'scss' ))
-    .pipe( gulp.dest( 'scss' ));
+    .pipe( gulp.dest( 'scss/_props' ));
 });
 
-gulp.task( 'theo-icons-sass', function() {
-  gulp.src( 'theo/icons.json')
+gulp.task( 'theo-colors-scss-map', [ 'clean:theo' ], function() {
+  gulp.src( 'theo/_palette.json')
+    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.format( 'map.scss' ))
+    .pipe( gulp.dest( 'scss/_props' ));
+});
+
+gulp.task( 'theo-colors-json', [ 'clean:theo' ], function() {
+  gulp.src( 'theo/_palette.json')
+    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.format( 'json' ))
+    .pipe( gulp.dest( 'docs/_data' ));
+});
+
+gulp.task( 'theo-icons-scss', [ 'clean:theo' ], function() {
+  gulp.src( 'theo/_icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'map.scss' ))
-    .pipe( gulp.dest( 'scss' ));
+    .pipe( gulp.dest( 'scss/_props' ));
 });
 
-gulp.task( 'theo-icons-json', function() {
-  gulp.src( 'theo/icons.json')
+gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
+  gulp.src( 'theo/_icons.json')
     .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'json' ))
     .pipe( gulp.dest( 'docs/_data' ));
@@ -181,6 +203,6 @@ gulp.task( 'theo-icons-json', function() {
 /// Conglomerate tasks
 ///
 
-gulp.task( 'theo', [ 'theo-colors', 'theo-icons-sass', 'theo-icons-json' ]);
+gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);

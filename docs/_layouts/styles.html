@@ -11,7 +11,7 @@ layout: base
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">{{ group.name | capitalize }}</h3>
         <ul class="docs-page-subnav">
           {% for item in group_items %}
-            <li class="docs-page-subnav-item"><a href="#{{ item.title | slugify }}">{{ item.title }}</a></li>
+            <li class="docs-page-subnav-item"><a href="#{{ group.name | slugify }}-{{ item.title | slugify }}">{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -27,12 +27,14 @@ layout: base
       <section class="docs-section" id="{{ group.name | slugify }}">
       <h2>{{ group.name | capitalize }}</h2>
       {% for item in group_items %}
-        <h3 id="{{ item.title | slugify }}">{{ item.title }}</h3>
+        <h3 id="{{ group.name | slugify }}-{{ item.title | slugify }}">{{ item.title }}</h3>
         <p>{{ item.description }}</p>
         <div class="docs-example-rendered {{ item.classes }}">
           {{ item.content }}
         </div>
+        {% unless item.no_code %}
         <div class="docs-example-code">{% highlight html %}{{ item.content }}{% endhighlight %}</div>
+        {% endunless %}
       {% endfor %}
       </section>
     {% endfor %}

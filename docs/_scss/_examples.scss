@@ -1,4 +1,3 @@
-
 ///
 /// Page Layout
 ///
@@ -19,8 +18,6 @@ body {
   padding-top: $navbar-height;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: $gray-lightest;
-  border-right: 1px solid $gray-lighter;
 
   + .docs-content {
     margin-left: $docs-sidebar-width;
@@ -67,11 +64,11 @@ body {
   padding-top: $spacer;
   padding-bottom: $spacer;
 
-  h2 {
+  > h2 {
     margin-bottom: $spacer;
   }
 
-  h3 {
+  > h3 {
     padding-top: $spacer;
   }
 }
@@ -84,6 +81,29 @@ body {
 
 .docs-example-code {
   margin-bottom: $spacer * 2;
+}
+
+
+///
+/// Color palette
+///
+
+.docs-color-block {
+  position: relative;
+  float: left;
+  width: percentage( 1 / 6 );
+  // margin-bottom: $spacer;
+  height: 10rem;
+
+  .docs-color-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: ($spacer / 2) $spacer;
+    // font-weight: 600;
+    color: #fff;
+    background-color: rgba($charcoal-darker,.5);
+  }
 }
 
 ///
@@ -124,7 +144,7 @@ body {
 .docs-icon {
   display: flex;
   width: percentage(1 / 5);
-  background-color: $gray-lightest;
+  background-color: $neutral;
   border: 1px solid #fff;
   transition: all $transition-fast;
 
@@ -143,15 +163,3 @@ body {
 .docs-icon-name {
   padding-top: $spacer;
 }
-
-
-
-
-
-
-
-
-
-
-
-

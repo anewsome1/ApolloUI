@@ -1,21 +1,26 @@
 ---
-title: Off-canvas menu
-category: navbar
+title: Off-canvas panel
+category: off-canvas
 order: 4
-description: TODO--Add JS to toggle off-canvas menu.  For now, toggle by adding the class <code>open</code> to <code>aside.off-canvas</code>.
+description: Off-canvas panels can be used for navigation lists, filters, and more.  Panels can be positioned on the left or right side of the page.</p><p>The example below shows a panel triggered by a button in the navbar, but they can be toggled by a button anywhere using <code>data-toggle="off-canvas"</code> and the corresponding <code>data-target="#..."</code>
 ---
 <nav class="navbar navbar-primary navbar-jumbo">
   <div class="container-fluid">
-    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
+
       <span class="sr-only">Open menu</span>
     </button>
    <!-- ... -->
   </div>
 </nav>
-<aside class="off-canvas off-canvas-left" id="offcanvas-demo-1">
-  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#offcanvas-demo-1">
+<aside class="off-canvas off-canvas-left" id="off-canvas-demo">
+  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
     <span class="sr-only">Close menu</span>
   </button>
+  <h3 class="off-canvas-title">Panel title</h3>
+  <div class="search">
+    <input class="search-input">
+  </div>
   <ul class="off-canvas-menu">
     <li>Group title 1
       <ul class="off-canvas-submenu">
