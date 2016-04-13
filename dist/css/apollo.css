@@ -3790,7 +3790,7 @@ textarea.form-control, textarea.search-input {
 .navbar {
   position: relative;
   z-index: 1000;
-  height: 3.75rem;
+  height: 5.5rem;
   background-color: #fff;
   box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
@@ -3807,16 +3807,16 @@ textarea.form-control, textarea.search-input {
   width: 100%;
 }
 
-.navbar.navbar-jumbo {
-  height: 5.5rem;
+.navbar.navbar-sm {
+  height: 3.75rem;
 }
 
-.navbar.navbar-jumbo .navbar-brand {
-  margin-top: 1.6875rem;
+.navbar.navbar-sm .navbar-brand {
+  margin-top: 0.8125rem;
 }
 
-.navbar.navbar-jumbo .navbar-item > a {
-  margin-top: 1.8125rem;
+.navbar.navbar-sm .navbar-item > a {
+  margin-top: 0.9375rem;
 }
 
 .navbar-brand {
@@ -3825,7 +3825,7 @@ textarea.form-control, textarea.search-input {
   width: 21.0625rem;
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
-  margin-top: 0.8125rem;
+  margin-top: 1.6875rem;
   font-size: 1.25rem;
   text-align: center;
   line-height: 1;
@@ -3853,7 +3853,7 @@ textarea.form-control, textarea.search-input {
   display: block;
   font-size: 1rem;
   line-height: 1;
-  margin-top: 0.9375rem;
+  margin-top: 1.8125rem;
   padding: 0.4375rem 1.125rem;
 }
 
@@ -3895,11 +3895,11 @@ textarea.form-control, textarea.search-input {
 }
 
 .margin-top-navbar {
-  margin-top: 3.75rem;
+  margin-top: 5.5rem;
 }
 
-.margin-top-navbar-jumbo {
-  margin-top: 5.5rem;
+.margin-top-navbar-sm {
+  margin-top: 3.75rem;
 }
 
 .navbar-primary {
@@ -4805,8 +4805,8 @@ textarea.form-control, textarea.search-input {
 .off-canvas-open, .off-canvas-close, .off-canvas-title {
   padding-top: 0.4375rem;
   padding-bottom: 0.4375rem;
-  margin-top: 0.8125rem;
-  margin-bottom: 0.8125rem;
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
 }
 
 .off-canvas-open, .off-canvas-close {
@@ -4877,8 +4877,8 @@ textarea.form-control, textarea.search-input {
 .navbar-jumbo .off-canvas-open,
 .navbar-jumbo ~ .off-canvas .off-canvas-close,
 .navbar-jumbo ~ .off-canvas .off-canvas-title {
-  margin-top: 1.6875rem;
-  margin-bottom: 1.6875rem;
+  margin-top: 0.8125rem;
+  margin-bottom: 0.8125rem;
 }
 
 .loading-indicator {

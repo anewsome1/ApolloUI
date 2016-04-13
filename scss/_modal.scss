@@ -136,7 +136,7 @@
 .modal-dialog {
   @include media-breakpoint-up(sm) {
     max-width: $modal-md;
-    margin: $navbar-jumbo-height auto;
+    margin: $navbar-height auto;
 
     .modal-sm & {
       max-width: $modal-sm;

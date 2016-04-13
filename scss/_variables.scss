@@ -19,9 +19,9 @@ $enable-flex:               true;
 /// Spacing
 ///
 
-// $spacer:                     1rem;
-// $spacer-x:                   $spacer;
-// $spacer-y:                   $spacer;
+$spacer:                     1rem;
+$spacer-x:                   $spacer;
+$spacer-y:                   $spacer;
 $border-width:               .0625rem;
 
 ///
@@ -419,7 +419,7 @@ $zindex-modal:             1025;
 $off-canvas-width: 22rem;  // ~352px
 
 // Default
-$navbar-height: 3.75rem; // ~60px
+$navbar-height: 5.5rem; // ~88px
 $navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
 $navbar-brand-font-size: $font-size-h4;
 $navbar-link-font-size: $font-size-base;
@@ -433,12 +433,12 @@ $off-canvas-toggle-padding-y: $navbar-link-padding-y;
 $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
 
 
-// Jumbo
-$navbar-jumbo-height: 5.5rem; // ~88px
-$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+// Small variation
+$navbar-sm-height: 3.75rem; // ~60px
+$navbar-sm-brand-margin-top: ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-jumbo-toggle-margin-y: $navbar-jumbo-brand-margin-top;
+$off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
 
 // Themes
 $navbar-variants: (
@@ -464,7 +464,7 @@ $navbar-variants: (
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px
 $profile-img-text-size: $font-size-h4;
-$profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
+$profile-margin-top: ($navbar-height / 2) - ($profile-img-size / 2);
 
 
 ///
