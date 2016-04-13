@@ -188,7 +188,14 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 20%;
+  padding: 32px 16px;
   background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
@@ -200,11 +207,7 @@ body {
 }
 
 .docs-icon .icon {
-  width: 40%;
-  font-size: 1.563rem;
+  width: 30%;
+  font-size: 1.953rem;
   text-align: center;
-}
-
-.docs-icon-name {
-  padding-top: 16px;
 }

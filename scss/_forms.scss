@@ -61,7 +61,7 @@ select.form-control {
   // &::after {
   //   @extend %icon-base;
 
-  //   content: map-get($_icons-map, expand);
+  //   content: map-get($_icons-map, 'chevron-down');
   // }
 }
 
@@ -167,11 +167,11 @@ textarea.form-control {
 
 // .checkbox input[type="checkbox"] {
 //   + label::before {
-//     content: map-get($_icons-map, box-unchecked);
+//     content: map-get($_icons-map, 'square');
 //   }
 
 //   &:checked + label::before {
-//     content: map-get($_icons-map, box-checked);
+//     content: map-get($_icons-map, 'check-solid');
 //   }
 // }
 

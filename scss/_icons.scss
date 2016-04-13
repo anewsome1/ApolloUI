@@ -1,8 +1,8 @@
 @import '_props/icons.map';
 
-$icon-family: 'nexxucons';
-$icon-cdn-path: '//cdn.ims.io/design/icon-font/1.4.1/';
-$icon-filename: 'nexxucons';
+$icon-family: 'apollo-icons';
+$icon-cdn-path: '//cdn.ims.io/design/icon-font/2.0/';
+$icon-filename: 'apollo-icons';
 $icon-svg-id: $icon-family;
 
 @include font-face($family: $icon-family, $path: $icon-cdn-path, $svg-id: $icon-svg-id, $filename: $icon-filename);
@@ -11,7 +11,8 @@ $icon-svg-id: $icon-family;
 %icon-base {
   display: inline-block;
   font-family: $icon-family;
-  // font-size: inherit;
+  font-size: inherit;
+  vertical-align: initial;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
