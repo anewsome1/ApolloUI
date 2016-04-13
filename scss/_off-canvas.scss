@@ -68,7 +68,7 @@
     color: #fff;
 
     &::before {
-      content: map-get($_icons-map, justified);
+      content: map-get($_icons-map, 'menu');
     }
   }
 
@@ -79,7 +79,7 @@
 
     &::before {
       color: $teal;
-      content: map-get($_icons-map, clear);
+      content: map-get($_icons-map, 'close');
     }
   }
 
@@ -122,6 +122,10 @@
 
   &-submenu {
     margin-bottom: $spacer-y * 2;
+
+    .icon {
+      font-size: $font-size-sm;
+    }
   }
 }
 
