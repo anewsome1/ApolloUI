@@ -93,7 +93,7 @@
       position: absolute;
       right: 0;
       top: 0;
-      content: map-get($_icons-map, 'collapse');
+      content: map-get($_icons-map, 'chevron-up');
       transition: transform $transition-fast;
     }
 

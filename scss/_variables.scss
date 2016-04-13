@@ -151,17 +151,17 @@ $alert-states: (
   info: (
     bg: $brand-info,
     color: #fff,
-    icon: 'information'
+    icon: 'information-circle'
   ),
   success: (
     bg: $brand-success,
     color: #fff,
-    icon: 'qualified'
+    icon: 'check'
   ),
   warning: (
     bg: $brand-warning,
     color: null,
-    icon: 'alert'
+    icon: 'alert-circle'
   ),
   danger: (
     bg: $brand-danger,
@@ -544,7 +544,7 @@ $carousel-caption-color:                      #fff;
 /// Search
 ///
 
-$search-icon-size: $font-size-lg;
+$search-icon-size: $font-size-base;
 $search-icon-padding: calc-padding-y($component-height, $search-icon-size);
 $search-padding-left: $search-icon-size + ($search-icon-padding * 2);
 $search-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $search-padding-left;

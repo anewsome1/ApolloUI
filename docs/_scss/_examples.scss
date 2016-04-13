@@ -143,7 +143,10 @@ body {
 
 .docs-icon {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   width: percentage(1 / 5);
+  padding: ($spacer * 2) $spacer;
   background-color: $neutral;
   border: 1px solid #fff;
   transition: all $transition-fast;
@@ -154,12 +157,12 @@ body {
   }
 
   .icon {
-    width: 40%;
-    font-size: $font-size-h3;
+    width: 30%;
+    font-size: $font-size-h2;
     text-align: center;
   }
 }
 
 .docs-icon-name {
-  padding-top: $spacer;
+  // padding-top: $spacer;
 }
