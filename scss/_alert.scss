@@ -22,17 +22,18 @@
     @extend .icon;
 
     margin-right: $alert-padding-x / 2;
+    vertical-align: text-top;
   }
 
   // Positioning
-  // &.alert-bottom {
-  //   margin-top: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow above
-  // }
+  &.alert-bottom {
+    margin-top: $alert-shadow-height * 3;
+  }
 
   // Size options
-  &.alert-sm {
-    // @TODO: make this a thing
-  }
+  // &.alert-sm {
+  //   // @TODO: make this a thing
+  // }
 
   .close {
     position: absolute;
@@ -60,7 +61,6 @@
                   0 ($alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);
 
       &.alert-bottom {
-        margin-top: $alert-shadow-height * 3;
         box-shadow: 0 (-$alert-shadow-height) 0 0 transparentize($state-bg, .5),
                     0 (-$alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);
       }

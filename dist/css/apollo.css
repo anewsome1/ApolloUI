@@ -3119,6 +3119,11 @@ mark,
 
 .alert::before, .form-msg::before {
   margin-right: 0.46875rem;
+  vertical-align: text-top;
+}
+
+.alert.alert-bottom, .alert-bottom.form-msg {
+  margin-top: 1.875rem;
 }
 
 .alert .close, .form-msg .close {
@@ -3140,7 +3145,6 @@ mark,
 }
 
 .alert.alert-info.alert-bottom, .alert-info.alert-bottom.form-msg {
-  margin-top: 1.875rem;
   box-shadow: 0 -0.625rem 0 0 rgba(50, 181, 252, 0.5), 0 -1.25rem 0 0 rgba(50, 181, 252, 0.25);
 }
 
@@ -3156,7 +3160,6 @@ mark,
 }
 
 .alert.alert-success.alert-bottom, .alert-success.alert-bottom.form-msg {
-  margin-top: 1.875rem;
   box-shadow: 0 -0.625rem 0 0 rgba(44, 192, 57, 0.5), 0 -1.25rem 0 0 rgba(44, 192, 57, 0.25);
 }
 
@@ -3171,7 +3174,6 @@ mark,
 }
 
 .alert.alert-warning.alert-bottom, .alert-warning.alert-bottom.form-msg {
-  margin-top: 1.875rem;
   box-shadow: 0 -0.625rem 0 0 rgba(236, 219, 93, 0.5), 0 -1.25rem 0 0 rgba(236, 219, 93, 0.25);
 }
 
@@ -3187,7 +3189,6 @@ mark,
 }
 
 .alert.alert-danger.alert-bottom, .alert-danger.alert-bottom.form-msg {
-  margin-top: 1.875rem;
   box-shadow: 0 -0.625rem 0 0 rgba(247, 80, 64, 0.5), 0 -1.25rem 0 0 rgba(247, 80, 64, 0.25);
 }
 
