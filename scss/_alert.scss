@@ -4,11 +4,9 @@
   z-index: 0;
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $spacer;
-  // margin-bottom: ($alert-shadow-height * 2) + $spacer;  // Compensate for box shadow below
-  // color: #fff;
+  margin-bottom: $alert-shadow-height * 3;
   font-size: $alert-font-size;
   line-height: $alert-line-height;
-  // background-color: $coral;
 
   // Icons for message and close button
   &::before,
@@ -30,11 +28,6 @@
     margin-top: $alert-shadow-height * 3;
   }
 
-  // Size options
-  // &.alert-sm {
-  //   // @TODO: make this a thing
-  // }
-
   .close {
     position: absolute;
     top: 50%;
@@ -55,7 +48,6 @@
     &.alert-#{ $state } {
       @include alert-bg($bg-color: $state-bg, $text-color: $state-color, $icon: $state-icon);
 
-      margin-bottom: $alert-shadow-height * 3;
       // TODO: Create mixin for the fade-out box shadow effect
       box-shadow: 0 $alert-shadow-height 0 0 transparentize($state-bg, .5),
                   0 ($alert-shadow-height * 2) 0 0 transparentize($state-bg, .75);

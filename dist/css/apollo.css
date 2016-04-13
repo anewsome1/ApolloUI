@@ -1741,7 +1741,7 @@ output {
 }
 
 .icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .card-accordion .card-title::before, .carousel-control .icon-prev,
-.carousel-control .icon-next, .search::before, .off-canvas-open::before, .off-canvas-close::before {
+.carousel-control .icon-next, .search::before, .off-canvas-open::before, .off-canvas-close::before, .empty-space-icon {
   display: inline-block;
   font-family: "apollo-icons";
   font-size: inherit;
@@ -3106,6 +3106,7 @@ mark,
   z-index: 0;
   padding: 1rem 0.9375rem;
   margin-bottom: 1rem;
+  margin-bottom: 1.875rem;
   font-size: 1rem;
   line-height: 1.2rem;
 }
@@ -3136,7 +3137,6 @@ mark,
 .alert.alert-info, .alert-info.form-msg {
   background-color: #32b5fc;
   color: #fff;
-  margin-bottom: 1.875rem;
   box-shadow: 0 0.625rem 0 0 rgba(50, 181, 252, 0.5), 0 1.25rem 0 0 rgba(50, 181, 252, 0.25);
 }
 
@@ -3151,7 +3151,6 @@ mark,
 .alert.alert-success, .alert-success.form-msg {
   background-color: #2cc039;
   color: #fff;
-  margin-bottom: 1.875rem;
   box-shadow: 0 0.625rem 0 0 rgba(44, 192, 57, 0.5), 0 1.25rem 0 0 rgba(44, 192, 57, 0.25);
 }
 
@@ -3165,7 +3164,6 @@ mark,
 
 .alert.alert-warning, .alert-warning.form-msg {
   background-color: #ecdb5d;
-  margin-bottom: 1.875rem;
   box-shadow: 0 0.625rem 0 0 rgba(236, 219, 93, 0.5), 0 1.25rem 0 0 rgba(236, 219, 93, 0.25);
 }
 
@@ -3180,7 +3178,6 @@ mark,
 .alert.alert-danger, .alert-danger.form-msg {
   background-color: #f75040;
   color: #fff;
-  margin-bottom: 1.875rem;
   box-shadow: 0 0.625rem 0 0 rgba(247, 80, 64, 0.5), 0 1.25rem 0 0 rgba(247, 80, 64, 0.25);
 }
 
@@ -5014,17 +5011,18 @@ textarea.form-control, textarea.search-input {
   border-radius: 50%;
 }
 
-.bg-dark .empty-space-icon, .off-canvas .empty-space-icon {
-  color: #3ed6cf;
-  border-color: #3ed6cf;
-}
-
 .empty-space-icon::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -1.75rem;
+  margin-top: -1.5rem;
   margin-left: -1.5rem;
+}
+
+.bg-dark .empty-space-icon, .off-canvas .empty-space-icon {
+  color: #3ed6cf;
+  border-color: #3ed6cf;
 }
 
 @-webkit-keyframes pulse {
