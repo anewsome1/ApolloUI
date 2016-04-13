@@ -1734,8 +1734,8 @@ output {
 
 @font-face {
   font-family: "apollo-icons";
-  src: url("/font/apollo-icons.eot");
-  src: url("/font/apollo-icons.eot?#iefix") format("embedded-opentype"), url("/font/apollo-icons.woff") format("woff"), url("/font/apollo-icons.ttf") format("truetype"), url("/font/apollo-icons.svg#apollo-icons") format("svg");
+  src: url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.eot");
+  src: url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.woff") format("woff"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.ttf") format("truetype"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.svg#apollo-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
