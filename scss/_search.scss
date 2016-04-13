@@ -9,10 +9,10 @@
     left: 0;
     z-index: 10;
     padding: $search-icon-padding;
-    margin-top: (-$search-icon-padding / 2); // TODO: Remove this shim once icon alignment is fixed
+    // margin-top: (-$search-icon-padding / 2); // TODO: Remove this shim once icon alignment is fixed
     font-size: $search-icon-size;
     line-height: 1;
-    content: map-get($_icons-map, search);
+    content: map-get($_icons-map, 'search');
   }
 }
 

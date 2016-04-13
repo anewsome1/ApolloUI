@@ -10,7 +10,7 @@
     @extend %icon-base;
 
     margin-left: .125rem;
-    content: map-get($_icons-map, expand);
+    content: map-get($_icons-map, 'chevron-down');
     vertical-align: bottom;
   }
 

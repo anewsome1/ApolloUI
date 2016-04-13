@@ -5,7 +5,7 @@
   border: 0;
 
   &::before {
-    content: map-get($_icons-map, clear);
+    content: map-get($_icons-map, 'close');
   }
 }
 
