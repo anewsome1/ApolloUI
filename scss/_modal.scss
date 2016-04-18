@@ -43,12 +43,12 @@
   box-shadow: $shadow-hover;
   opacity: .5;
   transition: opacity $transition-fast,
-              transform $transition-fast;
-  transform: scale(.95);
+              transform $transition-medium;
+  transform: translateY(-100%);
 
   .in & {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 
   .close {
@@ -70,23 +70,35 @@
   padding: ($spacer * 2) $modal-inner-padding;
 }
 
-.modal-header {
-  padding: ($spacer * 3) $modal-inner-padding;
+.modal-title {
+  color: $brand-primary;
+  font-size: $font-size-h3;
+  color: $brand-primary;
+}
+
+.modal:not(.modal-sm) .modal-header {
+  @include media-breakpoint-up(sm) {
+    padding: ($spacer * 3) $modal-inner-padding;
+  }
+
   .modal-title {
     margin-bottom: 0;
-    margin-right: $modal-inner-padding;
+    margin-right: $modal-inner-padding;  // Make room for close button
     font-size: $font-size-h2;
-    color: $brand-primary;
     text-align: center;
   }
 }
 
 .modal-body {
-  padding: 0 $modal-inner-padding ($spacer * 2);
+  padding: 0 $modal-inner-padding ($spacer * 2);j
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .modal-footer {
-  padding: ($spacer * 2) $modal-inner-padding;
+  padding: ($spacer-y * 1.5) $modal-inner-padding;
   background-color: $neutral;
 }
 
@@ -95,18 +107,13 @@
 /// Full-width images
 ///
 
-.modal-image-full {
-  margin-left: -$modal-inner-padding;
-  margin-right: -$modal-inner-padding;
+.modal-image {
 
   // Add margin when adjacent to modal header or body
   & + .modal-header,
-  & + .modal-body {
+  & + .modal-body,
+  & + .modal-footer {
     margin-top: $modal-inner-padding;
-  }
-
-  &.modal-image-top {
-    margin-top: -$modal-inner-padding;
   }
 }
 
@@ -150,6 +157,7 @@
   // Login form variation
   .modal-login & {
     max-width: $login-max-width;
+    padding: $modal-inner-padding;
   }
 }
 
