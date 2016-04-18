@@ -4309,7 +4309,13 @@ textarea.form-control, textarea.search-input {
 }
 
 .modal-backdrop {
-  display: none;
+  z-index: 1020;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.modal-backdrop.in {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 544px) {

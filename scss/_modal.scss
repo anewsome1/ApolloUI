@@ -32,8 +32,6 @@
   &.in {
     display: block;
   }
-
-
 }
 
 
@@ -118,14 +116,13 @@
 ///
 
 .modal-backdrop {
-  display: none;
-  // z-index: $zindex-modal-bg;
-  // cursor: pointer;
-  // transition: all $transition-fast;
+  z-index: $zindex-modal-bg;
+  cursor: pointer;
+  transition: all $transition-fast;
 
-  // &.in {
-  //   background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
-  // }
+  &.in {
+    background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+  }
 }
 
 
