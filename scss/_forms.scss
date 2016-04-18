@@ -198,16 +198,23 @@ textarea.form-control {
   padding-bottom: $toggle-padding-y;
   line-height: 1;
   text-align: center;
-  color: $blue;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, .85);
   cursor: pointer;
   transition: all $transition-fast;
+  &,
+  .bg-dark & {
+    color: $blue;
+  }
 }
 
 %toggle-hover {
   z-index: 2;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: $shadow-hover;
+  &:active {
+    color: #fff;
+    background-color: $charcoal;
+  }
 }
 
 %toggle-active {
@@ -215,10 +222,6 @@ textarea.form-control {
   color: #fff;
   background-color: $blue;
   box-shadow: $shadow-hover;
-
-  &:active {
-    background-color: $navy;
-  }
 }
 
 .toggle {
