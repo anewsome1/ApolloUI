@@ -32,8 +32,6 @@
   &.in {
     display: block;
   }
-
-
 }
 
 
@@ -45,12 +43,12 @@
   box-shadow: $shadow-hover;
   opacity: .5;
   transition: opacity $transition-fast,
-              transform $transition-fast;
-  transform: scale(.95);
+              transform $transition-medium;
+  transform: translateY(-100%);
 
   .in & {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 
   .close {
@@ -66,26 +64,42 @@
 /// Modal contents (for content area)
 ///
 
-.modal-content {
-  padding: $modal-inner-padding;
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: ($spacer * 2) $modal-inner-padding;
 }
 
-.modal-header {
+.modal-title {
+  color: $brand-primary;
+  font-size: $font-size-h3;
+  color: $brand-primary;
+}
+
+.modal:not(.modal-sm) .modal-header {
+  @include media-breakpoint-up(sm) {
+    padding: ($spacer * 3) $modal-inner-padding;
+  }
+
   .modal-title {
-    padding-bottom: $modal-inner-padding / 2;
     margin-bottom: 0;
-    margin-right: $modal-inner-padding;
-    font-size: $font-size-h4;
+    margin-right: $modal-inner-padding;  // Make room for close button
+    font-size: $font-size-h2;
+    text-align: center;
+  }
+}
+
+.modal-body {
+  padding: 0 $modal-inner-padding ($spacer * 2);j
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
 .modal-footer {
-  padding: ($modal-inner-padding / 2) $modal-inner-padding;
-  margin: 0 (-$modal-inner-padding) (-$modal-inner-padding);
+  padding: ($spacer-y * 1.5) $modal-inner-padding;
   background-color: $neutral;
-  & .btn + .btn {
-    margin-left: $grid-gutter-width / 2;
-  }
 }
 
 
@@ -93,18 +107,13 @@
 /// Full-width images
 ///
 
-.modal-image-full {
-  margin-left: -$modal-inner-padding;
-  margin-right: -$modal-inner-padding;
+.modal-image {
 
   // Add margin when adjacent to modal header or body
   & + .modal-header,
-  & + .modal-body {
+  & + .modal-body,
+  & + .modal-footer {
     margin-top: $modal-inner-padding;
-  }
-
-  &.modal-image-top {
-    margin-top: -$modal-inner-padding;
   }
 }
 
@@ -131,7 +140,7 @@
 .modal-dialog {
   @include media-breakpoint-up(sm) {
     max-width: $modal-md;
-    margin: 5rem auto;
+    margin: $navbar-height auto;
 
     .modal-sm & {
       max-width: $modal-sm;
@@ -148,6 +157,7 @@
   // Login form variation
   .modal-login & {
     max-width: $login-max-width;
+    padding: $modal-inner-padding;
   }
 }
 

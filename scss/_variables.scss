@@ -19,9 +19,9 @@ $enable-flex:               true;
 /// Spacing
 ///
 
-// $spacer:                     1rem;
-// $spacer-x:                   $spacer;
-// $spacer-y:                   $spacer;
+$spacer:                     1rem;
+$spacer-x:                   $spacer;
+$spacer-y:                   $spacer;
 $border-width:               .0625rem;
 
 ///
@@ -76,14 +76,15 @@ $display3-size:               2.25rem;  // ~36px
 $display4-size:               1.5rem;  // ~24px
 
 // Weights
+$font-thin:                   100;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             $font-thin;
+$display2-weight:             $font-thin;
+$display3-weight:             $font-thin;
+$display4-weight:             $font-thin;
 
 $line-height:                 1.5;
 
@@ -126,11 +127,11 @@ $transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:         rgba($charcoal-darker, .2);
+$shadow-color:         rgba(#000, .25);
 $shadow-border:        0 0 0 $border-width $shadow-color;
-$shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
-$shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
-$shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
+$shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
+$shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -180,6 +181,7 @@ $card-border-color:         rgba($charcoal-darker, .075);
 $card-cap-bg:               rgba($charcoal-darker, .05);
 $card-bg:                   #fff;
 
+// TODO: Add $bg-dark variable and use here for consistency
 $card-inverse-border-color: $charcoal-darker;
 $card-inverse-cap-bg:       $charcoal-dark;
 $card-inverse-bg:           $charcoal-darker;
@@ -359,11 +361,12 @@ $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            1rem ($grid-gutter-width / 2);
-$table-sm-cell-padding:         .5rem ($grid-gutter-width / 2);
+$table-cell-padding-x:          ($grid-gutter-width / 2);
+$table-cell-padding-y:          1rem;
+$table-sm-cell-padding-y:       .5rem;
 
 $table-header-bg:               rgba($blue-darker, .05);
-$table-header-color:            $blue-darker;
+$table-header-color:            $blue-dark;
 
 $table-bg:                      transparent;
 $table-bg-accent:               rgba($gray-lighter, .1);
@@ -390,6 +393,21 @@ $dropdown-menu-color-hover: #fff;
 
 
 ///
+/// Z Index
+///
+
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-navbar-sticky:     1030;
+$zindex-modal-bg:          1020;
+$zindex-modal:             1025;
+
+
+
+///
 /// Navbar + Off-canvas menu
 ///
 
@@ -398,10 +416,10 @@ $dropdown-menu-color-hover: #fff;
 /// (maybe flexbox layout?)
 /// !!!
 
-$off-canvas-width: 18rem;  // ~288px
+$off-canvas-width: 22rem;  // ~352px
 
 // Default
-$navbar-height: 3.75rem; // ~60px
+$navbar-height: 5.5rem; // ~88px
 $navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
 $navbar-brand-font-size: $font-size-h4;
 $navbar-link-font-size: $font-size-base;
@@ -415,12 +433,12 @@ $off-canvas-toggle-padding-y: $navbar-link-padding-y;
 $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
 
 
-// Jumbo
-$navbar-jumbo-height: 5.5rem; // ~88px
-$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+// Small variation
+$navbar-sm-height: 3.75rem; // ~60px
+$navbar-sm-brand-margin-top: ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-jumbo-toggle-margin-y: $navbar-jumbo-brand-margin-top;
+$off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
 
 // Themes
 $navbar-variants: (
@@ -446,7 +464,7 @@ $navbar-variants: (
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px
 $profile-img-text-size: $font-size-h4;
-$profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
+$profile-margin-top: ($navbar-height / 2) - ($profile-img-size / 2);
 
 
 ///
