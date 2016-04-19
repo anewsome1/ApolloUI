@@ -1,7 +1,5 @@
 .navbar {
-  position: relative;
   z-index: $zindex-navbar;
-  height: $navbar-height;
   background-color: #fff;
   box-shadow: $shadow-hover;
 
@@ -31,7 +29,18 @@
       }
     }
   }
+}
 
+///
+/// Navbar layout
+///
+
+.navbar-container {
+  @include make-container;
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  height: $navbar-height;
 }
 
 ///
@@ -39,15 +48,22 @@
 ///
 
 .navbar-brand {
-  display: block;
-  float: left;
   width: $navbar-brand-width;
-  padding-top: $navbar-link-padding-y;
-  padding-bottom: $navbar-link-padding-y;
-  margin-top: $navbar-brand-margin-top;
   font-size: $navbar-brand-font-size;
-  text-align: center;
   line-height: 1;
+  text-align: center;
+
+  &,
+  &:hover,
+  &:visited,
+  &:active {
+    color: #fff;
+  }
+
+  &-logo {
+    width: $navbar-brand-logo-size;
+    height: $navbar-brand-logo-size;
+  }
 }
 
 ///
@@ -55,27 +71,21 @@
 ///
 
 .navbar-links {
-  @include clearfix();
-  display: block;
-  float: left;
+  flex-grow: 1;
+  display: flex;
   padding-left: 0;
   margin-bottom: 0;
+  list-style-type: none;
 }
 
 .navbar-item {
-  display: block;
-  float: left;
-
   > a {
-    display: block;
     font-size: $navbar-link-font-size;
-    line-height: 1;
-    margin-top: $navbar-link-margin-top;
-    padding: $navbar-link-padding-y $navbar-link-padding-x;
+    padding: $grid-gutter-width / 2;
   }
 
-  &.active > a {
-    // background-color: darken($navbar-bg, 10%);
+  .navbar &.active > a {
+    color: $teal;
   }
 }
 
@@ -84,15 +94,11 @@
 ///
 
 .navbar-profile {
-  position: relative;
-  float: right;
-  margin-top: $profile-margin-top;
   text-align: right;
 
   .profile-username,
-  .profile-company {
+  .profile-credential {
     display: block;
-    margin-right: $profile-img-size + ($grid-gutter-width / 2);
     line-height: 1.2;
   }
 
@@ -100,27 +106,27 @@
     font-size: $navbar-link-font-size;
   }
 
-  .profile-company {
+  .profile-credential {
     font-size: $navbar-link-font-size * .85;
-  }
-
-  .profile-image {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: $profile-img-size;
-    height: $profile-img-size;
-    padding-top: calc-padding-y($profile-img-size, $profile-img-text-size);
-    margin-top: -($profile-img-size / 2);
-    font-size: $profile-img-text-size;
-    line-height: 1.1;
-    text-align: center;
-    border-radius: 50%;
   }
 }
 
-// Utility for when using navbar-fixed-top
+
+///
+/// Environment
+///
+.navbar-environment {
+  align-self: stretch;
+  width: percentage(2/12);
+  margin-right: (-$grid-gutter-width / 2);
+  margin-left: $grid-gutter-width / 2;
+  color: #fff;
+  background-color: $blue-darker;
+  text-align: center;
+}
+
+
+// Utility for shifting content down when using navbar-fixed-top
 .margin-top-navbar {
   margin-top: $navbar-height;
 
@@ -137,11 +143,14 @@
     .navbar-item > a {
       &,
       &:hover,
-      &:active,
       &:focus,
+      &:active,
       &:visited {
         color: map-get($props, color);
       }
+    }
+    .navbar-item.active > a {
+      color: map-get($props, color-active);
     }
 
     // Dropdown lists
@@ -153,19 +162,17 @@
 
 
     // User profile section
-    .profile-username {
-      font-size: $navbar-link-font-size;
+    .profile-username,
+    .profile-credential {
       color: map-get($props, color);
     }
 
-    .profile-company {
-      font-size: $navbar-link-font-size * .85;
-      color: map-get($props, color-subdued);
+    .profile-username {
+      font-size: $navbar-link-font-size;
     }
 
-    .profile-image {
-      background-color: map-get($props, color);
-      color: map-get($props, bg);
+    .profile-credential {
+      font-size: $navbar-link-font-size * .85;
     }
   }
 }

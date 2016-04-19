@@ -420,8 +420,9 @@ $off-canvas-width: 22rem;  // ~352px
 
 // Default
 $navbar-height: 5.5rem; // ~88px
-$navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
+$navbar-brand-width: 16rem;  // ~256px
 $navbar-brand-font-size: $font-size-h4;
+$navbar-brand-logo-size: $navbar-brand-font-size;
 $navbar-link-font-size: $font-size-base;
 $navbar-link-padding-y: $btn-padding-y;
 $navbar-link-padding-x: $btn-padding-x;
@@ -446,18 +447,18 @@ $navbar-variants: (
     dark: true,
     bg: $blue,
     color: #fff,
-    color-subdued: transparentize(#fff, .5)
+    color-active: $teal-light
   ),
   dark: (
     dark: true,
     bg: $charcoal,
     color: $neutral,
-    color-subdued: $teal
+    color-active: $teal
   ),
   light: (
     bg: $neutral,
     color: $blue,
-    color-subdued: transparentize($blue, .5)
+    color-active: $teal-dark
   )
 );
 

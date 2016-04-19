@@ -19,8 +19,12 @@
 
   <body>
     <nav class="navbar navbar-primary navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="navbar-container">
+    <!-- Off-canvas toggle button -->
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target=""></button>
+    <!-- Brand logo and name -->
     <a class="navbar-brand" href="/">Apollo UI</a>
+    <!-- Links -->
     <ul class="navbar-links">
       <li class="navbar-item ">
         <a href="/styles/">Styles</a>
@@ -31,10 +35,15 @@
       <li class="navbar-item ">
         <a href="/components/">Components</a>
       </li>
-<!--       <li class="navbar-item active">
-        <a href="/page-templates/">Page Templates</a>
-      </li>
- -->    </ul>
+    </ul>
+    <!-- User profile thing -->
+    <div class="navbar-profile">
+      <span class="profile-username">Bob Hope</span>
+      <span class="profile-credential">bob@hopefoundation.com</span>
+    </div>
+    <div class="navbar-environment">
+      <span>Production</span>
+    </div>
   </div>
 </nav>
 

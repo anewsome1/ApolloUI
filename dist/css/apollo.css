@@ -3836,9 +3836,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .navbar {
-  position: relative;
   z-index: 1000;
-  height: 5.5rem;
   background-color: #fff;
   box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
@@ -3867,55 +3865,67 @@ textarea.form-control, textarea.search-input {
   margin-top: 0.9375rem;
 }
 
+.navbar-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  height: 5.5rem;
+}
+
 .navbar-brand {
-  display: block;
-  float: left;
-  width: 21.0625rem;
-  padding-top: 0.4375rem;
-  padding-bottom: 0.4375rem;
-  margin-top: 1.6875rem;
+  width: 16rem;
   font-size: 1.25rem;
-  text-align: center;
   line-height: 1;
+  text-align: center;
+}
+
+.navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:active {
+  color: #fff;
+}
+
+.navbar-brand-logo {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .navbar-links {
-  display: block;
-  float: left;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-left: 0;
   margin-bottom: 0;
-}
-
-.navbar-links::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.navbar-item {
-  display: block;
-  float: left;
+  list-style-type: none;
 }
 
 .navbar-item > a {
-  display: block;
   font-size: 1rem;
-  line-height: 1;
-  margin-top: 1.8125rem;
-  padding: 0.4375rem 1.125rem;
+  padding: 0.9375rem;
+}
+
+.navbar .navbar-item.active > a {
+  color: #3ed6cf;
 }
 
 .navbar-profile {
-  position: relative;
-  float: right;
-  margin-top: 1.53125rem;
   text-align: right;
 }
 
 .navbar-profile .profile-username,
-.navbar-profile .profile-company {
+.navbar-profile .profile-credential {
   display: block;
-  margin-right: 3.375rem;
   line-height: 1.2;
 }
 
@@ -3923,23 +3933,20 @@ textarea.form-control, textarea.search-input {
   font-size: 1rem;
 }
 
-.navbar-profile .profile-company {
+.navbar-profile .profile-credential {
   font-size: 0.85rem;
 }
 
-.navbar-profile .profile-image {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 2.4375rem;
-  height: 2.4375rem;
-  padding-top: 0.59375rem;
-  margin-top: -1.21875rem;
-  font-size: 1.25rem;
-  line-height: 1.1;
+.navbar-environment {
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+  width: 16.66667%;
+  margin-right: -0.9375rem;
+  margin-left: 0.9375rem;
+  color: #fff;
+  background-color: #143770;
   text-align: center;
-  border-radius: 50%;
 }
 
 .margin-top-navbar {
@@ -3954,92 +3961,98 @@ textarea.form-control, textarea.search-input {
   background-color: #2975e9;
 }
 
-.navbar-primary .navbar-brand, .navbar-primary .navbar-brand:hover, .navbar-primary .navbar-brand:active, .navbar-primary .navbar-brand:focus, .navbar-primary .navbar-brand:visited,
+.navbar-primary .navbar-brand, .navbar-primary .navbar-brand:hover, .navbar-primary .navbar-brand:focus, .navbar-primary .navbar-brand:active, .navbar-primary .navbar-brand:visited,
 .navbar-primary .navbar-item > a,
 .navbar-primary .navbar-item > a:hover,
-.navbar-primary .navbar-item > a:active,
 .navbar-primary .navbar-item > a:focus,
+.navbar-primary .navbar-item > a:active,
 .navbar-primary .navbar-item > a:visited {
   color: #fff;
+}
+
+.navbar-primary .navbar-item.active > a {
+  color: #9eece8;
 }
 
 .navbar-primary .navbar-item > .dropdown-toggle:focus {
   color: #3ed6cf;
 }
 
-.navbar-primary .profile-username {
-  font-size: 1rem;
+.navbar-primary .profile-username,
+.navbar-primary .profile-credential {
   color: #fff;
 }
 
-.navbar-primary .profile-company {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+.navbar-primary .profile-username {
+  font-size: 1rem;
 }
 
-.navbar-primary .profile-image {
-  background-color: #fff;
-  color: #2975e9;
+.navbar-primary .profile-credential {
+  font-size: 0.85rem;
 }
 
 .navbar-dark {
   background-color: #3a4f59;
 }
 
-.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:active, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:visited,
+.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:active, .navbar-dark .navbar-brand:visited,
 .navbar-dark .navbar-item > a,
 .navbar-dark .navbar-item > a:hover,
-.navbar-dark .navbar-item > a:active,
 .navbar-dark .navbar-item > a:focus,
+.navbar-dark .navbar-item > a:active,
 .navbar-dark .navbar-item > a:visited {
   color: #f7f5f4;
+}
+
+.navbar-dark .navbar-item.active > a {
+  color: #3ed6cf;
 }
 
 .navbar-dark .navbar-item > .dropdown-toggle:focus {
   color: #3ed6cf;
 }
 
-.navbar-dark .profile-username {
-  font-size: 1rem;
+.navbar-dark .profile-username,
+.navbar-dark .profile-credential {
   color: #f7f5f4;
 }
 
-.navbar-dark .profile-company {
-  font-size: 0.85rem;
-  color: #3ed6cf;
+.navbar-dark .profile-username {
+  font-size: 1rem;
 }
 
-.navbar-dark .profile-image {
-  background-color: #f7f5f4;
-  color: #3a4f59;
+.navbar-dark .profile-credential {
+  font-size: 0.85rem;
 }
 
 .navbar-light {
   background-color: #f7f5f4;
 }
 
-.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:active, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:visited,
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:active, .navbar-light .navbar-brand:visited,
 .navbar-light .navbar-item > a,
 .navbar-light .navbar-item > a:hover,
-.navbar-light .navbar-item > a:active,
 .navbar-light .navbar-item > a:focus,
+.navbar-light .navbar-item > a:active,
 .navbar-light .navbar-item > a:visited {
+  color: #2975e9;
+}
+
+.navbar-light .navbar-item.active > a {
+  color: #339e99;
+}
+
+.navbar-light .profile-username,
+.navbar-light .profile-credential {
   color: #2975e9;
 }
 
 .navbar-light .profile-username {
   font-size: 1rem;
-  color: #2975e9;
 }
 
-.navbar-light .profile-company {
+.navbar-light .profile-credential {
   font-size: 0.85rem;
-  color: rgba(41, 117, 233, 0.5);
-}
-
-.navbar-light .profile-image {
-  background-color: #2975e9;
-  color: #f7f5f4;
 }
 
 .command-bar {
@@ -4860,13 +4873,6 @@ p:last-child {
           transform: translate3d(-22rem, 0, 0);
 }
 
-.off-canvas-open, .off-canvas-close, .off-canvas-title {
-  padding-top: 0.4375rem;
-  padding-bottom: 0.4375rem;
-  margin-top: 1.6875rem;
-  margin-bottom: 1.6875rem;
-}
-
 .off-canvas-open, .off-canvas-close {
   font-size: 1.25rem;
   line-height: 1;
@@ -4876,9 +4882,6 @@ p:last-child {
 }
 
 .off-canvas-open {
-  position: absolute;
-  top: 0;
-  left: 0.9375rem;
   color: #fff;
 }
 
