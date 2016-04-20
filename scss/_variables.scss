@@ -160,7 +160,7 @@ $alert-states: (
   ),
   warning: (
     bg: $brand-warning,
-    color: null,
+    color: $charcoal,
     icon: 'alert-circle'
   ),
   danger: (
@@ -416,22 +416,22 @@ $zindex-modal:             1025;
 /// (maybe flexbox layout?)
 /// !!!
 
-$off-canvas-width: 22rem;  // ~352px
+$off-canvas-width: 18rem; // ~256px
 
 // Default
 $navbar-height: 5.5rem; // ~88px
-$navbar-brand-width: 16rem;  // ~256px
+$navbar-brand-width: 14rem;
 $navbar-brand-font-size: $font-size-h4;
-$navbar-brand-logo-size: $navbar-brand-font-size;
+$navbar-brand-logo-size: $font-size-h3;
 $navbar-link-font-size: $font-size-base;
 $navbar-link-padding-y: $btn-padding-y;
 $navbar-link-padding-x: $btn-padding-x;
 $navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
 $navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-toggle-size: $navbar-brand-font-size;
-$off-canvas-toggle-padding-y: $navbar-link-padding-y;
-$off-canvas-toggle-margin-y: $navbar-brand-margin-top;
+$off-canvas-toggle-size: 1.125rem;
+// $off-canvas-toggle-padding-y: $navbar-link-padding-y;
+// $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
 
 
 // Small variation

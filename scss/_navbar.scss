@@ -15,33 +15,25 @@
     width: 100%;
   }
 
-  // Jumbo variation
-  &.navbar-sm {
-    height: $navbar-sm-height;
+  ///
+  /// Navbar layout
+  ///
 
-    .navbar-brand {
-      margin-top: $navbar-sm-brand-margin-top;
-    }
-
-    .navbar-item {
-      > a {
-        margin-top: $navbar-sm-link-margin-top;
-      }
-    }
+  > .container,
+  > .container-fluid {
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    height: $navbar-height;
   }
+  // Compact version
+  &.navbar-sm > .container-fluid,
+  &.navbar-sm > .container {
+    height: $navbar-sm-height;
+  }
+
 }
 
-///
-/// Navbar layout
-///
-
-.navbar-container {
-  @include make-container;
-  display: flex;
-  align-items: center;
-  align-content: stretch;
-  height: $navbar-height;
-}
 
 ///
 /// Brand (application name)
@@ -50,8 +42,8 @@
 .navbar-brand {
   width: $navbar-brand-width;
   font-size: $navbar-brand-font-size;
-  line-height: 1;
-  text-align: center;
+  font-weight: $font-light;
+  // text-align: center;
 
   &,
   &:hover,
@@ -61,8 +53,9 @@
   }
 
   &-logo {
+    position: relative;
+    top: $navbar-brand-logo-size - $navbar-brand-font-size;
     width: $navbar-brand-logo-size;
-    height: $navbar-brand-logo-size;
   }
 }
 
@@ -71,17 +64,17 @@
 ///
 
 .navbar-links {
+  @include list-unstyled;
+
   flex-grow: 1;
   display: flex;
-  padding-left: 0;
   margin-bottom: 0;
-  list-style-type: none;
 }
 
 .navbar-item {
   > a {
     font-size: $navbar-link-font-size;
-    padding: $grid-gutter-width / 2;
+    padding: $btn-padding-y $btn-padding-x;
   }
 
   .navbar &.active > a {
@@ -96,6 +89,7 @@
 
 .navbar-actions {
   @include list-unstyled;
+
   display: flex;
   margin-right: $grid-gutter-width;
   margin-bottom: 0;
@@ -104,8 +98,34 @@
     @extend .navbar-item;
 
     > a {
+      position: relative;
       padding-right: $btn-padding-x;
       padding-left: $btn-padding-x;
+
+      .badge {
+        $icon-badge-size: 1.2rem;
+        position: absolute;
+        display: block;
+        top: (-$icon-badge-size / 4);
+        right: $btn-padding-x / 2;
+        width: $icon-badge-size;
+        height: $icon-badge-size;
+        padding-top: .34rem;
+        font-size: .75rem;
+        line-height: 1;
+        font-weight: $font-semi-bold;
+        text-align: center;
+        border-radius: 50%;
+
+        @each $state, $props in $alert-states {
+          $bg: map-get($props, bg);
+          $color: map-get($props, color);
+          &.badge-#{ $state } {
+            color: $color;
+            background-color: $bg;
+          }
+        }
+      }
     }
   }
 }
