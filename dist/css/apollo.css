@@ -3953,7 +3953,14 @@ a.label:focus, a.label:hover {
   -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
           align-content: stretch;
-  height: 5.5rem;
+  height: 3.75rem;
+}
+
+@media (min-width: 544px) {
+  .navbar > .container,
+  .navbar > .container-fluid {
+    height: 5.5rem;
+  }
 }
 
 .navbar.navbar-sm > .container-fluid,

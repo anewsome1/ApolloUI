@@ -24,7 +24,11 @@
     display: flex;
     align-items: center;
     align-content: stretch;
-    height: $navbar-height;
+    height: $navbar-sm-height;
+
+    @include media-breakpoint-up(sm) {
+      height: $navbar-height;
+    }
   }
   // Compact version
   &.navbar-sm > .container-fluid,
