@@ -3861,7 +3861,7 @@ textarea.form-control, textarea.search-input {
   margin-top: 0.8125rem;
 }
 
-.navbar.navbar-sm .navbar-item > a {
+.navbar.navbar-sm .navbar-item > a, .navbar.navbar-sm .navbar-actions-item > a {
   margin-top: 0.9375rem;
 }
 
@@ -3910,13 +3910,28 @@ textarea.form-control, textarea.search-input {
   list-style-type: none;
 }
 
-.navbar-item > a {
+.navbar-item > a, .navbar-actions-item > a {
   font-size: 1rem;
   padding: 0.9375rem;
 }
 
-.navbar .navbar-item.active > a {
+.navbar .navbar-item.active > a, .navbar .active.navbar-actions-item > a {
   color: #3ed6cf;
+}
+
+.navbar-actions {
+  padding-left: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1.875rem;
+  margin-bottom: 0;
+}
+
+.navbar-actions-item > a {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .navbar-profile {
@@ -3941,12 +3956,23 @@ textarea.form-control, textarea.search-input {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 16.66667%;
   margin-right: -0.9375rem;
   margin-left: 0.9375rem;
   color: #fff;
   background-color: #143770;
-  text-align: center;
 }
 
 .margin-top-navbar {
@@ -3963,18 +3989,23 @@ textarea.form-control, textarea.search-input {
 
 .navbar-primary .navbar-brand, .navbar-primary .navbar-brand:hover, .navbar-primary .navbar-brand:focus, .navbar-primary .navbar-brand:active, .navbar-primary .navbar-brand:visited,
 .navbar-primary .navbar-item > a,
+.navbar-primary .navbar-actions-item > a,
 .navbar-primary .navbar-item > a:hover,
+.navbar-primary .navbar-actions-item > a:hover,
 .navbar-primary .navbar-item > a:focus,
+.navbar-primary .navbar-actions-item > a:focus,
 .navbar-primary .navbar-item > a:active,
-.navbar-primary .navbar-item > a:visited {
+.navbar-primary .navbar-actions-item > a:active,
+.navbar-primary .navbar-item > a:visited,
+.navbar-primary .navbar-actions-item > a:visited {
   color: #fff;
 }
 
-.navbar-primary .navbar-item.active > a {
+.navbar-primary .navbar-item.active > a, .navbar-primary .active.navbar-actions-item > a {
   color: #9eece8;
 }
 
-.navbar-primary .navbar-item > .dropdown-toggle:focus {
+.navbar-primary .navbar-item > .dropdown-toggle:focus, .navbar-primary .navbar-actions-item > .dropdown-toggle:focus {
   color: #3ed6cf;
 }
 
@@ -3997,18 +4028,23 @@ textarea.form-control, textarea.search-input {
 
 .navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:active, .navbar-dark .navbar-brand:visited,
 .navbar-dark .navbar-item > a,
+.navbar-dark .navbar-actions-item > a,
 .navbar-dark .navbar-item > a:hover,
+.navbar-dark .navbar-actions-item > a:hover,
 .navbar-dark .navbar-item > a:focus,
+.navbar-dark .navbar-actions-item > a:focus,
 .navbar-dark .navbar-item > a:active,
-.navbar-dark .navbar-item > a:visited {
+.navbar-dark .navbar-actions-item > a:active,
+.navbar-dark .navbar-item > a:visited,
+.navbar-dark .navbar-actions-item > a:visited {
   color: #f7f5f4;
 }
 
-.navbar-dark .navbar-item.active > a {
+.navbar-dark .navbar-item.active > a, .navbar-dark .active.navbar-actions-item > a {
   color: #3ed6cf;
 }
 
-.navbar-dark .navbar-item > .dropdown-toggle:focus {
+.navbar-dark .navbar-item > .dropdown-toggle:focus, .navbar-dark .navbar-actions-item > .dropdown-toggle:focus {
   color: #3ed6cf;
 }
 
@@ -4031,14 +4067,19 @@ textarea.form-control, textarea.search-input {
 
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:active, .navbar-light .navbar-brand:visited,
 .navbar-light .navbar-item > a,
+.navbar-light .navbar-actions-item > a,
 .navbar-light .navbar-item > a:hover,
+.navbar-light .navbar-actions-item > a:hover,
 .navbar-light .navbar-item > a:focus,
+.navbar-light .navbar-actions-item > a:focus,
 .navbar-light .navbar-item > a:active,
-.navbar-light .navbar-item > a:visited {
+.navbar-light .navbar-actions-item > a:active,
+.navbar-light .navbar-item > a:visited,
+.navbar-light .navbar-actions-item > a:visited {
   color: #2975e9;
 }
 
-.navbar-light .navbar-item.active > a {
+.navbar-light .navbar-item.active > a, .navbar-light .active.navbar-actions-item > a {
   color: #339e99;
 }
 
