@@ -211,7 +211,8 @@
 
     // User profile section
     .profile-username,
-    .profile-credential {
+    .profile-credential,
+    .profile-credential > a {
       color: map-get($props, color);
     }
 
@@ -221,6 +222,17 @@
 
     .profile-credential {
       font-size: $navbar-link-font-size * .85;
+
+      &.dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        text-align: initial;
+        left: auto;
+        right: 0;
+        font-size: $font-size-base;
+      }
     }
   }
 }

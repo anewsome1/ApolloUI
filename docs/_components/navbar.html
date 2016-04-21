@@ -48,7 +48,14 @@ description: Navbars are pretty sweet
     <!-- Profile -->
     <div class="navbar-profile">
       <span class="profile-username">Bob Hope</span>
-      <span class="profile-credential">bob@hopefoundation.com</span>
+      <div class="profile-credential dropdown">
+        <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">bob@hopefoundation.com</a>
+        <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </div>
     </div>
     <!-- Environment -->
     <div class="navbar-environment">

@@ -4043,7 +4043,8 @@ textarea.form-control, textarea.search-input {
 }
 
 .navbar-primary .profile-username,
-.navbar-primary .profile-credential {
+.navbar-primary .profile-credential,
+.navbar-primary .profile-credential > a {
   color: #fff;
 }
 
@@ -4053,6 +4054,17 @@ textarea.form-control, textarea.search-input {
 
 .navbar-primary .profile-credential {
   font-size: 0.85rem;
+}
+
+.navbar-primary .profile-credential.dropdown {
+  position: relative;
+}
+
+.navbar-primary .profile-credential .dropdown-menu {
+  text-align: initial;
+  left: auto;
+  right: 0;
+  font-size: 1rem;
 }
 
 .navbar-dark {
@@ -4082,7 +4094,8 @@ textarea.form-control, textarea.search-input {
 }
 
 .navbar-dark .profile-username,
-.navbar-dark .profile-credential {
+.navbar-dark .profile-credential,
+.navbar-dark .profile-credential > a {
   color: #f7f5f4;
 }
 
@@ -4092,6 +4105,17 @@ textarea.form-control, textarea.search-input {
 
 .navbar-dark .profile-credential {
   font-size: 0.85rem;
+}
+
+.navbar-dark .profile-credential.dropdown {
+  position: relative;
+}
+
+.navbar-dark .profile-credential .dropdown-menu {
+  text-align: initial;
+  left: auto;
+  right: 0;
+  font-size: 1rem;
 }
 
 .navbar-light {
@@ -4117,7 +4141,8 @@ textarea.form-control, textarea.search-input {
 }
 
 .navbar-light .profile-username,
-.navbar-light .profile-credential {
+.navbar-light .profile-credential,
+.navbar-light .profile-credential > a {
   color: #2975e9;
 }
 
@@ -4127,6 +4152,17 @@ textarea.form-control, textarea.search-input {
 
 .navbar-light .profile-credential {
   font-size: 0.85rem;
+}
+
+.navbar-light .profile-credential.dropdown {
+  position: relative;
+}
+
+.navbar-light .profile-credential .dropdown-menu {
+  text-align: initial;
+  left: auto;
+  right: 0;
+  font-size: 1rem;
 }
 
 .command-bar {
