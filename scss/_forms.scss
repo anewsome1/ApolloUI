@@ -103,89 +103,20 @@ textarea.form-control {
 /// Checkbox and Radio controls
 ///
 
-// !!!
-// @TODO: Remove the code below once we have everyone
-// convinced that customizing controls that are
-// designed to be left alone is a bad idea
-// !!!
+input[type='checkbox'] {
+  position: relative;
+  top: .125rem;
+  appearance: none;
+  width: $font-size-base;
+  height: $font-size-base;
+  margin-right: .125rem;
+  background: $svg-box-gray no-repeat center center;
+  background-size: 100%;
 
-// .checkbox input[type='checkbox'],
-// .radio input[type='radio'] {
-//   appearance: none;
-
-//   + label {
-//     display: inline;
-//     cursor: pointer;
-
-//     &::before {
-//       @extend .icon;
-
-//       display: inline-block;
-//       content: '';
-//       // width: $checkbox-size;
-//       // height: $checkbox-size;
-//       margin-right: $checkbox-size / 3;
-//       font-size: $checkbox-size;
-//       line-height: $checkbox-size;
-//       text-align: center;
-//       vertical-align: top;
-//       transition: all $transition-fast;
-//     }
-//   }
-
-//   &:checked + label::before {
-//     color: $checkbox-color;
-//   }
-
-//   &,
-//   & + label {
-//     cursor: pointer;
-//   }
-
-//   // &:hover + label::before {
-//   //   box-shadow: $shadow-hover;
-//   // }
-
-//   // &:active + label::before {
-//   //   box-shadow: $shadow-active;
-//   // }
-
-//   &:disabled {
-//     &,
-//     + label,
-//     + label::before {
-//       color: lighten($charcoal, 40%);
-//       cursor: not-allowed;
-//     }
-//     + label::before,
-//     &:hover + label::before {
-//       // background-color: $charcoal-lighter;
-//       box-shadow: none;
-//     }
-//   }
-// }
-
-// .checkbox input[type="checkbox"] {
-//   + label::before {
-//     content: map-get($_icons-map, 'square');
-//   }
-
-//   &:checked + label::before {
-//     content: map-get($_icons-map, 'check-solid');
-//   }
-// }
-
-// .radio input[type="radio"] {
-//   + label::before {
-//     content: map-get($_icons-map, radio-unchecked);
-//     border-radius: 50%;
-//   }
-//   &:checked + label:before {
-//     content: map-get($_icons-map, radio-checked);
-//   }
-
-// }
-
+  &:checked {
+    background-image: $svg-check-solid-blue;
+  }
+}
 
 ///
 /// Toggle (Radio variation)
