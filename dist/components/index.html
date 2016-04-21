@@ -20,11 +20,7 @@
   <body>
     <nav class="navbar navbar-primary navbar-fixed-top">
   <div class="container-fluid">
-    <!-- Off-canvas toggle button -->
-    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
-      <span class="sr-only">Open menu</span>
-    </button>
-    <!-- Logo and/or name -->
+  <!-- Logo and/or name -->
     <a class="navbar-brand" href="/">Apollo UI</a>
     <!-- Links -->
     <ul class="navbar-links">
@@ -1889,11 +1885,13 @@
    <!-- ... -->
   </div>
 </nav>
-<aside class="off-canvas off-canvas-left" id="off-canvas-demo">
-  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
-    <span class="sr-only">Close menu</span>
-  </button>
-  <h3 class="off-canvas-title">Panel title</h3>
+<aside class="off-canvas off-canvas-left open" id="off-canvas-demo">
+  <header class="off-canvas-header">
+    <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Close menu</span>
+    </button>
+    <h3 class="off-canvas-title">Panel title</h3>
+  </header>
   <div class="search">
     <input class="search-input">
   </div>
@@ -1944,11 +1942,13 @@
    <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"off-canvas-demo"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left open"</span> <span class="na">id=</span><span class="s">"off-canvas-demo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"off-canvas-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>

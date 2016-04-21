@@ -23,7 +23,7 @@
   > .container-fluid {
     display: flex;
     align-items: center;
-    align-content: stretch;
+    // align-content: stretch;
     height: $navbar-sm-height;
 
     @include media-breakpoint-up(sm) {
