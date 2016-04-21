@@ -1,7 +1,7 @@
 .bg-light {
-  @include bg-color($bg-color: rgba($gray-lighter, .1));
+  @include bg-color($bg-color: $neutral);
 }
 
 .bg-dark {
-  @include bg-color($bg-color: rgba($charcoal-darker, .9), $text-color: rgba(#fff, .9), $link-color: $teal);
+  @include bg-color($bg-color: $charcoal-dark, $text-color: rgba(#fff, .9), $link-color: $teal);
 }

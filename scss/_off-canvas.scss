@@ -12,6 +12,7 @@
   padding-left: $grid-gutter-width / 2;
   padding-right: $grid-gutter-width / 2;
   transition: all $transition-fast;
+  opacity: .95;
 
   &.open {
       box-shadow: $shadow-hover;

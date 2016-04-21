@@ -18,16 +18,16 @@
   }
 
   // Jumbo variation
-  &.navbar-jumbo {
-    height: $navbar-jumbo-height;
+  &.navbar-sm {
+    height: $navbar-sm-height;
 
     .navbar-brand {
-      margin-top: $navbar-jumbo-brand-margin-top;
+      margin-top: $navbar-sm-brand-margin-top;
     }
 
     .navbar-item {
       > a {
-        margin-top: $navbar-jumbo-link-margin-top;
+        margin-top: $navbar-sm-link-margin-top;
       }
     }
   }
@@ -124,8 +124,8 @@
 .margin-top-navbar {
   margin-top: $navbar-height;
 
-  &-jumbo {
-    margin-top: $navbar-jumbo-height;
+  &-sm {
+    margin-top: $navbar-sm-height;
   }
 }
 
