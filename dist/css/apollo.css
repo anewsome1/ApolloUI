@@ -3686,6 +3686,7 @@ textarea.form-control, textarea.search-input {
   z-index: 1060;
   padding: 0;
   background: #fff;
+  opacity: .95;
   box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
 }
 
@@ -3697,13 +3698,13 @@ textarea.form-control, textarea.search-input {
   list-style-type: none;
 }
 
-.dropdown-menu > li + li {
-  border-top: 1px solid #ced2d4;
+.dropdown-menu > li.separator {
+  border-top: 1px solid rgba(43, 59, 67, 0.1);
 }
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 0.33333rem 1.125rem;
+  padding: 0.5rem 1.125rem;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -3712,8 +3713,8 @@ textarea.form-control, textarea.search-input {
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active {
-  background-color: #245eb7;
-  color: #fff;
+  background-color: #143770;
+  color: #9eece8;
   text-decoration: none;
 }
 

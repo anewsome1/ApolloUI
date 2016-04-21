@@ -25,7 +25,7 @@
   z-index: $zindex-popover;
   padding: 0;
   background: $dropdown-menu-bg;
-  // opacity: .9;  // Opaque background makes links hard to read
+  opacity: .95;  // Opaque background makes links hard to read
   box-shadow: $shadow-hover;
 
   // Display menu when `.open` class is added
@@ -37,13 +37,13 @@
   > li {
     list-style-type: none;
 
-    + li {
-      border-top: 1px solid $charcoal-lighter;
+    &.separator {
+      border-top: 1px solid rgba($charcoal-dark, .1);
     }
 
     > a {
       display: block;
-      padding: $dropdown-item-padding;
+      padding: ($spacer-y / 2) $btn-padding-x;
       transition: all $transition-fast;
 
       &:link,

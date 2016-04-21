@@ -385,11 +385,10 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 ///
 
 $dropdown-toggle-padding: $btn-padding-y $btn-padding-x;
-$dropdown-item-padding: ($spacer / 3) $btn-padding-x;
 $dropdown-menu-bg: #fff;
 $dropdown-menu-color: $body-color;
-$dropdown-menu-bg-hover: $navy;
-$dropdown-menu-color-hover: #fff;
+$dropdown-menu-bg-hover: $blue-darker;
+$dropdown-menu-color-hover: $teal-light;
 
 
 ///
