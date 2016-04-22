@@ -33,10 +33,6 @@
               background-color $transition-fast,
               box-shadow $transition-fast;
 
-  &,
-  &:placeholder-shown {
-  }
-
   // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus,
