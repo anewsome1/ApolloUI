@@ -141,8 +141,8 @@ $shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 // Sizing
 $alert-padding-y:             $spacer;
 $alert-padding-x:             $grid-gutter-width / 2;
-$alert-icon-size:             $font-size-lg;
 $alert-font-size:             $font-size-base;
+$alert-icon-size:             $alert-font-size;
 $alert-line-height:           $alert-font-size * 1.2;
 $alert-shadow-height:         .625rem;  // ~10px
 
@@ -156,7 +156,7 @@ $alert-states: (
   success: (
     bg: $brand-success,
     color: #fff,
-    icon: 'check'
+    icon: 'check-circle'
   ),
   warning: (
     bg: $brand-warning,

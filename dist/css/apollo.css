@@ -3122,7 +3122,7 @@ mark,
 
 .alert::before, .form-msg::before,
 .alert .close, .form-msg .close {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.2rem;
   color: #fff;
 }
@@ -3139,7 +3139,7 @@ mark,
 .alert .close, .form-msg .close {
   position: absolute;
   top: 50%;
-  margin-top: -0.625rem;
+  margin-top: -0.5rem;
   right: 0.9375rem;
 }
 
@@ -3164,7 +3164,7 @@ mark,
 }
 
 .alert.alert-success::before, .alert-success.form-msg::before {
-  content: "";
+  content: "";
 }
 
 .alert.alert-success.alert-bottom, .alert-success.alert-bottom.form-msg {
@@ -3475,7 +3475,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .has-success .form-msg::before, .has-success.form-msg::before {
-  content: "";
+  content: "";
 }
 
 .has-warning .form-control, .has-warning .search-input, .has-warning.form-control, .has-warning.search-input {
