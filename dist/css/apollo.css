@@ -3448,6 +3448,10 @@ textarea.form-control, textarea.search-input {
   padding-bottom: 0.33333rem;
 }
 
+.form-msg:before {
+  font-size: 0.875rem;
+}
+
 .has-info .form-control, .has-info .search-input, .has-info.form-control, .has-info.search-input {
   border-color: #32b5fc;
 }
