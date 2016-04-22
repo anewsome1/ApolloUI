@@ -23,11 +23,15 @@
   width: 100%;
   height: $input-height;
   padding: $input-padding-y $input-padding-x;
-  border: $border-width solid $charcoal-lighter;
+  color: $input-color;
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all $transition-fast;
+  border: $border-width solid $charcoal-lighter;
+  background-color: $input-bg;
+  transition: border $transition-fast,
+              background-color $transition-fast,
+              box-shadow $transition-fast;
 
   &,
   &:placeholder-shown {
@@ -35,11 +39,26 @@
 
   // @FIXME we need a more noticeable focus indicator
   &:focus,
-  &.focus {
-    border-color: $input-border-focus;
+  &.focus,
+  &:active,
+  &.active,
+  label:active + & {
+    border: none;
+    background-color: $input-bg-focus;
     outline: none;
-    box-shadow: $input-box-shadow-focus;
   }
+
+  &:focus,
+  &.focus {
+    box-shadow: $shadow-hover;    
+  }
+
+  &:active,
+  &.active,
+  label:active + & {
+    box-shadow: $shadow-active;    
+  }
+
 
   &:disabled,
   &.disabled {
@@ -55,14 +74,10 @@
 }
 
 select.form-control {
-  // appearance: none;
-  background-color: #fff;
-  // @FIXME: `select` tags don't have ::before or ::after pseudo-elements
-  // &::after {
-  //   @extend %icon-base;
-
-  //   content: map-get($_icons-map, 'chevron-down');
-  // }
+  appearance: none;
+  border: $input-btn-border-width solid $input-border-color;
+  background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
+  background-size: $font-size-base;
 }
 
 textarea.form-control {
@@ -103,18 +118,50 @@ textarea.form-control {
 /// Checkbox and Radio controls
 ///
 
-input[type='checkbox'] {
+input[type='checkbox'],
+input[type='radio'] {
   position: relative;
   top: .125rem;
-  appearance: none;
   width: $font-size-base;
   height: $font-size-base;
   margin-right: .125rem;
-  background: $svg-box-gray no-repeat center center;
+  border: $input-btn-border-width solid $input-border-color;
+  background-color: $input-bg;
+  appearance: none; // Appearance of native control
+  transition: box-shadow $transition-fast;
+
+  &:hover:not(:disabled):not(.disabled) {
+    box-shadow: $shadow-hover;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $input-color-disabled;
+    background-color: $input-bg-disabled;
+  }
+
+  &:focus {
+    outline: $input-outline;
+  }
+}
+
+
+input[type='checkbox'] {
   background-size: 100%;
 
   &:checked {
-    background-image: $svg-check-solid-blue;
+    background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
+    background-size: 100%;
+    border: none;
+  }
+}
+
+input[type='radio'] {
+  border-radius: 50%;
+
+  &:checked {
+    background-color: $brand-primary;
+    border: none;
   }
 }
 

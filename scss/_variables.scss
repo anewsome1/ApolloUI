@@ -215,30 +215,10 @@ $modal-sm:                    18.75rem; // ~300px
 
 
 ///
-/// Shared component size
+/// Shared component values
 ///
 $component-height:            2rem;
 $component-height-lg:         3rem;
-
-
-
-
-///
-/// @TODO: Refactor variable names where available in Bootstrap
-/// (e.g. `$input-padding-x` instead of `$form-padding-x`)
-///
-
-// $form-height: 2rem;               // ~32px (height set manually)
-// $form-line-height: normal;
-// $form-font-size: $font-size-base; // ~16px
-// $form-padding-y: calc-padding-y($form-height, $form-font-size);
-// $form-padding-top: .5625rem;      // ~9px
-// $form-padding-bottom: .4375rem;   // ~7px
-// $form-padding-x: .5rem;  // ~8px
-// $form-border-width: .0625rem;     // ~1px
-// $form-margin-bottom: $spacer;
-
-
 
 ///
 /// Forms
@@ -249,10 +229,11 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       #fff;
-$input-bg-disabled:              $gray-lighter;
+$input-bg-disabled:              $charcoal-lighter;
+$input-bg-focus:                 #fff;
 
-$input-color:                    $gray;
-$input-color-disabled:           $gray-light;
+$input-color:                    $charcoal;
+$input-color-disabled:           $charcoal-light;
 $input-border-color:             #ccc;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 
@@ -262,6 +243,7 @@ $input-border-radius-sm:         $border-radius-sm;
 
 $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-active;
+$input-outline:                  $border-width solid transparent;
 
 $input-color-placeholder:        #999;
 
