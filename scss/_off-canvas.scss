@@ -35,100 +35,111 @@
       transform: translate3d(-$off-canvas-width,0,0);
     }
   }
+}
 
-  ///
-  /// Match positiioning of open/close buttons and title
-  ///
+///
+/// Match positiioning of open/close buttons and title
+///
 
-  &-open,
-  &-close,
-  &-title {
-    padding-top: $off-canvas-toggle-padding-y;
-    padding-bottom: $off-canvas-toggle-padding-y;
-    margin-top: $off-canvas-toggle-margin-y;
-    margin-bottom: $off-canvas-toggle-margin-y;
+.off-canvas-header {
+  display: flex;
+  align-items: center;
+  height: $navbar-sm-height;
+  margin-bottom: $spacer-y;
+
+  @include media-breakpoint-up(sm) {
+    height: $navbar-height;
   }
+}
 
-  &-open,
-  &-close {
-    font-size: $off-canvas-toggle-size;
-    line-height: 1;
-    background: none;
-    border: 0;
-    box-shadow: none;
+.off-canvas-open,
+.off-canvas-close {
+  font-size: $off-canvas-toggle-size;
+  background: none;
+  border: 0;
+  box-shadow: none;
 
-    &::before {
-      @extend %icon-base;
-    }
+  &::before {
+    @extend %icon-base;
   }
+}
 
-  &-open {
-    position: absolute;
-    top: 0;
-    left: $grid-gutter-width / 2;
-    color: #fff;
+.off-canvas-open {
+  padding: ($navbar-link-padding-y / 2) ($navbar-link-padding-x / 2);
+  margin-right: $grid-gutter-width / 2;
+  margin-left: (-$btn-padding-x / 2);
+  color: #fff;
 
-    &::before {
-      content: map-get($_icons-map, 'menu');
-    }
+  &::before {
+    content: map-get($_icons-map, 'menu');
   }
+}
 
-  &-close {
-    position: absolute;
-    top: 0;
-    right: $grid-gutter-width / 2;
+.off-canvas-close {
+  order: 2;
+  font-size: $font-size-lg;
 
-    &::before {
-      color: $teal;
-      content: map-get($_icons-map, 'close');
-    }
-  }
-
-  &-title {
-    font-size: $font-size-h4;
+  &::before {
     color: $teal;
+    content: map-get($_icons-map, 'close');
   }
+}
 
-  ///
-  /// Menu styles
-  ///
+.off-canvas-title {
+  flex-grow: 1;
+  margin-bottom: 0;
+  font-size: $font-size-h4;
+  color: $teal;
+  text-align: center;
+}
 
-  &-menu,
-  &-submenu {
-    padding-left: 0;
-    list-style-type: none;
-  }
+///
+/// Search component
+///
 
-  &-menu {
-    padding-top: $spacer-y;
+.off-canvas .search {
+  margin-bottom: $spacer-y;
+}
 
-    a {
-      display: block;
-      margin-left: -$grid-gutter-width / 2;
-      margin-right: -$grid-gutter-width / 2;
-      padding: $btn-padding-y ($grid-gutter-width / 2);
 
-      &:hover {
-        color: #fff;
-        text-decoration: none;
-        // @TODO: Replace with color from palette
-        background-color: transparentize(darken($charcoal, 15%), .1);
-      }
+///
+/// Menu styles
+///
 
-      .icon {
-        margin-right: $spacer-x / 2;
-      }
+.off-canvas-menu,
+.off-canvas-submenu {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.off-canvas-menu {
+  a {
+    display: block;
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+    padding: $btn-padding-y ($grid-gutter-width / 2);
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      // @TODO: Replace with color from palette
+      background-color: transparentize(darken($charcoal, 15%), .1);
     }
-  }
-
-  &-submenu {
-    margin-bottom: $spacer-y * 2;
 
     .icon {
-      font-size: $font-size-sm;
+      margin-right: $spacer-x / 2;
     }
   }
 }
+
+.off-canvas-submenu {
+  margin-bottom: $spacer-y * 2;
+
+  .icon {
+    font-size: $font-size-sm;
+  }
+}
+
 
 // Make margins match jumbo navbar
 .navbar-jumbo {
