@@ -23,23 +23,38 @@
   width: 100%;
   height: $input-height;
   padding: $input-padding-y $input-padding-x;
-  border: $border-width solid $charcoal-lighter;
+  color: $input-color;
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all $transition-fast;
-
-  &,
-  &:placeholder-shown {
-  }
+  border: $border-width solid $charcoal-lighter;
+  background-color: $input-bg;
+  transition: border $transition-fast,
+              background-color $transition-fast,
+              box-shadow $transition-fast;
 
   // @FIXME we need a more noticeable focus indicator
   &:focus,
-  &.focus {
-    border-color: $input-border-focus;
+  &.focus,
+  &:active,
+  &.active,
+  label:active + & {
+    border: none;
+    background-color: $input-bg-focus;
     outline: none;
-    box-shadow: $input-box-shadow-focus;
   }
+
+  &:focus,
+  &.focus {
+    box-shadow: $shadow-hover;    
+  }
+
+  &:active,
+  &.active,
+  label:active + & {
+    box-shadow: $shadow-active;    
+  }
+
 
   &:disabled,
   &.disabled {
@@ -55,14 +70,10 @@
 }
 
 select.form-control {
-  // appearance: none;
-  background-color: #fff;
-  // @FIXME: `select` tags don't have ::before or ::after pseudo-elements
-  // &::after {
-  //   @extend %icon-base;
-
-  //   content: map-get($_icons-map, 'chevron-down');
-  // }
+  appearance: none;
+  border: $input-btn-border-width solid $input-border-color;
+  background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
+  background-size: $font-size-base;
 }
 
 textarea.form-control {
@@ -76,6 +87,10 @@ textarea.form-control {
   // @TODO: Replace with `.alert-sm` once that's ready
   padding-top: $input-padding-y * 2 / 3;
   padding-bottom: $input-padding-y * 2 / 3;
+
+  &:before {
+    font-size: $font-size-sm;
+  }
 }
 
 @each $state, $state-props in $alert-states {
@@ -103,89 +118,52 @@ textarea.form-control {
 /// Checkbox and Radio controls
 ///
 
-// !!!
-// @TODO: Remove the code below once we have everyone
-// convinced that customizing controls that are
-// designed to be left alone is a bad idea
-// !!!
+input[type='checkbox'],
+input[type='radio'] {
+  position: relative;
+  top: .125rem;
+  width: $font-size-base;
+  height: $font-size-base;
+  margin-right: .125rem;
+  border: $input-btn-border-width solid $input-border-color;
+  background-color: $input-bg;
+  appearance: none; // Appearance of native control
+  transition: box-shadow $transition-fast;
 
-// .checkbox input[type='checkbox'],
-// .radio input[type='radio'] {
-//   appearance: none;
+  &:hover:not(:disabled):not(.disabled) {
+    box-shadow: $shadow-hover;
+  }
 
-//   + label {
-//     display: inline;
-//     cursor: pointer;
+  &:disabled,
+  &.disabled {
+    color: $input-color-disabled;
+    background-color: $input-bg-disabled;
+  }
 
-//     &::before {
-//       @extend .icon;
+  &:focus {
+    outline: $input-outline;
+  }
+}
 
-//       display: inline-block;
-//       content: '';
-//       // width: $checkbox-size;
-//       // height: $checkbox-size;
-//       margin-right: $checkbox-size / 3;
-//       font-size: $checkbox-size;
-//       line-height: $checkbox-size;
-//       text-align: center;
-//       vertical-align: top;
-//       transition: all $transition-fast;
-//     }
-//   }
 
-//   &:checked + label::before {
-//     color: $checkbox-color;
-//   }
+input[type='checkbox'] {
+  background-size: 100%;
 
-//   &,
-//   & + label {
-//     cursor: pointer;
-//   }
+  &:checked {
+    background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
+    background-size: 100%;
+    border: none;
+  }
+}
 
-//   // &:hover + label::before {
-//   //   box-shadow: $shadow-hover;
-//   // }
+input[type='radio'] {
+  border-radius: 50%;
 
-//   // &:active + label::before {
-//   //   box-shadow: $shadow-active;
-//   // }
-
-//   &:disabled {
-//     &,
-//     + label,
-//     + label::before {
-//       color: lighten($charcoal, 40%);
-//       cursor: not-allowed;
-//     }
-//     + label::before,
-//     &:hover + label::before {
-//       // background-color: $charcoal-lighter;
-//       box-shadow: none;
-//     }
-//   }
-// }
-
-// .checkbox input[type="checkbox"] {
-//   + label::before {
-//     content: map-get($_icons-map, 'square');
-//   }
-
-//   &:checked + label::before {
-//     content: map-get($_icons-map, 'check-solid');
-//   }
-// }
-
-// .radio input[type="radio"] {
-//   + label::before {
-//     content: map-get($_icons-map, radio-unchecked);
-//     border-radius: 50%;
-//   }
-//   &:checked + label:before {
-//     content: map-get($_icons-map, radio-checked);
-//   }
-
-// }
-
+  &:checked {
+    background-color: $brand-primary;
+    border: none;
+  }
+}
 
 ///
 /// Toggle (Radio variation)
@@ -194,8 +172,7 @@ textarea.form-control {
 %toggle-base {
   position: relative;
   z-index: 1;
-  padding-top: $toggle-padding-y;
-  padding-bottom: $toggle-padding-y;
+  padding: $toggle-padding-y $toggle-padding-x;
   line-height: 1;
   text-align: center;
   background-color: rgba(255, 255, 255, .85);
