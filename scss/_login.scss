@@ -1,5 +1,9 @@
 .login {
   padding: $grid-gutter-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 
   @include media-breakpoint-up(sm) {
     max-width: $login-max-width;
@@ -10,9 +14,9 @@
   }
 
   &-brand-logo {
-    @extend .center-block;
     width: 20%;
     margin-top: $spacer * 2;
+    align-self: center;
 
     .hexagon-outer,
     .hexagon-inner {
@@ -25,11 +29,10 @@
   }
 
   &-brand-name {
-    text-align: center;
+    align-self: center;
     font-size: $font-size-h2;
     font-weight: $font-light;
     color: $brand-primary;
-    margin-top: $spacer * 2;
     margin-bottom: $spacer * 2;
 
     .login-brand-logo + & {
