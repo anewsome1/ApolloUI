@@ -20,21 +20,20 @@
   <body>
     <nav class="navbar navbar-primary navbar-fixed-top">
   <div class="container-fluid">
+  <!-- Logo and/or name -->
     <a class="navbar-brand" href="/">Apollo UI</a>
+    <!-- Links -->
     <ul class="navbar-links">
       <li class="navbar-item ">
         <a href="/styles/">Styles</a>
       </li>
-      <li class="navbar-item ">
-        <a href="/icons/">Icons</a>
-      </li>
       <li class="navbar-item active">
         <a href="/components/">Components</a>
       </li>
-<!--       <li class="navbar-item ">
-        <a href="/page-templates/">Page Templates</a>
+      <li class="navbar-item ">
+        <a href="/icons/">Icons</a>
       </li>
- -->    </ul>
+    </ul>
   </div>
 </nav>
 
@@ -154,9 +153,9 @@
       <li class="docs-page-nav-item"><h3 class="h5 docs-page-nav-category">Navbar</h3>
         <ul class="docs-page-subnav">
           
-            <li class="docs-page-subnav-item"><a href="#navbar-basic-navbar">Basic navbar</a></li>
+            <li class="docs-page-subnav-item"><a href="#navbar-complete-navbar">Complete navbar</a></li>
           
-            <li class="docs-page-subnav-item"><a href="#navbar-jumbo-size">Jumbo size</a></li>
+            <li class="docs-page-subnav-item"><a href="#navbar-compact-size">Compact size</a></li>
           
             <li class="docs-page-subnav-item"><a href="#navbar-command-bar">Command bar</a></li>
           
@@ -1176,17 +1175,12 @@
 <div class="modal fade" id="demo-modal-image">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-image-full modal-image-top">
+      <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
         <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
       </div>
-      <div class="modal-header">
-        <button type="button" class="sr-only" data-dismiss="modal" aria-label="Close"></button>
-        <h4 class="modal-title">Welcome to the future</h4>
-      </div>
       <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
         <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
       </div>
       <div class="modal-footer">
@@ -1215,17 +1209,12 @@
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade"</span> <span class="na">id=</span><span class="s">"demo-modal-image"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close inverse"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-image-full modal-image-top"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close inverse"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-image"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"https://placeimg.com/1000/400/tech/grayscale"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"sr-only"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Welcome to the future<span class="nt">&lt;/h4&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Welcome to the future<span class="nt">&lt;/h4&gt;</span>
         <span class="nt">&lt;p&gt;</span>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
@@ -1281,14 +1270,12 @@
 <div class="modal modal-lg fade" id="demo-modal-lg">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-image-full modal-image-top">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
         <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
       </div>
-      <div class="modal-header">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
-        <h4 class="modal-title">Welcome to the future</h4>
-      </div>
       <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
         <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
       </div>
       <div class="modal-footer">
@@ -1341,14 +1328,12 @@
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal modal-lg fade"</span> <span class="na">id=</span><span class="s">"demo-modal-lg"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-image-full modal-image-top"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-image"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"https://placeimg.com/1000/400/tech/grayscale"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Welcome to the future<span class="nt">&lt;/h4&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Welcome to the future<span class="nt">&lt;/h4&gt;</span>
         <span class="nt">&lt;p&gt;</span>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
@@ -1379,9 +1364,7 @@
 <!-- Modal -->
 <div class="modal modal-login fade" id="demo-modal-login">
   <div class="modal-dialog" role="document">
-    <div class="modal-header">
-      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
-    </div>
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
     <div class="modal-content">
       <svg class="login-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.86 120">
         <path class="hexagon-outer" d="M60,0L8.07,30V90L60,120l51.93-30V30Zm0,99.07L57.95,97.9,28.22,80.68l-2.05-1.17v-39l2.05-1.17L57.95,22.1,60,20.93l2.05,1.17L91.78,39.22l2.05,1.17V79.51l-2.05,1.17L62.05,97.8Z" transform="translate(-8.07)"/>
@@ -1425,9 +1408,7 @@
 <span class="c">&lt;!-- Modal --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal modal-login fade"</span> <span class="na">id=</span><span class="s">"demo-modal-login"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"login-brand-logo"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 103.86 120"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;path</span> <span class="na">class=</span><span class="s">"hexagon-outer"</span> <span class="na">d=</span><span class="s">"M60,0L8.07,30V90L60,120l51.93-30V30Zm0,99.07L57.95,97.9,28.22,80.68l-2.05-1.17v-39l2.05-1.17L57.95,22.1,60,20.93l2.05,1.17L91.78,39.22l2.05,1.17V79.51l-2.05,1.17L62.05,97.8Z"</span> <span class="na">transform=</span><span class="s">"translate(-8.07)"</span><span class="nt">/&gt;</span>
@@ -1470,50 +1451,16 @@
       <section class="docs-section" id="navbar">
       <h2>Navbar</h2>
       
-        <h3 id="navbar-basic-navbar">Basic navbar</h3>
+        <h3 id="navbar-complete-navbar">Complete navbar</h3>
         <p>Navbars are pretty sweet</p>
         <div class="docs-example-rendered"><nav class="navbar navbar-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#0">Marketing</a>
-    <ul class="navbar-links">
-      <li class="navbar-item"><a href="#0">Lorem Ipsum</a></li>
-      <li class="navbar-item"><a href="#0">Dolor sit amet</a></li>
-      <li class="navbar-item"><a href="#0">Consectetur</a></li>
-      <li class="navbar-item dropdown">
-        <a class="dropdown-toggle" id="navbarDropdown0" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
-        <ul class="dropdown-menu" aria-labeledby="navbarDropdown0">
-          <li><a href="#0">Lorem ipsum</a></li>
-          <li><a href="#0">Dolor sit amet</a></li>
-          <li><a href="#0">Vivamus</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav></div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Marketing<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Consectetur<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">id=</span><span class="s">"navbarDropdown0"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labeledby=</span><span class="s">"navbarDropdown0"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;/ul&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre></figure></div>
-      
-        <h3 id="navbar-jumbo-size">Jumbo size</h3>
-        <p>For those times when you need to fit ALL THE THINGS</p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#0">Marketing</a>
+    <!-- Logo and/or name -->
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <!-- Links -->
     <ul class="navbar-links">
       <li class="navbar-item">
         <a href="#0">Lorem Ipsum</a>
@@ -1533,16 +1480,53 @@
         </ul>
       </li>
     </ul>
+    <!-- Actions -->
+    <ul class="navbar-actions">
+      <li class="navbar-actions-item">
+        <a href="#">
+          <span class="icon icon-search"></span>
+        </a>
+      </li>
+      <li class="navbar-actions-item">
+        <a href="#">
+          <span class="icon icon-notification"></span>
+          <span class="badge badge-warning">3</span>
+        </a>
+      </li>
+    </ul>
+    <!-- Profile -->
     <div class="navbar-profile">
-      <span class="profile-username">J. Christopher Irwin</span>
-      <span class="profile-company">Brand Name</span>
-      <span class="profile-image">P</span>
+      <span class="profile-username">Bob Hope</span>
+      <div class="profile-credential dropdown">
+        <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">bob@hopefoundation.com</a>
+        <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
+          <li><a href="#0">Log out</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">Switch credentials</a></li>
+          <li><a href="#0">Switch to production</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">App 1</a></li>
+          <li><a href="#0">App 2</a></li>
+          <li><a href="#0">App 3</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">Account settings</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Environment -->
+    <div class="navbar-environment">
+      <span>Staging</span>
     </div>
   </div>
 </nav></div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Marketing<span class="nt">&lt;/a&gt;</span>
+    <span class="c">&lt;!-- Logo and/or name --&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"navbar-brand-logo"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 120 106.27"</span><span class="nt">&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"0 0 29.32 50.79 117.3 0 0 0"</span> <span class="na">style=</span><span class="s">"fill: #fff"</span><span class="nt">/&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"120 4.69 32.03 55.47 61.35 106.27 120 4.69"</span> <span class="na">style=</span><span class="s">"fill: #fff;opacity: 0.5"</span><span class="nt">/&gt;&lt;/svg&gt;</span>
+      Marketing
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="c">&lt;!-- Links --&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
@@ -1562,18 +1546,109 @@
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
+    <span class="c">&lt;!-- Actions --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-actions"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-actions-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-search"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-actions-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-notification"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-warning"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="c">&lt;!-- Profile --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-profile"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-username"</span><span class="nt">&gt;</span>J. Christopher Irwin<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-company"</span><span class="nt">&gt;</span>Brand Name<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-image"</span><span class="nt">&gt;</span>P<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-username"</span><span class="nt">&gt;</span>Bob Hope<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"profile-credential dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">id=</span><span class="s">"profile-dropdown"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>bob@hopefoundation.com<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labeledby=</span><span class="s">"profile-dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Log out<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Switch credentials<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Switch to production<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>App 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>App 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>App 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Account settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- Environment --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-environment"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Staging<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure></div>
+      
+        <h3 id="navbar-compact-size">Compact size</h3>
+        <p>For when applications need a smaller navbar presence</p>
+        <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <ul class="navbar-links">
+      <li class="navbar-item">
+        <a href="#0">Lorem Ipsum</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Dolor sit amet</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Consectetur</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav></div>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-sm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"navbar-brand-logo"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 120 106.27"</span><span class="nt">&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"0 0 29.32 50.79 117.3 0 0 0"</span> <span class="na">style=</span><span class="s">"fill: #fff"</span><span class="nt">/&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"120 4.69 32.03 55.47 61.35 106.27 120 4.69"</span> <span class="na">style=</span><span class="s">"fill: #fff;opacity: 0.5"</span><span class="nt">/&gt;&lt;/svg&gt;</span>
+      Marketing
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Consectetur<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">id=</span><span class="s">"navbarDropdown1"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labeledby=</span><span class="s">"navbarDropdown1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Dolor sit amet<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Vivamus<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure></div>
       
         <h3 id="navbar-command-bar">Command bar</h3>
         <p>Command bars can be added to a navbar to support page-specific tasks, actions, etc.</p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
-  <!-- ... -->
+        <div class="docs-example-rendered"><nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <!-- ... -->
+  </div>
 </nav>
 <div class="command-bar">
   <div class="container-fluid">
@@ -1602,8 +1677,10 @@
   </div>
 </div>
 </div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- ... --&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"command-bar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
@@ -1634,9 +1711,12 @@
       
         <h3 id="navbar-light-version">Light version</h3>
         <p>Here's a light version of the navbar if primary is too heavy for your application.</p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-light navbar-jumbo">
+        <div class="docs-example-rendered"><nav class="navbar navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#0">Marketing</a>
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #2975e9"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #2975e9;opacity: 0.5"/></svg>
+      Marketing
+    </a>
     <ul class="navbar-links">
       <li class="navbar-item">
         <a href="#0">Lorem Ipsum</a>
@@ -1659,14 +1739,16 @@
     </ul>
     <div class="navbar-profile">
       <span class="profile-username">J. Christopher Irwin</span>
-      <span class="profile-company">Brand Name</span>
-      <span class="profile-image">P</span>
+      <span class="profile-credential">Brand Name</span>
     </div>
   </div>
 </nav></div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light navbar-jumbo"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-light"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Marketing<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"navbar-brand-logo"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 120 106.27"</span><span class="nt">&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"0 0 29.32 50.79 117.3 0 0 0"</span> <span class="na">style=</span><span class="s">"fill: #2975e9"</span><span class="nt">/&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"120 4.69 32.03 55.47 61.35 106.27 120 4.69"</span> <span class="na">style=</span><span class="s">"fill: #2975e9;opacity: 0.5"</span><span class="nt">/&gt;&lt;/svg&gt;</span>
+      Marketing
+    <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
@@ -1689,17 +1771,19 @@
     <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-profile"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-username"</span><span class="nt">&gt;</span>J. Christopher Irwin<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-company"</span><span class="nt">&gt;</span>Brand Name<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-image"</span><span class="nt">&gt;</span>P<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-credential"</span><span class="nt">&gt;</span>Brand Name<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure></div>
       
         <h3 id="navbar-dark-version">Dark version</h3>
         <p>Here's a dark version of the navbar</p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-dark navbar-jumbo">
+        <div class="docs-example-rendered"><nav class="navbar navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#0">Marketing</a>
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
     <ul class="navbar-links">
       <li class="navbar-item">
         <a href="#0">Lorem Ipsum</a>
@@ -1721,15 +1805,17 @@
     </ul>
     <div class="navbar-profile">
       <span class="profile-username">J. Christopher Irwin</span>
-      <span class="profile-company">Brand Name</span>
-      <span class="profile-image">P</span>
+      <span class="profile-credential">Brand Name</span>
     </div>
   </div>
 </nav>
 </div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark navbar-jumbo"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Marketing<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"navbar-brand-logo"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">viewBox=</span><span class="s">"0 0 120 106.27"</span><span class="nt">&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"0 0 29.32 50.79 117.3 0 0 0"</span> <span class="na">style=</span><span class="s">"fill: #fff"</span><span class="nt">/&gt;&lt;polygon</span> <span class="na">points=</span><span class="s">"120 4.69 32.03 55.47 61.35 106.27 120 4.69"</span> <span class="na">style=</span><span class="s">"fill: #fff;opacity: 0.5"</span><span class="nt">/&gt;&lt;/svg&gt;</span>
+      Marketing
+    <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
@@ -1751,8 +1837,7 @@
     <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-profile"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-username"</span><span class="nt">&gt;</span>J. Christopher Irwin<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-company"</span><span class="nt">&gt;</span>Brand Name<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-image"</span><span class="nt">&gt;</span>P<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"profile-credential"</span><span class="nt">&gt;</span>Brand Name<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure></div>
@@ -1820,20 +1905,21 @@
       
         <h3 id="off-canvas-off-canvas-panel">Off-canvas panel</h3>
         <p>Off-canvas panels can be used for navigation lists, filters, and more.  Panels can be positioned on the left or right side of the page.</p><p>The example below shows a panel triggered by a button in the navbar, but they can be toggled by a button anywhere using <code>data-toggle="off-canvas"</code> and the corresponding <code>data-target="#..."</code></p>
-        <div class="docs-example-rendered"><nav class="navbar navbar-primary navbar-jumbo">
+        <div class="docs-example-rendered"><nav class="navbar navbar-primary">
   <div class="container-fluid">
     <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
-
       <span class="sr-only">Open menu</span>
     </button>
    <!-- ... -->
   </div>
 </nav>
 <aside class="off-canvas off-canvas-left" id="off-canvas-demo">
-  <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
-    <span class="sr-only">Close menu</span>
-  </button>
-  <h3 class="off-canvas-title">Panel title</h3>
+  <header class="off-canvas-header">
+    <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Close menu</span>
+    </button>
+    <h3 class="off-canvas-title">Panel title</h3>
+  </header>
   <div class="search">
     <input class="search-input">
   </div>
@@ -1876,20 +1962,21 @@
     </li>
   </ul>
 </aside></div>
-        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary navbar-jumbo"</span><span class="nt">&gt;</span>
+        <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
-
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Open menu<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/button&gt;</span>
    <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"off-canvas-demo"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"off-canvas-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -2228,7 +2315,7 @@
     <!-- <footer class="docs-footer text-xs-center">
   <div class="container-fluid">
     <h5>Apollo UI Docs</h5>
-    <p>Version: 0.4.0</p>
+    <p>Version: 0.4.1</p>
   </div>
 </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

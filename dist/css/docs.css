@@ -1,5 +1,5 @@
 .highlight {
-  padding: 16px;
+  padding: 1rem;
   margin-bottom: 0;
   background-color: #f7f5f4;
   color: #3a4f59;
@@ -87,7 +87,7 @@ body {
   left: 0;
   width: 18rem;
   height: 100%;
-  padding-top: 3.75rem;
+  padding-top: 5.5rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .docs-content {
-  padding-top: 16px;
+  padding-top: 6.5rem;
   min-height: 100%;
 }
 
@@ -112,11 +112,11 @@ body {
 }
 
 .docs-page-nav {
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 
 .docs-page-nav-item {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .docs-page-nav-category {
@@ -124,26 +124,26 @@ body {
 }
 
 .docs-section {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .docs-section > h2 {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .docs-section > h3 {
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 
 .docs-example-rendered {
   position: relative;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .docs-example-code {
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .docs-color-block {
@@ -157,18 +157,18 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   color: #fff;
   background-color: rgba(29, 39, 44, 0.5);
 }
 
 .show-grid .row {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .show-grid div[class^='col-'] {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
   color: #fff;
   background-color: #3a4f59;
@@ -195,7 +195,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 20%;
-  padding: 32px 16px;
+  padding: 2rem 1rem;
   background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);

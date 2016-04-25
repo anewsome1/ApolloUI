@@ -19,9 +19,9 @@ $enable-flex:               true;
 /// Spacing
 ///
 
-// $spacer:                     1rem;
-// $spacer-x:                   $spacer;
-// $spacer-y:                   $spacer;
+$spacer:                     1rem;
+$spacer-x:                   $spacer;
+$spacer-y:                   $spacer;
 $border-width:               .0625rem;
 
 ///
@@ -76,14 +76,15 @@ $display3-size:               2.25rem;  // ~36px
 $display4-size:               1.5rem;  // ~24px
 
 // Weights
+$font-thin:                   100;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             $font-thin;
+$display2-weight:             $font-thin;
+$display3-weight:             $font-thin;
+$display4-weight:             $font-thin;
 
 $line-height:                 1.5;
 
@@ -126,11 +127,11 @@ $transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:         rgba($charcoal-darker, .2);
+$shadow-color:         rgba(#000, .25);
 $shadow-border:        0 0 0 $border-width $shadow-color;
-$shadow-hover:         .3125rem .3125rem 1rem $shadow-color;  // ~5px 5px 16px
-$shadow-active:        .1875rem .1875rem .5rem $shadow-color;  // ~3px 3px 8px
-$shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
+$shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
+$shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
 
 ///
@@ -140,8 +141,8 @@ $shadow-resting:       .0625rem .0625rem .25rem $shadow-color;  // ~3px 3px 8px
 // Sizing
 $alert-padding-y:             $spacer;
 $alert-padding-x:             $grid-gutter-width / 2;
-$alert-icon-size:             $font-size-lg;
 $alert-font-size:             $font-size-base;
+$alert-icon-size:             $alert-font-size;
 $alert-line-height:           $alert-font-size * 1.2;
 $alert-shadow-height:         .625rem;  // ~10px
 
@@ -155,11 +156,11 @@ $alert-states: (
   success: (
     bg: $brand-success,
     color: #fff,
-    icon: 'check'
+    icon: 'check-circle'
   ),
   warning: (
     bg: $brand-warning,
-    color: null,
+    color: $charcoal,
     icon: 'alert-circle'
   ),
   danger: (
@@ -180,6 +181,7 @@ $card-border-color:         rgba($charcoal-darker, .075);
 $card-cap-bg:               rgba($charcoal-darker, .05);
 $card-bg:                   #fff;
 
+// TODO: Add $bg-dark variable and use here for consistency
 $card-inverse-border-color: $charcoal-darker;
 $card-inverse-cap-bg:       $charcoal-dark;
 $card-inverse-bg:           $charcoal-darker;
@@ -213,30 +215,10 @@ $modal-sm:                    18.75rem; // ~300px
 
 
 ///
-/// Shared component size
+/// Shared component values
 ///
 $component-height:            2rem;
 $component-height-lg:         3rem;
-
-
-
-
-///
-/// @TODO: Refactor variable names where available in Bootstrap
-/// (e.g. `$input-padding-x` instead of `$form-padding-x`)
-///
-
-// $form-height: 2rem;               // ~32px (height set manually)
-// $form-line-height: normal;
-// $form-font-size: $font-size-base; // ~16px
-// $form-padding-y: calc-padding-y($form-height, $form-font-size);
-// $form-padding-top: .5625rem;      // ~9px
-// $form-padding-bottom: .4375rem;   // ~7px
-// $form-padding-x: .5rem;  // ~8px
-// $form-border-width: .0625rem;     // ~1px
-// $form-margin-bottom: $spacer;
-
-
 
 ///
 /// Forms
@@ -247,10 +229,11 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       #fff;
-$input-bg-disabled:              $gray-lighter;
+$input-bg-disabled:              $charcoal-lighter;
+$input-bg-focus:                 #fff;
 
-$input-color:                    $gray;
-$input-color-disabled:           $gray-light;
+$input-color:                    $charcoal;
+$input-color-disabled:           $charcoal-light;
 $input-border-color:             #ccc;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 
@@ -260,6 +243,7 @@ $input-border-radius-sm:         $border-radius-sm;
 
 $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-active;
+$input-outline:                  $border-width solid transparent;
 
 $input-color-placeholder:        #999;
 
@@ -280,11 +264,10 @@ $input-group-addon-border-color: $input-border-color;
 
 $cursor-disabled:                not-allowed;
 
-
-
-
-
-
+$svg-check-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjazwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2siIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzMsNjAgTDMzLDMwIEwyMywzMCBMMjMsNjUgTDIzLDcwIEw5Nyw3MCBMOTcsNjAgTDMzLDYwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuMDAwMDAwLCA1MC4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTYwLjAwMDAwMCwgLTUwLjAwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+$svg-check-solid-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1zb2xpZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQiIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEwyNi43NjU5ODEzLDU0Ljk0OTc0NzUgTDE5LjY5NDkxMzUsNjIuMDIwODE1MyBMNDQuNDQzNjUwOCw4Ni43Njk1NTI2IEw0Ny45NzkxODQ3LDkwLjMwNTA4NjUgTDEwMC4zMDUwODcsMzcuOTc5MTg0NyBMOTMuMjM0MDE4NywzMC45MDgxMTY5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+$svg-box-gray: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5zcXVhcmU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InNxdWFyZSIgZmlsbD0iI0NDQ0NDQyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDEyMCwwIEwxMjAsMTIwIEwwLDEyMCBMMCwwIFogTTEwLDEwIEwxMTAsMTAgTDExMCwxMTAgTDEwLDExMCBMMTAsMTAgWiIgaWQ9IlJlY3RhbmdsZS0yMDYiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+$svg-chevron-down-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 
 
 // Large size
@@ -320,7 +303,7 @@ $btn-sm-font-size: $font-size-xs;  // ~12px
 $btn-lg-min-width: 8.75rem;  // ~140px
 $btn-lg-padding-y: .9375rem;  // ~15px
 
-$btn-pulse-size: 6rem;
+$btn-pulse-size: 8rem;
 $btn-link-padding-x: .5rem;
 
 $btn-variants: (
@@ -353,17 +336,19 @@ $btn-variants: (
 $toggle-height: 2.75rem;
 $toggle-font-size: $font-size-base;
 $toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
+$toggle-padding-x: $btn-padding-x;
 
 
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            1rem ($grid-gutter-width / 2);
-$table-sm-cell-padding:         .5rem ($grid-gutter-width / 2);
+$table-cell-padding-x:          ($grid-gutter-width / 2);
+$table-cell-padding-y:          1rem;
+$table-sm-cell-padding-y:       .5rem;
 
 $table-header-bg:               rgba($blue-darker, .05);
-$table-header-color:            $blue-darker;
+$table-header-color:            $blue-dark;
 
 $table-bg:                      transparent;
 $table-bg-accent:               rgba($gray-lighter, .1);
@@ -382,11 +367,25 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 ///
 
 $dropdown-toggle-padding: $btn-padding-y $btn-padding-x;
-$dropdown-item-padding: ($spacer / 3) $btn-padding-x;
 $dropdown-menu-bg: #fff;
 $dropdown-menu-color: $body-color;
-$dropdown-menu-bg-hover: $navy;
-$dropdown-menu-color-hover: #fff;
+$dropdown-menu-bg-hover: $blue-darker;
+$dropdown-menu-color-hover: $teal-light;
+
+
+///
+/// Z Index
+///
+
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-navbar-sticky:     1030;
+$zindex-modal-bg:          1020;
+$zindex-modal:             1025;
+
 
 
 ///
@@ -398,29 +397,30 @@ $dropdown-menu-color-hover: #fff;
 /// (maybe flexbox layout?)
 /// !!!
 
-$off-canvas-width: 18rem;  // ~288px
+$off-canvas-width: 18rem; // ~256px
 
 // Default
-$navbar-height: 3.75rem; // ~60px
-$navbar-brand-width: $off-canvas-width - ($grid-gutter-width / 2);  // Offset for `.container` padding
+$navbar-height: 5.5rem; // ~88px
+$navbar-brand-width: 14rem;
 $navbar-brand-font-size: $font-size-h4;
+$navbar-brand-logo-size: $font-size-h3;
 $navbar-link-font-size: $font-size-base;
 $navbar-link-padding-y: $btn-padding-y;
 $navbar-link-padding-x: $btn-padding-x;
 $navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
 $navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-toggle-size: $navbar-brand-font-size;
-$off-canvas-toggle-padding-y: $navbar-link-padding-y;
-$off-canvas-toggle-margin-y: $navbar-brand-margin-top;
+$off-canvas-toggle-size: 1.125rem;
+// $off-canvas-toggle-padding-y: $navbar-link-padding-y;
+// $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
 
 
-// Jumbo
-$navbar-jumbo-height: 5.5rem; // ~88px
-$navbar-jumbo-brand-margin-top: ($navbar-jumbo-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-jumbo-link-margin-top: ($navbar-jumbo-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+// Small variation
+$navbar-sm-height: 3.75rem; // ~60px
+$navbar-sm-brand-margin-top: ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-jumbo-toggle-margin-y: $navbar-jumbo-brand-margin-top;
+$off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
 
 // Themes
 $navbar-variants: (
@@ -428,25 +428,25 @@ $navbar-variants: (
     dark: true,
     bg: $blue,
     color: #fff,
-    color-subdued: transparentize(#fff, .5)
+    color-active: $teal-light
   ),
   dark: (
     dark: true,
     bg: $charcoal,
     color: $neutral,
-    color-subdued: $teal
+    color-active: $teal
   ),
   light: (
     bg: $neutral,
     color: $blue,
-    color-subdued: transparentize($blue, .5)
+    color-active: $teal-dark
   )
 );
 
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px
 $profile-img-text-size: $font-size-h4;
-$profile-margin-top: ($navbar-jumbo-height / 2) - ($profile-img-size / 2);
+$profile-margin-top: ($navbar-height / 2) - ($profile-img-size / 2);
 
 
 ///

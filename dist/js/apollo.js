@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
-	 * Apollo JS v0.4.0
+	 * Apollo JS v0.4.1
 	 */
 
 	///

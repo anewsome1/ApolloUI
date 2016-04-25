@@ -26,7 +26,7 @@
     color: $text-color;
   }
   @if($link-color) {
-    a:not(.btn-primary):not(.btn-secondary) {
+    a:not(.btn-primary):not(.btn-secondary):not(.nav-link) {
       &,
       &:hover,
       &:active,
