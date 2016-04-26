@@ -3223,6 +3223,10 @@ mark,
   }
 }
 
+.btn.btn-block + .btn.btn-block {
+  margin-top: 1rem;
+}
+
 .btn, .btn:hover, .btn:focus {
   text-decoration: none;
 }

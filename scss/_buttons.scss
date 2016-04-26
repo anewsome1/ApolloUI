@@ -23,6 +23,10 @@
     }
   }
 
+  &.btn-block + &.btn-block {
+    margin-top: $spacer-x;
+  }
+
 
   ///
   /// Button states
