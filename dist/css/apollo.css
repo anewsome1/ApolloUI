@@ -3339,6 +3339,10 @@ mark,
   color: #245eb7;
 }
 
+.btn-link:disabled, .btn-link.disabled {
+  color: #9ca7ac;
+}
+
 .btn-lg {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;

@@ -152,6 +152,11 @@
   &:focus {
     color: $link-hover-color;
   }
+
+  &:disabled,
+  &.disabled {
+    color: $charcoal-light;
+  }
 }
 
 
