@@ -313,8 +313,8 @@ $btn-variants: (
     border-color: transparent,
     bg-active: $navy,
     color-active: #fff,
-    bg-disabled: #c5ddff,
-    color-disabled: #8dbbff
+    bg-disabled: $blue-lighter,
+    color-disabled: $blue-light
   ),
   secondary: (
     bg: #fff,
@@ -323,8 +323,8 @@ $btn-variants: (
     bg-active: $charcoal,
     color-active: #fff,
     bg-disabled: #fff,
-    color-disabled: #b3b3b3,
-    border-disabled: #e2e2e2
+    color-disabled: $charcoal-light,
+    border-disabled: rgba($charcoal-lighter, .7)
   )
 );
 

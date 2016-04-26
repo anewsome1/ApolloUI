@@ -3294,8 +3294,8 @@ mark,
 }
 
 .btn-primary:disabled, .btn-primary.disabled {
-  background-color: #c5ddff;
-  color: #8dbbff;
+  background-color: #c4daf7;
+  color: #8eb7f4;
 }
 
 .btn-secondary {
@@ -3318,8 +3318,8 @@ mark,
 
 .btn-secondary:disabled, .btn-secondary.disabled {
   background-color: #fff;
-  color: #b3b3b3;
-  border-color: #e2e2e2;
+  color: #9ca7ac;
+  border-color: rgba(206, 210, 212, 0.7);
 }
 
 .btn-link {
