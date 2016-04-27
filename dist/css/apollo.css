@@ -4544,7 +4544,7 @@ p:last-child {
 
 .modal-login .modal-dialog {
   max-width: 24rem;
-  padding: 1.875rem;
+  padding: unset;
 }
 
 .card {
@@ -4915,6 +4915,46 @@ p:last-child {
   }
 }
 
+.login {
+  padding: 1.875rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 544px) {
+  .login {
+    max-width: 24rem;
+    background-color: #fff;
+    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
+  }
+}
+
+.login-brand-logo {
+  width: 20%;
+  margin-top: 2rem;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+.login-brand-name {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1.953rem;
+  font-weight: 300;
+  color: #2975e9;
+  margin-bottom: 2rem;
+}
+
+.login-brand-logo + .login-brand-name {
+  margin-top: 1rem;
+}
+
 .login-container {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4930,55 +4970,6 @@ p:last-child {
           justify-content: center;
   width: 100%;
   height: 100%;
-}
-
-.login-container .login {
-  padding: 1.875rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 544px) {
-  .login-container .login {
-    max-width: 24rem;
-    background-color: #fff;
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
-  }
-}
-
-.login-container .login-brand-logo {
-  width: 20%;
-  margin-top: 2rem;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-}
-
-.login-container .login-brand-logo .hexagon-outer,
-.login-container .login-brand-logo .hexagon-inner {
-  fill: #2975e9;
-}
-
-.login-container .login-brand-logo .hexagon-outer {
-  opacity: .5;
-}
-
-.login-container .login-brand-name {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
-  font-size: 1.953rem;
-  font-weight: 300;
-  color: #2975e9;
-  margin-bottom: 2rem;
-}
-
-.login-brand-logo + .login-container .login-brand-name {
-  margin-top: 1rem;
 }
 
 .search {
