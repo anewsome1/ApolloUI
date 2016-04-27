@@ -4553,27 +4553,41 @@ p:last-child {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
+@media (min-width: 544px) {
+  .card {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .card-header,
-.card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(29, 39, 44, 0.05);
-}
-
-.card-header::after,
-.card-footer::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+.card-footer,
 .card-block {
   padding: 0.75rem 1.25rem;
 }
 
+.card-header::after,
+.card-footer::after,
 .card-block::after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media (min-width: 544px) {
+  .card-block {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.card-footer {
+  background-color: rgba(29, 39, 44, 0.05);
 }
 
 .card-block + .card-block {
@@ -4581,15 +4595,45 @@ p:last-child {
 }
 
 .card-title {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  font-size: 1.953rem;
+  margin-top: 0.75rem;
 }
 
 .card-caption {
   margin-top: 0;
   margin-bottom: 0;
   color: #949aa0;
+}
+
+.card-header .card-title,
+.card-header .card-caption {
+  text-align: center;
+}
+
+.card-header .card-title {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 1.953rem;
+  color: #2975e9;
+}
+
+@media (min-width: 544px) {
+  .card-deck {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+  }
+  .card-deck .card {
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+            flex: 1 0 0;
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
 }
 
 .card-accordion {
