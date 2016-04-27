@@ -1,4 +1,10 @@
 .card {
+  @if $enable-flex {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   background-color: $card-bg;
   box-shadow: $shadow-hover;
   transition: all $transition-fast;
@@ -13,19 +19,30 @@
 
 
 .card-header,
-.card-footer {
-  @include clearfix;
-  padding: $card-spacer-y $card-spacer-x;
-  background-color: $card-cap-bg;
-}
-
+.card-footer,
 .card-block {
   @include clearfix;
   padding: $card-spacer-y $card-spacer-x;
+}
 
-  & + & {
-    padding-top: 0;
+.card-header {
+
+}
+
+.card-block {
+  @if $enable-flex {
+    @include media-breakpoint-up(sm) {
+      flex-grow: 1;
+    }
   }
+}
+
+.card-footer {
+  background-color: $card-cap-bg;
+}
+
+.card-block + .card-block {
+  padding-top: 0;
 }
 
 
@@ -34,16 +51,68 @@
 ///
 
 .card-title {
-  margin-top: $card-spacer-y * 2;
-  margin-bottom: 0;
-  font-size: $font-size-h2;
-  // color: $brand-primary;
+  margin-top: $card-spacer-y;
 }
 
 .card-caption {
   margin-top: 0;
   margin-bottom: 0;
   color: $text-muted;
+}
+
+.card-header {
+  .card-title,
+  .card-caption {
+    text-align: center;
+  }
+
+  .card-title {
+    margin-top: $card-spacer-y * 2;
+    margin-bottom: 0;
+    font-size: $font-size-h2;
+    color: $brand-primary;
+  }
+}
+
+
+
+///
+/// Card deck
+///
+
+@if $enable-flex {
+  @include media-breakpoint-up(sm) {
+    .card-deck {
+      display: flex;
+      flex-flow: row wrap;
+      margin-right: (-$grid-gutter-width / 2);
+      margin-left: (-$grid-gutter-width / 2);
+
+      .card {
+        flex: 1 0 0;
+        margin-right: ($grid-gutter-width / 2);
+        margin-left: ($grid-gutter-width / 2);
+      }
+    }
+  }
+} @else {
+  @include media-breakpoint-up(sm) {
+    .card-deck {
+      display: table;
+      table-layout: fixed;
+      border-spacing: ($grid-gutter-width / 2) 0;
+
+      .card {
+        display: table-cell;
+        width: 1%;
+        vertical-align: top;
+      }
+    }
+    .card-deck-wrapper {
+      margin-right: (-$grid-gutter-width / 2);
+      margin-left: (-$grid-gutter-width / 2);
+    }
+  }
 }
 
 

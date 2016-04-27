@@ -1,11 +1,12 @@
 ---
-title: Card sizing
+title: Card deck
 category: card
-order: 5
-description: Like most other components, cards are fluid-width by default.  The recommended way to size cards is by putting them inside grid columns, which gives you control over their size at each breakpoint and includes gutters between the cards.
+order: 6
+description: Card decks are handy for making cards align horizontally and match both width and height.  The <code>.card-body</code> is designed to fill in the available space, so <code>.card-footer</code> appears at the bottom of the card (when flexbox mode is enabled).</p><p><em>Note that the <code>.card-deck-wrapper</code> class is only necessary if you have flexbox mode disabled.</em>
 ---
-<div class="row">
-  <div class="col-xs-6 col-sm-4">
+<!-- Only include .card-deck-wrapper if flexbox is disabled -->
+<div class="card-deck-wrapper">
+  <div class="card-deck">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">First card</h4>
@@ -18,8 +19,6 @@ description: Like most other components, cards are fluid-width by default.  The 
         <button class="btn btn-primary">See data</button>
       </div>
     </div>
-  </div>
-  <div class="col-xs-6 col-sm-4">
     <div class="card">
       <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
       <div class="card-block">
@@ -31,8 +30,6 @@ description: Like most other components, cards are fluid-width by default.  The 
         <button class="btn btn-primary">See data</button>
       </div>
     </div>
-  </div>
-  <div class="col-xs-6 col-sm-4">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">Third card</h4>
