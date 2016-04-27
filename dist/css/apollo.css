@@ -3109,6 +3109,10 @@ mark,
   color: #3ed6cf;
 }
 
+.bg-gradient {
+  background-image: radial-gradient(ellipse farthest-corner at 30% 12%, #fdfcfc 0%, #f7f5f4 55%, #e2dad6 100%);
+}
+
 .alert, .form-msg {
   display: block;
   position: relative;
