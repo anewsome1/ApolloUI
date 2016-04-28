@@ -10,23 +10,31 @@ body {
 }
 
 .docs-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: $docs-sidebar-width;
-  height: 100%;
-  padding-top: $navbar-height;
-  overflow-x: hidden;
-  overflow-y: auto;
+  padding-top: $navbar-sm-height;
 
-  + .docs-content {
-    margin-left: $docs-sidebar-width;
+  @include media-breakpoint-up(sm) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $docs-sidebar-width;
+    height: 100%;
+    padding-top: $navbar-height;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    + .docs-content {
+      margin-left: $docs-sidebar-width;
+    }
   }
 }
 
 .docs-content {
-  padding-top: $navbar-height + $spacer;
+  padding-top: $spacer;
   min-height: 100%;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: $navbar-sm-height + $spacer;
+  }
 }
 
 
@@ -145,11 +153,22 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: percentage(1 / 5);
   padding: ($spacer * 2) $spacer;
   background-color: $neutral;
   border: 1px solid #fff;
   transition: all $transition-fast;
+
+  @include media-breakpoint-down(sm) {
+    width: percentage(1 / 2);
+  }
+
+  @include media-breakpoint-only(md) {
+    width: percentage(1 / 3);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: percentage(1 / 5);
+  }
 
   &:hover {
     background-color: $blue;
