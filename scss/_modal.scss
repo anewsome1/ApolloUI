@@ -35,6 +35,9 @@
 }
 
 
+///
+/// Modal dialog (visible part of modal)
+///
 
 .modal-dialog {
   position: relative; // For close button
@@ -61,7 +64,7 @@
 }
 
 ///
-/// Modal contents (for content area)
+/// Modal contents
 ///
 
 .modal-header,
@@ -157,7 +160,7 @@
   // Login form variation
   .modal-login & {
     max-width: $login-max-width;
-    padding: $modal-inner-padding;
+    padding: unset;
   }
 }
 
