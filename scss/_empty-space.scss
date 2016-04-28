@@ -3,15 +3,15 @@
 
   position: relative;
   display: inline-block;
-  width: $empty-space-icon-size * 1.5;
-  height: $empty-space-icon-size * 1.5;
+  width: $empty-space-icon-size * 1.65;
+  height: $empty-space-icon-size * 1.65;
   margin-top: $spacer;
   margin-bottom: $spacer;
   color: $empty-space-icon-color;
   font-size: $empty-space-icon-size;
   line-height: 1;
   opacity: .3;
-  border: 1px dashed $empty-space-icon-color;
+  border: ($border-width * 2) dashed $empty-space-icon-color;
   border-radius: 50%;
 
   &::before {

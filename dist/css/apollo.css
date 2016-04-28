@@ -5340,15 +5340,15 @@ p:last-child {
 .empty-space-icon {
   position: relative;
   display: inline-block;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 4.125rem;
+  height: 4.125rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: #1f2a31;
   font-size: 2.5rem;
   line-height: 1;
   opacity: .3;
-  border: 1px dashed #1f2a31;
+  border: 0.125rem dashed #1f2a31;
   border-radius: 50%;
 }
 
