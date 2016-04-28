@@ -3938,6 +3938,7 @@ input[type='radio']:checked {
 
 .navbar.navbar-fixed-top {
   position: fixed;
+  top: 0;
   z-index: 1030;
   width: 100%;
 }
@@ -4094,8 +4095,16 @@ input[type='radio']:checked {
   background-color: #143770;
 }
 
-.margin-top-navbar {
-  margin-top: 5.5rem;
+@media (max-width: 543px) {
+  .margin-top-navbar {
+    margin-top: 3.75rem;
+  }
+}
+
+@media (min-width: 544px) {
+  .margin-top-navbar {
+    margin-top: 5.5rem;
+  }
 }
 
 .margin-top-navbar-sm {
