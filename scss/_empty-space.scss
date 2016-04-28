@@ -3,8 +3,8 @@
 
   position: relative;
   display: inline-block;
-  width: $empty-space-icon-size;
-  height: $empty-space-icon-size;
+  width: $empty-space-icon-size * 1.5;
+  height: $empty-space-icon-size * 1.5;
   margin-top: $spacer;
   margin-bottom: $spacer;
   color: $empty-space-icon-color;
@@ -15,7 +15,6 @@
   border-radius: 50%;
 
   &::before {
-    content: map-get($_icons-map, 'close');
     position: absolute;
     top: 50%;
     left: 50%;
