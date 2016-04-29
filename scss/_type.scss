@@ -1,0 +1,15 @@
+td > dl {
+  margin-bottom: 0;
+}
+
+dt {
+  color: $blue-dark;
+}
+
+dd {
+  margin-bottom: $spacer-y;
+}
+
+.dl-horizontal {
+  @include make-row;
+}

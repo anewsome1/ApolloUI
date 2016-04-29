@@ -3056,6 +3056,29 @@ mark,
   content: "\00A0 \2014";
 }
 
+td > dl {
+  margin-bottom: 0;
+}
+
+dt {
+  color: #1e54a8;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+.dl-horizontal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+}
+
 .img-fluid, .carousel-inner > .carousel-item > img,
 .carousel-inner > .carousel-item > a > img {
   display: block;
