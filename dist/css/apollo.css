@@ -3679,7 +3679,7 @@ input[type='radio']:checked {
   background-color: rgba(202, 205, 207, 0.1);
 }
 
-.table tbody tr.table-info > td:first-child, .table tbody tr.table-info-border > td:first-child {
+.table tbody tr.table-info > td:first-child, .table tbody tr.table-border-info > td:first-child {
   box-shadow: inset 0.5rem 0 0 -0.25rem #32b5fc;
 }
 
@@ -3687,7 +3687,7 @@ input[type='radio']:checked {
   background-color: rgba(50, 181, 252, 0.1);
 }
 
-.table tbody tr.table-success > td:first-child, .table tbody tr.table-success-border > td:first-child {
+.table tbody tr.table-success > td:first-child, .table tbody tr.table-border-success > td:first-child {
   box-shadow: inset 0.5rem 0 0 -0.25rem #2cc039;
 }
 
@@ -3695,7 +3695,7 @@ input[type='radio']:checked {
   background-color: rgba(44, 192, 57, 0.1);
 }
 
-.table tbody tr.table-warning > td:first-child, .table tbody tr.table-warning-border > td:first-child {
+.table tbody tr.table-warning > td:first-child, .table tbody tr.table-border-warning > td:first-child {
   box-shadow: inset 0.5rem 0 0 -0.25rem #ecdb5d;
 }
 
@@ -3703,7 +3703,7 @@ input[type='radio']:checked {
   background-color: rgba(236, 219, 93, 0.1);
 }
 
-.table tbody tr.table-danger > td:first-child, .table tbody tr.table-danger-border > td:first-child {
+.table tbody tr.table-danger > td:first-child, .table tbody tr.table-border-danger > td:first-child {
   box-shadow: inset 0.5rem 0 0 -0.25rem #f75040;
 }
 
