@@ -4696,6 +4696,7 @@ p:last-child {
 
 .card-accordion .card-header {
   border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  background-color: rgba(29, 39, 44, 0.05);
 }
 
 .card-accordion .card-title {
