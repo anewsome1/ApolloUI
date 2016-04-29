@@ -58,7 +58,7 @@
       $state-bg: map-get($state-props, bg);
 
       &.table-#{ $state },
-      &.table-#{ $state }-border {
+      &.table-border-#{ $state } {
         > td:first-child {
           box-shadow: $table-highlight-shadow $state-bg;
         }
