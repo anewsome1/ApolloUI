@@ -33,7 +33,7 @@ body {
   min-height: 100%;
 
   @include media-breakpoint-up(sm) {
-    padding-top: $navbar-sm-height + $spacer;
+    padding-top: $navbar-height + $spacer;
   }
 }
 
