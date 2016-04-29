@@ -3938,6 +3938,7 @@ input[type='radio']:checked {
 
 .navbar.navbar-fixed-top {
   position: fixed;
+  top: 0;
   z-index: 1030;
   width: 100%;
 }
@@ -4094,8 +4095,16 @@ input[type='radio']:checked {
   background-color: #143770;
 }
 
-.margin-top-navbar {
-  margin-top: 5.5rem;
+@media (max-width: 543px) {
+  .margin-top-navbar {
+    margin-top: 3.75rem;
+  }
+}
+
+@media (min-width: 544px) {
+  .margin-top-navbar {
+    margin-top: 5.5rem;
+  }
 }
 
 .margin-top-navbar-sm {
@@ -4469,6 +4478,19 @@ input[type='radio']:checked {
           transform: translateY(-100%);
 }
 
+@media (max-width: 543px) {
+  .modal-dialog {
+    margin-top: 3.75rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
+@media (min-width: 544px) {
+  .modal-dialog {
+    margin: 5.5rem auto;
+  }
+}
+
 .in .modal-dialog {
   opacity: 1;
   -webkit-transform: translateY(0);
@@ -4541,7 +4563,6 @@ p:last-child {
 @media (min-width: 544px) {
   .modal-dialog {
     max-width: 37.5rem;
-    margin: 5.5rem auto;
   }
   .modal-sm .modal-dialog {
     max-width: 18.75rem;
@@ -4555,8 +4576,13 @@ p:last-child {
 }
 
 .modal-login .modal-dialog {
-  max-width: 24rem;
   padding: unset;
+}
+
+@media (min-width: 544px) {
+  .modal-login .modal-dialog {
+    max-width: 24rem;
+  }
 }
 
 .card {
@@ -4670,6 +4696,7 @@ p:last-child {
 
 .card-accordion .card-header {
   border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  background-color: rgba(29, 39, 44, 0.05);
 }
 
 .card-accordion .card-title {
@@ -5340,25 +5367,24 @@ p:last-child {
 .empty-space-icon {
   position: relative;
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 4.125rem;
+  height: 4.125rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: #1f2a31;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1;
   opacity: .3;
-  border: 1px dashed #1f2a31;
+  border: 0.125rem dashed #1f2a31;
   border-radius: 50%;
 }
 
 .empty-space-icon::before {
-  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -1.5rem;
-  margin-left: -1.5rem;
+  margin-top: -1.25rem;
+  margin-left: -1.25rem;
 }
 
 .bg-dark .empty-space-icon, .off-canvas .empty-space-icon {
