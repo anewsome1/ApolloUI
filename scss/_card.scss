@@ -147,6 +147,7 @@
   // Borders
   .card-header {
     border-top: $card-border-width solid $card-border-color;
+    background-color: $card-cap-bg;
   }
 
   // Headings

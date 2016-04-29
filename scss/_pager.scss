@@ -1,0 +1,44 @@
+.pager {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pager-count {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.pager-prev,
+.pager-next {
+  font-weight: $font-semi-bold;
+  cursor: pointer;
+
+  &.disabled {
+    color: $text-muted;
+    cursor: $cursor-disabled;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+///
+/// Forward/backward icons
+///
+
+.pager-prev::before,
+.pager-next::after {
+  @extend %icon-base;
+  vertical-align: text-bottom;
+}
+
+.pager-prev::before {
+  content: map-get($_icons-map, 'chevron-left');
+  padding-right: .5rem;
+}
+
+.pager-next::after {
+  content: map-get($_icons-map, 'chevron-right');
+  padding-left: .5rem;
+}

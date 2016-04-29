@@ -82,23 +82,34 @@ body {
 }
 
 .docs-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 18rem;
-  height: 100%;
-  padding-top: 5.5rem;
-  overflow-x: hidden;
-  overflow-y: auto;
+  padding-top: 3.75rem;
 }
 
-.docs-sidebar + .docs-content {
-  margin-left: 18rem;
+@media (min-width: 544px) {
+  .docs-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18rem;
+    height: 100%;
+    padding-top: 5.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .docs-sidebar + .docs-content {
+    margin-left: 18rem;
+  }
 }
 
 .docs-content {
-  padding-top: 6.5rem;
+  padding-top: 1rem;
   min-height: 100%;
+}
+
+@media (min-width: 544px) {
+  .docs-content {
+    padding-top: 6.5rem;
+  }
 }
 
 .docs-page-nav,
@@ -194,11 +205,28 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
   padding: 2rem 1rem;
   background-color: #f7f5f4;
   border: 1px solid #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+@media (max-width: 767px) {
+  .docs-icon {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .docs-icon {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .docs-icon {
+    width: 20%;
+  }
 }
 
 .docs-icon:hover {

@@ -49,6 +49,16 @@
               transform $transition-medium;
   transform: translateY(-100%);
 
+  @include media-breakpoint-only(xs) {
+    margin-top: $navbar-sm-height;
+    margin-bottom: $navbar-sm-height;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin: $navbar-height auto;
+  }
+
+
   .in & {
     opacity: 1;
     transform: translateY(0);
@@ -143,7 +153,6 @@
 .modal-dialog {
   @include media-breakpoint-up(sm) {
     max-width: $modal-md;
-    margin: $navbar-height auto;
 
     .modal-sm & {
       max-width: $modal-sm;
@@ -159,8 +168,11 @@
 
   // Login form variation
   .modal-login & {
-    max-width: $login-max-width;
     padding: unset;
+
+    @include media-breakpoint-up(sm) {
+      max-width: $login-max-width;
+    }
   }
 }
 

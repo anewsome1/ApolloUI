@@ -11,6 +11,7 @@
 
   &.navbar-fixed-top {
     position: fixed;
+    top: 0;
     z-index: $zindex-navbar-fixed;
     width: 100%;
   }
@@ -176,7 +177,14 @@
 
 // Utility for shifting content down when using navbar-fixed-top
 .margin-top-navbar {
-  margin-top: $navbar-height;
+
+  @include media-breakpoint-only(xs) {
+    margin-top: $navbar-sm-height;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-top: $navbar-height;
+  }
 
   &-sm {
     margin-top: $navbar-sm-height;
