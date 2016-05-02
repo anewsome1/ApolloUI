@@ -1,3 +1,7 @@
+///
+/// Search component wrapper
+///
+
 .search {
   position: relative;
 
@@ -16,18 +20,47 @@
   }
 }
 
+///
+/// Input field
+///
+
 .search-input {
   @extend .form-control;
 
   position: relative;
   padding-left: $search-padding-left;
+
+  .bg-dark & {
+    color: #fff;
+    background-color: rgba($charcoal-darker, .95);
+    border-color: transparent;
+
+    &::placeholder {
+      color: $charcoal-light;
+    }
+
+    &:focus {
+      background-color: $charcoal-darker;
+    }
+  }
 }
+
+// Make icon and placeholder text match
+.bg-dark .search::before,
+.bg-dark .search-input::placeholder {
+  color: $charcoal-light;
+}
+
+
+///
+/// Results list
+///
 
 .search-results {
   list-style-type: none;
   padding-left: 0;
 
-  > li > a {
+  > .search-result > .search-link {
     display: block;
     padding: $search-item-padding;
 
@@ -50,14 +83,23 @@
 
     &:hover,
     &:focus {
-      background-color: $navy;
+      background-color: $blue-dark;
       color: #fff;
+
+      .search-highlight {
+        color: $teal-light;
+      }
     }
   }
 }
 
+// Character highlighting
 .search-highlight {
   color: $link-color;
+
+  .bg-dark & {
+    color: $teal;
+  }
 }
 
   // @TODO: Revisit dropdown search results to fix
@@ -75,21 +117,5 @@
 
 
 
-.bg-dark {
-  .search {
-    &::before {
-      // Search icon color
-      color: $teal;
-    }
-  }
 
-  .search-input {
-    background-color: rgba($charcoal-darker, .95);
-    border-color: transparent;
-  }
-
-  .search-highlight {
-    color: $teal;
-  }
-}
 

@@ -42,8 +42,8 @@ $brand-danger:                $coral;
 
 $link-color:                  $blue;
 $link-decoration:             none;
-$link-hover-color:            $navy;
-$link-hover-decoration:       underline;
+$link-hover-color:            $blue-dark;
+$link-hover-decoration:       none;
 
 
 
@@ -228,7 +228,7 @@ $input-padding-x:                .5rem;
 $input-padding-y:                calc-padding-y($component-height, $font-size-base);
 $input-line-height:              1;
 
-$input-bg:                       #fff;
+$input-bg:                       rgba(#fff, .85);
 $input-bg-disabled:              $charcoal-lighter;
 $input-bg-focus:                 #fff;
 
@@ -245,7 +245,7 @@ $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-active;
 $input-outline:                  $border-width solid transparent;
 
-$input-color-placeholder:        #999;
+$input-color-placeholder:        $charcoal-light;
 
 // $input-padding-x-sm:             $input-padding-x;
 // $input-padding-y-sm:             .275rem;
@@ -513,7 +513,7 @@ $carousel-text-shadow:                        0 .0625rem .125rem rgba(0,0,0,.6);
 
 $carousel-control-color:                      #fff;
 $carousel-control-width:                      $jumbotron-padding;
-$carousel-control-font-size:                  2rem;
+$carousel-control-font-size:                  1.5rem;
 
 $carousel-indicator-active-bg:                #fff;
 $carousel-indicator-inactive-bg:              rgba(#fff, .5);
