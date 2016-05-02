@@ -22,17 +22,35 @@
 
 @mixin bg-color($bg-color, $text-color: null, $link-color: null) {
   background-color: $bg-color;
+
   @if($text-color) {
     color: $text-color;
   }
+
   @if($link-color) {
-    a:not(.btn-primary):not(.btn-secondary):not(.nav-link) {
+    a {
       &,
-      &:hover,
-      &:active,
       &:visited {
         color: $link-color;
       }
+      &:hover,
+      &:active {
+        color: darken($link-color, 10%);
+      }
+
+      // Reset button link colors
+      @each $btn-name, $btn-props in $btn-variants {
+        &.btn-#{ $btn-name },
+        &.btn-#{ $btn-name }:hover,
+        &.btn-#{ $btn-name }:visited {
+          color: map-get($btn-props, 'color');
+        }
+
+        &.btn-#{ $btn-name }:active {
+          color: map-get($btn-props, 'color-active');
+        }
+      }
+
     }
   }
 }
