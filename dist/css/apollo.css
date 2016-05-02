@@ -4923,18 +4923,37 @@ p:last-child {
 }
 
 .carousel-control {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: columns;
+      -ms-flex-direction: columns;
+          flex-direction: columns;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 0;
   bottom: 0;
+  width: 1.875rem;
+  height: auto;
+}
+
+@media (min-width: 544px) {
+  .carousel-control {
+    width: 3.75rem;
+  }
+}
+
+.carousel-control.left {
   left: 0;
-  width: 3.75rem;
-  font-size: 2rem;
-  text-align: center;
 }
 
 .carousel-control.right {
   right: 0;
-  left: auto;
 }
 
 .carousel-control:focus, .carousel-control:hover {
@@ -4944,27 +4963,11 @@ p:last-child {
 
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  line-height: 1;
-}
-
-.carousel-control .icon-prev {
-  left: 50%;
-  margin-left: -10px;
+  font-size: 1.5rem;
 }
 
 .carousel-control .icon-prev::before {
   content: "";
-}
-
-.carousel-control .icon-next {
-  right: 50%;
-  margin-right: -10px;
 }
 
 .carousel-control .icon-next::before {
@@ -5004,16 +5007,16 @@ p:last-child {
 @media (min-width: 544px) {
   .carousel-control .icon-prev,
   .carousel-control .icon-next {
-    width: 2rem;
-    height: 2rem;
-    margin-top: -1rem;
-    font-size: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.75rem;
+    font-size: 1.5rem;
   }
   .carousel-control .icon-prev {
-    margin-left: -1rem;
+    margin-left: -0.75rem;
   }
   .carousel-control .icon-next {
-    margin-right: -1rem;
+    margin-right: -0.75rem;
   }
   .carousel-caption {
     right: 20%;
