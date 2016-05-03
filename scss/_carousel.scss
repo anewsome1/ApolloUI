@@ -90,18 +90,26 @@
 ///
 
 .carousel-control {
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: $carousel-control-width;
-  font-size: $carousel-control-font-size;
-  text-align: center;
+  width: $grid-gutter-width;
+  height: auto;
 
-  /// Set gradients for backgrounds
+  @include media-breakpoint-up(sm) {
+    width: $carousel-control-width;
+  }
+
+  &.left {
+    left: 0;
+  }
+
   &.right {
     right: 0;
-    left: auto;
   }
 
   /// Hover/focus state
@@ -115,31 +123,15 @@
   .icon-next {
     @extend %icon-base;
 
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    line-height: 1;
+    font-size: $carousel-control-font-size;
   }
 
-  .icon-prev {
-    left: 50%;
-    margin-left: -10px;
-
-    &::before {
-      content: map-get($_icons_map, 'chevron-left');
-    }
+  .icon-prev::before {
+    content: map-get($_icons_map, 'chevron-left');
   }
 
-  .icon-next {
-    right: 50%;
-    margin-right: -10px;
-
-    &::before {
-      content: map-get($_icons_map, 'chevron-right');
-    }
+  .icon-next::before {
+    content: map-get($_icons_map, 'chevron-right');
   }
 }
 

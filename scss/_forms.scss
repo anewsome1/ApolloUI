@@ -33,6 +33,13 @@
               background-color $transition-fast,
               box-shadow $transition-fast;
 
+  // Placeholder
+  &::placeholder {
+    color: $input-color-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
   // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus,
@@ -46,13 +53,13 @@
 
   &:focus,
   &.focus {
-    box-shadow: $shadow-hover;    
+    box-shadow: $shadow-hover;
   }
 
   &:active,
   &.active,
   label:active + & {
-    box-shadow: $shadow-active;    
+    box-shadow: $shadow-active;
   }
 
 
