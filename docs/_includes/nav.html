@@ -1,11 +1,11 @@
-  <aside class="docs-sidebar">
-    <ul class="docs-page-nav" role="navigation">
-    {% for page in site.pages %}
-      <li class="docs-page-nav-item">
-        <a href="{{base}}{{ page.url }}">
-          <h3 class="h5 docs-page-nav-category">{{ page.title | capitalize }}</h3>
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
-  </aside>
+<ul class="docs-page-nav" role="navigation">
+{% for item in site.pages %}
+  {% assign is_active = nil %}
+  {% if page.url == item.url %}
+    {% assign is_active = 'active' %}
+  {% endif %}
+  <li class="docs-page-nav-item {{is_active}}">
+    <a href="{{base}}{{ item.url }}">{{ item.title | capitalize }}</a>
+  </li>
+{% endfor %}
+</ul>

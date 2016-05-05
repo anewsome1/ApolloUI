@@ -81,6 +81,10 @@ body {
   height: 100%;
 }
 
+.docs-sidebar {
+  background-color: #2b3b43;
+}
+
 @media (min-width: 544px) {
   .docs-sidebar {
     position: fixed;
@@ -100,26 +104,27 @@ body {
   min-height: 100%;
 }
 
-.docs-page-nav,
-.docs-page-subnav {
-  padding-left: 0.9375rem;
-}
-
-.docs-page-nav-item,
-.docs-page-subnav-item {
-  list-style-type: none;
-}
-
 .docs-page-nav {
   padding-top: 1rem;
+  padding-left: 0.9375rem;
 }
 
 .docs-page-nav-item {
   margin-bottom: 1rem;
 }
 
-.docs-page-nav-category {
-  font-weight: 600;
+.docs-page-nav-item > a {
+  color: #fff;
+  font-weight: 300;
+}
+
+.docs-page-nav-item.active > a {
+  color: #3ed6cf;
+  font-weight: 400;
+}
+
+.docs-page-nav-item {
+  list-style-type: none;
 }
 
 .docs-section {

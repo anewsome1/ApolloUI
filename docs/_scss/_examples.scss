@@ -10,6 +10,8 @@ body {
 }
 
 .docs-sidebar {
+  background-color: $charcoal-dark;
+
   @include media-breakpoint-up(sm) {
     position: fixed;
     top: 0;
@@ -34,24 +36,26 @@ body {
 /// Page subnavigation
 ///
 
-.docs-page-nav,
-.docs-page-subnav {
+.docs-page-nav {
+  padding-top: $spacer;
   padding-left: $grid-gutter-width / 2;
 
   &-item {
-    list-style-type: none;
-  }
-}
+    margin-bottom: $spacer;
 
-.docs-page-nav {
-  padding-top: $spacer;
+    > a {
+      color: #fff;
+      font-weight: $font-light;
+    }
+
+    &.active > a {
+      color: $teal;
+      font-weight: $font-normal;
+    }
+  }
 
   &-item {
-    margin-bottom: $spacer;
-  }
-
-  &-category {
-    font-weight: $font-semi-bold;
+    list-style-type: none;
   }
 }
 

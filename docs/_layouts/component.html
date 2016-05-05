@@ -5,8 +5,9 @@ layout: base
 {% assign section_groups = site.components | group_by: 'category' %}
 
 <div class="docs">
-
-  {% include nav.html %}
+  <aside class="docs-sidebar">
+    {% include nav.html %}
+  </aside>
 
   <main class="docs-content container-fluid">
     {{ content }}
