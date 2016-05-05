@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Home page | Apollo UI</title>
+  <title>State indicator | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./css/apollo.css">
-  <link rel="stylesheet" href="./css/docs.css">
-  <!-- / -->
+  <link rel="stylesheet" href="../css/apollo.css">
+  <link rel="stylesheet" href="../css/docs.css">
+  <!-- /card-state.html -->
 
 </head>
 
@@ -426,26 +426,37 @@
 
 
   <main class="docs-content container-fluid">
-    <div class="docs">
-  <div class="jumbotron jumbotron-fluid bg-light">
-    <div class="container-fluid">
-      <h1>Apollo UI</h1>
-      <h4>HTML and CSS for the Apollo visual language.</h4>
-      <p><b>Version</b>: 1.0.0-beta</p>
+    <div class="card-deck">
+  <div class="card card-info">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Information</h4>
+      <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p>
     </div>
   </div>
-  <div class="docs-content">
-    <div class="container-fluid">
-      <p>This site contains developer documentation for the following resources:</p>
-      <ul>
-        <li><b>Styles</b>: This page includes most basic styles, like grid, typography, buttons, forms, etc.</li>
-        <li><b>Icons</b>: Shows how you can implement and style our icons in various ways, including a complete list of all 273 icons in our custom set!</li>
-        <li><b>Components</b>: These are made up mostly using multiple items from the styles section, plus some component-specific treatment.  Examples include login form, navbar, dropdowns and more.</li>
-      </ul>
-      <p class="pad-top font-italic">NOTE: This project is in development, so stay tuned for more additions and improvements in the coming months.  The design for this site is a basic placeholder using core styles from Apollo.  A new design will be implemented when these docs are incorporated into the Design Resource Base later this year.</p>
+  <div class="card card-success">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Success!</h4>
+      <p>Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+    </div>
+  </div>
+  <div class="card card-warning">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Warning!</h4>
+      <p>Some pilots get picked and become television programs. Some don't, become nothing.</p>
+    </div>
+  </div>
+  <div class="card card-danger">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Danger!</h4>
+      <p>She starred in one of the ones that became nothing.</p>
     </div>
   </div>
 </div>
+
   </main>
 </div>
 
@@ -456,7 +467,7 @@
   </div>
 </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="./js/apollo.js"></script>
+ <script src="../js/apollo.js"></script>
 
   </body>
 </html>

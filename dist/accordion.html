@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Home page | Apollo UI</title>
+  <title>Accordion | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./css/apollo.css">
-  <link rel="stylesheet" href="./css/docs.css">
-  <!-- / -->
+  <link rel="stylesheet" href="../css/apollo.css">
+  <link rel="stylesheet" href="../css/docs.css">
+  <!-- /accordion.html -->
 
 </head>
 
@@ -426,26 +426,85 @@
 
 
   <main class="docs-content container-fluid">
-    <div class="docs">
-  <div class="jumbotron jumbotron-fluid bg-light">
-    <div class="container-fluid">
-      <h1>Apollo UI</h1>
-      <h4>HTML and CSS for the Apollo visual language.</h4>
-      <p><b>Version</b>: 1.0.0-beta</p>
-    </div>
+    <div class="card card-accordion" role="tablist" aria-multiselectable="true">
+  <div class="card-header" id="accordion-head-1" role="tab">
+    <h3 class="card-title" data-toggle="collapse" data-target="#accordion-sect-1" aria-expanded="true" aria-controls="accordion-sect-1" >
+        Section 1
+      </a>
+    </h3>
   </div>
-  <div class="docs-content">
-    <div class="container-fluid">
-      <p>This site contains developer documentation for the following resources:</p>
-      <ul>
-        <li><b>Styles</b>: This page includes most basic styles, like grid, typography, buttons, forms, etc.</li>
-        <li><b>Icons</b>: Shows how you can implement and style our icons in various ways, including a complete list of all 273 icons in our custom set!</li>
-        <li><b>Components</b>: These are made up mostly using multiple items from the styles section, plus some component-specific treatment.  Examples include login form, navbar, dropdowns and more.</li>
-      </ul>
-      <p class="pad-top font-italic">NOTE: This project is in development, so stay tuned for more additions and improvements in the coming months.  The design for this site is a basic placeholder using core styles from Apollo.  A new design will be implemented when these docs are incorporated into the Design Resource Base later this year.</p>
-    </div>
+  <div class="card-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+    <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumbersexual cardigan. Keytar street art salvia, disrupt godard chia put a bird on it etsy twee slow-carb. Fanny pack man braid bespoke schlitz, etsy pug flannel. Trust fund health goth umami, PBR&B meh tacos freegan pitchfork shoreditch microdosing keytar keffiyeh sartorial quinoa. Twee flexitarian pickled forage umami quinoa. Yr whatever 90's, food truck kombucha truffaut chartreuse lo-fi pug.</p>
+  </div>
+  <div class="card-header" id="accordion-head-2" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-sect-2" aria-expanded="false" aria-controls="accordion-sect-2" >
+        Section 2
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
+    <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan. Pork belly everyday carry taxidermy etsy, selfies heirloom crucifix truffaut gluten-free. Art party fashion axe DIY williamsburg trust fund portland. Humblebrag austin pour-over, pickled selfies kitsch fixie semiotics sartorial XOXO pitchfork. Readymade tumblr selfies art party, mixtape chia cred hella. Crucifix austin dreamcatcher vinyl, viral leggings paleo chillwave ramps.</p>
+  </div>
+  <div class="card-header" id="accordion-head-3" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-sect-3" aria-expanded="false" aria-controls="accordion-sect-3" >
+        Section 3
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
+    <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS. Narwhal butcher pop-up, mumblecore pinterest tousled cronut sartorial readymade portland bitters fixie kale chips. Meggings skateboard austin brooklyn put a bird on it fanny pack, tattooed pop-up tacos vinyl church-key pork belly. Williamsburg meggings aesthetic literally, iPhone truffaut craft beer marfa schlitz offal. Ugh quinoa umami fap, authentic aesthetic kitsch. Small batch ethical gentrify, blog asymmetrical wayfarers ugh listicle health goth trust fund intelligentsia +1 hammock.</p>
+  </div>
+  <div class="card-header" id="accordion-head-4" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-sect-4" aria-expanded="false" aria-controls="accordion-sect-4" >
+        Section 4
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-sect-4" role="tabpanel" aria-labeledby="accordion-head-4">
+    <p>Ethical sartorial skateboard marfa. Poutine 8-bit humblebrag, shabby chic hammock semiotics art party cliche pug chicharrones artisan skateboard 3 wolf moon roof party pickled. Paleo franzen pour-over, migas green juice beard everyday carry messenger bag church-key retro asymmetrical ramps meh dreamcatcher artisan. Vinyl biodiesel sartorial, tote bag mumblecore salvia 3 wolf moon hella letterpress keffiyeh venmo vegan four loko. Stumptown selfies heirloom schlitz, salvia bushwick XOXO yr street art chia messenger bag VHS irony ugh PBR&B. Affogato offal authentic viral, cray dreamcatcher meditation hoodie godard yr pitchfork man braid vice master cleanse. Aesthetic whatever listicle, food truck yr stumptown blog.</p>
   </div>
 </div>
+
+
+<div class="card card-accordion bg-dark" role="tablist" aria-multiselectable="true">
+  <div class="card-header" id="accordion-dark-head-1" role="tab">
+    <h3 class="card-title" data-toggle="collapse" data-target="#accordion-dark-sect-1" aria-expanded="true" aria-controls="accordion-dark-sect-1" >
+        Section 1
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
+    <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumbersexual cardigan. Keytar street art salvia, disrupt godard chia put a bird on it etsy twee slow-carb. Fanny pack man braid bespoke schlitz, etsy pug flannel. Trust fund health goth umami, PBR&B meh tacos freegan pitchfork shoreditch microdosing keytar keffiyeh sartorial quinoa. Twee flexitarian pickled forage umami quinoa. Yr whatever 90's, food truck kombucha truffaut chartreuse lo-fi pug.</p>
+  </div>
+  <div class="card-header" id="accordion-dark-head-2" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-dark-sect-2" aria-expanded="false" aria-controls="accordion-dark-sect-2" >
+        Section 2
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-dark-sect-2" role="tabpanel" aria-labeledby="accordion-dark-head-2">
+    <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan. Pork belly everyday carry taxidermy etsy, selfies heirloom crucifix truffaut gluten-free. Art party fashion axe DIY williamsburg trust fund portland. Humblebrag austin pour-over, pickled selfies kitsch fixie semiotics sartorial XOXO pitchfork. Readymade tumblr selfies art party, mixtape chia cred hella. Crucifix austin dreamcatcher vinyl, viral leggings paleo chillwave ramps.</p>
+  </div>
+  <div class="card-header" id="accordion-dark-head-3" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-dark-sect-3" aria-expanded="false" aria-controls="accordion-dark-sect-3" >
+        Section 3
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-dark-sect-3" role="tabpanel" aria-labeledby="accordion-dark-head-3">
+    <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS. Narwhal butcher pop-up, mumblecore pinterest tousled cronut sartorial readymade portland bitters fixie kale chips. Meggings skateboard austin brooklyn put a bird on it fanny pack, tattooed pop-up tacos vinyl church-key pork belly. Williamsburg meggings aesthetic literally, iPhone truffaut craft beer marfa schlitz offal. Ugh quinoa umami fap, authentic aesthetic kitsch. Small batch ethical gentrify, blog asymmetrical wayfarers ugh listicle health goth trust fund intelligentsia +1 hammock.</p>
+  </div>
+  <div class="card-header" id="accordion-dark-head-4" role="tab">
+    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-dark-sect-4" aria-expanded="false" aria-controls="accordion-dark-sect-4" >
+        Section 4
+      </a>
+    </h3>
+  </div>
+  <div class="card-block collapse" id="accordion-dark-sect-4" role="tabpanel" aria-labeledby="accordion-dark-head-4">
+    <p>Ethical sartorial skateboard marfa. Poutine 8-bit humblebrag, shabby chic hammock semiotics art party cliche pug chicharrones artisan skateboard 3 wolf moon roof party pickled. Paleo franzen pour-over, migas green juice beard everyday carry messenger bag church-key retro asymmetrical ramps meh dreamcatcher artisan. Vinyl biodiesel sartorial, tote bag mumblecore salvia 3 wolf moon hella letterpress keffiyeh venmo vegan four loko. Stumptown selfies heirloom schlitz, salvia bushwick XOXO yr street art chia messenger bag VHS irony ugh PBR&B. Affogato offal authentic viral, cray dreamcatcher meditation hoodie godard yr pitchfork man braid vice master cleanse. Aesthetic whatever listicle, food truck yr stumptown blog.</p>
+  </div>
+</div>
+
   </main>
 </div>
 
@@ -456,7 +515,7 @@
   </div>
 </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="./js/apollo.js"></script>
+ <script src="../js/apollo.js"></script>
 
   </body>
 </html>

@@ -81,10 +81,6 @@ body {
   height: 100%;
 }
 
-.docs-sidebar {
-  padding-top: 3.75rem;
-}
-
 @media (min-width: 544px) {
   .docs-sidebar {
     position: fixed;
@@ -92,7 +88,6 @@ body {
     left: 0;
     width: 18rem;
     height: 100%;
-    padding-top: 5.5rem;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -102,14 +97,7 @@ body {
 }
 
 .docs-content {
-  padding-top: 1rem;
   min-height: 100%;
-}
-
-@media (min-width: 544px) {
-  .docs-content {
-    padding-top: 6.5rem;
-  }
 }
 
 .docs-page-nav,

@@ -1,18 +1,11 @@
-<nav class="navbar navbar-primary navbar-fixed-top">
-  <div class="container-fluid">
-  <!-- Logo and/or name -->
-    <a class="navbar-brand" href="/">Apollo UI</a>
-    <!-- Links -->
-    <ul class="navbar-links">
-      <li class="navbar-item {% if page.url == '/styles/' %}active{% endif %}">
-        <a href="/styles/">Styles</a>
+  <aside class="docs-sidebar">
+    <ul class="docs-page-nav" role="navigation">
+    {% for page in site.pages %}
+      <li class="docs-page-nav-item">
+        <a href="{{base}}{{ page.url }}">
+          <h3 class="h5 docs-page-nav-category">{{ page.title | capitalize }}</h3>
+        </a>
       </li>
-      <li class="navbar-item {% if page.url == '/components/' %}active{% endif %}">
-        <a href="/components/">Components</a>
-      </li>
-      <li class="navbar-item {% if page.url == '/icons/' %}active{% endif %}">
-        <a href="/icons/">Icons</a>
-      </li>
+    {% endfor %}
     </ul>
-  </div>
-</nav>
+  </aside>

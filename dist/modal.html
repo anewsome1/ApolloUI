@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Home page | Apollo UI</title>
+  <title>Basic example | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./css/apollo.css">
-  <link rel="stylesheet" href="./css/docs.css">
-  <!-- / -->
+  <link rel="stylesheet" href="../css/apollo.css">
+  <link rel="stylesheet" href="../css/docs.css">
+  <!-- /modal.html -->
 
 </head>
 
@@ -426,26 +426,32 @@
 
 
   <main class="docs-content container-fluid">
-    <div class="docs">
-  <div class="jumbotron jumbotron-fluid bg-light">
-    <div class="container-fluid">
-      <h1>Apollo UI</h1>
-      <h4>HTML and CSS for the Apollo visual language.</h4>
-      <p><b>Version</b>: 1.0.0-beta</p>
-    </div>
-  </div>
-  <div class="docs-content">
-    <div class="container-fluid">
-      <p>This site contains developer documentation for the following resources:</p>
-      <ul>
-        <li><b>Styles</b>: This page includes most basic styles, like grid, typography, buttons, forms, etc.</li>
-        <li><b>Icons</b>: Shows how you can implement and style our icons in various ways, including a complete list of all 273 icons in our custom set!</li>
-        <li><b>Components</b>: These are made up mostly using multiple items from the styles section, plus some component-specific treatment.  Examples include login form, navbar, dropdowns and more.</li>
-      </ul>
-      <p class="pad-top font-italic">NOTE: This project is in development, so stay tuned for more additions and improvements in the coming months.  The design for this site is a basic placeholder using core styles from Apollo.  A new design will be implemented when these docs are incorporated into the Design Resource Base later this year.</p>
-    </div>
-  </div>
-</div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-basic">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="demo-modal-basic">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title">You should read this important message</h4>
+      </div>
+      <div class="modal-body">
+        <p>Four dollar toast XOXO health goth, plaid taxidermy sriracha pop-up before they sold out scenester godard flexitarian letterpress. Banjo lomo VHS, lumbersexual taxidermy tacos umami. Messenger bag shoreditch roof party pinterest pork belly kale chips, polaroid readymade affogato gentrify. Mixtape XOXO tacos, hoodie squid vegan fap cray sartorial cornhole single-origin coffee. Leggings church-key vegan skateboard brunch keytar, normcore pickled neutra polaroid chillwave. Meh pitchfork sriracha forage man bun, craft beer brooklyn paleo everyday carry banjo post-ironic wolf pickled jean shorts farm-to-table. Meditation selvage food truck, master cleanse normcore poutine celiac actually photo booth leggings brooklyn.</p>
+        <p>Man braid freegan hella roof party, locavore godard mustache viral lo-fi crucifix you probably haven't heard of them austin asymmetrical meggings tattooed. Echo park stumptown man braid thundercats, skateboard flannel green juice. Shoreditch keytar ugh biodiesel. Trust fund flannel butcher taxidermy. Pop-up craft beer tumblr, direct trade fingerstache wayfarers green juice venmo hammock truffaut skateboard man bun heirloom synth. Bicycle rights tousled godard, wayfarers truffaut brunch portland ethical selfies shoreditch. Blog whatever keffiyeh PBR&amp;B flannel, meditation irony scenester chartreuse.</p>
+        <p>Knausgaard kitsch street art, aesthetic celiac disrupt readymade occupy four loko. Thundercats waistcoat lomo dreamcatcher, gentrify church-key drinking vinegar celiac leggings whatever. Messenger bag actually wolf, gluten-free blue bottle chambray helvetica etsy flannel butcher man bun marfa jean shorts next level blog. Keytar franzen brunch yr, chicharrones tumblr fashion axe lo-fi lomo cred sartorial cornhole celiac crucifix gluten-free. Single-origin coffee seitan intelligentsia try-hard, ethical lo-fi roof party meh tumblr. Beard banjo brunch truffaut, celiac master cleanse everyday carry shabby chic pug taxidermy fingerstache. Chambray next level waistcoat aesthetic actually.</p>
+        <p>Pop-up occupy flexitarian, pitchfork poutine godard etsy health goth pug disrupt ennui cold-pressed thundercats truffaut. Church-key intelligentsia four dollar toast yr, thundercats man braid waistcoat shoreditch. Kale chips meh freegan sriracha. Twee forage four loko, you probably haven't heard of them kogi typewriter PBR&amp;B beard four dollar toast. Kitsch chillwave fap knausgaard. Readymade before they sold out taxidermy, tofu green juice slow-carb kombucha literally offal yuccie normcore. Meggings vice etsy, jean shorts truffaut sustainable +1 hammock yr offal authentic umami.</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
   </main>
 </div>
 
@@ -456,7 +462,7 @@
   </div>
 </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="./js/apollo.js"></script>
+ <script src="../js/apollo.js"></script>
 
   </body>
 </html>

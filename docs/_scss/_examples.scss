@@ -10,15 +10,12 @@ body {
 }
 
 .docs-sidebar {
-  padding-top: $navbar-sm-height;
-
   @include media-breakpoint-up(sm) {
     position: fixed;
     top: 0;
     left: 0;
     width: $docs-sidebar-width;
     height: 100%;
-    padding-top: $navbar-height;
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -29,12 +26,7 @@ body {
 }
 
 .docs-content {
-  padding-top: $spacer;
   min-height: 100%;
-
-  @include media-breakpoint-up(sm) {
-    padding-top: $navbar-height + $spacer;
-  }
 }
 
 
