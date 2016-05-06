@@ -3681,8 +3681,7 @@ input[type='radio']:checked {
 }
 
 .toggle input[type="radio"] {
-  position: absolute;
-  opacity: 0;
+  display: none;
 }
 
 .toggle input[type="radio"] + label {

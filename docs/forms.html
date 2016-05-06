@@ -1,0 +1,174 @@
+---
+layout: component
+title: Forms
+category: components
+description: Forms are used to gather input from the user.
+---
+<form>
+  <fieldset>
+    <div class="form-group">
+      <label class="control-label required" for="username">Username</label>
+      <input class="form-control" id="username" type="text" name="username" placeholder="What is your username?"></input>
+    </div>
+    <div class="form-group">
+      <label class="control-label required" for="password">Password</label>
+      <input class="form-control" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+    </div>
+    <div class="form-group">
+      <input id="rememberme" name="rememberme" type="checkbox">
+      <label for="rememberme">Remember me</label>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Sign in</button>
+      <button class="btn btn-secondary" type="cancel">Cancel</button>
+    </div>
+  </fieldset>
+</form>
+
+
+<form>
+  <fieldset>
+    <!-- ... -->
+    <div class="form-group">
+      <div class="checkbox">
+        <input id="check1" name="check1" type="checkbox" checked>
+        <label for="check1">First option</label>
+      </div>
+      <div class="checkbox">
+        <input id="check2" name="check2" type="checkbox">
+        <label for="check2">And another</label>
+      </div>
+      <div class="checkbox">
+        <input id="check3" name="check3" type="checkbox" disabled>
+        <label for="check3">Nope</label>
+      </div>
+    </div>
+    <!-- ... -->
+  </fieldset>
+</form>
+
+<form>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 text-sm-right">
+        <label class="control-label required" for="username">Username</label>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <input class="form-control" id="username" type="text" name="username" placeholder="What is your username?"></input>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 text-sm-right">
+        <label class="control-label required" for="password">Password</label>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <input class="form-control" id="password" type="password" name="password" placeholder="What is the secret phrase?"></input>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <input id="rememberme" name="rememberme" type="checkbox">
+        <label for="rememberme">Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <button class="btn btn-secondary" type="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<form>
+  <fieldset>
+    <!-- ... -->
+    <div class="form-group">
+      <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <label for="optionsRadios1">Option one</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        <label for="optionsRadios2">Option two</label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        <label for="optionsRadios3">Option three is disabled</label>
+      </div>
+    </div>
+    <!-- ... -->
+  </fieldset>
+</form>
+
+<form>
+  <!-- ... -->
+  <div class="form-group">
+    <label class="form-label">Position</label>
+    <select class="form-control">
+      <option>First</option>
+      <option>Second</option>
+      <option>Third</option>
+    </select>
+  </div>
+  <!-- ... -->
+</form>
+
+<form>
+  <fieldset>
+    <!-- ... -->
+    <div class="form-group">
+      <label class="control-label" for="username">Description</label>
+      <textarea class="form-control" id="username" type="textarea" name="username" placeholder="Type some long description here..."></textarea>
+    </div>
+    <!-- ... -->
+  </fieldset>
+</form>
+
+
+<div class="toggle pad-all">
+  <input id="toggle-shared" type="radio" name="toggle-demo" checked>
+  <label for="toggle-shared">Shared</label>
+  <input id="toggle-private" type="radio" name="toggle-demo">
+  <label for="toggle-private">Private</label>
+</div>
+<!-- Over a dark background -->
+<div class="toggle bg-dark pad-all">
+  <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
+  <label for="toggle-shared-dark">Shared</label>
+  <input id="toggle-private-dark" type="radio" name="toggle-demo-dark">
+  <label for="toggle-private-dark">Private</label>
+</div>
+
+
+<form>
+  <!-- Class applied to `.form-group` -->
+  <div class="form-group has-success">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Looks good!</p>
+  </div>
+  <div class="form-group has-warning">
+    <label class="control-label" for="email">Password</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Please enter a valid email address</p>
+  </div>
+  <div class="form-group has-danger">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg">Please enter a valid email address</p>
+  </div>
+  <hr>
+  <!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+  <div class="form-group">
+    <label class="control-label" for="email">Email Address</label>
+    <input class="form-control has-danger" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
+    <p class="form-msg has-danger">Please enter a valid email address</p>
+  </div>
+</form>

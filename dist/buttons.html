@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Loading animation | Apollo UI</title>
+  <title>Buttons | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="../css/apollo.css">
   <link rel="stylesheet" href="../css/docs.css">
-  <!-- /loading-indicator.html -->
+  <!-- /buttons.html -->
 
 </head>
 
@@ -50,7 +50,7 @@
 
   
   
-  <li class="docs-page-nav-item ">
+  <li class="docs-page-nav-item active">
     <a href="/buttons.html">Buttons</a>
   </li>
 
@@ -116,7 +116,7 @@
 
   
   
-  <li class="docs-page-nav-item active">
+  <li class="docs-page-nav-item ">
     <a href="/loading-indicator.html">Loading animation</a>
   </li>
 
@@ -179,53 +179,33 @@
   </aside>
 
   <main class="docs-content container-fluid">
-    <div class="loading-indicator">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
+    
+
+
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-link">Link</button>
+
+
+<button class="btn btn-primary" disabled>Primary</button>
+<a class="btn btn-secondary disabled" href="#0">Secondary</a>
+<button class="btn btn-link" disabled>Link</button>
+
+
+<button class="btn btn-primary btn-sm">Edit</button>
+<button class="btn btn-primary">klicken Sie hier</button>
+<span class="touchevents">
+  <button class="btn btn-primary">Edit</button>
+</span>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4 col-lg-3 col-xl-2">
+    <button class="btn btn-primary btn-block">Primary action</button>
+  </div>
+  <div class="col-xs-6 col-md-4 col-lg-3 col-xl-2">
+    <button class="btn btn-secondary btn-block">Secondary action</button>
   </div>
 </div>
-
-
-<div class="loading-indicator loading-complex">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <span class="planet inner"></span>
-  <span class="planet middle"></span>
-  <span class="planet outer"></span>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator loading-complex">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <span class="planet inner"></span>
-    <span class="planet middle"></span>
-    <span class="planet outer"></span>
-  </div>
-</div>
-
 
   </main>
 </div>

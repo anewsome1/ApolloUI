@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Loading animation | Apollo UI</title>
+  <title>Slider | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="../css/apollo.css">
   <link rel="stylesheet" href="../css/docs.css">
-  <!-- /loading-indicator.html -->
+  <!-- /slider.html -->
 
 </head>
 
@@ -116,7 +116,7 @@
 
   
   
-  <li class="docs-page-nav-item active">
+  <li class="docs-page-nav-item ">
     <a href="/loading-indicator.html">Loading animation</a>
   </li>
 
@@ -158,7 +158,7 @@
 
   
   
-  <li class="docs-page-nav-item ">
+  <li class="docs-page-nav-item active">
     <a href="/slider.html">Slider</a>
   </li>
 
@@ -179,50 +179,40 @@
   </aside>
 
   <main class="docs-content container-fluid">
-    <div class="loading-indicator">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
+    <div class="form-group">
+  <label for="approval">Needed approval percentage</label>
+  <div class="slider">
+    <span class="slider-handle"></span>
+    <span class="slider-fill"></span>
+    <input id="approval" name="approval" type="hidden">
+  </div>
 </div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
+<div class="form-group">
+  <label for="likelyhood">Likelihood that this will be useful</label>
+  <div class="slider disabled">
+    <span class="slider-handle"></span>
+    <span class="slider-fill"></span>
+    <input id="likelyhood" name="likelyhood" type="hidden">
   </div>
 </div>
 
 
-<div class="loading-indicator loading-complex">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <span class="planet inner"></span>
-  <span class="planet middle"></span>
-  <span class="planet outer"></span>
+<div class="form-group">
+  <label for="approval">Needed approval percentage</label>
+  <div class="slider">
+    <span class="slider-handle"></span>
+    <span class="slider-handle"></span>
+    <span class="slider-fill"></span>
+    <input id="approval" name="approval" type="hidden">
+  </div>
 </div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator loading-complex">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <span class="planet inner"></span>
-    <span class="planet middle"></span>
-    <span class="planet outer"></span>
+<div class="form-group">
+  <label for="likelyhood">Likelihood that this will be useful</label>
+  <div class="slider disabled">
+    <span class="slider-handle"></span>
+    <span class="slider-handle"></span>
+    <span class="slider-fill"></span>
+    <input id="likelyhood" name="likelyhood" type="hidden">
   </div>
 </div>
 

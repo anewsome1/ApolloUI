@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Loading animation | Apollo UI</title>
+  <title>Off-canvas panel | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="../css/apollo.css">
   <link rel="stylesheet" href="../css/docs.css">
-  <!-- /loading-indicator.html -->
+  <!-- /off-canvas.html -->
 
 </head>
 
@@ -116,7 +116,7 @@
 
   
   
-  <li class="docs-page-nav-item active">
+  <li class="docs-page-nav-item ">
     <a href="/loading-indicator.html">Loading animation</a>
   </li>
 
@@ -140,7 +140,7 @@
 
   
   
-  <li class="docs-page-nav-item ">
+  <li class="docs-page-nav-item active">
     <a href="/off-canvas.html">Off-canvas panel</a>
   </li>
 
@@ -179,54 +179,63 @@
   </aside>
 
   <main class="docs-content container-fluid">
-    <div class="loading-indicator">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
+    <nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Open menu</span>
+    </button>
+   <!-- ... -->
   </div>
-</div>
-
-
-<div class="loading-indicator loading-complex">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <span class="planet inner"></span>
-  <span class="planet middle"></span>
-  <span class="planet outer"></span>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator loading-complex">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <span class="planet inner"></span>
-    <span class="planet middle"></span>
-    <span class="planet outer"></span>
+</nav>
+<aside class="off-canvas off-canvas-left" id="off-canvas-demo">
+  <header class="off-canvas-header">
+    <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Close menu</span>
+    </button>
+    <h3 class="off-canvas-title">Panel title</h3>
+  </header>
+  <div class="search">
+    <input class="search-input">
   </div>
-</div>
-
-
+  <ul class="off-canvas-menu">
+    <li>Group title 1
+      <ul class="off-canvas-submenu">
+        <li>
+          <a href="#0"><span class="icon icon-chart-line"></span>KPIs</a>
+        </li>
+        <li>
+          <a href="#0"><span class="icon icon-globe"></span>Social stream</a>
+        </li>
+        <li>
+          <a href="#0"><span class="icon icon-message-reply"></span>History</a>
+        </li>
+      </ul>
+    </li>
+    <li>Group title 2
+      <ul class="off-canvas-submenu">
+        <li>
+          <a href="#0"><span class="icon icon-alert-circle"></span>Alert</a>
+        </li>
+        <li>
+          <a href="#0"><span class="icon icon-notification"></span>Notifications</a>
+        </li>
+      </ul>
+    </li>
+    <li>Group title 3
+      <ul class="off-canvas-submenu">
+        <li>
+          <a href="#0"><span class="icon icon-settings"></span>Settings</a>
+        </li>
+        <li>
+          <a href="#0"><span class="icon icon-queue"></span>Data</a>
+        </li>
+        <li>
+          <a href="#0"><span class="icon icon-chart-bar"></span>Charts</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>
   </main>
 </div>
 

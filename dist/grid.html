@@ -7,13 +7,13 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Loading animation | Apollo UI</title>
+  <title>Grid | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="../css/apollo.css">
   <link rel="stylesheet" href="../css/docs.css">
-  <!-- /loading-indicator.html -->
+  <!-- /grid.html -->
 
 </head>
 
@@ -92,7 +92,7 @@
 
   
   
-  <li class="docs-page-nav-item ">
+  <li class="docs-page-nav-item active">
     <a href="/grid.html">Grid</a>
   </li>
 
@@ -116,7 +116,7 @@
 
   
   
-  <li class="docs-page-nav-item active">
+  <li class="docs-page-nav-item ">
     <a href="/loading-indicator.html">Loading animation</a>
   </li>
 
@@ -179,54 +179,75 @@
   </aside>
 
   <main class="docs-content container-fluid">
-    <div class="loading-indicator">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
+    <div class="show-grid">
+
+
+
+<div class="container-fluid">
+  <!-- 2-column layout -->
+  <div class="row">
+    <div class="col-xs-6">col-xs-6</div>
+    <div class="col-xs-6">col-xs-6</div>
+  </div>
+  <!-- 3-column layout -->
+  <div class="row">
+    <div class="col-xs-4">col-xs-4</div>
+    <div class="col-xs-4">col-xs-4</div>
+    <div class="col-xs-4">col-xs-4</div>
+  </div>
+  <!-- 4-column layout -->
+  <div class="row">
+    <div class="col-xs-3">col-xs-3</div>
+    <div class="col-xs-3">col-xs-3</div>
+    <div class="col-xs-3">col-xs-3</div>
+    <div class="col-xs-3">col-xs-3</div>
+  </div>
+  <!-- 1/4, 3/4 layout -->
+  <div class="row">
+    <div class="col-xs-3">col-xs-3</div>
+    <div class="col-xs-9">col-xs-9</div>
   </div>
 </div>
 
 
-<div class="loading-indicator loading-complex">
-  <svg class="spinner-inner" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <svg class="spinner-outer" viewbox="0 0 64 64">
-    <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-  </svg>
-  <span class="planet inner"></span>
-  <span class="planet middle"></span>
-  <span class="planet outer"></span>
-</div>
-<!-- On dark background -->
-<div class="bg-dark">
-  <div class="loading-indicator loading-complex">
-    <svg class="spinner-inner" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <svg class="spinner-outer" viewbox="0 0 64 64">
-      <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
-    </svg>
-    <span class="planet inner"></span>
-    <span class="planet middle"></span>
-    <span class="planet outer"></span>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8 col-xl-6">
+      <!-- Breakpoint-specific messages for demo purposes -->
+      <span class="hidden-sm-up">12 columns on XS</span><span class="hidden-xs-down hidden-md-up">6 columns on SM</span><span class="hidden-sm-down hidden-lg-up">4 columns on MD</span><span class="hidden-md-down hidden-xl-up">8 columns on LG</span><span class="hidden-lg-down">6 columns on XL</span>
+    </div>
   </div>
 </div>
 
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-4 col-xs-push-8">I'm first in document order</div>
+    <div class="col-xs-8 col-xs-pull-4">Surprise! I'm second</div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <!-- Center stuff! -->
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">6 Columns, offset by 3</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">4 Columns, offset by 4</div>
+  </div>
+  <!-- Shift stuff to the right! -->
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-6">6 Columns, offset by 6</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-8">4 Columns, offset by 8</div>
+  </div>
+</div>
+
+
+
+</div>
   </main>
 </div>
 

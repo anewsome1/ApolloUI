@@ -1,0 +1,60 @@
+---
+layout: component
+title: Icons
+category: components
+description: Here are some examples of commonly-used icons.
+---
+
+<span class="icon icon-information-circle"></span>
+<span class="icon icon-help-circle"></span>
+<span class="icon icon-alert-circle"></span>
+<span class="icon icon-notification"></span>
+<span class="icon icon-star"></span>
+
+
+<span class="icon icon-information-circle text-primary"></span>
+<span class="icon icon-help-circle text-info"></span>
+<span class="icon icon-alert-circle text-danger"></span>
+<span class="icon icon-notification text-success"></span>
+<span class="icon icon-star text-warning"></span>
+
+
+
+<span class="icon icon-help-circle" style="font-size: 96px;"></span>
+<span class="icon icon-help-circle" style="font-size: 72px;"></span>
+<span class="icon icon-help-circle" style="font-size: 48px;"></span>
+<span class="icon icon-help-circle" style="font-size: 32px;"></span>
+
+
+
+<p>
+  <a href="#0">
+    <span class="icon icon-information-circle"></span>
+    Request information
+  </a>
+</p>
+<p>
+  <button class="btn btn-primary btn-lg">
+    <span class="icon icon-campaign" style="position: relative; top: 2px;"></span>
+    Send
+  </button>
+</p>
+<h3>
+  <span class="icon icon-search" style="vertical-align: middle;"></span>
+  Searching...
+</h3>
+
+
+{% comment %} SHOW ALL THE ICONS! {% endcomment %}
+<section class="docs-section" id="icon-list">
+  <h2>Icon list</h2>
+  <p>Below are the {{ site.data._icons | size }} icons that are provided with Apollo UI.</p>
+  <div class="docs-icon-container">
+  {% for icon in site.data._icons %}
+    <div class="docs-icon">
+      <span class="icon icon-{{ icon[0] }}"></span>
+      <span class="docs-icon-name">{{ icon[0] }}</span>
+    </div>
+  {% endfor %}
+  </div>
+</section>

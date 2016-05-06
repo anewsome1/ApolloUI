@@ -39,26 +39,24 @@ body {
 .docs-page-nav {
   padding-top: $spacer;
   padding-left: $grid-gutter-width / 2;
-
-  &-item {
-    margin-bottom: $spacer;
-
-    > a {
-      color: #fff;
-      font-weight: $font-light;
-    }
-
-    &.active > a {
-      color: $teal;
-      font-weight: $font-normal;
-    }
-  }
-
-  &-item {
-    list-style-type: none;
-  }
 }
 
+.docs-page-nav-item {
+  list-style-type: none;
+
+  > a {
+    display: inline-block;
+    padding-top: $spacer-y / 3;
+    padding-bottom: $spacer-y / 3;
+    color: #fff;
+    font-weight: $font-light;
+  }
+
+  &.active > a {
+    color: $teal;
+    font-weight: $font-normal;
+  }
+}
 
 ///
 /// Documentation sections
@@ -77,6 +75,51 @@ body {
   }
 }
 
+.docs-example-half,
+.docs-example-third,
+.docs-example-fourth {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+
+    .docs-example-rendered,
+    .docs-example-code {
+      padding: $grid-gutter-width / 2;
+    }
+
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .docs-example-half {
+    .docs-example-rendered,
+    .docs-example-code {
+      flex: 0 0 50%;
+    }
+  }
+
+  .docs-example-third {
+    .docs-example-rendered {
+      flex: 0 0 percentage(1 / 3);
+    }
+    .docs-example-code {
+      flex: 0 0 percentage(2 / 3);
+    }
+  }
+
+  .docs-example-fourth {
+    .docs-example-rendered {
+      flex: 0 0 25%;
+    }
+    .docs-example-code {
+      flex: 0 0 75%;
+    }
+  }
+
+
+}
+
 .docs-example-rendered {
   position: relative;
   padding-top: $spacer;
@@ -85,6 +128,7 @@ body {
 
 .docs-example-code {
   margin-bottom: $spacer * 2;
+  overflow-x: auto;
 }
 
 
@@ -95,7 +139,7 @@ body {
 .docs-color-block {
   position: relative;
   float: left;
-  width: percentage( 1 / 6 );
+  width: percentage(1 / 6);
   // margin-bottom: $spacer;
   height: 10rem;
 

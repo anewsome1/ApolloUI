@@ -1,7 +1,7 @@
 ---
 layout: component
-title: Basic Jumbotron
-category: jumbotron
+title: Jumbotron
+category: components
 description: The Jumbotron (AKA Billboard) is used to showcase important information in a prominent position on the page.
 ---
 <div class="jumbotron bg-light">
@@ -11,3 +11,43 @@ description: The Jumbotron (AKA Billboard) is used to showcase important informa
     <a class="btn btn-primary" href="#0" role="button">Action</a>
   </div>
 </div>
+
+
+<div class="jumbotron jumbotron-fluid bg-light">
+  <div class="container-fluid">
+    <h1 class="h3">No side padding</h1>
+    <p>Ok, well there <em>is</em> side padding, but not on the Jumbotron itself.  The side padding here comes from the <code>.container-fluid</code> <em>inside</em> the jumbotron.</p>
+    <div>
+      <a class="btn btn-primary" href="#0" role="button">Got it</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="jumbotron bg-dark">
+  <h1 class="h3">Important Headline</h1>
+  <p>Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.</p>
+  <div>
+    <a class="btn btn-primary" href="#0" role="button">Action</a>
+  </div>
+</div>
+
+
+
+<div class="jumbotron" style="background-image: linear-gradient(to right, rgba(255,255,255,.8),rgba(255,255,255,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+  <h1 class="h3">Light background image</h1>
+  <p>This example uses a background image with a semi-transparent white linear gradient to add a light color mask to the background image and ensure readability.</p>
+  <div>
+    <a class="btn btn-primary" href="#0" role="button">Sweet</a>
+  </div>
+</div>
+<!-- With dark background -->
+<div class="jumbotron bg-dark" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/400/tech'); background-size: cover;">
+  <h1 class="h3">Dark background image</h1>
+  <p>Adding the <code>bg-dark</code> class takes care of inverting the text, and then the same linear gradient trick is used to add a dark color overlay to ensure that the white text stands out.</p>
+  <div>
+    <a class="btn btn-primary" href="#0" role="button">Nice</a>
+  </div>
+</div>
+

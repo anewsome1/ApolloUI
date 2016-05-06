@@ -1,7 +1,7 @@
 ---
 layout: component
-title: Basic example
-category: modal
+title: Modals
+category: components
 description: Use modals to display information to the user in a dialog-style overlay.  Just about anything can be put into a modal, and they automatically scroll if the content is longer than the viewport.
 ---
 <!-- Button trigger modal -->
@@ -26,6 +26,148 @@ description: Use modals to display information to the user in a dialog-style ove
       <div class="modal-footer text-xs-right">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!-- Small modal trigger -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-sm">
+  Launch small modal
+</button>
+
+<!-- Large modal trigger -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-lg">
+  Launch large modal
+</button>
+
+<!-- Small modal -->
+<div class="modal modal-sm fade" id="demo-modal-sm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title">You should read this</h4>
+      </div>
+      <div class="modal-body">
+        <p>After you're done reading this important message, it's time to make a decision.  Use the buttons below to make your decision.  Choose wisely...</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Large modal -->
+<div class="modal modal-lg fade" id="demo-modal-lg">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
+        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="dont-show-again"> Don't show again
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 text-xs-right">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-login">
+  Login modal
+</button>
+
+<!-- Modal -->
+<div class="modal modal-login fade" id="demo-modal-login">
+  <div class="modal-dialog" role="document">
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content login">
+      <svg class="login-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.86 120"><path style="fill: #2975e9;opacity: .5;" d="M60,0L8.07,30V90L60,120l51.93-30V30Zm0,99.07L57.95,97.9,28.22,80.68l-2.05-1.17v-39l2.05-1.17L57.95,22.1,60,20.93l2.05,1.17L91.78,39.22l2.05,1.17V79.51l-2.05,1.17L62.05,97.8Z" transform="translate(-8.07)"/><polygon style="fill: #2975e9;" points="22.69 43.13 22.69 76.87 51.93 93.79 81.17 76.87 81.17 43.13 51.93 26.21 22.69 43.13"/></svg>
+      <h1 class="login-brand-name">Nexxus</h1>
+      <form>
+        <div class="form-group">
+          <label class="control-label">
+            <span class="sr-only">Email address</span>
+            <input class="form-control input-lg" type="email" name="email" id="login-email" placeholder="Email">
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">
+            <span class="sr-only">Password</span>
+            <input class="form-control input-lg" type="password" name="password" id="login-password" placeholder="Password">
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="checkbox pull-xs-left">
+            <label class="control-label">
+              <input type="checkbox" name="rememberme" id="login-rememberme" placeholder="Remember me">
+              Remember me
+            </label>
+          </div>
+          <a class="pull-xs-right" href="#0">Forgot password</a>
+        </div>
+        <div class="form-group text-xs-center">
+          <button class="btn btn-primary btn-lg" type="submit">Login</button>
+        </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-image">
+  Modal with image
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="demo-modal-image">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
+        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="dont-show-again"> Don't show again
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 text-xs-right">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
