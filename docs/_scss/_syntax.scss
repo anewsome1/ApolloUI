@@ -14,12 +14,12 @@ $comments:          $neutral-dark;
 ///
 
 .highlight {
-  padding: $spacer;
   margin-bottom: 0;
   background-color: $background;
   color: $contents;
 
   pre {
+    padding: $spacer * 2;
     margin-bottom: 0;
   }
 

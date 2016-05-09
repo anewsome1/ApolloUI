@@ -1,11 +1,11 @@
 .highlight {
-  padding: 1rem;
   margin-bottom: 0;
   background-color: #f7f5f4;
   color: #3a4f59;
 }
 
 .highlight pre {
+  padding: 2rem;
   margin-bottom: 0;
 }
 
@@ -90,13 +90,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 18rem;
+    width: 25%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 18rem;
+    margin-left: 25%;
   }
 }
 
@@ -106,7 +106,7 @@ body {
 
 .docs-page-nav {
   padding-top: 1rem;
-  padding-left: 0.9375rem;
+  padding-left: 1.875rem;
 }
 
 .docs-page-nav-item {
@@ -137,6 +137,38 @@ body {
 
 .docs-section > h3 {
   padding-top: 1rem;
+}
+
+.docs-section-title,
+.docs-section-description {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+  .docs-example-intro {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .docs-example-intro {
+    width: 25%;
+  }
+}
+
+.docs-example-title,
+.docs-example-label {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.docs-example-title::before {
+  display: block;
+  margin-bottom: 1rem;
+  content: '';
+  width: 2rem;
+  height: 0.1875rem;
+  background-color: #3ed6cf;
 }
 
 @media (min-width: 544px) {
@@ -195,7 +227,7 @@ body {
 }
 
 .docs-example-code {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   overflow-x: auto;
 }
 

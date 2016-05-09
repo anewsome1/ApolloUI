@@ -3,12 +3,45 @@ layout: component
 title: Buttons
 category: components
 ---
-{% capture example_1 %}
-<a class="btn btn-primary" href="#0">Anchor tag</a>
+{% include example-intro.html title='Button Variants' description='Use any of the available button classes to quickly create a styled button.' %}
+
+{% capture example_primary %}
+<button class="btn btn-primary" type="button">Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Primary action' body=example_primary %}
+
+{% capture example_secondary %}
+<button class="btn btn-secondary" type="button">Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Secondary action' body=example_secondary %}
+
+{% capture example_link %}
+<button class="btn btn-link" type="button">Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Link style' body=example_link %}
+
+
+{% include example-intro.html title='Button States' description='Each button includes styles for hover, active and disabled states.' %}
+
+{% capture example_primary %}
+<button class="btn btn-primary" type="button" disabled>Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Primary disabled' body=example_primary %}
+
+{% capture example_secondary %}
+<button class="btn btn-secondary" type="button" disabled>Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Secondary disabled' body=example_secondary %}
+
+{% capture example_link %}
+<button class="btn btn-link" type="button" disabled>Edit</button>
+{% endcapture %}
+{% include example-fourth.html label='Link disabled' body=example_link %}
+
+
 <button class="btn btn-primary">Button tag</button>
 <input class="btn btn-primary" type="button" value="Input tag (button)">
 <input class="btn btn-primary" type="submit" value="Input tag (submit)">
-{% endcapture %}
 
 
 <button class="btn btn-primary">Primary</button>

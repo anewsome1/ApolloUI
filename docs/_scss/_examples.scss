@@ -2,7 +2,7 @@
 /// Page Layout
 ///
 
-$docs-sidebar-width: $off-canvas-width;
+$docs-sidebar-width: 25%;
 
 html,
 body {
@@ -38,7 +38,7 @@ body {
 
 .docs-page-nav {
   padding-top: $spacer;
-  padding-left: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width;
 }
 
 .docs-page-nav-item {
@@ -73,6 +73,41 @@ body {
   > h3 {
     padding-top: $spacer;
   }
+}
+
+/// Title and description
+
+.docs-section-title,
+.docs-section-description {
+  font-family: $font-family-sans-serif;
+}
+
+///
+/// Examples
+///
+
+.docs-example-intro {
+  @include media-breakpoint-only(sm) {
+    width: percentage(1 / 3);
+  }
+  @include media-breakpoint-up(md) {
+    width: 25%;
+  }
+}
+
+.docs-example-title,
+.docs-example-label {
+  font-weight: $font-semi-bold;
+  text-transform: uppercase;
+}
+
+.docs-example-title::before {
+  display: block;
+  margin-bottom: 1rem;
+  content: '';
+  width: 2rem;
+  height: $border-width * 3;
+  background-color: $teal;
 }
 
 .docs-example-half,
@@ -127,7 +162,7 @@ body {
 }
 
 .docs-example-code {
-  margin-bottom: $spacer * 2;
+  margin-bottom: $spacer;
   overflow-x: auto;
 }
 
