@@ -19,8 +19,9 @@ $comments:          $neutral-dark;
   color: $contents;
 
   pre {
-    padding: $spacer * 2;
+    padding: $display3-size $grid-gutter-width;
     margin-bottom: 0;
+    white-space: no-wrap;
   }
 
   .nt {
