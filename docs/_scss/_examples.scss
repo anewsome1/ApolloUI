@@ -87,11 +87,6 @@ body {
 /// Examples
 ///
 
-.docs-example-indented {
-  padding-left: percentage(1 / 12);
-  padding-right: percentage(1 / 12);
-}
-
 .docs-example-intro {
   margin-top: $display1-size;
   margin-bottom: $display2-size;
@@ -143,6 +138,12 @@ body {
 }
 
 @include media-breakpoint-up(md) {
+
+  .docs-section-indented {
+    padding-left: percentage(1 / 12);
+    padding-right: percentage(1 / 12);
+  }
+
   .docs-example-half {
     .docs-example-rendered,
     .docs-example-code {

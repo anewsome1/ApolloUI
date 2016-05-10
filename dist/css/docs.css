@@ -145,11 +145,6 @@ body {
   font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
 }
 
-.docs-example-indented {
-  padding-left: 8.33333%;
-  padding-right: 8.33333%;
-}
-
 .docs-example-intro {
   margin-top: 5.063rem;
   margin-bottom: 3.375rem;
@@ -199,6 +194,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  .docs-section-indented {
+    padding-left: 8.33333%;
+    padding-right: 8.33333%;
+  }
   .docs-example-half .docs-example-rendered,
   .docs-example-half .docs-example-code {
     -webkit-flex-basis: 50%;
