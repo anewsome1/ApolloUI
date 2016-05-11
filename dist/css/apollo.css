@@ -3336,12 +3336,12 @@ dd {
   color: #fff;
 }
 
-.btn-primary:hover, .btn-primary.hover {
+.btn-primary:hover, .btn-primary.hover, .btn-primary:active, .btn-primary.active {
   border-color: transparent;
 }
 
 .btn-primary:active, .btn-primary.active {
-  background-color: #245eb7;
+  background-color: #1e54a8;
   color: #fff;
 }
 
@@ -3359,7 +3359,7 @@ dd {
   color: #3a4f59;
 }
 
-.btn-secondary:hover, .btn-secondary.hover {
+.btn-secondary:hover, .btn-secondary.hover, .btn-secondary:active, .btn-secondary.active {
   border-color: transparent;
 }
 

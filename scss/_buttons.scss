@@ -112,7 +112,9 @@
     }
 
     &:hover,
-    &.hover {
+    &.hover,
+    &:active,
+    &.active {
       border-color: transparent;
     }
 
