@@ -5,42 +5,57 @@ $font-faces: (
       thin: (
         name: 'proximanova-thin',
         weight: $font-thin,
-        id: 'proxima_novathin',
         style: normal
+      ),
+      thin-italic: (
+        name: 'proximanova-thinitalic',
+        weight: $font-thin,
+        style: italic
       ),
       light: (
         name: 'proximanova-light',
         weight: $font-light,
-        id: 'proxima_novalight',
         style: normal
+      ),
+      light-italic: (
+        name: 'proximanova-lightitalic',
+        weight: $font-light,
+        style: italic
       ),
       regular: (
         name: 'proximanova-regular',
         weight: $font-normal,
-        id: 'proxima_novaregular',
         style: normal
       ),
       regular-italic: (
         name: 'proximanova-regularitalic',
         weight: $font-normal,
-        id: 'proxima_novaregular_it',
         style: italic
       ),
       semibold: (
         name: 'proximanova-semibold',
         weight: $font-semi-bold,
-        id: 'proxima_novasemibold',
         style: normal
+      ),
+      semibold-italic: (
+        name: 'proximanova-semibolditalic',
+        weight: $font-semi-bold,
+        style: italic
       )
     )
   ),
   'Merriweather': (
     path: '//cdn.ims.io/design/font/0.5/merriweather/',
     weights: (
-      regular: (
-        name: 'merriweather-regular',
-        weight: $font-normal,
+      light: (
+        name: 'merriweather-light',
+        weight: $font-light,
         style: normal
+      ),
+      light-italic: (
+        name: 'merriweather-lightitalic',
+        weight: $font-light,
+        style: italic
       )
     )
   )
