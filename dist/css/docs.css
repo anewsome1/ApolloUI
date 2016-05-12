@@ -93,8 +93,7 @@ body {
 
 .docs-sidebar {
   background-color: #2b3b43;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding: 1.875rem;
 }
 
 @media (min-width: 768px) {
@@ -117,14 +116,14 @@ body {
 }
 
 .docs-page-nav-title {
+  margin-bottom: 2.25rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
   font-weight: 100;
 }
 
 .docs-page-nav {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 3.375rem;
 }
 
 @media (max-width: 543px) {
@@ -163,8 +162,8 @@ body {
 
 .docs-page-nav-item > a {
   display: inline-block;
-  padding-top: 0.33333rem;
-  padding-bottom: 0.33333rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: #fff;
   font-weight: 300;
 }

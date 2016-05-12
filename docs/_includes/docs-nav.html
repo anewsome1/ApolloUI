@@ -1,7 +1,7 @@
 
 {% assign site_sections = site.pages | group_by: 'category' %}
-{% for group in site_sections %}
-<h3 class="docs-page-nav-title">{{ group.name | capitalize }}</h3>
+{% for group in site_sections reversed %}
+<h4 class="docs-page-nav-title">Apollo {{ group.name | capitalize }}</h4>
 <ul class="docs-page-nav" role="navigation">
   {% for item in group.items %}
     {% assign is_active = nil %}

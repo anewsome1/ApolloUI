@@ -20,8 +20,7 @@ body {
 
 .docs-sidebar {
   background-color: $charcoal-dark;
-  padding-left: $grid-gutter-width / 2;
-  padding-right: $grid-gutter-width / 2;
+  padding: $grid-gutter-width;
 
   @include media-breakpoint-up(md) {
     position: fixed;
@@ -48,14 +47,14 @@ body {
 ///
 
 .docs-page-nav-title {
+  margin-bottom: $display3-size;
   color: #fff;
   font-family: $font-family-serif;
   font-weight: $font-thin;
 }
 
 .docs-page-nav {
-  padding-top: $spacer-y * 2;
-  padding-bottom: $spacer-y * 2;
+  margin-bottom: $display2-size;
 
   @include media-breakpoint-only(xs) {
     column-count: 2;
@@ -79,8 +78,8 @@ body {
 
   > a {
     display: inline-block;
-    padding-top: $spacer-y / 3;
-    padding-bottom: $spacer-y / 3;
+    padding-top: $spacer-y / 2;
+    padding-bottom: $spacer-y / 2;
     color: #fff;
     font-weight: $font-light;
   }
