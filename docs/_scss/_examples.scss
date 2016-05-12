@@ -2,7 +2,7 @@
 /// Page Layout
 ///
 
-$docs-sidebar-width: $off-canvas-width;
+$docs-sidebar-width: 25%;
 
 %separator-bar {
   display: block;
@@ -20,8 +20,10 @@ body {
 
 .docs-sidebar {
   background-color: $charcoal-dark;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,9 +47,30 @@ body {
 /// Page subnavigation
 ///
 
+.docs-page-nav-title {
+  color: #fff;
+  font-family: $font-family-serif;
+}
+
 .docs-page-nav {
-  padding-top: $spacer;
-  padding-left: $grid-gutter-width;
+  padding-top: $spacer-y * 2;
+  padding-bottom: $spacer-y * 2;
+
+  @include media-breakpoint-only(xs) {
+    column-count: 2;
+  }
+
+  @include media-breakpoint-only(sm) {
+    column-count: 3;
+  }
+
+  @include media-breakpoint-down(sm) {
+    column-gap: $grid-gutter-width;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: $grid-gutter-width;
+  }
 }
 
 .docs-page-nav-item {
@@ -73,11 +96,16 @@ body {
 ///
 
 .docs-page-header {
-  padding: $display2-size percentage(1 / 12) $display1-size;
+  @include make-container;
+
+  @include media-breakpoint-up(md) {
+    padding: $display2-size percentage(1 / 12) 0;
+  }
 }
 
 .docs-page-title {
   font-size: $font-size-base;
+  font-weight: $font-normal;
 
   &::after {
     @extend %separator-bar;
@@ -132,7 +160,6 @@ body {
   // }
 }
 
-.docs-page-title,
 .docs-example-title,
 .docs-example-label {
   font-weight: $font-semi-bold;
@@ -144,10 +171,22 @@ body {
   text-transform: uppercase;
 }
 
+.docs-example-rendered-group {
+  margin-bottom: $spacer-y * 2;
+}
 
 .docs-example-label {
-  margin-bottom: $display4-size;
+  margin-bottom: 0;
+  padding-bottom: $spacer-y;
 }
+
+.docs-example-code {
+  margin-bottom: $display3-size;
+}
+
+///
+/// Example layouts
+///
 
 .docs-example-half,
 .docs-example-third,
@@ -221,21 +260,32 @@ body {
 /// Illustrations
 ///
 
-@include media-breakpoint-up(md) {
+.docs-illustration-copy {
+  margin-bottom: $spacer * 3;
+}
+
+@include media-breakpoint-up(lg) {
   .docs-illustration {
     display: flex;
-    // align-items: stretch;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    .docs-section-overview {
-      flex-basis: 50%;
-      max-width: 50%;
-      padding-right: $grid-gutter-width;
-      // padding-left: percentage(1 / 12);
-    }
+  .docs-illustration-copy {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding-right: percentage(1 / 12);
+  }
+}
 
-    .docs-illustration-code {
-      padding: $grid-gutter-width percentage(1 / 12);
-    }
+///
+/// Hovering card style
+///
+
+@include media-breakpoint-up(md) {
+  .docs-card {
+    box-shadow: $shadow-hover;
+    padding: $grid-gutter-width 6rem;
   }
 }
 

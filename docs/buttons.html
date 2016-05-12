@@ -5,49 +5,44 @@ category: components
 ---
 <section class="docs-section docs-section-indented">
 
-{% capture button_overview %}
-  {% include section-title.html title='Apollo Button Overview' %}
-  <p>A button indicates a possible user action.  Apollo buttons feature clean, crisp edges.  The rectangle button conveys Apollo's precise and efficient qualities.  The floating nature of the hover state gives focus to the task.  The reverb click animation gives users visual feedback in an Apollo way.</p>
-{% endcapture %}
+    {% capture overview_copy %}
+      {% capture overview_body %}
+        <p>A button indicates a possible user action.  Apollo buttons feature clean, crisp edges.  The rectangular button conveys Apollo's precise and efficient qualities.  The floating nature of the hover state gives focus to the task.  The reverb click animation gives users visual feedback in an Apollo way.</p>
+        <p>Buttons come in three versions.  Primary and secondary are used to indicate priority in call to actions, such as "save" and "cancel".  The Link style button is designed to be used alongside a primary or secondary button when the secondary action needs to be de-emphasized.</p>
+        <p>Each of the states shown here are triggered by native pseudo-classes, like <code>:hover</code>, <code>:disabled</code>.  Utility classes (<code>.hover</code>, <code>.disabled</code>) are also available to apply the same styling if pseudo-classes don't work.</p>
+      {% endcapture %}
+      {% include section-intro.html title='Apollo Button Overview' body=overview_body %}
+    {% endcapture %}
 
-{% capture overview_code %}
+    {% capture overview_code %}
+      <div class="docs-card">
+        {% capture illustration_default %}
+          <button class="btn btn-primary" type="button">Edit</button>
+          <button class="btn btn-secondary" type="button">Edit</button>
+        {% endcapture %}
+        {% include example-rendered.html label='Default state' body=illustration_default %}
 
+        {% capture illustration_hover %}
+          <button class="btn btn-primary hover" type="button">Edit</button>
+          <button class="btn btn-secondary hover" type="button">Edit</button>
+        {% endcapture %}
+        {% include example-rendered.html label='Hover' body=illustration_hover %}
 
-  {% capture illustration_default %}
-    <button class="btn btn-primary" type="button">Edit</button>
-    <button class="btn btn-secondary" type="button">Edit</button>
-  {% endcapture %}
-  <div class="pad-y">
-  {% include example-rendered.html label='Default state' body=illustration_default %}
-  </div>
+        {% capture illustration_active %}
+          <button class="btn btn-primary active" type="button">Edit</button>
+          <button class="btn btn-secondary active" type="button">Edit</button>
+        {% endcapture %}
+        {% include example-rendered.html label='Active' body=illustration_active %}
 
-  {% capture illustration_hover %}
-    <button class="btn btn-primary hover" type="button">Edit</button>
-    <button class="btn btn-secondary hover" type="button">Edit</button>
-  {% endcapture %}
-  <div class="pad-y">
-  {% include example-rendered.html label='Hover' body=illustration_hover %}
-  </div>
+        {% capture illustration_disabled %}
+          <button class="btn btn-primary" type="button" disabled>Edit</button>
+          <button class="btn btn-secondary" type="button" disabled>Edit</button>
+        {% endcapture %}
+        {% include example-rendered.html label='Disabled' body=illustration_disabled %}
+      </div>
+    {% endcapture %}
 
-  {% capture illustration_active %}
-    <button class="btn btn-primary active" type="button">Edit</button>
-    <button class="btn btn-secondary active" type="button">Edit</button>
-  {% endcapture %}
-  <div class="pad-y">
-  {% include example-rendered.html label='Active' body=illustration_active %}
-  </div>
-
-  {% capture illustration_disabled %}
-    <button class="btn btn-primary" type="button" disabled>Edit</button>
-    <button class="btn btn-secondary" type="button" disabled>Edit</button>
-  {% endcapture %}
-  <div class="pad-y">
-  {% include example-rendered.html label='Disabled' body=illustration_disabled %}
-  </div>
-
-{% endcapture %}
-
-{% include illustration.html copy=button_overview code=overview_code %}
+    {% include illustration.html size='half' copy=overview_copy code=overview_code %}
 
 </section>
 
@@ -70,6 +65,8 @@ category: components
   <button class="btn btn-link" type="button">Edit</button>
   {% endcapture %}
   {% include example.html size='fourth' label='Link style' body=example_link %}
+
+  {% include example-intro.html title='Disabled styling' description='When actions are disabled, you can apply.' %}
 
   {% capture example_primary_disabled %}
   <button class="btn btn-primary" type="button" disabled>Edit</button>

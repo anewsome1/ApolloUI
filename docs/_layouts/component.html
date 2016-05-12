@@ -1,12 +1,9 @@
 ---
 layout: base
 ---
-
-{% assign section_groups = site.components | group_by: 'category' %}
-
 <main class="docs">
   <aside class="docs-sidebar">
-    {% include nav.html %}
+    {% include docs-nav.html %}
   </aside>
 
   <article class="docs-content">

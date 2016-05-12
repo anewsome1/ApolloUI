@@ -1,10 +1,8 @@
-<div class="docs-illustration">
-  <div class="docs-section-overview">
+<div class="docs-illustration {% if include.size %}docs-illustration-{{ include.size }}{% endif %}">
+  <div class="docs-illustration-copy">
     {{ include.copy }}
   </div>
-  <div class="docs-illustration-code card">
-    <div class="card-block">
-      {{ include.code }}
-    </div>
+  <div class="docs-illustration-code">
+    {{ include.code }}
   </div>
 </div>
