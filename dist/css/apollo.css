@@ -255,7 +255,7 @@ html {
 }
 
 body {
-  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  font-family: "Proxima Nova", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #3a4f59;
@@ -1695,23 +1695,39 @@ output {
 @font-face {
   font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.svg#proxima_novathin") format("svg");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Proxima Nova";
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.svg#proxima_novalight") format("svg");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Proxima Nova";
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.svg#proxima_novaregular") format("svg");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -1719,7 +1735,7 @@ output {
 @font-face {
   font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.svg#proxima_novaregular_it") format("svg");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-regularitalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
@@ -1727,23 +1743,39 @@ output {
 @font-face {
   font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.svg#proxima_novasemibold") format("svg");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
+  font-family: "Proxima Nova";
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot");
+  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Merriweather";
-  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-regular.eot");
-  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-regular.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-regular.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-regular.ttf") format("truetype"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-regular.svg#") format("svg");
-  font-weight: 400;
+  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-light.eot");
+  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-lightitalic.eot");
+  src: url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-lightitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-lightitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/merriweather/merriweather-lightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "apollo-icons";
   src: url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.eot");
-  src: url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.woff") format("woff"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.ttf") format("truetype"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.svg#apollo-icons") format("svg");
+  src: url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.woff") format("woff"), url("//cdn.ims.io/design/icon-font/2.0/apollo-icons.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

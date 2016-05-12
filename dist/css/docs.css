@@ -118,7 +118,8 @@ body {
 
 .docs-page-nav-title {
   color: #fff;
-  font-family: "Merriwether", Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 100;
 }
 
 .docs-page-nav {
@@ -214,7 +215,7 @@ body {
 }
 
 .docs-section-overview {
-  font-family: "Merriwether", Georgia, serif;
+  font-family: "Merriweather", Georgia, serif;
 }
 
 .docs-example-intro {
