@@ -1,0 +1,28 @@
+
+{% assign site_sections = site.pages | group_by: 'category' %}
+{% for group in site_sections %}
+<h3 class="docs-page-nav-title">{{ group.name | capitalize }}</h3>
+<ul class="docs-page-nav" role="navigation">
+  {% for item in group.items %}
+    {% assign is_active = nil %}
+    {% if page.url == item.url %}
+      {% assign is_active = 'active' %}
+    {% endif %}
+    <li class="docs-page-nav-item {{is_active}}">
+      <a href="{{ base }}{{ item.url }}">{{ item.title | capitalize }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+
+</ul>
+
+<button class="btn btn-primary">
+  <span class="icon icon-save"></span>
+  Code Files
+</button>
+<button class="btn btn-secondary">
+  <span class="icon icon-save"></span>
+  Design Files
+</button>
