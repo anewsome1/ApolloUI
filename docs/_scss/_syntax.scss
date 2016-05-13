@@ -19,7 +19,7 @@ $comments:          $neutral-dark;
   color: $contents;
 
   pre {
-    padding: $display3-size ($grid-gutter-width / 2) ($display3-size - $font-size-base * $line-height); // Compensate for weird extra space in `<code>` tag output.
+    padding: $grid-gutter-width $grid-gutter-width ($grid-gutter-width - $font-size-base * $line-height); // Compensate for weird extra space in `<code>` tag output.
     margin-bottom: 0;
   }
 
