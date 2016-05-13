@@ -101,13 +101,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 18rem;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 25%;
+    margin-left: 18rem;
   }
 }
 

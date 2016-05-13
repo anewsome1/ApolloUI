@@ -2,7 +2,7 @@
 /// Page Layout
 ///
 
-$docs-sidebar-width: 25%;
+$docs-sidebar-width: $off-canvas-width;
 
 %separator-bar {
   display: block;
