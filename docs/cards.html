@@ -4,6 +4,14 @@ title: Cards
 category: components
 description: (Guidelines for card usage go here)
 ---
+<section class="docs-section">
+
+{% capture overview_body %}
+<p>(Overview goes here)</p>
+{% endcapture %}
+{% include section-intro.html title='Card Overview' body=overview_body %}
+
+{% capture example %}
 <div class="card">
   <div class="card-header">
     <h3 class="card-title">Descriptive title</h3>
@@ -28,8 +36,17 @@ description: (Guidelines for card usage go here)
     </div>
   </div>
 </div>
+{% endcapture %}
+{% include example.html size='third' body=example %}
+
+</section>
 
 
+<section class="docs-section">
+
+{% include example-intro.html title='Cards with grid' description='(Description goes here)' %}
+
+{% capture example %}
 <div class="row">
   <div class="col-xs-6 col-sm-4">
     <div class="card">
@@ -73,7 +90,18 @@ description: (Guidelines for card usage go here)
     </div>
   </div>
 </div>
+{% endcapture %}
 
+{% include example.html body=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Card deck' description='(Description goes here)' %}
+
+{% capture example %}
 
 <!-- Only include .card-deck-wrapper if flexbox is disabled -->
 <div class="card-deck-wrapper">
@@ -115,38 +143,61 @@ description: (Guidelines for card usage go here)
     </div>
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
 
 
+<section class="docs-section">
 
-<div class="card-deck">
+{% include example-intro.html title='Card states' description='(Description goes here)' %}
+
+{% capture example %}
   <div class="card card-info">
     <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
     <div class="card-block">
       <h4 class="card-title">Information</h4>
-      <p>Well, the way they make shows is, they make one show. That show's called a pilot.</p>
+      <p>Interesting data to look at.</p>
     </div>
   </div>
+{% endcapture %}
+{% include example.html size='fourth' label='Information' body=example %}
+
+{% capture example %}
   <div class="card card-success">
     <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
     <div class="card-block">
-      <h4 class="card-title">Success!</h4>
-      <p>Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+      <h4 class="card-title">Success</h4>
+      <p>Useful for positive metrics.</p>
     </div>
   </div>
+{% endcapture %}
+{% include example.html size='fourth' label='Success' body=example %}
+
+{% capture example %}
   <div class="card card-warning">
     <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
     <div class="card-block">
-      <h4 class="card-title">Warning!</h4>
-      <p>Some pilots get picked and become television programs. Some don't, become nothing.</p>
+      <h4 class="card-title">Warning</h4>
+      <p>Metrics that may be at risk.</p>
     </div>
   </div>
+{% endcapture %}
+{% include example.html size='fourth' label='Warning' body=example %}
+
+{% capture example %}
   <div class="card card-danger">
     <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
     <div class="card-block">
       <h4 class="card-title">Danger!</h4>
-      <p>She starred in one of the ones that became nothing.</p>
+      <p>Use this one for items that need immediate attention.</p>
     </div>
   </div>
-</div>
+{% endcapture %}
 
+{% include example.html size='fourth' label='Danger' body=example %}
+
+</section>
 
