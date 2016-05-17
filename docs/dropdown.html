@@ -4,22 +4,26 @@ title: Dropdown
 category: components
 description: Description of dropdown lists and why they are handy.
 ---
+
+<section class="docs-section">
+
+{% include example-intro.html title='Dropdown menu' description='The dropdown menu is a useful navigation component for containing lists of links.  These should <em>not</em> be used for forms.  Instead, use a <code>&lt;select&gt;</code> control for selecting a form option from a list.  See <a href="./forms.html">forms</a> section for details.' %}
+
+{% capture example %}
 <div class="dropdown">
   <button class="dropdown-toggle" type="button" id="dropdownDemo1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Menu
   </button>
   <div class="dropdown-menu" aria-labeledby="dropdownDemo1">
-    <li>
-      <a href="#">Lorem ipsum</a>
-    </li>
-    <li>
-      <a href="#">Dolor sit amet</a>
-    </li>
-    <li>
-      <a href="#">Consectetur</a>
-    </li>
-    <li>
-      <a href="#">Vivamus</a>
-    </li>
+    <li><a href="#0">Lorem ipsum</a></li>
+    <li><a href="#0">Dolor sit amet</a></li>
+    <li><a href="#0">Consectetur</a></li>
+    <li><a href="#0">Vivamus</a></li>
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
+
