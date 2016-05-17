@@ -4,6 +4,9 @@ title: Forms
 category: components
 description: Forms are used to gather input from the user.
 ---
+
+<section class="docs-section">
+{% capture example %}
 <form>
   <fieldset>
     <div class="form-group">
@@ -24,29 +27,18 @@ description: Forms are used to gather input from the user.
     </div>
   </fieldset>
 </form>
+{% endcapture %}
+
+{% include example.html size='third' label='Basic form' body=example %}
+
+</section>
 
 
-<form>
-  <fieldset>
-    <!-- ... -->
-    <div class="form-group">
-      <div class="checkbox">
-        <input id="check1" name="check1" type="checkbox" checked>
-        <label for="check1">First option</label>
-      </div>
-      <div class="checkbox">
-        <input id="check2" name="check2" type="checkbox">
-        <label for="check2">And another</label>
-      </div>
-      <div class="checkbox">
-        <input id="check3" name="check3" type="checkbox" disabled>
-        <label for="check3">Nope</label>
-      </div>
-    </div>
-    <!-- ... -->
-  </fieldset>
-</form>
 
+
+<section class="docs-section">
+{% include example-intro.html title='Horizontal form' description='To make form labels appear alongside their corresponding controls, simply use grid columns and text alignment classes to create the desired layout.  The column width for the labels and controls should be made to accommodate the length of your labels at each breakpoint.' %}
+{% capture example %}
 <form>
   <div class="form-group">
     <div class="row">
@@ -85,7 +77,40 @@ description: Forms are used to gather input from the user.
     </div>
   </div>
 </form>
+{% endcapture %}
 
+{% include example.html size='half' body=example %}
+
+</section>
+
+
+<section class="docs-section">
+{% capture example %}
+<form>
+  <fieldset>
+    <!-- ... -->
+    <div class="form-group">
+      <div class="checkbox">
+        <input id="check1" name="check1" type="checkbox" checked>
+        <label for="check1">First option</label>
+      </div>
+      <div class="checkbox">
+        <input id="check2" name="check2" type="checkbox">
+        <label for="check2">And another</label>
+      </div>
+      <div class="checkbox">
+        <input id="check3" name="check3" type="checkbox" disabled>
+        <label for="check3">Nope</label>
+      </div>
+    </div>
+    <!-- ... -->
+  </fieldset>
+</form>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Checkbox' body=example %}
+
+{% capture example %}
 <form>
   <fieldset>
     <!-- ... -->
@@ -106,7 +131,14 @@ description: Forms are used to gather input from the user.
     <!-- ... -->
   </fieldset>
 </form>
+{% endcapture %}
 
+{% include example.html size='fourth' label='Radio' body=example %}
+
+</section>
+
+<section class="docs-section">
+{% capture example %}
 <form>
   <!-- ... -->
   <div class="form-group">
@@ -119,7 +151,17 @@ description: Forms are used to gather input from the user.
   </div>
   <!-- ... -->
 </form>
+{% endcapture %}
 
+{% include example.html size='third' body=example %}
+
+</section>
+
+
+
+
+<section class="docs-section">
+{% capture example %}
 <form>
   <fieldset>
     <!-- ... -->
@@ -130,45 +172,80 @@ description: Forms are used to gather input from the user.
     <!-- ... -->
   </fieldset>
 </form>
+{% endcapture %}
+
+{% include example.html size='third' body=example %}
+
+</section>
 
 
+
+
+<section class="docs-section">
+{% capture example %}
 <div class="toggle pad-all">
   <input id="toggle-shared" type="radio" name="toggle-demo" checked>
   <label for="toggle-shared">Shared</label>
   <input id="toggle-private" type="radio" name="toggle-demo">
   <label for="toggle-private">Private</label>
 </div>
-<!-- Over a dark background -->
+{% endcapture %}
+{% include example.html size='third' label='Basic toggle' body=example %}
+
+
+{% capture example %}
 <div class="toggle bg-dark pad-all">
   <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
   <label for="toggle-shared-dark">Shared</label>
   <input id="toggle-private-dark" type="radio" name="toggle-demo-dark">
   <label for="toggle-private-dark">Private</label>
 </div>
+{% endcapture %}
+{% include example.html size='third' label='Dark toggle' body=example %}
+
+</section>
 
 
-<form>
-  <!-- Class applied to `.form-group` -->
-  <div class="form-group has-success">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Looks good!</p>
-  </div>
-  <div class="form-group has-warning">
-    <label class="control-label" for="email">Password</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Please enter a valid email address</p>
-  </div>
-  <div class="form-group has-danger">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Please enter a valid email address</p>
-  </div>
-  <hr>
-  <!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
-  <div class="form-group">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control has-danger" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg has-danger">Please enter a valid email address</p>
-  </div>
-</form>
+
+<section class="docs-section">
+{% capture example %}
+<div class="form-group has-success">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Looks good!</p>
+</div>
+{% endcapture %}
+{% include example.html size='fourth' label='Success message' body=example %}
+
+{% capture example %}
+<div class="form-group has-warning">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</div>
+{% endcapture %}
+{% include example.html size='fourth' label='Warning message' body=example %}
+
+{% capture example %}
+<div class="form-group has-danger">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</div>
+{% endcapture %}
+{% include example.html size='fourth' label='Error message' body=example %}
+
+
+{% include example-intro.html title='Alternate markup' description='In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.' %}
+{% capture example %}
+<!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+<div class="form-group">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control has-danger" id="email" type="email" name="email"></input>
+  <p class="form-msg has-danger">Please enter a valid email address</p>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' body=example %}
+
+</section>

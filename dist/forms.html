@@ -206,7 +206,18 @@
     </div>
   </div>
 </header>
-    <form>
+    <section class="docs-section">
+
+
+
+<h6 class="docs-example-label">Basic form</h6>
+
+<div class="docs-example docs-example-third ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<form>
   <fieldset>
     <div class="form-group">
       <label class="control-label required" for="username">Username</label>
@@ -227,28 +238,51 @@
   </fieldset>
 </form>
 
+</div>
 
-<form>
-  <fieldset>
-    <!-- ... -->
-    <div class="form-group">
-      <div class="checkbox">
-        <input id="check1" name="check1" type="checkbox" checked>
-        <label for="check1">First option</label>
-      </div>
-      <div class="checkbox">
-        <input id="check2" name="check2" type="checkbox">
-        <label for="check2">And another</label>
-      </div>
-      <div class="checkbox">
-        <input id="check3" name="check3" type="checkbox" disabled>
-        <label for="check3">Nope</label>
-      </div>
-    </div>
-    <!-- ... -->
-  </fieldset>
-</form>
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"rememberme"</span> <span class="na">name=</span><span class="s">"rememberme"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"rememberme"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
 
+
+</section>
+
+
+
+
+<section class="docs-section">
+<div class="docs-example-intro">
+  <h6 class="docs-example-title">Horizontal form</h6>
+  <p class="docs-example-description">To make form labels appear alongside their corresponding controls, simply use grid columns and text alignment classes to create the desired layout.  The column width for the labels and controls should be made to accommodate the length of your labels at each breakpoint.</p>
+</div>
+
+
+
+
+<div class="docs-example docs-example-half ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <form>
   <div class="form-group">
     <div class="row">
@@ -288,6 +322,121 @@
   </div>
 </form>
 
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-3 text-sm-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"What is your username?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-3 text-sm-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">name=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"What is the secret phrase?"</span><span class="nt">&gt;&lt;/input&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-6 col-sm-offset-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"rememberme"</span> <span class="na">name=</span><span class="s">"rememberme"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"rememberme"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-sm-6 col-sm-offset-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"cancel"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+<h6 class="docs-example-label">Checkbox</h6>
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<form>
+  <fieldset>
+    <!-- ... -->
+    <div class="form-group">
+      <div class="checkbox">
+        <input id="check1" name="check1" type="checkbox" checked>
+        <label for="check1">First option</label>
+      </div>
+      <div class="checkbox">
+        <input id="check2" name="check2" type="checkbox">
+        <label for="check2">And another</label>
+      </div>
+      <div class="checkbox">
+        <input id="check3" name="check3" type="checkbox" disabled>
+        <label for="check3">Nope</label>
+      </div>
+    </div>
+    <!-- ... -->
+  </fieldset>
+</form>
+
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check1"</span> <span class="na">name=</span><span class="s">"check1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check2"</span> <span class="na">name=</span><span class="s">"check2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check3"</span> <span class="na">name=</span><span class="s">"check3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
+
+
+
+
+
+<h6 class="docs-example-label">Radio</h6>
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <form>
   <fieldset>
     <!-- ... -->
@@ -309,6 +458,43 @@
   </fieldset>
 </form>
 
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
+
+<section class="docs-section">
+
+
+
+<div class="docs-example docs-example-third ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <form>
   <!-- ... -->
   <div class="form-group">
@@ -322,6 +508,38 @@
   <!-- ... -->
 </form>
 
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span><span class="nt">&gt;</span>Position<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;option&gt;</span>First<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>Second<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;option&gt;</span>Third<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- ... --&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
+
+
+
+
+<section class="docs-section">
+
+
+
+<div class="docs-example docs-example-third ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <form>
   <fieldset>
     <!-- ... -->
@@ -333,14 +551,66 @@
   </fieldset>
 </form>
 
+</div>
 
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"textarea"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">placeholder=</span><span class="s">"Type some long description here..."</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
+
+
+
+
+<section class="docs-section">
+
+
+<h6 class="docs-example-label">Basic toggle</h6>
+
+<div class="docs-example docs-example-third ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <div class="toggle pad-all">
   <input id="toggle-shared" type="radio" name="toggle-demo" checked>
   <label for="toggle-shared">Shared</label>
   <input id="toggle-private" type="radio" name="toggle-demo">
   <label for="toggle-private">Private</label>
 </div>
-<!-- Over a dark background -->
+
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle pad-all"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-shared"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-shared"</span><span class="nt">&gt;</span>Shared<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-private"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-private"</span><span class="nt">&gt;</span>Private<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+
+
+
+<h6 class="docs-example-label">Dark toggle</h6>
+
+<div class="docs-example docs-example-third ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
 <div class="toggle bg-dark pad-all">
   <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
   <label for="toggle-shared-dark">Shared</label>
@@ -348,32 +618,135 @@
   <label for="toggle-private-dark">Private</label>
 </div>
 
+</div>
 
-<form>
-  <!-- Class applied to `.form-group` -->
-  <div class="form-group has-success">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Looks good!</p>
   </div>
-  <div class="form-group has-warning">
-    <label class="control-label" for="email">Password</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Please enter a valid email address</p>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle bg-dark pad-all"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-shared-dark"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo-dark"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-shared-dark"</span><span class="nt">&gt;</span>Shared<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-private-dark"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo-dark"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-private-dark"</span><span class="nt">&gt;</span>Private<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
+
+
+
+<section class="docs-section">
+
+
+<h6 class="docs-example-label">Success message</h6>
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<div class="form-group has-success">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Looks good!</p>
+</div>
+
+</div>
+
   </div>
-  <div class="form-group has-danger">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg">Please enter a valid email address</p>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-success"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Looks good!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+
+
+<h6 class="docs-example-label">Warning message</h6>
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<div class="form-group has-warning">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</div>
+
+</div>
+
   </div>
-  <hr>
-  <!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
-  <div class="form-group">
-    <label class="control-label" for="email">Email Address</label>
-    <input class="form-control has-danger" id="email" type="text" name="email" placeholder="john.doe@example.com"></input>
-    <p class="form-msg has-danger">Please enter a valid email address</p>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+
+
+<h6 class="docs-example-label">Error message</h6>
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<div class="form-group has-danger">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</div>
+
+</div>
+
   </div>
-</form>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-danger"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+
+<div class="docs-example-intro">
+  <h6 class="docs-example-title">Alternate markup</h6>
+  <p class="docs-example-description">In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.</p>
+</div>
+
+
+
+
+<div class="docs-example docs-example-fourth ">
+  <div class="docs-example-rendered">
+    <div class="docs-example-rendered-group">
+  
+  
+<!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+<div class="form-group">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control has-danger" id="email" type="email" name="email"></input>
+  <p class="form-msg has-danger">Please enter a valid email address</p>
+</div>
+
+</div>
+
+  </div>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control has-danger"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form-msg has-danger"</span><span class="nt">&gt;</span>Please enter a valid email address<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure></div>
+</div>
+
+
+</section>
 
   </article>
 </main>
