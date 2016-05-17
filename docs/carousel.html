@@ -4,7 +4,13 @@ title: Carousel
 category: components
 description: Carousels can use just about any content for each slide, and the number of slides you can use is also flexible.  The control sizing and position has been designed with the jumbotron in mind, so for simplest implementation, use a jumbotron for each slide layout.
 ---
-<div id="carousel-example-generic" class="carousel slide bg-light" data-ride="carousel">
+
+<section class="docs-section">
+
+{% include example-intro.html title='Basic carousel' description='Carousels include left/right navigation controls, along with position indicators below.' %}
+
+{% capture example %}
+<div class="carousel slide bg-light" id="carousel-example-generic" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -42,8 +48,19 @@ description: Carousels can use just about any content for each slide, and the nu
     <span class="sr-only">Next</span>
   </a>
 </div>
+{% endcapture %}
 
-<div id="carousel-example-dark" class="carousel slide bg-dark" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+{% include example.html body=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Dark carousel' description='When you apply the <code>.bg-dark</code> class to a carousel or its parent, the content colors are updated to improve legibility.  This example includes inline styles to show how you can use CSS to apply a color overlay to a background image to further improve text color contrast.' %}
+
+{% capture example %}
+<div class="carousel slide bg-dark" id="carousel-example-dark" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-dark" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-dark" data-slide-to="1"></li>
@@ -81,3 +98,7 @@ description: Carousels can use just about any content for each slide, and the nu
     <span class="sr-only">Next</span>
   </a>
 </div>
+{% endcapture %}
+
+{% include example.html body=example %}
+</section>
