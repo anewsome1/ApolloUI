@@ -1,6 +1,9 @@
+{% if include.label %}
+<h6 class="docs-example-label">{{ include.label }}</h6>
+{% endif %}
 <div class="docs-example {% if include.size %}docs-example-{{ include.size }}{% else %}docs-example-full{% endif %} ">
   <div class="docs-example-rendered">
-    {% include example-rendered.html label=include.label body=include.body %}
+    {% include example-rendered.html body=include.body %}
   </div>
   <div class="docs-example-code">{% include example-code.html body=include.body %}</div>
 </div>

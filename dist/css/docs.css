@@ -233,7 +233,7 @@ body {
 
 .docs-page-title,
 .docs-example-title,
-.docs-example .docs-example-label {
+.docs-example-label {
   text-transform: uppercase;
 }
 
