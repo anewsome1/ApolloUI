@@ -4,6 +4,10 @@ title: Pagination
 category: components
 description: Pagination component.
 ---
+
+<section class="docs-section">
+
+{% capture example %}
 <nav class="pager">
   <a class="pager-prev disabled">Previous</a>
   <div class="pager-count">
@@ -11,3 +15,8 @@ description: Pagination component.
   </div>
   <a class="pager-next">Next</a>
 </nav>
+{% endcapture %}
+
+{% include example.html size='third' label='Pager' body=example %}
+
+</section>
