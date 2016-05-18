@@ -2,11 +2,45 @@
 layout: component
 title: Modals
 category: components
-description: Use modals to display information to the user in a dialog-style overlay.  Just about anything can be put into a modal, and they automatically scroll if the content is longer than the viewport.
+description:
 ---
+
+<section class="docs-section">
+
+{% capture copy %}
+  {% capture body %}
+  <p>Use modals to display information to the user in a dialog-style overlay.  Just about anything can be put into a modal, and they automatically scroll if the content is longer than the viewport.</p>
+  {% endcapture %}
+  {% include section-intro.html title='Modal Overview' body=body %}
+{% endcapture %}
+
+{% capture code %}
+<div class="modal" style="display: block;position: inherit;">
+  <div class="modal-dialog" role="document" style="margin: 2.25rem;opacity: 1;transform:translateY(0);">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">This is a modal</h4>
+        <p>Some message or other content</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include illustration.html size='half' copy=copy code=code %}
+
+{% capture example %}
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-basic">
-  Launch demo modal
+  Open modal
 </button>
 
 <!-- Modal -->
@@ -27,23 +61,25 @@ description: Use modals to display information to the user in a dialog-style ove
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary">Action</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
 
 
+<section class="docs-section">
 
-<!-- Small modal trigger -->
+{% include example-intro.html title='Modal sizes' description='Depending on the content being displayed in the modal, you may want to use the small or large variant.  For example, a simple message prompt works well with <code>.modal-sm</code>, while something larger like a multi-step wizard would benefit from the added space provided by <code>.modal-lg</code>.' %}
+
+{% capture example %}
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-sm">
-  Launch small modal
+  Open small modal
 </button>
 
-<!-- Large modal trigger -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-lg">
-  Launch large modal
-</button>
-
-<!-- Small modal -->
 <div class="modal modal-sm fade" id="demo-modal-sm">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -58,11 +94,18 @@ description: Use modals to display information to the user in a dialog-style ove
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         <button type="button" class="btn btn-primary">Action</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
+{% endcapture %}
 
-<!-- Large modal -->
+{% include example.html size='fourth' label='Small modal' body=example %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-lg">
+  Open large modal
+</button>
+
 <div class="modal modal-lg fade" id="demo-modal-lg">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -88,17 +131,70 @@ description: Use modals to display information to the user in a dialog-style ove
           </div>
         </div>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Large modal' body=example %}
+
+</section>
 
 
-<!-- Button trigger modal -->
+
+<section class="docs-section">
+
+{% include example-intro.html title='Modal with image' description='To use an image as a full-width cap on the modal, place the image inside <code>.modal-image</code> before the <code>.modal-body</code>.  In this case, you should not use <code>.modal-header</code> for the title.  Instead, the title goes inside the <code>.modal-body</code>.' %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-image">
+  Open image modal
+</button>
+
+<div class="modal fade" id="demo-modal-image">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
+        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="dont-show-again"> Don't show again
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 text-xs-right">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Login modal' description='A login form can be placed inside a modal by adding the class <code>.modal-login</code> to the <code>.modal</code> itself and <code>.login</code> to <code>.modal-content</code>, as shown.  The width of this modal is set to match the default size of the login component.' %}
+
+{% capture example %}
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-login">
   Login modal
 </button>
 
-<!-- Modal -->
 <div class="modal modal-login fade" id="demo-modal-login">
   <div class="modal-dialog" role="document">
     <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
@@ -131,44 +227,11 @@ description: Use modals to display information to the user in a dialog-style ove
           <button class="btn btn-primary btn-lg" type="submit">Login</button>
         </div>
       </form>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
+{% endcapture %}
 
+{% include example.html body=example %}
 
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-image">
-  Modal with image
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="demo-modal-image">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
-      <div class="modal-image">
-        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
-      </div>
-      <div class="modal-body">
-        <h4 class="modal-title">Welcome to the future</h4>
-        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
-      </div>
-      <div class="modal-footer">
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" name="dont-show-again"> Don't show again
-              </label>
-            </div>
-          </div>
-          <div class="col-xs-6 text-xs-right">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+</section>
