@@ -430,3 +430,11 @@ body {
   font-size: 1.953rem;
   text-align: center;
 }
+
+.docs-section {
+  position: relative;
+}
+
+.docs-section .navbar-vertical {
+  margin-top: 0;
+}

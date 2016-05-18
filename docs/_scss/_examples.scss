@@ -391,3 +391,16 @@ body {
 .docs-icon-name {
   // padding-top: $spacer;
 }
+
+///
+/// Vertical navbar
+///
+
+.docs-section {
+  position: relative;
+
+  .navbar-vertical {
+    margin-top: 0;
+  }
+}
+

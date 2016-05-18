@@ -4,6 +4,10 @@ title: Navbar
 category: components
 description: Navbars are pretty sweet
 ---
+
+<section class="docs-section">
+
+{% capture example %}
 <nav class="navbar navbar-primary">
   <div class="container-fluid">
     <!-- Logo and/or name -->
@@ -70,9 +74,18 @@ description: Navbars are pretty sweet
     </div>
   </div>
 </nav>
+{% endcapture %}
+
+{% include example.html label='Fully-loaded navbar' body=example %}
+
+</section>
 
 
+<section class="docs-section">
 
+{% include example-intro.html title='Compact size' description='If you need a smaller version of the navbar, just use <code>.navbar-sm</code> to reduce the height.' %}
+
+{% capture example %}
 <nav class="navbar navbar-primary navbar-sm">
   <div class="container-fluid">
     <a class="navbar-brand" href="#0">
@@ -100,8 +113,18 @@ description: Navbars are pretty sweet
     </ul>
   </div>
 </nav>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
 
 
+<section class="docs-section">
+
+{% include example-intro.html title='Color options' description='Light and dark variations are available as an option to reduce the contrast between site navigation and page content.' %}
+
+{% capture example %}
 <nav class="navbar navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#0">
@@ -134,8 +157,11 @@ description: Navbars are pretty sweet
     </div>
   </div>
 </nav>
+{% endcapture %}
 
+{% include example.html label='Light' body=example %}
 
+{% capture example %}
 <nav class="navbar navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#0">
@@ -167,9 +193,18 @@ description: Navbars are pretty sweet
     </div>
   </div>
 </nav>
+{% endcapture %}
+
+{% include example.html label='Dark' body=example %}
+
+</section>
 
 
+<section class="docs-section">
 
+{% include example-intro.html title='Command bar' description='A command bar can be displayed below the navbar to show page-level actions, including actions that apply to a group of selected items.' %}
+
+{% capture example %}
 <nav class="navbar navbar-primary">
   <div class="container-fluid">
     <!-- ... -->
@@ -201,10 +236,19 @@ description: Navbars are pretty sweet
     </ul>
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html body=example %}
+
+</section>
 
 
+<section class="docs-section">
 
-<nav class="navbar navbar-vertical margin-top-navbar hidden-xs-up">
+{% include example-intro.html title='Vertical navbar' description='Secondary navigation lists can be displayed using a vertical navbar.' %}
+
+{% capture example %}
+<nav class="navbar navbar-vertical margin-top-navbar" style="position:absolute;">
   <a class="navbar-vertical-link" href="#0">
     <span class="icon icon-alert-circle"></span>
     <span class="navbar-vertical-link-title">Essentials</span>
@@ -230,3 +274,11 @@ description: Navbars are pretty sweet
     <span class="navbar-vertical-link-title">Survey</span>
   </a>
 </nav>
+{% endcapture %}
+
+  <div style="position: relative;">
+    {% include example.html size='fourth' body=example %}
+  </div>
+
+</section>
+
