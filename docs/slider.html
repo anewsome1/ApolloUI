@@ -4,6 +4,12 @@ title: Slider
 category: components
 description: Select a value from a range of options (styles only)
 ---
+
+<section class="docs-section">
+
+{% include example-intro.html title='Slider' %}
+
+{% capture example %}
 <div class="form-group">
   <label for="approval">Needed approval percentage</label>
   <div class="slider">
@@ -12,16 +18,31 @@ description: Select a value from a range of options (styles only)
     <input id="approval" name="approval" type="hidden">
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html size='third' label='Default' body=example %}
+
+{% capture example %}
 <div class="form-group">
-  <label for="likelyhood">Likelihood that this will be useful</label>
+  <label for="likelyhood">Needed approval percentage</label>
   <div class="slider disabled">
     <span class="slider-handle"></span>
     <span class="slider-fill"></span>
     <input id="likelyhood" name="likelyhood" type="hidden">
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html size='third' label='Disabled' body=example %}
+
+</section>
 
 
+<section class="docs-section">
+
+{% include example-intro.html title='Range slider' %}
+
+{% capture example %}
 <div class="form-group">
   <label for="approval">Needed approval percentage</label>
   <div class="slider">
@@ -31,8 +52,13 @@ description: Select a value from a range of options (styles only)
     <input id="approval" name="approval" type="hidden">
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html size='third' label='Default' body=example %}
+
+{% capture example %}
 <div class="form-group">
-  <label for="likelyhood">Likelihood that this will be useful</label>
+  <label for="likelyhood">Needed approval percentage</label>
   <div class="slider disabled">
     <span class="slider-handle"></span>
     <span class="slider-handle"></span>
@@ -40,4 +66,8 @@ description: Select a value from a range of options (styles only)
     <input id="likelyhood" name="likelyhood" type="hidden">
   </div>
 </div>
+{% endcapture %}
 
+{% include example.html size='third' label='Disabled' body=example %}
+
+</section>
