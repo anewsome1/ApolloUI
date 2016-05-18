@@ -250,7 +250,7 @@ body {
   margin-bottom: 2.25rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .docs-example-half,
   .docs-example-third,
   .docs-example-fourth {
@@ -271,7 +271,7 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .docs-section {
     padding-left: 8.33333%;
     padding-right: 8.33333%;

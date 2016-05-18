@@ -4,6 +4,9 @@ title: Loading animation
 category: components
 description: This little beauty will mesmerize users while your application chugs along.  Works on light or dark background.
 ---
+<section class="docs-section">
+
+{% capture example %}
 <div class="loading-indicator">
   <svg class="spinner-inner" viewbox="0 0 64 64">
     <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
@@ -12,7 +15,11 @@ description: This little beauty will mesmerize users while your application chug
     <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
   </svg>
 </div>
-<!-- On dark background -->
+{% endcapture %}
+
+{% include example.html size='third' label='Light background' body=example %}
+
+{% capture example %}
 <div class="bg-dark">
   <div class="loading-indicator">
     <svg class="spinner-inner" viewbox="0 0 64 64">
@@ -23,8 +30,16 @@ description: This little beauty will mesmerize users while your application chug
     </svg>
   </div>
 </div>
+{% endcapture %}
+
+{% include example.html size='third' label='Dark background' body=example %}
+
+</section>
 
 
+<section class="docs-section">
+
+{% capture example %}
 <div class="loading-indicator loading-complex">
   <svg class="spinner-inner" viewbox="0 0 64 64">
     <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
@@ -36,7 +51,12 @@ description: This little beauty will mesmerize users while your application chug
   <span class="planet middle"></span>
   <span class="planet outer"></span>
 </div>
-<!-- On dark background -->
+{% endcapture %}
+
+{% include example.html size='half' label='Light background' body=example %}
+on class="docs-section">
+
+{% capture example %}
 <div class="bg-dark">
   <div class="loading-indicator loading-complex">
     <svg class="spinner-inner" viewbox="0 0 64 64">
@@ -50,4 +70,8 @@ description: This little beauty will mesmerize users while your application chug
     <span class="planet outer"></span>
   </div>
 </div>
+{% endcapture %}
 
+{% include example.html size='half' label='Dark background' body=example %}
+
+</section>
