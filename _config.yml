@@ -28,3 +28,4 @@ kramdown:
 #   - page-templates
 
 current_version: 1.0.0-beta
+gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
