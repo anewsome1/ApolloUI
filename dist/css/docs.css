@@ -226,6 +226,10 @@ body {
   margin-bottom: 3.375rem;
 }
 
+.docs-example + .docs-example-intro {
+  margin-top: 1.5rem;
+}
+
 .docs-example-title,
 .docs-example-label {
   font-weight: 600;

@@ -156,6 +156,10 @@ body {
 
 .docs-example-intro {
   margin-bottom: $display2-size;
+
+  .docs-example + & {
+    margin-top: $display4-size;
+  }
   // @include media-breakpoint-only(sm) {
   //   width: percentage(1 / 3);
   // }
