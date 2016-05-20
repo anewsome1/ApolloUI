@@ -1,33 +1,40 @@
 ---
-layout: component
+layout: default
 title: Getting started
 category: styles
-order: 0
+order: 01
 ---
 
-<section class="docs-section">
-  <h1 class="display-2">{{ site.title }}</h1>
+<section class="home-header bg-dark">
+  <h1 class="display-2 font-serif">{{ site.title }}</h1>
   <p class="lead">{{ site.description }}</p>
   <p><b>Version</b>: {{ site.current_version }}</p>
   <p>
-    <a class="btn btn-primary btn-lg" href="{{ site.gitlab_url }}">GitLab Project</a>
+    <a class="btn btn-secondary btn-lg" href="{{ site.gitlab_url }}">GitLab Project</a>
   </p>
 </section>
 
 <section class="docs-section">
 
-  <h2>Using Apollo CSS</h2>
-  <p>Adding Apollo UI to your page via CDN is the fastest, easiest way to get a project started.</p>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      {% include section-intro.html title='Package Management' body='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.' %}
+      
+      {% include example.html hide_output=true label='NPM' code='npm install apollo-ui --save' %}
 
-{% highlight html %}
-<!-- TODO: Add real URL once CDN distribution is set up -->
-<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.css"> -->
-{% endhighlight %}
+      {% include example.html hide_output=true label='Bower' code='bower install apollo-ui --save' %}
+    </div>
+    <div class="col-xs-12 col-md-6">
+      {% include section-intro.html title='CDN' body='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}    
 
-  <p>Want the minified CSS?  We figured you might, so that's available from the same location.</p>
-{% highlight html %}
-<!-- TODO: Add real URL once CDN distribution is set up -->
-<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.min.css"> -->
-{% endhighlight %}
+      {% include docs-callout.html state='info' title='Coming soon' body='CDN endpoint URLs will be added shortly.' %}
 
+      {% comment %}
+      {% include example.html hide_output=true label='Expanded CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.css"> -->' %}
+
+      {% include example.html hide_output=true label='Minified CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.min.css"> -->' %}
+      {% endcomment %}
+
+    </div>
+  </div>
 </section>

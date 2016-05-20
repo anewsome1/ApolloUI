@@ -3088,6 +3088,10 @@ mark,
   content: "\00A0 \2014";
 }
 
+.font-serif {
+  font-family: "Merriweather", Georgia, serif;
+}
+
 td > dl {
   margin-bottom: 0;
 }
@@ -3446,6 +3450,10 @@ dd {
 .touchevents .btn {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
+}
+
+.bg-dark .btn-secondary, .off-canvas .btn-secondary {
+  border: none;
 }
 
 .form-group {

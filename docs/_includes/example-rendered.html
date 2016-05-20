@@ -2,5 +2,7 @@
   {% if include.label %}
   <h6 class="docs-example-label">{{ include.label }}</h6>
   {% endif %}
-  {{ include.body }}
+  {% unless include.hide_output %}
+  {{ include.code }}
+  {% endunless %}
 </div>

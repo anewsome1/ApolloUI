@@ -2,6 +2,7 @@
 layout: component
 title: Typography
 category: styles
+order: 5
 ---
 <section class="docs-section">
 
@@ -18,7 +19,7 @@ category: styles
 <h6>h6. Micro Heading</h6>
 {% endcapture %}
 
-{% include example.html size='half' body=example %}
+{% include example.html size='half' code=example %}
 
 
 {% include example-intro.html title='Display headings' description='Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>&mdash;a larger, slightly more opinionated heading style.  Display headings use the <strong>Perfect Fifth</strong> type scale.' %}
@@ -30,7 +31,7 @@ category: styles
 <h4 class="display-4">Display 4</h4>
 {% endcapture %}
 
-{% include example.html size='half' body=example %}
+{% include example.html size='half' code=example %}
 
 </section>
 
@@ -42,13 +43,13 @@ category: styles
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 {% endcapture %}
 
-{% include example.html size='half' label='Body copy' body=example %}
+{% include example.html size='half' label='Body copy' code=example %}
 
 {% capture example %}
 <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 {% endcapture %}
 
-{% include example.html size='half' label='Lead copy' body=example %}
+{% include example.html size='half' label='Lead copy' code=example %}
 
 
 

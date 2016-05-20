@@ -20,25 +20,25 @@ category: components
 <button class="btn btn-primary" type="button">Edit</button>
 <button class="btn btn-secondary" type="button">Edit</button>
 {% endcapture %}
-{% include example-rendered.html label='Default state' body=illustration_default %}
+{% include example-rendered.html label='Default state' code=illustration_default %}
 
 {% capture illustration_hover %}
 <button class="btn btn-primary hover" type="button">Edit</button>
 <button class="btn btn-secondary hover" type="button">Edit</button>
 {% endcapture %}
-{% include example-rendered.html label='Hover' body=illustration_hover %}
+{% include example-rendered.html label='Hover' code=illustration_hover %}
 
 {% capture illustration_active %}
 <button class="btn btn-primary active" type="button">Edit</button>
 <button class="btn btn-secondary active" type="button">Edit</button>
 {% endcapture %}
-{% include example-rendered.html label='Active' body=illustration_active %}
+{% include example-rendered.html label='Active' code=illustration_active %}
 
 {% capture illustration_disabled %}
 <button class="btn btn-primary" type="button" disabled>Edit</button>
 <button class="btn btn-secondary" type="button" disabled>Edit</button>
 {% endcapture %}
-{% include example-rendered.html label='Disabled' body=illustration_disabled %}
+{% include example-rendered.html label='Disabled' code=illustration_disabled %}
 </div>
 {% endcapture %}
 
@@ -78,17 +78,17 @@ category: components
 {% capture example_primary %}
 <button class="btn btn-primary" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Primary action' body=example_primary %}
+{% include example.html size='fourth' label='Primary action' code=example_primary %}
 
 {% capture example_secondary %}
 <button class="btn btn-secondary" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Secondary action' body=example_secondary %}
+{% include example.html size='fourth' label='Secondary action' code=example_secondary %}
 
 {% capture example_link %}
 <button class="btn btn-link" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Link style' body=example_link %}
+{% include example.html size='fourth' label='Link style' code=example_link %}
 
 </section>
 
@@ -99,12 +99,12 @@ category: components
 {% capture example_primary_disabled %}
 <button class="btn btn-primary" type="button" disabled>Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Disabled button' body=example_primary_disabled %}
+{% include example.html size='fourth' label='Disabled button' code=example_primary_disabled %}
 
 {% capture example_secondary_disabled %}
 <a class="btn btn-secondary disabled" href="#0">Edit</a>
 {% endcapture %}
-{% include example.html size='fourth' label='Disabled anchor' body=example_secondary_disabled %}
+{% include example.html size='fourth' label='Disabled anchor' code=example_secondary_disabled %}
 
 </section>
 
@@ -115,17 +115,17 @@ category: components
 {% capture example_lg %}
 <button class="btn btn-primary btn-lg" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Large' body=example_lg %}
+{% include example.html size='fourth' label='Large' code=example_lg %}
 
 {% capture example_sm %}
 <button class="btn btn-primary btn-sm" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Small' body=example_sm %}
+{% include example.html size='fourth' label='Small' code=example_sm %}
 
 {% capture example_block %}
 <button class="btn btn-primary btn-block" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Full-width' body=example_block %}
+{% include example.html size='fourth' label='Full-width' code=example_block %}
 
 </section>
 
@@ -138,7 +138,7 @@ category: components
 <span class="icon icon-edit"></span>
 </button>
 {% endcapture %}
-{% include example.html size='fourth' label='Icon only' body=example_icon_solo %}
+{% include example.html size='fourth' label='Icon only' code=example_icon_solo %}
 
 {% capture example_icon_label %}
 <button class="btn btn-secondary" type="button">
@@ -146,6 +146,6 @@ category: components
 Edit
 </button>
 {% endcapture %}
-{% include example.html size='fourth' label='Icon with label' body=example_icon_label %}
+{% include example.html size='fourth' label='Icon with label' code=example_icon_label %}
 
 </section>

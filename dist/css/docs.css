@@ -195,7 +195,7 @@ body {
   margin-top: 1.5rem;
 }
 
-.docs-section {
+.docs-section, .home-header {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
@@ -204,7 +204,7 @@ body {
   padding-bottom: 5.063rem;
 }
 
-.docs-section:nth-child(2n + 1) {
+.docs-section:nth-of-type(even), .home-header:nth-of-type(even) {
   background-color: #fbfaf9;
 }
 
@@ -276,7 +276,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  .docs-section {
+  .docs-section, .home-header {
     padding-left: 8.33333%;
     padding-right: 8.33333%;
   }
@@ -435,10 +435,47 @@ body {
   text-align: center;
 }
 
-.docs-section {
+.docs-section, .home-header {
   position: relative;
 }
 
-.docs-section .navbar-vertical {
+.docs-section .navbar-vertical, .home-header .navbar-vertical {
   margin-top: 0;
+}
+
+.home-header {
+  background-color: #339e99;
+}
+
+.docs-callout {
+  padding: 2rem 1.875rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f7f5f4;
+}
+
+.docs-callout p:last-of-type {
+  margin-bottom: 0;
+}
+
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
+}
+
+.docs-callout.docs-callout-success {
+  border-left: 0.25rem solid #2cc039;
+}
+
+.docs-callout.docs-callout-warning {
+  border-left: 0.25rem solid #ecdb5d;
+}
+
+.docs-callout.docs-callout-danger {
+  border-left: 0.25rem solid #f75040;
+}
+
+.docs-callout-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }

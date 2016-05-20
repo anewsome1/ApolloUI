@@ -193,3 +193,10 @@
   padding-top: $btn-lg-padding-y;
   padding-bottom: $btn-lg-padding-y;
 }
+
+///
+/// Fix border for dark bg
+///
+.bg-dark .btn-secondary {
+  border: none; 
+}

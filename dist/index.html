@@ -196,49 +196,63 @@
 </ul>
 
 
-
-</ul>
-
-<button class="btn btn-primary">
-  <span class="icon icon-save"></span>
-  Code Files
-</button>
-<button class="btn btn-secondary">
-  <span class="icon icon-save"></span>
-  Design Files
-</button>
-
   </aside>
 
   <article class="docs-content">
-    <header class="docs-page-header">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6">
-      <h1 class="docs-page-title">Getting started</h1>
-    </div>
-  </div>
-</header>
-    <section class="docs-section">
-  <h1 class="display-2">Apollo UI</h1>
+    <section class="home-header bg-dark">
+  <h1 class="display-2 font-serif">Apollo UI</h1>
   <p class="lead">HTML and CSS for the Apollo visual language.</p>
   <p><b>Version</b>: 1.0.0-beta</p>
   <p>
-    <a class="btn btn-primary btn-lg" href="https://gitlab.imshealth.com/apollo/apollo-ui">GitLab Project</a>
+    <a class="btn btn-secondary btn-lg" href="https://gitlab.imshealth.com/apollo/apollo-ui">GitLab Project</a>
   </p>
 </section>
 
 <section class="docs-section">
 
-  <h2>Using Apollo CSS</h2>
-  <p>Adding Apollo UI to your page via CDN is the fastest, easiest way to get a project started.</p>
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="docs-section-overview">
+  <h3 class="docs-section-title">Package Management</h3>
+  The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.
+</div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- TODO: Add real URL once CDN distribution is set up --&gt;</span>
-<span class="c">&lt;!-- &lt;link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.css"&gt; --&gt;</span></code></pre></figure>
+      
+      
+<h6 class="docs-example-label">NPM</h6>
 
-  <p>Want the minified CSS?  We figured you might, so that's available from the same location.</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- TODO: Add real URL once CDN distribution is set up --&gt;</span>
-<span class="c">&lt;!-- &lt;link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.min.css"&gt; --&gt;</span></code></pre></figure>
+<div class="docs-example docs-example-3 ">
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">npm install apollo-ui --save</code></pre></figure></div>
+</div>
 
+
+      
+<h6 class="docs-example-label">Bower</h6>
+
+<div class="docs-example docs-example-3 ">
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">bower install apollo-ui --save</code></pre></figure></div>
+</div>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="docs-section-overview">
+  <h3 class="docs-section-title">CDN</h3>
+  You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.
+</div>
+    
+
+      <div class="docs-callout docs-callout-info">
+  <h4 class="docs-callout-title">Coming soon</h4>
+  <p>CDN endpoint URLs will be added shortly.</p>
+</div>
+
+
+      
+
+    </div>
+  </div>
 </section>
 
   </article>
