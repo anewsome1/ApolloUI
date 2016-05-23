@@ -1,10 +1,10 @@
 ---
-layout: default
-title: Getting started
+layout: component
+title: How to use
 category: styles
 order: 01
 ---
-
+{% comment %}
 <section class="home-header bg-dark">
   <h1 class="display-2 font-serif">{{ site.title }}</h1>
   <p class="lead">{{ site.description }}</p>
@@ -13,19 +13,20 @@ order: 01
     <a class="btn btn-secondary btn-lg" href="{{ site.gitlab_url }}">GitLab Project</a>
   </p>
 </section>
+{% endcomment %}
 
 <section class="docs-section">
 
   <div class="row">
     <div class="col-xs-12 col-md-6">
       {% include section-intro.html title='Package Management' body='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.' %}
-      
+
       {% include example.html hide_output=true label='NPM' code='npm install apollo-ui --save' %}
 
       {% include example.html hide_output=true label='Bower' code='bower install apollo-ui --save' %}
     </div>
     <div class="col-xs-12 col-md-6">
-      {% include section-intro.html title='CDN' body='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}    
+      {% include section-intro.html title='CDN' body='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
 
       {% include docs-callout.html state='info' title='Coming soon' body='CDN endpoint URLs will be added shortly.' %}
 
