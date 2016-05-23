@@ -18,6 +18,9 @@ highlighter:    rouge
 kramdown:
   auto_ids:     true
 
+exclude:
+  - index.html
+
 # include:
 #   - components
 
