@@ -1,4 +1,5 @@
 {% comment %}
+<!-- TODO: Re-add link grouping once design system politics are settled -->
 {% assign site_sections = site.pages | group_by: 'category' %}
 {% for group in site_sections reversed %}
 <h4 class="docs-page-nav-title">Apollo {{ group.name | capitalize }}</h4>
