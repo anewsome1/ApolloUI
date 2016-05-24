@@ -219,8 +219,7 @@ input[type='radio'] {
   }
 
   input[type="radio"] {
-    position: absolute;
-    opacity: 0;
+    display: none;
 
     + label {
       @extend %toggle-base;

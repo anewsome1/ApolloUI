@@ -52,7 +52,8 @@ $link-hover-decoration:       none;
 ///
 
 // Font families
-$font-family-sans-serif:      'Proxima Nova', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:      'Proxima Nova', Arial, sans-serif;
+$font-family-serif:           'Merriweather', Georgia, serif;
 $font-family-base:            $font-family-sans-serif;
 
 // Sizing scale
@@ -312,7 +313,7 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $navy,
+    bg-active: $blue-dark,
     color-active: #fff,
     bg-disabled: $blue-lighter,
     color-disabled: $blue-light

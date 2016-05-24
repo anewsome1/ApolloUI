@@ -14,13 +14,12 @@ $comments:          $neutral-dark;
 ///
 
 .highlight {
-  padding: $spacer;
   margin-bottom: 0;
   background-color: $background;
-  // border: 1px solid $gray-lighter;
   color: $contents;
 
   pre {
+    padding: $grid-gutter-width;
     margin-bottom: 0;
   }
 

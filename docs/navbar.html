@@ -1,0 +1,284 @@
+---
+layout: component
+title: Navbar
+category: components
+description: Navbars are pretty sweet
+---
+
+<section class="docs-section">
+
+{% capture example %}
+<nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <!-- Logo and/or name -->
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <!-- Links -->
+    <ul class="navbar-links">
+      <li class="navbar-item">
+        <a href="#0">Lorem Ipsum</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Dolor sit amet</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Consectetur</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Actions -->
+    <ul class="navbar-actions">
+      <li class="navbar-actions-item">
+        <a href="#">
+          <span class="icon icon-search"></span>
+        </a>
+      </li>
+      <li class="navbar-actions-item">
+        <a href="#">
+          <span class="icon icon-notification"></span>
+          <span class="badge badge-warning">3</span>
+        </a>
+      </li>
+    </ul>
+    <!-- Profile -->
+    <div class="navbar-profile">
+      <span class="profile-username">Bob Hope</span>
+      <div class="profile-credential dropdown">
+        <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">bob@hopefoundation.com</a>
+        <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
+          <li><a href="#0">Log out</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">Switch credentials</a></li>
+          <li><a href="#0">Switch to production</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">App 1</a></li>
+          <li><a href="#0">App 2</a></li>
+          <li><a href="#0">App 3</a></li>
+          <li class="separator"></li>
+          <li><a href="#0">Account settings</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Environment -->
+    <div class="navbar-environment">
+      <span>Staging</span>
+    </div>
+  </div>
+</nav>
+{% endcapture %}
+
+{% include example.html label='Fully-loaded navbar' code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Compact size' description='If you need a smaller version of the navbar, just use <code>.navbar-sm</code> to reduce the height.' %}
+
+{% capture example %}
+<nav class="navbar navbar-primary navbar-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <ul class="navbar-links">
+      <li class="navbar-item">
+        <a href="#0">Lorem Ipsum</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Dolor sit amet</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Consectetur</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown1" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown1">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Color options' description='Light and dark variations are available as an option to reduce the contrast between site navigation and page content.' %}
+
+{% capture example %}
+<nav class="navbar navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #2975e9"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #2975e9;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <ul class="navbar-links">
+      <li class="navbar-item">
+        <a href="#0">Lorem Ipsum</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Dolor sit amet</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Consectetur</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown2" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown2">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </li>
+
+    </ul>
+    <div class="navbar-profile">
+      <span class="profile-username">J. Christopher Irwin</span>
+      <span class="profile-credential">Brand Name</span>
+    </div>
+  </div>
+</nav>
+{% endcapture %}
+
+{% include example.html label='Light' code=example %}
+
+{% capture example %}
+<nav class="navbar navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#0">
+      <svg class="navbar-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 106.27"><polygon points="0 0 29.32 50.79 117.3 0 0 0" style="fill: #fff"/><polygon points="120 4.69 32.03 55.47 61.35 106.27 120 4.69" style="fill: #fff;opacity: 0.5"/></svg>
+      Marketing
+    </a>
+    <ul class="navbar-links">
+      <li class="navbar-item">
+        <a href="#0">Lorem Ipsum</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Dolor sit amet</a>
+      </li>
+      <li class="navbar-item">
+        <a href="#0">Consectetur</a>
+      </li>
+      <li class="navbar-item dropdown">
+        <a class="dropdown-toggle" id="navbarDropdown3" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vivamus</a>
+        <ul class="dropdown-menu" aria-labeledby="navbarDropdown3">
+          <li><a href="#0">Lorem ipsum</a></li>
+          <li><a href="#0">Dolor sit amet</a></li>
+          <li><a href="#0">Vivamus</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="navbar-profile">
+      <span class="profile-username">J. Christopher Irwin</span>
+      <span class="profile-credential">Brand Name</span>
+    </div>
+  </div>
+</nav>
+{% endcapture %}
+
+{% include example.html label='Dark' code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Command bar' description='A command bar can be displayed below the navbar to show page-level actions, including actions that apply to a group of selected items.' %}
+
+{% capture example %}
+<nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <!-- ... -->
+  </div>
+</nav>
+<div class="command-bar">
+  <div class="container-fluid">
+    <ul class="command-bar-actions text-xs-right">
+      <li>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-edit"></span> Edit
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-trash"></span> Delete
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-export"></span> Export
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-link" href="#0">
+          <span class="command-bar-icon icon icon-merge"></span> Merge
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Vertical navbar' description='Secondary navigation lists can be displayed using a vertical navbar.' %}
+
+{% capture example %}
+<nav class="navbar navbar-vertical margin-top-navbar" style="position:absolute;">
+  <a class="navbar-vertical-link" href="#0">
+    <span class="icon icon-alert-circle"></span>
+    <span class="navbar-vertical-link-title">Essentials</span>
+  </a>
+  <a class="navbar-vertical-link active" href="#0">
+    <span class="icon icon-star"></span>
+    <span class="navbar-vertical-link-title">Rating</span>
+  </a>
+  <a class="navbar-vertical-link" href="#0">
+    <span class="icon icon-contact"></span>
+    <span class="navbar-vertical-link-title">Identity</span>
+  </a>
+  <a class="navbar-vertical-link" href="#0">
+    <span class="icon icon-location"></span>
+    <span class="navbar-vertical-link-title">Location Details</span>
+  </a>
+  <a class="navbar-vertical-link" href="#0">
+    <span class="icon icon-user-history"></span>
+    <span class="navbar-vertical-link-title">Activity History</span>
+  </a>
+  <a class="navbar-vertical-link" href="#0">
+    <span class="icon icon-survey"></span>
+    <span class="navbar-vertical-link-title">Survey</span>
+  </a>
+</nav>
+{% endcapture %}
+
+  <div style="position: relative;">
+    {% include example.html size='fourth' code=example %}
+  </div>
+
+</section>
+

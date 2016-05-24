@@ -1,0 +1,104 @@
+---
+layout: component
+title: Carousel
+category: components
+description: Carousels can use just about any content for each slide, and the number of slides you can use is also flexible.  The control sizing and position has been designed with the jumbotron in mind, so for simplest implementation, use a jumbotron for each slide layout.
+---
+
+<section class="docs-section">
+
+{% include example-intro.html title='Basic carousel' description='Carousels include left/right navigation controls, along with position indicators below.' %}
+
+{% capture example %}
+<div class="carousel slide bg-light" id="carousel-example-generic" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="jumbotron">
+        <h3>First slide</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="jumbotron">
+        <h3>Numero dos</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="jumbotron">
+        <h3>Slide the third</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Dark carousel' description='When you apply the <code>.bg-dark</code> class to a carousel or its parent, the content colors are updated to improve legibility.  This example includes inline styles to show how you can use CSS to apply a color overlay to a background image to further improve text color contrast.' %}
+
+{% capture example %}
+<div class="carousel slide bg-dark" id="carousel-example-dark" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-dark" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="1"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="jumbotron">
+        <h3>First slide</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="jumbotron">
+        <h3>Numero dos</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="jumbotron">
+        <h3>Slide the third</h3>
+        <p>Some important text</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control left" href="#carousel-example-dark" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control right" href="#carousel-example-dark" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+</section>

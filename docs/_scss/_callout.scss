@@ -1,0 +1,24 @@
+.docs-callout {
+  padding: ($spacer * 2) $grid-gutter-width;
+  margin-top: $spacer;
+  margin-bottom: $spacer * 2;
+  // box-shadow: $shadow-resting;
+  background-color: $neutral;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @each $state, $props in $alert-states {
+    $color: map-get($props, 'bg');
+    &.docs-callout-#{ $state } {
+      border-left: .25rem solid $color;
+    }
+  }
+}
+
+.docs-callout-title {
+  font-size: $font-size-base;
+  font-weight: $font-semi-bold;
+  text-transform: uppercase;
+}

@@ -1,25 +1,41 @@
 ---
-layout: base
-title: Home page
+layout: component
+title: How to use
+category: styles
+order: 01
 ---
+{% comment %}
+<section class="home-header bg-dark">
+  <h1 class="display-2 font-serif">{{ site.title }}</h1>
+  <p class="lead">{{ site.description }}</p>
+  <p><b>Version</b>: {{ site.current_version }}</p>
+  <p>
+    <a class="btn btn-secondary btn-lg" href="{{ site.gitlab_url }}">GitLab Project</a>
+  </p>
+</section>
+{% endcomment %}
 
-<div class="docs margin-top-navbar">
-  <div class="jumbotron jumbotron-fluid bg-light">
-    <div class="container-fluid">
-      <h1>{{ site.title }}</h1>
-      <h4>{{ site.description }}</h4>
-      <p><b>Version</b>: {{ site.current_version }}</p>
+<section class="docs-section">
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      {% include section-intro.html title='Package Management' body='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.' %}
+
+      {% include example.html hide_output=true label='NPM' code='npm install apollo-ui --save' %}
+
+      {% include example.html hide_output=true label='Bower' code='bower install apollo-ui --save' %}
+    </div>
+    <div class="col-xs-12 col-md-6">
+      {% include section-intro.html title='CDN' body='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
+
+      {% include docs-callout.html state='info' title='Coming soon' body='CDN endpoint URLs will be added shortly.' %}
+
+      {% comment %}
+      {% include example.html hide_output=true label='Expanded CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.css"> -->' %}
+
+      {% include example.html hide_output=true label='Minified CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.min.css"> -->' %}
+      {% endcomment %}
+
     </div>
   </div>
-  <div class="docs-content">
-    <div class="container-fluid">
-      <p>This site contains developer documentation for the following resources:</p>
-      <ul>
-        <li><b>Styles</b>: This page includes most basic styles, like grid, typography, buttons, forms, etc.</li>
-        <li><b>Icons</b>: Shows how you can implement and style our icons in various ways, including a complete list of all {{ site.data._icons | size }} icons in our custom set!</li>
-        <li><b>Components</b>: These are made up mostly using multiple items from the styles section, plus some component-specific treatment.  Examples include login form, navbar, dropdowns and more.</li>
-      </ul>
-      <p class="pad-top font-italic">NOTE: This project is in development, so stay tuned for more additions and improvements in the coming months.  The design for this site is a basic placeholder using core styles from Apollo.  A new design will be implemented when these docs are incorporated into the Design Resource Base later this year.</p>
-    </div>
-  </div>
-</div>
+</section>

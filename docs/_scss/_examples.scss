@@ -4,21 +4,30 @@
 
 $docs-sidebar-width: $off-canvas-width;
 
+%separator-bar {
+  display: block;
+  width: 2rem;
+  height: $border-width * 3;
+  margin-bottom: 1rem;
+  background-color: $teal;
+  content: '';
+}
+
 html,
 body {
   height: 100%;
 }
 
 .docs-sidebar {
-  padding-top: $navbar-sm-height;
+  background-color: $charcoal-dark;
+  padding: $grid-gutter-width;
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     position: fixed;
     top: 0;
     left: 0;
     width: $docs-sidebar-width;
     height: 100%;
-    padding-top: $navbar-height;
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -29,12 +38,7 @@ body {
 }
 
 .docs-content {
-  padding-top: $spacer;
   min-height: 100%;
-
-  @include media-breakpoint-up(sm) {
-    padding-top: $navbar-height + $spacer;
-  }
 }
 
 
@@ -42,26 +46,75 @@ body {
 /// Page subnavigation
 ///
 
-.docs-page-nav,
-.docs-page-subnav {
-  padding-left: $grid-gutter-width / 2;
-
-  &-item {
-    list-style-type: none;
-  }
+.docs-page-nav-title {
+  margin-bottom: $display3-size;
+  color: #fff;
+  font-family: $font-family-serif;
+  font-weight: $font-thin;
 }
 
 .docs-page-nav {
-  padding-top: $spacer;
+  margin-bottom: $display2-size;
 
-  &-item {
-    margin-bottom: $spacer;
+  @include media-breakpoint-only(xs) {
+    column-count: 2;
   }
 
-  &-category {
-    font-weight: $font-semi-bold;
+  @include media-breakpoint-only(sm) {
+    column-count: 3;
+  }
+
+  @include media-breakpoint-down(sm) {
+    column-gap: $grid-gutter-width;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: $grid-gutter-width;
   }
 }
+
+.docs-page-nav-item {
+  list-style-type: none;
+
+  > a {
+    display: inline-block;
+    padding-top: $spacer-y / 2;
+    padding-bottom: $spacer-y / 2;
+    color: #fff;
+    font-weight: $font-light;
+  }
+
+  &.active > a {
+    color: $teal;
+    font-weight: $font-normal;
+  }
+}
+
+
+///
+/// Page header
+///
+
+.docs-page-header {
+  @include make-container;
+
+  @include media-breakpoint-up(md) {
+    padding: $display2-size percentage(1 / 12) 0;
+  }
+}
+
+.docs-page-title {
+  font-size: $font-size-base;
+  font-weight: $font-normal;
+
+  &::after {
+    @extend %separator-bar;
+    margin-top: $display4-size;
+  }
+}
+
+
+
 
 
 ///
@@ -69,26 +122,183 @@ body {
 ///
 
 .docs-section {
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+  @include make-container;
+  padding-top: $display1-size;
+  padding-bottom: $display1-size;
 
-  > h2 {
-    margin-bottom: $spacer;
-  }
-
-  > h3 {
-    padding-top: $spacer;
+  &:nth-of-type(even) {
+    background-color: $neutral-light;
   }
 }
 
-.docs-example-rendered {
-  position: relative;
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+/// Title and description
+
+.docs-section-title,
+.docs-example-title {
+  padding-bottom: $display3-size;
+
+  &::before {
+    @extend %separator-bar;
+  }}
+
+.docs-section-overview {
+  margin-bottom: $spacer * 3;
+  font-family: $font-family-serif;
+}
+
+.docs-example-description {
+  width: 50%;
+}
+
+///
+/// Examples
+///
+
+.docs-example-intro {
+  margin-bottom: $display2-size;
+
+  .docs-example + & {
+    margin-top: $display4-size;
+  }
+  // @include media-breakpoint-only(sm) {
+  //   width: percentage(1 / 3);
+  // }
+  // @include media-breakpoint-up(md) {
+  //   width: 25%;
+  // }
+}
+
+.docs-example-title,
+.docs-example-label {
+  font-weight: $font-semi-bold;
+}
+
+.docs-page-title,
+.docs-example-title,
+.docs-example-label {
+  text-transform: uppercase;
+}
+
+.docs-example-rendered-group {
+  margin-bottom: $spacer-y * 2;
+}
+
+.docs-example-label {
+  margin-bottom: 0;
+  padding-bottom: $spacer-y;
 }
 
 .docs-example-code {
-  margin-bottom: $spacer * 2;
+  margin-bottom: $display3-size;
+}
+
+///
+/// Example layouts
+///
+
+.docs-example-half,
+.docs-example-third,
+.docs-example-fourth {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+
+    .docs-example-rendered,
+    .docs-example-code {
+      padding-right: $grid-gutter-width / 2;
+      padding-left: $grid-gutter-width / 2;
+    }
+
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .docs-section {
+    padding-left: percentage(1 / 12);
+    padding-right: percentage(1 / 12);
+  }
+
+  // .docs-example {
+  //   padding-bottom: $display3-size;
+  // }
+
+  .docs-example-full {
+    .docs-example-rendered {
+      padding-bottom: $display3-size;
+    }
+  }
+
+  .docs-example-half {
+    .docs-example-rendered,
+    .docs-example-code {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+
+  .docs-example-third {
+    .docs-example-rendered {
+      flex-basis: percentage(1 / 3);
+      max-width: percentage(1 / 3);
+    }
+
+    .docs-example-code {
+      flex-basis: percentage(2 / 3);
+      max-width: percentage(2 / 3);
+    }
+  }
+
+  .docs-example-fourth {
+    .docs-example-rendered {
+      flex-basis: 25%;
+      max-width: 25%;
+    }
+
+    .docs-example-code {
+      flex-basis: 75%;
+      max-width: 75%;
+    }
+  }
+}
+
+
+
+///
+/// Illustrations
+///
+
+@include media-breakpoint-up(lg) {
+  .docs-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .docs-illustration-copy {
+    padding-right: percentage(1 / 12);
+
+    .docs-illustration-half & {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    .docs-illustration-third & {
+      flex-basis: percentage(1 / 3);
+      max-width: percentage(1 / 3);
+    }
+  }
+}
+
+///
+/// Hovering card style
+///
+
+@include media-breakpoint-up(md) {
+  .docs-card {
+    box-shadow: $shadow-hover;
+    padding: $grid-gutter-width 6rem;
+  }
 }
 
 
@@ -99,7 +309,7 @@ body {
 .docs-color-block {
   position: relative;
   float: left;
-  width: percentage( 1 / 6 );
+  width: percentage(1 / 6);
   // margin-bottom: $spacer;
   height: 10rem;
 
@@ -185,3 +395,26 @@ body {
 .docs-icon-name {
   // padding-top: $spacer;
 }
+
+///
+/// Vertical navbar
+///
+
+.docs-section {
+  position: relative;
+
+  .navbar-vertical {
+    margin-top: 0;
+  }
+}
+
+
+///
+/// Home page
+///
+.home-header {
+  @extend .docs-section;
+  background-color: $teal-dark;
+}
+
+
