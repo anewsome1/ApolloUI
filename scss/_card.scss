@@ -157,6 +157,7 @@
     font-size: $font-size-base;
     color: $link-color;
     cursor: pointer;
+    text-align: inherit;
 
     &::before {
       @extend %icon-base;
