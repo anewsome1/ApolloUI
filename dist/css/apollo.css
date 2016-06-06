@@ -4808,6 +4808,7 @@ p:last-child {
   font-size: 1rem;
   color: #2975e9;
   cursor: pointer;
+  text-align: inherit;
 }
 
 .card-accordion .card-title::before {
