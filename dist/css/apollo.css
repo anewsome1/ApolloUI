@@ -3913,6 +3913,30 @@ select.form-control, select.search-input {
   background-size: 1rem;
 }
 
+select.form-control, select.search-input, select.form-control::-webkit-input-placeholder, select.search-input::-webkit-input-placeholder {
+  height: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+select.form-control, select.search-input, select.form-control::-moz-placeholder, select.search-input::-moz-placeholder {
+  height: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+select.form-control, select.search-input, select.form-control:-ms-input-placeholder, select.search-input:-ms-input-placeholder {
+  height: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+select.form-control, select.search-input, select.form-control::placeholder, select.search-input::placeholder {
+  height: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 textarea.form-control, textarea.search-input {
   height: auto;
   white-space: inherit;

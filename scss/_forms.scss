@@ -81,6 +81,13 @@ select.form-control {
   border: $input-btn-border-width solid $input-border-color;
   background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
   background-size: $font-size-base;
+
+  &,
+  &::placeholder {
+    height: $input-height;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 textarea.form-control {
