@@ -90,15 +90,15 @@
   ///  Plain tabs style
   ///
   &:not(.tab-bar) {
-    margin-bottom: -$border-width;
+    border-left: $border-width solid $charcoal-lighter;
 
     .nav-link {
       padding: $btn-lg-padding-y ($btn-padding-x * 2);
-      border: $border-width solid $charcoal-lighter;
-      background-color: $body-bg;
+      border-width: $border-width $border-width 0 0;
+      border-style: solid;
+      border-color: $charcoal-lighter;
+      border-left: 0;
       color: $body-color;
-
-
 
       .bg-dark & {
         color: #fff;
@@ -114,8 +114,8 @@
       }
 
       &.active {
-        border-top: ($border-width * 2) solid $link-color;
-        border-bottom: 0; // Eliminate bottom border to offset height of double border on top
+        background-color: $body-bg;
+        box-shadow: inset 0 ($border-width * 3) 0 $link-color;
 
         &,
         &:hover,
@@ -135,7 +135,10 @@
     + .tab-content {
       padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
       border: $border-width solid $charcoal-lighter;
-      // border-top: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: -$border-width;
     }
 
   }
