@@ -56,45 +56,53 @@
     display: block;
   }
 
-  &:not(.tabs-justified) {
-    @include clearfix();
+
+  @if $enable-flex {
+    display: flex;
+    flex-wrap: wrap;
+
+  } @else {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
 
     .nav-item {
-      float: left;
+      display: table-cell;
     }
+  }
 
+  &.tab-justified {
+    .nav-item {
+      flex: 1;
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    .nav-item {
+      flex: 1;
+    }
     .nav-link {
       text-align: center;
     }
   }
 
-  &.tab-justified {
-    @if $enable-flex {
-      display: flex;
-      flex-wrap: wrap;
-
-      .nav-item {
-        flex: 1;
-      }
-    } @else {
-      display: table;
-      table-layout: fixed;
-      width: 100%;
-
-      .nav-item {
-        display: table-cell;
-      }
-    }
-  }
 
   ///
   ///  Plain tabs style
   ///
   &:not(.tab-bar) {
+    border-bottom: $border-width solid $charcoal-lighter;
+
+    .nav-item {
+      margin-bottom: -$border-width;
+    }
+
     .nav-link {
-      padding: $btn-padding-y $btn-padding-x;
-      // border-top: $border-width * 2 solid transparent;
-      font-size: $font-size-lg;
+      padding: $btn-lg-padding-y ($btn-padding-x * 2);
+      border-width: $border-width $border-width 0;
+      border-style: solid;
+      border-color: $charcoal-lighter;
+      background-color: $body-bg;
       color: $body-color;
 
       .bg-dark & {
@@ -111,6 +119,9 @@
       }
 
       &.active {
+        border-top: $border-width * 2 solid $link-color;
+        border-bottom: $border-width solid transparent;
+
         &,
         &:hover,
         &:active,
@@ -125,13 +136,17 @@
         }
       }
     }
-    .nav-item:first-of-type .nav-link {
-      padding-left: 0;
+
+    .nav-item + .nav-item .nav-link {
+      border-left: 0;
     }
 
-    .nav-item:last-of-type .nav-link {
-      padding-right: 0;
+    + .tab-content {
+      padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
+      border: $border-width solid $charcoal-lighter;
+      border-top: 0;
     }
+
   }
 
 

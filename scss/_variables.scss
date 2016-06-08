@@ -2,6 +2,17 @@
 @import '_props/palette.map';
 
 
+///
+/// Colors
+///
+
+$brand-primary:               $blue;
+$brand-info:                  $atmosphere;
+$brand-success:               $green;
+$brand-warning:               $yellow;
+$brand-danger:                $coral;
+
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -24,17 +35,13 @@ $spacer-x:                   $spacer;
 $spacer-y:                   $spacer;
 $border-width:               .0625rem;
 
-///
-/// Colors
-///
+// Body
+//
+// Settings for the `<body>` element.
 
-$body-color:                  $charcoal;
+$body-bg:                    #fff;
+$body-color:                 $charcoal;
 
-$brand-primary:               $blue;
-$brand-info:                  $atmosphere;
-$brand-success:               $green;
-$brand-warning:               $yellow;
-$brand-danger:                $coral;
 
 // Links
 //
@@ -83,8 +90,6 @@ $container-max-widths: (
 
 $grid-columns:               12;
 $grid-gutter-width:          1.875rem; // 30px
-
-
 
 
 ///

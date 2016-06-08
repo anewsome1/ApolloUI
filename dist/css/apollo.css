@@ -4323,25 +4323,7 @@ input[type='radio']:checked {
   margin-left: 1rem;
 }
 
-.nav-tabs .nav-link {
-  display: block;
-}
-
-.nav-tabs:not(.tabs-justified)::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.nav-tabs:not(.tabs-justified) .nav-item {
-  float: left;
-}
-
-.nav-tabs:not(.tabs-justified) .nav-link {
-  text-align: center;
-}
-
-.nav-tabs.tab-justified {
+.nav-tabs {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -4350,15 +4332,41 @@ input[type='radio']:checked {
           flex-wrap: wrap;
 }
 
+.nav-tabs .nav-link {
+  display: block;
+}
+
 .nav-tabs.tab-justified .nav-item {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+@media (max-width: 543px) {
+  .nav-tabs .nav-item {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .nav-tabs .nav-link {
+    text-align: center;
+  }
+}
+
+.nav-tabs:not(.tab-bar) {
+  border-bottom: 0.0625rem solid #ced2d4;
+}
+
+.nav-tabs:not(.tab-bar) .nav-item {
+  margin-bottom: -0.0625rem;
+}
+
 .nav-tabs:not(.tab-bar) .nav-link {
-  padding: 0.4375rem 1.125rem;
-  font-size: 1.25rem;
+  padding: 0.9375rem 2.25rem;
+  border-width: 0.0625rem 0.0625rem 0;
+  border-style: solid;
+  border-color: #ced2d4;
+  background-color: #fff;
   color: #3a4f59;
 }
 
@@ -4374,6 +4382,11 @@ input[type='radio']:checked {
   color: #3ed6cf;
 }
 
+.nav-tabs:not(.tab-bar) .nav-link.active {
+  border-top: 0.125rem solid #2975e9;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .nav-tabs:not(.tab-bar) .nav-link.active, .nav-tabs:not(.tab-bar) .nav-link.active:hover, .nav-tabs:not(.tab-bar) .nav-link.active:active, .nav-tabs:not(.tab-bar) .nav-link.active:visited {
   color: #2975e9;
 }
@@ -4382,12 +4395,14 @@ input[type='radio']:checked {
   color: #3ed6cf;
 }
 
-.nav-tabs:not(.tab-bar) .nav-item:first-of-type .nav-link {
-  padding-left: 0;
+.nav-tabs:not(.tab-bar) .nav-item + .nav-item .nav-link {
+  border-left: 0;
 }
 
-.nav-tabs:not(.tab-bar) .nav-item:last-of-type .nav-link {
-  padding-right: 0;
+.nav-tabs:not(.tab-bar) + .tab-content {
+  padding: 0.875rem 2.25rem;
+  border: 0.0625rem solid #ced2d4;
+  border-top: 0;
 }
 
 .nav-tabs.tab-bar .nav-link {
