@@ -52,11 +52,6 @@
   /// Horizontal tabs
   ///
 
-  .nav-link {
-    display: block;
-  }
-
-
   @if $enable-flex {
     display: flex;
     flex-wrap: wrap;
@@ -69,6 +64,10 @@
     .nav-item {
       display: table-cell;
     }
+  }
+
+  .nav-link {
+    display: block;
   }
 
   &.tab-justified {
@@ -91,19 +90,15 @@
   ///  Plain tabs style
   ///
   &:not(.tab-bar) {
-    border-bottom: $border-width solid $charcoal-lighter;
-
-    .nav-item {
-      margin-bottom: -$border-width;
-    }
+    margin-bottom: -$border-width;
 
     .nav-link {
       padding: $btn-lg-padding-y ($btn-padding-x * 2);
-      border-width: $border-width $border-width 0;
-      border-style: solid;
-      border-color: $charcoal-lighter;
+      border: $border-width solid $charcoal-lighter;
       background-color: $body-bg;
       color: $body-color;
+
+
 
       .bg-dark & {
         color: #fff;
@@ -119,8 +114,8 @@
       }
 
       &.active {
-        border-top: $border-width * 2 solid $link-color;
-        border-bottom: $border-width solid transparent;
+        border-top: ($border-width * 2) solid $link-color;
+        border-bottom: 0; // Eliminate bottom border to offset height of double border on top
 
         &,
         &:hover,
@@ -137,14 +132,10 @@
       }
     }
 
-    .nav-item + .nav-item .nav-link {
-      border-left: 0;
-    }
-
     + .tab-content {
       padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
       border: $border-width solid $charcoal-lighter;
-      border-top: 0;
+      // border-top: 0;
     }
 
   }
