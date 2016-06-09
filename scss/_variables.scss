@@ -275,7 +275,7 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       rgba(#fff, .85);
-$input-bg-disabled:              $charcoal-lighter;
+$input-bg-disabled:              rgba($charcoal-lighter, .5);
 $input-bg-focus:                 #fff;
 
 $input-color:                    $charcoal;
