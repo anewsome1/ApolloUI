@@ -163,8 +163,6 @@ input[type='radio'] {
     }
   }
 
-
-
   &:disabled,
   &.disabled {
     background-color: $input-bg-disabled;
@@ -178,8 +176,6 @@ input[type='radio'] {
     outline: $input-outline;
   }
 }
-
-
 
 input[type='checkbox'] {
   background-size: 100%;
