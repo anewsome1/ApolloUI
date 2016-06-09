@@ -1,11 +1,10 @@
 {% include path.html %}
-{% comment %}
-<!-- TODO: Re-add link grouping once design system politics are settled -->
-{% assign site_sections = site.pages | group_by: 'category' %}
-{% for group in site_sections reversed %}
-<h4 class="docs-page-nav-title">Apollo {{ group.name | capitalize }}</h4>
+{% assign site_sections = site.pages | group_by: 'category' | reverse %}
+{% for group in site_sections %}
+<h5 class="docs-page-nav-title">Apollo {{ group.name | capitalize }}</h5>
 <ul class="docs-page-nav" role="navigation">
-  {% for item in group.items %}
+  {% assign items_sorted = group.items | sort: 'order', 'last' %}
+  {% for item in items_sorted %}
     {% assign is_active = nil %}
     {% if page.url == item.url %}
       {% assign is_active = 'active' %}
@@ -16,20 +15,4 @@
   {% endfor %}
 </ul>
 {% endfor %}
-{% endcomment %}
-
-<h4 class="docs-page-nav-title">Apollo Components</h4>
-<ul class="docs-page-nav" role="navigation">
-  {% for item in site.pages %}
-    {% assign is_active = nil %}
-    {% if page.url == item.url %}
-      {% assign is_active = 'active' %}
-    {% endif %}
-    <li class="docs-page-nav-item {{is_active}}">
-      <a href="{{ base }}{{ item.url }}">{{ item.title | capitalize }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-
 
