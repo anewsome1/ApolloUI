@@ -167,8 +167,11 @@ input[type='radio'] {
 
   &:disabled,
   &.disabled {
-    color: $input-color-disabled;
     background-color: $input-bg-disabled;
+
+    + label {
+      color: $input-color-disabled;
+    }
   }
 
   &:focus {

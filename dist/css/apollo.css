@@ -4050,8 +4050,13 @@ input[type='radio']:hover.disabled + label {
 input[type='checkbox']:disabled, input[type='checkbox'].disabled,
 input[type='radio']:disabled,
 input[type='radio'].disabled {
-  color: #9ca7ac;
   background-color: rgba(206, 210, 212, 0.5);
+}
+
+input[type='checkbox']:disabled + label, input[type='checkbox'].disabled + label,
+input[type='radio']:disabled + label,
+input[type='radio'].disabled + label {
+  color: #9ca7ac;
 }
 
 input[type='checkbox']:focus,
