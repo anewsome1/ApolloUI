@@ -4080,7 +4080,7 @@ input[type='radio'] {
 
 input[type='radio']:checked {
   background-color: #2975e9;
-  border: none;
+  box-shadow: inset 0 0 0 0.125rem #fff;
 }
 
 .toggle input[type="radio"] + label, .nav-tabs.tab-bar .nav-link {
