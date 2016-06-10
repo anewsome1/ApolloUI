@@ -1,10 +1,9 @@
 ---
-layout: component
+layout: default
 title: Getting started
 category: scaffolding
 order: 01
 ---
-{% comment %}
 <section class="home-header bg-dark">
   <h1 class="display-2 font-serif">{{ site.title }}</h1>
   <p class="lead">{{ site.description }}</p>
@@ -13,11 +12,10 @@ order: 01
     <a class="btn btn-secondary btn-lg" href="{{ site.gitlab_url }}">GitLab Project</a>
   </p>
 </section>
-{% endcomment %}
 
 <section class="docs-section">
 
-  {% include example-intro.html title='CDN' description='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
+  {% include example-intro.html title='Compiled stylesheets' description='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
 
   {% capture example %}<link rel="stylesheet" href="//cdn.ims.io/design/css/apollo/{{ site.current_version }}/apollo.css">{% endcapture %}
 
@@ -27,7 +25,7 @@ order: 01
 
   {% include example.html hide_output=true label='Minified CSS' code=example %}
 
-  {% include example-intro.html title='Package Management' description='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.  Use one of these options to add the Apollo framework to your front-end build system.' %}
+  {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
 
   <div class="row">
     <div class="col-xs-12 col-md-6">
