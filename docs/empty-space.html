@@ -1,0 +1,33 @@
+---
+layout: component
+title: Empty space prompt
+category: components
+order: 65
+description: This component is for displaying a message to users about why there's no content in a region of the page.  Any icon can be used for the <code>.empty-space-icon</code>, as shown below.
+---
+
+<section class="docs-section">
+
+{% capture example %}
+<div class="empty-space text-xs-center">
+  <h3 class="text-center">Lorem Ipsum</h3>
+  <span class="empty-space-icon icon-close"></span>
+  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+  <a href="#0">Tortor Amet</a>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Basic example' code=example %}
+
+{% capture example %}
+<div class="empty-space bg-dark pad-all text-xs-center">
+  <h3 class="text-center">Lorem Ipsum</h3>
+  <span class="empty-space-icon icon-search"></span>
+  <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+  <a href="#0">Tortor Amet</a>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Dark example' code=example %}
+
+</section>

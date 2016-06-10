@@ -1,0 +1,226 @@
+---
+layout: component
+title: Forms
+category: components
+description: Forms are used to gather input from the user.
+order: 5
+---
+
+<section class="docs-section">
+{% include example-intro.html title='Basic form' description='Use forms to collect information from users, such as contact information, status updates, or credentials.' %}
+{% capture example %}
+<form>
+  <fieldset class="form-group">
+    <label class="control-label required" for="full-name">Full name</label>
+    <input class="form-control" id="full-name" type="text" name="full-name"></input>
+  </fieldset>
+  <fieldset class="form-group">
+    <label class="control-label required" for="email">Email address</label>
+    <input class="form-control" id="email" type="email" name="email"></input>
+  </fieldset>
+  <fieldset class="form-group">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+  </fieldset>
+</form>
+{% endcapture %}
+
+{% include example.html size='third' code=example %}
+
+{% include docs-callout.html state='info' title='HTML5 input types' body='Be sure to use the appropriate <code>type</code> attribute that corresponds to the type of information being collected (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes">reference</a>).' %}
+
+</section>
+
+
+<section class="docs-section">
+{% include example-intro.html title='Form with grid' description='To make form labels appear alongside their corresponding controls, you can use grid columns and text alignment classes to create the desired layout.  The column width for the labels and controls should be made to accommodate the length of your labels at each breakpoint.  Labels should stack with controls for mobile screen sizes.' %}
+{% capture example %}
+<form>
+  <fieldset class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 text-md-right">
+        <label class="control-label" for="full-name">Full name</label>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <input class="form-control" id="full-name" type="text" name="full-name"></input>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 text-md-right">
+        <label class="control-label" for="email">Email address</label>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <input class="form-control" id="email" type="email" name="email"></input>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="form-group">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <button class="btn btn-primary" type="submit">Sign up</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+{% endcapture %}
+
+{% include example.html size='half' code=example %}
+
+</section>
+
+
+<section class="docs-section">
+{% include example-intro.html title='Available input controls' description='Several input controls are available to choose from.  Each one has a specific intended use and offers unique interaction patterns that are familiar to users.' %}
+
+{% capture example %}
+<fieldset class="form-group">
+  <label class="control-label" for="phone">Phone number</label>
+  <input class="form-control" id="phone" type="tel" name="phone"></input>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Input box' code=example %}
+
+
+{% capture example %}
+<fieldset class="form-group">
+  <div class="checkbox">
+    <input id="check1" name="check1" type="checkbox" checked>
+    <label for="check1">First option</label>
+  </div>
+  <div class="checkbox">
+    <input id="check2" name="check2" type="checkbox">
+    <label for="check2">And another</label>
+  </div>
+  <div class="checkbox">
+    <input id="check3" name="check3" type="checkbox" disabled>
+    <label for="check3">Nope</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Checkbox' code=example %}
+
+{% capture example %}
+<fieldset class="form-group">
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    <label for="optionsRadios1">Option one</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    <label for="optionsRadios2">Option two</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+    <label for="optionsRadios3">Option three is disabled</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Radio' code=example %}
+
+
+{% capture example %}
+<fieldset class="form-group">
+  <label class="form-label" for="select-position">Position</label>
+  <select class="form-control" name="select-position">
+    <option>Primary</option>
+    <option>Secondary</option>
+    <option>Tertiary</option>
+  </select>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='third' label='Select' code=example %}
+
+
+{% capture example %}
+<fieldset class="form-group">
+  <label class="control-label" for="username">Description</label>
+  <textarea class="form-control" id="username" type="textarea" name="username"></textarea>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='third' label='Textarea' code=example %}
+
+</section>
+
+
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Toggle' description='The toggle control is a restyled version of a radio button and behaves the same way, so use it to allow users to choose a single value from two or more options.' %}
+
+{% capture example %}
+<fieldset class="toggle pad-all">
+  <input id="toggle-shared" type="radio" name="toggle-demo" checked>
+  <label for="toggle-shared">Shared</label>
+  <input id="toggle-private" type="radio" name="toggle-demo">
+  <label for="toggle-private">Private</label>
+</fieldset>
+{% endcapture %}
+{% include example.html size='third' label='Basic toggle' code=example %}
+
+
+{% capture example %}
+<fieldset class="toggle bg-dark pad-all">
+  <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
+  <label for="toggle-shared-dark">Shared</label>
+  <input id="toggle-private-dark" type="radio" name="toggle-demo-dark">
+  <label for="toggle-private-dark">Private</label>
+</fieldset>
+{% endcapture %}
+{% include example.html size='third' label='Dark toggle' code=example %}
+
+</section>
+
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Validation states' description='Give users inline visual feedback to indicate the status of their input.' %}
+
+{% capture example %}
+<fieldset class="form-group has-success">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Looks good!</p>
+</fieldset>
+{% endcapture %}
+{% include example.html size='third' label='Success message' code=example %}
+
+{% capture example %}
+<fieldset class="form-group has-warning">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</fieldset>
+{% endcapture %}
+{% include example.html size='third' label='Warning message' code=example %}
+
+{% capture example %}
+<fieldset class="form-group has-danger">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control" id="email" type="email" name="email"></input>
+  <p class="form-msg">Please enter a valid email address</p>
+</fieldset>
+{% endcapture %}
+{% include example.html size='third' label='Error message' code=example %}
+
+
+{% include example-intro.html title='Alternate markup' description='In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.' %}
+{% capture example %}
+<!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+<fieldset class="form-group">
+  <label class="control-label" for="email">Email Address</label>
+  <input class="form-control has-danger" id="email" type="email" name="email"></input>
+  <p class="form-msg has-danger">Please enter a valid email address</p>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='third' code=example %}
+
+</section>

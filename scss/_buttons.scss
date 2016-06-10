@@ -112,7 +112,9 @@
     }
 
     &:hover,
-    &.hover {
+    &.hover,
+    &:active,
+    &.active {
       border-color: transparent;
     }
 
@@ -190,4 +192,11 @@
 .touchevents .btn {
   padding-top: $btn-lg-padding-y;
   padding-bottom: $btn-lg-padding-y;
+}
+
+///
+/// Fix border for dark bg
+///
+.bg-dark .btn-secondary {
+  border: none; 
 }

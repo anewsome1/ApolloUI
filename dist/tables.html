@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tables | Apollo UI</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/apollo.css">
+  <link rel="stylesheet" href="./css/docs.css">
+  <!-- /tables.html -->
+  <!-- . -->
+
+</head>
+
+  <body>
+    <main class="docs">
+  <aside class="docs-sidebar">
+    
+
+
+
+
+
+<h5 class="docs-page-nav-title">Scaffolding</h5>
+<ul class="docs-page-nav" role="navigation">
+  
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./">Getting started</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./grid.html">Grid layout</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./colors.html">Color palette</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./typography.html">Typography</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./icons.html">Icons</a>
+    </li>
+  
+</ul>
+
+<h5 class="docs-page-nav-title">Components</h5>
+<ul class="docs-page-nav" role="navigation">
+  
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./buttons.html">Buttons</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./forms.html">Forms</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./search.html">Search</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./login.html">Login</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item active">
+      <a href="./tables.html">Tables</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./dropdown.html">Dropdown</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./jumbotron.html">Jumbotron</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./alerts.html">Alerts</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./cards.html">Cards</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./tabs.html">Tabs</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./navbar.html">Navbar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./off-canvas.html">Off-canvas panel</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./breadcrumb.html">Breadcrumb</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./pager.html">Pagination</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./loading.html">Loading animation</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./modal.html">Modals</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./accordion.html">Accordion</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./carousel.html">Carousel</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./slider.html">Slider</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./empty-space.html">Empty space prompt</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="./utilities.html">Utilities</a>
+    </li>
+  
+</ul>
+
+
+
+  </aside>
+
+  <article class="docs-content">
+    <header class="docs-page-header">
+  <h1 class="docs-page-title">Tables</h1>
+  
+  <div class="docs-callout docs-callout-info">
+  <h4 class="docs-callout-title">Project in development</h4>
+  <p>
+  This project is currently in development.  Please excuse the incomplete documentation while we continue working.
+  </p>
+</div>
+  
+</header>
+
+    <section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-1 ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th>Language</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USA</td>
+      <td>Washington D.C.</td>
+      <td>309 million</td>
+      <td>English</td>
+      <td><button class="btn btn-primary">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Germany</td>
+      <td>Berlin</td>
+      <td>81 million</td>
+      <td>German</td>
+      <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Sweden</td>
+      <td>Stockholm</td>
+      <td>9 million</td>
+      <td>Swedish</td>
+      <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
+    </tr>
+  </tbody>
+  <caption>Source: <a href="http://en.wikipedia.org">Wikipedia</a></caption>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Country<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Capital<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Population<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Language<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>USA<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Washington D.C.<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>309 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>English<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Germany<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Berlin<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>81 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>German<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Sweden<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Stockholm<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Swedish<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Source: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://en.wikipedia.org"</span><span class="nt">&gt;</span>Wikipedia<span class="nt">&lt;/a&gt;&lt;/caption&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-1 ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th>Language</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USA</td>
+      <td>Washington D.C.</td>
+      <td>309 million</td>
+      <td>English</td>
+      <td><button class="btn btn-primary">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Germany</td>
+      <td>Berlin</td>
+      <td>81 million</td>
+      <td>German</td>
+      <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Sweden</td>
+      <td>Stockholm</td>
+      <td>9 million</td>
+      <td>Swedish</td>
+      <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
+    </tr>
+  </tbody>
+  <caption>Source: <a href="http://en.wikipedia.org">Wikipedia</a></caption>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Country<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Capital<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Population<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Language<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>USA<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Washington D.C.<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>309 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>English<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Germany<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Berlin<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>81 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>German<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Sweden<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Stockholm<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Swedish<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Source: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://en.wikipedia.org"</span><span class="nt">&gt;</span>Wikipedia<span class="nt">&lt;/a&gt;&lt;/caption&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-half ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>
+        <dl class="dl-horizontal">
+          <dt class="col-xs-3 text-xs-right">Contact</dt>
+          <dd class="col-xs-9">Hilder, James</dd>
+          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-9">+1 718 596 4785</dd>
+          <dt class="col-xs-3 text-xs-right">Address</dt>
+          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="dl-horizontal">
+          <dt class="col-xs-3 text-xs-right">Contact</dt>
+          <dd class="col-xs-9">Hilder, James</dd>
+          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-9">+1 718 596 4785</dd>
+          <dt class="col-xs-3 text-xs-right">Address</dt>
+          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="dl-horizontal">
+          <dt class="col-xs-3 text-xs-right">Contact</dt>
+          <dd class="col-xs-9">Hilder, James</dd>
+          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-9">+1 718 596 4785</dd>
+          <dt class="col-xs-3 text-xs-right">Address</dt>
+          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <dl class="dl-horizontal">
+          <dt class="col-xs-3 text-xs-right">Contact</dt>
+          <dd class="col-xs-9">Hilder, James</dd>
+          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-9">+1 718 596 4785</dd>
+          <dt class="col-xs-3 text-xs-right">Address</dt>
+          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>Hilder, James<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Phone Number<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>+1 718 596 4785<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Address<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>4 St. Pancras Way<span class="nt">&lt;br&gt;</span>New York, NY 10012<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>Hilder, James<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Phone Number<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>+1 718 596 4785<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Address<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>4 St. Pancras Way<span class="nt">&lt;br&gt;</span>New York, NY 10012<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>Hilder, James<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Phone Number<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>+1 718 596 4785<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Address<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>4 St. Pancras Way<span class="nt">&lt;br&gt;</span>New York, NY 10012<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>Hilder, James<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Phone Number<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>+1 718 596 4785<span class="nt">&lt;/dd&gt;</span>
+          <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-xs-3 text-xs-right"</span><span class="nt">&gt;</span>Address<span class="nt">&lt;/dt&gt;</span>
+          <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-xs-9"</span><span class="nt">&gt;</span>4 St. Pancras Way<span class="nt">&lt;br&gt;</span>New York, NY 10012<span class="nt">&lt;/dd&gt;</span>
+        <span class="nt">&lt;/dl&gt;</span>
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-1 ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th>Language</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USA</td>
+      <td>Washington D.C.</td>
+      <td>309 million</td>
+      <td>English</td>
+      <td><button class="btn btn-primary btn-sm">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Germany</td>
+      <td>Berlin</td>
+      <td>81 million</td>
+      <td>German</td>
+      <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+    </tr>
+    <tr class="table-active">
+      <td>Sweden</td>
+      <td>Stockholm</td>
+      <td>9 million</td>
+      <td>Swedish</td>
+      <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Country<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Capital<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Population<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Language<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>USA<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Washington D.C.<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>309 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>English<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Germany<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Berlin<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>81 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>German<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Sweden<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Stockholm<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Swedish<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-1 ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Capital</th>
+      <th>Population</th>
+      <th>Language</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USA</td>
+      <td>Washington D.C.</td>
+      <td>309 million</td>
+      <td>English</td>
+      <td><button class="btn btn-primary btn-sm">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Germany</td>
+      <td>Berlin</td>
+      <td>81 million</td>
+      <td>German</td>
+      <td><button class="btn btn-secondary btn-sm">Edit</button></td>
+    </tr>
+    <tr>
+      <td>Sweden</td>
+      <td>Stockholm</td>
+      <td>9 million</td>
+      <td>Swedish</td>
+      <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Country<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Capital<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Population<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Language<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>USA<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Washington D.C.<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>309 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>English<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Germany<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Berlin<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>81 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>German<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Sweden<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Stockholm<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>9 million<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Swedish<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+
+<section class="docs-section">
+
+
+
+
+<div class="docs-example docs-example-half ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Company</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- border + background -->
+    <tr class="table-info">
+      <td>16460625-4466</td>
+      <td>Ornare Associates</td>
+      <td>Complete</td>
+    </tr>
+    <tr class="table-success">
+      <td>16150818-7240</td>
+      <td>Vulputate Posuere PC</td>
+      <td>On plan</td>
+    </tr>
+    <tr class="table-warning">
+      <td>16570222-9922</td>
+      <td>Felis Nulla Tempor Ltd</td>
+      <td>At risk</td>
+    </tr>
+    <tr class="table-danger">
+      <td>16600108-0339</td>
+      <td>Mattis LLP</td>
+      <td>Overdue</td>
+    </tr>
+    <!-- border only -->
+    <tr class="table-border-info">
+      <td>16460625-4466</td>
+      <td>Ornare Associates</td>
+      <td>Complete</td>
+    </tr>
+    <tr class="table-border-success">
+      <td>16150818-7240</td>
+      <td>Vulputate Posuere PC</td>
+      <td>On plan</td>
+    </tr>
+    <tr class="table-border-warning">
+      <td>16570222-9922</td>
+      <td>Felis Nulla Tempor Ltd</td>
+      <td>At risk</td>
+    </tr>
+    <tr class="table-border-danger">
+      <td>16600108-0339</td>
+      <td>Mattis LLP</td>
+      <td class="text-danger">Overdue</td>
+    </tr>
+    <!-- icon + contextual classes -->
+    <tr>
+      <td>16460625-4466</td>
+      <td>Ornare Associates</td>
+      <td>
+        <span class="icon icon-circle-solid text-info small"></span> Complete
+      </td>
+    </tr>
+    <tr>
+      <td>16150818-7240</td>
+      <td>Vulputate Posuere PC</td>
+      <td>
+        <span class="icon icon-circle-solid text-success small"></span> On plan
+      </td>
+    </tr>
+    <tr>
+      <td>16570222-9922</td>
+      <td>Felis Nulla Tempor Ltd</td>
+      <td>
+        <span class="icon icon-circle-solid text-warning small"></span> At risk
+      </td>
+    </tr>
+    <tr>
+      <td>16600108-0339</td>
+      <td>Mattis LLP</td>
+      <td class="text-danger">
+        <span class="icon icon-circle-solid small"></span>
+        Overdue
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Project ID<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Company<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Status<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="c">&lt;!-- border + background --&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16460625-4466<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Ornare Associates<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Complete<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16150818-7240<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Vulputate Posuere PC<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>On plan<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16570222-9922<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Felis Nulla Tempor Ltd<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>At risk<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16600108-0339<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mattis LLP<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Overdue<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="c">&lt;!-- border only --&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-border-info"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16460625-4466<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Ornare Associates<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Complete<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-border-success"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16150818-7240<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Vulputate Posuere PC<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>On plan<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-border-warning"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16570222-9922<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Felis Nulla Tempor Ltd<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>At risk<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"table-border-danger"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16600108-0339<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mattis LLP<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;</span>Overdue<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="c">&lt;!-- icon + contextual classes --&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16460625-4466<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Ornare Associates<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-circle-solid text-info small"</span><span class="nt">&gt;&lt;/span&gt;</span> Complete
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16150818-7240<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Vulputate Posuere PC<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-circle-solid text-success small"</span><span class="nt">&gt;&lt;/span&gt;</span> On plan
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16570222-9922<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Felis Nulla Tempor Ltd<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-circle-solid text-warning small"</span><span class="nt">&gt;&lt;/span&gt;</span> At risk
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16600108-0339<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mattis LLP<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-circle-solid small"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        Overdue
+      <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+</div>
+
+
+</section>
+
+  </article>
+</main>
+
+    <!-- <footer class="docs-footer text-xs-center">
+  <div class="container-fluid">
+    <h5>Apollo UI Docs</h5>
+    <p>Version: 1.0.0-beta.2</p>
+  </div>
+</footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+ <script src="./js/apollo.js"></script>
+
+  </body>
+</html>

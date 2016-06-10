@@ -81,6 +81,13 @@ select.form-control {
   border: $input-btn-border-width solid $input-border-color;
   background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
   background-size: $font-size-base;
+
+  &,
+  &::placeholder {
+    height: $input-height;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 textarea.form-control {
@@ -137,21 +144,38 @@ input[type='radio'] {
   appearance: none; // Appearance of native control
   transition: box-shadow $transition-fast;
 
-  &:hover:not(:disabled):not(.disabled) {
+  &:hover {
     box-shadow: $shadow-hover;
+
+    &,
+    & + label {
+      cursor: pointer;
+    }
+
+    &:disabled,
+    &.disabled {
+      box-shadow: none;
+
+      &,
+      & + label {
+        cursor: not-allowed;
+      }
+    }
   }
 
   &:disabled,
   &.disabled {
-    color: $input-color-disabled;
     background-color: $input-bg-disabled;
+
+    + label {
+      color: $input-color-disabled;
+    }
   }
 
   &:focus {
     outline: $input-outline;
   }
 }
-
 
 input[type='checkbox'] {
   background-size: 100%;
@@ -168,7 +192,7 @@ input[type='radio'] {
 
   &:checked {
     background-color: $brand-primary;
-    border: none;
+    box-shadow: inset 0 0 0 ($border-width * 2) #fff;
   }
 }
 
@@ -219,8 +243,7 @@ input[type='radio'] {
   }
 
   input[type="radio"] {
-    position: absolute;
-    opacity: 0;
+    display: none;
 
     + label {
       @extend %toggle-base;

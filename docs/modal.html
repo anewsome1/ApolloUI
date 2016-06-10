@@ -1,0 +1,237 @@
+---
+layout: component
+title: Modals
+category: components
+order: 50
+---
+
+<section class="docs-section">
+
+{% capture copy %}
+  {% capture body %}
+  <p>Use modals to display information to the user in a dialog-style overlay.  Just about anything can be put into a modal, and they automatically scroll if the content is longer than the viewport.</p>
+  {% endcapture %}
+  {% include section-intro.html title='Modal Overview' body=body %}
+{% endcapture %}
+
+{% capture code %}
+<div class="modal" style="display: block;position: inherit;">
+  <div class="modal-dialog" role="document" style="margin: 2.25rem;opacity: 1;transform:translateY(0);">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">This is a modal</h4>
+        <p>Some message or other content</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include illustration.html size='half' copy=copy code=code %}
+
+{% capture example %}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-basic">
+  Open modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="demo-modal-basic">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title">You should read this important message</h4>
+      </div>
+      <div class="modal-body">
+        <p>Four dollar toast XOXO health goth, plaid taxidermy sriracha pop-up before they sold out scenester godard flexitarian letterpress. Banjo lomo VHS, lumbersexual taxidermy tacos umami. Messenger bag shoreditch roof party pinterest pork belly kale chips, polaroid readymade affogato gentrify. Mixtape XOXO tacos, hoodie squid vegan fap cray sartorial cornhole single-origin coffee. Leggings church-key vegan skateboard brunch keytar, normcore pickled neutra polaroid chillwave. Meh pitchfork sriracha forage man bun, craft beer brooklyn paleo everyday carry banjo post-ironic wolf pickled jean shorts farm-to-table. Meditation selvage food truck, master cleanse normcore poutine celiac actually photo booth leggings brooklyn.</p>
+        <p>Man braid freegan hella roof party, locavore godard mustache viral lo-fi crucifix you probably haven't heard of them austin asymmetrical meggings tattooed. Echo park stumptown man braid thundercats, skateboard flannel green juice. Shoreditch keytar ugh biodiesel. Trust fund flannel butcher taxidermy. Pop-up craft beer tumblr, direct trade fingerstache wayfarers green juice venmo hammock truffaut skateboard man bun heirloom synth. Bicycle rights tousled godard, wayfarers truffaut brunch portland ethical selfies shoreditch. Blog whatever keffiyeh PBR&amp;B flannel, meditation irony scenester chartreuse.</p>
+        <p>Knausgaard kitsch street art, aesthetic celiac disrupt readymade occupy four loko. Thundercats waistcoat lomo dreamcatcher, gentrify church-key drinking vinegar celiac leggings whatever. Messenger bag actually wolf, gluten-free blue bottle chambray helvetica etsy flannel butcher man bun marfa jean shorts next level blog. Keytar franzen brunch yr, chicharrones tumblr fashion axe lo-fi lomo cred sartorial cornhole celiac crucifix gluten-free. Single-origin coffee seitan intelligentsia try-hard, ethical lo-fi roof party meh tumblr. Beard banjo brunch truffaut, celiac master cleanse everyday carry shabby chic pug taxidermy fingerstache. Chambray next level waistcoat aesthetic actually.</p>
+        <p>Pop-up occupy flexitarian, pitchfork poutine godard etsy health goth pug disrupt ennui cold-pressed thundercats truffaut. Church-key intelligentsia four dollar toast yr, thundercats man braid waistcoat shoreditch. Kale chips meh freegan sriracha. Twee forage four loko, you probably haven't heard of them kogi typewriter PBR&amp;B beard four dollar toast. Kitsch chillwave fap knausgaard. Readymade before they sold out taxidermy, tofu green juice slow-carb kombucha literally offal yuccie normcore. Meggings vice etsy, jean shorts truffaut sustainable +1 hammock yr offal authentic umami.</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Modal sizes' description='Depending on the content being displayed in the modal, you may want to use the small or large variant.  For example, a simple message prompt works well with <code>.modal-sm</code>, while something larger like a multi-step wizard would benefit from the added space provided by <code>.modal-lg</code>.' %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-sm">
+  Open small modal
+</button>
+
+<div class="modal modal-sm fade" id="demo-modal-sm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+        <h4 class="modal-title">You should read this</h4>
+      </div>
+      <div class="modal-body">
+        <p>After you're done reading this important message, it's time to make a decision.  Use the buttons below to make your decision.  Choose wisely...</p>
+      </div>
+      <div class="modal-footer text-xs-right">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Action</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Small modal' code=example %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-lg">
+  Open large modal
+</button>
+
+<div class="modal modal-lg fade" id="demo-modal-lg">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
+        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="dont-show-again"> Don't show again
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 text-xs-right">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' label='Large modal' code=example %}
+
+</section>
+
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Modal with image' description='To use an image as a full-width cap on the modal, place the image inside <code>.modal-image</code> before the <code>.modal-body</code>.  In this case, you should not use <code>.modal-header</code> for the title.  Instead, the title goes inside the <code>.modal-body</code>.' %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-image">
+  Open image modal
+</button>
+
+<div class="modal fade" id="demo-modal-image">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close inverse" type="button" data-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-image">
+        <img class="img-fluid" src="https://placeimg.com/1000/400/tech/grayscale">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Welcome to the future</h4>
+        <p>The future is now, which makes this the present and that's not as exciting as the future.  Weren't we supposed to have hoverboards and flying cars by now?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="dont-show-again"> Don't show again
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 text-xs-right">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Login modal' description='A login form can be placed inside a modal by adding the class <code>.modal-login</code> to the <code>.modal</code> itself and <code>.login</code> to <code>.modal-content</code>, as shown.  The width of this modal is set to match the default size of the login component.' %}
+
+{% capture example %}
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#demo-modal-login">
+  Login modal
+</button>
+
+<div class="modal modal-login fade" id="demo-modal-login">
+  <div class="modal-dialog" role="document">
+    <button class="close" type="button" data-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content login">
+      <svg class="login-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.86 120"><path style="fill: #2975e9;opacity: .5;" d="M60,0L8.07,30V90L60,120l51.93-30V30Zm0,99.07L57.95,97.9,28.22,80.68l-2.05-1.17v-39l2.05-1.17L57.95,22.1,60,20.93l2.05,1.17L91.78,39.22l2.05,1.17V79.51l-2.05,1.17L62.05,97.8Z" transform="translate(-8.07)"/><polygon style="fill: #2975e9;" points="22.69 43.13 22.69 76.87 51.93 93.79 81.17 76.87 81.17 43.13 51.93 26.21 22.69 43.13"/></svg>
+      <h1 class="login-brand-name">Nexxus</h1>
+      <form>
+        <div class="form-group">
+          <label class="control-label">
+            <span class="sr-only">Email address</span>
+            <input class="form-control input-lg" type="email" name="email" id="login-email" placeholder="Email">
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">
+            <span class="sr-only">Password</span>
+            <input class="form-control input-lg" type="password" name="password" id="login-password" placeholder="Password">
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="checkbox pull-xs-left">
+            <label class="control-label">
+              <input type="checkbox" name="rememberme" id="login-rememberme" placeholder="Remember me">
+              Remember me
+            </label>
+          </div>
+          <a class="pull-xs-right" href="#0">Forgot password</a>
+        </div>
+        <div class="form-group text-xs-center">
+          <button class="btn btn-primary btn-lg" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example %}
+
+</section>

@@ -1,5 +1,5 @@
 /*!
- * Apollo CSS v1.0.0-beta
+ * Apollo CSS v1.0.0-beta.2
  */
 
 // Scaffolding
@@ -12,6 +12,7 @@
 
 // Grid
 @import 'bootstrap/scss/grid';
+@import 'shims/grid';
 
 // Core styles
 @import 'fonts';
@@ -39,7 +40,7 @@
 @import 'login';
 @import 'search';
 @import 'off-canvas';
-@import 'loading-indicator';
+@import 'loading';
 @import 'empty-space';
 @import 'pager';
 

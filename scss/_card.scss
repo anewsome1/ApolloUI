@@ -120,6 +120,11 @@
 /// Accordion
 ///
 
+// !!!
+// TODO: Recreate accordion as separate component (remove shared styles with cards)
+// !!!
+
+
 .card-accordion {
   border: $card-border-width solid $card-border-color;
   border-top: none;
@@ -157,6 +162,7 @@
     font-size: $font-size-base;
     color: $link-color;
     cursor: pointer;
+    text-align: inherit;
 
     &::before {
       @extend %icon-base;

@@ -2,6 +2,17 @@
 @import '_props/palette.map';
 
 
+///
+/// Colors
+///
+
+$brand-primary:               $blue;
+$brand-info:                  $atmosphere;
+$brand-success:               $green;
+$brand-warning:               $yellow;
+$brand-danger:                $coral;
+
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -24,17 +35,13 @@ $spacer-x:                   $spacer;
 $spacer-y:                   $spacer;
 $border-width:               .0625rem;
 
-///
-/// Colors
-///
+// Body
+//
+// Settings for the `<body>` element.
 
-$body-color:                  $charcoal;
+$body-bg:                    #fff;
+$body-color:                 $charcoal;
 
-$brand-primary:               $blue;
-$brand-info:                  $atmosphere;
-$brand-success:               $green;
-$brand-warning:               $yellow;
-$brand-danger:                $coral;
 
 // Links
 //
@@ -46,13 +53,52 @@ $link-hover-color:            $blue-dark;
 $link-hover-decoration:       none;
 
 
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px
+);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12;
+$grid-gutter-width:          1.875rem; // 30px
+
 
 ///
 /// Typography
 ///
 
 // Font families
-$font-family-sans-serif:      'Proxima Nova', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:      'Proxima Nova', Arial, sans-serif;
+$font-family-serif:           'Merriweather', Georgia, serif;
 $font-family-base:            $font-family-sans-serif;
 
 // Sizing scale
@@ -229,7 +275,7 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       rgba(#fff, .85);
-$input-bg-disabled:              $charcoal-lighter;
+$input-bg-disabled:              rgba($charcoal-lighter, .5);
 $input-bg-focus:                 #fff;
 
 $input-color:                    $charcoal;
@@ -312,7 +358,7 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $navy,
+    bg-active: $blue-dark,
     color-active: #fff,
     bg-disabled: $blue-lighter,
     color-disabled: $blue-light
@@ -423,24 +469,15 @@ $navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 
 
 $off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
 
-// Themes
+// Navbar themes
+//
+// (Removing other color options until they are needed)
 $navbar-variants: (
   primary: (
     dark: true,
     bg: $blue,
     color: #fff,
     color-active: $teal-light
-  ),
-  dark: (
-    dark: true,
-    bg: $charcoal,
-    color: $neutral,
-    color-active: $teal
-  ),
-  light: (
-    bg: $neutral,
-    color: $blue,
-    color-active: $teal-dark
   )
 );
 
