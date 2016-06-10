@@ -165,21 +165,21 @@ gulp.task( 'clean:theo', function() {
 
 gulp.task( 'theo-colors-scss', [ 'clean:theo' ], function() {
   gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'scss' ))
     .pipe( gulp.dest( 'scss/_props' ));
 });
 
 gulp.task( 'theo-colors-scss-map', [ 'clean:theo' ], function() {
   gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'map.scss' ))
     .pipe( gulp.dest( 'scss/_props' ));
 });
 
 gulp.task( 'theo-colors-json', [ 'clean:theo' ], function() {
   gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'web' ))
+    .pipe( theo.plugins.transform( 'raw' ))
     .pipe( theo.plugins.format( 'json' ))
     .pipe( gulp.dest( 'docs/_data' ));
 });
