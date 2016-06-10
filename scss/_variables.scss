@@ -469,24 +469,15 @@ $navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 
 
 $off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
 
-// Themes
+// Navbar themes
+//
+// (Removing other color options until they are needed)
 $navbar-variants: (
   primary: (
     dark: true,
     bg: $blue,
     color: #fff,
     color-active: $teal-light
-  ),
-  dark: (
-    dark: true,
-    bg: $charcoal,
-    color: $neutral,
-    color-active: $teal
-  ),
-  light: (
-    bg: $neutral,
-    color: $blue,
-    color-active: $teal-dark
   )
 );
 

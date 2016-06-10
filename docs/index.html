@@ -1,7 +1,7 @@
 ---
 layout: component
-title: How to use
-category: styles
+title: Getting started
+category: scaffolding
 order: 01
 ---
 {% comment %}
@@ -17,25 +17,29 @@ order: 01
 
 <section class="docs-section">
 
+  {% include example-intro.html title='CDN' description='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
+
+  {% capture example %}<link rel="stylesheet" href="//cdn.ims.io/design/css/apollo/{{ site.current_version }}/apollo.css">{% endcapture %}
+
+  {% include example.html hide_output=true label='Expanded CSS' code=example %}
+
+  {% capture example %}<link rel="stylesheet" href="//cdn.ims.io/design/css/apollo/{{ site.current_version }}/apollo.min.css">{% endcapture %}
+
+  {% include example.html hide_output=true label='Minified CSS' code=example %}
+
+  {% include example-intro.html title='Package Management' description='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.  Use one of these options to add the Apollo framework to your front-end build system.' %}
+
   <div class="row">
     <div class="col-xs-12 col-md-6">
-      {% include section-intro.html title='Package Management' body='The source files for Apollo UI, including useful variables and mixins, are available through <a href="http://npmjs.com">NPM</a> and <a href="http://bower.io">Bower</a>.' %}
-
-      {% include example.html hide_output=true label='NPM' code='npm install apollo-ui --save' %}
-
-      {% include example.html hide_output=true label='Bower' code='bower install apollo-ui --save' %}
+      {% capture example %}npm install apollo-ui@{{ site.current_version }} --save{% endcapture %}
+      {% include example.html hide_output=true label='NPM' code=example %}
     </div>
     <div class="col-xs-12 col-md-6">
-      {% include section-intro.html title='CDN' body='You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.' %}
-
-      {% include docs-callout.html state='info' title='Coming soon' body='CDN endpoint URLs will be added shortly.' %}
-
-      {% comment %}
-      {% include example.html hide_output=true label='Expanded CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.css"> -->' %}
-
-      {% include example.html hide_output=true label='Minified CSS' code='<!-- <link rel="stylesheet" href="//cdn.ims.io/design/{path-to-apollo-ui}/{version}/apollo.min.css"> -->' %}
-      {% endcomment %}
-
+      {% capture example %}bower install apollo-ui#{{ site.current_version }} --save{% endcapture %}
+      {% include example.html hide_output=true label='Bower' code=example %}
     </div>
   </div>
+
+
+
 </section>

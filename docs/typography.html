@@ -1,12 +1,10 @@
 ---
 layout: component
 title: Typography
-category: styles
-order: 5
+category: scaffolding
+order: 15
 ---
 <section class="docs-section">
-
-{% include section-intro.html title='Headings' body='(Section description)' %}
 
 {% include example-intro.html title='Application headings' description='All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.  Application headings use the <strong>Major Third</strong> type scale.' %}
 
@@ -21,6 +19,9 @@ order: 5
 
 {% include example.html size='half' code=example %}
 
+</section>
+
+<section class="docs-section">
 
 {% include example-intro.html title='Display headings' description='Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>&mdash;a larger, slightly more opinionated heading style.  Display headings use the <strong>Perfect Fifth</strong> type scale.' %}
 
@@ -37,8 +38,6 @@ order: 5
 
 <section class="docs-section">
 
-{% include section-intro.html title='Copy' body='(Section description)' %}
-
 {% capture example %}
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 {% endcapture %}
@@ -50,10 +49,5 @@ order: 5
 {% endcapture %}
 
 {% include example.html size='half' label='Lead copy' code=example %}
-
-
-
-
-
 
 </section>

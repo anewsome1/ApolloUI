@@ -18,11 +18,11 @@
 }
 
 .highlight .s {
-  color: #de4839;
+  color: #DE4839;
 }
 
 .highlight .c {
-  color: #b9b8b7;
+  color: #B9B8B7;
 }
 
 code,
@@ -92,7 +92,7 @@ body {
 }
 
 .docs-sidebar {
-  background-color: #2b3b43;
+  background-color: #2B3B43;
   padding: 1.875rem;
 }
 
@@ -178,11 +178,13 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+  padding-top: 3.375rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .docs-page-header {
-    padding: 3.375rem 8.33333% 0;
+    padding-right: 8.33333%;
+    padding-left: 8.33333%;
   }
 }
 
@@ -200,12 +202,12 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 5.063rem;
-  padding-bottom: 5.063rem;
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
 }
 
 .docs-section:nth-of-type(even), .home-header:nth-of-type(even) {
-  background-color: #fbfaf9;
+  background-color: #FBFAF9;
 }
 
 .docs-section-title,
@@ -224,9 +226,6 @@ body {
 
 .docs-example-intro {
   margin-bottom: 3.375rem;
-}
-
-.docs-example + .docs-example-intro {
   margin-top: 1.5rem;
 }
 
@@ -444,7 +443,7 @@ body {
 }
 
 .home-header {
-  background-color: #339e99;
+  background-color: #339E99;
 }
 
 .docs-callout {

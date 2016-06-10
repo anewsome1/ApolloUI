@@ -1,15 +1,15 @@
 ---
 layout: component
 title: Color Palette
-category: styles
+category: scaffolding
 order: 10
 ---
 <section class="docs-section">
   <div class="clearfix">
   {% for color in site.data._palette %}
     <div class="docs-color-block" style="background-color:{{ color[1] }};">
-      <div class="docs-color-label">{{ color[0] }}<br>{{ color[1] }}</div>
+      <div class="docs-color-label">{{ color[0] }}<br>{{ color[1] | downcase }}</div>
     </div>
   {% endfor %}
-  </div>  
+  </div>
 </section>
