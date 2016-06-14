@@ -33,3 +33,9 @@ kramdown:
 current_version: 1.0.0-beta.2
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
 issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
+
+cdn:
+  css: //cdn.ims.io/design/css/1.0.0-beta.2/apollo.css
+  css_min: //cdn.ims.io/design/css/1.0.0-beta.2/apollo.min.css
+  js: //cdn.ims.io/design/js/1.0.0-beta.2/apollo.js
+  js_min: //cdn.ims.io/design/js/1.0.0-beta.2/apollo.min.js
