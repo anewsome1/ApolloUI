@@ -3283,7 +3283,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.1;
   color: inherit;
 }
@@ -3450,6 +3450,15 @@ mark,
 
 .font-serif {
   font-family: "Merriweather", Georgia, serif;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 300;
 }
 
 td > dl {

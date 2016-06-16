@@ -2,6 +2,16 @@
   font-family: $font-family-serif;
 }
 
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: $font-light;
+}
+
+
 td > dl {
   margin-bottom: 0;
 }
