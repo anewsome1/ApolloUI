@@ -99,7 +99,7 @@ body {
     height: 100%;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 23.5rem;
+    margin-left: 22rem;
   }
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 .docs-nav {
-  width: 18rem;
+  width: 16.5rem;
   padding: 1.875rem;
   overflow-x: hidden;
   overflow-y: auto;
