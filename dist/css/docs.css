@@ -76,23 +76,16 @@ pre code {
   overflow-y: scroll;
 }
 
-.docs-page-title::after, .docs-section-title::before,
-.docs-example-title::before {
-  display: block;
-  width: 2rem;
-  height: 0.1875rem;
-  margin-bottom: 1rem;
-  background-color: #3ed6cf;
-  content: '';
-}
-
 html,
 body {
   height: 100%;
 }
 
 .docs-sidebar {
-  background-color: #2B3B43;
+  background-image: linear-gradient(to right, rgba(31, 42, 49, 0.8), rgba(31, 42, 49, 0.8)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -104,29 +97,28 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 22rem;
+    margin-left: 23.5rem;
   }
-}
-
-.docs-apollo-sidebar,
-.docs-nav {
-  padding: 1.875rem;
 }
 
 .docs-apollo-sidebar {
   position: relative;
-  background-color: #1D272C;
+  width: 5.5rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
+  padding: 1.875rem 2rem;
+  font-size: 1.5rem;
+  line-height: 1;
   background: none;
   border: 0;
-  font-size: 1.25rem;
+}
+
+.docs-drb-menu-toggle:focus {
+  outline: none;
 }
 
 .docs-sidebar-title {
@@ -141,6 +133,10 @@ body {
 
 .docs-nav {
   width: 18rem;
+  padding: 1.875rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(43, 59, 67, 0.75);
 }
 
 .docs-content {
@@ -148,6 +144,7 @@ body {
 }
 
 .docs-page-nav-title {
+  margin-top: .25rem;
   margin-bottom: 2.25rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
@@ -203,6 +200,16 @@ body {
 .docs-page-nav-item.active > a {
   color: #3ed6cf;
   font-weight: 400;
+}
+
+.docs-page-title::after, .docs-section-title::before,
+.docs-example-title::before {
+  display: block;
+  width: 2rem;
+  height: 0.1875rem;
+  margin-bottom: 1rem;
+  background-color: #3ed6cf;
+  content: '';
 }
 
 .docs-page-header {
