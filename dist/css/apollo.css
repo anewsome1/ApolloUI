@@ -4452,6 +4452,10 @@ input[type='radio']:checked {
   cursor: not-allowed;
 }
 
+.nav-tabs.tab-bar + .tab-content {
+  margin-top: 1rem;
+}
+
 .tab-content > .tab-pane {
   display: none;
 }
