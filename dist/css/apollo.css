@@ -3461,6 +3461,10 @@ h6,
   font-weight: 300;
 }
 
+.hero-heading {
+  font-size: 3.375rem;
+}
+
 td > dl {
   margin-bottom: 0;
 }

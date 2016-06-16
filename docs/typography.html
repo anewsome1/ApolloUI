@@ -8,8 +8,6 @@ order: 15
 
 {% include example-intro.html title='Headings' description='All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.  Application headings use the <strong>Major Third</strong> type scale.' %}
 
-
-
 <ul class="nav nav-tabs tab-bar" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#headings-application" role="tab">Application</a>
@@ -22,8 +20,8 @@ order: 15
 <div class="tab-content pad-y">
   <div class="tab-pane active" id="headings-application" role="tabpanel">
 
-
 {% capture example %}
+<h1 class="hero-heading">Hero Heading</h1>
 <h1>h1. Main title</h1>
 <h2>h2. Subtitle</h2>
 <h3>h3. Heading</h3>
@@ -33,13 +31,11 @@ order: 15
 {% endcapture %}
 
 {% include example.html size='half' code=example %}
-
-
   </div>
+
   <div class="tab-pane" id="headings-marketing" role="tabpanel">
-
-
 {% capture example %}
+<h1 class="font-serif hero-heading">Hero Heading</h1>
 <h1 class="font-serif">h1. Main title</h1>
 <h2 class="font-serif">h2. Subtitle</h2>
 <h3 class="font-serif">h3. Heading</h3>
@@ -49,8 +45,6 @@ order: 15
 {% endcapture %}
 
 {% include example.html size='half' code=example %}
-
-
   </div>
 </div>
 
