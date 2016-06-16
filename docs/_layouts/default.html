@@ -3,7 +3,15 @@ layout: base
 ---
 <main class="docs">
   <aside class="docs-sidebar">
-    {% include docs-nav.html %}
+    <div class="docs-apollo-sidebar">
+      <button class="docs-drb-menu-toggle panel-open">
+        <span class="icon icon-menu"></span>
+      </button>
+      <h3 class="docs-sidebar-title font-serif">Apollo</h3>
+    </div>
+    <div class="docs-nav">
+      {% include docs-nav.html %}
+    </div>
   </aside>
 
   <article class="docs-content">

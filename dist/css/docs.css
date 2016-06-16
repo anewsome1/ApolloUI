@@ -93,22 +93,54 @@ body {
 
 .docs-sidebar {
   background-color: #2B3B43;
-  padding: 1.875rem;
 }
 
 @media (min-width: 768px) {
   .docs-sidebar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    width: 18rem;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 18rem;
+    margin-left: 22rem;
   }
+}
+
+.docs-apollo-sidebar,
+.docs-nav {
+  padding: 1.875rem;
+}
+
+.docs-apollo-sidebar {
+  position: relative;
+  background-color: #1D272C;
+  color: #fff;
+}
+
+.docs-drb-menu-toggle {
+  background: none;
+  border: 0;
+  font-size: 1.25rem;
+}
+
+.docs-sidebar-title {
+  position: absolute;
+  top: 50%;
+  left: 1.875rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.docs-nav {
+  width: 18rem;
 }
 
 .docs-content {

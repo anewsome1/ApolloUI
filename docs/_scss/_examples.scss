@@ -3,6 +3,7 @@
 ///
 
 $docs-sidebar-width: $off-canvas-width;
+$docs-apollo-sidebar-width: 4rem;
 
 %separator-bar {
   display: block;
@@ -20,21 +21,49 @@ body {
 
 .docs-sidebar {
   background-color: $charcoal-dark;
-  padding: $grid-gutter-width;
 
   @include media-breakpoint-up(md) {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
-    width: $docs-sidebar-width;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 
     + .docs-content {
-      margin-left: $docs-sidebar-width;
+      margin-left: $docs-sidebar-width + $docs-apollo-sidebar-width;
     }
   }
+}
+
+.docs-apollo-sidebar,
+.docs-nav {
+  padding: $grid-gutter-width;
+}
+
+.docs-apollo-sidebar {
+  position: relative;
+  background-color: $charcoal-darker;
+  color: #fff;
+}
+
+.docs-drb-menu-toggle {
+  background: none;
+  border: 0;
+  font-size: $font-size-lg;
+}
+
+.docs-sidebar-title {
+  position: absolute;
+  top: 50%;
+  left: $grid-gutter-width;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+
+.docs-nav {
+  width: $docs-sidebar-width;
 }
 
 .docs-content {
