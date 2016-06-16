@@ -49,6 +49,7 @@
   font-size: $navbar-brand-font-size;
   font-weight: $font-light;
   // text-align: center;
+  white-space: nowrap;
 
   &,
   &:hover,
@@ -80,6 +81,7 @@
   > a {
     font-size: $navbar-link-font-size;
     padding: $btn-padding-y $btn-padding-x;
+    white-space: nowrap;
   }
 
   .navbar &.active > a {
@@ -154,6 +156,10 @@
 
   .profile-credential {
     font-size: $navbar-link-font-size * .85;
+  }
+
+  .profile-credential-dropdown {
+    white-space: nowrap;
   }
 }
 
