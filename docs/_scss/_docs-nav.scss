@@ -1,5 +1,5 @@
 
-$docs-sidebar-width: 16.5rem;
+$docs-sidebar-width: $off-canvas-width;
 $docs-apollo-sidebar-width: 5.5rem;
 $docs-drb-menu-toggle-padding-x: calc-padding-y($docs-apollo-sidebar-width, $display4-size);
 
