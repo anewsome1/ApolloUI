@@ -12,15 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./css/apollo.css">
+  <!-- Stylesheet for DRB site menu -->
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="./css/docs.css">
-  <!-- /breadcrumb.html -->
-  <!-- . -->
-
 </head>
 
   <body>
     <main class="docs">
   <aside class="docs-sidebar">
+  <div class="docs-apollo-sidebar">
+    <button class="docs-drb-menu-toggle panel-open">
+      <span class="icon icon-menu"></span>
+    </button>
+    <h3 class="docs-sidebar-title font-serif">Apollo</h3>
+  </div>
+  <div class="docs-nav">
     
 
 
@@ -197,8 +203,8 @@
 
 
 
-  </aside>
-
+  </div>
+</aside>
   <article class="docs-content">
     <header class="docs-page-header">
   <h1 class="docs-page-title">Breadcrumb</h1>
@@ -209,7 +215,7 @@
   This project is currently in development.  Please excuse the incomplete documentation while we continue working.
   </p>
 </div>
-  
+
 </header>
 
     <section class="docs-section">
@@ -294,8 +300,11 @@
     <p>Version: 1.0.0-beta.2</p>
   </div>
 </footer> -->
+    <div id="drb-nav-wrapper"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="./js/apollo.js"></script>
+<script src="./js/apollo.js"></script>
+<!-- Script for DRB site menu -->
+<script src="/js/app.js"></script>
 
   </body>
 </html>

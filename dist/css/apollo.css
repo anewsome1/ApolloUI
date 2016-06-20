@@ -4514,6 +4514,7 @@ input[type='radio']:checked {
   width: 14rem;
   font-size: 1.25rem;
   font-weight: 300;
+  white-space: nowrap;
 }
 
 .navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:active {
@@ -4541,6 +4542,7 @@ input[type='radio']:checked {
 .navbar-item > a, .navbar-actions-item > a {
   font-size: 1rem;
   padding: 0.4375rem 1.125rem;
+  white-space: nowrap;
 }
 
 .navbar .navbar-item.active > a, .navbar .active.navbar-actions-item > a {
@@ -4614,6 +4616,10 @@ input[type='radio']:checked {
 
 .navbar-profile .profile-credential {
   font-size: 0.85rem;
+}
+
+.navbar-profile .profile-credential-dropdown {
+  white-space: nowrap;
 }
 
 .navbar-environment {
