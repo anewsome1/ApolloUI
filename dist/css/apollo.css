@@ -3283,7 +3283,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.1;
   color: inherit;
 }
@@ -3450,6 +3450,19 @@ mark,
 
 .font-serif {
   font-family: "Merriweather", Georgia, serif;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 300;
+}
+
+.hero-heading {
+  font-size: 3.375rem;
 }
 
 td > dl {
@@ -4441,6 +4454,10 @@ input[type='radio']:checked {
   background-color: transparent;
   border-color: transparent;
   cursor: not-allowed;
+}
+
+.nav-tabs.tab-bar + .tab-content {
+  margin-top: 1rem;
 }
 
 .tab-content > .tab-pane {

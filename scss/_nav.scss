@@ -147,33 +147,42 @@
   ///
   ///  Tab bar style
   ///
-  &.tab-bar .nav-link {
-    @extend %toggle-base;
-    display: block;
-    min-width: $btn-lg-min-width;
-    padding: $btn-lg-padding-y $btn-padding-x;
+  &.tab-bar {
 
-    @include hover-focus {
-      @extend %toggle-hover;
-    }
+    .nav-link {
+      @extend %toggle-base;
+      display: block;
+      min-width: $btn-lg-min-width;
+      padding: $btn-lg-padding-y $btn-padding-x;
 
-    &.disabled {
-      @include plain-hover-focus {
-        color: $nav-disabled-link-color;
-        background-color: transparent;
-        border-color: transparent;
-        cursor: $cursor-disabled;
+      @include hover-focus {
+        @extend %toggle-hover;
+      }
+
+      &.disabled {
+        @include plain-hover-focus {
+          color: $nav-disabled-link-color;
+          background-color: transparent;
+          border-color: transparent;
+          cursor: $cursor-disabled;
+        }
+      }
+
+      &.active,
+      .nav-item.open & {
+        @include plain-hover-focus {
+          @extend %toggle-active;
+        }
       }
     }
 
-    &.active,
-    .nav-item.open & {
-      @include plain-hover-focus {
-        @extend %toggle-active;
-      }
+    + .tab-content {
+      margin-top: $spacer-y;
     }
 
   }
+
+
 
 
 }
