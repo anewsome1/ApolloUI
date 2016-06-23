@@ -90,27 +90,31 @@ body {
 
 @media (min-width: 768px) {
   .docs-sidebar {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 23.5rem;
+    margin-left: 19rem;
   }
 }
 
 .docs-apollo-sidebar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  width: 5.5rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: 1.875rem 2rem;
+  padding: 1.875rem;
   font-size: 1.5rem;
   line-height: 1;
   background: none;
@@ -122,21 +126,12 @@ body {
 }
 
 .docs-sidebar-title {
-  position: absolute;
-  top: 50%;
-  left: 1.875rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  margin-top: .4rem;
 }
 
 .docs-nav {
-  width: 18rem;
+  width: 19rem;
   padding: 1.875rem;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: rgba(43, 59, 67, 0.75);
 }
 
 .docs-content {
