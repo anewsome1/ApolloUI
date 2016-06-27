@@ -1,0 +1,13 @@
+.billboard {
+  padding: $billboard-padding ($billboard-padding / 2);
+  margin-bottom: $billboard-padding / 2;
+
+  @include media-breakpoint-up(sm) {
+    padding: ($billboard-padding * 1.5) $billboard-padding;
+  }
+}
+
+.billboard-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
