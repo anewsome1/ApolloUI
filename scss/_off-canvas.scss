@@ -42,8 +42,12 @@
 ///
 
 .off-canvas-header {
-  display: flex;
-  align-items: center;
+  @if $enable-flex {
+    display: flex;
+    align-items: center;
+  } @else {
+    position: relative;
+  }
   height: $navbar-sm-height;
   margin-bottom: $spacer-y;
 
@@ -76,7 +80,10 @@
 }
 
 .off-canvas-close {
-  order: 2;
+  @if $enable-flex {
+    order: 2;
+  }
+
   font-size: $font-size-lg;
 
   &::before {
@@ -86,7 +93,15 @@
 }
 
 .off-canvas-title {
-  flex-grow: 1;
+  @if $enable-flex {
+    flex-grow: 1;
+  } @else {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: (-$font-size-h4 / 2);
+  }
+
   margin-bottom: 0;
   font-size: $font-size-h4;
   color: $teal;
