@@ -4956,11 +4956,14 @@ p:last-child {
 }
 
 .off-canvas-close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -1.0625rem;
   font-size: 1.25rem;
 }
 
 .off-canvas-close::before {
-  color: #3ed6cf;
   content: "";
 }
 
