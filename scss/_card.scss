@@ -12,14 +12,6 @@
   &:hover {
     box-shadow: $shadow-lg-hover;
   }
-
-  &.card-sm {
-    box-shadow: $shadow-sm;
-
-    &:hover {
-      box-shadow: $shadow-sm-hover;
-    }
-  }
 }
 
 
