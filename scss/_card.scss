@@ -6,8 +6,20 @@
     }
   }
   background-color: $card-bg;
-  box-shadow: $shadow-hover;
+  box-shadow: $shadow-lg;
   transition: all $transition-fast;
+
+  &:hover {
+    box-shadow: $shadow-lg-hover;
+  }
+
+  &.card-sm {
+    box-shadow: $shadow-sm;
+
+    &:hover {
+      box-shadow: $shadow-sm-hover;
+    }
+  }
 }
 
 
