@@ -5164,6 +5164,7 @@ p:last-child {
 .pager-next {
   float: left;
   width: 33.33333%;
+  white-space: nowrap;
 }
 
 .pager-count {
