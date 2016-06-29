@@ -165,20 +165,27 @@ $list-inline-padding:         .5rem;
 /// Transitions
 ///
 
-$transition-fast:      .25s cubic-bezier(0, 0, .5, 1);
-$transition-medium:    .5s cubic-bezier(0, 0, .5, 1);
+$transition-fast:       .25s cubic-bezier(0, 0, .5, 1);
+$transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
 
 
 ///
 /// Lighting
 ///
 
-$shadow-color:         rgba(#000, .25);
-$shadow-border:        0 0 0 $border-width $shadow-color;
+$shadow-color:          rgba(#000, .2);
+
+$shadow-border:         0 0 0 $border-width $shadow-color;
 $shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
 $shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
 $shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
+// Shadow sizes
+$shadow-sm:             0 .625rem 1.25rem 0 rgba(#000, .1);
+$shadow-sm-hover:       0 .9375rem 1.875rem 0 rgba(#000, .15);
+
+$shadow-lg:             0 .625rem 3.125rem 0 rgba(#000, .1);
+$shadow-lg-hover:       0 1.875rem 3.75rem 0 rgba(#000, .15);
 
 ///
 /// Alerts
