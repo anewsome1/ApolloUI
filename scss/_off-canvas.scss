@@ -76,6 +76,7 @@
 
 .off-canvas-close {
   position: absolute;
+  z-index: 1;
   top: 50%;
   right: 0;
   margin-top: -($font-size-lg / 2 + $navbar-link-padding-y);

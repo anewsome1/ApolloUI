@@ -4505,11 +4505,6 @@ input[type='radio']:checked {
   }
 }
 
-.navbar.navbar-sm > .container-fluid,
-.navbar.navbar-sm > .container {
-  height: 3.75rem;
-}
-
 .navbar-brand {
   width: 14rem;
   font-size: 1.25rem;
@@ -4540,8 +4535,8 @@ input[type='radio']:checked {
 }
 
 .navbar-item > a, .navbar-actions-item > a {
-  font-size: 1rem;
   padding: 0.4375rem 1.125rem;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
@@ -4655,10 +4650,6 @@ input[type='radio']:checked {
   .margin-top-navbar {
     margin-top: 5.5rem;
   }
-}
-
-.margin-top-navbar-sm {
-  margin-top: 3.75rem;
 }
 
 .navbar-primary {
@@ -5686,6 +5677,7 @@ p:last-child {
 
 .off-canvas-close {
   position: absolute;
+  z-index: 1;
   top: 50%;
   right: 0;
   margin-top: -1.0625rem;

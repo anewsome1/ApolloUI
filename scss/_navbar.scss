@@ -22,21 +22,30 @@
 
   > .container,
   > .container-fluid {
-    display: flex;
-    align-items: center;
-    // align-content: stretch;
+    @if $enable-flex {
+      display: flex;
+      align-items: center;
+    }
+
     height: $navbar-sm-height;
 
     @include media-breakpoint-up(sm) {
       height: $navbar-height;
     }
+
   }
-  // Compact version
-  &.navbar-sm > .container-fluid,
-  &.navbar-sm > .container {
-    height: $navbar-sm-height;
+}
+
+
+@if $enable-flex == false {
+  .navbar-brand,
+  .navbar-links {
+    float: left;
   }
 
+  .navbar-profile {
+    float: right;
+  }
 }
 
 
@@ -48,8 +57,11 @@
   width: $navbar-brand-width;
   font-size: $navbar-brand-font-size;
   font-weight: $font-light;
-  // text-align: center;
   white-space: nowrap;
+
+  @if $enable-flex == false {
+    margin-top: calc-padding-y($navbar-height, $navbar-brand-font-size * $line-height);
+  }
 
   &,
   &:hover,
@@ -79,9 +91,14 @@
 
 .navbar-item {
   > a {
-    font-size: $navbar-link-font-size;
     padding: $btn-padding-y $btn-padding-x;
+    font-size: $navbar-link-font-size;
     white-space: nowrap;
+
+    @if $enable-flex == false {
+      display: block;
+      margin-top: calc-padding-y($navbar-height, ($btn-padding-y + $navbar-link-font-size * $line-height) );
+    }
   }
 
   .navbar &.active > a {
@@ -144,6 +161,10 @@
 .navbar-profile {
   text-align: right;
 
+  @if $enable-flex == false {
+    margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
+  }
+
   .profile-username,
   .profile-credential {
     display: block;
@@ -192,9 +213,6 @@
     margin-top: $navbar-height;
   }
 
-  &-sm {
-    margin-top: $navbar-sm-height;
-  }
 }
 
 @each $variant, $props in $navbar-variants {
