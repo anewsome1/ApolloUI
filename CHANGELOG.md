@@ -20,18 +20,20 @@ This log provides an overview of the significant changes in each version release
 ## [v1.0.0-beta] - 2016-05-03
 
 ### Changed
--
-
-### Added
--
-
+- Fixed alignment issue on login component
+- Fixed colors for search component
+- Fixed layout of carousel controls
 
 
 ## [v0.4.3] - 2016-04-29
 
 ### Changed
--
+- Styling and content updates for docs
+- Fixed responsive layouts to include xs sizes
+- Adjusted empty space prompt icon size
+- Fixed navbar position
+- Fixed modal size on xs screens
 
 ### Added
--
-
+- New options and styles for tables
+- Responsive layout for docs sidebar
