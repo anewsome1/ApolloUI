@@ -1,4 +1,4 @@
-# Apollo UI Change Lot
+# Apollo UI Change Log
 
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
