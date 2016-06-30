@@ -4470,11 +4470,6 @@ input[type='radio']:checked {
   }
 }
 
-.navbar.navbar-sm > .container-fluid,
-.navbar.navbar-sm > .container {
-  height: 3.75rem;
-}
-
 .navbar-brand {
   width: 14rem;
   font-size: 1.25rem;
@@ -4505,8 +4500,8 @@ input[type='radio']:checked {
 }
 
 .navbar-item > a, .navbar-actions-item > a {
-  font-size: 1rem;
   padding: 0.4375rem 1.125rem;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
@@ -4583,15 +4578,15 @@ input[type='radio']:checked {
 }
 
 .navbar-environment {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4615,10 +4610,6 @@ input[type='radio']:checked {
   .margin-top-navbar {
     margin-top: 5.5rem;
   }
-}
-
-.margin-top-navbar-sm {
-  margin-top: 3.75rem;
 }
 
 .navbar-primary {
@@ -4714,6 +4705,7 @@ input[type='radio']:checked {
   left: 0;
   height: auto;
   width: 5.5rem;
+  text-align: center;
   background-color: #2B3B43;
 }
 
@@ -5604,12 +5596,7 @@ p:last-child {
 }
 
 .off-canvas-header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
   height: 3.75rem;
   margin-bottom: 1rem;
 }
@@ -5640,21 +5627,23 @@ p:last-child {
 }
 
 .off-canvas-close {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  margin-top: -1.0625rem;
   font-size: 1.25rem;
 }
 
 .off-canvas-close::before {
-  color: #3ed6cf;
   content: "";
 }
 
 .off-canvas-title {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -0.625rem;
   margin-bottom: 0;
   font-size: 1.25rem;
   color: #3ed6cf;
@@ -5848,6 +5837,12 @@ p:last-child {
           justify-content: space-between;
 }
 
+.pager-prev,
+.pager-count,
+.pager-next {
+  white-space: nowrap;
+}
+
 .pager-count {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -5870,6 +5865,10 @@ p:last-child {
 .pager-prev.disabled:hover,
 .pager-next.disabled:hover {
   text-decoration: none;
+}
+
+.pager-next {
+  text-align: right;
 }
 
 .pager-prev::before,

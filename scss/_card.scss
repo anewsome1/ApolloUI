@@ -15,8 +15,6 @@
 }
 
 
-
-
 ///
 /// Card main sections
 ///
@@ -107,9 +105,18 @@
       border-spacing: ($grid-gutter-width / 2) 0;
 
       .card {
+        position: relative;
         display: table-cell;
         width: 1%;
+        padding-bottom: 3rem;
         vertical-align: top;
+      }
+
+      .card-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
       }
     }
     .card-deck-wrapper {

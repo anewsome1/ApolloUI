@@ -22,21 +22,30 @@
 
   > .container,
   > .container-fluid {
-    display: flex;
-    align-items: center;
-    // align-content: stretch;
+    @if $enable-flex {
+      display: flex;
+      align-items: center;
+    }
+
     height: $navbar-sm-height;
 
     @include media-breakpoint-up(sm) {
       height: $navbar-height;
     }
+
   }
-  // Compact version
-  &.navbar-sm > .container-fluid,
-  &.navbar-sm > .container {
-    height: $navbar-sm-height;
+}
+
+
+@if $enable-flex == false {
+  .navbar-brand,
+  .navbar-links {
+    float: left;
   }
 
+  .navbar-profile {
+    float: right;
+  }
 }
 
 
@@ -48,8 +57,11 @@
   width: $navbar-brand-width;
   font-size: $navbar-brand-font-size;
   font-weight: $font-light;
-  // text-align: center;
   white-space: nowrap;
+
+  @if $enable-flex == false {
+    margin-top: calc-padding-y($navbar-height, $navbar-brand-font-size * $line-height);
+  }
 
   &,
   &:hover,
@@ -72,16 +84,29 @@
 .navbar-links {
   @include list-unstyled;
 
-  flex-grow: 1;
-  display: flex;
+  @if $enable-flex {
+    flex-grow: 1;
+    display: flex;
+  }
+
   margin-bottom: 0;
 }
 
 .navbar-item {
+
+  @if $enable-flex == false {
+    display: inline-block;
+  }
+
   > a {
-    font-size: $navbar-link-font-size;
     padding: $btn-padding-y $btn-padding-x;
+    font-size: $navbar-link-font-size;
     white-space: nowrap;
+
+    @if $enable-flex == false {
+      display: block;
+      margin-top: calc-padding-y($navbar-height, ($btn-padding-y + $navbar-link-font-size * $line-height) );
+    }
   }
 
   .navbar &.active > a {
@@ -97,6 +122,7 @@
 .navbar-actions {
   @include list-unstyled;
 
+  // TODO: Add fallback here if navbar actions get used
   display: flex;
   margin-right: $grid-gutter-width;
   margin-bottom: 0;
@@ -144,6 +170,10 @@
 .navbar-profile {
   text-align: right;
 
+  @if $enable-flex == false {
+    margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
+  }
+
   .profile-username,
   .profile-credential {
     display: block;
@@ -168,12 +198,19 @@
 /// Environment
 ///
 .navbar-environment {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: percentage(2/12);
+  @if $enable-flex {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+  } @else {
+    // TODO: Add better fallback here later
+    float: right;
+    text-align: center;
+  }
+
+  width: percentage(2 / 12);
   margin-right: (-$grid-gutter-width / 2);
   margin-left: $grid-gutter-width / 2;
   color: #fff;
@@ -192,9 +229,6 @@
     margin-top: $navbar-height;
   }
 
-  &-sm {
-    margin-top: $navbar-sm-height;
-  }
 }
 
 @each $variant, $props in $navbar-variants {
@@ -300,6 +334,7 @@
   left: 0;
   height: auto;
   width: $navbar-vertical-width;
+  text-align: center;
   background-color: $navbar-vertical-bg;
 
   &.navbar-vertical-jumbo {
