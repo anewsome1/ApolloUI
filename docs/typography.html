@@ -54,9 +54,11 @@ order: 15
 
 <section class="docs-section">
 
+{% include example-intro.html title='Body copy' description='Body copy is used as the standard text size and treatment throughout the user interface.  Most components use the body copy style by default, with some exceptions being titles, headings and labels.' %}
+
 {% capture example %}
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 {% endcapture %}
 
-{% include example.html size='half' label='Body copy' code=example %}
+{% include example.html size='half' code=example %}
 </section>
