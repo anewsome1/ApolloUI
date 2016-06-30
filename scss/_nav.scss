@@ -57,12 +57,10 @@
     flex-wrap: wrap;
 
   } @else {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
+    @include clearfix;
 
     .nav-item {
-      display: table-cell;
+      float: left;
     }
   }
 
@@ -71,8 +69,18 @@
   }
 
   &.tab-justified {
-    .nav-item {
-      flex: 1;
+    @if $enable-flex {
+      .nav-item {
+        flex: 1;
+      }
+    } @else {
+      display: table;
+      width: 100%;
+
+      .nav-item {
+        float: none;
+        display: table-cell;
+      }
     }
   }
 
