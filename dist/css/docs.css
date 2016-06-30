@@ -503,6 +503,10 @@ body {
   border-left: 0.25rem solid #f75040;
 }
 
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
+}
+
 .docs-callout-title {
   font-size: 1rem;
   font-weight: 600;

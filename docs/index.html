@@ -15,6 +15,12 @@ order: 01
 
 <section class="docs-section">
 
+  {% capture message %}
+  This project is currently in development.  The markup, styles and documentation are subject to change without notice until the first official release.  In the meantime, feel free to experiment with these components and report any issues you discover using the <a href="{{ site.issues_url }}">Issue Tracker</a>.
+  {% endcapture %}
+  {% include docs-callout.html state='info' title='Project in development' body=message %}
+
+
   {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
 
   <div class="row">
