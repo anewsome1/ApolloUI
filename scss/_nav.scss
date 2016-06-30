@@ -85,8 +85,10 @@
   }
 
   @include media-breakpoint-only(xs) {
-    .nav-item {
-      flex: 1;
+    @if $enable-flex {
+      .nav-item {
+        flex: 1;
+      }
     }
     .nav-link {
       text-align: center;

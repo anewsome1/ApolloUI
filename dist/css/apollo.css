@@ -3638,11 +3638,6 @@ input[type='radio']:checked {
 }
 
 @media (max-width: 543px) {
-  .nav-tabs .nav-item {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
   .nav-tabs .nav-link {
     text-align: center;
   }
