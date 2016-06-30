@@ -380,7 +380,7 @@ body {
 
 @media (min-width: 768px) {
   .docs-card {
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
     padding: 1.875rem 6rem;
   }
 }
@@ -489,10 +489,6 @@ body {
 
 .docs-callout p:last-of-type {
   margin-bottom: 0;
-}
-
-.docs-callout.docs-callout-info {
-  border-left: 0.25rem solid #32b5fc;
 }
 
 .docs-callout.docs-callout-success {
