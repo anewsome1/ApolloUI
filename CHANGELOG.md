@@ -3,7 +3,22 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [v1.0.0-beta.3] - 2016-06-14
+## [v1.0.0-beta.3] - 2016-07-01
+
+### Changed
+- Removed shared card styles from accordion
+- Added fallback styles for flexbox
+- Updated shadows on cards
+- Removed extraneous examples
+- Updated typography styles
+- Misc styling updates and fixes
+
+### Added
+- Integration with Design Resource Base navigation
+- Changelog
+
+
+## [v1.0.0-beta.2] - 2016-06-14
 
 ### Changed
 - Grouped and sorted docs navigation links
