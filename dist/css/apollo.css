@@ -5126,6 +5126,7 @@ p:last-child {
 
 .accordion {
   border: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  border-top-width: 0;
 }
 
 .bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
