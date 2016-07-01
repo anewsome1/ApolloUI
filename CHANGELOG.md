@@ -3,7 +3,7 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [v1.0.0-beta.2] - 2016-06-14
+## [v1.0.0-beta.3] - 2016-06-14
 
 ### Changed
 - Grouped and sorted docs navigation links

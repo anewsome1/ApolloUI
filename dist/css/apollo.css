@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Apollo CSS v1.0.0-beta.2
+ * Apollo CSS v1.0.0-beta.3
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -5126,6 +5126,7 @@ p:last-child {
 
 .accordion {
   border: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  border-top-width: 0;
 }
 
 .bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
