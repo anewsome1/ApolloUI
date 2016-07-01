@@ -5,30 +5,25 @@ category: components
 order: 55
 ---
 
-<!-- TODO: Recreate accordion as separate component (remove shared styles with cards) -->
-
 <section class="docs-section">
 {% capture example_light %}
-<div class="card card-accordion" role="tablist" aria-multiselectable="true">
-  <div class="card-header" id="accordion-head-1" role="tab">
-    <h3 class="card-title" data-toggle="collapse" data-target="#accordion-sect-1" aria-expanded="true" aria-controls="accordion-sect-1">Section 1</h3>
-    </h3>
+<div class="accordion" role="tablist" aria-multiselectable="true">
+  <div class="accordion-header" id="accordion-head-1" role="tab" data-toggle="collapse" data-target="#accordion-sect-1" aria-expanded="true" aria-controls="accordion-sect-1">
+    <h3 class="accordion-title">Section 1</h3>
   </div>
-  <div class="card-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+  <div class="accordion-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
     <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
   </div>
-  <div class="card-header" id="accordion-head-2" role="tab">
-    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-sect-2" aria-expanded="false" aria-controls="accordion-sect-2">Section 2</h3>
-    </h3>
+  <div class="accordion-header" id="accordion-head-2" role="tab" data-toggle="collapse" data-target="#accordion-sect-2" aria-expanded="false" aria-controls="accordion-sect-2">
+    <h3 class="accordion-title collapsed">Section 2</h3>
   </div>
-  <div class="card-block collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
+  <div class="accordion-block collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
     <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
   </div>
-  <div class="card-header" id="accordion-head-3" role="tab">
-    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-sect-3" aria-expanded="false" aria-controls="accordion-sect-3">Section 3</h3>
-    </h3>
+  <div class="accordion-header" id="accordion-head-3" role="tab" data-toggle="collapse" data-target="#accordion-sect-3" aria-expanded="false" aria-controls="accordion-sect-3">
+    <h3 class="accordion-title collapsed">Section 3</h3>
   </div>
-  <div class="card-block collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
+  <div class="accordion-block collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
     <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
   </div>
 </div>
@@ -36,26 +31,23 @@ order: 55
 {% include example.html size='third' label='Light background' code=example_light %}
 
 {% capture example_dark %}
-<div class="card card-accordion bg-dark" role="tablist" aria-multiselectable="true">
-  <div class="card-header" id="accordion-dark-head-1" role="tab">
-    <h3 class="card-title" data-toggle="collapse" data-target="#accordion-dark-sect-1" aria-expanded="true" aria-controls="accordion-dark-sect-1">Section 1</h3>
-    </h3>
+<div class="accordion bg-dark" role="tablist" aria-multiselectable="true">
+  <div class="accordion-header" id="accordion-dark-head-1" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-1" aria-expanded="true" aria-controls="accordion-dark-sect-1">
+    <h3 class="accordion-title">Section 1</h3>
   </div>
-  <div class="card-block collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
+  <div class="accordion-block collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
     <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
   </div>
-  <div class="card-header" id="accordion-dark-head-2" role="tab">
-    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-dark-sect-2" aria-expanded="false" aria-controls="accordion-dark-sect-2">Section 2</h3>
-    </h3>
+  <div class="accordion-header" id="accordion-dark-head-2" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-2" aria-expanded="false" aria-controls="accordion-dark-sect-2">
+    <h3 class="accordion-title collapsed">Section 2</h3>
   </div>
-  <div class="card-block collapse" id="accordion-dark-sect-2" role="tabpanel" aria-labeledby="accordion-dark-head-2">
+  <div class="accordion-block collapse" id="accordion-dark-sect-2" role="tabpanel" aria-labeledby="accordion-dark-head-2">
     <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
   </div>
-  <div class="card-header" id="accordion-dark-head-3" role="tab">
-    <h3 class="card-title collapsed" data-toggle="collapse" data-target="#accordion-dark-sect-3" aria-expanded="false" aria-controls="accordion-dark-sect-3">Section 3</h3>
-    </h3>
+  <div class="accordion-header" id="accordion-dark-head-3" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-3" aria-expanded="false" aria-controls="accordion-dark-sect-3">
+    <h3 class="accordion-title collapsed">Section 3</h3>
   </div>
-  <div class="card-block collapse" id="accordion-dark-sect-3" role="tabpanel" aria-labeledby="accordion-dark-head-3">
+  <div class="accordion-block collapse" id="accordion-dark-sect-3" role="tabpanel" aria-labeledby="accordion-dark-head-3">
     <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
   </div>
 </div>

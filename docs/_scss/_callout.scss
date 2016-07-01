@@ -15,6 +15,10 @@
       border-left: .25rem solid $color;
     }
   }
+
+  &.docs-callout-info {
+    border-left: .25rem solid $brand-info;
+  }
 }
 
 .docs-callout-title {

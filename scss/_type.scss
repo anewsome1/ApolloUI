@@ -2,6 +2,19 @@
   font-family: $font-family-serif;
 }
 
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: $font-light;
+}
+
+.hero-heading {
+  font-size: $display2-size;
+}
+
 td > dl {
   margin-bottom: 0;
 }

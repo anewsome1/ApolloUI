@@ -12,15 +12,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./css/apollo.css">
+  <!-- Stylesheet for DRB site menu -->
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="./css/docs.css">
-  <!-- / -->
-  <!-- . -->
-
 </head>
 
   <body>
     <main class="docs">
   <aside class="docs-sidebar">
+  <div class="docs-apollo-sidebar">
+    <button class="docs-drb-menu-toggle panel-open">
+      <span class="icon icon-menu"></span>
+    </button>
+    <h6 class="docs-sidebar-title">IMS Design Resource Base</h6>
+  </div>
+  <div class="docs-nav">
     
 
 
@@ -106,7 +112,7 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="./jumbotron.html">Jumbotron</a>
+      <a href="./billboard.html">Billboard</a>
     </li>
   
     
@@ -187,29 +193,33 @@
       <a href="./empty-space.html">Empty space prompt</a>
     </li>
   
-    
-    
-    <li class="docs-page-nav-item ">
-      <a href="./utilities.html">Utilities</a>
-    </li>
-  
 </ul>
 
 
 
-  </aside>
-
+  </div>
+</aside>
   <article class="docs-content">
-    <section class="home-header bg-dark">
-  <h1 class="display-2 font-serif">Apollo UI</h1>
+    <section class="home-header">
+  <h1 class="docs-page-title">Apollo UI</h1>
   <p class="lead">HTML and CSS for the Apollo visual language.</p>
-  <p><b>Version</b>: 1.0.0-beta.2</p>
+  <p><b>Version</b>: 1.0.0-beta.3</p>
   <p>
-    <a class="btn btn-secondary btn-lg" href="https://gitlab.imshealth.com/apollo/apollo-ui">GitLab Project</a>
+    <a class="btn btn-primary" href="https://gitlab.imshealth.com/apollo/apollo-ui">GitLab Project</a>
   </p>
 </section>
 
 <section class="docs-section">
+
+  
+  <div class="docs-callout docs-callout-info">
+  <h4 class="docs-callout-title">Project in development</h4>
+  <p>
+  This project is currently in development.  The markup, styles and documentation are subject to change without notice until the first official release.  In the meantime, feel free to experiment with these components and report any issues you discover using the <a href="https://gitlab.imshealth.com/apollo/apollo-ui/issues">Issue Tracker</a>.
+  </p>
+</div>
+
+
 
   <div class="docs-example-intro">
   <h6 class="docs-example-title">Package management</h6>
@@ -225,7 +235,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">npm install apollo-ui@1.0.0-beta.2 --save</code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">npm install apollo-ui@1.0.0-beta.3 --save</code></pre></figure>
 </div>
 </div>
 
@@ -237,7 +247,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">bower install apollo-ui#1.0.0-beta.2 --save</code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">bower install apollo-ui#1.0.0-beta.3 --save</code></pre></figure>
 </div>
 </div>
 
@@ -258,7 +268,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.2/apollo.css"</span><span class="nt">&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.3/apollo.css"</span><span class="nt">&gt;</span></code></pre></figure>
 </div>
 </div>
 
@@ -270,7 +280,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.2/apollo.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.3/apollo.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
 </div>
 </div>
 
@@ -289,7 +299,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.2/apollo.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 </div>
 </div>
 
@@ -301,7 +311,7 @@
 
 <div class="docs-example docs-example-3 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.2/apollo.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 </div>
 </div>
 
@@ -315,11 +325,14 @@
     <!-- <footer class="docs-footer text-xs-center">
   <div class="container-fluid">
     <h5>Apollo UI Docs</h5>
-    <p>Version: 1.0.0-beta.2</p>
+    <p>Version: 1.0.0-beta.3</p>
   </div>
 </footer> -->
+    <div id="drb-nav-wrapper"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
- <script src="./js/apollo.js"></script>
+<script src="./js/apollo.js"></script>
+<!-- Script for DRB site menu -->
+<script src="/js/app.js"></script>
 
   </body>
 </html>

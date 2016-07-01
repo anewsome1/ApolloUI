@@ -76,16 +76,6 @@ pre code {
   overflow-y: scroll;
 }
 
-.docs-page-title::after, .docs-section-title::before,
-.docs-example-title::before {
-  display: block;
-  width: 2rem;
-  height: 0.1875rem;
-  margin-bottom: 1rem;
-  background-color: #3ed6cf;
-  content: '';
-}
-
 html,
 body {
   height: 100%;
@@ -93,7 +83,6 @@ body {
 
 .docs-sidebar {
   background-color: #2B3B43;
-  padding: 1.875rem;
 }
 
 @media (min-width: 768px) {
@@ -101,14 +90,45 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 18rem;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 18rem;
+    margin-left: 19rem;
   }
+}
+
+.docs-apollo-sidebar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.docs-drb-menu-toggle {
+  padding: 1.875rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background: none;
+  border: 0;
+}
+
+.docs-drb-menu-toggle:focus {
+  outline: none;
+}
+
+.docs-sidebar-title {
+  margin-top: .4rem;
+}
+
+.docs-nav {
+  width: 19rem;
+  padding: 1.875rem;
 }
 
 .docs-content {
@@ -116,6 +136,7 @@ body {
 }
 
 .docs-page-nav-title {
+  margin-top: .25rem;
   margin-bottom: 2.25rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
@@ -171,6 +192,16 @@ body {
 .docs-page-nav-item.active > a {
   color: #3ed6cf;
   font-weight: 400;
+}
+
+.docs-page-title::after, .docs-section-title::before,
+.docs-example-title::before {
+  display: block;
+  width: 2rem;
+  height: 0.1875rem;
+  margin-bottom: 1rem;
+  background-color: #3ed6cf;
+  content: '';
 }
 
 .docs-page-header {
@@ -346,7 +377,7 @@ body {
 
 @media (min-width: 768px) {
   .docs-card {
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
     padding: 1.875rem 6rem;
   }
 }
@@ -443,7 +474,7 @@ body {
 }
 
 .home-header {
-  background-color: #339E99;
+  background-color: #f7f5f4;
 }
 
 .docs-callout {
@@ -457,10 +488,6 @@ body {
   margin-bottom: 0;
 }
 
-.docs-callout.docs-callout-info {
-  border-left: 0.25rem solid #32b5fc;
-}
-
 .docs-callout.docs-callout-success {
   border-left: 0.25rem solid #2cc039;
 }
@@ -471,6 +498,10 @@ body {
 
 .docs-callout.docs-callout-danger {
   border-left: 0.25rem solid #f75040;
+}
+
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
 }
 
 .docs-callout-title {

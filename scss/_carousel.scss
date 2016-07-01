@@ -90,10 +90,27 @@
 ///
 
 .carousel-control {
-  display: flex;
-  flex-direction: columns;
-  align-items: center;
-  justify-content: center;
+  @if $enable-flex {
+    display: flex;
+    flex-direction: columns;
+    align-items: center;
+    justify-content: center;
+  } @else {
+    .icon-prev,
+    .icon-next {
+      position: absolute;
+      top: 50%;
+    }
+
+    .icon-prev {
+      left: 50%;
+    }
+
+    .icon-next {
+      right: 50%;
+    }
+  }
+
   position: absolute;
   top: 0;
   bottom: 0;
