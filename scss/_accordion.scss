@@ -1,0 +1,92 @@
+
+///
+/// Accordion
+///
+
+// !!!
+// TODO: Recreate accordion as separate component (remove shared styles with cards)
+// !!!
+
+
+.accordion {
+  border: $card-border-width solid $card-border-color;
+
+  ///
+  /// Dark background
+  ///
+
+  .bg-dark &,
+  &.bg-dark {
+    background-color: $card-inverse-bg;
+
+    &,
+    .accordion-header {
+      border-color: $card-inverse-border-color;
+    }
+
+    .accordion-header {
+      background-color: $card-inverse-cap-bg;
+    }
+
+    .accordion-title {
+      color: $teal;
+    }
+  }
+
+}
+
+// Visiblility
+.accordion-block {
+  &.collapse {
+    display: none;
+    height: 0;
+    visibility: hidden;
+  }
+
+  &.collapsing,
+  &.collapse.in {
+    display: block;
+    visibility: visible;
+    overflow: hidden;
+    height: auto;
+    transition: height $transition-fast;
+  }
+}
+
+// Padding
+.accordion-header,
+.accordion-block {
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+// Borders
+.accordion-header {
+  border-top: $card-border-width solid $card-border-color;
+  background-color: $card-cap-bg;
+  cursor: pointer;
+}
+
+// Headings
+.accordion-title {
+  position: relative;
+  margin: 0;
+  font-size: $font-size-base;
+  font-weight: $font-normal;
+  color: $link-color;
+  text-align: inherit;
+
+  &::before {
+    @extend %icon-base;
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: map-get($_icons-map, 'chevron-up');
+    transition: transform $transition-fast;
+  }
+
+  .collapsed &::before {
+    transform: rotate(180deg);
+  }
+}
+
+

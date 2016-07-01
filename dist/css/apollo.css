@@ -2140,7 +2140,7 @@ output {
   font-style: normal;
 }
 
-.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .card-accordion .card-title::before, .carousel-control .icon-prev,
+.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
 .carousel-control .icon-next, .search::before, .off-canvas-open::before,
 .off-canvas-close::before, .empty-space-icon, .pager-prev::before,
 .pager-next::after {
@@ -5082,73 +5082,6 @@ p:last-child {
   }
 }
 
-.card-accordion {
-  border: 0.0625rem solid rgba(29, 39, 44, 0.075);
-  border-top: none;
-  box-shadow: none;
-}
-
-.card-accordion .card-block.collapse {
-  display: none;
-  height: 0;
-  visibility: hidden;
-}
-
-.card-accordion .card-block.collapsing, .card-accordion .card-block.collapse.in {
-  display: block;
-  visibility: visible;
-  overflow: hidden;
-  height: auto;
-  transition: height 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.card-accordion .card-header {
-  border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
-  background-color: rgba(29, 39, 44, 0.05);
-}
-
-.card-accordion .card-title {
-  position: relative;
-  margin: 0;
-  font-size: 1rem;
-  color: #2975e9;
-  cursor: pointer;
-  text-align: inherit;
-}
-
-.card-accordion .card-title::before {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "";
-  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.card-accordion .card-title.collapsed::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.bg-dark .card-accordion, .off-canvas .card-accordion, .card-accordion.bg-dark, .card-accordion.off-canvas {
-  background-color: #1D272C;
-}
-
-.bg-dark .card-accordion, .off-canvas .card-accordion,
-.bg-dark .card-accordion .card-header, .off-canvas .card-accordion .card-header, .card-accordion.bg-dark, .card-accordion.off-canvas,
-.card-accordion.bg-dark .card-header, .card-accordion.off-canvas .card-header {
-  border-color: #1D272C;
-}
-
-.bg-dark .card-accordion .card-header, .off-canvas .card-accordion .card-header, .card-accordion.bg-dark .card-header, .card-accordion.off-canvas .card-header {
-  background-color: #2B3B43;
-}
-
-.bg-dark .card-accordion .card-title, .off-canvas .card-accordion .card-title, .card-accordion.bg-dark .card-title, .card-accordion.off-canvas .card-title {
-  color: #3ed6cf;
-}
-
 .card-success {
   position: relative;
 }
@@ -5189,6 +5122,77 @@ p:last-child {
   height: 0.75rem;
   background-color: #f75040;
   box-shadow: 0 0.375rem 0 0 rgba(247, 80, 64, 0.5);
+}
+
+.accordion {
+  border: 0.0625rem solid rgba(29, 39, 44, 0.075);
+}
+
+.bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
+  background-color: #1D272C;
+}
+
+.bg-dark .accordion, .off-canvas .accordion,
+.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark, .accordion.off-canvas,
+.accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
+  border-color: #1D272C;
+}
+
+.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
+  background-color: #2B3B43;
+}
+
+.bg-dark .accordion .accordion-title, .off-canvas .accordion .accordion-title, .accordion.bg-dark .accordion-title, .accordion.off-canvas .accordion-title {
+  color: #3ed6cf;
+}
+
+.accordion-block.collapse {
+  display: none;
+  height: 0;
+  visibility: hidden;
+}
+
+.accordion-block.collapsing, .accordion-block.collapse.in {
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  height: auto;
+  transition: height 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.accordion-header,
+.accordion-block {
+  padding: 0.75rem 1.25rem;
+}
+
+.accordion-header {
+  border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  background-color: rgba(29, 39, 44, 0.05);
+  cursor: pointer;
+}
+
+.accordion-title {
+  position: relative;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2975e9;
+  text-align: inherit;
+}
+
+.accordion-title::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.collapsed .accordion-title::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .billboard {
