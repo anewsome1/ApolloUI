@@ -21,7 +21,7 @@ var theo          = require( 'theo' );
 ///
 
 var strings = {
-  VERSION: '/*! Apollo JS v1.0.0-beta.2 */'
+  VERSION: '/*! Apollo JS v1.0.0-beta.3 */'
 };
 
 var path = {
