@@ -2140,7 +2140,7 @@ output {
   font-style: normal;
 }
 
-.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .accordion .accordion-title::before, .carousel-control .icon-prev,
+.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
 .carousel-control .icon-next, .search::before, .off-canvas-open::before,
 .off-canvas-close::before, .empty-space-icon, .pager-prev::before,
 .pager-next::after {
@@ -5126,57 +5126,6 @@ p:last-child {
 
 .accordion {
   border: 0.0625rem solid rgba(29, 39, 44, 0.075);
-  border-top: none;
-  box-shadow: none;
-}
-
-.accordion .accordion-block.collapse {
-  display: none;
-  height: 0;
-  visibility: hidden;
-}
-
-.accordion .accordion-block.collapsing, .accordion .accordion-block.collapse.in {
-  display: block;
-  visibility: visible;
-  overflow: hidden;
-  height: auto;
-  transition: height 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.accordion .accordion-header,
-.accordion .accordion-block {
-  padding: 0.75rem 1.25rem;
-}
-
-.accordion .accordion-header {
-  border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
-  background-color: rgba(29, 39, 44, 0.05);
-}
-
-.accordion .accordion-title {
-  position: relative;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #2975e9;
-  cursor: pointer;
-  text-align: inherit;
-}
-
-.accordion .accordion-title::before {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "";
-  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.accordion .accordion-title.collapsed::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
@@ -5195,6 +5144,55 @@ p:last-child {
 
 .bg-dark .accordion .accordion-title, .off-canvas .accordion .accordion-title, .accordion.bg-dark .accordion-title, .accordion.off-canvas .accordion-title {
   color: #3ed6cf;
+}
+
+.accordion-block.collapse {
+  display: none;
+  height: 0;
+  visibility: hidden;
+}
+
+.accordion-block.collapsing, .accordion-block.collapse.in {
+  display: block;
+  visibility: visible;
+  overflow: hidden;
+  height: auto;
+  transition: height 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.accordion-header,
+.accordion-block {
+  padding: 0.75rem 1.25rem;
+}
+
+.accordion-header {
+  border-top: 0.0625rem solid rgba(29, 39, 44, 0.075);
+  background-color: rgba(29, 39, 44, 0.05);
+  cursor: pointer;
+}
+
+.accordion-title {
+  position: relative;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2975e9;
+  text-align: inherit;
+}
+
+.accordion-title::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.collapsed .accordion-title::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .billboard {
