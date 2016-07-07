@@ -1,22 +1,40 @@
 # Apollo UI - CSS Framework
 
-Apollo UI is the CSS framework for implementing the Apollo visual language in web applications.  HTML documentation and examples can be found here (link coming soon) or by running the docs locally (see instructions below).
+Apollo UI is the CSS framework for implementing the Apollo visual language for IMS Health web applications.  HTML documentation and examples can be found at [devdocs.design.imshealth.com](http://devdocs.design.imshealth.com) or by running the docs locally using the instructions below.
 
 ## Getting started
 
-### Get the CSS directly
+### Package Management
 
-If you're just looking for a stylesheet to drop into your project, then the place you should look is:
+Use Apollo UI as a dependency of your application with [NPM](http://npmjs.com) or [Bower](http://bower.io).  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.
 
-`/dist/css/apollo.css`
+#### NPM
+`npm install apollo-ui@1.0.0-beta.3 --save`
 
-### Install via package management
+#### Bower
+`bower install apollo-ui#1.0.0-beta.3 --save`
 
-Coming soon.
 
-### CSS via CDN
+### Compiled Stylesheets
 
-Coming soon.
+You can easily access the compiled CSS for Apollo using one of the CDN endpoints. This is the fastest way to start using Apollo styles in your project.
+
+#### Expanded CSS
+`<link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0-beta.3/apollo.css">`
+
+#### Minified CSS
+`<link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0-beta.3/apollo.min.css">`
+
+### Compiled JavaScript
+
+Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel. Include this script at the bottom of your page, after including jQuery.
+
+#### Expanded JS
+`<script src="//cdn.ims.io/design/js/1.0.0-beta.3/apollo.js"></script>`
+
+#### Minified JS
+`<script src="//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"></script>`
+
 
 ## Development server
 
