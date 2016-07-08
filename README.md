@@ -21,29 +21,18 @@ bower install apollo-ui#1.0.0-beta.3 --save
 
 ### Compiled Stylesheets
 
-You can easily access the compiled CSS for Apollo using one of the CDN endpoints. This is the fastest way to start using Apollo styles in your project.
+You can easily access the compiled CSS for Apollo from our CDN. This is the fastest way to start using Apollo styles in your project.
 
-#### Expanded CSS
-```
-<link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0-beta.3/apollo.css">
-```
-
-#### Minified CSS
 ```
 <link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0-beta.3/apollo.min.css">
 ```
 
 ### Compiled JavaScript
 
-Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel. Include this script at the bottom of your page, after including jQuery.
+Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel. Include this script at the bottom of your page, after including a current version jQuery as shown below.
 
-#### Expanded JS
 ```
-<script src="//cdn.ims.io/design/js/1.0.0-beta.3/apollo.js"></script>
-```
-
-#### Minified JS
-```
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"></script>
 ```
 
