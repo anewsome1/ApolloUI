@@ -206,15 +206,29 @@
 
     <div class="show-grid">
 
-<section class="docs-section">
-<div class="docs-example-intro">
+  <section class="docs-section">
+
+    <p>We use a 12-column responsive grid to give designers and developers a set of layout tools for building responsive web applications.  The grid consists of three essential parts:
+      <ol>
+        <li><b>Container</b> &ndash; Sets max-width and adds outer gutters.</li>
+        <li><b>Row</b> &ndash; Encapsulates columns and offsets outer gutters.</li>
+        <li><b>Column</b> &ndash; Holds content and adds gutters on either side.</li>
+      </ol>
+    </p>
+    <p>Below are examples of various ways to use the pre-defined grid classes to create responsive layouts.</p>
+
+  </section>
+
+
+  <section class="docs-section">
+  <div class="docs-example-intro">
   <h6 class="docs-example-title">Common layouts</h6>
-  <p class="docs-example-description">Below are examples of some common column layouts, including 1/2, 1/3, 1/4, and 1/4 - 3/4.</p>
+  <p class="docs-example-description">Here are examples of some common column layouts, including 1/2, 1/3, 1/4, and 1/4 - 3/4.</p>
 </div>
 
 
 
-
+  
 <div class="docs-example docs-example-1 ">
   
   <div class="docs-example-rendered"><div class="docs-example-rendered-group">
@@ -280,18 +294,18 @@
 </div>
 
 
-</section>
+  </section>
 
 
-<section class="docs-section">
-<div class="docs-example-intro">
+  <section class="docs-section">
+  <div class="docs-example-intro">
   <h6 class="docs-example-title">Responsive columns</h6>
   <p class="docs-example-description">The grid is responsive using the mobile-first approach.  So you start by defining the column width for the <code>xs</code> screen size, then again for each screen size where you want the column width to change. If you skip a screen size, it will automatically inherit the size from the next smaller size that was specified.  For example, <code>.col-xs-12 .col-md-6</code> would apply 12 column width to <code>sm</code> screens since the next smaller size is <code>.col-xs-12</code>.</p>
 </div>
 
 
 
-
+  
 <div class="docs-example docs-example-1 ">
   
   <div class="docs-example-rendered"><div class="docs-example-rendered-group">
@@ -321,19 +335,19 @@
 </div>
 
 
-</section>
+  </section>
 
 
 
-<section class="docs-section">
-<div class="docs-example-intro">
+  <section class="docs-section">
+  <div class="docs-example-intro">
   <h6 class="docs-example-title">Column Offsets</h6>
   <p class="docs-example-description">Grid columns can be offset as needed to shift content or visually center a column.  As with everything else in the grid, these offsets can be applied on a per screen size basis.</p>
 </div>
 
 
 
-
+  
 <div class="docs-example docs-example-1 ">
   
   <div class="docs-example-rendered"><div class="docs-example-rendered-group">
@@ -381,48 +395,47 @@
 </div>
 
 
-</section>
+  </section>
 
 
-<section class="docs-section">
-<div class="docs-example-intro">
+  <section class="docs-section">
+  <div class="docs-example-intro">
   <h6 class="docs-example-title">Push and pull</h6>
   <p class="docs-example-description">Columns can be shifted right or left using the <code>.push-*</code> and <code>.pull-*</code> classes.  This approach can be used to visually swap the order of columns when you need them to flow A > B for one screen size, but B > A on another.  The example below swaps the column order for <code>md</code> screen and larger.</p>
 </div>
 
+  
 
-
-
+  
 <div class="docs-example docs-example-1 ">
   
   <div class="docs-example-rendered"><div class="docs-example-rendered-group">
   
   
   
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-4 col-md-push-8">A</div>
-    <div class="col-xs-8 col-md-pull-4">B</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-4 col-md-push-8">A</div>
+      <div class="col-xs-8 col-md-pull-4">B</div>
+    </div>
   </div>
-</div>
-
+  
   
 </div>
 </div>
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-4 col-md-push-8"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-8 col-md-pull-4"</span><span class="nt">&gt;</span>B<span class="nt">&lt;/div&gt;</span>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-4 col-md-push-8"</span><span class="nt">&gt;</span>A<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-8 col-md-pull-4"</span><span class="nt">&gt;</span>B<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  </code></pre></figure>
 </div>
 </div>
 
 
-</section>
-
-
+  </section>
 
 </div>
   </article>
