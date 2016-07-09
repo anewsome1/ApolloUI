@@ -103,6 +103,10 @@
   text-transform: uppercase;
 }
 
+.docs-example {
+  margin-bottom: $display3-size;
+}
+
 .docs-example-rendered-group {
   margin-bottom: $spacer-y * 2;
 }
@@ -112,9 +116,6 @@
   padding-bottom: $spacer-y;
 }
 
-.docs-example-code {
-  margin-bottom: $display3-size;
-}
 
 ///
 /// Example layouts
@@ -230,21 +231,45 @@
 /// Color palette
 ///
 
-.docs-color-block {
-  position: relative;
-  float: left;
-  width: percentage(1 / 6);
-  // margin-bottom: $spacer;
-  height: 10rem;
+.docs-color-group {
+  column-gap: $grid-gutter-width;
 
-  .docs-color-label {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  &-primary {
+    columns: 3;
+  }
+
+  &-secondary {
+    columns: 4;
+  }
+
+  &-functional {
+    columns: 6;
+  }
+} 
+
+
+.docs-color-swatch {
+  // display: flex;
+  // flex-direction: column;
+}
+
+.docs-color-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  height: 8rem;
+
+  &:first-child {
+    height: 16rem;
+  }
+
+  .docs-color-props {
+    display: flex;
+    justify-content: space-between;
     padding: ($spacer / 2) $spacer;
-    // font-weight: 600;
     color: #fff;
-    background-color: rgba($charcoal-darker,.5);
+    background-color: rgba(#000,.3);
   }
 }
 

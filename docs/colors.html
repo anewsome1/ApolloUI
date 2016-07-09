@@ -5,11 +5,32 @@ category: scaffolding
 order: 10
 ---
 <section class="docs-section">
-  <div class="clearfix">
-  {% for color in site.data._palette %}
-    <div class="docs-color-block" style="background-color:{{ color[1] }};">
-      <div class="docs-color-label">{{ color[0] }}<br>{{ color[1] | downcase }}</div>
-    </div>
+
+  <p class="docs-example-description">Each color from the brand color palette is available as a variable when building Apollo UI into your application.  Below are all the available shades for each color, including the variable name and value for each.</p>
+  
+  {% assign color_categories = site.data._palette.properties | group_by: 'category' %}
+
+  {% for group in color_categories %}
+      <h6 class="docs-example-title">{{ group.name | capitalize }} Colors</h6>
+
+      <div class="docs-color-group docs-color-group-{{ group.name }} docs-example-intro">
+        
+        {% assign base_color = group.items | group_by: 'base' %}
+
+        {% for group in base_color %}
+          <div class="docs-color-swatch clearfix">
+            {% for shade in group.items %}
+            <div class="docs-color-block" style="background-color:{{ shade.value }}">
+              <div class="docs-color-props">
+                <div class="docs-color-name">${{ shade.name-raw }}</div>
+                <div class="docs-color-value">{{ shade.value }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        {% endfor %}
+      </div>
   {% endfor %}
-  </div>
+
 </section>
