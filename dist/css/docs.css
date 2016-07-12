@@ -251,8 +251,10 @@ body {
   font-family: "Merriweather", Georgia, serif;
 }
 
-.docs-example-description {
-  width: 50%;
+@media (min-width: 992px) {
+  .docs-example-description {
+    width: 50%;
+  }
 }
 
 .docs-example-intro {
