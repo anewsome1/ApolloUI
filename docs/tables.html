@@ -3,10 +3,15 @@ layout: component
 title: Tables
 category: components
 order: 8
-description: Here's how tables look in Apollo.  A few different button styles have been used to show how each looks in a table.
 ---
+<section class="docs-section">
+  <p class="docs-example-description">Tables provide a great way to organize sets of tabular data or other lists of structured information.</p>
+</section>
+
 
 <section class="docs-section">
+
+{% include example-intro.html title='Basic table' description='Adding the base <code>.table</code> class adds the basic table styling, such as headers, padding, alternating row striping, etc.' %}
 
 {% capture example %}
 <table class="table">
@@ -52,6 +57,8 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 <section class="docs-section">
 
+{% include example-intro.html title='Border' description='Add a border to any table by adding the <code>.table-bordered</code> class.' %}
+
 {% capture example %}
 <table class="table table-bordered">
   <thead>
@@ -95,6 +102,8 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 
 <section class="docs-section">
+
+{% include example-intro.html title='Mobile layout' description='When displaying tables on small screens, you can use definition lists to repeat column headings in each cell.' %}
 
 {% capture example %}
 <table class="table table-bordered">
@@ -152,6 +161,9 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 {% endcapture %}
 
 {% include example.html size='half' code=example %}
+
+{% include docs-callout.html state='info' title='Mobile-only pattern' body='The example above is <em>not</em> responsive.  To use it in a responsive application, you will need to have two tables on the page and use the responsive visibility classes to show and hide each as needed.' %}
+
 
 </section>
 
