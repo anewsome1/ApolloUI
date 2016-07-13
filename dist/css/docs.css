@@ -530,6 +530,10 @@ body {
   margin-bottom: 0;
 }
 
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
+}
+
 .docs-callout.docs-callout-success {
   border-left: 0.25rem solid #2cc039;
 }
