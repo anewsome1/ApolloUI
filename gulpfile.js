@@ -13,6 +13,7 @@ var sass          = require( 'gulp-sass' );
 var postcss       = require( 'gulp-postcss' );
 var autoprefixer  = require( 'autoprefixer' );
 var cssnano       = require( 'cssnano' );
+var exec          = require( 'child_process' ).exec;
 var theo          = require( 'theo' );
 var awspublish    = require( 'gulp-awspublish' );
 var AWS           = require( 'aws-sdk' );
@@ -144,8 +145,6 @@ gulp.task( 'docs', [ 'jekyll' ], function() {
 
 
 gulp.task( 'jekyll', function ( gulpCallBack ) {
-  var exec = require( 'child_process' ).exec;
-
   exec( 'jekyll build', function( err, stdout, stderr ) {
     console.log( stdout );
     console.error( stderr );
@@ -264,10 +263,44 @@ gulp.task( 'publish-docs', function() {
 
 
 ///
+/// Tag and publish to npm
+///
+
+gulp.task( 'publish-tags', function () {
+  
+  // Error handling for shell commands
+  function handleErrors( err, stdout, stderr ) {
+    if( err ) {
+      console.error( err );
+      return;
+    }
+    console.log( stdout );
+    console.error( stderr );
+  }
+
+  // Create tag using current version number
+  exec( 'git tag v' + strings.VERSION, function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+  
+  // Push newly created tag
+  exec( 'git push --tags', function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+  
+
+  exec( 'npm publish', function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+});
+
+
+
+///
 /// Conglomerate tasks
 ///
 
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
-gulp.task( 'publish', [ 'publish-css', 'publish-js' ]);
+gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
