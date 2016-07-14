@@ -13,15 +13,18 @@ var sass          = require( 'gulp-sass' );
 var postcss       = require( 'gulp-postcss' );
 var autoprefixer  = require( 'autoprefixer' );
 var cssnano       = require( 'cssnano' );
+var exec          = require( 'child_process' ).exec;
 var theo          = require( 'theo' );
-
+var awspublish    = require( 'gulp-awspublish' );
+var AWS           = require( 'aws-sdk' );
 
 ///
 /// Local variables
 ///
 
 var strings = {
-  VERSION: '/*! Apollo JS v1.0.0-beta.3 */'
+  VERSION_COMMENT: '/*! Apollo JS v1.0.0-beta.3 */',
+  VERSION: '1.0.0-beta.3'
 };
 
 var path = {
@@ -79,7 +82,7 @@ gulp.task( 'apollo-scripts', function() {
     }))
     .pipe( gulp.dest( path.JS_DEST ))
     .pipe( uglify() )
-    .pipe( insert.prepend( strings.VERSION ))
+    .pipe( insert.prepend( strings.VERSION_COMMENT ))
     .pipe( rename({
       suffix: '.min'
     }))
@@ -142,8 +145,6 @@ gulp.task( 'docs', [ 'jekyll' ], function() {
 
 
 gulp.task( 'jekyll', function ( gulpCallBack ) {
-  var exec = require( 'child_process' ).exec;
-
   exec( 'jekyll build', function( err, stdout, stderr ) {
     console.log( stdout );
     console.error( stderr );
@@ -199,10 +200,107 @@ gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
 });
 
 
+gulp.task( 'deploy-css', function() {
+  var publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION + '/bork'
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+  });
+
+  return gulp.src( './dist/css/apollo*.css' )
+    .pipe( publisher.publish() );
+});
+
+
+///
+/// Publish to CDN
+///
+
+gulp.task( 'publish-css', function() {
+  var publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+  });
+
+  return gulp.src( './dist/css/apollo*.css' )
+    .pipe( publisher.publish() );
+});
+
+gulp.task( 'publish-js', function() {
+  var publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: 'nexxus-marketing-staticcontent/design/js/' + strings.VERSION
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+  });
+
+  return gulp.src( './dist/js/apollo*.js' )
+    .pipe( publisher.publish() );
+});
+
+gulp.task( 'publish-docs', function() {
+  var publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: 'design.imshealth.com/resources/interfaces/components/'
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'drb-docs' })
+  });
+
+  return gulp.src( './dist/*.html' )
+    .pipe( publisher.publish() );
+});
+
+
+///
+/// Tag and publish to npm
+///
+
+gulp.task( 'publish-tags', function () {
+  
+  // Error handling for shell commands
+  function handleErrors( err, stdout, stderr ) {
+    if( err ) {
+      console.error( err );
+      return;
+    }
+    console.log( stdout );
+    console.error( stderr );
+  }
+
+  // Create tag using current version number
+  exec( 'git tag v' + strings.VERSION, function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+  
+  // Push newly created tag
+  exec( 'git push --tags', function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+  
+
+  exec( 'npm publish', function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+});
+
+
+
 ///
 /// Conglomerate tasks
 ///
 
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
+gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
