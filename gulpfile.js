@@ -200,21 +200,6 @@ gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
 });
 
 
-gulp.task( 'deploy-css', function() {
-  const publisher = awspublish.create({
-    region: 'us-west-2', // US West Oregon
-    params: {
-      Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION + '/bork'
-    },
-    signatureVersion: 'v3',
-    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
-  });
-
-  return gulp.src( './dist/css/apollo*.css' )
-    .pipe( publisher.publish() );
-});
-
-
 ///
 /// Publish to CDN
 ///
@@ -223,7 +208,7 @@ gulp.task( 'publish-css', function() {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
-      Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION
+      Bucket: `nexxus-marketing-staticcontent/design/css/${ strings.VERSION }`
     },
     signatureVersion: 'v3',
     credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
@@ -237,7 +222,7 @@ gulp.task( 'publish-js', function() {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
-      Bucket: 'nexxus-marketing-staticcontent/design/js/' + strings.VERSION
+      Bucket: `nexxus-marketing-staticcontent/design/js/${ strings.VERSION }`
     },
     signatureVersion: 'v3',
     credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
