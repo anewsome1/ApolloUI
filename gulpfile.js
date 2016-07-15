@@ -2,32 +2,32 @@
 /// Dependencies
 ///
 
-var gulp          = require( 'gulp' );
-var del           = require( 'del' );
-var rename        = require( 'gulp-rename' );
-var insert        = require( 'gulp-insert' );
-var browserSync   = require( 'browser-sync' );
-var webpack       = require( 'webpack-stream' );
-var uglify        = require( 'gulp-uglify' );
-var sass          = require( 'gulp-sass' );
-var postcss       = require( 'gulp-postcss' );
-var autoprefixer  = require( 'autoprefixer' );
-var cssnano       = require( 'cssnano' );
-var exec          = require( 'child_process' ).exec;
-var theo          = require( 'theo' );
-var awspublish    = require( 'gulp-awspublish' );
-var AWS           = require( 'aws-sdk' );
+const gulp          = require( 'gulp' );
+const del           = require( 'del' );
+const rename        = require( 'gulp-rename' );
+const insert        = require( 'gulp-insert' );
+const browserSync   = require( 'browser-sync' );
+const webpack       = require( 'webpack-stream' );
+const uglify        = require( 'gulp-uglify' );
+const sass          = require( 'gulp-sass' );
+const postcss       = require( 'gulp-postcss' );
+const autoprefixer  = require( 'autoprefixer' );
+const cssnano       = require( 'cssnano' );
+const exec          = require( 'child_process' ).exec;
+const theo          = require( 'theo' );
+const awspublish    = require( 'gulp-awspublish' );
+const AWS           = require( 'aws-sdk' );
 
 ///
 /// Local variables
 ///
 
-var strings = {
+const strings = {
   VERSION_COMMENT: '/*! Apollo JS v1.0.0-beta.3 */',
   VERSION: '1.0.0-beta.3'
 };
 
-var path = {
+const path = {
   SCSS_SRC_ALL: 'scss/**/*.scss',
   SCSS_SRC_MAIN: 'scss/apollo.scss',
   DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
@@ -201,7 +201,7 @@ gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
 
 
 gulp.task( 'deploy-css', function() {
-  var publisher = awspublish.create({
+  const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
       Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION + '/bork'
@@ -220,7 +220,7 @@ gulp.task( 'deploy-css', function() {
 ///
 
 gulp.task( 'publish-css', function() {
-  var publisher = awspublish.create({
+  const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
       Bucket: 'nexxus-marketing-staticcontent/design/css/' + strings.VERSION
@@ -234,7 +234,7 @@ gulp.task( 'publish-css', function() {
 });
 
 gulp.task( 'publish-js', function() {
-  var publisher = awspublish.create({
+  const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
       Bucket: 'nexxus-marketing-staticcontent/design/js/' + strings.VERSION
@@ -248,7 +248,7 @@ gulp.task( 'publish-js', function() {
 });
 
 gulp.task( 'publish-docs', function() {
-  var publisher = awspublish.create({
+  const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
       Bucket: 'design.imshealth.com/resources/interfaces/components/'
@@ -282,7 +282,6 @@ gulp.task( 'publish-tags', function () {
                    git push --tags
                    npm publish`;
 
-  // Create tag using current version number
   exec( command, function( err, stdout, stderr ) {
     handleErrors( err, stdout, stderr );
   });
