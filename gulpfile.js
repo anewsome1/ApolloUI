@@ -278,18 +278,12 @@ gulp.task( 'publish-tags', function () {
     console.error( stderr );
   }
 
-  // Create tag using current version number
-  exec( 'git tag v' + strings.VERSION, function( err, stdout, stderr ) {
-    handleErrors( err, stdout, stderr );
-  });
-  
-  // Push newly created tag
-  exec( 'git push --tags', function( err, stdout, stderr ) {
-    handleErrors( err, stdout, stderr );
-  });
-  
+  const command = `git tag v${ strings.VERSION }
+                   git push --tags
+                   npm publish`;
 
-  exec( 'npm publish', function( err, stdout, stderr ) {
+  // Create tag using current version number
+  exec( command, function( err, stdout, stderr ) {
     handleErrors( err, stdout, stderr );
   });
 });
