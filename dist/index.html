@@ -172,13 +172,13 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="./accordion.html">Accordion</a>
+      <a href="./carousel.html">Carousel</a>
     </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="./carousel.html">Carousel</a>
+      <a href="./accordion.html">Accordion</a>
     </li>
   
     
@@ -228,7 +228,7 @@
 
 
   <div class="row">
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-lg-6">
       
       
 <h6 class="docs-example-label">NPM</h6>
@@ -240,7 +240,7 @@
 </div>
 
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-lg-6">
       
       
 <h6 class="docs-example-label">Bower</h6>
@@ -257,28 +257,14 @@
 
   <div class="docs-example-intro">
   <h6 class="docs-example-title">Compiled stylesheets</h6>
-  <p class="docs-example-description">You can easily access the compiled CSS for Apollo using one of the CDN endpoints.  This is the fastest way to start using Apollo styles in your project.</p>
+  <p class="docs-example-description">You can easily access the compiled CSS for Apollo from our CDN.  This is the fastest way to start using Apollo styles in your project.</p>
 </div>
 
 
   
 
   
-<h6 class="docs-example-label">Expanded CSS</h6>
-
-<div class="docs-example docs-example-3 ">
-  
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.3/apollo.css"</span><span class="nt">&gt;</span></code></pre></figure>
-</div>
-</div>
-
-
-  
-
-  
-<h6 class="docs-example-label">Minified CSS</h6>
-
-<div class="docs-example docs-example-3 ">
+<div class="docs-example docs-example-2 ">
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.3/apollo.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
 </div>
@@ -288,33 +274,64 @@
 
   <div class="docs-example-intro">
   <h6 class="docs-example-title">Compiled JavaScript</h6>
-  <p class="docs-example-description">Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the <strong>bottom</strong> of your page, after including jQuery.</p>
+  <p class="docs-example-description">Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the bottom of your page, after including a current version of jQuery as shown below.</p>
 </div>
 
 
-  
+
 
   
-<h6 class="docs-example-label">Expanded JS</h6>
-
-<div class="docs-example docs-example-3 ">
+<div class="docs-example docs-example-2 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 </div>
 </div>
 
 
-  
 
-  
-<h6 class="docs-example-label">Minified JS</h6>
 
-<div class="docs-example docs-example-3 ">
+  <div class="docs-example-intro">
+  <h6 class="docs-example-title">Starter Template</h6>
+  <p class="docs-example-description">
+<p>Be sure to have your pages set up with the latest design and development standards, including:
+  <ul>
+    <li>Using an HTML5 doctype</li>
+    <li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
+    <li>And, utilizing the viewport meta tag.</li>
+  </ul>
+</p>
+<p>Put it all together and your pages should look something like this:</p>
+</p>
+</div>
+
+
+
+
+
+<div class="docs-example docs-example-2 ">
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- Required meta tags always come first --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"x-ua-compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- Apollo CSS --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.ims.io/design/css/1.0.0-beta.3/apollo.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- jQuery first, then Apollo JS. --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.ims.io/design/js/1.0.0-beta.3/apollo.min.js"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 </div>
 </div>
-
 
 
 </section>

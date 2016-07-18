@@ -1,5 +1,4 @@
 @import '_props/palette';
-@import '_props/palette.map';
 
 
 ///
@@ -201,6 +200,11 @@ $alert-shadow-height:         .625rem;  // ~10px
 
 // Colors
 $alert-states: (
+  info: (
+    bg: $brand-info,
+    color: #fff,
+    icon: 'info-circle'
+  ),
   success: (
     bg: $brand-success,
     color: #fff,

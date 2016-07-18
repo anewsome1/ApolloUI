@@ -251,8 +251,10 @@ body {
   font-family: "Merriweather", Georgia, serif;
 }
 
-.docs-example-description {
-  width: 50%;
+@media (min-width: 992px) {
+  .docs-example-description {
+    width: 50%;
+  }
 }
 
 .docs-example-intro {
@@ -271,6 +273,10 @@ body {
   text-transform: uppercase;
 }
 
+.docs-example {
+  margin-bottom: 2.25rem;
+}
+
 .docs-example-rendered-group {
   margin-bottom: 2rem;
 }
@@ -278,10 +284,6 @@ body {
 .docs-example-label {
   margin-bottom: 0;
   padding-bottom: 1rem;
-}
-
-.docs-example-code {
-  margin-bottom: 2.25rem;
 }
 
 @media (min-width: 992px) {
@@ -382,20 +384,60 @@ body {
   }
 }
 
-.docs-color-block {
-  position: relative;
-  float: left;
-  width: 16.66667%;
-  height: 10rem;
+.docs-color-group {
+  -webkit-column-gap: 1.875rem;
+     -moz-column-gap: 1.875rem;
+          column-gap: 1.875rem;
 }
 
-.docs-color-block .docs-color-label {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.docs-color-group-primary {
+  -webkit-columns: 3;
+     -moz-columns: 3;
+          columns: 3;
+}
+
+.docs-color-group-secondary {
+  -webkit-columns: 4;
+     -moz-columns: 4;
+          columns: 4;
+}
+
+.docs-color-group-functional {
+  -webkit-columns: 6;
+     -moz-columns: 6;
+          columns: 6;
+}
+
+.docs-color-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 8rem;
+}
+
+.docs-color-block:first-child {
+  height: 16rem;
+}
+
+.docs-color-block .docs-color-props {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: rgba(29, 39, 44, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .show-grid .row {
@@ -407,7 +449,7 @@ body {
   padding-bottom: 1rem;
   text-align: center;
   color: #fff;
-  background-color: #3a4f59;
+  background-color: #339E99;
   border: 0.0625rem solid #fff;
 }
 
@@ -486,6 +528,10 @@ body {
 
 .docs-callout p:last-of-type {
   margin-bottom: 0;
+}
+
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
 }
 
 .docs-callout.docs-callout-success {

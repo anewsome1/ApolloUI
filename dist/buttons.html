@@ -172,13 +172,13 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="./accordion.html">Accordion</a>
+      <a href="./carousel.html">Carousel</a>
     </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="./carousel.html">Carousel</a>
+      <a href="./accordion.html">Accordion</a>
     </li>
   
     
@@ -204,132 +204,109 @@
   <h1 class="docs-page-title">Buttons</h1>
 </header>
 
-    <!-- <section class="docs-section">
+    <section class="docs-section">
+  <p class="docs-example-description">A button indicates a possible user action.  Apollo buttons feature clean, crisp edges.  The rectangular button conveys Apollo's precise and efficient qualities.  The floating nature of the hover state gives focus to the task.  The reverb click animation gives users visual feedback in an Apollo way.</p>
+</section>
 
+<section class="docs-section">
 
-
-
-
-<div class="docs-illustration docs-illustration-half">
-  <div class="docs-illustration-copy">
-    
-
-<div class="docs-section-overview">
-  <h3 class="docs-section-title">Button Overview</h3>
-  
-<p>A button indicates a possible user action.  Apollo buttons feature clean, crisp edges.  The rectangular button conveys Apollo's precise and efficient qualities.  The floating nature of the hover state gives focus to the task.  The reverb click animation gives users visual feedback in an Apollo way.</p>
-<p>Buttons come in three versions.  Primary and secondary are used to indicate priority in call to actions, such as "save" and "cancel".  The Link style button is designed to be used alongside a primary or secondary button when the secondary action needs to be de-emphasized.</p>
-<p>Each of the states shown here are triggered by native pseudo-classes, like <code>:hover</code>, <code>:active</code> to give users.  Utility classes with matching names (<code>.hover</code>, <code>.active</code>) are also available to apply the same styling as needed.</p>
-
-</div>
-
-
-  </div>
-  <div class="docs-illustration-code">
-    
-<div class="docs-card">
-
-<div class="docs-example-rendered-group">
-  
-  <h6 class="docs-example-label">Default state</h6>
-  
-  
-  
-<button class="btn btn-primary" type="button">Edit</button>
-<button class="btn btn-secondary" type="button">Edit</button>
-
-  
+<div class="docs-example-intro">
+  <h6 class="docs-example-title">Button tags</h6>
+  <p class="docs-example-description">Use the button classes on a <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, or <code>&lt;input&gt;</code> element.  If an <code>&lt;a&gt;</code> element is used to act as a button &mdash; triggering in-page functionality, rather than navigating to another document or section within the current page &mdash; it should also be given an appropriate <code>role="button"</code>. As a best practice, we highly recommend using the <code>&lt;button&gt;</code> element whenever possible to ensure matching cross-browser rendering.</p>
 </div>
 
 
 
-<div class="docs-example-rendered-group">
+
+<h6 class="docs-example-label">Anchor tag</h6>
+
+<div class="docs-example docs-example-fourth ">
   
-  <h6 class="docs-example-label">Hover</h6>
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
   
   
   
-<button class="btn btn-primary hover" type="button">Edit</button>
-<button class="btn btn-secondary hover" type="button">Edit</button>
+<a class="btn btn-primary" href="#0" role="button">Link</a>
 
   
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+</div>
 </div>
 
 
 
-<div class="docs-example-rendered-group">
+
+<h6 class="docs-example-label">Button tag</h6>
+
+<div class="docs-example docs-example-fourth ">
   
-  <h6 class="docs-example-label">Active</h6>
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
   
   
   
-<button class="btn btn-primary active" type="button">Edit</button>
-<button class="btn btn-secondary active" type="button">Edit</button>
+<button class="btn btn-primary" type="button">Button</button>
 
   
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+</div>
 </div>
 
 
 
-<div class="docs-example-rendered-group">
+
+<h6 class="docs-example-label">Input tag (button)</h6>
+
+<div class="docs-example docs-example-fourth ">
   
-  <h6 class="docs-example-label">Disabled</h6>
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
   
   
   
-<button class="btn btn-primary" type="button" disabled>Edit</button>
-<button class="btn btn-secondary" type="button" disabled>Edit</button>
+<input class="btn btn-primary" type="button" value="Input">
 
   
 </div>
-
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span></code></pre></figure>
+</div>
 </div>
 
-  </div>
+
+
+
+<h6 class="docs-example-label">Input tag (submit)</h6>
+
+<div class="docs-example docs-example-fourth ">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<input class="btn btn-primary" type="submit" value="Submit">
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span></code></pre></figure>
+</div>
 </div>
 
 
-</section> -->
+</section>
 
 
 <section class="docs-section">
 
-
-
-
-
-<div class="docs-illustration docs-illustration-half">
-  <div class="docs-illustration-copy">
-    
-
-
-<div class="docs-section-overview">
-  <h3 class="docs-section-title">Using a button</h3>
-  
-<p>Use the button classes on a <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, or <code>&lt;input&gt;</code> element.  If an <code>&lt;a&gt;</code> element is used to act as a button &mdash; triggering in-page functionality, rather than navigating to another document or section within the current page &mdash; it should also be given an appropriate <code>role="button"</code>. As a best practice, we highly recommend using the &lt;button&gt; element whenever possible to ensure matching cross-browser rendering.</p>
-
-</div>
-
-
-  </div>
-  <div class="docs-illustration-code">
-    
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Using &lt;button&gt; tag --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;</span>
-
-<span class="c">&lt;!-- Using &lt;a&gt; tag with button role --&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
-
-<span class="c">&lt;!-- Using &lt;input&gt; tag with submit or button type --&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"submit"</span><span class="nt">&gt;</span></code></pre></figure>
-
-  </div>
-</div>
-
-
-
 <div class="docs-example-intro">
-  <h6 class="docs-example-title">Button Variants</h6>
+  <h6 class="docs-example-title">Options</h6>
   <p class="docs-example-description">Primary buttons are used to indicate a call to action, while secondary buttons present an alternative action.  Link style buttons are useful for vertically aligning a link that is adjacent to a primary or secondary button.</p>
 </div>
 
@@ -386,13 +363,13 @@
   
   
   
-<button class="btn btn-link" type="button">Edit</button>
+<a class="btn btn-link" href="#0" role="button">Edit</a>
 
   
 </div>
 </div>
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span></code></pre></figure>
 </div>
 </div>
 
@@ -454,7 +431,7 @@
 <section class="docs-section">
 
 <div class="docs-example-intro">
-  <h6 class="docs-example-title">Button Sizes</h6>
+  <h6 class="docs-example-title">Sizes</h6>
   <p class="docs-example-description">Large and small size options are available to use.  A large button works well for a prominent call to action, while small buttons are suited for use inside a table where space is limited.  Block-level buttons are full-width and can be combined with small or large button styles.</p>
 </div>
 
@@ -543,7 +520,7 @@
   
   
 <button class="btn btn-secondary" type="button">
-<span class="icon icon-edit"></span>
+  <span class="icon icon-edit"></span>
 </button>
 
   
@@ -551,7 +528,7 @@
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 </div>
 </div>
@@ -568,8 +545,8 @@
   
   
 <button class="btn btn-secondary" type="button">
-<span class="icon icon-edit"></span>
-Edit
+  <span class="icon icon-edit"></span>
+  Edit
 </button>
 
   
@@ -577,8 +554,8 @@ Edit
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>
-Edit
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Edit
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 </div>
 </div>

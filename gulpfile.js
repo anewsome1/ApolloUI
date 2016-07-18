@@ -171,17 +171,11 @@ gulp.task( 'theo-colors-scss', [ 'clean:theo' ], function() {
     .pipe( gulp.dest( 'scss/_props' ));
 });
 
-gulp.task( 'theo-colors-scss-map', [ 'clean:theo' ], function() {
-  gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'map.scss' ))
-    .pipe( gulp.dest( 'scss/_props' ));
-});
-
 gulp.task( 'theo-colors-json', [ 'clean:theo' ], function() {
   gulp.src( 'theo/_palette.json')
     .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'json' ))
+    .pipe( theo.plugins.format( 'ios.json' ))
+    .pipe( rename( '_palette.json' )) // overwrite ios renaming scheme
     .pipe( gulp.dest( 'docs/_data' ));
 });
 
@@ -252,7 +246,7 @@ gulp.task( 'publish-docs', function() {
 ///
 
 gulp.task( 'publish-tags', function () {
-  
+
   // Error handling for shell commands
   function handleErrors( err, stdout, stderr ) {
     if( err ) {
@@ -278,7 +272,7 @@ gulp.task( 'publish-tags', function () {
 /// Conglomerate tasks
 ///
 
-gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-scss-map', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
+gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);

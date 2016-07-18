@@ -3,10 +3,15 @@ layout: component
 title: Tables
 category: components
 order: 8
-description: Here's how tables look in Apollo.  A few different button styles have been used to show how each looks in a table.
 ---
+<section class="docs-section">
+  <p class="docs-example-description">Tables provide a great way to organize sets of tabular data or other lists of structured information.</p>
+</section>
+
 
 <section class="docs-section">
+
+{% include example-intro.html title='Basic table' description='Adding the base <code>.table</code> class adds the basic table styling, such as headers, padding, alternating row striping, etc.' %}
 
 {% capture example %}
 <table class="table">
@@ -52,6 +57,8 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 <section class="docs-section">
 
+{% include example-intro.html title='Border' description='Add a border to any table by adding the <code>.table-bordered</code> class.' %}
+
 {% capture example %}
 <table class="table table-bordered">
   <thead>
@@ -95,6 +102,8 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 
 <section class="docs-section">
+
+{% include example-intro.html title='Mobile layout' description='When displaying tables on small screens, you can use definition lists to repeat column headings in each cell.' %}
 
 {% capture example %}
 <table class="table table-bordered">
@@ -153,10 +162,15 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 {% include example.html size='half' code=example %}
 
+{% include docs-callout.html state='info' title='Mobile-only pattern' body='The example above is <em>not</em> responsive.  To use it in a responsive application, you will need to have two tables on the page and use the responsive visibility classes to show and hide each as needed.' %}
+
+
 </section>
 
 
 <section class="docs-section">
+
+{% include example-intro.html title='Hover rows' description='When an entire row can be selected for an action, use the <code>.table-hover</code> class to highlight rows on hover.' %}
 
 {% capture example %}
 <table class="table table-hover">
@@ -202,49 +216,7 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 
 <section class="docs-section">
 
-{% capture example %}
-<table class="table table-sm">
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th>Capital</th>
-      <th>Population</th>
-      <th>Language</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>USA</td>
-      <td>Washington D.C.</td>
-      <td>309 million</td>
-      <td>English</td>
-      <td><button class="btn btn-primary btn-sm">Edit</button></td>
-    </tr>
-    <tr>
-      <td>Germany</td>
-      <td>Berlin</td>
-      <td>81 million</td>
-      <td>German</td>
-      <td><button class="btn btn-secondary btn-sm">Edit</button></td>
-    </tr>
-    <tr>
-      <td>Sweden</td>
-      <td>Stockholm</td>
-      <td>9 million</td>
-      <td>Swedish</td>
-      <td><button class="btn btn-link"><span class="icon icon-edit"></span></button></td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}
-
-{% include example.html code=example %}
-
-</section>
-
-
-<section class="docs-section">
+{% include example-intro.html title='Status indicators' description='Styling options are available to highlight data to indicate status or draw attention to some needed action.' %}
 
 {% capture example %}
 <table class="table table-bordered">
@@ -277,7 +249,23 @@ description: Here's how tables look in Apollo.  A few different button styles ha
       <td>Mattis LLP</td>
       <td>Overdue</td>
     </tr>
-    <!-- border only -->
+  </tbody>
+</table>
+{% endcapture %}
+
+{% include example.html label='Border + Background' code=example %}
+
+
+{% capture example %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Company</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr class="table-border-info">
       <td>16460625-4466</td>
       <td>Ornare Associates</td>
@@ -298,7 +286,23 @@ description: Here's how tables look in Apollo.  A few different button styles ha
       <td>Mattis LLP</td>
       <td class="text-danger">Overdue</td>
     </tr>
-    <!-- icon + contextual classes -->
+  </tbody>
+</table>
+{% endcapture %}
+
+{% include example.html label='Row Border' code=example %}
+
+
+{% capture example %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Company</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>16460625-4466</td>
       <td>Ornare Associates</td>
@@ -332,6 +336,7 @@ description: Here's how tables look in Apollo.  A few different button styles ha
 </table>
 {% endcapture %}
 
-{% include example.html size='half' code=example %}
+{% include example.html label='Icon indicator' code=example %}
+
 
 </section>

@@ -8,7 +8,7 @@
 @if $enable-flex {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @for $col from 1 through $grid-columns {
-      @include media-breakpoint-only($breakpoint) {
+      @include media-breakpoint-up($breakpoint) {
         .col-#{ $breakpoint }-#{ $col } {
           max-width: percentage( $col / $grid-columns );
         }        
