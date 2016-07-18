@@ -51,7 +51,7 @@
   padding-bottom: $display2-size;
 
   &:nth-of-type(even) {
-    background-color: $neutral-light;
+    background-color: $neutral-50;
   }
 }
 
@@ -236,12 +236,9 @@
 .docs-color-group {
   column-gap: $grid-gutter-width;
 
-  &-primary {
-    columns: 3;
-  }
-
+  &-primary,
   &-secondary {
-    columns: 4;
+    columns: 3;
   }
 
   &-functional {
@@ -289,7 +286,7 @@
     padding-bottom: $spacer;
     text-align: center;
     color: #fff;
-    background-color: $teal-dark;
+    background-color: $teal-125;
     border: $border-width solid #fff;
 
     // + div[class^='col-'],

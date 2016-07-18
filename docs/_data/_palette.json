@@ -13,40 +13,40 @@
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
-      "name-raw": "atmosphere-lighter",
-      "name": "atmosphereLighter"
+      "name-raw": "atmosphere-25",
+      "name": "atmosphere25"
     },
     {
       "value": "#98dafd",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
-      "name-raw": "atmosphere-light",
-      "name": "atmosphereLight"
+      "name-raw": "atmosphere-50",
+      "name": "atmosphere50"
     },
     {
       "value": "#2688bd",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
-      "name-raw": "atmosphere-dark",
-      "name": "atmosphereDark"
+      "name-raw": "atmosphere-125",
+      "name": "atmosphere125"
     },
     {
       "value": "#195b7e",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
-      "name-raw": "atmosphere-darker",
-      "name": "atmosphereDarker"
+      "name-raw": "atmosphere-150",
+      "name": "atmosphere150"
     },
     {
       "value": "#0d2d3f",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
-      "name-raw": "atmosphere-darkest",
-      "name": "atmosphereDarkest"
+      "name-raw": "atmosphere-175",
+      "name": "atmosphere175"
     },
     {
       "value": "#297dfd",
@@ -61,40 +61,40 @@
       "type": "color",
       "category": "primary",
       "base": "blue",
-      "name-raw": "blue-lighter",
-      "name": "blueLighter"
+      "name-raw": "blue-25",
+      "name": "blue25"
     },
     {
       "value": "#94befe",
       "type": "color",
       "category": "primary",
       "base": "blue",
-      "name-raw": "blue-light",
-      "name": "blueLight"
+      "name-raw": "blue-50",
+      "name": "blue50"
     },
     {
       "value": "#1f5ebe",
       "type": "color",
       "category": "primary",
       "base": "blue",
-      "name-raw": "blue-dark",
-      "name": "blueDark"
+      "name-raw": "blue-125",
+      "name": "blue125"
     },
     {
       "value": "#153f7f",
       "type": "color",
       "category": "primary",
       "base": "blue",
-      "name-raw": "blue-darker",
-      "name": "blueDarker"
+      "name-raw": "blue-150",
+      "name": "blue150"
     },
     {
       "value": "#0a1f3f",
       "type": "color",
       "category": "primary",
       "base": "blue",
-      "name-raw": "blue-darkest",
-      "name": "blueDarkest"
+      "name-raw": "blue-175",
+      "name": "blue175"
     },
     {
       "value": "#37dad3",
@@ -109,91 +109,43 @@
       "type": "color",
       "category": "primary",
       "base": "teal",
-      "name-raw": "teal-lighter",
-      "name": "tealLighter"
+      "name-raw": "teal-25",
+      "name": "teal25"
     },
     {
       "value": "#9bece9",
       "type": "color",
       "category": "primary",
       "base": "teal",
-      "name-raw": "teal-light",
-      "name": "tealLight"
+      "name-raw": "teal-50",
+      "name": "teal50"
     },
     {
       "value": "#29a49e",
       "type": "color",
       "category": "primary",
       "base": "teal",
-      "name-raw": "teal-dark",
-      "name": "tealDark"
+      "name-raw": "teal-125",
+      "name": "teal125"
     },
     {
       "value": "#1c6d6a",
       "type": "color",
       "category": "primary",
       "base": "teal",
-      "name-raw": "teal-darker",
-      "name": "tealDarker"
+      "name-raw": "teal-150",
+      "name": "teal150"
     },
     {
       "value": "#0e3735",
       "type": "color",
       "category": "primary",
       "base": "teal",
-      "name-raw": "teal-darkest",
-      "name": "tealDarkest"
+      "name-raw": "teal-175",
+      "name": "teal175"
     },
     {
-      "value": "#2b3a43",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray",
-      "name": "gray"
-    },
-    {
-      "value": "#CACDCF",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray-lighter",
-      "name": "grayLighter"
-    },
-    {
-      "value": "#949AA0",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray-light",
-      "name": "grayLight"
-    },
-    {
-      "value": "#1F2A31",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray-dark",
-      "name": "grayDark"
-    },
-    {
-      "value": "#151D21",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray-darker",
-      "name": "grayDarker"
-    },
-    {
-      "value": "#0B0F11",
-      "type": "color",
-      "category": "secondary",
-      "base": "gray",
-      "name-raw": "gray-darkest",
-      "name": "grayDarkest"
-    },
-    {
-      "value": "#3a4f59",
+      "value": "#3a4f5a",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
@@ -201,44 +153,44 @@
       "name": "charcoal"
     },
     {
-      "value": "#CED2D4",
+      "value": "#ced3d6",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
-      "name-raw": "charcoal-lighter",
-      "name": "charcoalLighter"
+      "name-raw": "charcoal-25",
+      "name": "charcoal25"
     },
     {
-      "value": "#9CA7AC",
+      "value": "#9ca7ac",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
-      "name-raw": "charcoal-light",
-      "name": "charcoalLight"
+      "name-raw": "charcoal-50",
+      "name": "charcoal50"
     },
     {
-      "value": "#2B3B43",
+      "value": "#2c3b44",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
-      "name-raw": "charcoal-dark",
-      "name": "charcoalDark"
+      "name-raw": "charcoal-125",
+      "name": "charcoal125"
     },
     {
-      "value": "#1D272C",
+      "value": "#1d282d",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
-      "name-raw": "charcoal-darker",
-      "name": "charcoalDarker"
+      "name-raw": "charcoal-150",
+      "name": "charcoal150"
     },
     {
-      "value": "#0F1416",
+      "value": "#0f1417",
       "type": "color",
       "category": "secondary",
       "base": "charcoal",
-      "name-raw": "charcoal-darkest",
-      "name": "charcoalDarkest"
+      "name-raw": "charcoal-175",
+      "name": "charcoal175"
     },
     {
       "value": "#f7f5f4",
@@ -249,47 +201,47 @@
       "name": "neutral"
     },
     {
-      "value": "#FDFCFC",
+      "value": "#fdfcfc",
       "type": "color",
       "category": "secondary",
       "base": "neutral",
-      "name-raw": "neutral-lighter",
-      "name": "neutralLighter"
+      "name-raw": "neutral-25",
+      "name": "neutral25"
     },
     {
-      "value": "#FBFAF9",
+      "value": "#fbfaf9",
       "type": "color",
       "category": "secondary",
       "base": "neutral",
-      "name-raw": "neutral-light",
-      "name": "neutralLight"
+      "name-raw": "neutral-50",
+      "name": "neutral50"
     },
     {
-      "value": "#B9B8B7",
+      "value": "#b9b8b7",
       "type": "color",
       "category": "secondary",
       "base": "neutral",
-      "name-raw": "neutral-dark",
-      "name": "neutralDark"
+      "name-raw": "neutral-125",
+      "name": "neutral125"
     },
     {
-      "value": "#7B7A7A",
+      "value": "#7c7b7a",
       "type": "color",
       "category": "secondary",
       "base": "neutral",
-      "name-raw": "neutral-darker",
-      "name": "neutralDarker"
+      "name-raw": "neutral-150",
+      "name": "neutral150"
     },
     {
-      "value": "#3E3D3D",
+      "value": "#3e3d3d",
       "type": "color",
       "category": "secondary",
       "base": "neutral",
-      "name-raw": "neutral-darkest",
-      "name": "neutralDarkest"
+      "name-raw": "neutral-175",
+      "name": "neutral175"
     },
     {
-      "value": "#ecdb5d",
+      "value": "#ffcf34",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
@@ -297,44 +249,44 @@
       "name": "yellow"
     },
     {
-      "value": "#FAF6D6",
+      "value": "#fff3cc",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
-      "name-raw": "yellow-lighter",
-      "name": "yellowLighter"
+      "name-raw": "yellow-25",
+      "name": "yellow25"
     },
     {
-      "value": "#F5EDAE",
+      "value": "#ffe799",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
-      "name-raw": "yellow-light",
-      "name": "yellowLight"
+      "name-raw": "yellow-50",
+      "name": "yellow50"
     },
     {
-      "value": "#F4EA7C",
+      "value": "#bf9c27",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
-      "name-raw": "yellow-dark",
-      "name": "yellowDark"
+      "name-raw": "yellow-125",
+      "name": "yellow125"
     },
     {
-      "value": "#BBAD48",
+      "value": "#80681a",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
-      "name-raw": "yellow-darker",
-      "name": "yellowDarker"
+      "name-raw": "yellow-150",
+      "name": "yellow150"
     },
     {
-      "value": "#897F3D",
+      "value": "#40340d",
       "type": "color",
       "category": "secondary",
       "base": "yellow",
-      "name-raw": "yellow-darkest",
-      "name": "yellowDarkest"
+      "name-raw": "yellow-175",
+      "name": "yellow175"
     },
     {
       "value": "#f75040",
@@ -349,32 +301,32 @@
       "type": "color",
       "category": "functional",
       "base": "coral",
-      "name-raw": "coral-lighter",
-      "name": "coralLighter"
+      "name-raw": "coral-25",
+      "name": "coral25"
     },
     {
       "value": "#F77365",
       "type": "color",
       "category": "functional",
       "base": "coral",
-      "name-raw": "coral-light",
-      "name": "coralLight"
+      "name-raw": "coral-50",
+      "name": "coral50"
     },
     {
       "value": "#DE4839",
       "type": "color",
       "category": "functional",
       "base": "coral",
-      "name-raw": "coral-dark",
-      "name": "coralDark"
+      "name-raw": "coral-125",
+      "name": "coral125"
     },
     {
       "value": "#BD3A31",
       "type": "color",
       "category": "functional",
       "base": "coral",
-      "name-raw": "coral-darker",
-      "name": "coralDarker"
+      "name-raw": "coral-150",
+      "name": "coral150"
     },
     {
       "value": "#f7922e",
@@ -389,32 +341,32 @@
       "type": "color",
       "category": "functional",
       "base": "orange",
-      "name-raw": "orange-lighter",
-      "name": "orangeLighter"
+      "name-raw": "orange-25",
+      "name": "orange25"
     },
     {
       "value": "#FFD792",
       "type": "color",
       "category": "functional",
       "base": "orange",
-      "name-raw": "orange-light",
-      "name": "orangeLight"
+      "name-raw": "orange-50",
+      "name": "orange50"
     },
     {
       "value": "#FDBD59",
       "type": "color",
       "category": "functional",
       "base": "orange",
-      "name-raw": "orange-dark",
-      "name": "orangeDark"
+      "name-raw": "orange-125",
+      "name": "orange125"
     },
     {
       "value": "#B7661A",
       "type": "color",
       "category": "functional",
       "base": "orange",
-      "name-raw": "orange-darker",
-      "name": "orangeDarker"
+      "name-raw": "orange-150",
+      "name": "orange150"
     },
     {
       "value": "#2cc039",
@@ -429,32 +381,32 @@
       "type": "color",
       "category": "functional",
       "base": "green",
-      "name-raw": "green-lighter",
-      "name": "greenLighter"
+      "name-raw": "green-25",
+      "name": "green25"
     },
     {
       "value": "#71C272",
       "type": "color",
       "category": "functional",
       "base": "green",
-      "name-raw": "green-light",
-      "name": "greenLight"
+      "name-raw": "green-50",
+      "name": "green50"
     },
     {
       "value": "#68EF66",
       "type": "color",
       "category": "functional",
       "base": "green",
-      "name-raw": "green-dark",
-      "name": "greenDark"
+      "name-raw": "green-125",
+      "name": "green125"
     },
     {
       "value": "#146D21",
       "type": "color",
       "category": "functional",
       "base": "green",
-      "name-raw": "green-darker",
-      "name": "greenDarker"
+      "name-raw": "green-150",
+      "name": "green150"
     },
     {
       "value": "#245eb7",
@@ -469,32 +421,32 @@
       "type": "color",
       "category": "functional",
       "base": "navy",
-      "name-raw": "navy-lighter",
-      "name": "navyLighter"
+      "name-raw": "navy-25",
+      "name": "navy25"
     },
     {
       "value": "#94BBE4",
       "type": "color",
       "category": "functional",
       "base": "navy",
-      "name-raw": "navy-light",
-      "name": "navyLight"
+      "name-raw": "navy-50",
+      "name": "navy50"
     },
     {
       "value": "#4066A7",
       "type": "color",
       "category": "functional",
       "base": "navy",
-      "name-raw": "navy-dark",
-      "name": "navyDark"
+      "name-raw": "navy-125",
+      "name": "navy125"
     },
     {
       "value": "#123977",
       "type": "color",
       "category": "functional",
       "base": "navy",
-      "name-raw": "navy-darker",
-      "name": "navyDarker"
+      "name-raw": "navy-150",
+      "name": "navy150"
     },
     {
       "value": "#32b5fc",
@@ -509,32 +461,32 @@
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
-      "name-raw": "ice-blue-lighter",
-      "name": "iceBlueLighter"
+      "name-raw": "ice-blue-25",
+      "name": "iceBlue25"
     },
     {
       "value": "#B1EFFE",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
-      "name-raw": "ice-blue-light",
-      "name": "iceBlueLight"
+      "name-raw": "ice-blue-50",
+      "name": "iceBlue50"
     },
     {
       "value": "#6ED1FD",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
-      "name-raw": "ice-blue-dark",
-      "name": "iceBlueDark"
+      "name-raw": "ice-blue-125",
+      "name": "iceBlue125"
     },
     {
       "value": "#196B9A",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
-      "name-raw": "ice-blue-darker",
-      "name": "iceBlueDarker"
+      "name-raw": "ice-blue-150",
+      "name": "iceBlue150"
     },
     {
       "value": "#40beba",
@@ -549,32 +501,32 @@
       "type": "color",
       "category": "functional",
       "base": "aqua",
-      "name-raw": "aqua-lighter",
-      "name": "aquaLighter"
+      "name-raw": "aqua-25",
+      "name": "aqua25"
     },
     {
       "value": "#87E5E4",
       "type": "color",
       "category": "functional",
       "base": "aqua",
-      "name-raw": "aqua-light",
-      "name": "aquaLight"
+      "name-raw": "aqua-50",
+      "name": "aqua50"
     },
     {
       "value": "#49DEDD",
       "type": "color",
       "category": "functional",
       "base": "aqua",
-      "name-raw": "aqua-dark",
-      "name": "aquaDark"
+      "name-raw": "aqua-125",
+      "name": "aqua125"
     },
     {
       "value": "#1D6967",
       "type": "color",
       "category": "functional",
       "base": "aqua",
-      "name-raw": "aqua-darker",
-      "name": "aquaDarker"
+      "name-raw": "aqua-150",
+      "name": "aqua150"
     }
   ]
 }

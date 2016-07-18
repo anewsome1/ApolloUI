@@ -39,7 +39,7 @@ $border-width:               .0625rem;
 // Settings for the `<body>` element.
 
 $body-bg:                    #fff;
-$body-color:                 $gray;
+$body-color:                 $charcoal;
 
 
 // Links
@@ -48,7 +48,7 @@ $body-color:                 $gray;
 
 $link-color:                  $blue;
 $link-decoration:             none;
-$link-hover-color:            $blue-dark;
+$link-hover-color:            $blue-125;
 $link-hover-decoration:       none;
 
 
@@ -142,15 +142,15 @@ $headings-color:              inherit;
 $lead-font-size:              1.25rem;
 $lead-font-weight:            $font-light;
 
-$text-muted:                  $gray-light;
+$text-muted:                  $charcoal-50;
 
-$abbr-border-color:           $gray-light;
+$abbr-border-color:           $charcoal-50;
 
-$blockquote-small-color:      $gray-light;
+$blockquote-small-color:      $charcoal-50;
 $blockquote-font-size:        ($font-size-base * 1.25);
-$blockquote-border-color:     $gray-lighter;
+$blockquote-border-color:     $charcoal-25;
 
-$hr-border-color:             rgba($gray-light, .15);
+$hr-border-color:             rgba($charcoal-50, .15);
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              $font-semi-bold;
@@ -212,7 +212,7 @@ $alert-states: (
   ),
   warning: (
     bg: $brand-warning,
-    color: $gray,
+    color: $charcoal,
     icon: 'alert-circle'
   ),
   danger: (
@@ -229,14 +229,14 @@ $alert-states: (
 $card-spacer-x:             1.25rem;
 $card-spacer-y:             .75rem;
 $card-border-width:         $border-width;
-$card-border-color:         rgba($gray-darker, .075);
-$card-cap-bg:               rgba($gray-darker, .05);
+$card-border-color:         rgba($charcoal-150, .075);
+$card-cap-bg:               rgba($charcoal-150, .05);
 $card-bg:                   #fff;
 
 // TODO: Add $bg-dark variable and use here for consistency
-$card-inverse-border-color: $gray-darker;
-$card-inverse-cap-bg:       $gray-dark;
-$card-inverse-bg:           $gray-darker;
+$card-inverse-border-color: $charcoal-150;
+$card-inverse-cap-bg:       $charcoal-125;
+$card-inverse-bg:           $charcoal-150;
 
 
 ///
@@ -281,11 +281,11 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       rgba(#fff, .85);
-$input-bg-disabled:              rgba($gray-lighter, .5);
+$input-bg-disabled:              rgba($charcoal-25, .5);
 $input-bg-focus:                 #fff;
 
-$input-color:                    $gray;
-$input-color-disabled:           $gray-light;
+$input-color:                    $charcoal;
+$input-color-disabled:           $charcoal-50;
 $input-border-color:             #ccc;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 
@@ -297,7 +297,7 @@ $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-active;
 $input-outline:                  $border-width solid transparent;
 
-$input-color-placeholder:        $gray-light;
+$input-color-placeholder:        $charcoal-50;
 
 // $input-padding-x-sm:             $input-padding-x;
 // $input-padding-y-sm:             .275rem;
@@ -311,7 +311,7 @@ $input-height-lg:                (($font-size-base * $input-line-height) + ($inp
 
 $form-group-margin-bottom:       $spacer-y;
 
-$input-group-addon-bg:           $gray-lighter;
+$input-group-addon-bg:           $charcoal-25;
 $input-group-addon-border-color: $input-border-color;
 
 $cursor-disabled:                not-allowed;
@@ -326,7 +326,7 @@ $svg-chevron-down-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIi
 
 // Checkbox
 $checkbox-size: 1.2rem;
-$checkbox-border: 1px solid $gray;
+$checkbox-border: 1px solid $charcoal;
 $checkbox-color: $blue;
 
 // Error message
@@ -357,27 +357,27 @@ $btn-lg-padding-y: .9375rem;  // ~15px
 
 $btn-pulse-size: 8rem;
 $btn-link-padding-x: .5rem;
-$btn-link-disabled: $gray-light;
+$btn-link-disabled: $charcoal-50;
 
 $btn-variants: (
   primary: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $blue-dark,
+    bg-active: $blue-125,
     color-active: #fff,
-    bg-disabled: $blue-lighter,
-    color-disabled: $blue-light
+    bg-disabled: $blue-25,
+    color-disabled: $blue-50
   ),
   secondary: (
     bg: #fff,
-    color: $gray,
-    border-color: $gray-lighter,
-    bg-active: $gray,
+    color: $charcoal,
+    border-color: $charcoal-25,
+    bg-active: $charcoal,
     color-active: #fff,
     bg-disabled: #fff,
-    color-disabled: $gray-light,
-    border-disabled: rgba($gray-lighter, .7)
+    color-disabled: $charcoal-50,
+    border-disabled: rgba($charcoal-25, .7)
   )
 );
 
@@ -400,16 +400,16 @@ $table-cell-padding-x:          ($grid-gutter-width / 2);
 $table-cell-padding-y:          1rem;
 $table-sm-cell-padding-y:       .5rem;
 
-$table-header-bg:               rgba($blue-darker, .05);
-$table-header-color:            $blue-dark;
+$table-header-bg:               rgba($blue-150, .05);
+$table-header-color:            $blue-125;
 
 $table-bg:                      transparent;
-$table-bg-accent:               rgba($gray-lighter, .1);
-$table-bg-hover:                $atmosphere-lighter;
+$table-bg-accent:               rgba($charcoal-25, .1);
+$table-bg-hover:                $atmosphere-25;
 $table-bg-active:               $atmosphere; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
-$table-border-color:            $teal-lighter;
+$table-border-color:            $teal-25;
 $table-border-color-hover:      $link-color;
 
 $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
@@ -422,8 +422,8 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 $dropdown-toggle-padding: $btn-padding-y $btn-padding-x;
 $dropdown-menu-bg: #fff;
 $dropdown-menu-color: $body-color;
-$dropdown-menu-bg-hover: $blue-darker;
-$dropdown-menu-color-hover: $teal-light;
+$dropdown-menu-bg-hover: $blue-150;
+$dropdown-menu-color-hover: $teal-50;
 
 
 ///
@@ -483,7 +483,7 @@ $navbar-variants: (
     dark: true,
     bg: $blue,
     color: #fff,
-    color-active: $teal-light
+    color-active: $teal-50
   )
 );
 
@@ -507,14 +507,14 @@ $command-bar-padding-y: .5rem;
 
 $navbar-vertical-width: 5.5rem;
 $navbar-vertical-jumbo-width: 8.25rem;
-$navbar-vertical-bg: $gray-dark;
-$navbar-vertical-link-color: $gray-lighter;
+$navbar-vertical-bg: $charcoal-125;
+$navbar-vertical-link-color: $charcoal-25;
 $navbar-vertical-padding-x: $grid-gutter-width / 2;
 $navbar-vertical-padding-y: $spacer;
 $navbar-vertical-icon-size: 2rem;
-$navbar-vertical-hover-bg: $gray-darker;
+$navbar-vertical-hover-bg: $charcoal-150;
 $navbar-vertical-active-color: $teal;
-$navbar-vertical-active-bg: $gray-darkest;
+$navbar-vertical-active-bg: $charcoal-175;
 
 
 ///
@@ -529,7 +529,7 @@ $login-max-width: 24rem;
 ///
 
 $empty-space-icon-size: 2.5rem;  // ~40px
-$empty-space-icon-color: $gray-dark;
+$empty-space-icon-color: $charcoal-125;
 $empty-space-icon-color-dark: $teal;
 
 
@@ -583,7 +583,7 @@ $slider-position-min: 25%;  // For demo purposes only
 $slider-position-max: 85%;  // For demo purposes only
 
 $slider-height: .1875rem;  // ~3px
-$slider-bg: $gray-lighter;
+$slider-bg: $charcoal-25;
 
 // Fill
 $slider-fill-bg: $teal;
@@ -591,14 +591,14 @@ $slider-fill-bg: $teal;
 // Handle
 $slider-handle-size: 2rem;  // ~32px
 $slider-handle-bg: #fff;
-$slider-handle-border: $border-width solid $gray-lighter;
+$slider-handle-border: $border-width solid $charcoal-25;
 
 // Active
-$slider-active-handle-bg: $gray;
+$slider-active-handle-bg: $charcoal;
 
 // Disabled
-$slider-disabled-fill-bg: $gray-light;
-$slider-disabled-handle-bg: $gray-lighter;
+$slider-disabled-fill-bg: $charcoal-50;
+$slider-disabled-handle-bg: $charcoal-25;
 
 
 ///
