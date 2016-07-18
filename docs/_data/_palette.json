@@ -9,7 +9,7 @@
       "name": "atmosphere"
     },
     {
-      "value": "#C9ECFE",
+      "value": "#ccecfe",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
@@ -17,7 +17,7 @@
       "name": "atmosphereLighter"
     },
     {
-      "value": "#95DAFD",
+      "value": "#98dafd",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
@@ -25,7 +25,7 @@
       "name": "atmosphereLight"
     },
     {
-      "value": "#2886BA",
+      "value": "#2688bd",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
@@ -33,7 +33,7 @@
       "name": "atmosphereDark"
     },
     {
-      "value": "#1B597D",
+      "value": "#195b7e",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
@@ -41,7 +41,7 @@
       "name": "atmosphereDarker"
     },
     {
-      "value": "#134968",
+      "value": "#0d2d3f",
       "type": "color",
       "category": "primary",
       "base": "atmosphere",
@@ -49,7 +49,7 @@
       "name": "atmosphereDarkest"
     },
     {
-      "value": "#2975e9",
+      "value": "#297dfd",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -57,7 +57,7 @@
       "name": "blue"
     },
     {
-      "value": "#C4DAF7",
+      "value": "#c9defe",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -65,7 +65,7 @@
       "name": "blueLighter"
     },
     {
-      "value": "#8EB7F4",
+      "value": "#94befe",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -73,7 +73,7 @@
       "name": "blueLight"
     },
     {
-      "value": "#1E54A8",
+      "value": "#1f5ebe",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -81,7 +81,7 @@
       "name": "blueDark"
     },
     {
-      "value": "#143770",
+      "value": "#153f7f",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -89,7 +89,7 @@
       "name": "blueDarker"
     },
     {
-      "value": "#072249",
+      "value": "#0a1f3f",
       "type": "color",
       "category": "primary",
       "base": "blue",
@@ -97,7 +97,7 @@
       "name": "blueDarkest"
     },
     {
-      "value": "#3ed6cf",
+      "value": "#37dad3",
       "type": "color",
       "category": "primary",
       "base": "teal",
@@ -105,7 +105,7 @@
       "name": "teal"
     },
     {
-      "value": "#CEF5F6",
+      "value": "#cdf6f4",
       "type": "color",
       "category": "primary",
       "base": "teal",
@@ -113,7 +113,7 @@
       "name": "tealLighter"
     },
     {
-      "value": "#9EECE8",
+      "value": "#9bece9",
       "type": "color",
       "category": "primary",
       "base": "teal",
@@ -121,7 +121,7 @@
       "name": "tealLight"
     },
     {
-      "value": "#339E99",
+      "value": "#29a49e",
       "type": "color",
       "category": "primary",
       "base": "teal",
@@ -129,7 +129,7 @@
       "name": "tealDark"
     },
     {
-      "value": "#1E6766",
+      "value": "#1c6d6a",
       "type": "color",
       "category": "primary",
       "base": "teal",
@@ -137,7 +137,7 @@
       "name": "tealDarker"
     },
     {
-      "value": "#124948",
+      "value": "#0e3735",
       "type": "color",
       "category": "primary",
       "base": "teal",

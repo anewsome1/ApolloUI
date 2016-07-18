@@ -39,7 +39,7 @@ $border-width:               .0625rem;
 // Settings for the `<body>` element.
 
 $body-bg:                    #fff;
-$body-color:                 $charcoal;
+$body-color:                 $gray;
 
 
 // Links
@@ -150,7 +150,7 @@ $blockquote-small-color:      $gray-light;
 $blockquote-font-size:        ($font-size-base * 1.25);
 $blockquote-border-color:     $gray-lighter;
 
-$hr-border-color:             rgba($charcoal-light, .15);
+$hr-border-color:             rgba($gray-light, .15);
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              $font-semi-bold;
@@ -212,7 +212,7 @@ $alert-states: (
   ),
   warning: (
     bg: $brand-warning,
-    color: $charcoal,
+    color: $gray,
     icon: 'alert-circle'
   ),
   danger: (
@@ -229,14 +229,14 @@ $alert-states: (
 $card-spacer-x:             1.25rem;
 $card-spacer-y:             .75rem;
 $card-border-width:         $border-width;
-$card-border-color:         rgba($charcoal-darker, .075);
-$card-cap-bg:               rgba($charcoal-darker, .05);
+$card-border-color:         rgba($gray-darker, .075);
+$card-cap-bg:               rgba($gray-darker, .05);
 $card-bg:                   #fff;
 
 // TODO: Add $bg-dark variable and use here for consistency
-$card-inverse-border-color: $charcoal-darker;
-$card-inverse-cap-bg:       $charcoal-dark;
-$card-inverse-bg:           $charcoal-darker;
+$card-inverse-border-color: $gray-darker;
+$card-inverse-cap-bg:       $gray-dark;
+$card-inverse-bg:           $gray-darker;
 
 
 ///
@@ -281,11 +281,11 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       rgba(#fff, .85);
-$input-bg-disabled:              rgba($charcoal-lighter, .5);
+$input-bg-disabled:              rgba($gray-lighter, .5);
 $input-bg-focus:                 #fff;
 
-$input-color:                    $charcoal;
-$input-color-disabled:           $charcoal-light;
+$input-color:                    $gray;
+$input-color-disabled:           $gray-light;
 $input-border-color:             #ccc;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 
@@ -297,7 +297,7 @@ $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-active;
 $input-outline:                  $border-width solid transparent;
 
-$input-color-placeholder:        $charcoal-light;
+$input-color-placeholder:        $gray-light;
 
 // $input-padding-x-sm:             $input-padding-x;
 // $input-padding-y-sm:             .275rem;
@@ -357,7 +357,7 @@ $btn-lg-padding-y: .9375rem;  // ~15px
 
 $btn-pulse-size: 8rem;
 $btn-link-padding-x: .5rem;
-$btn-link-disabled: $charcoal-light;
+$btn-link-disabled: $gray-light;
 
 $btn-variants: (
   primary: (
@@ -371,13 +371,13 @@ $btn-variants: (
   ),
   secondary: (
     bg: #fff,
-    color: $charcoal,
-    border-color: $charcoal-lighter,
-    bg-active: $charcoal,
+    color: $gray,
+    border-color: $gray-lighter,
+    bg-active: $gray,
     color-active: #fff,
     bg-disabled: #fff,
-    color-disabled: $charcoal-light,
-    border-disabled: rgba($charcoal-lighter, .7)
+    color-disabled: $gray-light,
+    border-disabled: rgba($gray-lighter, .7)
   )
 );
 
@@ -507,14 +507,14 @@ $command-bar-padding-y: .5rem;
 
 $navbar-vertical-width: 5.5rem;
 $navbar-vertical-jumbo-width: 8.25rem;
-$navbar-vertical-bg: $charcoal-dark;
-$navbar-vertical-link-color: $charcoal-lighter;
+$navbar-vertical-bg: $gray-dark;
+$navbar-vertical-link-color: $gray-lighter;
 $navbar-vertical-padding-x: $grid-gutter-width / 2;
 $navbar-vertical-padding-y: $spacer;
 $navbar-vertical-icon-size: 2rem;
-$navbar-vertical-hover-bg: $charcoal-darker;
+$navbar-vertical-hover-bg: $gray-darker;
 $navbar-vertical-active-color: $teal;
-$navbar-vertical-active-bg: $charcoal-darkest;
+$navbar-vertical-active-bg: $gray-darkest;
 
 
 ///
@@ -583,7 +583,7 @@ $slider-position-min: 25%;  // For demo purposes only
 $slider-position-max: 85%;  // For demo purposes only
 
 $slider-height: .1875rem;  // ~3px
-$slider-bg: $charcoal-lighter;
+$slider-bg: $gray-lighter;
 
 // Fill
 $slider-fill-bg: $teal;
@@ -591,14 +591,14 @@ $slider-fill-bg: $teal;
 // Handle
 $slider-handle-size: 2rem;  // ~32px
 $slider-handle-bg: #fff;
-$slider-handle-border: $border-width solid $charcoal-lighter;
+$slider-handle-border: $border-width solid $gray-lighter;
 
 // Active
-$slider-active-handle-bg: $charcoal;
+$slider-active-handle-bg: $gray;
 
 // Disabled
 $slider-disabled-fill-bg: $gray-light;
-$slider-disabled-handle-bg: $charcoal-lighter;
+$slider-disabled-handle-bg: $gray-lighter;
 
 
 ///

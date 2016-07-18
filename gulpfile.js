@@ -30,13 +30,15 @@ const strings = {
 const path = {
   SCSS_SRC_ALL: 'scss/**/*.scss',
   SCSS_SRC_MAIN: 'scss/apollo.scss',
-  DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
-  DOCS_SCSS_SRC_MAIN: 'docs/_scss/docs.scss',
   CSS_DEST: 'dist/css/',
   JS_SRC_ALL: 'js/**/*.js',
   JS_SRC_MAIN: 'js/apollo.js',
   JS_DEST: 'dist/js/',
-  DOCS_PAGE_SRC_ALL: 'docs/**/*.html'
+  DOCS_PAGE_SRC_ALL: 'docs/**/*.html',
+  DOCS_DATA: 'docs/_data/**/*',
+  DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
+  DOCS_SCSS_SRC_MAIN: 'docs/_scss/docs.scss',
+  THEO_SRC_ALL: 'theo/**/*'
 };
 
 
@@ -60,8 +62,10 @@ gulp.task( 'watch', function() {
   gulp.watch( path.SCSS_SRC_ALL, [ 'apollo-styles' ]);
   gulp.watch( path.JS_SRC_ALL, [ 'apollo-scripts' ]);
   gulp.watch( path.DOCS_PAGE_SRC_ALL, [ 'docs' ] );
+  gulp.watch( path.DOCS_DATA, [ 'docs' ] );
   gulp.watch( path.DOCS_SCSS_SRC_ALL, [ 'docs-styles' ]);
-})
+  gulp.watch( path.THEO_SRC_ALL, [ 'theo' ]);
+});
 
 
 ///
