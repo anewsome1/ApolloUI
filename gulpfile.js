@@ -2,29 +2,32 @@
 /// Dependencies
 ///
 
-var gulp          = require( 'gulp' );
-var del           = require( 'del' );
-var rename        = require( 'gulp-rename' );
-var insert        = require( 'gulp-insert' );
-var browserSync   = require( 'browser-sync' );
-var webpack       = require( 'webpack-stream' );
-var uglify        = require( 'gulp-uglify' );
-var sass          = require( 'gulp-sass' );
-var postcss       = require( 'gulp-postcss' );
-var autoprefixer  = require( 'autoprefixer' );
-var cssnano       = require( 'cssnano' );
-var theo          = require( 'theo' );
-
+const gulp          = require( 'gulp' );
+const del           = require( 'del' );
+const rename        = require( 'gulp-rename' );
+const insert        = require( 'gulp-insert' );
+const browserSync   = require( 'browser-sync' );
+const webpack       = require( 'webpack-stream' );
+const uglify        = require( 'gulp-uglify' );
+const sass          = require( 'gulp-sass' );
+const postcss       = require( 'gulp-postcss' );
+const autoprefixer  = require( 'autoprefixer' );
+const cssnano       = require( 'cssnano' );
+const exec          = require( 'child_process' ).exec;
+const theo          = require( 'theo' );
+const awspublish    = require( 'gulp-awspublish' );
+const AWS           = require( 'aws-sdk' );
 
 ///
 /// Local variables
 ///
 
-var strings = {
-  VERSION: '/*! Apollo JS v1.0.0-beta.3 */'
+const strings = {
+  VERSION_COMMENT: '/*! Apollo JS v1.0.0-beta.3 */',
+  VERSION: '1.0.0-beta.3'
 };
 
-var path = {
+const path = {
   SCSS_SRC_ALL: 'scss/**/*.scss',
   SCSS_SRC_MAIN: 'scss/apollo.scss',
   DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
@@ -79,7 +82,7 @@ gulp.task( 'apollo-scripts', function() {
     }))
     .pipe( gulp.dest( path.JS_DEST ))
     .pipe( uglify() )
-    .pipe( insert.prepend( strings.VERSION ))
+    .pipe( insert.prepend( strings.VERSION_COMMENT ))
     .pipe( rename({
       suffix: '.min'
     }))
@@ -142,8 +145,6 @@ gulp.task( 'docs', [ 'jekyll' ], function() {
 
 
 gulp.task( 'jekyll', function ( gulpCallBack ) {
-  var exec = require( 'child_process' ).exec;
-
   exec( 'jekyll build', function( err, stdout, stderr ) {
     console.log( stdout );
     console.error( stderr );
@@ -194,9 +195,84 @@ gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
 
 
 ///
+/// Publish to CDN
+///
+
+gulp.task( 'publish-css', function() {
+  const publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: `nexxus-marketing-staticcontent/design/css/${ strings.VERSION }`
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+  });
+
+  return gulp.src( './dist/css/apollo*.css' )
+    .pipe( publisher.publish() );
+});
+
+gulp.task( 'publish-js', function() {
+  const publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: `nexxus-marketing-staticcontent/design/js/${ strings.VERSION }`
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+  });
+
+  return gulp.src( './dist/js/apollo*.js' )
+    .pipe( publisher.publish() );
+});
+
+gulp.task( 'publish-docs', function() {
+  const publisher = awspublish.create({
+    region: 'us-west-2', // US West Oregon
+    params: {
+      Bucket: 'design.imshealth.com/resources/interfaces/components/'
+    },
+    signatureVersion: 'v3',
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'drb-docs' })
+  });
+
+  return gulp.src( './dist/*.html' )
+    .pipe( publisher.publish() );
+});
+
+
+///
+/// Tag and publish to npm
+///
+
+gulp.task( 'publish-tags', function () {
+
+  // Error handling for shell commands
+  function handleErrors( err, stdout, stderr ) {
+    if( err ) {
+      console.error( err );
+      return;
+    }
+    console.log( stdout );
+    console.error( stderr );
+  }
+
+  const command = `git tag v${ strings.VERSION }
+                   git push --tags
+                   npm publish`;
+
+  exec( command, function( err, stdout, stderr ) {
+    handleErrors( err, stdout, stderr );
+  });
+});
+
+
+
+///
 /// Conglomerate tasks
 ///
 
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
+gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
