@@ -125,6 +125,7 @@ $font-thin:                   100;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
+$font-bold:                   700;
 
 $display1-weight:             $font-thin;
 $display2-weight:             $font-thin;
@@ -237,6 +238,20 @@ $card-bg:                   #fff;
 $card-inverse-border-color: $charcoal-150;
 $card-inverse-cap-bg:       $charcoal-125;
 $card-inverse-bg:           $charcoal-150;
+
+
+///
+/// Accordion
+///
+
+$accordion-head-font-size:      $font-size-xs;
+$accordion-head-font-weight:    $font-bold;
+$accordion-head-bg:             $neutral;
+$accordion-head-border-color:   rgba($charcoal-25, .5);  // TODO: Replace
+$accordion-head-pad-y:          .875rem;
+$accordion-head-pad-x:          1.5rem;
+$accordion-head-icon-size:      $font-size-sm;
+$accordion-border-color:        $charcoal-25;
 
 
 ///

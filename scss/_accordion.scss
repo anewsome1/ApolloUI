@@ -1,6 +1,5 @@
 .accordion {
-  border: $card-border-width solid $card-border-color;
-  border-top-width: 0;
+  border: $border-width solid $accordion-border-color;
 
   ///
   /// Dark background
@@ -17,11 +16,17 @@
 
     .accordion-header {
       background-color: $card-inverse-cap-bg;
+
+      .accordion-title {
+        color: rgba(#fff, .8);
+      }
+
+      &:not(.collapsed) .accordion-title {
+        color: $teal;
+      }
     }
 
-    .accordion-title {
-      color: $teal;
-    }
+
   }
 }
 
@@ -46,22 +51,25 @@
 // Padding
 .accordion-header,
 .accordion-block {
-  padding: $card-spacer-y $card-spacer-x;
+  padding: $accordion-head-pad-y $accordion-head-pad-x;
 }
 
 // Borders
 .accordion-header {
-  border-top: $card-border-width solid $card-border-color;
-  background-color: $card-cap-bg;
+  background-color: $accordion-head-bg;
   cursor: pointer;
+
+  .accordion-block + & {
+    border-top: $border-width solid $accordion-head-border-color;
+  }
 }
 
 // Headings
 .accordion-title {
   position: relative;
   margin: 0;
-  font-size: $font-size-base;
-  font-weight: $font-normal;
+  font-size: $accordion-head-font-size;
+  font-weight: $accordion-head-font-weight;
   color: $link-color;
   text-align: inherit;
 
@@ -70,6 +78,7 @@
     position: absolute;
     right: 0;
     top: 0;
+    font-size: $accordion-head-icon-size;
     content: map-get($_icons-map, 'chevron-up');
     transition: transform $transition-fast;
   }
