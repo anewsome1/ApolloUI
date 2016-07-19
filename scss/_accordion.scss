@@ -1,13 +1,3 @@
-
-///
-/// Accordion
-///
-
-// !!!
-// TODO: Recreate accordion as separate component (remove shared styles with cards)
-// !!!
-
-
 .accordion {
   border: $card-border-width solid $card-border-color;
   border-top-width: 0;
@@ -33,7 +23,6 @@
       color: $teal;
     }
   }
-
 }
 
 // Visiblility
