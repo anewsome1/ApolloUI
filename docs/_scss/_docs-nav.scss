@@ -7,7 +7,7 @@ body {
 }
 
 .docs-sidebar {
-  background-color: $charcoal-dark;
+  background-color: $charcoal-125;
 
   @include media-breakpoint-up(md) {
     position: fixed;
@@ -55,7 +55,7 @@ body {
 .docs-nav {
   width: $docs-sidebar-width;
   padding: $grid-gutter-width;
-  // background-color: rgba($charcoal-dark, .75);
+  // background-color: rgba($charcoal-125, .75);
 }
 
 .docs-content {
