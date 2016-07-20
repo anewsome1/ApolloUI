@@ -244,13 +244,11 @@ $card-inverse-bg:           $charcoal-150;
 /// Accordion
 ///
 
-$accordion-head-font-size:      $font-size-xs;
-$accordion-head-font-weight:    $font-bold;
+$accordion-head-font-weight:    $font-semi-bold;
+$accordion-head-font-size:      $font-size-base;
 $accordion-head-bg:             $neutral;
-$accordion-head-border-color:   rgba($charcoal-25, .5);  // TODO: Replace
-$accordion-head-pad-y:          .875rem;
+$accordion-head-pad-y:          .75rem;  // Makes total height ~42px
 $accordion-head-pad-x:          1.5rem;
-$accordion-head-icon-size:      $font-size-sm;
 $accordion-border-color:        $charcoal-25;
 
 

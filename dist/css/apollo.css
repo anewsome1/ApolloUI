@@ -5188,7 +5188,7 @@ p:last-child {
 
 .accordion-header,
 .accordion-block {
-  padding: 0.875rem 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .accordion-header {
@@ -5197,14 +5197,14 @@ p:last-child {
 }
 
 .accordion-block + .accordion-header {
-  border-top: 0.0625rem solid rgba(206, 211, 214, 0.5);
+  border-top: 0.0625rem solid #ced3d6;
 }
 
 .accordion-title {
   position: relative;
   margin: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: #297dfd;
   text-align: inherit;
 }
@@ -5213,7 +5213,6 @@ p:last-child {
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 0.875rem;
   content: "";
   transition: -webkit-transform 0.25s cubic-bezier(0, 0, 0.5, 1);
   transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);

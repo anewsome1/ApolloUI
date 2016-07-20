@@ -60,7 +60,7 @@
   cursor: pointer;
 
   .accordion-block + & {
-    border-top: $border-width solid $accordion-head-border-color;
+    border-top: $border-width solid $accordion-border-color;
   }
 }
 
@@ -78,7 +78,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    font-size: $accordion-head-icon-size;
     content: map-get($_icons-map, 'chevron-up');
     transition: transform $transition-fast;
   }
