@@ -3424,6 +3424,10 @@ mark,
   content: "\00A0 \2014";
 }
 
+html {
+  font-weight: 300;
+}
+
 .font-serif {
   font-family: "Merriweather", Georgia, serif;
 }
