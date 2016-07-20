@@ -5152,6 +5152,7 @@ p:last-child {
 
 .bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
   background-color: #1d282d;
+  border: 0;
 }
 
 .bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {

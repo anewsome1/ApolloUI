@@ -8,6 +8,7 @@
   .bg-dark &,
   &.bg-dark {
     background-color: $accordion-dark-active-bg;
+    border: 0;
 
     .accordion-header {
       background-color: $accordion-dark-active-bg;
