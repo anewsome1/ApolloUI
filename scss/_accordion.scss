@@ -7,15 +7,16 @@
 
   .bg-dark &,
   &.bg-dark {
-    background-color: $card-inverse-bg;
-
-    &,
-    .accordion-header {
-      border-color: $card-inverse-border-color;
-    }
+    background-color: $accordion-dark-active-bg;
 
     .accordion-header {
-      background-color: $card-inverse-cap-bg;
+      background-color: $accordion-dark-active-bg;
+      border: 0;
+
+      &.collapsed {
+        background-color: $accordion-dark-header-bg;
+      }
+
 
       .accordion-title {
         color: rgba(#fff, .8);
@@ -24,9 +25,8 @@
       &:not(.collapsed) .accordion-title {
         color: $teal;
       }
+
     }
-
-
   }
 }
 

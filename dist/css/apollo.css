@@ -5154,13 +5154,12 @@ p:last-child {
   background-color: #1d282d;
 }
 
-.bg-dark .accordion, .off-canvas .accordion,
-.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark, .accordion.off-canvas,
-.accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
-  border-color: #1d282d;
+.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
+  background-color: #1d282d;
+  border: 0;
 }
 
-.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
+.bg-dark .accordion .accordion-header.collapsed, .off-canvas .accordion .accordion-header.collapsed, .accordion.bg-dark .accordion-header.collapsed, .accordion.off-canvas .accordion-header.collapsed {
   background-color: #2c3b44;
 }
 

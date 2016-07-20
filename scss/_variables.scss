@@ -234,11 +234,6 @@ $card-border-color:         rgba($charcoal-150, .075);
 $card-cap-bg:               rgba($charcoal-150, .05);
 $card-bg:                   #fff;
 
-// TODO: Add $bg-dark variable and use here for consistency
-$card-inverse-border-color: $charcoal-150;
-$card-inverse-cap-bg:       $charcoal-125;
-$card-inverse-bg:           $charcoal-150;
-
 
 ///
 /// Accordion
@@ -250,6 +245,8 @@ $accordion-head-bg:             $neutral;
 $accordion-head-pad-y:          .75rem;  // Makes total height ~42px
 $accordion-head-pad-x:          1.5rem;
 $accordion-border-color:        $charcoal-25;
+$accordion-dark-header-bg:      $charcoal-125;
+$accordion-dark-active-bg:      $charcoal-150;
 
 
 ///
