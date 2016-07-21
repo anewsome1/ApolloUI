@@ -122,11 +122,7 @@ $font-thin:                   200;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
-
-$display1-weight:             $font-thin;
-$display2-weight:             $font-thin;
-$display3-weight:             $font-thin;
-$display4-weight:             $font-thin;
+$font-weight-base:            $font-light;
 
 $line-height:                 1.5;
 
@@ -343,7 +339,6 @@ $btn-min-width: 5.75rem;  // ~92px
 $btn-padding-x: 1.125rem;  // ~18px
 $btn-padding-y: $input-padding-y - $border-width;
 $btn-line-height: 1;
-// $btn-font-weight: normal;
 
 $btn-sm-padding-y: .375rem;  // ~6px;
 $btn-sm-padding-x: .8125rem;  // ~13px
