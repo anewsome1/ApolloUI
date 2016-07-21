@@ -2032,16 +2032,8 @@ output {
   font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot");
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype");
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
 }
 
 @font-face {
@@ -2050,14 +2042,6 @@ output {
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
 }
 
 @font-face {
@@ -2082,14 +2066,6 @@ output {
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
 }
 
 @font-face {
@@ -3259,8 +3235,8 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 100;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.5;
   color: inherit;
 }
 
@@ -3319,22 +3295,22 @@ h6 {
 
 .display-1 {
   font-size: 6rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .display-2 {
   font-size: 5.5rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 hr {
@@ -3428,21 +3404,29 @@ html {
   font-weight: 300;
 }
 
-.font-serif {
-  font-family: "Merriweather", Georgia, serif;
+.heading-hero,
+h1,
+.h1 {
+  font-weight: 200;
 }
 
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h2,
+.h2,
+h3,
+.h3 {
   font-weight: 300;
 }
 
-.hero-heading {
-  font-size: 5.5rem;
+.heading-hero {
+  font-size: 4rem;
+}
+
+.heading-marketing {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.heading-marketing.heading-hero {
+  font-weight: 300;
 }
 
 td > dl {

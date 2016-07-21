@@ -2,22 +2,39 @@ html {
   font-weight: $font-light;
 }
 
-.font-serif {
-  font-family: $font-family-serif;
+///
+/// Headings
+///
+
+.heading-hero,
+h1,
+.h1 {
+  font-weight: $font-thin;
 }
 
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+h2,
+.h2,
+h3,
+.h3 {
   font-weight: $font-light;
 }
 
-.hero-heading {
-  font-size: $display2-size;
+.heading-hero {
+  font-size: $font-size-hero;
 }
+
+
+.heading-marketing {
+  font-family: $font-family-serif;
+
+  &.heading-hero {
+    font-weight: $font-light;
+  }
+}
+
+///
+/// Description Lists
+///
 
 td > dl {
   margin-bottom: 0;

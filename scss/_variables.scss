@@ -118,7 +118,7 @@ $font-size-h6:                $font-size-xs;
 
 
 // Weights
-$font-thin:                   100;
+$font-thin:                   200;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
@@ -132,8 +132,8 @@ $line-height:                 1.5;
 
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-family:        inherit;
-$headings-font-weight:        $font-thin;
-$headings-line-height:        1.1;
+$headings-font-weight:        $font-normal;
+$headings-line-height:        $line-height;
 $headings-color:              inherit;
 
 $lead-font-size:              1.25rem;
