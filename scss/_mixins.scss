@@ -64,6 +64,7 @@
   @if($icon) {
     &::before {
       content: map-get($_icons-map, $icon);
+      color: $text-color;
     }
   }
 }

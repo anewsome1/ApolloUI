@@ -3,7 +3,6 @@
   position: relative;
   z-index: 0;
   padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $spacer;
   margin-bottom: $alert-shadow-height * 3;
   font-size: $alert-font-size;
   line-height: $alert-line-height;
@@ -11,7 +10,6 @@
   // Icons for message and close button
   &::before,
   .close {
-    font-size: $alert-icon-size;
     line-height: $alert-line-height;
     color: #fff;
   }
@@ -19,6 +17,7 @@
   &::before {
     @extend .icon;
 
+    font-size: $alert-icon-size;
     margin-right: $alert-padding-x / 2;
     vertical-align: text-top;
   }
@@ -31,8 +30,8 @@
   .close {
     position: absolute;
     top: 50%;
-    margin-top: -($alert-icon-size / 2);
     right: $alert-padding-x;
+    margin-top: -($alert-icon-size / 2);
   }
 
   ///
