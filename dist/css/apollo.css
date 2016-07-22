@@ -3543,10 +3543,18 @@ dd {
 }
 
 .alert, .form-msg {
-  display: block;
-  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 2.5rem;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.9375rem;
   z-index: 0;
-  padding: 0.75rem 0.9375rem;
   margin-bottom: 2.25rem;
   font-size: 1rem;
   line-height: 1.2rem;
@@ -3569,10 +3577,11 @@ dd {
 }
 
 .alert .close, .form-msg .close {
-  position: absolute;
-  top: 50%;
-  right: 0.9375rem;
-  margin-top: -0.4375rem;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: auto;
+  padding-right: 0.9375rem;
 }
 
 .alert.alert-info, .alert-info.form-msg {
