@@ -10,7 +10,7 @@
 }
 
 .highlight .nt {
-  color: #245eb7;
+  color: #2d60ac;
 }
 
 .highlight .na {
@@ -18,7 +18,7 @@
 }
 
 .highlight .s {
-  color: #DE4839;
+  color: #bc3b2b;
 }
 
 .highlight .c {
@@ -529,7 +529,7 @@ body {
 }
 
 .docs-callout.docs-callout-success {
-  border-left: 0.25rem solid #2cc039;
+  border-left: 0.25rem solid #43b649;
 }
 
 .docs-callout.docs-callout-warning {
@@ -537,7 +537,7 @@ body {
 }
 
 .docs-callout.docs-callout-danger {
-  border-left: 0.25rem solid #f75040;
+  border-left: 0.25rem solid #fb4f39;
 }
 
 .docs-callout.docs-callout-info {
