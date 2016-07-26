@@ -179,7 +179,6 @@
 .btn-sm {
   min-width: unset;
   padding: $btn-sm-padding-y $btn-sm-padding-x;
-  font-size: $btn-sm-font-size;
 }
 
 
@@ -198,5 +197,5 @@
 /// Fix border for dark bg
 ///
 .bg-dark .btn-secondary {
-  border: none; 
+  border: none;
 }

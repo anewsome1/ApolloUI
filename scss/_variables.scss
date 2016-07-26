@@ -269,8 +269,9 @@ $modal-sm:                    18.75rem; // ~300px
 ///
 /// Shared component values
 ///
-$component-height:            2rem;
-$component-height-lg:         3rem;
+$component-height:            2.5rem;
+$component-height-sm:         1.875rem;
+$component-height-lg:         3.125rem;
 
 ///
 /// Forms
@@ -299,15 +300,15 @@ $input-outline:                  $border-width solid transparent;
 
 $input-color-placeholder:        $charcoal-50;
 
-// $input-padding-x-sm:             $input-padding-x;
-// $input-padding-y-sm:             .275rem;
+$input-sm-padding-x:             $input-padding-x;
+$input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size-base);
 
-$input-padding-x-lg:             $input-padding-x;
-$input-padding-y-lg:             calc-padding-y($component-height-lg, $font-size-base);
+$input-lg-padding-x:             $input-padding-x;
+$input-lg-padding-y:             calc-padding-y($component-height-lg, $font-size-base);
 
 $input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
 $input-height-lg:                (($font-size-base * $input-line-height) + ($input-padding-y-lg * 2));
-// $input-height-sm:                (($font-size-sm * $input-line-height) + ($input-padding-y-sm * 2));
+$input-height-sm:                (($font-size-base * $input-line-height) + ($input-padding-y-sm * 2));
 
 $form-group-margin-bottom:       $spacer-y;
 
@@ -342,18 +343,16 @@ $input-msg-shadow-height: .625rem;  // ~10px
 ///
 
 // $btn-border-width: $border-width;
-$btn-min-width: 5.75rem;  // ~92px
-$btn-padding-x: 1.125rem;  // ~18px
+$btn-min-width: 6.25rem;  // ~100px
+$btn-padding-x: 1.5rem; // ~24px
 $btn-padding-y: $input-padding-y - $border-width;
 $btn-line-height: 1;
-// $btn-font-weight: normal;
 
-$btn-sm-padding-y: .375rem;  // ~6px;
-$btn-sm-padding-x: .8125rem;  // ~13px
-$btn-sm-font-size: $font-size-xs;  // ~12px
+$btn-sm-padding-x: 1.25rem; // ~20px
+$btn-sm-padding-y: $input-sm-padding-y - $border-width;  // Padding makes sm button ~30px tall
 
 $btn-lg-min-width: 8.75rem;  // ~140px
-$btn-lg-padding-y: .9375rem;  // ~15px
+$btn-lg-padding-y: $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
 
 $btn-pulse-size: 8rem;
 $btn-link-padding-x: .5rem;
