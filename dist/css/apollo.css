@@ -3722,13 +3722,13 @@ dd {
 }
 
 .btn-primary:active, .btn-primary.active {
-  background-color: #1f5ebe;
+  background-color: #173056;
   color: #fff;
 }
 
 .btn-primary:disabled, .btn-primary.disabled {
   background-color: #c9defe;
-  color: #94befe;
+  color: #9ca7ac;
 }
 
 .btn-secondary {
@@ -3745,14 +3745,14 @@ dd {
 }
 
 .btn-secondary:active, .btn-secondary.active {
-  background-color: #3a4f5a;
+  background-color: #9ca7ac;
   color: #fff;
 }
 
 .btn-secondary:disabled, .btn-secondary.disabled {
   background-color: #fff;
   color: #9ca7ac;
-  border-color: rgba(206, 211, 214, 0.7);
+  border-color: #f7f5f4;
 }
 
 .btn-link {

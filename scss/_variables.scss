@@ -363,20 +363,20 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $blue-125,
+    bg-active: $navy-150,
     color-active: #fff,
     bg-disabled: $blue-25,
-    color-disabled: $blue-50
+    color-disabled: $charcoal-50
   ),
   secondary: (
     bg: #fff,
     color: $charcoal,
     border-color: $charcoal-25,
-    bg-active: $charcoal,
+    bg-active: $charcoal-50,
     color-active: #fff,
     bg-disabled: #fff,
     color-disabled: $charcoal-50,
-    border-disabled: rgba($charcoal-25, .7)
+    border-disabled: $neutral
   )
 );
 
