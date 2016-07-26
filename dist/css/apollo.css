@@ -4780,15 +4780,12 @@ input[type='radio']:checked {
   list-style-type: none;
 }
 
-.breadcrumb > li:last-child {
-  font-weight: 600;
-}
-
 .breadcrumb > li + li::before {
   display: inline-block;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   content: "";
+  vertical-align: top;
 }
 
 .slider {
