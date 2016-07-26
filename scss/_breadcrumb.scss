@@ -12,8 +12,9 @@
         display: inline-block;
         padding-left: $breadcrumb-spacing;
         padding-right: $breadcrumb-spacing;
+        font-size: $font-size-sm;
         content: map-get($_icons-map, 'chevron-right');
-        vertical-align: top;
+        vertical-align: text-top;
       }
     }
   }
