@@ -6,8 +6,11 @@ order: 35
 ---
 <section class="docs-section">
 
-{% include example-intro.html title='Breadcrumbs' description='Breadcrumb trails are a convenient way to show users where they are in the site hierarchy.' %}
+  <p>Breadcrumb trails are a convenient way to show users where they are in the site hierarchy.</p>
 
+</section>
+
+<section class="docs-section">
 {% capture example %}
 <ol class="breadcrumb">
   <li><a href="#0">Level 1</a></li>
@@ -15,18 +18,25 @@ order: 35
   <li>Level 3</li>
 </ol>
 {% endcapture %}
-{% include example.html size="half" label='Breadcrumb component' code=example %}
-
+{% include example.html size="half" label='Basic Breadcrumb' code=example %}
 
 {% capture example %}
-<div class="bg-dark pad-all">
-  <ol class="breadcrumb">
-    <li><a href="#0">Level 1</a></li>
-    <li><a href="#0">Level 2</a></li>
-    <li>Level 3</li>
-  </ol>
-</div>
+<ol class="breadcrumb">
+  <li><a href="#0">Level 1</a></li>
+  <li>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="breadcrumb-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</button>
+      <ul class="dropdown-menu" aria-labeledby="breadcrumb-dropdown">
+        <li><a href="#0">Level 2</a></li>
+        <li><a href="#0">Level 3</a></li>
+        <li><a href="#0">Level 4</a></li>
+      </ul>
+    </div>
+  </li>
+  <li>Level 5</li>
+</ol>
 {% endcapture %}
-{% include example.html size="half" label='With dark background' code=example %}
+{% include example-intro.html title='Collapsed breadcrumb' description='When space is limited, you can move middle links of the breadcrumb trail into a dropdown menu.' %}
+{% include example.html size='half' code=example %}
 
 </section>

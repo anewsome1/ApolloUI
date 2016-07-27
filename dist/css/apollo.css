@@ -4789,6 +4789,46 @@ input[type='radio']:checked {
   vertical-align: text-top;
 }
 
+.breadcrumb .dropdown {
+  display: inline-block;
+  padding: 0;
+}
+
+.breadcrumb .dropdown .dropdown-toggle {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  margin-right: -0.125rem;
+}
+
+.breadcrumb .dropdown .dropdown-toggle, .breadcrumb .dropdown .dropdown-toggle::after {
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.breadcrumb .dropdown .dropdown-toggle::after {
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  left: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.75rem;
+  margin-left: -0.75rem;
+  content: '';
+  border-radius: 50%;
+}
+
+.breadcrumb .dropdown.open .dropdown-toggle {
+  color: #153f7f;
+}
+
+.breadcrumb .dropdown.open .dropdown-toggle::after {
+  background-color: rgba(41, 125, 253, 0.8);
+  box-shadow: 0 0 0 0.5625rem rgba(41, 125, 253, 0.5);
+}
+
 .slider {
   position: relative;
   width: 100%;
