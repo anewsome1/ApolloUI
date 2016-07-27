@@ -337,7 +337,7 @@
       "name": "orange"
     },
     {
-      "value": "#FFF0B2",
+      "value": "#fde4cb",
       "type": "color",
       "category": "functional",
       "base": "orange",
@@ -345,7 +345,7 @@
       "name": "orange25"
     },
     {
-      "value": "#FFD792",
+      "value": "#fbc896",
       "type": "color",
       "category": "functional",
       "base": "orange",
@@ -353,7 +353,7 @@
       "name": "orange50"
     },
     {
-      "value": "#FDBD59",
+      "value": "#b96e23",
       "type": "color",
       "category": "functional",
       "base": "orange",
@@ -361,7 +361,7 @@
       "name": "orange125"
     },
     {
-      "value": "#B7661A",
+      "value": "#7c4917",
       "type": "color",
       "category": "functional",
       "base": "orange",
@@ -369,7 +369,7 @@
       "name": "orange150"
     },
     {
-      "value": "#2cc039",
+      "value": "#43b649",
       "type": "color",
       "category": "functional",
       "base": "green",
@@ -377,7 +377,7 @@
       "name": "green"
     },
     {
-      "value": "#8CDD96",
+      "value": "#d0edd1",
       "type": "color",
       "category": "functional",
       "base": "green",
@@ -385,7 +385,7 @@
       "name": "green25"
     },
     {
-      "value": "#71C272",
+      "value": "#a1daa4",
       "type": "color",
       "category": "functional",
       "base": "green",
@@ -393,7 +393,7 @@
       "name": "green50"
     },
     {
-      "value": "#68EF66",
+      "value": "#26672a",
       "type": "color",
       "category": "functional",
       "base": "green",
@@ -401,7 +401,7 @@
       "name": "green125"
     },
     {
-      "value": "#146D21",
+      "value": "#225b25",
       "type": "color",
       "category": "functional",
       "base": "green",
@@ -409,7 +409,7 @@
       "name": "green150"
     },
     {
-      "value": "#245eb7",
+      "value": "#2d60ac",
       "type": "color",
       "category": "functional",
       "base": "navy",
@@ -417,7 +417,7 @@
       "name": "navy"
     },
     {
-      "value": "#C4DFF8",
+      "value": "#cad7ea",
       "type": "color",
       "category": "functional",
       "base": "navy",
@@ -425,7 +425,7 @@
       "name": "navy25"
     },
     {
-      "value": "#94BBE4",
+      "value": "#96afd5",
       "type": "color",
       "category": "functional",
       "base": "navy",
@@ -433,7 +433,7 @@
       "name": "navy50"
     },
     {
-      "value": "#4066A7",
+      "value": "#224881",
       "type": "color",
       "category": "functional",
       "base": "navy",
@@ -441,7 +441,7 @@
       "name": "navy125"
     },
     {
-      "value": "#123977",
+      "value": "#173056",
       "type": "color",
       "category": "functional",
       "base": "navy",
@@ -449,7 +449,7 @@
       "name": "navy150"
     },
     {
-      "value": "#32b5fc",
+      "value": "#4fb0e3",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
@@ -457,7 +457,7 @@
       "name": "iceBlue"
     },
     {
-      "value": "#DAF9FF",
+      "value": "#d3ebf8",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
@@ -465,7 +465,7 @@
       "name": "iceBlue25"
     },
     {
-      "value": "#B1EFFE",
+      "value": "#a7d7f1",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
@@ -473,7 +473,7 @@
       "name": "iceBlue50"
     },
     {
-      "value": "#6ED1FD",
+      "value": "#3b84aa",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
@@ -481,7 +481,7 @@
       "name": "iceBlue125"
     },
     {
-      "value": "#196B9A",
+      "value": "#285872",
       "type": "color",
       "category": "functional",
       "base": "ice-blue",
@@ -497,7 +497,7 @@
       "name": "aqua"
     },
     {
-      "value": "#CBF3F4",
+      "value": "#cfefee",
       "type": "color",
       "category": "functional",
       "base": "aqua",
@@ -505,7 +505,7 @@
       "name": "aqua25"
     },
     {
-      "value": "#87E5E4",
+      "value": "#9fdedc",
       "type": "color",
       "category": "functional",
       "base": "aqua",
@@ -513,7 +513,7 @@
       "name": "aqua50"
     },
     {
-      "value": "#49DEDD",
+      "value": "#308f8c",
       "type": "color",
       "category": "functional",
       "base": "aqua",
@@ -521,7 +521,7 @@
       "name": "aqua125"
     },
     {
-      "value": "#1D6967",
+      "value": "#205f5d",
       "type": "color",
       "category": "functional",
       "base": "aqua",
