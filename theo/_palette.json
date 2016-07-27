@@ -265,35 +265,35 @@
 
 
     "coral": {
-      "value": "#f75040",
+      "value": "#fb4f39",
       "type": "color",
       "category": "functional",
       "base": "coral",
       "name-raw": "coral"
     },
     "coral-25": {
-      "value": "#F7ADA3",
+      "value": "#fed3cd",
       "type": "color",
       "category": "functional",
       "base": "coral",
       "name-raw": "coral-25"
     },
     "coral-50": {
-      "value": "#F77365",
+      "value": "#fda79c",
       "type": "color",
       "category": "functional",
       "base": "coral",
       "name-raw": "coral-50"
     },
     "coral-125": {
-      "value": "#DE4839",
+      "value": "#bc3b2b",
       "type": "color",
       "category": "functional",
       "base": "coral",
       "name-raw": "coral-125"
     },
     "coral-150": {
-      "value": "#BD3A31",
+      "value": "#7e281d",
       "type": "color",
       "category": "functional",
       "base": "coral",
