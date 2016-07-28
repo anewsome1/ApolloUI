@@ -3746,7 +3746,7 @@ dd {
 .btn-secondary:disabled, .btn-secondary.disabled {
   background-color: #fff;
   color: #9ca7ac;
-  border-color: #f7f5f4;
+  border-color: #f2eeed;
 }
 
 .btn-link {
