@@ -230,49 +230,6 @@
 
 
 ///
-/// Color palette
-///
-
-.docs-color-group {
-  column-gap: $grid-gutter-width;
-
-  &-primary,
-  &-secondary {
-    columns: 3;
-  }
-
-  &-functional {
-    columns: 6;
-  }
-}
-
-
-.docs-color-swatch {
-  // display: flex;
-  // flex-direction: column;
-}
-
-.docs-color-block {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-  height: 8rem;
-
-  &:first-child {
-    height: 16rem;
-  }
-
-  .docs-color-props {
-    display: flex;
-    justify-content: space-between;
-    padding: ($spacer / 2) $spacer;
-    color: #fff;
-    background-color: rgba(#000,.3);
-  }
-}
-
-///
 /// Visible grid
 ///
 
