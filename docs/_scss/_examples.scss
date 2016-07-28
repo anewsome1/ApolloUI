@@ -19,7 +19,7 @@
 .docs-page-header {
   @include make-container;
 
-  padding-top: $display2-size;
+  padding-top: 3.375rem;
 
   @include media-breakpoint-up(lg) {
     padding-right: percentage(1 / 12);
@@ -33,7 +33,7 @@
 
   &::after {
     @extend %separator-bar;
-    margin-top: $display4-size;
+    margin-top: 1.5rem;
   }
 }
 
@@ -47,8 +47,8 @@
 
 .docs-section {
   @include make-container;
-  padding-top: $display2-size;
-  padding-bottom: $display2-size;
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
 
   &:nth-of-type(even) {
     background-color: $neutral-50;
@@ -59,7 +59,7 @@
 
 .docs-section-title,
 .docs-example-title {
-  padding-bottom: $display3-size;
+  padding-bottom: 2.25rem;
 
   &::before {
     @extend %separator-bar;
@@ -81,8 +81,8 @@
 ///
 
 .docs-example-intro {
-  margin-bottom: $display2-size;
-  margin-top: $display4-size;
+  margin-bottom: 3.375rem;
+  margin-top: 1.5rem;
 
   .docs-example + & {
   }
@@ -106,7 +106,7 @@
 }
 
 .docs-example {
-  margin-bottom: $display3-size;
+  margin-bottom: 2.25rem;
 }
 
 .docs-example-rendered-group {
@@ -147,12 +147,12 @@
   }
 
   // .docs-example {
-  //   padding-bottom: $display3-size;
+  //   padding-bottom: 2.25rem;
   // }
 
   .docs-example-full {
     .docs-example-rendered {
-      padding-bottom: $display3-size;
+      padding-bottom: 2.25rem;
     }
   }
 
