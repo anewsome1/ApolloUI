@@ -24,21 +24,21 @@ body {
   }
 }
 
-.docs-apollo-sidebar,
+.docs-sidebar-header,
 .docs-nav {
   // padding: $grid-gutter-width;
 }
 
-.docs-apollo-sidebar {
+.docs-sidebar-header {
   display: flex;
   align-items: center;
-  position: relative;
+  padding: .5rem 1rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: $grid-gutter-width;
-  font-size: $display4-size;
+  padding: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   background: none;
   border: 0;
@@ -54,7 +54,7 @@ body {
 
 .docs-nav {
   width: $docs-sidebar-width;
-  padding: $grid-gutter-width;
+  padding: 1rem 3rem;
   // background-color: rgba($charcoal-125, .75);
 }
 
@@ -69,14 +69,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: $display3-size;
+  margin-bottom: $spacer-y;
   color: #fff;
   font-family: $font-family-serif;
   font-weight: $font-thin;
 }
 
 .docs-page-nav {
-  margin-bottom: $display2-size;
+  margin-bottom: 2rem;
 
   @include media-breakpoint-only(xs) {
     column-count: 2;
