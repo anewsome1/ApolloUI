@@ -99,19 +99,19 @@ body {
   }
 }
 
-.docs-apollo-sidebar {
+.docs-sidebar-header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  padding: .5rem 1rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: 1.875rem;
+  padding: 2rem;
   font-size: 1.5rem;
   line-height: 1;
   background: none;
@@ -128,7 +128,7 @@ body {
 
 .docs-nav {
   width: 19rem;
-  padding: 1.875rem;
+  padding: 1rem 3rem;
 }
 
 .docs-content {
@@ -137,14 +137,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .docs-page-nav {
-  margin-bottom: 3.375rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 543px) {
@@ -497,7 +497,7 @@ body {
 
 .docs-icon .icon {
   width: 30%;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -545,7 +545,6 @@ body {
 }
 
 .docs-callout-title {
-  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
