@@ -5180,25 +5180,28 @@ p:last-child {
 }
 
 .accordion {
-  border: 0.0625rem solid rgba(29, 40, 45, 0.075);
-  border-top-width: 0;
+  border: 0.0625rem solid #ced3d6;
 }
 
 .bg-dark .accordion, .off-canvas .accordion, .accordion.bg-dark, .accordion.off-canvas {
   background-color: #1d282d;
-}
-
-.bg-dark .accordion, .off-canvas .accordion,
-.bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark, .accordion.off-canvas,
-.accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
-  border-color: #1d282d;
+  border: 0;
 }
 
 .bg-dark .accordion .accordion-header, .off-canvas .accordion .accordion-header, .accordion.bg-dark .accordion-header, .accordion.off-canvas .accordion-header {
+  background-color: #1d282d;
+  border: 0;
+}
+
+.bg-dark .accordion .accordion-header.collapsed, .off-canvas .accordion .accordion-header.collapsed, .accordion.bg-dark .accordion-header.collapsed, .accordion.off-canvas .accordion-header.collapsed {
   background-color: #2c3b44;
 }
 
-.bg-dark .accordion .accordion-title, .off-canvas .accordion .accordion-title, .accordion.bg-dark .accordion-title, .accordion.off-canvas .accordion-title {
+.bg-dark .accordion .accordion-header .accordion-title, .off-canvas .accordion .accordion-header .accordion-title, .accordion.bg-dark .accordion-header .accordion-title, .accordion.off-canvas .accordion-header .accordion-title {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-dark .accordion .accordion-header:not(.collapsed) .accordion-title, .off-canvas .accordion .accordion-header:not(.collapsed) .accordion-title, .accordion.bg-dark .accordion-header:not(.collapsed) .accordion-title, .accordion.off-canvas .accordion-header:not(.collapsed) .accordion-title {
   color: #37dad3;
 }
 
@@ -5218,13 +5221,16 @@ p:last-child {
 
 .accordion-header,
 .accordion-block {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .accordion-header {
-  border-top: 0.0625rem solid rgba(29, 40, 45, 0.075);
-  background-color: rgba(29, 40, 45, 0.05);
+  background-color: #f7f5f4;
   cursor: pointer;
+}
+
+.accordion-block + .accordion-header {
+  border-top: 0.0625rem solid #ced3d6;
 }
 
 .accordion-title {
