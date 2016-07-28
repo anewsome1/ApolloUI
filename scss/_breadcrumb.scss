@@ -5,10 +5,6 @@
     display: inline-block;
     list-style-type: none;
 
-    &:last-child {
-      font-weight: $font-semi-bold;
-    }
-
     + li {
       &::before {
         @extend %icon-base;
@@ -16,8 +12,51 @@
         display: inline-block;
         padding-left: $breadcrumb-spacing;
         padding-right: $breadcrumb-spacing;
+        font-size: $font-size-sm;
         content: map-get($_icons-map, 'chevron-right');
+        vertical-align: text-top;
       }
     }
+  }
+
+  .dropdown {
+    display: inline-block;
+    padding: 0;
+
+    .dropdown-toggle {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      font-weight: $font-semi-bold;
+      letter-spacing: $breadcrumb-ellipse-letter-spacing;
+      margin-right: -$breadcrumb-ellipse-letter-spacing;
+
+      &,
+      &::after {
+        transition: all $transition-fast;
+      }
+
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        left: 45%;
+        width: $breadcrumb-ellipse-circle-size;
+        height: $breadcrumb-ellipse-circle-size;
+        margin-top: -$breadcrumb-ellipse-circle-size / 2;
+        margin-left: -$breadcrumb-ellipse-circle-size / 2;
+        content: ''; // Hide down chevron icon
+        border-radius: 50%;
+      }
+    }
+    &.open .dropdown-toggle {
+        color: $blue-150;
+
+        &::after {
+          background-color: rgba($blue, .8);
+          box-shadow: 0 0 0 .5625rem rgba($blue, .5);
+        }
+      }
   }
 }
