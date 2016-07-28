@@ -2032,16 +2032,8 @@ output {
   font-family: "Proxima Nova";
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot");
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thin.ttf") format("truetype");
-  font-weight: 100;
+  font-weight: 200;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-thinitalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
 }
 
 @font-face {
@@ -2050,14 +2042,6 @@ output {
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-lightitalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
 }
 
 @font-face {
@@ -2082,14 +2066,6 @@ output {
   src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot");
-  src: url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.eot?#iefix") format("embedded-opentype"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.woff") format("woff"), url("//cdn.ims.io/design/font/0.5/proxima-nova/proximanova-semibolditalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
 }
 
 @font-face {
@@ -3259,57 +3235,57 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
-  font-weight: 100;
-  line-height: 1.1;
+  font-weight: 400;
+  line-height: 1.5;
   color: inherit;
 }
 
 h1 {
-  font-size: 2.441rem;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 1.953rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.563rem;
+  font-size: 1rem;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 h6 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .h1 {
-  font-size: 2.441rem;
+  font-size: 2.25rem;
 }
 
 .h2 {
-  font-size: 1.953rem;
+  font-size: 1.5rem;
 }
 
 .h3 {
-  font-size: 1.563rem;
-}
-
-.h4 {
-  font-size: 1.25rem;
-}
-
-.h5 {
   font-size: 1rem;
 }
 
-.h6 {
+.h4 {
   font-size: 0.875rem;
+}
+
+.h5 {
+  font-size: 0.75rem;
+}
+
+.h6 {
+  font-size: 0.75rem;
 }
 
 .lead {
@@ -3318,23 +3294,23 @@ h6 {
 }
 
 .display-1 {
-  font-size: 5.063rem;
-  font-weight: 100;
+  font-size: 6rem;
+  font-weight: 300;
 }
 
 .display-2 {
-  font-size: 3.375rem;
-  font-weight: 100;
+  font-size: 5.5rem;
+  font-weight: 300;
 }
 
 .display-3 {
-  font-size: 2.25rem;
-  font-weight: 100;
+  font-size: 4.5rem;
+  font-weight: 300;
 }
 
 .display-4 {
-  font-size: 1.5rem;
-  font-weight: 100;
+  font-size: 3.5rem;
+  font-weight: 300;
 }
 
 hr {
@@ -3424,21 +3400,39 @@ mark,
   content: "\00A0 \2014";
 }
 
-.font-serif {
-  font-family: "Merriweather", Georgia, serif;
-}
-
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+html {
   font-weight: 300;
 }
 
-.hero-heading {
-  font-size: 3.375rem;
+.heading-hero,
+h1,
+.h1 {
+  font-weight: 200;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: 300;
+}
+
+.heading-hero {
+  font-size: 4rem;
+}
+
+.heading-marketing {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.heading-marketing.heading-hero {
+  font-weight: 300;
+}
+
+h4.heading-marketing,
+.h4.heading-marketing {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  font-size: 1rem;
 }
 
 td > dl {
@@ -4475,7 +4469,7 @@ input[type='radio']:checked {
 
 .navbar-brand {
   width: 14rem;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   font-weight: 300;
   white-space: nowrap;
 }
@@ -4486,8 +4480,8 @@ input[type='radio']:checked {
 
 .navbar-brand-logo {
   position: relative;
-  top: 0.313rem;
-  width: 1.563rem;
+  top: 0.125rem;
+  width: 1rem;
 }
 
 .navbar-links {
@@ -4925,7 +4919,7 @@ input[type='radio']:checked {
 
 .modal-title {
   color: #297dfd;
-  font-size: 1.563rem;
+  font-size: 1rem;
   color: #297dfd;
 }
 
@@ -4938,7 +4932,7 @@ input[type='radio']:checked {
 .modal:not(.modal-sm) .modal-header .modal-title {
   margin-bottom: 0;
   margin-right: 1.875rem;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -5066,7 +5060,7 @@ p:last-child {
 .card-header .card-title {
   margin-top: 1.5rem;
   margin-bottom: 0;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   color: #297dfd;
 }
 
@@ -5453,7 +5447,7 @@ p:last-child {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #297dfd;
   margin-bottom: 2rem;
@@ -5670,9 +5664,9 @@ p:last-child {
   position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -0.625rem;
+  margin-top: -0.4375rem;
   margin-bottom: 0;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   color: #37dad3;
   text-align: center;
 }
@@ -5715,8 +5709,8 @@ p:last-child {
 .navbar-jumbo .off-canvas-open,
 .navbar-jumbo ~ .off-canvas .off-canvas-close,
 .navbar-jumbo ~ .off-canvas .off-canvas-title {
-  margin-top: 0.8125rem;
-  margin-bottom: 0.8125rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .loading-indicator {
