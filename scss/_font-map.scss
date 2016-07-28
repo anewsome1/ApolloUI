@@ -7,21 +7,21 @@ $font-faces: (
         weight: $font-thin,
         style: normal
       ),
-      thin-italic: (
-        name: 'proximanova-thinitalic',
-        weight: $font-thin,
-        style: italic
-      ),
+      // thin-italic: (
+      //   name: 'proximanova-thinitalic',
+      //   weight: $font-thin,
+      //   style: italic
+      // ),
       light: (
         name: 'proximanova-light',
         weight: $font-light,
         style: normal
       ),
-      light-italic: (
-        name: 'proximanova-lightitalic',
-        weight: $font-light,
-        style: italic
-      ),
+      // light-italic: (
+      //   name: 'proximanova-lightitalic',
+      //   weight: $font-light,
+      //   style: italic
+      // ),
       regular: (
         name: 'proximanova-regular',
         weight: $font-normal,
@@ -37,11 +37,11 @@ $font-faces: (
         weight: $font-semi-bold,
         style: normal
       ),
-      semibold-italic: (
-        name: 'proximanova-semibolditalic',
-        weight: $font-semi-bold,
-        style: italic
-      )
+      // semibold-italic: (
+      //   name: 'proximanova-semibolditalic',
+      //   weight: $font-semi-bold,
+      //   style: italic
+      // )
     )
   ),
   'Merriweather': (
@@ -57,6 +57,16 @@ $font-faces: (
         weight: $font-light,
         style: italic
       )
+      // regular: (
+      //   name: 'merriweather-regular',
+      //   weight: $font-normal,
+      //   style: normal
+      // ),
+      // regular-italic: (
+      //   name: 'merriweather-regularitalic',
+      //   weight: $font-normal,
+      //   style: italic
+      // )
     )
   )
 );
