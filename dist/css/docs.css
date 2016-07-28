@@ -10,7 +10,7 @@
 }
 
 .highlight .nt {
-  color: #245eb7;
+  color: #2d60ac;
 }
 
 .highlight .na {
@@ -18,7 +18,7 @@
 }
 
 .highlight .s {
-  color: #DE4839;
+  color: #bc3b2b;
 }
 
 .highlight .c {
@@ -112,7 +112,7 @@ body {
 
 .docs-drb-menu-toggle {
   padding: 1.875rem;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   line-height: 1;
   background: none;
   border: 0;
@@ -137,14 +137,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 4.5rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .docs-page-nav {
-  margin-bottom: 3.375rem;
+  margin-bottom: 5.5rem;
 }
 
 @media (max-width: 543px) {
@@ -209,7 +209,7 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 3.375rem;
+  padding-top: 5.5rem;
 }
 
 @media (min-width: 992px) {
@@ -225,7 +225,7 @@ body {
 }
 
 .docs-page-title::after {
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
 }
 
 .docs-section, .home-header {
@@ -233,8 +233,8 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 3.375rem;
-  padding-bottom: 3.375rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .docs-section:nth-of-type(even), .home-header:nth-of-type(even) {
@@ -243,7 +243,7 @@ body {
 
 .docs-section-title,
 .docs-example-title {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.5rem;
 }
 
 .docs-section-overview {
@@ -258,8 +258,8 @@ body {
 }
 
 .docs-example-intro {
-  margin-bottom: 3.375rem;
-  margin-top: 1.5rem;
+  margin-bottom: 5.5rem;
+  margin-top: 3.5rem;
 }
 
 .docs-example-title,
@@ -274,7 +274,7 @@ body {
 }
 
 .docs-example {
-  margin-bottom: 2.25rem;
+  margin-bottom: 4.5rem;
 }
 
 .docs-example-rendered-group {
@@ -313,7 +313,7 @@ body {
     padding-right: 8.33333%;
   }
   .docs-example-full .docs-example-rendered {
-    padding-bottom: 2.25rem;
+    padding-bottom: 4.5rem;
   }
   .docs-example-half .docs-example-rendered,
   .docs-example-half .docs-example-code {
@@ -497,7 +497,7 @@ body {
 
 .docs-icon .icon {
   width: 30%;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -529,7 +529,7 @@ body {
 }
 
 .docs-callout.docs-callout-success {
-  border-left: 0.25rem solid #2cc039;
+  border-left: 0.25rem solid #43b649;
 }
 
 .docs-callout.docs-callout-warning {
@@ -537,7 +537,7 @@ body {
 }
 
 .docs-callout.docs-callout-danger {
-  border-left: 0.25rem solid #f75040;
+  border-left: 0.25rem solid #fb4f39;
 }
 
 .docs-callout.docs-callout-info {
