@@ -99,20 +99,20 @@ body {
   }
 }
 
-.docs-apollo-sidebar {
+.docs-sidebar-header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  padding: .5rem 1rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: 1.875rem;
-  font-size: 3.5rem;
+  padding: 2rem;
+  font-size: 1.5rem;
   line-height: 1;
   background: none;
   border: 0;
@@ -128,7 +128,7 @@ body {
 
 .docs-nav {
   width: 19rem;
-  padding: 1.875rem;
+  padding: 1rem 3rem;
 }
 
 .docs-content {
@@ -137,14 +137,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 1rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
   font-weight: 200;
 }
 
 .docs-page-nav {
-  margin-bottom: 5.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 543px) {
@@ -209,7 +209,7 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 5.5rem;
+  padding-top: 3.375rem;
 }
 
 @media (min-width: 992px) {
@@ -225,7 +225,7 @@ body {
 }
 
 .docs-page-title::after {
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
 }
 
 .docs-section, .home-header {
@@ -233,8 +233,8 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
 }
 
 .docs-section:nth-of-type(even), .home-header:nth-of-type(even) {
@@ -243,7 +243,7 @@ body {
 
 .docs-section-title,
 .docs-example-title {
-  padding-bottom: 4.5rem;
+  padding-bottom: 2.25rem;
 }
 
 .docs-section-overview {
@@ -258,8 +258,8 @@ body {
 }
 
 .docs-example-intro {
-  margin-bottom: 5.5rem;
-  margin-top: 3.5rem;
+  margin-bottom: 3.375rem;
+  margin-top: 1.5rem;
 }
 
 .docs-example-title,
@@ -274,7 +274,7 @@ body {
 }
 
 .docs-example {
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .docs-example-rendered-group {
@@ -313,7 +313,7 @@ body {
     padding-right: 8.33333%;
   }
   .docs-example-full .docs-example-rendered {
-    padding-bottom: 4.5rem;
+    padding-bottom: 2.25rem;
   }
   .docs-example-half .docs-example-rendered,
   .docs-example-half .docs-example-code {
@@ -545,7 +545,6 @@ body {
 }
 
 .docs-callout-title {
-  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
