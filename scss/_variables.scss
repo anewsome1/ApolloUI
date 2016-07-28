@@ -165,10 +165,10 @@ $transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:          rgba(#000, .2);
+$shadow-color:          rgba(#000, .15);
 
-$shadow-border:         0 0 0 $border-width $shadow-color;
-$shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-border:        0 0 0 $border-width $shadow-color;
+$shadow-hover:         0 .625rem 2.5rem $shadow-color;  // ~5px 5px 16px
 $shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
 $shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
@@ -255,15 +255,14 @@ $modal-md:                    37.5rem; // ~600px
 $modal-sm:                    18.75rem; // ~300px
 
 
-
-
-
-
 ///
 /// Shared component values
 ///
-$component-height:            2rem;
-$component-height-lg:         3rem;
+
+$component-height:            2.5rem;
+$component-height-sm:         1.875rem;
+$component-height-lg:         3.125rem;
+
 
 ///
 /// Forms
@@ -292,15 +291,15 @@ $input-outline:                  $border-width solid transparent;
 
 $input-color-placeholder:        $charcoal-50;
 
-// $input-padding-x-sm:             $input-padding-x;
-// $input-padding-y-sm:             .275rem;
+$input-sm-padding-x:             $input-padding-x;
+$input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size-base);
 
-$input-padding-x-lg:             $input-padding-x;
-$input-padding-y-lg:             calc-padding-y($component-height-lg, $font-size-base);
+$input-lg-padding-x:             $input-padding-x;
+$input-lg-padding-y:             calc-padding-y($component-height-lg, $font-size-base);
 
 $input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
 $input-height-lg:                (($font-size-base * $input-line-height) + ($input-padding-y-lg * 2));
-// $input-height-sm:                (($font-size-sm * $input-line-height) + ($input-padding-y-sm * 2));
+$input-height-sm:                (($font-size-base * $input-line-height) + ($input-padding-y-sm * 2));
 
 $form-group-margin-bottom:       $spacer-y;
 
@@ -309,13 +308,11 @@ $input-group-addon-border-color: $input-border-color;
 
 $cursor-disabled:                not-allowed;
 
+// Data URI encoded images
 $svg-check-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjazwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2siIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzMsNjAgTDMzLDMwIEwyMywzMCBMMjMsNjUgTDIzLDcwIEw5Nyw3MCBMOTcsNjAgTDMzLDYwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuMDAwMDAwLCA1MC4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTYwLjAwMDAwMCwgLTUwLjAwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 $svg-check-solid-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1zb2xpZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQiIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEwyNi43NjU5ODEzLDU0Ljk0OTc0NzUgTDE5LjY5NDkxMzUsNjIuMDIwODE1MyBMNDQuNDQzNjUwOCw4Ni43Njk1NTI2IEw0Ny45NzkxODQ3LDkwLjMwNTA4NjUgTDEwMC4zMDUwODcsMzcuOTc5MTg0NyBMOTMuMjM0MDE4NywzMC45MDgxMTY5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
 $svg-box-gray: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5zcXVhcmU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InNxdWFyZSIgZmlsbD0iI0NDQ0NDQyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDEyMCwwIEwxMjAsMTIwIEwwLDEyMCBMMCwwIFogTTEwLDEwIEwxMTAsMTAgTDExMCwxMTAgTDEwLDExMCBMMTAsMTAgWiIgaWQ9IlJlY3RhbmdsZS0yMDYiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
 $svg-chevron-down-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
-
-
-// Large size
 
 // Checkbox
 $checkbox-size: 1.2rem;
@@ -335,19 +332,18 @@ $input-msg-shadow-height: .625rem;  // ~10px
 ///
 
 // $btn-border-width: $border-width;
-$btn-min-width: 5.75rem;  // ~92px
-$btn-padding-x: 1.125rem;  // ~18px
+$btn-min-width: 6.25rem;  // ~100px
+$btn-padding-x: 1.5rem; // ~24px
 $btn-padding-y: $input-padding-y - $border-width;
 $btn-line-height: 1;
 
-$btn-sm-padding-y: .375rem;  // ~6px;
-$btn-sm-padding-x: .8125rem;  // ~13px
-$btn-sm-font-size: $font-size-xs;  // ~12px
+$btn-sm-padding-x: 1.25rem; // ~20px
+$btn-sm-padding-y: $input-sm-padding-y - $border-width;  // Padding makes sm button ~30px tall
 
 $btn-lg-min-width: 8.75rem;  // ~140px
-$btn-lg-padding-y: .9375rem;  // ~15px
+$btn-lg-padding-y: $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
 
-$btn-pulse-size: 8rem;
+$btn-pulse-size: 8.75rem;
 $btn-link-padding-x: .5rem;
 $btn-link-disabled: $charcoal-50;
 
@@ -356,20 +352,20 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $blue-125,
+    bg-active: $navy-150,
     color-active: #fff,
     bg-disabled: $blue-25,
-    color-disabled: $blue-50
+    color-disabled: $charcoal-50
   ),
   secondary: (
     bg: #fff,
     color: $charcoal,
     border-color: $charcoal-25,
-    bg-active: $charcoal,
+    bg-active: $charcoal-50,
     color-active: #fff,
     bg-disabled: #fff,
     color-disabled: $charcoal-50,
-    border-disabled: rgba($charcoal-25, .7)
+    border-disabled: darken($neutral, 2.5%) // TODO: Update with palette color when designs get updated
   )
 );
 
