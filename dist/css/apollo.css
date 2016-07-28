@@ -3642,7 +3642,7 @@ dd {
 
 @media (min-width: 544px) {
   .btn + .btn {
-    margin-left: 0.9375rem;
+    margin-left: 1.875rem;
   }
 }
 
