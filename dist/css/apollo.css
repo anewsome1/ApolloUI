@@ -3429,6 +3429,12 @@ h3,
   font-weight: 300;
 }
 
+h4.heading-marketing,
+.h4.heading-marketing {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  font-size: 1rem;
+}
+
 td > dl {
   margin-bottom: 0;
 }
