@@ -534,9 +534,14 @@ $login-max-width: 24rem;
 /// Empty space
 ///
 
-$empty-space-icon-size: 2.5rem;  // ~40px
-$empty-space-icon-color: $charcoal-125;
-$empty-space-icon-color-dark: $teal;
+$empty-space-padding-y: 4.5rem;
+$empty-space-padding-x: 2.625rem;
+$empty-space-border-color: $charcoal-25;
+$empty-space-icon-size: 1.5rem;  // ~24px
+$empty-space-icon-close-size: $empty-space-icon-size * 1.65; // Account for whitespace around "x" icon
+$empty-space-icon-border-size: 4.5rem; // ~72px
+$empty-space-icon-color: $charcoal;
+$empty-space-icon-color-dark: #fff;
 
 
 ///
@@ -545,7 +550,8 @@ $empty-space-icon-color-dark: $teal;
 
 $breadcrumb-font-size: $font-size-base;
 $breadcrumb-spacing: .25rem; // ~4px;
-
+$breadcrumb-ellipse-letter-spacing: .125rem;
+$breadcrumb-ellipse-circle-size: 1.5rem;
 
 
 ///
