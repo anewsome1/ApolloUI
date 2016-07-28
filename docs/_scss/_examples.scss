@@ -63,7 +63,8 @@
 
   &::before {
     @extend %separator-bar;
-  }}
+  }
+}
 
 .docs-section-overview {
   margin-bottom: $spacer * 3;
