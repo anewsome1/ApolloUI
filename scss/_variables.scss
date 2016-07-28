@@ -165,10 +165,10 @@ $transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:          rgba(#000, .2);
+$shadow-color:          rgba(#000, .15);
 
-$shadow-border:         0 0 0 $border-width $shadow-color;
-$shadow-hover:         .5rem 1rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-border:        0 0 0 $border-width $shadow-color;
+$shadow-hover:         0 .625rem 2.5rem $shadow-color;  // ~5px 5px 16px
 $shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
 $shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 

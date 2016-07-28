@@ -49,7 +49,7 @@
 
   &:active,
   &.active {
-    box-shadow: $shadow-active;
+    box-shadow: none;
   }
 
   &:disabled,

@@ -3655,7 +3655,7 @@ dd {
 }
 
 .btn:hover, .btn.hover {
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .btn:focus {
@@ -3663,7 +3663,7 @@ dd {
 }
 
 .btn:active, .btn.active {
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: none;
 }
 
 .btn:disabled, .btn.disabled {
@@ -3862,13 +3862,13 @@ label:active + .search-input {
 }
 
 .form-control:focus, .search-input:focus, .form-control.focus, .focus.search-input {
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .form-control:active, .search-input:active, .form-control.active, .active.search-input,
 label:active + .form-control,
 label:active + .search-input {
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
@@ -3995,7 +3995,7 @@ input[type='radio'] {
 
 input[type='checkbox']:hover,
 input[type='radio']:hover {
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 input[type='checkbox']:hover,
@@ -4079,7 +4079,7 @@ input[type='radio']:checked {
 .toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
   background-color: white;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .toggle input[type="radio"] + label:active:hover, .nav-tabs.tab-bar .nav-link:active:focus, .nav-tabs.tab-bar .nav-link:active:hover {
@@ -4094,7 +4094,7 @@ input[type='radio']:checked {
   z-index: 2;
   color: #fff;
   background-color: #297dfd;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .toggle {
@@ -4261,7 +4261,7 @@ input[type='radio']:checked {
   padding: 0;
   background: #fff;
   opacity: .95;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .dropdown.open .dropdown-menu {
@@ -4432,7 +4432,7 @@ input[type='radio']:checked {
 .navbar {
   z-index: 1000;
   background-color: #fff;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar a,
@@ -4670,7 +4670,7 @@ input[type='radio']:checked {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f7f5f4;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .command-bar-actions {
@@ -4805,20 +4805,20 @@ input[type='radio']:checked {
   border: 0.0625rem solid #ced3d6;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-handle:active {
   background-color: #3a4f5a;
   border-color: transparent;
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .disabled .slider-handle {
   background-color: #ced3d6;
   cursor: not-allowed;
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .slider-handle + .slider-handle {
@@ -4874,7 +4874,7 @@ input[type='radio']:checked {
   position: relative;
   margin: 0.9375rem;
   background-color: #fff;
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
   opacity: .5;
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), -webkit-transform 0.5s cubic-bezier(0, 0, 0.5, 1);
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), transform 0.5s cubic-bezier(0, 0, 0.5, 1);
@@ -5430,7 +5430,7 @@ p:last-child {
   .login {
     max-width: 24rem;
     background-color: #fff;
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -5594,7 +5594,7 @@ p:last-child {
 }
 
 .off-canvas.open {
-  box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
 .off-canvas.off-canvas-left {
