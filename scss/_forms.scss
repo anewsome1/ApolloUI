@@ -185,6 +185,10 @@ input[type='checkbox'] {
     background-size: 100%;
     border: none;
   }
+
+  .bg-dark &:checked {
+    background-image: $svg-check-solid-teal;
+  }
 }
 
 input[type='radio'] {
