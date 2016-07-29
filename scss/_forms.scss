@@ -46,7 +46,7 @@
   &:active,
   &.active,
   label:active + & {
-    border: none;
+    border: 0;
     background-color: $input-bg-focus;
     outline: none;
   }
@@ -183,7 +183,7 @@ input[type='checkbox'] {
   &:checked {
     background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
     background-size: 100%;
-    border: none;
+    border: 0;
   }
 
   .bg-dark &:checked {
