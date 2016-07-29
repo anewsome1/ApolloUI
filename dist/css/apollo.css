@@ -3888,7 +3888,7 @@ select.form-control, select.search-input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #ced3d6;
   background: rgba(255, 255, 255, 0.85) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) no-repeat right 0.5rem center;
   background-size: 1rem;
 }
@@ -3987,7 +3987,7 @@ input[type='radio'] {
   width: 1rem;
   height: 1rem;
   margin-right: .125rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid #ced3d6;
   background-color: rgba(255, 255, 255, 0.85);
   -webkit-appearance: none;
      -moz-appearance: none;
