@@ -277,7 +277,7 @@ $component-height-lg:         3.125rem;
 /// Forms
 ///
 
-$input-padding-x:                .5rem;
+$input-padding-x:                .625rem;
 $input-padding-y:                calc-padding-y($component-height, $font-size-base);
 $input-line-height:              1;
 
@@ -303,7 +303,7 @@ $input-color-placeholder:        $charcoal-50;
 $input-sm-padding-x:             $input-padding-x;
 $input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size-base);
 
-$input-lg-padding-x:             $input-padding-x;
+$input-lg-padding-x:             $input-padding-x * 2;
 $input-lg-padding-y:             calc-padding-y($component-height-lg, $font-size-base);
 
 $input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
