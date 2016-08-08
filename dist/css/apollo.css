@@ -3816,7 +3816,6 @@ dd {
 
 .control-label.required::after {
   content: "*";
-  color: #fb4f39;
 }
 
 .form-control, .search-input {

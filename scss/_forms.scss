@@ -12,7 +12,6 @@
 
   &.required::after {
     content: "*";
-    color: $brand-danger;
   }
 }
 
