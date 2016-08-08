@@ -5,7 +5,10 @@
 
 
 .control-label {
-  display: block;
+  // display: block;
+  margin-bottom: 0;
+  line-height: $component-height;
+
   &.disabled {
     color: $input-color-disabled;
   }
