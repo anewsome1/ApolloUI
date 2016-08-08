@@ -329,10 +329,10 @@ $checkbox-size: 1.125rem;
 $checkbox-color: $blue;
 
 // Error message
-$input-msg-padding-y: $input-padding-y * 1.2;
+$input-msg-font-size: $font-size-sm;
+$input-msg-padding-y: calc-padding-y(1.875, $input-msg-font-size);
 $input-msg-padding-x: $input-padding-x;
-$input-msg-icon-size: $font-size-lg;
-$input-msg-font-size: $font-size-base;
+$input-msg-icon-size: $font-size-sm;
 $input-msg-line-height: $input-msg-font-size;
 $input-msg-shadow-height: .625rem;  // ~10px
 

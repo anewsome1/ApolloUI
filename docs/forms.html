@@ -228,6 +228,8 @@ order: 5
 
 {% include example-intro.html title='Validation states' description='Give users inline visual feedback to indicate the status of their input.' %}
 
+
+{% comment %}
 {% capture example %}
 <fieldset class="form-group has-success">
   <label class="control-label" for="email">Email Address</label>
@@ -245,6 +247,8 @@ order: 5
 </fieldset>
 {% endcapture %}
 {% include example.html size='third' label='Warning message' code=example %}
+{% endcomment %}
+
 
 {% capture example %}
 <fieldset class="form-group has-danger">
