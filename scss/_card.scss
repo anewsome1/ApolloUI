@@ -16,10 +16,9 @@
 /// Card main sections
 ///
 
-
 .card-header,
-.card-footer,
-.card-block {
+.card-block,
+.card-footer {
   @include clearfix;
   padding-right: $card-spacer-x;
   padding-left: $card-spacer-x;
@@ -27,6 +26,11 @@
 
 .card-header {
   padding-top: 1.5rem;
+
+  .card-title,
+  .card-caption {
+    text-align: center;
+  }
 }
 
 .card-block {
@@ -35,14 +39,39 @@
       flex-grow: 1;
     }
   }
+
+  + .card-block {
+    padding-top: 0;
+  }
 }
 
 .card-footer {
   background-color: $card-cap-bg;
-}
+  height: $card-cap-height;
 
-.card-block + .card-block {
-  padding-top: 0;
+  @if $enable-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .card-cta {
+      flex-grow: 1;
+    }
+  } @else {
+    @include clearfix;
+
+    .card-cta {
+      float: left;
+    }
+
+    .card-actions {
+      float: right;
+    }
+  }
+
+  .btn-link + .btn-link {
+    margin-left: 0;
+  }
 }
 
 
@@ -63,14 +92,6 @@
   color: $text-muted;
   font-size: $font-size-sm;
 }
-
-.card-header {
-  .card-title,
-  .card-caption {
-    text-align: center;
-  }
-}
-
 
 
 ///
