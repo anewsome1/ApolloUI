@@ -5,6 +5,7 @@
       flex-direction: column;
     }
   }
+  border: $border-width solid $card-border-color;
   background-color: $card-bg;
   transition: all $transition-fast;
 
@@ -20,11 +21,12 @@
 .card-footer,
 .card-block {
   @include clearfix;
-  padding: $card-spacer-y $card-spacer-x;
+  padding-right: $card-spacer-x;
+  padding-left: $card-spacer-x;
 }
 
 .card-header {
-
+  padding-top: 1.5rem;
 }
 
 .card-block {
@@ -49,26 +51,23 @@
 ///
 
 .card-title {
+  @extend .h1;
+  line-height: 1;
   margin-top: $card-spacer-y;
+  margin-bottom: 0;
 }
 
 .card-caption {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: .375rem;
+  margin-bottom: $card-spacer-y;
   color: $text-muted;
+  font-size: $font-size-sm;
 }
 
 .card-header {
   .card-title,
   .card-caption {
     text-align: center;
-  }
-
-  .card-title {
-    margin-top: $card-spacer-y * 2;
-    margin-bottom: 0;
-    font-size: $font-size-h2;
-    color: $brand-primary;
   }
 }
 
