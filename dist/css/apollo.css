@@ -5051,7 +5051,6 @@ p:last-child {
 
 .card {
   background-color: #fff;
-  box-shadow: 0 0.625rem 3.125rem 0 rgba(0, 0, 0, 0.1);
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -5064,10 +5063,6 @@ p:last-child {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-
-.card:hover {
-  box-shadow: 0 1.875rem 3.75rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .card-header,

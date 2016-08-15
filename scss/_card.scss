@@ -6,12 +6,8 @@
     }
   }
   background-color: $card-bg;
-  box-shadow: $shadow-lg;
   transition: all $transition-fast;
 
-  &:hover {
-    box-shadow: $shadow-lg-hover;
-  }
 }
 
 
@@ -143,7 +139,7 @@
       width: 100%;
       height: $card-spacer-y;
       background-color: $state-bg;
-      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5),
+      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5);
     }
   }
 }
