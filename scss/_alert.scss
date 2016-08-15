@@ -1,9 +1,18 @@
 .alert {
-  display: block;
-  position: relative;
+
+  @if $enable-flex {
+    display: flex;
+    flex-direction: row;
+    min-height: 2.5rem;
+    align-items: center;
+    padding-left: $alert-padding-x;
+  } @else {
+    display: block;
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+  }
+
   z-index: 0;
-  padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $spacer;
   margin-bottom: $alert-shadow-height * 3;
   font-size: $alert-font-size;
   line-height: $alert-line-height;
@@ -11,7 +20,6 @@
   // Icons for message and close button
   &::before,
   .close {
-    font-size: $alert-icon-size;
     line-height: $alert-line-height;
     color: #fff;
   }
@@ -19,8 +27,14 @@
   &::before {
     @extend .icon;
 
-    margin-right: $alert-padding-x / 2;
+    font-size: $alert-icon-size;
+    margin-right: $alert-icon-margin;
     vertical-align: text-top;
+  }
+
+  &.alert-success::before {
+    font-size: $alert-icon-margin;
+    margin-right: $alert-icon-size;
   }
 
   // Positioning
@@ -29,10 +43,16 @@
   }
 
   .close {
-    position: absolute;
-    top: 50%;
-    margin-top: -($alert-icon-size / 2);
-    right: $alert-padding-x;
+    @if $enable-flex {
+      order: 2;
+      margin-left: auto;
+      padding-right: $alert-padding-x;
+    } @else {
+      position: absolute;
+      top: 50%;
+      right: $alert-padding-x;
+      margin-top: -($alert-icon-size / 2);
+    }
   }
 
   ///
