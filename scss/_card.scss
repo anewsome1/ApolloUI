@@ -147,19 +147,19 @@
 /// Card states
 ///
 
-@each $state, $state-props in $alert-states {
-  $state-bg: map-get($state-props, bg);
+// @each $state, $state-props in $alert-states {
+//   $state-bg: map-get($state-props, bg);
 
-  .card-#{ $state } {
-    position: relative;
-    &::before {
-      position: absolute;
-      top: 0;
-      content: '';
-      width: 100%;
-      height: $card-spacer-y;
-      background-color: $state-bg;
-      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5);
-    }
-  }
-}
+//   .card-#{ $state } {
+//     position: relative;
+//     &::before {
+//       position: absolute;
+//       top: 0;
+//       content: '';
+//       width: 100%;
+//       height: $card-spacer-y;
+//       background-color: $state-bg;
+//       box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5);
+//     }
+//   }
+// }
