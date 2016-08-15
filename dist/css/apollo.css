@@ -3549,7 +3549,7 @@ dd {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 0.9375rem;
+  padding-left: 1.875rem;
   z-index: 0;
   margin-bottom: 2.25rem;
   font-size: 1rem;
@@ -3564,8 +3564,13 @@ dd {
 
 .alert::before, .form-msg::before {
   font-size: 0.875rem;
-  margin-right: 0.46875rem;
+  margin-right: 1.25rem;
   vertical-align: text-top;
+}
+
+.alert.alert-success::before, .alert-success.form-msg::before {
+  font-size: 1.25rem;
+  margin-right: 0.875rem;
 }
 
 .alert.alert-bottom, .alert-bottom.form-msg {
@@ -3577,7 +3582,7 @@ dd {
       -ms-flex-order: 2;
           order: 2;
   margin-left: auto;
-  padding-right: 0.9375rem;
+  padding-right: 1.875rem;
 }
 
 .alert.alert-info, .alert-info.form-msg {
@@ -3601,7 +3606,7 @@ dd {
 }
 
 .alert.alert-success::before, .alert-success.form-msg::before {
-  content: "";
+  content: "";
   color: #fff;
 }
 
@@ -3980,7 +3985,7 @@ textarea.form-control, textarea.search-input {
 }
 
 .has-success .form-msg::before, .has-success.form-msg::before {
-  content: "";
+  content: "";
   color: #fff;
 }
 

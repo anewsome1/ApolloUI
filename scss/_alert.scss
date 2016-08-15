@@ -28,8 +28,13 @@
     @extend .icon;
 
     font-size: $alert-icon-size;
-    margin-right: $alert-padding-x / 2;
+    margin-right: $alert-icon-margin;
     vertical-align: text-top;
+  }
+
+  &.alert-success::before {
+    font-size: $alert-icon-margin;
+    margin-right: $alert-icon-size;
   }
 
   // Positioning
