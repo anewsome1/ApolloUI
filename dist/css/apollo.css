@@ -5093,7 +5093,7 @@ p:last-child {
 }
 
 .card-footer {
-  background-color: rgba(29, 40, 45, 0.05);
+  background-color: #f7f5f4;
 }
 
 .card-block + .card-block {
