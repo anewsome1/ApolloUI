@@ -29,11 +29,11 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
@@ -41,7 +41,7 @@ code {
 }
 
 kbd {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #fff;
   background-color: #333;
@@ -59,7 +59,6 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  line-height: 1.5;
   color: #373a3c;
 }
 
