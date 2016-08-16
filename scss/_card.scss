@@ -5,10 +5,11 @@
       flex-direction: column;
     }
   }
+
+  margin-bottom: $grid-gutter-width;
   border: $border-width solid $card-border-color;
   background-color: $card-bg;
   transition: all $transition-fast;
-
 }
 
 

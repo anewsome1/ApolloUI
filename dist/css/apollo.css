@@ -5079,6 +5079,7 @@ p:last-child {
 }
 
 .card {
+  margin-bottom: 1.875rem;
   border: 0.0625rem solid #ced3d6;
   background-color: #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
