@@ -115,6 +115,7 @@ body {
   line-height: 1;
   background: none;
   border: 0;
+  color: #fff;
 }
 
 .docs-drb-menu-toggle:focus {
