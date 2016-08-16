@@ -5110,13 +5110,14 @@ p:last-child {
   clear: both;
 }
 
-.card-header {
-  padding-top: 1.5rem;
+.card-header,
+.card-block {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
-.card-header .card-title,
-.card-header .card-caption {
-  text-align: center;
+.card-header + .card-block {
+  padding-top: 0;
 }
 
 @media (min-width: 544px) {
@@ -5129,6 +5130,11 @@ p:last-child {
 
 .card-block + .card-block {
   padding-top: 0;
+}
+
+.card-text-center .card-header,
+.card-text-center .card-block {
+  text-align: center;
 }
 
 .card-footer {
@@ -5151,6 +5157,10 @@ p:last-child {
           flex-grow: 1;
 }
 
+.card-footer .card-actions .icon, .card-footer .card-actions .close, .card-footer .card-actions .alert::before, .card-footer .card-actions .form-msg::before {
+  font-size: 1.25rem;
+}
+
 .card-footer .btn-link + .btn-link {
   margin-left: 0;
 }
@@ -5163,7 +5173,7 @@ p:last-child {
 
 .card-caption {
   margin-top: .375rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   color: #9ca7ac;
   font-size: 0.875rem;
 }

@@ -298,7 +298,7 @@
   
 <div class="row">
   <div class="col-xs-6 col-sm-4">
-    <div class="card">
+    <div class="card card-text-center">
       <div class="card-header">
         <h4 class="card-title">First card</h4>
         <p class="card-caption">Some pretty neat stuff.</p>
@@ -307,25 +307,47 @@
         <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
   <div class="col-xs-6 col-sm-4">
     <div class="card">
       <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
-      <div class="card-block">
+      <div class="card-header">
         <h3 class="card-title">Second card</h3>
         <p class="card-caption">This one is different.</p>
+      </div>
+      <div class="card-block">
         <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
   <div class="col-xs-6 col-sm-4">
-    <div class="card">
+    <div class="card card-text-center">
       <div class="card-header">
         <h4 class="card-title">Third card</h4>
         <p class="card-caption">Not at all like the others.</p>
@@ -334,7 +356,17 @@
         <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -346,7 +378,7 @@
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-text-center"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>First card<span class="nt">&lt;/h4&gt;</span>
         <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-caption"</span><span class="nt">&gt;</span>Some pretty neat stuff.<span class="nt">&lt;/p&gt;</span>
@@ -355,25 +387,47 @@
         <span class="nt">&lt;p&gt;</span>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"http://placehold.it/640x480/f5f5f5"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-block"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Second card<span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-caption"</span><span class="nt">&gt;</span>This one is different.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-block"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;p&gt;</span>Notice how the title is different on this card.  Only titles inside <span class="nt">&lt;code&gt;</span>.card-header<span class="nt">&lt;/code&gt;</span> are given a predetermined color and size.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-6 col-sm-4"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card card-text-center"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Third card<span class="nt">&lt;/h4&gt;</span>
         <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-caption"</span><span class="nt">&gt;</span>Not at all like the others.<span class="nt">&lt;/p&gt;</span>
@@ -382,7 +436,17 @@
         <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"http://placehold.it/640x480/f5f5f5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -424,7 +488,17 @@
         <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="card">
@@ -435,7 +509,17 @@
         <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="card">
@@ -447,7 +531,17 @@
         <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -469,7 +563,17 @@
         <span class="nt">&lt;p&gt;</span>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
@@ -480,7 +584,17 @@
         <span class="nt">&lt;p&gt;</span>Notice how the title is different on this card.  Only titles inside <span class="nt">&lt;code&gt;</span>.card-header<span class="nt">&lt;/code&gt;</span> are given a predetermined color and size.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
@@ -492,7 +606,17 @@
         <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-fluid"</span> <span class="na">src=</span><span class="s">"http://placehold.it/640x480/f5f5f5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-footer"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-cta"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>See data<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
