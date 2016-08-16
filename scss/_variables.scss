@@ -220,11 +220,12 @@ $alert-states: (
 /// Cards
 ///
 
-$card-spacer-x:             1.25rem;
-$card-spacer-y:             .75rem;
+$card-spacer-x:             $grid-gutter-width;
+$card-spacer-y:             $card-spacer-x * 2 / 3;
 $card-border-width:         $border-width;
-$card-border-color:         rgba($charcoal-150, .075);
-$card-cap-bg:               rgba($charcoal-150, .05);
+$card-border-color:         $charcoal-25;
+$card-cap-bg:               $neutral;
+$card-cap-height:           3.75rem;
 $card-bg:                   #fff;
 
 
