@@ -3327,6 +3327,7 @@ dd {
 }
 
 .control-label {
+  display: block;
   margin-bottom: 0;
   line-height: 2.5rem;
 }
