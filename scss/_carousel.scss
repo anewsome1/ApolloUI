@@ -1,8 +1,10 @@
 ///
 /// Wrapper for the slide container and indicators
 ///
+
 .carousel {
   position: relative;
+  border: $border-width solid $charcoal-25;
 
   .billboard {
     margin-bottom: 0;
@@ -175,9 +177,6 @@
 }
 
 
-
-
-
 ///
 /// Responsive variations
 ///
@@ -198,3 +197,33 @@
     padding-bottom: 30px;
   }
 }
+
+
+///
+/// Responsive variations
+///
+
+.carousel-dark {
+  border: 0;
+  background-color: rgba($brand-primary, .8);
+  color: #fff;
+
+  .btn-primary {
+    @extend .btn-secondary;
+    border: 0;
+  }
+
+  .carousel-control {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .carousel-indicators li {
+    background-color: rgba(#fff, .2);
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+}
+

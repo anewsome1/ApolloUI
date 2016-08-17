@@ -3028,11 +3028,11 @@ dd {
   color: #fff;
 }
 
-.bg-dark a.btn-secondary, .off-canvas a.btn-secondary, .bg-dark a.btn-secondary:hover, .off-canvas a.btn-secondary:hover, .bg-dark a.btn-secondary:visited, .off-canvas a.btn-secondary:visited {
+.bg-dark a.btn-secondary, .off-canvas a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .off-canvas .carousel-dark a.btn-primary, .carousel-dark .off-canvas a.btn-primary, .bg-dark a.btn-secondary:hover, .off-canvas a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .off-canvas .carousel-dark a.btn-primary:hover, .carousel-dark .off-canvas a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .off-canvas a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .off-canvas .carousel-dark a.btn-primary:visited, .carousel-dark .off-canvas a.btn-primary:visited {
   color: #3a4f5a;
 }
 
-.bg-dark a.btn-secondary:active, .off-canvas a.btn-secondary:active {
+.bg-dark a.btn-secondary:active, .off-canvas a.btn-secondary:active, .bg-dark .carousel-dark a.btn-primary:active, .carousel-dark .bg-dark a.btn-primary:active, .off-canvas .carousel-dark a.btn-primary:active, .carousel-dark .off-canvas a.btn-primary:active {
   color: #fff;
 }
 
@@ -3249,25 +3249,25 @@ dd {
   color: #9ca7ac;
 }
 
-.btn-secondary {
+.btn-secondary, .carousel-dark .btn-primary {
   border-color: #ced3d6;
   background-color: #fff;
 }
 
-.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+.btn-secondary, .carousel-dark .btn-primary, .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary:focus, .carousel-dark .btn-primary:focus {
   color: #3a4f5a;
 }
 
-.btn-secondary:hover, .btn-secondary.hover, .btn-secondary:active, .btn-secondary.active {
+.btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary.hover, .carousel-dark .hover.btn-primary, .btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
   border-color: transparent;
 }
 
-.btn-secondary:active, .btn-secondary.active {
+.btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
   background-color: #9ca7ac;
   color: #fff;
 }
 
-.btn-secondary:disabled, .btn-secondary.disabled {
+.btn-secondary:disabled, .carousel-dark .btn-primary:disabled, .btn-secondary.disabled, .carousel-dark .disabled.btn-primary {
   background-color: #fff;
   color: #9ca7ac;
   border-color: #f2eeed;
@@ -3314,7 +3314,7 @@ dd {
   padding-bottom: 1rem;
 }
 
-.bg-dark .btn-secondary, .off-canvas .btn-secondary {
+.bg-dark .btn-secondary, .off-canvas .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .off-canvas .carousel-dark .btn-primary, .carousel-dark .off-canvas .btn-primary {
   border: none;
 }
 
@@ -4805,6 +4805,7 @@ p:last-child {
 
 .carousel {
   position: relative;
+  border: 0.0625rem solid #ced3d6;
 }
 
 .carousel .billboard {
@@ -4994,6 +4995,29 @@ p:last-child {
     left: 20%;
     padding-bottom: 30px;
   }
+}
+
+.carousel-dark {
+  border: 0;
+  background-color: rgba(41, 125, 253, 0.8);
+  color: #fff;
+}
+
+.carousel-dark .btn-primary {
+  border: 0;
+}
+
+.carousel-dark .carousel-control {
+  border-color: #fff;
+  color: #fff;
+}
+
+.carousel-dark .carousel-indicators li {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-dark .carousel-indicators li.active {
+  background-color: #fff;
 }
 
 .login {
