@@ -3810,7 +3810,6 @@ input[type='radio']:checked {
   min-width: 8rem;
   padding: 0;
   background: #fff;
-  opacity: .95;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
@@ -3857,7 +3856,6 @@ input[type='radio']:checked {
   top: 0;
   left: 100%;
   width: auto;
-  height: auto;
 }
 
 .dropdown-submenu .dropdown-submenu-toggle {

@@ -26,7 +26,6 @@
   min-width: $dropdown-menu-min-width;
   padding: 0;
   background: $dropdown-menu-bg;
-  opacity: .95;  // Opaque background makes links hard to read
   box-shadow: $shadow-hover;
 
   // Display menu when `.open` class is added
@@ -76,7 +75,7 @@
     top: 0;
     left: 100%;
     width: auto;
-    height: auto;
+    // height: auto;
   }
 
 
