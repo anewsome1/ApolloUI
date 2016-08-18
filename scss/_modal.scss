@@ -171,7 +171,7 @@
     padding: unset;
 
     @include media-breakpoint-up(sm) {
-      max-width: $login-max-width;
+      max-width: $login-width;
     }
   }
 }

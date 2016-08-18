@@ -2769,6 +2769,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1,
 .card-title,
+.login-brand-name,
 .empty-space-title, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -2777,7 +2778,7 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 
-h1, .h1, .card-title, .empty-space-title {
+h1, .h1, .card-title, .login-brand-name, .empty-space-title {
   font-size: 2.25rem;
 }
 
@@ -2909,6 +2910,7 @@ html {
 h1,
 .h1,
 .card-title,
+.login-brand-name,
 .empty-space-title {
   font-weight: 200;
 }
@@ -3401,7 +3403,7 @@ label:active + .search-input {
 }
 
 .form-control.input-lg, .input-lg.search-input {
-  height: 2.5rem;
+  height: 3.125rem;
   padding: 1.0625rem 1.25rem;
 }
 
@@ -4605,7 +4607,7 @@ p:last-child {
 
 @media (min-width: 544px) {
   .modal-login .modal-dialog {
-    max-width: 24rem;
+    max-width: 28rem;
   }
 }
 
@@ -5014,7 +5016,6 @@ p:last-child {
 }
 
 .login {
-  padding: 1.875rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5025,9 +5026,10 @@ p:last-child {
 
 @media (min-width: 544px) {
   .login {
-    max-width: 24rem;
+    width: 28rem;
+    padding: 1.875rem;
+    border: 0.0625rem solid #ced3d6;
     background-color: #fff;
-    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -5043,14 +5045,25 @@ p:last-child {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
-  font-size: 1.5rem;
-  font-weight: 300;
   color: #297dfd;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .login-brand-logo + .login-brand-name {
   margin-top: 1rem;
+}
+
+.login-help {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .login-container {
@@ -5066,8 +5079,6 @@ p:last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 .search {
