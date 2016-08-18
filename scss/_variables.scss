@@ -418,12 +418,13 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 /// Dropdowns
 ///
 
-$dropdown-padding-x: 1rem;
-$dropdown-padding-y: calc-padding-y(2rem, $font-size-base);
-$dropdown-menu-bg: #fff;
-$dropdown-menu-color: $body-color;
-$dropdown-menu-bg-hover: $link-color;
-$dropdown-menu-color-hover: #fff;
+$dropdown-padding-x:          1rem;
+$dropdown-padding-y:          calc-padding-y(2rem, $font-size-base);
+$dropdown-menu-bg:            #fff;
+$dropdown-menu-color:         $body-color;
+$dropdown-menu-bg-hover:      $link-color;
+$dropdown-menu-color-hover:   #fff;
+$dropdown-menu-min-width:     8rem;
 
 
 ///

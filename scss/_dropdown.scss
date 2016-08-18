@@ -23,6 +23,7 @@
   display: none;
   position: absolute;
   z-index: $zindex-popover;
+  min-width: $dropdown-menu-min-width;
   padding: 0;
   background: $dropdown-menu-bg;
   opacity: .95;  // Opaque background makes links hard to read
@@ -30,7 +31,7 @@
 
   // Display menu when `.open` class is added
   // to `.dropdown` parent element via JS
-  .dropdown.open & {
+  .dropdown.open > & {
     display: block;
   }
 
@@ -59,5 +60,36 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+.dropdown-submenu {
+  position: relative;
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  &:hover > .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: auto;
+    height: auto;
+  }
+
+
+  .dropdown-submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+      @extend %icon-base;
+      content: map-get($_icons-map, 'chevron-right');
+      padding-left: .5rem;
+      margin-right: -.5rem;
+    }
+
   }
 }
