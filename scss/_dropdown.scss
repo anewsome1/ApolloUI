@@ -1,6 +1,6 @@
 .dropdown-toggle {
   position: relative;
-  padding: $dropdown-toggle-padding;
+  padding: $dropdown-padding-y $dropdown-padding-x;
   background: none;
   border: 0;
   color: $link-color;
@@ -37,13 +37,14 @@
   > li {
     list-style-type: none;
 
-    &.separator {
-      border-top: 1px solid rgba($charcoal-125, .1);
+    + li {
+      border-top: $border-width solid $charcoal-25;
     }
 
     > a {
       display: block;
-      padding: ($spacer-y / 2) $btn-padding-x;
+      padding: $dropdown-padding-y $dropdown-padding-x;
+      line-height: 1;
       transition: all $transition-fast;
 
       &:link,
