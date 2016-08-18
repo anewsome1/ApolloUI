@@ -1627,7 +1627,7 @@ output {
   font-style: normal;
 }
 
-.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
+.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .dropdown-submenu .dropdown-submenu-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
 .carousel-control .icon-next, .search::before, .off-canvas-open::before,
 .off-canvas-close::before, .empty-space-icon, .pager-prev::before,
 .pager-next::after {
@@ -3786,7 +3786,7 @@ input[type='radio']:checked {
 
 .dropdown-toggle {
   position: relative;
-  padding: 0.6875rem 1.5rem;
+  padding: 0.5rem 1rem;
   background: none;
   border: 0;
   color: #297dfd;
@@ -3807,13 +3807,13 @@ input[type='radio']:checked {
   display: none;
   position: absolute;
   z-index: 1060;
+  min-width: 8rem;
   padding: 0;
   background: #fff;
-  opacity: .95;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
-.dropdown.open .dropdown-menu {
+.dropdown.open > .dropdown-menu {
   display: block;
 }
 
@@ -3821,13 +3821,14 @@ input[type='radio']:checked {
   list-style-type: none;
 }
 
-.dropdown-menu > li.separator {
-  border-top: 1px solid rgba(44, 59, 68, 0.1);
+.dropdown-menu > li + li {
+  border-top: 0.0625rem solid #ced3d6;
 }
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 1;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
@@ -3836,9 +3837,40 @@ input[type='radio']:checked {
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:active {
-  background-color: #153f7f;
-  color: #9bece9;
+  background-color: #297dfd;
+  color: #fff;
   text-decoration: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: auto;
+}
+
+.dropdown-submenu .dropdown-submenu-toggle {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown-submenu .dropdown-submenu-toggle::after {
+  content: "";
+  padding-left: .5rem;
+  margin-right: -.5rem;
 }
 
 .nav {
