@@ -261,9 +261,9 @@ $modal-backdrop-opacity:      .4;
 $modal-header-border-color:   $neutral;
 $modal-footer-border-color:   $modal-header-border-color;
 
-$modal-lg:                    56.25rem;  // ~900px
-$modal-md:                    37.5rem; // ~600px
-$modal-sm:                    18.75rem; // ~300px
+$modal-lg:                    56.25rem; // ~900px
+$modal-md:                    34.75rem; // ~556px
+$modal-sm:                    22.5rem;  // ~360px
 
 
 ///
@@ -346,6 +346,7 @@ $input-msg-shadow-height: .625rem;  // ~10px
 $btn-min-width: 6.25rem;  // ~100px
 $btn-padding-x: 1.5rem; // ~24px
 $btn-padding-y: $input-padding-y - $border-width;
+$btn-margin-x: 1.125rem;
 $btn-line-height: 1;
 
 $btn-sm-padding-x: 1.25rem; // ~20px

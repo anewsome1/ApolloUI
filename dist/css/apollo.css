@@ -3166,7 +3166,7 @@ dd {
 
 @media (min-width: 544px) {
   .btn + .btn {
-    margin-left: 1.875rem;
+    margin-left: 1.125rem;
   }
 }
 
@@ -4588,10 +4588,10 @@ p:last-child {
 
 @media (min-width: 544px) {
   .modal-dialog {
-    max-width: 37.5rem;
+    max-width: 34.75rem;
   }
   .modal-sm .modal-dialog {
-    max-width: 18.75rem;
+    max-width: 22.5rem;
   }
 }
 
