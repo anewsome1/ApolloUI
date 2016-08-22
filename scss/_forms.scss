@@ -42,13 +42,12 @@
     opacity: 1;
   }
 
-  // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus,
   &:active,
   &.active,
   label:active + & {
-    border: 0;
+    border-color: transparent;
     background-color: $input-bg-focus;
     outline: none;
   }

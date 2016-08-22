@@ -3381,7 +3381,7 @@ dd {
 .form-control:focus, .search-input:focus, .form-control.focus, .focus.search-input, .form-control:active, .search-input:active, .form-control.active, .active.search-input,
 label:active + .form-control,
 label:active + .search-input {
-  border: 0;
+  border-color: transparent;
   background-color: #fff;
   outline: none;
 }
