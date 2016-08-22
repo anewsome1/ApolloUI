@@ -45,9 +45,9 @@ description: Use this component to show search results as users type (styles onl
 <section class="docs-section">
 
 {% capture example %}
-<div class="search search-dropdown">
-  <input class="search-input" type="search" value="Vi">
-  <ul class="search-results">
+<div class="search dropdown">
+  <input class="search-input dropdown-toggle" type="search" data-toggle="dropdown" value="Vi">
+  <ul class="search-results dropdown-menu" aria-labeledby="dropdownDemo1">
     <li class="search-result">
       <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atribunali</a>
     </li>
