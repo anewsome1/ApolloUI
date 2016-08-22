@@ -5101,32 +5101,6 @@ p:last-child {
   padding-left: 2.5rem;
 }
 
-.bg-dark .search-input, .off-canvas .search-input {
-  color: #fff;
-  background-color: rgba(29, 40, 45, 0.95);
-  border-color: transparent;
-}
-
-.bg-dark .search-input::-webkit-input-placeholder, .off-canvas .search-input::-webkit-input-placeholder {
-  color: #9ca7ac;
-}
-
-.bg-dark .search-input::-moz-placeholder, .off-canvas .search-input::-moz-placeholder {
-  color: #9ca7ac;
-}
-
-.bg-dark .search-input:-ms-input-placeholder, .off-canvas .search-input:-ms-input-placeholder {
-  color: #9ca7ac;
-}
-
-.bg-dark .search-input::placeholder, .off-canvas .search-input::placeholder {
-  color: #9ca7ac;
-}
-
-.bg-dark .search-input:focus, .off-canvas .search-input:focus {
-  background-color: #1d282d;
-}
-
 .bg-dark .search::before, .off-canvas .search::before,
 .bg-dark .search-input::-webkit-input-placeholder, .off-canvas .search-input::-webkit-input-placeholder {
   color: #9ca7ac;
