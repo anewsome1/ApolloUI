@@ -42,3 +42,25 @@ description: Use this component to show search results as users type (styles onl
 
 
 
+<section class="docs-section">
+
+{% capture example %}
+<div class="search search-dropdown">
+  <input class="search-input" type="search" value="Vi">
+  <ul class="search-results">
+    <li class="search-result">
+      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atribunali</a>
+    </li>
+    <li class="search-result">
+      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atryl A</a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' code=example %}
+
+</section>
+
+
+
