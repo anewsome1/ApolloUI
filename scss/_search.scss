@@ -68,11 +68,11 @@
 
     &:hover,
     &:focus {
-      background-color: $blue-125;
-      color: #fff;
+      background-color: $brand-primary;
+      color: rgba(#fff, .8);
 
       .search-highlight {
-        color: $teal-50;
+        color: #fff;
       }
     }
   }
@@ -81,6 +81,7 @@
 // Character highlighting
 .search-highlight {
   color: $link-color;
+  font-weight: $font-semi-bold;
 
   .bg-dark & {
     color: $teal;

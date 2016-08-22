@@ -5144,16 +5144,17 @@ p:last-child {
 }
 
 .search-results > .search-result > .search-link:hover, .search-results > .search-result > .search-link:focus {
-  background-color: #1f5ebe;
-  color: #fff;
+  background-color: #297dfd;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .search-results > .search-result > .search-link:hover .search-highlight, .search-results > .search-result > .search-link:focus .search-highlight {
-  color: #9bece9;
+  color: #fff;
 }
 
 .search-highlight {
   color: #297dfd;
+  font-weight: 600;
 }
 
 .bg-dark .search-highlight, .off-canvas .search-highlight {
