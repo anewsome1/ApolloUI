@@ -94,7 +94,11 @@
       &:hover,
       &:focus {
         background-color: $brand-primary;
-        color: rgba(#fff, .8);
+
+        &,
+        & .search-meta {
+          color: rgba(#fff, .8);
+        }
 
         .search-highlight {
           color: #fff;
@@ -104,7 +108,10 @@
   }
 }
 
-// Character highlighting
+///
+///  Character highlighting
+///
+
 .search-highlight {
   color: $link-color;
   font-weight: $font-semi-bold;
@@ -112,6 +119,13 @@
   .bg-dark & {
     color: $teal;
   }
+}
+
+.search-meta {
+  display: block;
+  font-size: $font-size-sm;
+  margin-top: .25rem;
+  color: $charcoal-50;
 }
 
 

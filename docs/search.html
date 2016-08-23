@@ -64,3 +64,31 @@ description: Use this component to show search results as users type (styles onl
 
 
 
+<section class="docs-section">
+
+{% capture example %}
+<div class="search dropdown">
+  <input class="search-input dropdown-toggle" type="search" data-toggle="dropdown" value="Ch">
+  <ul class="search-results dropdown-menu" aria-labeledby="dropdownDemo1">
+    <li class="search-result">
+      <a class="search-link" href="#0">
+        <span class="search-highlight">Ch</span>ris Irwin
+        <span class="search-meta">IMS Health</span>
+      </a>
+    </li>
+    <li class="search-result">
+      <a class="search-link" href="#0">
+        <span class="search-highlight">Ch</span>ristina Lewis
+        <span class="search-meta">Knife and Fox</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% include example.html size='fourth' code=example %}
+
+</section>
+
+
+

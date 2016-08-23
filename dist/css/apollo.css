@@ -5170,6 +5170,11 @@ p:last-child {
 
 .search-results > .search-result > .search-link:hover, .search-results > .search-result > .search-link:focus {
   background-color: #297dfd;
+}
+
+.search-results > .search-result > .search-link:hover,
+.search-results > .search-result > .search-link:hover .search-meta, .search-results > .search-result > .search-link:focus,
+.search-results > .search-result > .search-link:focus .search-meta {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -5184,6 +5189,13 @@ p:last-child {
 
 .bg-dark .search-highlight, .off-canvas .search-highlight {
   color: #37dad3;
+}
+
+.search-meta {
+  display: block;
+  font-size: 0.875rem;
+  margin-top: .25rem;
+  color: #9ca7ac;
 }
 
 .off-canvas {
