@@ -8,6 +8,15 @@ description: Use this component to show search results as users type (styles onl
 
 
 <section class="docs-section">
+  <p class="docs-example-description">The search component is a specialized type of input field.  It includes a search icon in the input field and has an optional search results list to display results as users type.</p>
+
+  {% include docs-callout.html state='info' title='Styles only' body='This component only includes styling and layout.  Retrieving search results, including displaying results as users type, will need to be handled by your application.' %}
+</section>
+
+
+<section class="docs-section">
+
+{% include example-intro.html title='Basic search box' description='Use this standalone search box when your results are going to be displayed on a different page or another place on the current page.' %}
 
 {% capture example %}
 <div class="search">
@@ -15,12 +24,14 @@ description: Use this component to show search results as users type (styles onl
 </div>
 {% endcapture %}
 
-{% include example.html size='fourth' code=example %}
+{% include example.html size='third' code=example %}
 
 </section>
 
 
 <section class="docs-section">
+
+{% include example-intro.html title='Inline results' description='When you want to show users search results as they type, this style allows you to display the results with the matching characters highlighted.' %}
 
 {% capture example %}
 <div class="search">
@@ -36,13 +47,16 @@ description: Use this component to show search results as users type (styles onl
 </div>
 {% endcapture %}
 
-{% include example.html size='fourth' code=example %}
+{% include example.html size='third' code=example %}
 
 </section>
 
 
 
 <section class="docs-section">
+
+{% include example-intro.html title='Dropdown-style results' description='Use this modified search pattern when you want the search results to appear as a dropdown list.' %}
+
 
 {% capture example %}
 <div class="search dropdown">
@@ -58,13 +72,7 @@ description: Use this component to show search results as users type (styles onl
 </div>
 {% endcapture %}
 
-{% include example.html size='fourth' code=example %}
-
-</section>
-
-
-
-<section class="docs-section">
+{% include example.html size='third' label='Dropdown results' code=example %}
 
 {% capture example %}
 <div class="search dropdown">
@@ -86,7 +94,7 @@ description: Use this component to show search results as users type (styles onl
 </div>
 {% endcapture %}
 
-{% include example.html size='fourth' code=example %}
+{% include example.html size='third' label='Dropdown with metadata' code=example %}
 
 </section>
 

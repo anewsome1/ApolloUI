@@ -72,9 +72,14 @@
 }
 
 .docs-example-description {
-  @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
     width: 50%;
   }
+
+  .docs-section > & {
+    margin-bottom: $spacer-y * 2;
+  }
+
 }
 
 ///
