@@ -10,7 +10,7 @@
 }
 
 .highlight .nt {
-  color: #2d60ac;
+  color: #1f5ebe;
 }
 
 .highlight .na {
@@ -388,56 +388,6 @@ body {
   }
 }
 
-.docs-color-group {
-  -webkit-column-gap: 1.875rem;
-     -moz-column-gap: 1.875rem;
-          column-gap: 1.875rem;
-}
-
-.docs-color-group-primary, .docs-color-group-secondary {
-  -webkit-columns: 3;
-     -moz-columns: 3;
-          columns: 3;
-}
-
-.docs-color-group-functional {
-  -webkit-columns: 6;
-     -moz-columns: 6;
-          columns: 6;
-}
-
-.docs-color-block {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 8rem;
-}
-
-.docs-color-block:first-child {
-  height: 16rem;
-}
-
-.docs-color-block .docs-color-props {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .show-grid .row {
   margin-bottom: 1rem;
 }
@@ -551,4 +501,56 @@ body {
 .docs-callout-title {
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.docs-color-group {
+  -webkit-column-gap: 1.875rem;
+     -moz-column-gap: 1.875rem;
+          column-gap: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .docs-color-group-primary, .docs-color-group-secondary, .docs-color-group-functional {
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .docs-color-swatch {
+    margin-bottom: 2rem;
+  }
+}
+
+.docs-color-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 8rem;
+}
+
+.docs-color-block:first-child {
+  height: 16rem;
+}
+
+.docs-color-block .docs-color-props {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
