@@ -29,11 +29,11 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
@@ -41,7 +41,7 @@ code {
 }
 
 kbd {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #fff;
   background-color: #333;
@@ -59,7 +59,6 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  line-height: 1.5;
   color: #373a3c;
 }
 
@@ -99,23 +98,24 @@ body {
   }
 }
 
-.docs-apollo-sidebar {
+.docs-sidebar-header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  padding: .5rem 1rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: 1.875rem;
+  padding: 2rem;
   font-size: 1.5rem;
   line-height: 1;
   background: none;
   border: 0;
+  color: #fff;
 }
 
 .docs-drb-menu-toggle:focus {
@@ -128,7 +128,7 @@ body {
 
 .docs-nav {
   width: 19rem;
-  padding: 1.875rem;
+  padding: 1rem 3rem;
 }
 
 .docs-content {
@@ -137,14 +137,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .docs-page-nav {
-  margin-bottom: 3.375rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 543px) {
@@ -255,6 +255,10 @@ body {
   .docs-example-description {
     width: 50%;
   }
+}
+
+.docs-section > .docs-example-description, .home-header > .docs-example-description {
+  margin-bottom: 2rem;
 }
 
 .docs-example-intro {
@@ -379,7 +383,7 @@ body {
 
 @media (min-width: 768px) {
   .docs-card {
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
     padding: 1.875rem 6rem;
   }
 }
@@ -447,7 +451,7 @@ body {
 
 .docs-icon .icon {
   width: 30%;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -495,7 +499,6 @@ body {
 }
 
 .docs-callout-title {
-  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
 }

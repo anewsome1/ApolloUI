@@ -6,10 +6,7 @@ order: 25
 ---
 <section class="docs-section">
 
-{% capture overview_body %}
-<p>(Overview goes here)</p>
-{% endcapture %}
-{% include section-intro.html title='Card Overview' body=overview_body %}
+<p class="docs-example-description">A card is a flexible and extensible content container. It includes options for headers and footers and a wide variety of content.  Like many other components, cards are fluid width and should be sized using the grid or a card deck.</p>
 
 {% capture example %}
 <div class="card">
@@ -18,21 +15,19 @@ order: 25
     <p class="card-caption">Use the caption to introduce the content below.</p>
   </div>
   <div class="card-block">
-    <img class="img-fluid" src="http://placehold.it/1000x400/f5f5f5/?text=(Placeholder+for+data+visualization)">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
   </div>
   <div class="card-footer">
-    <div class="row">
-      <div class="col-xs-6">
-        <button class="btn btn-primary">See data</button>
-      </div>
-      <div class="col-xs-6 text-xs-right">
-        <button class="btn btn-link">
-          <span class="icon icon-star"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-campaign"></span>
-        </button>
-      </div>
+    <div class="card-cta">
+      <button class="btn btn-primary">See data</button>
+    </div>
+    <div class="card-actions">
+      <button class="btn btn-link">
+        <span class="icon icon-star"></span>
+      </button>
+      <button class="btn btn-link">
+        <span class="icon icon-campaign"></span>
+      </button>
     </div>
   </div>
 </div>
@@ -44,12 +39,12 @@ order: 25
 
 <section class="docs-section">
 
-{% include example-intro.html title='Cards with grid' description='(Description goes here)' %}
+{% include example-intro.html title='Cards with grid' description='Cards are fluid width and can be organized by putting them inside grid columns, as shown here.  If you want your cards to be equal height, use a card deck or ensure that the card content is the same height.' %}
 
 {% capture example %}
 <div class="row">
-  <div class="col-xs-6 col-sm-4">
-    <div class="card">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card card-text-center">
       <div class="card-header">
         <h4 class="card-title">First card</h4>
         <p class="card-caption">Some pretty neat stuff.</p>
@@ -58,25 +53,47 @@ order: 25
         <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-xs-6 col-sm-4">
+  <div class="col-xs-12 col-sm-6 col-md-4">
     <div class="card">
       <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
-      <div class="card-block">
+      <div class="card-header">
         <h3 class="card-title">Second card</h3>
         <p class="card-caption">This one is different.</p>
+      </div>
+      <div class="card-block">
         <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-xs-6 col-sm-4">
-    <div class="card">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card card-text-center">
       <div class="card-header">
         <h4 class="card-title">Third card</h4>
         <p class="card-caption">Not at all like the others.</p>
@@ -85,7 +102,17 @@ order: 25
         <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -99,7 +126,7 @@ order: 25
 
 <section class="docs-section">
 
-{% include example-intro.html title='Card deck' description='(Description goes here)' %}
+{% include example-intro.html title='Card deck' description='Use the card deck to make a group of cards equal height.' %}
 
 {% capture example %}
 
@@ -115,7 +142,17 @@ order: 25
         <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="card">
@@ -126,7 +163,17 @@ order: 25
         <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
     <div class="card">
@@ -138,7 +185,17 @@ order: 25
         <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
       </div>
       <div class="card-footer">
-        <button class="btn btn-primary">See data</button>
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -150,6 +207,12 @@ order: 25
 </section>
 
 
+
+
+
+
+
+{% comment %}
 <section class="docs-section">
 
 {% include example-intro.html title='Card states' description='(Description goes here)' %}
@@ -201,3 +264,6 @@ order: 25
 
 </section>
 
+
+
+{% endcomment %}
