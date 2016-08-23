@@ -4431,15 +4431,19 @@ input[type='radio']:checked {
 }
 
 .slider-handle:active {
-  background-color: #3a4f5a;
+  background-color: #297dfd;
   border-color: transparent;
   box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .disabled .slider-handle {
-  background-color: #ced3d6;
+  background-color: #f7f5f4;
   cursor: not-allowed;
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+  box-shadow: none;
+}
+
+.disabled .slider-handle:active {
+  border: 0.0625rem solid #ced3d6;
 }
 
 .slider-handle + .slider-handle {
@@ -4452,7 +4456,7 @@ input[type='radio']:checked {
   left: 0;
   width: 25%;
   height: 0.1875rem;
-  background-color: #37dad3;
+  background-color: #297dfd;
 }
 
 .disabled .slider-fill {

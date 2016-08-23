@@ -30,7 +30,11 @@
     .disabled & {
       background-color: $slider-disabled-handle-bg;
       cursor: not-allowed;
-      box-shadow: $shadow-active;
+      box-shadow: none;
+
+      &:active {
+        border: $slider-handle-border;
+      }
     }
 
     & + & {
