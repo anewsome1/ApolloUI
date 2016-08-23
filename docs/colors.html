@@ -12,10 +12,10 @@ order: 10
 
 {% for group in color_categories %}
 <section class="docs-section">
-      <h6 class="docs-example-title">{{ group.name | capitalize }} Colors</h6>
+      <h4 class="docs-example-title">{{ group.name | capitalize }} Colors</h4>
 
       <div class="docs-color-group docs-color-group-{{ group.name }} docs-example-intro">
-        
+
         {% assign base_color = group.items | group_by: 'base' %}
 
         {% for group in base_color %}

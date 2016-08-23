@@ -509,10 +509,18 @@ body {
           column-gap: 1.875rem;
 }
 
-.docs-color-group-primary, .docs-color-group-secondary, .docs-color-group-functional {
-  -webkit-columns: 3;
-     -moz-columns: 3;
-          columns: 3;
+@media (min-width: 768px) {
+  .docs-color-group-primary, .docs-color-group-secondary, .docs-color-group-functional {
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .docs-color-swatch {
+    margin-bottom: 2rem;
+  }
 }
 
 .docs-color-block {
