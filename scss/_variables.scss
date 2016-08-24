@@ -593,19 +593,22 @@ $slider-height: .1875rem;  // ~3px
 $slider-bg: $charcoal-25;
 
 // Fill
-$slider-fill-bg: $teal;
+$slider-fill-bg: $brand-primary;
 
 // Handle
 $slider-handle-size: 2rem;  // ~32px
 $slider-handle-bg: #fff;
 $slider-handle-border: $border-width solid $charcoal-25;
 
+// Value label
+$slider-value-width: 10rem;
+
 // Active
-$slider-active-handle-bg: $charcoal;
+$slider-active-handle-bg: $brand-primary;
 
 // Disabled
 $slider-disabled-fill-bg: $charcoal-50;
-$slider-disabled-handle-bg: $charcoal-25;
+$slider-disabled-handle-bg: $neutral;
 
 
 ///
