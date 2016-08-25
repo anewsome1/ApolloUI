@@ -3,7 +3,6 @@
   max-width: 100%;
   margin-bottom: $spacer;
 
-
   th,
   td {
     padding: $table-cell-padding-y $table-cell-padding-x;
@@ -32,7 +31,7 @@
   }
 
   thead th {
-    // padding: $table-sm-cell-padding;
+    padding: $table-header-padding-y $table-cell-padding-x;
     line-height: 1;
     color: $table-header-color;
     background-color: $table-header-bg;
