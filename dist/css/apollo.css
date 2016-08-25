@@ -3172,6 +3172,13 @@ dd {
 
 .btn.btn-block + .btn.btn-block {
   margin-top: 1rem;
+  margin-left: 0;
+}
+
+@media (max-width: 543px) {
+  .btn {
+    margin-right: 0.9375rem;
+  }
 }
 
 .btn, .btn:hover, .btn:focus {
@@ -3675,6 +3682,7 @@ input[type='radio']:checked {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem;
+  background-color: #fff;
 }
 
 .table th,
@@ -3766,8 +3774,8 @@ input[type='radio']:checked {
   border-top: 0.125rem solid #ced3d6;
 }
 
-.table .table {
-  background-color: #fff;
+.table .btn-link + .btn-link {
+  margin-left: 0.625rem;
 }
 
 .table-sm th,
