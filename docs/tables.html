@@ -147,7 +147,7 @@ order: 8
 
 <section class="docs-section">
 
-{% include example-intro.html title='Hover rows' description='When an entire row can be selected for an action, use the <code>.table-hover</code> class to highlight rows on hover.  If you want to make a row stay highlighted on click, just use some JavaScript to add the <code>.table-active</code> class to the selected row (example below).' %}
+{% include example-intro.html title='Hover rows' description='When an entire row can be selected for an action, add the <code>.table-hover</code> class to the table to highlight rows on hover.</p><p>If you want to make a row stay highlighted on click, just use some JavaScript to add the <code>.table-active</code> class to the selected row.' %}
 
 {% capture example %}
 <table class="table table-hover">
@@ -254,7 +254,7 @@ order: 8
 {% include example.html label='Row highlights' code=example %}
 
 {% capture example %}
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th>Project ID</th>
@@ -364,6 +364,5 @@ order: 8
 {% include example.html size='half' code=example %}
 
 {% include docs-callout.html state='info' title='Mobile-only pattern' body='The example above is <em>not</em> responsive.  To use it in a responsive application, you will need to have two tables on the page and use the responsive visibility classes to show and hide each as needed.' %}
-
 
 </section>
