@@ -71,6 +71,45 @@
   }
 
   ///
+  /// Sortable tables
+  ///
+
+  &.table-sortable {
+    thead th {
+      transition: background-color $transition-fast;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($table-header-sorted-bg, .5);
+      }
+
+      &.table-sorted {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &,
+        &:hover {
+          background-color: $table-header-sorted-bg;
+        }
+
+        &::after {
+          @extend %icon-base;
+        }
+
+        &.table-sorted-ascend::after {
+          content: map-get($_icons-map, 'chevron-up');
+        }
+        &.table-sorted-descend::after {
+          content: map-get($_icons-map, 'chevron-down');
+        }
+      }
+    }
+  }
+
+
+
+  ///
   ///  Hover/active row highlighting
   ///
   &.table-hover tbody tr:hover,

@@ -1627,7 +1627,7 @@ output {
   font-style: normal;
 }
 
-.icon, .close, .alert::before, .form-msg::before, .dropdown-toggle::after, .dropdown-submenu .dropdown-submenu-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
+.icon, .close, .alert::before, .form-msg::before, .table.table-sortable thead th.table-sorted::after, .dropdown-toggle::after, .dropdown-submenu .dropdown-submenu-toggle::after, .breadcrumb > li + li::before, .accordion-title::before, .carousel-control .icon-prev,
 .carousel-control .icon-next, .search::before, .off-canvas-open::before,
 .off-canvas-close::before, .empty-space-icon, .pager-prev::before,
 .pager-next::after {
@@ -3757,6 +3757,39 @@ input[type='radio']:checked {
 
 .table tbody tr.table-danger {
   background-color: rgba(251, 79, 57, 0.1);
+}
+
+.table.table-sortable thead th {
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1);
+  cursor: pointer;
+}
+
+.table.table-sortable thead th:hover {
+  background-color: rgba(206, 211, 214, 0.5);
+}
+
+.table.table-sortable thead th.table-sorted {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table.table-sortable thead th.table-sorted, .table.table-sortable thead th.table-sorted:hover {
+  background-color: #ced3d6;
+}
+
+.table.table-sortable thead th.table-sorted.table-sorted-ascend::after {
+  content: "";
+}
+
+.table.table-sortable thead th.table-sorted.table-sorted-descend::after {
+  content: "";
 }
 
 .table.table-hover tbody tr:hover,
