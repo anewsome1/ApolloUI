@@ -3807,8 +3807,12 @@ input[type='radio']:checked {
   border-top: 0.125rem solid #ced3d6;
 }
 
+.table .btn-link {
+  margin-right: 0.625rem;
+}
+
 .table .btn-link + .btn-link {
-  margin-left: 0.625rem;
+  margin-left: 0;
 }
 
 .table-sm th,

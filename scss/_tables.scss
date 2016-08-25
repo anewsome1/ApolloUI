@@ -107,11 +107,10 @@
     }
   }
 
-
-
   ///
   ///  Hover/active row highlighting
   ///
+
   &.table-hover tbody tr:hover,
   tbody tr.table-active {
     background-color: rgba($table-bg-active, .1);
@@ -122,12 +121,24 @@
     }
   }
 
+  ///
+  ///  Border between table bodies
+  ///
+
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 
-  .btn-link + .btn-link {
-    margin-left: $grid-gutter-width / 3;
+  ///
+  ///  Adjacent link buttons
+  ///
+
+  .btn-link {
+    margin-right: $grid-gutter-width / 3;
+
+    + .btn-link {
+        margin-left: 0;
+    }
   }
 }
 
