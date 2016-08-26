@@ -80,30 +80,33 @@
 .modal-header,
 .modal-body,
 .modal-footer {
-  padding: ($spacer * 2) $modal-inner-padding;
+  padding-right: $modal-inner-padding;
+  padding-left: $modal-inner-padding;
 }
 
-.modal-title {
-  color: $brand-primary;
-  font-size: $font-size-h3;
-  color: $brand-primary;
-}
-
-.modal:not(.modal-sm) .modal-header {
-  @include media-breakpoint-up(sm) {
-    padding: ($spacer * 3) $modal-inner-padding;
-  }
-
-  .modal-title {
-    margin-bottom: 0;
-    margin-right: $modal-inner-padding;  // Make room for close button
-    font-size: $font-size-h2;
-    text-align: center;
-  }
+.modal-header {
+  padding-top: $modal-inner-padding;
+  padding-bottom: $modal-inner-padding / 3;
 }
 
 .modal-body {
-  padding: 0 $modal-inner-padding ($spacer * 2);j
+  padding-top: $modal-inner-padding;
+  padding-bottom: $modal-inner-padding;
+
+  .modal-header + & {
+    padding-top: 0;
+  }
+}
+
+.modal-title {
+  @extend .h2;
+
+  margin-bottom: 0;
+  margin-right: $modal-inner-padding;  // Make room for close button
+}
+
+.modal-body {
+  padding: 0 $modal-inner-padding $modal-inner-padding;
 
   p:last-child {
     margin-bottom: 0;
@@ -111,23 +114,7 @@
 }
 
 .modal-footer {
-  padding: ($spacer-y * 1.5) $modal-inner-padding;
-  background-color: $neutral;
-}
-
-
-///
-/// Full-width images
-///
-
-.modal-image {
-
-  // Add margin when adjacent to modal header or body
-  & + .modal-header,
-  & + .modal-body,
-  & + .modal-footer {
-    margin-top: $modal-inner-padding;
-  }
+  padding: ($modal-inner-padding / 2) $modal-inner-padding $modal-inner-padding;
 }
 
 

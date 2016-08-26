@@ -2770,7 +2770,7 @@ h1, h2, h3, h4, h5, h6,
 .h1,
 .card-title,
 .login-brand-name,
-.empty-space-title, .h2, .h3, .h4, .h5, .h6 {
+.empty-space-title, .h2, .modal-title, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -2782,7 +2782,7 @@ h1, .h1, .card-title, .login-brand-name, .empty-space-title {
   font-size: 2.25rem;
 }
 
-h2, .h2 {
+h2, .h2, .modal-title {
   font-size: 1.5rem;
 }
 
@@ -2917,6 +2917,7 @@ h1,
 
 h2,
 .h2,
+.modal-title,
 h3,
 .h3 {
   font-weight: 300;
@@ -3166,7 +3167,7 @@ dd {
 
 @media (min-width: 544px) {
   .btn + .btn {
-    margin-left: 1.875rem;
+    margin-left: 1.125rem;
   }
 }
 
@@ -4596,46 +4597,39 @@ input[type='radio']:checked {
 .modal-header,
 .modal-body,
 .modal-footer {
-  padding: 2rem 1.875rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
-.modal-title {
-  color: #297dfd;
-  font-size: 1rem;
-  color: #297dfd;
-}
-
-@media (min-width: 544px) {
-  .modal:not(.modal-sm) .modal-header {
-    padding: 3rem 1.875rem;
-  }
-}
-
-.modal:not(.modal-sm) .modal-header .modal-title {
-  margin-bottom: 0;
-  margin-right: 1.875rem;
-  font-size: 1.5rem;
-  text-align: center;
+.modal-header {
+  padding-top: 1.875rem;
+  padding-bottom: 0.625rem;
 }
 
 .modal-body {
-  padding: 0 1.875rem 2rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
 }
 
-.modal-body j
-p:last-child {
+.modal-header + .modal-body {
+  padding-top: 0;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  margin-right: 1.875rem;
+}
+
+.modal-body {
+  padding: 0 1.875rem 1.875rem;
+}
+
+.modal-body p:last-child {
   margin-bottom: 0;
 }
 
 .modal-footer {
-  padding: 1.5rem 1.875rem;
-  background-color: #f7f5f4;
-}
-
-.modal-image + .modal-header,
-.modal-image + .modal-body,
-.modal-image + .modal-footer {
-  margin-top: 1.875rem;
+  padding: 0.9375rem 1.875rem 1.875rem;
 }
 
 .modal-backdrop {
@@ -4650,10 +4644,10 @@ p:last-child {
 
 @media (min-width: 544px) {
   .modal-dialog {
-    max-width: 37.5rem;
+    max-width: 34.75rem;
   }
   .modal-sm .modal-dialog {
-    max-width: 18.75rem;
+    max-width: 22.5rem;
   }
 }
 

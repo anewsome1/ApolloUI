@@ -19,7 +19,7 @@
 
   & + & {
     @include media-breakpoint-up(sm) {
-      margin-left: $grid-gutter-width;
+      margin-left: $btn-margin-x;
     }
   }
 
