@@ -11,12 +11,31 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: $zindex-dropdown + 1;
     padding: $search-icon-padding;
-    // margin-top: (-$search-icon-padding / 2); // TODO: Remove this shim once icon alignment is fixed
     font-size: $search-icon-size;
     line-height: 1;
     content: map-get($_icons-map, 'search');
+  }
+
+
+  &.dropdown {
+    background-color: #fff;
+
+    &.open {
+      box-shadow: $shadow-hover;
+    }
+
+    .search-input {
+      border: $border-width solid $input-border-color;
+      color: $input-color;
+    }
+
+    .search-input:focus {
+      border-color: transparent;
+      border-bottom: $border-width solid $neutral;
+      box-shadow: none;
+    }
   }
 }
 
@@ -29,20 +48,6 @@
 
   position: relative;
   padding-left: $search-padding-left;
-
-  .bg-dark & {
-    color: #fff;
-    background-color: rgba($charcoal-150, .95);
-    border-color: transparent;
-
-    &::placeholder {
-      color: $charcoal-50;
-    }
-
-    &:focus {
-      background-color: $charcoal-150;
-    }
-  }
 }
 
 // Make icon and placeholder text match
@@ -59,63 +64,68 @@
 .search-results {
   list-style-type: none;
   padding-left: 0;
+  width: 100%;
 
-  > .search-result > .search-link {
-    display: block;
-    padding: $search-item-padding;
+  > .search-result {
+    border: 0;
 
-    &,
-    &:link,
-    &:visited,
-    &:hover,
-    &:focus {
-      text-decoration: none;
+    > .search-link {
+      display: block;
+      padding: $search-item-padding;
+      line-height: 1;
 
-      .bg-dark & {
-        color: #fff;
+      &,
+      &:link,
+      &:visited,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+
+        .bg-dark & {
+          color: #fff;
+        }
       }
-    }
 
-    &:link,
-    &:visited {
-      color: $body-color;
-    }
+      &:link,
+      &:visited {
+        color: $body-color;
+      }
 
-    &:hover,
-    &:focus {
-      background-color: $blue-125;
-      color: #fff;
+      &:hover,
+      &:focus {
+        background-color: $brand-primary;
 
-      .search-highlight {
-        color: $teal-50;
+        &,
+        & .search-meta {
+          color: rgba(#fff, .8);
+        }
+
+        .search-highlight {
+          color: #fff;
+        }
       }
     }
   }
 }
 
-// Character highlighting
+///
+///  Character highlighting
+///
+
 .search-highlight {
   color: $link-color;
+  font-weight: $font-semi-bold;
 
   .bg-dark & {
     color: $teal;
   }
 }
 
-  // @TODO: Revisit dropdown search results to fix
-  // z-index stacking issue with box shadows on the
-  // input field and results
-
-  // &.dropdown {
-  //   .search-input:focus {
-  //     + .search-results {
-  //       border-top: $border-width solid $neutral;
-  //       box-shadow: $shadow-hover;
-  //     }
-  //   }
-  // }
-
-
-
+.search-meta {
+  display: block;
+  font-size: $font-size-sm;
+  margin-top: .25rem;
+  color: $charcoal-50;
+}
 
 

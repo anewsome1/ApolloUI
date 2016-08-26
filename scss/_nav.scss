@@ -99,6 +99,7 @@
   ///
   ///  Plain tabs style
   ///
+
   &:not(.tab-bar) {
     border-left: $border-width solid $charcoal-25;
 
@@ -150,7 +151,6 @@
     @include media-breakpoint-up(sm) {
       margin-bottom: -$border-width;
     }
-
   }
 
 
@@ -181,7 +181,7 @@
       &.active,
       .nav-item.open & {
         @include plain-hover-focus {
-          @extend %toggle-active;
+          @extend %toggle-selected;
         }
       }
     }
@@ -191,10 +191,6 @@
     }
 
   }
-
-
-
-
 }
 
 

@@ -8,14 +8,17 @@
   &-primary,
   &-secondary,
   &-functional {
-    columns: 3;
+    @include media-breakpoint-up(md) {
+      columns: 3;
+    }
   }
 }
 
 
 .docs-color-swatch {
-  // display: flex;
-  // flex-direction: column;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer-y * 2;
+  }
 }
 
 .docs-color-block {

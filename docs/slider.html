@@ -8,14 +8,20 @@ description: Select a value from a range of options (styles only)
 
 <section class="docs-section">
 
-{% include example-intro.html title='Slider' %}
+<p class="docs-example-description">The slider component provides the styles for an input range control.  A slider can be useful as a volume control, date range picker, and more.</p>
+
+{% include docs-callout.html state='info' title='Styles only' body='This pattern only provides the styles for the slider component.  See the <a href="http://foundation.zurb.com/sites/docs/slider.html">Foundation Docs</a> for an example of how to add the necessary JS to your application.  The styles that should be changed by your application JS are added inline below for reference.' %}
+
+{% include example-intro.html title='One handle slider' description='Use the one handle slider to allow users to select a single value from a predefined range.' %}
 
 {% capture example %}
 <div class="form-group">
   <label for="approval">Needed approval percentage</label>
   <div class="slider">
-    <span class="slider-handle"></span>
-    <span class="slider-fill"></span>
+    <span class="slider-handle" style="left: 25%;">
+      <span class="slider-value">25%</span>
+    </span>
+    <span class="slider-fill" style="left: 0; width: 25%;"></span>
     <input id="approval" name="approval" type="hidden">
   </div>
 </div>
@@ -25,11 +31,13 @@ description: Select a value from a range of options (styles only)
 
 {% capture example %}
 <div class="form-group">
-  <label for="likelyhood">Needed approval percentage</label>
+  <label for="approval">Needed approval percentage</label>
   <div class="slider disabled">
-    <span class="slider-handle"></span>
-    <span class="slider-fill"></span>
-    <input id="likelyhood" name="likelyhood" type="hidden">
+    <span class="slider-handle" style="left: 25%;">
+      <span class="slider-value">25%</span>
+    </span>
+    <span class="slider-fill" style="left: 0; width: 25%;"></span>
+    <input id="approval" name="approval" type="hidden">
   </div>
 </div>
 {% endcapture %}
@@ -41,16 +49,21 @@ description: Select a value from a range of options (styles only)
 
 <section class="docs-section">
 
-{% include example-intro.html title='Range slider' %}
+{% include example-intro.html title='Two handle slider' description='The two handle slider allows users to specify a minimum and maximum value from a predefined range.' %}
 
 {% capture example %}
 <div class="form-group">
-  <label for="approval">Needed approval percentage</label>
+  <label for="date-min">Date range</label>
   <div class="slider">
-    <span class="slider-handle"></span>
-    <span class="slider-handle"></span>
-    <span class="slider-fill"></span>
-    <input id="approval" name="approval" type="hidden">
+    <span class="slider-handle" style="left: 30%;">
+      <span class="slider-value">8/3/2016</span>
+    </span>
+    <span class="slider-handle" style="left: 80%;">
+      <span class="slider-value">9/27/2016</span>
+    </span>
+    <span class="slider-fill" style="left: 30%; width: 50%;"></span>
+    <input id="date-min" name="date-min" type="hidden">
+    <input id="date-max" name="date-max" type="hidden">
   </div>
 </div>
 {% endcapture %}
@@ -59,12 +72,17 @@ description: Select a value from a range of options (styles only)
 
 {% capture example %}
 <div class="form-group">
-  <label for="likelyhood">Needed approval percentage</label>
+  <label for="date-min">Date range</label>
   <div class="slider disabled">
-    <span class="slider-handle"></span>
-    <span class="slider-handle"></span>
-    <span class="slider-fill"></span>
-    <input id="likelyhood" name="likelyhood" type="hidden">
+    <span class="slider-handle" style="left: 30%;">
+      <span class="slider-value">8/3/2016</span>
+    </span>
+    <span class="slider-handle" style="left: 80%;">
+      <span class="slider-value">9/27/2016</span>
+    </span>
+    <span class="slider-fill" style="left: 30%; width: 50%;"></span>
+    <input id="date-min" name="date-min" type="hidden">
+    <input id="date-max" name="date-max" type="hidden">
   </div>
 </div>
 {% endcapture %}

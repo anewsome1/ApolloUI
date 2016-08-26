@@ -249,21 +249,15 @@ $accordion-dark-active-bg:      $charcoal-150;
 
 // Padding applied to the modal body
 $modal-inner-padding:         $grid-gutter-width;
-
-$modal-title-padding:         $spacer;
-$modal-title-line-height:     $line-height;
-
 $modal-content-bg:            #fff;
-// $modal-content-border-color:  rgba(0,0,0,.2);
-
 $modal-backdrop-bg:           #000;
 $modal-backdrop-opacity:      .4;
 $modal-header-border-color:   $neutral;
 $modal-footer-border-color:   $modal-header-border-color;
 
-$modal-lg:                    56.25rem;  // ~900px
-$modal-md:                    37.5rem; // ~600px
-$modal-sm:                    18.75rem; // ~300px
+$modal-lg:                    56.25rem; // ~900px
+$modal-md:                    34.75rem; // ~556px
+$modal-sm:                    22.5rem;  // ~360px
 
 
 ///
@@ -308,9 +302,9 @@ $input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size
 $input-lg-padding-x:             $input-padding-x * 2;
 $input-lg-padding-y:             calc-padding-y($component-height-lg, $font-size-base);
 
-$input-height:                   (($font-size-base * $input-line-height) + ($input-padding-y * 2));
-$input-height-lg:                (($font-size-base * $input-line-height) + ($input-padding-y-lg * 2));
-$input-height-sm:                (($font-size-base * $input-line-height) + ($input-padding-y-sm * 2));
+$input-height:                   $component-height;
+$input-height-lg:                $component-height-lg;
+$input-height-sm:                $component-height-sm;
 
 $form-group-margin-bottom:       $spacer-y;
 
@@ -346,6 +340,7 @@ $input-msg-shadow-height: .625rem;  // ~10px
 $btn-min-width: 6.25rem;  // ~100px
 $btn-padding-x: 1.5rem; // ~24px
 $btn-padding-y: $input-padding-y - $border-width;
+$btn-margin-x: 1.125rem;
 $btn-line-height: 1;
 
 $btn-sm-padding-x: 1.25rem; // ~20px
@@ -363,7 +358,7 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $navy-150,
+    bg-active: $blue-150,
     color-active: #fff,
     bg-disabled: $blue-25,
     color-disabled: $charcoal-50
@@ -385,30 +380,36 @@ $btn-variants: (
 /// Toggle
 ///
 
-$toggle-height: 2.75rem;
-$toggle-font-size: $font-size-base;
-$toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
-$toggle-padding-x: $btn-padding-x;
+$toggle-height:         2.75rem;
+$toggle-font-size:      $font-size-base;
+$toggle-padding-y:      calc-padding-y($toggle-height, $toggle-font-size);
+$toggle-padding-x:      $btn-padding-x;
+$toggle-border-color:   $charcoal-25;
+$toggle-default-bg:     #fff;
+$toggle-selected-bg:    $blue;
+$toggle-active-bg:      $blue-125;
 
 
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding-x:          ($grid-gutter-width / 2);
-$table-cell-padding-y:          1rem;
+$table-cell-padding-x:          1.5rem;
+$table-cell-padding-y:          .85rem;
 $table-sm-cell-padding-y:       .5rem;
 
-$table-header-bg:               rgba($blue-150, .05);
-$table-header-color:            $blue-125;
+$table-header-bg:               $neutral;
+$table-header-color:            $charcoal;
+$table-header-padding-y:        1rem;
+$table-header-sorted-bg:        $charcoal-25;
 
 $table-bg:                      transparent;
-$table-bg-accent:               rgba($charcoal-25, .1);
+$table-bg-accent:               $neutral-25;
 $table-bg-hover:                $atmosphere-25;
 $table-bg-active:               $atmosphere; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
-$table-border-color:            $teal-25;
+$table-border-color:            $charcoal-25;
 $table-border-color-hover:      $link-color;
 
 $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
@@ -418,11 +419,13 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 /// Dropdowns
 ///
 
-$dropdown-toggle-padding: $btn-padding-y $btn-padding-x;
-$dropdown-menu-bg: #fff;
-$dropdown-menu-color: $body-color;
-$dropdown-menu-bg-hover: $blue-150;
-$dropdown-menu-color-hover: $teal-50;
+$dropdown-padding-x:          1rem;
+$dropdown-padding-y:          calc-padding-y(2rem, $font-size-base);
+$dropdown-menu-bg:            #fff;
+$dropdown-menu-color:         $body-color;
+$dropdown-menu-bg-hover:      $link-color;
+$dropdown-menu-color-hover:   #fff;
+$dropdown-menu-min-width:     8rem;
 
 
 ///
@@ -520,7 +523,7 @@ $navbar-vertical-active-bg: $charcoal-175;
 /// Login component
 ///
 
-$login-max-width: 24rem;
+$login-width: 28rem;
 
 
 ///
@@ -580,7 +583,7 @@ $carousel-caption-color:                      #fff;
 $search-icon-size: $font-size-base;
 $search-icon-padding: calc-padding-y($component-height, $search-icon-size);
 $search-padding-left: $search-icon-size + ($search-icon-padding * 2);
-$search-item-padding: ($spacer / 3) ($spacer / 3) ($spacer / 3) $search-padding-left;
+$search-item-padding: $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
 
 ///
 /// Slider
@@ -593,19 +596,22 @@ $slider-height: .1875rem;  // ~3px
 $slider-bg: $charcoal-25;
 
 // Fill
-$slider-fill-bg: $teal;
+$slider-fill-bg: $brand-primary;
 
 // Handle
 $slider-handle-size: 2rem;  // ~32px
 $slider-handle-bg: #fff;
 $slider-handle-border: $border-width solid $charcoal-25;
 
+// Value label
+$slider-value-width: 10rem;
+
 // Active
-$slider-active-handle-bg: $charcoal;
+$slider-active-handle-bg: $brand-primary;
 
 // Disabled
 $slider-disabled-fill-bg: $charcoal-50;
-$slider-disabled-handle-bg: $charcoal-25;
+$slider-disabled-handle-bg: $neutral;
 
 
 ///

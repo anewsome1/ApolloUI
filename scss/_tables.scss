@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
-
+  background-color: $body-bg;
 
   th,
   td {
@@ -32,7 +32,7 @@
   }
 
   thead th {
-    // padding: $table-sm-cell-padding;
+    padding: $table-header-padding-y $table-cell-padding-x;
     line-height: 1;
     color: $table-header-color;
     background-color: $table-header-bg;
@@ -71,8 +71,46 @@
   }
 
   ///
+  /// Sortable tables
+  ///
+
+  &.table-sortable {
+    thead th {
+      transition: background-color $transition-fast;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($table-header-sorted-bg, .5);
+      }
+
+      &.table-sorted {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &,
+        &:hover {
+          background-color: $table-header-sorted-bg;
+        }
+
+        &::after {
+          @extend %icon-base;
+        }
+
+        &.table-sorted-ascend::after {
+          content: map-get($_icons-map, 'chevron-up');
+        }
+        &.table-sorted-descend::after {
+          content: map-get($_icons-map, 'chevron-down');
+        }
+      }
+    }
+  }
+
+  ///
   ///  Hover/active row highlighting
   ///
+
   &.table-hover tbody tr:hover,
   tbody tr.table-active {
     background-color: rgba($table-bg-active, .1);
@@ -83,12 +121,24 @@
     }
   }
 
+  ///
+  ///  Border between table bodies
+  ///
+
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 
-  .table {
-    background-color: $body-bg;
+  ///
+  ///  Adjacent link buttons
+  ///
+
+  .btn-link {
+    margin-right: $grid-gutter-width / 3;
+
+    + .btn-link {
+        margin-left: 0;
+    }
   }
 }
 
