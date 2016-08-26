@@ -385,10 +385,14 @@ $btn-variants: (
 /// Toggle
 ///
 
-$toggle-height: 2.75rem;
-$toggle-font-size: $font-size-base;
-$toggle-padding-y: calc-padding-y($toggle-height, $toggle-font-size);
-$toggle-padding-x: $btn-padding-x;
+$toggle-height:         2.75rem;
+$toggle-font-size:      $font-size-base;
+$toggle-padding-y:      calc-padding-y($toggle-height, $toggle-font-size);
+$toggle-padding-x:      $btn-padding-x;
+$toggle-border-color:   $charcoal-25;
+$toggle-default-bg:     #fff;
+$toggle-selected-bg:    $blue;
+$toggle-active-bg:      $blue-125;
 
 
 // Tables

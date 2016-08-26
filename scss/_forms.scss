@@ -220,31 +220,41 @@ input[type='radio'] {
   position: relative;
   z-index: 1;
   padding: $toggle-padding-y $toggle-padding-x;
+  margin-right: -$border-width;
+  margin-bottom: -$border-width;
+  border: $border-width solid $toggle-border-color;
   line-height: 1;
   text-align: center;
-  background-color: rgba(255, 255, 255, .85);
+  background-color: #fff;
   cursor: pointer;
   transition: all $transition-fast;
+
   &,
   .bg-dark & {
     color: $blue;
   }
 }
 
+%toggle-hover,
+%toggle-active {
+  border-color: transparent;
+}
+
 %toggle-hover {
   z-index: 2;
-  background-color: rgba(255, 255, 255, 1);
   box-shadow: $shadow-hover;
+
   &:active {
     color: #fff;
-    background-color: $charcoal;
+    background-color: $toggle-active-bg;
   }
 }
 
-%toggle-active {
+%toggle-selected {
   z-index: 2;
   color: #fff;
-  background-color: $blue;
+  background-color: $toggle-selected-bg;
+  border-color: transparent;
   box-shadow: $shadow-hover;
 }
 
@@ -286,7 +296,7 @@ input[type='radio'] {
     }
 
     &:checked + label {
-      @extend %toggle-active;
+      @extend %toggle-selected;
     }
   }
 }
