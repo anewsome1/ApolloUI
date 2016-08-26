@@ -3620,10 +3620,11 @@ input[type='radio']:checked {
   z-index: 1;
   padding: 0.875rem 1.5rem;
   margin-right: -0.0625rem;
+  margin-bottom: -0.0625rem;
   border: 0.0625rem solid #ced3d6;
   line-height: 1;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #fff;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -3636,14 +3637,7 @@ input[type='radio']:checked {
   color: #297dfd;
 }
 
-.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover,
-.toggle input[type="radio"]:checked + label,
-.nav-tabs.tab-bar .nav-link.active,
-.nav-tabs.tab-bar .nav-link.active:focus,
-.nav-tabs.tab-bar .nav-link.active:hover,
-.nav-item.open .nav-tabs.tab-bar .nav-link,
-.nav-item.open .nav-tabs.tab-bar .nav-link:focus,
-.nav-item.open .nav-tabs.tab-bar .nav-link:hover {
+.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   border-color: transparent;
 }
 
@@ -3654,7 +3648,7 @@ input[type='radio']:checked {
 
 .toggle input[type="radio"] + label:active:hover, .nav-tabs.tab-bar .nav-link:active:focus, .nav-tabs.tab-bar .nav-link:active:hover {
   color: #fff;
-  background-color: #3a4f5a;
+  background-color: #1f5ebe;
 }
 
 .toggle input[type="radio"]:checked + label, .nav-tabs.tab-bar .nav-link.active, .nav-tabs.tab-bar .nav-link.active:focus, .nav-tabs.tab-bar .nav-link.active:hover,
@@ -3664,6 +3658,7 @@ input[type='radio']:checked {
   z-index: 2;
   color: #fff;
   background-color: #297dfd;
+  border-color: transparent;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 

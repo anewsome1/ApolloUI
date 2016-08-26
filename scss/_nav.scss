@@ -151,7 +151,6 @@
     @include media-breakpoint-up(sm) {
       margin-bottom: -$border-width;
     }
-
   }
 
 
@@ -182,7 +181,7 @@
       &.active,
       .nav-item.open & {
         @include plain-hover-focus {
-          @extend %toggle-active;
+          @extend %toggle-selected;
         }
       }
     }
@@ -192,10 +191,6 @@
     }
 
   }
-
-
-
-
 }
 
 
