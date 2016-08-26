@@ -3619,6 +3619,8 @@ input[type='radio']:checked {
   position: relative;
   z-index: 1;
   padding: 0.875rem 1.5rem;
+  margin-right: -0.0625rem;
+  border: 0.0625rem solid #ced3d6;
   line-height: 1;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
@@ -3634,9 +3636,19 @@ input[type='radio']:checked {
   color: #297dfd;
 }
 
+.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover,
+.toggle input[type="radio"]:checked + label,
+.nav-tabs.tab-bar .nav-link.active,
+.nav-tabs.tab-bar .nav-link.active:focus,
+.nav-tabs.tab-bar .nav-link.active:hover,
+.nav-item.open .nav-tabs.tab-bar .nav-link,
+.nav-item.open .nav-tabs.tab-bar .nav-link:focus,
+.nav-item.open .nav-tabs.tab-bar .nav-link:hover {
+  border-color: transparent;
+}
+
 .toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
-  background-color: white;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
