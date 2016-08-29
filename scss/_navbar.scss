@@ -203,10 +203,17 @@
   }
 
   .profile-credential {
-    font-size: $navbar-link-font-size * .85;
+    font-size: $font-size-sm;
 
     &.dropdown {
       position: relative;
+      margin-right: -$dropdown-padding-x;
+      margin-top: -.25rem;
+      white-space: nowrap;
+    }
+
+    > a {
+      display: block;
     }
 
     .dropdown-menu {
@@ -218,7 +225,6 @@
   }
 
   .profile-credential-dropdown {
-    white-space: nowrap;
   }
 }
 

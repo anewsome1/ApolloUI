@@ -37,7 +37,7 @@
   > li {
     list-style-type: none;
 
-    + li {
+    &.separator {
       border-top: $border-width solid $charcoal-25;
     }
 
