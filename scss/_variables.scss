@@ -457,8 +457,8 @@ $off-canvas-width: 18rem; // ~256px
 // Default
 $navbar-height: 5.5rem; // ~88px
 $navbar-brand-width: 14rem;
-$navbar-brand-font-size: $font-size-h4;
-$navbar-brand-logo-size: $font-size-h3;
+$navbar-brand-font-size: $font-size-h2;
+$navbar-brand-logo-size: $navbar-brand-font-size;
 $navbar-link-font-size: $font-size-base;
 $navbar-link-padding-y: $btn-padding-y;
 $navbar-link-padding-x: $btn-padding-x;

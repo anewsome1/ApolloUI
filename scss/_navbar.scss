@@ -55,11 +55,17 @@
 
 .navbar-brand {
   width: $navbar-brand-width;
+  margin-right: 3rem;
   font-size: $navbar-brand-font-size;
-  font-weight: $font-light;
+  font-weight: $font-thin;
   white-space: nowrap;
 
-  @if $enable-flex == false {
+  @if $enable-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  } @else {
     margin-top: calc-padding-y($navbar-height, $navbar-brand-font-size * $line-height);
   }
 
@@ -74,6 +80,7 @@
     position: relative;
     top: $navbar-brand-logo-size - $navbar-brand-font-size;
     width: $navbar-brand-logo-size;
+    margin-right: $navbar-brand-logo-size;
   }
 }
 
@@ -99,7 +106,7 @@
   }
 
   > a {
-    padding: $btn-padding-y $btn-padding-x;
+    padding: $btn-padding-y ($grid-gutter-width / 2);
     font-size: $navbar-link-font-size;
     white-space: nowrap;
 

@@ -4105,9 +4105,22 @@ input[type='radio']:checked {
 
 .navbar-brand {
   width: 14rem;
-  font-size: 0.875rem;
-  font-weight: 300;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+  font-weight: 200;
   white-space: nowrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:active {
@@ -4116,8 +4129,9 @@ input[type='radio']:checked {
 
 .navbar-brand-logo {
   position: relative;
-  top: 0.125rem;
-  width: 1rem;
+  top: 0rem;
+  width: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .navbar-links {
@@ -4133,7 +4147,7 @@ input[type='radio']:checked {
 }
 
 .navbar-item > a, .navbar-actions-item > a {
-  padding: 0.6875rem 1.5rem;
+  padding: 0.6875rem 0.9375rem;
   font-size: 1rem;
   white-space: nowrap;
 }
@@ -5384,8 +5398,8 @@ input[type='radio']:checked {
 .navbar-jumbo .off-canvas-open,
 .navbar-jumbo ~ .off-canvas .off-canvas-close,
 .navbar-jumbo ~ .off-canvas .off-canvas-title {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0.4375rem;
+  margin-bottom: 0.4375rem;
 }
 
 .loading-indicator {
