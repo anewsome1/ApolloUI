@@ -4068,7 +4068,7 @@ input[type='radio']:checked {
 
 .navbar {
   z-index: 1000;
-  background-color: #fff;
+  background-color: #297dfd;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 }
 
@@ -4104,7 +4104,6 @@ input[type='radio']:checked {
 }
 
 .navbar-brand {
-  width: 14rem;
   margin-right: 3rem;
   font-size: 1.5rem;
   font-weight: 200;
@@ -4149,11 +4148,12 @@ input[type='radio']:checked {
 .navbar-item > a, .navbar-actions-item > a {
   padding: 0.6875rem 0.9375rem;
   font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
   white-space: nowrap;
 }
 
-.navbar .navbar-item.active > a, .navbar .active.navbar-actions-item > a {
-  color: #37dad3;
+.navbar-item.active > a, .active.navbar-actions-item > a {
+  color: #fff;
 }
 
 .navbar-actions {
@@ -4211,6 +4211,11 @@ input[type='radio']:checked {
   text-align: right;
 }
 
+.navbar-profile .profile-credential,
+.navbar-profile .profile-credential > a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .navbar-profile .profile-username,
 .navbar-profile .profile-credential {
   display: block;
@@ -4218,11 +4223,23 @@ input[type='radio']:checked {
 }
 
 .navbar-profile .profile-username {
+  color: #fff;
   font-size: 1rem;
 }
 
 .navbar-profile .profile-credential {
   font-size: 0.85rem;
+}
+
+.navbar-profile .profile-credential.dropdown {
+  position: relative;
+}
+
+.navbar-profile .profile-credential .dropdown-menu {
+  text-align: initial;
+  left: auto;
+  right: 0;
+  font-size: 1rem;
 }
 
 .navbar-profile .profile-credential-dropdown {
@@ -4262,57 +4279,6 @@ input[type='radio']:checked {
   .margin-top-navbar {
     margin-top: 5.5rem;
   }
-}
-
-.navbar-primary {
-  background-color: #297dfd;
-}
-
-.navbar-primary .navbar-brand, .navbar-primary .navbar-brand:hover, .navbar-primary .navbar-brand:focus, .navbar-primary .navbar-brand:active, .navbar-primary .navbar-brand:visited,
-.navbar-primary .navbar-item > a,
-.navbar-primary .navbar-actions-item > a,
-.navbar-primary .navbar-item > a:hover,
-.navbar-primary .navbar-actions-item > a:hover,
-.navbar-primary .navbar-item > a:focus,
-.navbar-primary .navbar-actions-item > a:focus,
-.navbar-primary .navbar-item > a:active,
-.navbar-primary .navbar-actions-item > a:active,
-.navbar-primary .navbar-item > a:visited,
-.navbar-primary .navbar-actions-item > a:visited {
-  color: #fff;
-}
-
-.navbar-primary .navbar-item.active > a, .navbar-primary .active.navbar-actions-item > a {
-  color: #9bece9;
-}
-
-.navbar-primary .navbar-item > .dropdown-toggle:focus, .navbar-primary .navbar-actions-item > .dropdown-toggle:focus {
-  color: #37dad3;
-}
-
-.navbar-primary .profile-username,
-.navbar-primary .profile-credential,
-.navbar-primary .profile-credential > a {
-  color: #fff;
-}
-
-.navbar-primary .profile-username {
-  font-size: 1rem;
-}
-
-.navbar-primary .profile-credential {
-  font-size: 0.85rem;
-}
-
-.navbar-primary .profile-credential.dropdown {
-  position: relative;
-}
-
-.navbar-primary .profile-credential .dropdown-menu {
-  text-align: initial;
-  left: auto;
-  right: 0;
-  font-size: 1rem;
 }
 
 .command-bar {

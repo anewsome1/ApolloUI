@@ -456,14 +456,17 @@ $off-canvas-width: 18rem; // ~256px
 
 // Default
 $navbar-height: 5.5rem; // ~88px
-$navbar-brand-width: 14rem;
-$navbar-brand-font-size: $font-size-h2;
-$navbar-brand-logo-size: $navbar-brand-font-size;
-$navbar-link-font-size: $font-size-base;
-$navbar-link-padding-y: $btn-padding-y;
-$navbar-link-padding-x: $btn-padding-x;
-$navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+$navbar-brand-font-size:    $font-size-h2;
+$navbar-brand-logo-size:    $navbar-brand-font-size;
+$navbar-link-font-size:     $font-size-base;
+$navbar-link-padding-y:     $btn-padding-y;
+$navbar-link-padding-x:     $btn-padding-x;
+$navbar-brand-margin-top:   ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-link-margin-top:    ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+
+$navbar-bg-color:           $brand-primary;
+$navbar-link-color:         rgba(#fff, .8);
+$navbar-link-color-active:  #fff;
 
 $off-canvas-toggle-size: 1.125rem;
 // $off-canvas-toggle-padding-y: $navbar-link-padding-y;
@@ -476,18 +479,6 @@ $navbar-sm-brand-margin-top: ($navbar-sm-height / 2) - ($navbar-brand-font-size 
 $navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
 $off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
-
-// Navbar themes
-//
-// (Removing other color options until they are needed)
-$navbar-variants: (
-  primary: (
-    dark: true,
-    bg: $blue,
-    color: #fff,
-    color-active: $teal-50
-  )
-);
 
 // Profile
 $profile-img-size: 2.4375rem;  // ~39px

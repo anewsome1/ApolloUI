@@ -1,7 +1,9 @@
 .navbar {
   z-index: $zindex-navbar;
-  background-color: #fff;
+  background-color: $navbar-bg-color;
   box-shadow: $shadow-hover;
+
+
 
   a,
   a:hover,
@@ -32,7 +34,6 @@
     @include media-breakpoint-up(sm) {
       height: $navbar-height;
     }
-
   }
 }
 
@@ -49,12 +50,16 @@
 }
 
 
+
+
+
+
+
 ///
 /// Brand (application name)
 ///
 
 .navbar-brand {
-  width: $navbar-brand-width;
   margin-right: 3rem;
   font-size: $navbar-brand-font-size;
   font-weight: $font-thin;
@@ -100,7 +105,6 @@
 }
 
 .navbar-item {
-
   @if $enable-flex == false {
     display: inline-block;
   }
@@ -108,6 +112,7 @@
   > a {
     padding: $btn-padding-y ($grid-gutter-width / 2);
     font-size: $navbar-link-font-size;
+    color: $navbar-link-color;
     white-space: nowrap;
 
     @if $enable-flex == false {
@@ -116,8 +121,8 @@
     }
   }
 
-  .navbar &.active > a {
-    color: $teal;
+  &.active > a {
+    color: $navbar-link-color-active;
   }
 }
 
@@ -181,6 +186,11 @@
     margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
   }
 
+  .profile-credential,
+  .profile-credential > a {
+    color: $navbar-link-color;
+  }
+
   .profile-username,
   .profile-credential {
     display: block;
@@ -188,11 +198,23 @@
   }
 
   .profile-username {
+    color: $navbar-link-color-active;
     font-size: $navbar-link-font-size;
   }
 
   .profile-credential {
     font-size: $navbar-link-font-size * .85;
+
+    &.dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      text-align: initial;
+      left: auto;
+      right: 0;
+      font-size: $font-size-base;
+    }
   }
 
   .profile-credential-dropdown {
@@ -238,59 +260,6 @@
 
 }
 
-@each $variant, $props in $navbar-variants {
-  .navbar-#{ $variant } {
-    background-color: map-get($props, bg);
-
-    .navbar-brand,
-    .navbar-item > a {
-      &,
-      &:hover,
-      &:focus,
-      &:active,
-      &:visited {
-        color: map-get($props, color);
-      }
-    }
-    .navbar-item.active > a {
-      color: map-get($props, color-active);
-    }
-
-    // Dropdown lists
-    @if map-get($props, dark) {
-      .navbar-item > .dropdown-toggle:focus {
-        color: $teal;
-      }
-    }
-
-
-    // User profile section
-    .profile-username,
-    .profile-credential,
-    .profile-credential > a {
-      color: map-get($props, color);
-    }
-
-    .profile-username {
-      font-size: $navbar-link-font-size;
-    }
-
-    .profile-credential {
-      font-size: $navbar-link-font-size * .85;
-
-      &.dropdown {
-        position: relative;
-      }
-
-      .dropdown-menu {
-        text-align: initial;
-        left: auto;
-        right: 0;
-        font-size: $font-size-base;
-      }
-    }
-  }
-}
 
 ///
 /// Command bar
