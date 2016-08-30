@@ -1,0 +1,66 @@
+
+.sidebar {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: $sidebar-width;
+  text-align: center;
+  background-color: $sidebar-bg;
+
+  &-link {
+    display: block;
+    padding-right: $sidebar-padding-x;
+    padding-left: $sidebar-padding-x;
+    font-size: $font-size-sm;
+    transition: all $transition-fast;
+
+    &,
+    &:active,
+    &:visited {
+      color: $sidebar-link-color;
+    }
+
+    &:hover {
+      background-color: $sidebar-hover-bg;
+    }
+
+    &.active {
+      color: $sidebar-active-color;
+      background-color: $sidebar-active-bg;
+    }
+
+    .icon,
+    &-title {
+      display: block;
+    }
+
+    .icon,
+    .icon + &-title {
+      text-align: center;
+    }
+
+    .icon + &-title {
+      padding-top: 0;
+      padding-bottom: $sidebar-padding-y;
+    }
+
+    .icon {
+      display: block;
+      padding-top: $sidebar-padding-y;
+      font-size: $sidebar-icon-size;
+    }
+
+    &-title {
+      padding-top: $sidebar-padding-y / 2;
+      padding-bottom: $sidebar-padding-y / 2;
+    }
+  }
+}
+
+.margin-left-sidebar {
+  margin-left: $sidebar-width;
+}

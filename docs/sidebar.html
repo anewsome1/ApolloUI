@@ -1,0 +1,46 @@
+---
+layout: component
+title: Sidebar
+category: components
+order: 31
+---
+
+<section class="docs-section">
+
+{% include example-intro.html title='Sidebar' description='Secondary navigation lists can be displayed using a vertical navbar.' %}
+
+{% capture example %}
+<nav class="sidebar margin-top-navbar" style="position:absolute;">
+  <a class="sidebar-link" href="#0">
+    <span class="icon icon-alert-circle"></span>
+    <span class="sidebar-link-title">Essentials</span>
+  </a>
+  <a class="sidebar-link active" href="#0">
+    <span class="icon icon-star"></span>
+    <span class="sidebar-link-title">Rating</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="icon icon-contact"></span>
+    <span class="sidebar-link-title">Identity</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="icon icon-location"></span>
+    <span class="sidebar-link-title">Location Details</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="icon icon-user-history"></span>
+    <span class="sidebar-link-title">Activity History</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="icon icon-survey"></span>
+    <span class="sidebar-link-title">Survey</span>
+  </a>
+</nav>
+{% endcapture %}
+
+  <div style="position: relative;">
+    {% include example.html size='fourth' code=example %}
+  </div>
+
+</section>
+
