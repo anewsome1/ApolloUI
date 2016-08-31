@@ -234,13 +234,13 @@ $card-bg:                   #fff;
 ///
 
 $accordion-head-font-weight:    $font-normal;
-$accordion-head-font-size:      $font-size-base;
+$accordion-head-font-size:      $font-size-sm;
 $accordion-head-bg:             $neutral;
 $accordion-head-pad-y:          .75rem;  // Makes total height ~42px
 $accordion-head-pad-x:          1.5rem;
 $accordion-border-color:        $charcoal-25;
-$accordion-dark-header-bg:      $charcoal-125;
-$accordion-dark-active-bg:      $charcoal-150;
+$accordion-dark-header-bg:      $charcoal;
+$accordion-dark-active-bg:      $charcoal-125;
 
 
 ///
@@ -314,44 +314,45 @@ $input-group-addon-border-color: $input-border-color;
 $cursor-disabled:                not-allowed;
 
 // Data URI encoded images
-$svg-check-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjazwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2siIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzMsNjAgTDMzLDMwIEwyMywzMCBMMjMsNjUgTDIzLDcwIEw5Nyw3MCBMOTcsNjAgTDMzLDYwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuMDAwMDAwLCA1MC4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTYwLjAwMDAwMCwgLTUwLjAwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
-$svg-check-solid-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1zb2xpZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQiIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEwyNi43NjU5ODEzLDU0Ljk0OTc0NzUgTDE5LjY5NDkxMzUsNjIuMDIwODE1MyBMNDQuNDQzNjUwOCw4Ni43Njk1NTI2IEw0Ny45NzkxODQ3LDkwLjMwNTA4NjUgTDEwMC4zMDUwODcsMzcuOTc5MTg0NyBMOTMuMjM0MDE4NywzMC45MDgxMTY5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
-$svg-check-solid-teal: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMzkuMSAoMzE3MjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmNoZWNrLXNvbGlkLXRlYWw8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQtdGVhbCIgZmlsbD0iIzM3REFEMyI+CiAgICAgICAgICAgIDxnIGlkPSJHZW5lcmljLUljb25zIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJjaGVjay1zb2xpZCI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQ3Ljk3OTE4NDcsNzYuMTYyOTUwOSBMMjYuNzY1OTgxMyw1NC45NDk3NDc1IEwxOS42OTQ5MTM1LDYyLjAyMDgxNTMgTDQ0LjQ0MzY1MDgsODYuNzY5NTUyNiBMNDcuOTc5MTg0Nyw5MC4zMDUwODY1IEwxMDAuMzA1MDg3LDM3Ljk3OTE4NDcgTDkzLjIzNDAxODcsMzAuOTA4MTE2OSBMNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBMMCwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
-$svg-box-gray: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5zcXVhcmU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InNxdWFyZSIgZmlsbD0iI0NDQ0NDQyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDEyMCwwIEwxMjAsMTIwIEwwLDEyMCBMMCwwIFogTTEwLDEwIEwxMTAsMTAgTDExMCwxMTAgTDEwLDExMCBMMTAsMTAgWiIgaWQ9IlJlY3RhbmdsZS0yMDYiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
-$svg-chevron-down-blue: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+$svg-check-blue:                 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjazwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2siIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzMsNjAgTDMzLDMwIEwyMywzMCBMMjMsNjUgTDIzLDcwIEw5Nyw3MCBMOTcsNjAgTDMzLDYwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuMDAwMDAwLCA1MC4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTYwLjAwMDAwMCwgLTUwLjAwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+$svg-check-solid-blue:           url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1zb2xpZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQiIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEwyNi43NjU5ODEzLDU0Ljk0OTc0NzUgTDE5LjY5NDkxMzUsNjIuMDIwODE1MyBMNDQuNDQzNjUwOCw4Ni43Njk1NTI2IEw0Ny45NzkxODQ3LDkwLjMwNTA4NjUgTDEwMC4zMDUwODcsMzcuOTc5MTg0NyBMOTMuMjM0MDE4NywzMC45MDgxMTY5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+$svg-check-solid-teal:           url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMzkuMSAoMzE3MjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmNoZWNrLXNvbGlkLXRlYWw8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQtdGVhbCIgZmlsbD0iIzM3REFEMyI+CiAgICAgICAgICAgIDxnIGlkPSJHZW5lcmljLUljb25zIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJjaGVjay1zb2xpZCI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQ3Ljk3OTE4NDcsNzYuMTYyOTUwOSBMMjYuNzY1OTgxMyw1NC45NDk3NDc1IEwxOS42OTQ5MTM1LDYyLjAyMDgxNTMgTDQ0LjQ0MzY1MDgsODYuNzY5NTUyNiBMNDcuOTc5MTg0Nyw5MC4zMDUwODY1IEwxMDAuMzA1MDg3LDM3Ljk3OTE4NDcgTDkzLjIzNDAxODcsMzAuOTA4MTE2OSBMNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBMMCwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+$svg-box-gray:                   url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5zcXVhcmU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InNxdWFyZSIgZmlsbD0iI0NDQ0NDQyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDEyMCwwIEwxMjAsMTIwIEwwLDEyMCBMMCwwIFogTTEwLDEwIEwxMTAsMTAgTDExMCwxMTAgTDEwLDExMCBMMTAsMTAgWiIgaWQ9IlJlY3RhbmdsZS0yMDYiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+$svg-chevron-down-blue:          url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 
 // Checkbox
-$checkbox-size: 1.125rem;
-$checkbox-color: $blue;
+$checkbox-size:                  1.125rem;
+$checkbox-color:                 $blue;
 
 // Error message
-$input-msg-font-size: $font-size-sm;
-$input-msg-padding-y: calc-padding-y(1.875, $input-msg-font-size);
-$input-msg-padding-x: $input-padding-x;
-$input-msg-icon-size: $font-size-sm;
-$input-msg-line-height: $input-msg-font-size;
-$input-msg-shadow-height: .625rem;  // ~10px
+$input-msg-font-size:            $font-size-sm;
+$input-msg-padding-y:            calc-padding-y(1.875, $input-msg-font-size);
+$input-msg-padding-x:            $input-padding-x;
+$input-msg-icon-size:            $font-size-sm;
+$input-msg-line-height:          $input-msg-font-size;
+$input-msg-shadow-height:        .625rem;  // ~10px
+
 
 ///
 /// Buttons
 ///
 
-// $btn-border-width: $border-width;
-$btn-min-width: 6.25rem;  // ~100px
-$btn-padding-x: 1.5rem; // ~24px
-$btn-padding-y: $input-padding-y - $border-width;
-$btn-margin-x: 1.125rem;
-$btn-line-height: 1;
+// $btn-border-width:    $border-width;
+$btn-min-width:       6.25rem;  // ~100px
+$btn-padding-x:       1.5rem; // ~24px
+$btn-padding-y:       $input-padding-y - $border-width;
+$btn-margin-x:        1.125rem;
+$btn-line-height:     1;
 
-$btn-sm-padding-x: 1.25rem; // ~20px
-$btn-sm-padding-y: $input-sm-padding-y - $border-width;  // Padding makes sm button ~30px tall
+$btn-sm-padding-x:    1.25rem; // ~20px
+$btn-sm-padding-y:    $input-sm-padding-y - $border-width;  // Padding makes sm button ~30px tall
 
-$btn-lg-min-width: 8.75rem;  // ~140px
-$btn-lg-padding-y: $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
+$btn-lg-min-width:    8.75rem;  // ~140px
+$btn-lg-padding-y:    $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
 
-$btn-pulse-size: 8.75rem;
-$btn-link-padding-x: .5rem;
-$btn-link-disabled: $charcoal-50;
+$btn-pulse-size:      8.75rem;
+$btn-link-padding-x:  .5rem;
+$btn-link-disabled:   $charcoal-50;
 
 $btn-variants: (
   primary: (
@@ -452,30 +453,30 @@ $zindex-modal:             1025;
 /// (maybe flexbox layout?)
 /// !!!
 
-$off-canvas-width: 18rem; // ~256px
+$off-canvas-width:                  18rem; // ~256px
 
 // Default
-$navbar-height: 5.5rem; // ~88px
-$navbar-brand-width: 14rem;
-$navbar-brand-font-size: $font-size-h4;
-$navbar-brand-logo-size: $font-size-h3;
-$navbar-link-font-size: $font-size-base;
-$navbar-link-padding-y: $btn-padding-y;
-$navbar-link-padding-x: $btn-padding-x;
-$navbar-brand-margin-top: ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-link-margin-top: ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+$navbar-height:                     5.5rem; // ~88px
+$navbar-brand-width:                14rem;
+$navbar-brand-font-size:            $font-size-h4;
+$navbar-brand-logo-size:            $font-size-h3;
+$navbar-link-font-size:             $font-size-base;
+$navbar-link-padding-y:             $btn-padding-y;
+$navbar-link-padding-x:             $btn-padding-x;
+$navbar-brand-margin-top:           ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-link-margin-top:            ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-toggle-size: 1.125rem;
-// $off-canvas-toggle-padding-y: $navbar-link-padding-y;
-// $off-canvas-toggle-margin-y: $navbar-brand-margin-top;
+$off-canvas-toggle-size:            1.125rem;
+// $off-canvas-toggle-padding-y:       $navbar-link-padding-y;
+// $off-canvas-toggle-margin-y:        $navbar-brand-margin-top;
 
 
 // Small variation
-$navbar-sm-height: 3.75rem; // ~60px
-$navbar-sm-brand-margin-top: ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-sm-link-margin-top: ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-height:                  3.75rem; // ~60px
+$navbar-sm-brand-margin-top:        ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-link-margin-top:         ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
 
-$off-canvas-jumbo-toggle-margin-y: $navbar-sm-brand-margin-top;
+$off-canvas-jumbo-toggle-margin-y:  $navbar-sm-brand-margin-top;
 
 // Navbar themes
 //
@@ -490,126 +491,130 @@ $navbar-variants: (
 );
 
 // Profile
-$profile-img-size: 2.4375rem;  // ~39px
-$profile-img-text-size: $font-size-h4;
-$profile-margin-top: ($navbar-height / 2) - ($profile-img-size / 2);
+$profile-img-size:        2.4375rem;  // ~39px
+$profile-img-text-size:   $font-size-h4;
+$profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
 
 
 ///
 /// Command bar
 ///
 
-$command-bar-bg: $neutral;
-$command-bar-padding-y: .5rem;
+$command-bar-bg:          $neutral;
+$command-bar-padding-y:   .5rem;
 
 
 ///
 /// Vertical navbar
 ///
 
-$navbar-vertical-width: 5.5rem;
-$navbar-vertical-jumbo-width: 8.25rem;
-$navbar-vertical-bg: $charcoal-125;
-$navbar-vertical-link-color: $charcoal-25;
-$navbar-vertical-padding-x: $grid-gutter-width / 2;
-$navbar-vertical-padding-y: $spacer;
-$navbar-vertical-icon-size: 2rem;
-$navbar-vertical-hover-bg: $charcoal-150;
-$navbar-vertical-active-color: $teal;
-$navbar-vertical-active-bg: $charcoal-175;
+$sidebar-width:           15rem;
+$sidebar-bg:              $charcoal;
+$sidebar-link-color:      #fff;
+$sidebar-padding-x:       1.5rem;
+$sidebar-padding-y:       calc-padding-y(2.2rem, $font-size-sm);
+$sidebar-icon-size:       .875rem;
+$sidebar-active-color:    $teal;
+$sidebar-active-bg:       $charcoal-125;
+$sidebar-hover-bg:        rgba($sidebar-active-bg, .5);
 
+
+$sidebar-sm-width:        5.125rem; // ~82px
+$sidebar-sm-link-height:  5.5rem;   // ~88px
 
 ///
 /// Login component
 ///
 
-$login-width: 28rem;
+$login-width:   28rem;
 
 
 ///
 /// Empty space
 ///
 
-$empty-space-padding-y: 4.5rem;
-$empty-space-padding-x: 2.625rem;
-$empty-space-border-color: $charcoal-25;
-$empty-space-icon-size: 1.5rem;  // ~24px
-$empty-space-icon-close-size: $empty-space-icon-size * 1.65; // Account for whitespace around "x" icon
-$empty-space-icon-border-size: 4.5rem; // ~72px
-$empty-space-icon-color: $charcoal;
-$empty-space-icon-color-dark: #fff;
+$empty-space-padding-y:         4.5rem;
+$empty-space-padding-x:         2.625rem;
+$empty-space-border-color:      $charcoal-25;
+$empty-space-icon-size:         1.5rem;  // ~24px
+$empty-space-icon-close-size:   $empty-space-icon-size * 1.65; // Account for whitespace around "x" icon
+$empty-space-icon-border-size:  4.5rem; // ~72px
+$empty-space-icon-color:        $charcoal;
+$empty-space-icon-color-dark:   #fff;
 
 
 ///
 /// Breadcrumbs
 ///
 
-$breadcrumb-font-size: $font-size-base;
-$breadcrumb-spacing: .25rem; // ~4px;
-$breadcrumb-ellipse-letter-spacing: .125rem;
-$breadcrumb-ellipse-circle-size: 1.5rem;
+$breadcrumb-font-size:                $font-size-base;
+$breadcrumb-spacing:                  .25rem; // ~4px;
+$breadcrumb-ellipse-letter-spacing:   .125rem;
+$breadcrumb-ellipse-circle-size:      1.5rem;
 
 
 ///
 /// billboard (Billboard)
 ///
 
-$billboard-padding: $grid-gutter-width * 2;
+$billboard-padding:   $grid-gutter-width * 2;
 
 ///
 /// Carousel
 ///
 
-$carousel-text-shadow:                        0 .0625rem .125rem rgba(0,0,0,.6);
+$carousel-text-shadow:              0 .0625rem .125rem rgba(0,0,0,.6);
 
-$carousel-control-color:                      #fff;
-$carousel-control-width:                      $billboard-padding;
-$carousel-control-font-size:                  1.5rem;
+$carousel-control-color:            #fff;
+$carousel-control-width:            $billboard-padding;
+$carousel-control-font-size:        1.5rem;
 
-$carousel-indicator-active-bg:                #fff;
-$carousel-indicator-inactive-bg:              rgba(#fff, .5);
-$carousel-indicator-border-color:             #fff;
-$carousel-indicator-size:                     .55rem;
+$carousel-indicator-active-bg:      #fff;
+$carousel-indicator-inactive-bg:    rgba(#fff, .5);
+$carousel-indicator-border-color:   #fff;
+$carousel-indicator-size:           .55rem;
 
-$carousel-caption-color:                      #fff;
+$carousel-caption-color:            #fff;
 
 
 ///
 /// Search
 ///
 
-$search-icon-size: $font-size-base;
-$search-icon-padding: calc-padding-y($component-height, $search-icon-size);
-$search-padding-left: $search-icon-size + ($search-icon-padding * 2);
-$search-item-padding: $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
+$search-icon-size:        $font-size-base;
+$search-icon-padding:     calc-padding-y($component-height, $search-icon-size);
+$search-padding-left:     $search-icon-size + ($search-icon-padding * 2);
+$search-item-padding:     $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
+$search-icon-padding-sm:  calc-padding-y($component-height-sm, $search-icon-size);
+
 
 ///
 /// Slider
 ///
 
-$slider-position-min: 25%;  // For demo purposes only
-$slider-position-max: 85%;  // For demo purposes only
+$slider-position-min:         25%;  // For demo purposes only
+$slider-position-max:         85%;  // For demo purposes only
 
-$slider-height: .1875rem;  // ~3px
-$slider-bg: $charcoal-25;
+$slider-height:               .1875rem;  // ~3px
+$slider-bg:                   $charcoal-25;
 
 // Fill
-$slider-fill-bg: $brand-primary;
+$slider-fill-bg:              $brand-primary;
 
 // Handle
-$slider-handle-size: 2rem;  // ~32px
-$slider-handle-bg: #fff;
-$slider-handle-border: $border-width solid $charcoal-25;
+$slider-handle-size:          2rem;  // ~32px
+$slider-handle-bg:            #fff;
+$slider-handle-border:        $border-width solid $charcoal-25;
 
 // Value label
-$slider-value-width: 10rem;
+$slider-value-width:          10rem;
 
 // Active
-$slider-active-handle-bg: $brand-primary;
+$slider-active-handle-bg:     $brand-primary;
 
 // Disabled
-$slider-disabled-fill-bg: $charcoal-50;
-$slider-disabled-handle-bg: $neutral;
+$slider-disabled-fill-bg:     $charcoal-50;
+$slider-disabled-handle-bg:   $neutral;
 
 
 ///
@@ -617,28 +622,28 @@ $slider-disabled-handle-bg: $neutral;
 ///
 
 // Animation stuff
-$loader-arc-timing: linear;
-$loader-spin-timing: linear;
-$loader-spin-duration: (4s / 3);
-$loader-grow-duration: .5s;
+$loader-arc-timing:           linear;
+$loader-spin-timing:          linear;
+$loader-spin-duration:        (4s / 3);
+$loader-grow-duration:        .5s;
 
 // Spinner sizes
-$loader-circle-inner: 6.25rem;
-$loader-circle-outer: 10.5rem;
-$loader-svg-radius: 32;
-$loader-arc-stroke: .75;
-$loader-arc-length-min: 2;
-$loader-dasharray-gap: 100;
-$loader-arc-length-max: $loader-dasharray-gap / 2;
+$loader-circle-inner:         6.25rem;
+$loader-circle-outer:         10.5rem;
+$loader-svg-radius:           32;
+$loader-arc-stroke:           .75;
+$loader-arc-length-min:       2;
+$loader-dasharray-gap:        100;
+$loader-arc-length-max:       $loader-dasharray-gap / 2;
 
 // Orbs
-$loader-planet-orbit-inner: 3.75rem;
-$loader-planet-orbit-middle: -6.25rem;
-$loader-planet-orbit-outer: 8.75rem;
-$loader-planet-size-inner: 1.25rem;
-$loader-planet-size-middle: 2.25rem;
-$loader-planet-size-outer: 1.75rem;
+$loader-planet-orbit-inner:   3.75rem;
+$loader-planet-orbit-middle:  -6.25rem;
+$loader-planet-orbit-outer:   8.75rem;
+$loader-planet-size-inner:    1.25rem;
+$loader-planet-size-middle:   2.25rem;
+$loader-planet-size-outer:    1.75rem;
 
 // Overall sizes
-$loader-size: $loader-circle-outer;
-$loader-size-complex: ($loader-planet-orbit-outer * 2) + ($loader-planet-size-outer / 2) + $spacer;
+$loader-size:                 $loader-circle-outer;
+$loader-size-complex:         ($loader-planet-orbit-outer * 2) + ($loader-planet-size-outer / 2) + $spacer;
