@@ -509,15 +509,18 @@ $command-bar-padding-y:   .5rem;
 
 $sidebar-width:           5.125rem;
 $sidebar-jumbo-width:     8.25rem;
-$sidebar-bg:              $charcoal-125;
-$sidebar-link-color:      $charcoal-25;
+$sidebar-bg:              $charcoal;
+$sidebar-link-color:      #fff;
 $sidebar-padding-x:       $grid-gutter-width / 2;
 $sidebar-padding-y:       $spacer;
 $sidebar-icon-size:       .875rem;
-$sidebar-hover-bg:        $charcoal-150;
+$sidebar-hover-bg:        $charcoal;
 $sidebar-active-color:    $teal;
-$sidebar-active-bg:       $charcoal-175;
+$sidebar-active-bg:       $charcoal-125;
 
+
+$sidebar-sm-width:        5.125rem; // ~82px
+$sidebar-sm-link-height:  5.5rem;   // ~88px
 
 ///
 /// Login component

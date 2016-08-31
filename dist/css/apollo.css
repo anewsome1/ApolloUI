@@ -4344,7 +4344,7 @@ input[type='radio']:checked {
   height: auto;
   width: 5.125rem;
   text-align: center;
-  background-color: #2c3b44;
+  background-color: #3a4f5a;
 }
 
 .sidebar-link {
@@ -4356,16 +4356,17 @@ input[type='radio']:checked {
 }
 
 .sidebar-link, .sidebar-link:active, .sidebar-link:visited {
-  color: #ced3d6;
+  color: #fff;
 }
 
 .sidebar-link:hover {
-  background-color: #1d282d;
+  background-color: #3a4f5a;
+  color: #37dad3;
 }
 
 .sidebar-link.active {
   color: #37dad3;
-  background-color: #0f1417;
+  background-color: #2c3b44;
 }
 
 .sidebar-link .icon, .sidebar-link .close, .sidebar-link .alert::before, .sidebar-link .form-msg::before,
