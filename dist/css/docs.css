@@ -455,12 +455,8 @@ body {
   text-align: center;
 }
 
-.docs-section, .home-header {
-  position: relative;
-}
-
-.docs-section .navbar-vertical, .home-header .navbar-vertical {
-  margin-top: 0;
+.docs-example-rendered .sidebar {
+  margin-top: 2.35rem;
 }
 
 .home-header {

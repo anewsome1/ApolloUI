@@ -7,7 +7,7 @@ order: 31
 
 <section class="docs-section">
 
-{% include example-intro.html title='Sidebar' description='Secondary navigation lists can be displayed using a vertical navbar.' %}
+<p class="docs-example-description">Secondary navigation lists can be displayed using a sidebar.  The sidebar component is fixed to the left side of the page and will automatically scroll if its contents go beyond the viewport height.</p>
 
 {% capture example %}
 <nav class="sidebar" style="position:absolute;">
@@ -33,7 +33,7 @@ order: 31
 {% endcapture %}
 
   <div style="position: relative;">
-    {% include example.html size='fourth' code=example %}
+    {% include example.html label='Basic sidebar' size='fourth' code=example %}
   </div>
 
 </section>
@@ -42,37 +42,7 @@ order: 31
 
 <section class="docs-section">
 
-{% include example-intro.html title='Narrow, text only' description='' %}
-
-{% capture example %}
-<nav class="sidebar sidebar-sm" style="position:absolute;">
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Essentials</span>
-  </a>
-  <a class="sidebar-link active" href="#0">
-    <span class="sidebar-link-title">Rating</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Identity</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Location Details</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Activity History</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Survey</span>
-  </a>
-</nav>
-{% endcapture %}
-
-  <div style="position: relative;">
-    {% include example.html size='fourth' code=example %}
-  </div>
-
-
-{% include example-intro.html title='Narrow with icons' description='' %}
+{% include example-intro.html title='Small sidebar' description='Add the class <code>.sidebar-sm</code> to a sidebar to make it more narrow, with larger links.' %}
 
 {% capture example %}
 <nav class="sidebar sidebar-sm" style="position:absolute;">
@@ -104,8 +74,37 @@ order: 31
 {% endcapture %}
 
   <div style="position: relative;">
-    {% include example.html size='fourth' code=example %}
+    {% include example.html label='With icons'  size='fourth' code=example %}
   </div>
+
+
+{% capture example %}
+<nav class="sidebar sidebar-sm" style="position:absolute;">
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Essentials</span>
+  </a>
+  <a class="sidebar-link active" href="#0">
+    <span class="sidebar-link-title">Rating</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Identity</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Location Details</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Activity History</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Survey</span>
+  </a>
+</nav>
+{% endcapture %}
+
+  <div style="position: relative;">
+    {% include example.html label='Text only' size='fourth' code=example %}
+  </div>
+
 
 </section>
 
