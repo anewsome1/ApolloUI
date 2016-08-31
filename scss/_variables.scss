@@ -234,13 +234,13 @@ $card-bg:                   #fff;
 ///
 
 $accordion-head-font-weight:    $font-normal;
-$accordion-head-font-size:      $font-size-base;
+$accordion-head-font-size:      $font-size-sm;
 $accordion-head-bg:             $neutral;
 $accordion-head-pad-y:          .75rem;  // Makes total height ~42px
 $accordion-head-pad-x:          1.5rem;
 $accordion-border-color:        $charcoal-25;
-$accordion-dark-header-bg:      $charcoal-125;
-$accordion-dark-active-bg:      $charcoal-150;
+$accordion-dark-header-bg:      $charcoal;
+$accordion-dark-active-bg:      $charcoal-125;
 
 
 ///
@@ -511,7 +511,7 @@ $command-bar-padding-y:   .5rem;
 $sidebar-width:           15rem;
 $sidebar-bg:              $charcoal;
 $sidebar-link-color:      #fff;
-$sidebar-padding-x:       $grid-gutter-width / 2;
+$sidebar-padding-x:       1.5rem;
 $sidebar-padding-y:       calc-padding-y(2.2rem, $font-size-sm);
 $sidebar-icon-size:       .875rem;
 $sidebar-active-color:    $teal;
@@ -581,10 +581,11 @@ $carousel-caption-color:            #fff;
 /// Search
 ///
 
-$search-icon-size:      $font-size-base;
-$search-icon-padding:   calc-padding-y($component-height, $search-icon-size);
-$search-padding-left:   $search-icon-size + ($search-icon-padding * 2);
-$search-item-padding:   $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
+$search-icon-size:        $font-size-base;
+$search-icon-padding:     calc-padding-y($component-height, $search-icon-size);
+$search-padding-left:     $search-icon-size + ($search-icon-padding * 2);
+$search-item-padding:     $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
+$search-icon-padding-sm:  calc-padding-y($component-height-sm, $search-icon-size);
 
 
 ///
