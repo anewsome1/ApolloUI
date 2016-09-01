@@ -3,7 +3,7 @@
 }
 
 .bg-dark {
-  @include bg-color($bg-color: $charcoal-125, $text-color: rgba(#fff, .9), $link-color: $teal);
+  @include bg-color($bg-color: $charcoal, $text-color: #fff, $link-color: $teal);
 }
 
 .bg-gradient {
