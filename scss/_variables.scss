@@ -554,10 +554,12 @@ $breadcrumb-ellipse-circle-size:      1.5rem;
 
 
 ///
-/// billboard (Billboard)
+/// Billboard
 ///
 
-$billboard-padding:   $grid-gutter-width * 2;
+$billboard-padding-x: $grid-gutter-width * 2;
+$billboard-padding-y: $grid-gutter-width;
+
 
 ///
 /// Carousel
@@ -566,13 +568,14 @@ $billboard-padding:   $grid-gutter-width * 2;
 $carousel-text-shadow:              0 .0625rem .125rem rgba(0,0,0,.6);
 
 $carousel-control-color:            #fff;
-$carousel-control-width:            $billboard-padding;
-$carousel-control-font-size:        1.5rem;
+$carousel-control-width:            2.5rem;
+$carousel-control-font-size:        1.25rem;
+$carousel-control-padding:          calc-padding-y($carousel-control-width, $carousel-control-font-size);
 
-$carousel-indicator-active-bg:      #fff;
-$carousel-indicator-inactive-bg:    rgba(#fff, .5);
+$carousel-indicator-active-bg:      $link-color;
+$carousel-indicator-inactive-bg:    rgba($charcoal, .2);
 $carousel-indicator-border-color:   #fff;
-$carousel-indicator-size:           .55rem;
+$carousel-indicator-size:           .625rem;
 
 $carousel-caption-color:            #fff;
 

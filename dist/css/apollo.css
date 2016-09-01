@@ -2769,6 +2769,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1,
 .card-title,
+.billboard-title,
 .login-brand-name,
 .empty-space-title, .h2, .modal-title, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -2778,7 +2779,7 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 
-h1, .h1, .card-title, .login-brand-name, .empty-space-title {
+h1, .h1, .card-title, .billboard-title, .login-brand-name, .empty-space-title {
   font-size: 2.25rem;
 }
 
@@ -2910,6 +2911,7 @@ html {
 h1,
 .h1,
 .card-title,
+.billboard-title,
 .login-brand-name,
 .empty-space-title {
   font-weight: 200;
@@ -3029,11 +3031,11 @@ dd {
   color: #fff;
 }
 
-.bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .off-canvas a.btn-secondary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .off-canvas a.btn-secondary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .off-canvas a.btn-secondary:visited {
+.bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .off-canvas a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .sidebar .accordion .carousel-dark a.btn-primary, .carousel-dark .sidebar .accordion a.btn-primary, .off-canvas .carousel-dark a.btn-primary, .carousel-dark .off-canvas a.btn-primary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .off-canvas a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .sidebar .accordion .carousel-dark a.btn-primary:hover, .carousel-dark .sidebar .accordion a.btn-primary:hover, .off-canvas .carousel-dark a.btn-primary:hover, .carousel-dark .off-canvas a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .off-canvas a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .sidebar .accordion .carousel-dark a.btn-primary:visited, .carousel-dark .sidebar .accordion a.btn-primary:visited, .off-canvas .carousel-dark a.btn-primary:visited, .carousel-dark .off-canvas a.btn-primary:visited {
   color: #3a4f5a;
 }
 
-.bg-dark a.btn-secondary:active, .sidebar .accordion a.btn-secondary:active, .off-canvas a.btn-secondary:active {
+.bg-dark a.btn-secondary:active, .sidebar .accordion a.btn-secondary:active, .off-canvas a.btn-secondary:active, .bg-dark .carousel-dark a.btn-primary:active, .carousel-dark .bg-dark a.btn-primary:active, .sidebar .accordion .carousel-dark a.btn-primary:active, .carousel-dark .sidebar .accordion a.btn-primary:active, .off-canvas .carousel-dark a.btn-primary:active, .carousel-dark .off-canvas a.btn-primary:active {
   color: #fff;
 }
 
@@ -3257,25 +3259,25 @@ dd {
   color: #9ca7ac;
 }
 
-.btn-secondary {
+.btn-secondary, .carousel-dark .btn-primary {
   border-color: #ced3d6;
   background-color: #fff;
 }
 
-.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+.btn-secondary, .carousel-dark .btn-primary, .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary:focus, .carousel-dark .btn-primary:focus {
   color: #3a4f5a;
 }
 
-.btn-secondary:hover, .btn-secondary.hover, .btn-secondary:active, .btn-secondary.active {
+.btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary.hover, .carousel-dark .hover.btn-primary, .btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
   border-color: transparent;
 }
 
-.btn-secondary:active, .btn-secondary.active {
+.btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
   background-color: #9ca7ac;
   color: #fff;
 }
 
-.btn-secondary:disabled, .btn-secondary.disabled {
+.btn-secondary:disabled, .carousel-dark .btn-primary:disabled, .btn-secondary.disabled, .carousel-dark .disabled.btn-primary {
   background-color: #fff;
   color: #9ca7ac;
   border-color: #f2eeed;
@@ -3322,7 +3324,7 @@ dd {
   padding-bottom: 1rem;
 }
 
-.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .off-canvas .btn-secondary {
+.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .off-canvas .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary, .off-canvas .carousel-dark .btn-primary, .carousel-dark .off-canvas .btn-primary {
   border: none;
 }
 
@@ -4920,13 +4922,13 @@ input[type='radio']:checked {
 }
 
 .billboard {
-  padding: 3.75rem 1.875rem;
+  padding: 1.875rem 3.75rem;
   margin-bottom: 1.875rem;
 }
 
 @media (min-width: 544px) {
   .billboard {
-    padding: 5.625rem 3.75rem;
+    padding: 1.875rem 3.75rem;
   }
 }
 
@@ -4935,14 +4937,34 @@ input[type='radio']:checked {
   padding-left: 0;
 }
 
+.billboard-title {
+  margin-top: .625rem;
+  margin-bottom: .625rem;
+}
+
+.billboard-description {
+  margin-bottom: 1.25rem;
+}
+
 .carousel {
   position: relative;
+  border: 0.0625rem solid #ced3d6;
+}
+
+.carousel .billboard {
+  margin-bottom: 0;
 }
 
 .carousel-inner {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner {
+    padding-bottom: 2.5rem;
+  }
 }
 
 .carousel-inner > .carousel-item {
@@ -4980,6 +5002,12 @@ input[type='radio']:checked {
     left: 0;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-inner > .carousel-item {
+    padding-top: 6.5rem;
   }
 }
 
@@ -5021,38 +5049,110 @@ input[type='radio']:checked {
   left: 0;
 }
 
+.carousel-controls {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 3.75rem;
+  padding-bottom: 1.875rem;
+  padding-left: 3.75rem;
+}
+
+@media (max-width: 767px) {
+  .carousel-controls {
+    padding-top: 2.5rem;
+  }
+}
+
+.carousel-indicators {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: rgba(58, 79, 90, 0.2);
+  border-radius: 50%;
+}
+
+.carousel-indicators li + li {
+  margin-left: 0.625rem;
+}
+
+.carousel-indicators .active {
+  background-color: #297dfd;
+}
+
+@media (max-width: 767px) {
+  .carousel-indicators {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #f7f5f4;
+  }
+  .carousel-dark .carousel-indicators {
+    background-color: #297dfd;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 .carousel-control {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: columns;
-      -ms-flex-direction: columns;
-          flex-direction: columns;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1.875rem;
-  height: auto;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #297dfd;
+  border-radius: 50%;
+}
+
+.carousel-control + .carousel-control {
+  margin-left: 1.875rem;
 }
 
 @media (min-width: 544px) {
   .carousel-control {
-    width: 3.75rem;
+    width: 2.5rem;
   }
-}
-
-.carousel-control.left {
-  left: 0;
-}
-
-.carousel-control.right {
-  right: 0;
 }
 
 .carousel-control:focus, .carousel-control:hover {
@@ -5062,7 +5162,7 @@ input[type='radio']:checked {
 
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .carousel-control .icon-prev::before {
@@ -5073,55 +5173,27 @@ input[type='radio']:checked {
   content: "";
 }
 
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  width: 100%;
-  padding-top: 0.1375rem;
-  padding-bottom: 0.1375rem;
-  padding-left: 0;
-  margin-bottom: 0;
-  text-align: center;
-  list-style: none;
-  background-color: rgba(29, 40, 45, 0.2);
+.carousel-dark {
+  border: 0;
+  background-color: rgba(41, 125, 253, 0.8);
+  color: #fff;
 }
 
-.carousel-indicators li {
-  display: inline-block;
-  width: 0.55rem;
-  height: 0.55rem;
-  margin: 0 0.18333rem;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.55rem;
+.carousel-dark .btn-primary {
+  border: 0;
 }
 
-.carousel-indicators .active {
+.carousel-dark .carousel-control {
+  border-color: #fff;
+  color: #fff;
+}
+
+.carousel-dark .carousel-indicators li {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-dark .carousel-indicators li.active {
   background-color: #fff;
-}
-
-@media (min-width: 544px) {
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-top: -0.75rem;
-    font-size: 1.5rem;
-  }
-  .carousel-control .icon-prev {
-    margin-left: -0.75rem;
-  }
-  .carousel-control .icon-next {
-    margin-right: -0.75rem;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
 }
 
 .login {

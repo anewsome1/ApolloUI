@@ -1,13 +1,23 @@
 .billboard {
-  padding: $billboard-padding ($billboard-padding / 2);
-  margin-bottom: $billboard-padding / 2;
+  padding: $billboard-padding-y $billboard-padding-x;
+  margin-bottom: $billboard-padding-y;
 
   @include media-breakpoint-up(sm) {
-    padding: ($billboard-padding * 1.5) $billboard-padding;
+    padding: $billboard-padding-y $billboard-padding-x;
   }
 }
 
 .billboard-fluid {
   padding-right: 0;
   padding-left: 0;
+}
+
+.billboard-title {
+  @extend .h1;
+  margin-top: .625rem;
+  margin-bottom: .625rem;
+}
+
+.billboard-description {
+  margin-bottom: 1.25rem;
 }
