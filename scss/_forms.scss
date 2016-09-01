@@ -71,6 +71,11 @@
     cursor: not-allowed;
   }
 
+  &.input-sm {
+    height: $input-height-sm;
+    padding: $input-sm-padding-y $input-sm-padding-x;
+  }
+
   &.input-lg {
     height: $input-height-lg;
     padding: $input-lg-padding-y $input-lg-padding-x;
@@ -181,6 +186,12 @@ input[type='radio'] {
 
   &:focus {
     outline: $input-outline;
+  }
+}
+
+.checkbox {
+  label {
+    margin-bottom: 0;
   }
 }
 

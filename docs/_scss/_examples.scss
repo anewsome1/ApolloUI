@@ -311,12 +311,9 @@
 /// Vertical navbar
 ///
 
-.docs-section {
-  position: relative;
-
-  .navbar-vertical {
-    margin-top: 0;
-  }
+.docs-example-rendered .sidebar {
+  position: absolute;
+  margin-top: 2.35rem;
 }
 
 
