@@ -16,6 +16,10 @@
   width: 100%;
   overflow: hidden;
 
+  @include media-breakpoint-down(sm) {
+    padding-bottom: $component-height; // Make room for carousel indicators
+  }
+
   > .carousel-item {
     position: relative;
     display: none;
@@ -50,6 +54,10 @@
         left: 0;
         transform: translate3d(0, 0, 0);
       }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 6.5rem; // Make the carousel taller on mobile
     }
   }
 
@@ -101,6 +109,10 @@
   padding-right: $billboard-padding-x;
   padding-bottom: $billboard-padding-y;
   padding-left: $billboard-padding-x;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 2.5rem;
+  }
 }
 
 ///
@@ -108,8 +120,6 @@
 ///
 
 .carousel-indicators {
-  @include clearfix;
-
   flex-grow: 1;
   list-style: none;
   padding-left: 0;
@@ -133,6 +143,28 @@
 
   .active {
     background-color: $carousel-indicator-active-bg;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: $component-height;
+    background-color: $neutral;
+
+    .carousel-dark & {
+      background-color: $brand-primary;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    order: -1;
   }
 }
 
@@ -178,29 +210,7 @@
 
 
 ///
-/// Responsive variations
-///
-
-@include media-breakpoint-up(sm) {
-  // Scale up the controls a smidge
-  .carousel-control {
-    .icon-prev,
-    .icon-next {
-      font-size: $carousel-control-font-size;
-    }
-  }
-
-  // Show and left align the captions
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
-}
-
-
-///
-/// Responsive variations
+/// Dark background
 ///
 
 .carousel-dark {
