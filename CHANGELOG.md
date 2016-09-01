@@ -2,6 +2,17 @@
 
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v1.0.0-beta.4] - 2016-09-02
+
+### Changed
+- Updated font sizes and weights throughout
+- Updated component height and padding throughout
+- Updated colors throughout
+- Replaced card shadow with border
+
+### Added
+- New sidebar component to replace vertical navbar
+
 
 ## [v1.0.0-beta.3] - 2016-07-01
 
