@@ -2,7 +2,6 @@
 
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
-
 ## [v1.0.0-beta.3] - 2016-07-01
 
 ### Changed
