@@ -4296,28 +4296,11 @@ input[type='radio']:checked {
 }
 
 .command-bar {
-  position: relative;
   z-index: 1000;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f7f5f4;
   box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
-}
-
-.command-bar-actions {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.command-bar-actions > li {
-  display: inline-block;
-}
-
-.command-bar-icon {
-  font-size: 1.25rem;
-  vertical-align: text-bottom;
-  padding-right: .5rem;
 }
 
 .command-bar.command-bar-fixed-bottom {
@@ -4326,6 +4309,25 @@ input[type='radio']:checked {
   left: 0;
   right: 0;
   z-index: 1030;
+}
+
+.command-bar-actions {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.command-bar-actions > li {
+  display: inline-block;
+}
+
+.command-bar-actions > li + li {
+  margin-left: 1rem;
+}
+
+.command-bar-actions .icon, .command-bar-actions .close, .command-bar-actions .alert::before, .command-bar-actions .form-msg::before {
+  padding-right: .25rem;
 }
 
 .sidebar {

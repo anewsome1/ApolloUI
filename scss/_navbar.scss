@@ -271,28 +271,11 @@
 ///
 
 .command-bar {
-  position: relative;
   z-index: $zindex-navbar;
   padding-top: $command-bar-padding-y;
   padding-bottom: $command-bar-padding-y;
   background-color: $command-bar-bg;
   box-shadow: $shadow-hover;
-
-  &-actions {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 0;
-
-    > li {
-      display: inline-block;
-    }
-  }
-
-  &-icon {
-    font-size: $font-size-lg;
-    vertical-align: text-bottom;
-    padding-right: .5rem;
-  }
 
   &.command-bar-fixed-bottom {
     position: fixed;
@@ -302,3 +285,23 @@
     z-index: $zindex-navbar-fixed;
   }
 }
+
+.command-bar-actions {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: $font-size-sm;
+
+  > li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+
+  .icon {
+    padding-right: .25rem;
+  }
+}
+
