@@ -8,7 +8,7 @@ order: 30
 <section class="docs-section">
 
 {% capture example %}
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- Logo and/or name -->
     <a class="navbar-brand" href="#0">
@@ -17,7 +17,7 @@ order: 30
     </a>
     <!-- Links -->
     <ul class="navbar-links">
-      <li class="navbar-item">
+      <li class="navbar-item active">
         <a href="#0">Lorem Ipsum</a>
       </li>
       <li class="navbar-item">
@@ -41,7 +41,7 @@ order: 30
       <div class="profile-credential dropdown">
         <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">john@smith.com</a>
         <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
-          <li><a href="#0">Log out</a></li>
+          <li><a href="#0">Account settings</a></li>
           <li class="separator"></li>
           <li><a href="#0">Switch credentials</a></li>
           <li><a href="#0">Switch to production</a></li>
@@ -50,7 +50,7 @@ order: 30
           <li><a href="#0">App 2</a></li>
           <li><a href="#0">App 3</a></li>
           <li class="separator"></li>
-          <li><a href="#0">Account settings</a></li>
+          <li><a href="#0">Log out</a></li>
         </ul>
       </div>
     </div>
@@ -66,7 +66,7 @@ order: 30
 <section class="docs-section">
 
 {% capture example %}
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- Logo and/or name -->
     <a class="navbar-brand" href="#0">
@@ -111,7 +111,7 @@ order: 30
 {% include example-intro.html title='Command bar' description='A command bar can be displayed below the navbar to show page-level actions, including actions that apply to a group of selected items.' %}
 
 {% capture example %}
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- ... -->
   </div>
@@ -121,22 +121,22 @@ order: 30
     <ul class="command-bar-actions text-xs-right">
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-edit"></span> Edit
+          <span class="icon icon-edit"></span> Edit
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-trash"></span> Delete
+          <span class="icon icon-trash"></span> Delete
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-export"></span> Export
+          <span class="icon icon-export"></span> Export
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-merge"></span> Merge
+          <span class="icon icon-merge"></span> Merge
         </a>
       </li>
     </ul>
