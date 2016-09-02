@@ -6,13 +6,15 @@
 
 .control-label {
   display: block;
+  margin-bottom: 0;
+  line-height: $component-height;
+
   &.disabled {
     color: $input-color-disabled;
   }
 
   &.required::after {
     content: "*";
-    color: $brand-danger;
   }
 }
 
@@ -27,7 +29,7 @@
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  border: $border-width solid $charcoal-lighter;
+  border: $border-width solid $charcoal-25;
   background-color: $input-bg;
   transition: border $transition-fast,
               background-color $transition-fast,
@@ -40,13 +42,12 @@
     opacity: 1;
   }
 
-  // @FIXME we need a more noticeable focus indicator
   &:focus,
   &.focus,
   &:active,
   &.active,
   label:active + & {
-    border: none;
+    border-color: transparent;
     background-color: $input-bg-focus;
     outline: none;
   }
@@ -70,9 +71,14 @@
     cursor: not-allowed;
   }
 
+  &.input-sm {
+    height: $input-height-sm;
+    padding: $input-sm-padding-y $input-sm-padding-x;
+  }
+
   &.input-lg {
     height: $input-height-lg;
-    padding: $input-padding-y-lg $input-padding-x-lg;
+    padding: $input-lg-padding-y $input-lg-padding-x;
   }
 }
 
@@ -97,13 +103,19 @@ textarea.form-control {
 }
 
 .form-msg {
-  @extend .alert;
-  // @TODO: Replace with `.alert-sm` once that's ready
-  padding-top: $input-padding-y * 2 / 3;
-  padding-bottom: $input-padding-y * 2 / 3;
+  &,
+  &::before {
+    line-height: 1;
+  }
 
-  &:before {
-    font-size: $font-size-sm;
+  @extend .alert;
+  display: flex;
+  align-items: center;
+  padding: $input-msg-padding-y $input-msg-padding-x;
+  font-size: $input-msg-font-size;
+
+  &::before {
+    font-size: $input-msg-icon-size;
   }
 }
 
@@ -177,22 +189,37 @@ input[type='radio'] {
   }
 }
 
+.checkbox {
+  label {
+    margin-bottom: 0;
+  }
+}
+
 input[type='checkbox'] {
   background-size: 100%;
 
   &:checked {
     background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
     background-size: 100%;
-    border: none;
+    border: 0;
+  }
+
+  .bg-dark &:checked {
+    background-image: $svg-check-solid-teal;
   }
 }
 
 input[type='radio'] {
   border-radius: 50%;
+  transition: background-color $transition-fast;
 
   &:checked {
     background-color: $brand-primary;
     box-shadow: inset 0 0 0 ($border-width * 2) #fff;
+  }
+
+  .bg-dark &:checked {
+    background-color: $teal;
   }
 }
 
@@ -204,31 +231,41 @@ input[type='radio'] {
   position: relative;
   z-index: 1;
   padding: $toggle-padding-y $toggle-padding-x;
+  margin-right: -$border-width;
+  margin-bottom: -$border-width;
+  border: $border-width solid $toggle-border-color;
   line-height: 1;
   text-align: center;
-  background-color: rgba(255, 255, 255, .85);
+  background-color: #fff;
   cursor: pointer;
   transition: all $transition-fast;
+
   &,
   .bg-dark & {
     color: $blue;
   }
 }
 
+%toggle-hover,
+%toggle-active {
+  border-color: transparent;
+}
+
 %toggle-hover {
   z-index: 2;
-  background-color: rgba(255, 255, 255, 1);
   box-shadow: $shadow-hover;
+
   &:active {
     color: #fff;
-    background-color: $charcoal;
+    background-color: $toggle-active-bg;
   }
 }
 
-%toggle-active {
+%toggle-selected {
   z-index: 2;
   color: #fff;
-  background-color: $blue;
+  background-color: $toggle-selected-bg;
+  border-color: transparent;
   box-shadow: $shadow-hover;
 }
 
@@ -270,7 +307,7 @@ input[type='radio'] {
     }
 
     &:checked + label {
-      @extend %toggle-active;
+      @extend %toggle-selected;
     }
   }
 }

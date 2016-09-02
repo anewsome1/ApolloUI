@@ -1,16 +1,5 @@
-
-///
-/// Accordion
-///
-
-// !!!
-// TODO: Recreate accordion as separate component (remove shared styles with cards)
-// !!!
-
-
 .accordion {
-  border: $card-border-width solid $card-border-color;
-  border-top-width: 0;
+  border: $border-width solid $accordion-border-color;
 
   ///
   /// Dark background
@@ -18,22 +7,28 @@
 
   .bg-dark &,
   &.bg-dark {
-    background-color: $card-inverse-bg;
-
-    &,
-    .accordion-header {
-      border-color: $card-inverse-border-color;
-    }
+    background-color: $accordion-dark-active-bg;
+    border: 0;
 
     .accordion-header {
-      background-color: $card-inverse-cap-bg;
-    }
+      background-color: $accordion-dark-active-bg;
+      border: 0;
 
-    .accordion-title {
-      color: $teal;
+      &.collapsed {
+        background-color: $accordion-dark-header-bg;
+      }
+
+
+      .accordion-title {
+        color: rgba(#fff, .8);
+      }
+
+      &:not(.collapsed) .accordion-title {
+        color: $teal;
+      }
+
     }
   }
-
 }
 
 // Visiblility
@@ -57,22 +52,25 @@
 // Padding
 .accordion-header,
 .accordion-block {
-  padding: $card-spacer-y $card-spacer-x;
+  padding: $accordion-head-pad-y $accordion-head-pad-x;
 }
 
 // Borders
 .accordion-header {
-  border-top: $card-border-width solid $card-border-color;
-  background-color: $card-cap-bg;
+  background-color: $accordion-head-bg;
   cursor: pointer;
+
+  .accordion-block + & {
+    border-top: $border-width solid $accordion-border-color;
+  }
 }
 
 // Headings
 .accordion-title {
   position: relative;
   margin: 0;
-  font-size: $font-size-base;
-  font-weight: $font-normal;
+  font-size: $accordion-head-font-size;
+  font-weight: $accordion-head-font-weight;
   color: $link-color;
   text-align: inherit;
 

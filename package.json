@@ -1,6 +1,6 @@
 {
   "name": "apollo-ui",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "HTML and CSS framework to implement the Apollo visual language.",
   "main": "gulpfile.js",
   "scripts": {
@@ -24,10 +24,12 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
+    "aws-sdk": "^2.4.6",
     "browser-sync": "^2.10.1",
     "cssnano": "^3.4.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
+    "gulp-awspublish": "^3.3.0",
     "gulp-insert": "^0.5.0",
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
@@ -38,6 +40,6 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.2"
+    "bootstrap": "^4.0.0-alpha.3"
   }
 }

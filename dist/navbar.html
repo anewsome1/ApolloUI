@@ -20,11 +20,11 @@
   <body>
     <main class="docs">
   <aside class="docs-sidebar">
-  <div class="docs-apollo-sidebar">
+  <div class="docs-sidebar-header">
     <button class="docs-drb-menu-toggle panel-open">
       <span class="icon icon-menu"></span>
     </button>
-    <h6 class="docs-sidebar-title">IMS Design Resource Base</h6>
+    <h6 class="docs-sidebar-title">Resources</h6>
   </div>
   <div class="docs-nav">
     
@@ -33,7 +33,7 @@
 
 
 
-<h5 class="docs-page-nav-title">Scaffolding</h5>
+<h3 class="docs-page-nav-title">Scaffolding</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -69,7 +69,7 @@
   
 </ul>
 
-<h5 class="docs-page-nav-title">Components</h5>
+<h3 class="docs-page-nav-title">Components</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -142,6 +142,12 @@
     
     
     <li class="docs-page-nav-item ">
+      <a href="./sidebar.html">Sidebar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
       <a href="./off-canvas.html">Off-canvas panel</a>
     </li>
   
@@ -172,13 +178,13 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="./accordion.html">Accordion</a>
+      <a href="./carousel.html">Carousel</a>
     </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="./carousel.html">Carousel</a>
+      <a href="./accordion.html">Accordion</a>
     </li>
   
     
@@ -209,7 +215,7 @@
 
 
 
-<h6 class="docs-example-label">Basic navbar</h6>
+<h4 class="docs-example-label">Basic navbar</h4>
 
 <div class="docs-example docs-example-2 ">
   
@@ -217,7 +223,7 @@
   
   
   
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- Logo and/or name -->
     <a class="navbar-brand" href="#0">
@@ -226,7 +232,7 @@
     </a>
     <!-- Links -->
     <ul class="navbar-links">
-      <li class="navbar-item">
+      <li class="navbar-item active">
         <a href="#0">Lorem Ipsum</a>
       </li>
       <li class="navbar-item">
@@ -250,7 +256,7 @@
       <div class="profile-credential dropdown">
         <a class="dropdown-toggle" id="profile-dropdown" href="#0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">john@smith.com</a>
         <ul class="dropdown-menu" aria-labeledby="profile-dropdown">
-          <li><a href="#0">Log out</a></li>
+          <li><a href="#0">Account settings</a></li>
           <li class="separator"></li>
           <li><a href="#0">Switch credentials</a></li>
           <li><a href="#0">Switch to production</a></li>
@@ -259,7 +265,7 @@
           <li><a href="#0">App 2</a></li>
           <li><a href="#0">App 3</a></li>
           <li class="separator"></li>
-          <li><a href="#0">Account settings</a></li>
+          <li><a href="#0">Log out</a></li>
         </ul>
       </div>
     </div>
@@ -270,7 +276,7 @@
 </div>
 </div>
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- Logo and/or name --&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
@@ -279,7 +285,7 @@
     <span class="nt">&lt;/a&gt;</span>
     <span class="c">&lt;!-- Links --&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"navbar-links"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item active"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Lorem Ipsum<span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"navbar-item"</span><span class="nt">&gt;</span>
@@ -303,7 +309,7 @@
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"profile-credential dropdown"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">id=</span><span class="s">"profile-dropdown"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>john@smith.com<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labeledby=</span><span class="s">"profile-dropdown"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Log out<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Account settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Switch credentials<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Switch to production<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -312,7 +318,7 @@
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>App 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>App 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Account settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Log out<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -330,7 +336,7 @@
 
 
 
-<h6 class="docs-example-label">Environment indicator</h6>
+<h4 class="docs-example-label">Environment indicator</h4>
 
 <div class="docs-example docs-example-2 ">
   
@@ -338,7 +344,7 @@
   
   
   
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- Logo and/or name -->
     <a class="navbar-brand" href="#0">
@@ -376,7 +382,7 @@
 </div>
 </div>
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- Logo and/or name --&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-brand"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
@@ -419,7 +425,7 @@
 <section class="docs-section">
 
 <div class="docs-example-intro">
-  <h6 class="docs-example-title">Command bar</h6>
+  <h4 class="docs-example-title">Command bar</h4>
   <p class="docs-example-description">A command bar can be displayed below the navbar to show page-level actions, including actions that apply to a group of selected items.</p>
 </div>
 
@@ -433,7 +439,7 @@
   
   
   
-<nav class="navbar navbar-primary">
+<nav class="navbar">
   <div class="container-fluid">
     <!-- ... -->
   </div>
@@ -443,22 +449,22 @@
     <ul class="command-bar-actions text-xs-right">
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-edit"></span> Edit
+          <span class="icon icon-edit"></span> Edit
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-trash"></span> Delete
+          <span class="icon icon-trash"></span> Delete
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-export"></span> Export
+          <span class="icon icon-export"></span> Export
         </a>
       </li>
       <li>
         <a class="btn btn-link" href="#0">
-          <span class="command-bar-icon icon icon-merge"></span> Merge
+          <span class="icon icon-merge"></span> Merge
         </a>
       </li>
     </ul>
@@ -469,7 +475,7 @@
 </div>
 </div>
   
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- ... --&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -479,22 +485,22 @@
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"command-bar-actions text-xs-right"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span> Edit
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-edit"</span><span class="nt">&gt;&lt;/span&gt;</span> Edit
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-trash"</span><span class="nt">&gt;&lt;/span&gt;</span> Delete
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-trash"</span><span class="nt">&gt;&lt;/span&gt;</span> Delete
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-export"</span><span class="nt">&gt;&lt;/span&gt;</span> Export
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-export"</span><span class="nt">&gt;&lt;/span&gt;</span> Export
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"command-bar-icon icon icon-merge"</span><span class="nt">&gt;&lt;/span&gt;</span> Merge
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-merge"</span><span class="nt">&gt;&lt;/span&gt;</span> Merge
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
@@ -506,101 +512,17 @@
 
 </section>
 
-
-<section class="docs-section">
-
-<div class="docs-example-intro">
-  <h6 class="docs-example-title">Vertical navbar</h6>
-  <p class="docs-example-description">Secondary navigation lists can be displayed using a vertical navbar.</p>
-</div>
-
-
-
-
-  <div style="position: relative;">
-    
-<div class="docs-example docs-example-fourth ">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
-<nav class="navbar navbar-vertical margin-top-navbar" style="position:absolute;">
-  <a class="navbar-vertical-link" href="#0">
-    <span class="icon icon-alert-circle"></span>
-    <span class="navbar-vertical-link-title">Essentials</span>
-  </a>
-  <a class="navbar-vertical-link active" href="#0">
-    <span class="icon icon-star"></span>
-    <span class="navbar-vertical-link-title">Rating</span>
-  </a>
-  <a class="navbar-vertical-link" href="#0">
-    <span class="icon icon-contact"></span>
-    <span class="navbar-vertical-link-title">Identity</span>
-  </a>
-  <a class="navbar-vertical-link" href="#0">
-    <span class="icon icon-location"></span>
-    <span class="navbar-vertical-link-title">Location Details</span>
-  </a>
-  <a class="navbar-vertical-link" href="#0">
-    <span class="icon icon-user-history"></span>
-    <span class="navbar-vertical-link-title">Activity History</span>
-  </a>
-  <a class="navbar-vertical-link" href="#0">
-    <span class="icon icon-survey"></span>
-    <span class="navbar-vertical-link-title">Survey</span>
-  </a>
-</nav>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-vertical margin-top-navbar"</span> <span class="na">style=</span><span class="s">"position:absolute;"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-alert-circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Essentials<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link active"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Rating<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-contact"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Identity<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-location"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Location Details<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-user-history"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Activity History<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navbar-vertical-link"</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-survey"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"navbar-vertical-link-title"</span><span class="nt">&gt;</span>Survey<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
-</div>
-</div>
-
-  </div>
-
-</section>
-
-
   </article>
 </main>
 
     <!-- <footer class="docs-footer text-xs-center">
   <div class="container-fluid">
     <h5>Apollo UI Docs</h5>
-    <p>Version: 1.0.0-beta.3</p>
+    <p>Version: 1.0.0-beta.4</p>
   </div>
 </footer> -->
     <div id="drb-nav-wrapper"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="./js/apollo.js"></script>
 <!-- Script for DRB site menu -->
 <script src="/js/app.js"></script>

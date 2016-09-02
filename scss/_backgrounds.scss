@@ -3,9 +3,9 @@
 }
 
 .bg-dark {
-  @include bg-color($bg-color: $charcoal-dark, $text-color: rgba(#fff, .9), $link-color: $teal);
+  @include bg-color($bg-color: $charcoal, $text-color: #fff, $link-color: $teal);
 }
 
 .bg-gradient {
-  background-image: radial-gradient(ellipse farthest-corner at 30% 12%, $neutral-lighter 0%, $neutral 55%, darken($neutral, 10%) 100%);
+  background-image: radial-gradient(ellipse farthest-corner at 30% 12%, $neutral-25 0%, $neutral 55%, darken($neutral, 10%) 100%);
 }

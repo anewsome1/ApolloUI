@@ -99,14 +99,15 @@
   ///
   ///  Plain tabs style
   ///
+
   &:not(.tab-bar) {
-    border-left: $border-width solid $charcoal-lighter;
+    border-left: $border-width solid $charcoal-25;
 
     .nav-link {
       padding: $btn-lg-padding-y ($btn-padding-x * 2);
       border-width: $border-width $border-width 0 0;
       border-style: solid;
-      border-color: $charcoal-lighter;
+      border-color: $charcoal-25;
       border-left: 0;
       color: $body-color;
 
@@ -144,13 +145,12 @@
 
     + .tab-content {
       padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
-      border: $border-width solid $charcoal-lighter;
+      border: $border-width solid $charcoal-25;
     }
 
     @include media-breakpoint-up(sm) {
       margin-bottom: -$border-width;
     }
-
   }
 
 
@@ -181,7 +181,7 @@
       &.active,
       .nav-item.open & {
         @include plain-hover-focus {
-          @extend %toggle-active;
+          @extend %toggle-selected;
         }
       }
     }
@@ -191,10 +191,6 @@
     }
 
   }
-
-
-
-
 }
 
 

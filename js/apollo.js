@@ -1,18 +1,12 @@
 /*!
- * Apollo JS v1.0.0-beta.3
+ * Apollo JS v1.0.0-beta.4
  */
 
 ///
 /// Bootstrap jQuery Plugins
 ///
 
-require( '../node_modules/bootstrap/dist/js/umd/util' );
-require( '../node_modules/bootstrap/dist/js/umd/alert' );
-require( '../node_modules/bootstrap/dist/js/umd/carousel' );
-require( '../node_modules/bootstrap/dist/js/umd/collapse' );
-require( '../node_modules/bootstrap/dist/js/umd/dropdown' );
-require( '../node_modules/bootstrap/dist/js/umd/modal' );
-require( '../node_modules/bootstrap/dist/js/umd/tab' );
+require( '../node_modules/bootstrap/dist/js/bootstrap' );
 
 
 ///

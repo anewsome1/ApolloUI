@@ -5,13 +5,11 @@
       flex-direction: column;
     }
   }
-  background-color: $card-bg;
-  box-shadow: $shadow-lg;
-  transition: all $transition-fast;
 
-  &:hover {
-    box-shadow: $shadow-lg-hover;
-  }
+  margin-bottom: $grid-gutter-width;
+  border: $border-width solid $card-border-color;
+  background-color: $card-bg;
+  transition: all $transition-fast;
 }
 
 
@@ -19,16 +17,22 @@
 /// Card main sections
 ///
 
-
 .card-header,
-.card-footer,
-.card-block {
+.card-block,
+.card-footer {
   @include clearfix;
-  padding: $card-spacer-y $card-spacer-x;
+  padding-right: $card-spacer-x;
+  padding-left: $card-spacer-x;
 }
 
-.card-header {
+.card-header,
+.card-block {
+  padding-top: $card-spacer-y;
+  padding-bottom: $card-spacer-y;
+}
 
+.card-header + .card-block {
+  padding-top: 0;
 }
 
 .card-block {
@@ -37,14 +41,52 @@
       flex-grow: 1;
     }
   }
+
+  + .card-block {
+    padding-top: 0;
+  }
+}
+
+.card-text-center {
+  .card-header,
+  .card-block {
+    text-align: center;
+  }
 }
 
 .card-footer {
   background-color: $card-cap-bg;
-}
+  height: $card-cap-height;
 
-.card-block + .card-block {
-  padding-top: 0;
+  @if $enable-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .card-cta {
+      flex-grow: 1;
+    }
+  } @else {
+    @include clearfix;
+
+    .card-cta {
+      float: left;
+    }
+
+    .card-actions {
+      float: right;
+    }
+  }
+
+  .card-actions {
+    .icon {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .btn-link + .btn-link {
+    margin-left: 0;
+  }
 }
 
 
@@ -53,29 +95,18 @@
 ///
 
 .card-title {
+  @extend .h1;
+  line-height: 1;
   margin-top: $card-spacer-y;
+  margin-bottom: 0;
 }
 
 .card-caption {
-  margin-top: 0;
+  margin-top: .375rem;
   margin-bottom: 0;
   color: $text-muted;
+  font-size: $font-size-sm;
 }
-
-.card-header {
-  .card-title,
-  .card-caption {
-    text-align: center;
-  }
-
-  .card-title {
-    margin-top: $card-spacer-y * 2;
-    margin-bottom: 0;
-    font-size: $font-size-h2;
-    color: $brand-primary;
-  }
-}
-
 
 
 ///
@@ -131,19 +162,19 @@
 /// Card states
 ///
 
-@each $state, $state-props in $alert-states {
-  $state-bg: map-get($state-props, bg);
+// @each $state, $state-props in $alert-states {
+//   $state-bg: map-get($state-props, bg);
 
-  .card-#{ $state } {
-    position: relative;
-    &::before {
-      position: absolute;
-      top: 0;
-      content: '';
-      width: 100%;
-      height: $card-spacer-y;
-      background-color: $state-bg;
-      box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5),
-    }
-  }
-}
+//   .card-#{ $state } {
+//     position: relative;
+//     &::before {
+//       position: absolute;
+//       top: 0;
+//       content: '';
+//       width: 100%;
+//       height: $card-spacer-y;
+//       background-color: $state-bg;
+//       box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5);
+//     }
+//   }
+// }

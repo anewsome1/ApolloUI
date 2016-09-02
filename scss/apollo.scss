@@ -1,5 +1,5 @@
 /*!
- * Apollo CSS v1.0.0-beta.3
+ * Apollo CSS v1.0.0-beta.4
  */
 
 // Scaffolding
@@ -12,7 +12,6 @@
 
 // Grid
 @import 'bootstrap/scss/grid';
-@import 'shims/grid';
 
 // Core styles
 @import 'fonts';
@@ -31,6 +30,7 @@
 @import 'dropdown';
 @import 'nav';
 @import 'navbar';
+@import 'sidebar';
 @import 'breadcrumb';
 @import 'slider';
 @import 'modal';
@@ -50,4 +50,3 @@
 
 // Utilities
 @import 'bootstrap/scss/utilities';
-@import 'bootstrap/scss/utilities-responsive';

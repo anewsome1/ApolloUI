@@ -7,6 +7,10 @@ order: 5
 ---
 
 <section class="docs-section">
+  <p class="docs-example-description">Apollo UI provides several form control styles, layout options, and custom components for creating a wide variety of forms.</p>
+</section>
+
+<section class="docs-section">
 {% include example-intro.html title='Basic form' description='Use forms to collect information from users, such as contact information, status updates, or credentials.' %}
 {% capture example %}
 <form>
@@ -37,27 +41,27 @@ order: 5
 <form>
   <fieldset class="form-group">
     <div class="row">
-      <div class="col-xs-12 col-md-3 text-md-right">
-        <label class="control-label" for="full-name">Full name</label>
+      <div class="col-xs-12 col-md-4 text-md-right">
+        <label class="control-label" for="full-name">Name</label>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-8">
         <input class="form-control" id="full-name" type="text" name="full-name"></input>
       </div>
     </div>
   </fieldset>
   <fieldset class="form-group">
     <div class="row">
-      <div class="col-xs-12 col-md-3 text-md-right">
-        <label class="control-label" for="email">Email address</label>
+      <div class="col-xs-12 col-md-4 text-md-right">
+        <label class="control-label" for="email">Email</label>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-8">
         <input class="form-control" id="email" type="email" name="email"></input>
       </div>
     </div>
   </fieldset>
   <fieldset class="form-group">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="col-xs-12 col-md-8 col-md-offset-4">
         <button class="btn btn-primary" type="submit">Sign up</button>
       </div>
     </div>
@@ -65,7 +69,7 @@ order: 5
 </form>
 {% endcapture %}
 
-{% include example.html size='half' code=example %}
+{% include example.html size='third' code=example %}
 
 </section>
 
@@ -80,7 +84,7 @@ order: 5
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='fourth' label='Input box' code=example %}
+{% include example.html size='third' label='Input box' code=example %}
 
 
 {% capture example %}
@@ -100,7 +104,28 @@ order: 5
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='fourth' label='Checkbox' code=example %}
+{% include example.html size='third' label='Checkbox' code=example %}
+
+
+{% capture example %}
+<fieldset class="form-group bg-dark pad-all">
+  <div class="checkbox">
+    <input id="check-dark-1" name="check-dark-1" type="checkbox" checked>
+    <label for="check-dark-1">First option</label>
+  </div>
+  <div class="checkbox">
+    <input id="check-dark-2" name="check-dark-2" type="checkbox">
+    <label for="check-dark-2">And another</label>
+  </div>
+  <div class="checkbox">
+    <input id="check-dark-3" name="check-dark-3" type="checkbox" disabled>
+    <label for="check-dark-3">Nope</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='third' label='Checkbox on dark' code=example %}
+
 
 {% capture example %}
 <fieldset class="form-group">
@@ -119,7 +144,27 @@ order: 5
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='fourth' label='Radio' code=example %}
+{% include example.html size='third' label='Radio' code=example %}
+
+
+{% capture example %}
+<fieldset class="form-group bg-dark pad-all">
+  <div class="radio">
+    <input type="radio" name="radio-dark" id="radio-dark-1" value="option1" checked>
+    <label for="radio-dark-1">Option one</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="radio-dark" id="radio-dark-2" value="option2">
+    <label for="radio-dark-2">Option two</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="radio-dark" id="radio-dark-3" value="option3" disabled>
+    <label for="radio-dark-3">Option three is disabled</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html size='third' label='Radio on dark' code=example %}
 
 
 {% capture example %}
@@ -183,6 +228,8 @@ order: 5
 
 {% include example-intro.html title='Validation states' description='Give users inline visual feedback to indicate the status of their input.' %}
 
+
+{% comment %}
 {% capture example %}
 <fieldset class="form-group has-success">
   <label class="control-label" for="email">Email Address</label>
@@ -200,6 +247,8 @@ order: 5
 </fieldset>
 {% endcapture %}
 {% include example.html size='third' label='Warning message' code=example %}
+{% endcomment %}
+
 
 {% capture example %}
 <fieldset class="form-group has-danger">

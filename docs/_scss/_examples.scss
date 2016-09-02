@@ -6,7 +6,7 @@
   display: block;
   width: 2rem;
   height: $border-width * 3;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer-y;
   background-color: $teal;
   content: '';
 }
@@ -19,7 +19,7 @@
 .docs-page-header {
   @include make-container;
 
-  padding-top: $display2-size;
+  padding-top: 3.375rem;
 
   @include media-breakpoint-up(lg) {
     padding-right: percentage(1 / 12);
@@ -33,7 +33,7 @@
 
   &::after {
     @extend %separator-bar;
-    margin-top: $display4-size;
+    margin-top: 1.5rem;
   }
 }
 
@@ -47,11 +47,11 @@
 
 .docs-section {
   @include make-container;
-  padding-top: $display2-size;
-  padding-bottom: $display2-size;
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
 
   &:nth-of-type(even) {
-    background-color: $neutral-light;
+    background-color: $neutral-50;
   }
 }
 
@@ -59,11 +59,12 @@
 
 .docs-section-title,
 .docs-example-title {
-  padding-bottom: $display3-size;
+  padding-bottom: 2.25rem;
 
   &::before {
     @extend %separator-bar;
-  }}
+  }
+}
 
 .docs-section-overview {
   margin-bottom: $spacer * 3;
@@ -71,7 +72,14 @@
 }
 
 .docs-example-description {
-  width: 50%;
+    @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  .docs-section > & {
+    margin-bottom: $spacer-y * 2;
+  }
+
 }
 
 ///
@@ -79,8 +87,8 @@
 ///
 
 .docs-example-intro {
-  margin-bottom: $display2-size;
-  margin-top: $display4-size;
+  margin-bottom: 3.375rem;
+  margin-top: 1.5rem;
 
   .docs-example + & {
   }
@@ -103,6 +111,10 @@
   text-transform: uppercase;
 }
 
+.docs-example {
+  margin-bottom: 2.25rem;
+}
+
 .docs-example-rendered-group {
   margin-bottom: $spacer-y * 2;
 }
@@ -112,9 +124,6 @@
   padding-bottom: $spacer-y;
 }
 
-.docs-example-code {
-  margin-bottom: $display3-size;
-}
 
 ///
 /// Example layouts
@@ -144,12 +153,12 @@
   }
 
   // .docs-example {
-  //   padding-bottom: $display3-size;
+  //   padding-bottom: 2.25rem;
   // }
 
   .docs-example-full {
     .docs-example-rendered {
-      padding-bottom: $display3-size;
+      padding-bottom: 2.25rem;
     }
   }
 
@@ -227,28 +236,6 @@
 
 
 ///
-/// Color palette
-///
-
-.docs-color-block {
-  position: relative;
-  float: left;
-  width: percentage(1 / 6);
-  // margin-bottom: $spacer;
-  height: 10rem;
-
-  .docs-color-label {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: ($spacer / 2) $spacer;
-    // font-weight: 600;
-    color: #fff;
-    background-color: rgba($charcoal-darker,.5);
-  }
-}
-
-///
 /// Visible grid
 ///
 
@@ -262,7 +249,7 @@
     padding-bottom: $spacer;
     text-align: center;
     color: #fff;
-    background-color: $charcoal;
+    background-color: $teal-125;
     border: $border-width solid #fff;
 
     // + div[class^='col-'],
@@ -324,12 +311,9 @@
 /// Vertical navbar
 ///
 
-.docs-section {
-  position: relative;
-
-  .navbar-vertical {
-    margin-top: 0;
-  }
+.docs-example-rendered .sidebar {
+  position: absolute;
+  margin-top: 2.35rem;
 }
 
 

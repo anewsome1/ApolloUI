@@ -20,11 +20,11 @@
   <body>
     <main class="docs">
   <aside class="docs-sidebar">
-  <div class="docs-apollo-sidebar">
+  <div class="docs-sidebar-header">
     <button class="docs-drb-menu-toggle panel-open">
       <span class="icon icon-menu"></span>
     </button>
-    <h6 class="docs-sidebar-title">IMS Design Resource Base</h6>
+    <h6 class="docs-sidebar-title">Resources</h6>
   </div>
   <div class="docs-nav">
     
@@ -33,7 +33,7 @@
 
 
 
-<h5 class="docs-page-nav-title">Scaffolding</h5>
+<h3 class="docs-page-nav-title">Scaffolding</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -69,7 +69,7 @@
   
 </ul>
 
-<h5 class="docs-page-nav-title">Components</h5>
+<h3 class="docs-page-nav-title">Components</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -142,6 +142,12 @@
     
     
     <li class="docs-page-nav-item ">
+      <a href="./sidebar.html">Sidebar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
       <a href="./off-canvas.html">Off-canvas panel</a>
     </li>
   
@@ -172,13 +178,13 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="./accordion.html">Accordion</a>
+      <a href="./carousel.html">Carousel</a>
     </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="./carousel.html">Carousel</a>
+      <a href="./accordion.html">Accordion</a>
     </li>
   
     
@@ -205,45 +211,23 @@
 </header>
 
     <section class="docs-section">
+  <p>Alerts are dismissable messages that give users feedback when in-page events occur.  Use them to indicate whether a process was successful or if an action may have an adverse outcome.</p>
+</section>
+
+
+<section class="docs-section">
 
 
 <div class="docs-example-intro">
-  <h6 class="docs-example-title">Alert variants</h6>
-  <p class="docs-example-description">Alerts are dismissable messages that give users feedback when in-page events occur.  Use them to indicate whether a process was successful or if an action may have an adverse outcome.</p>
+  <h4 class="docs-example-title">Alert variants</h4>
+  <p class="docs-example-description"></p>
 </div>
 
 
 
 
 
-<h6 class="docs-example-label">Information</h6>
-
-<div class="docs-example docs-example-third ">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
-<div class="alert alert-info" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-New options available.
-</div>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-info"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-New options available.
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-</div>
-</div>
-
-
-
-
-<h6 class="docs-example-label">Success</h6>
+<h4 class="docs-example-label">Success</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -252,8 +236,8 @@ New options available.
   
   
 <div class="alert alert-success" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-Changes saved.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  Changes saved.
 </div>
 
   
@@ -261,8 +245,8 @@ Changes saved.
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-Changes saved.
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  Changes saved.
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 </div>
 </div>
@@ -271,7 +255,7 @@ Changes saved.
 
 
 
-<h6 class="docs-example-label">Warning</h6>
+<h4 class="docs-example-label">Warning</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -280,8 +264,8 @@ Changes saved.
   
   
 <div class="alert alert-warning" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-Items need attention.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  Items need attention.
 </div>
 
   
@@ -289,8 +273,8 @@ Items need attention.
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-Items need attention.
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  Items need attention.
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 </div>
 </div>
@@ -299,7 +283,7 @@ Items need attention.
 
 
 
-<h6 class="docs-example-label">Danger</h6>
+<h4 class="docs-example-label">Danger</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -308,8 +292,8 @@ Items need attention.
   
   
 <div class="alert alert-danger" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-Unable to save changes.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  Unable to save changes.
 </div>
 
   
@@ -317,16 +301,20 @@ Unable to save changes.
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-danger"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-Unable to save changes.
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  Unable to save changes.
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 </div>
 </div>
 
 
+</section>
+
+
+<section class="docs-section">
 
 <div class="docs-example-intro">
-  <h6 class="docs-example-title">Bottom positioning</h6>
+  <h4 class="docs-example-title">Bottom positioning</h4>
   <p class="docs-example-description">Adding the <code>.alert-bottom</code> class to any alert message reverses the position of the fade-out shadow.  Use this when your alert message is shown at the bottom of a page or section.</p>
 </div>
 
@@ -334,7 +322,7 @@ Unable to save changes.
 
 
 
-<h6 class="docs-example-label">Bottom alert</h6>
+<h4 class="docs-example-label">Bottom alert</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -343,8 +331,8 @@ Unable to save changes.
   
   
 <div class="alert alert-success alert-bottom" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-Changes saved.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  Changes saved.
 </div>
 
   
@@ -352,8 +340,8 @@ Changes saved.
 </div>
   
   <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success alert-bottom"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
-Changes saved.
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  Changes saved.
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 </div>
 </div>
@@ -368,11 +356,11 @@ Changes saved.
     <!-- <footer class="docs-footer text-xs-center">
   <div class="container-fluid">
     <h5>Apollo UI Docs</h5>
-    <p>Version: 1.0.0-beta.3</p>
+    <p>Version: 1.0.0-beta.4</p>
   </div>
 </footer> -->
     <div id="drb-nav-wrapper"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="./js/apollo.js"></script>
 <!-- Script for DRB site menu -->
 <script src="/js/app.js"></script>

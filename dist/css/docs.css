@@ -1,7 +1,7 @@
 .highlight {
   margin-bottom: 0;
   background-color: #f7f5f4;
-  color: #3a4f59;
+  color: #3a4f5a;
 }
 
 .highlight pre {
@@ -10,7 +10,7 @@
 }
 
 .highlight .nt {
-  color: #245eb7;
+  color: #1f5ebe;
 }
 
 .highlight .na {
@@ -18,22 +18,22 @@
 }
 
 .highlight .s {
-  color: #DE4839;
+  color: #bc3b2b;
 }
 
 .highlight .c {
-  color: #B9B8B7;
+  color: #b9b8b7;
 }
 
 code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #bd4147;
   background-color: #f7f7f9;
@@ -41,7 +41,7 @@ code {
 }
 
 kbd {
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #fff;
   background-color: #333;
@@ -59,7 +59,6 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  line-height: 1.5;
   color: #373a3c;
 }
 
@@ -82,7 +81,7 @@ body {
 }
 
 .docs-sidebar {
-  background-color: #2B3B43;
+  background-color: #2c3b44;
 }
 
 @media (min-width: 768px) {
@@ -99,23 +98,24 @@ body {
   }
 }
 
-.docs-apollo-sidebar {
+.docs-sidebar-header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  padding: .5rem 1rem;
   color: #fff;
 }
 
 .docs-drb-menu-toggle {
-  padding: 1.875rem;
+  padding: 2rem;
   font-size: 1.5rem;
   line-height: 1;
   background: none;
   border: 0;
+  color: #fff;
 }
 
 .docs-drb-menu-toggle:focus {
@@ -128,7 +128,7 @@ body {
 
 .docs-nav {
   width: 19rem;
-  padding: 1.875rem;
+  padding: 1rem 3rem;
 }
 
 .docs-content {
@@ -137,14 +137,14 @@ body {
 
 .docs-page-nav-title {
   margin-top: .25rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1rem;
   color: #fff;
   font-family: "Merriweather", Georgia, serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .docs-page-nav {
-  margin-bottom: 3.375rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 543px) {
@@ -190,7 +190,7 @@ body {
 }
 
 .docs-page-nav-item.active > a {
-  color: #3ed6cf;
+  color: #37dad3;
   font-weight: 400;
 }
 
@@ -200,7 +200,7 @@ body {
   width: 2rem;
   height: 0.1875rem;
   margin-bottom: 1rem;
-  background-color: #3ed6cf;
+  background-color: #37dad3;
   content: '';
 }
 
@@ -238,7 +238,7 @@ body {
 }
 
 .docs-section:nth-of-type(even), .home-header:nth-of-type(even) {
-  background-color: #FBFAF9;
+  background-color: #fbfaf9;
 }
 
 .docs-section-title,
@@ -251,8 +251,14 @@ body {
   font-family: "Merriweather", Georgia, serif;
 }
 
-.docs-example-description {
-  width: 50%;
+@media (min-width: 992px) {
+  .docs-example-description {
+    width: 50%;
+  }
+}
+
+.docs-section > .docs-example-description, .home-header > .docs-example-description {
+  margin-bottom: 2rem;
 }
 
 .docs-example-intro {
@@ -271,6 +277,10 @@ body {
   text-transform: uppercase;
 }
 
+.docs-example {
+  margin-bottom: 2.25rem;
+}
+
 .docs-example-rendered-group {
   margin-bottom: 2rem;
 }
@@ -278,10 +288,6 @@ body {
 .docs-example-label {
   margin-bottom: 0;
   padding-bottom: 1rem;
-}
-
-.docs-example-code {
-  margin-bottom: 2.25rem;
 }
 
 @media (min-width: 992px) {
@@ -377,25 +383,9 @@ body {
 
 @media (min-width: 768px) {
   .docs-card {
-    box-shadow: 0.5rem 1rem 2.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
     padding: 1.875rem 6rem;
   }
-}
-
-.docs-color-block {
-  position: relative;
-  float: left;
-  width: 16.66667%;
-  height: 10rem;
-}
-
-.docs-color-block .docs-color-label {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background-color: rgba(29, 39, 44, 0.5);
 }
 
 .show-grid .row {
@@ -407,7 +397,7 @@ body {
   padding-bottom: 1rem;
   text-align: center;
   color: #fff;
-  background-color: #3a4f59;
+  background-color: #29a49e;
   border: 0.0625rem solid #fff;
 }
 
@@ -455,22 +445,19 @@ body {
 }
 
 .docs-icon:hover {
-  background-color: #2975e9;
+  background-color: #297dfd;
   color: #fff;
 }
 
 .docs-icon .icon {
   width: 30%;
-  font-size: 1.953rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.docs-section, .home-header {
-  position: relative;
-}
-
-.docs-section .navbar-vertical, .home-header .navbar-vertical {
-  margin-top: 0;
+.docs-example-rendered .sidebar {
+  position: absolute;
+  margin-top: 2.35rem;
 }
 
 .home-header {
@@ -488,16 +475,20 @@ body {
   margin-bottom: 0;
 }
 
+.docs-callout.docs-callout-info {
+  border-left: 0.25rem solid #32b5fc;
+}
+
 .docs-callout.docs-callout-success {
-  border-left: 0.25rem solid #2cc039;
+  border-left: 0.25rem solid #43b649;
 }
 
 .docs-callout.docs-callout-warning {
-  border-left: 0.25rem solid #ecdb5d;
+  border-left: 0.25rem solid #ffcf34;
 }
 
 .docs-callout.docs-callout-danger {
-  border-left: 0.25rem solid #f75040;
+  border-left: 0.25rem solid #fb4f39;
 }
 
 .docs-callout.docs-callout-info {
@@ -505,7 +496,58 @@ body {
 }
 
 .docs-callout-title {
-  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.docs-color-group {
+  -webkit-column-gap: 1.875rem;
+     -moz-column-gap: 1.875rem;
+          column-gap: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .docs-color-group-primary, .docs-color-group-secondary, .docs-color-group-functional {
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .docs-color-swatch {
+    margin-bottom: 2rem;
+  }
+}
+
+.docs-color-block {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 8rem;
+}
+
+.docs-color-block:first-child {
+  height: 16rem;
+}
+
+.docs-color-block .docs-color-props {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
 }

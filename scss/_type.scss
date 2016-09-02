@@ -1,26 +1,53 @@
-.font-serif {
-  font-family: $font-family-serif;
+html {
+  font-weight: $font-weight-base;
 }
 
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
+///
+/// Headings
+///
+
+.heading-hero,
+h1,
+.h1 {
+  font-weight: $font-thin;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
   font-weight: $font-light;
 }
 
-.hero-heading {
-  font-size: $display2-size;
+.heading-hero {
+  font-size: $font-size-hero;
 }
+
+
+.heading-marketing {
+  font-family: $font-family-serif;
+
+  &.heading-hero {
+    font-weight: $font-light;
+  }
+}
+
+h4.heading-marketing,
+.h4.heading-marketing {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+}
+
+///
+/// Description Lists
+///
 
 td > dl {
   margin-bottom: 0;
 }
 
 dt {
-  color: $blue-dark;
+  color: $blue-125;
 }
 
 dd {

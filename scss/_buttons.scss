@@ -19,14 +19,18 @@
 
   & + & {
     @include media-breakpoint-up(sm) {
-      margin-left: $grid-gutter-width / 2;
+      margin-left: $btn-margin-x;
     }
   }
 
   &.btn-block + &.btn-block {
     margin-top: $spacer-x;
+    margin-left: 0;
   }
 
+  @include media-breakpoint-only(xs) {
+    margin-right: $grid-gutter-width / 2;
+  }
 
   ///
   /// Button states
@@ -49,7 +53,7 @@
 
   &:active,
   &.active {
-    box-shadow: $shadow-active;
+    box-shadow: none;
   }
 
   &:disabled,
@@ -179,7 +183,6 @@
 .btn-sm {
   min-width: unset;
   padding: $btn-sm-padding-y $btn-sm-padding-x;
-  font-size: $btn-sm-font-size;
 }
 
 
@@ -198,5 +201,5 @@
 /// Fix border for dark bg
 ///
 .bg-dark .btn-secondary {
-  border: none; 
+  border: none;
 }

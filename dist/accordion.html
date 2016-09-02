@@ -20,11 +20,11 @@
   <body>
     <main class="docs">
   <aside class="docs-sidebar">
-  <div class="docs-apollo-sidebar">
+  <div class="docs-sidebar-header">
     <button class="docs-drb-menu-toggle panel-open">
       <span class="icon icon-menu"></span>
     </button>
-    <h6 class="docs-sidebar-title">IMS Design Resource Base</h6>
+    <h6 class="docs-sidebar-title">Resources</h6>
   </div>
   <div class="docs-nav">
     
@@ -33,7 +33,7 @@
 
 
 
-<h5 class="docs-page-nav-title">Scaffolding</h5>
+<h3 class="docs-page-nav-title">Scaffolding</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -69,7 +69,7 @@
   
 </ul>
 
-<h5 class="docs-page-nav-title">Components</h5>
+<h3 class="docs-page-nav-title">Components</h3>
 <ul class="docs-page-nav" role="navigation">
   
   
@@ -142,6 +142,12 @@
     
     
     <li class="docs-page-nav-item ">
+      <a href="./sidebar.html">Sidebar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
       <a href="./off-canvas.html">Off-canvas panel</a>
     </li>
   
@@ -171,14 +177,14 @@
   
     
     
-    <li class="docs-page-nav-item active">
-      <a href="./accordion.html">Accordion</a>
+    <li class="docs-page-nav-item ">
+      <a href="./carousel.html">Carousel</a>
     </li>
   
     
     
-    <li class="docs-page-nav-item ">
-      <a href="./carousel.html">Carousel</a>
+    <li class="docs-page-nav-item active">
+      <a href="./accordion.html">Accordion</a>
     </li>
   
     
@@ -207,7 +213,7 @@
     <section class="docs-section">
 
 
-<h6 class="docs-example-label">Light background</h6>
+<h4 class="docs-example-label">Light background</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -222,14 +228,14 @@
   <div class="accordion-block collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
     <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
   </div>
-  <div class="accordion-header" id="accordion-head-2" role="tab" data-toggle="collapse" data-target="#accordion-sect-2" aria-expanded="false" aria-controls="accordion-sect-2">
-    <h3 class="accordion-title collapsed">Section 2</h3>
+  <div class="accordion-header collapsed" id="accordion-head-2" role="tab" data-toggle="collapse" data-target="#accordion-sect-2" aria-expanded="false" aria-controls="accordion-sect-2">
+    <h3 class="accordion-title">Section 2</h3>
   </div>
   <div class="accordion-block collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
     <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
   </div>
-  <div class="accordion-header" id="accordion-head-3" role="tab" data-toggle="collapse" data-target="#accordion-sect-3" aria-expanded="false" aria-controls="accordion-sect-3">
-    <h3 class="accordion-title collapsed">Section 3</h3>
+  <div class="accordion-header collapsed" id="accordion-head-3" role="tab" data-toggle="collapse" data-target="#accordion-sect-3" aria-expanded="false" aria-controls="accordion-sect-3">
+    <h3 class="accordion-title">Section 3</h3>
   </div>
   <div class="accordion-block collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
     <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
@@ -247,14 +253,14 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse in"</span> <span class="na">id=</span><span class="s">"accordion-sect-1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-head-1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"accordion-head-2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-sect-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-sect-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title collapsed"</span><span class="nt">&gt;</span>Section 2<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header collapsed"</span> <span class="na">id=</span><span class="s">"accordion-head-2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-sect-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-sect-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title"</span><span class="nt">&gt;</span>Section 2<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse"</span> <span class="na">id=</span><span class="s">"accordion-sect-2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-head-2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"accordion-head-3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-sect-3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-sect-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title collapsed"</span><span class="nt">&gt;</span>Section 3<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header collapsed"</span> <span class="na">id=</span><span class="s">"accordion-head-3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-sect-3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-sect-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title"</span><span class="nt">&gt;</span>Section 3<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse"</span> <span class="na">id=</span><span class="s">"accordion-sect-3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-head-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.<span class="nt">&lt;/p&gt;</span>
@@ -267,7 +273,7 @@
 
 
 
-<h6 class="docs-example-label">Dark background</h6>
+<h4 class="docs-example-label">Dark background</h4>
 
 <div class="docs-example docs-example-third ">
   
@@ -282,14 +288,14 @@
   <div class="accordion-block collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
     <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
   </div>
-  <div class="accordion-header" id="accordion-dark-head-2" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-2" aria-expanded="false" aria-controls="accordion-dark-sect-2">
-    <h3 class="accordion-title collapsed">Section 2</h3>
+  <div class="accordion-header collapsed" id="accordion-dark-head-2" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-2" aria-expanded="false" aria-controls="accordion-dark-sect-2">
+    <h3 class="accordion-title">Section 2</h3>
   </div>
   <div class="accordion-block collapse" id="accordion-dark-sect-2" role="tabpanel" aria-labeledby="accordion-dark-head-2">
     <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
   </div>
-  <div class="accordion-header" id="accordion-dark-head-3" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-3" aria-expanded="false" aria-controls="accordion-dark-sect-3">
-    <h3 class="accordion-title collapsed">Section 3</h3>
+  <div class="accordion-header collapsed" id="accordion-dark-head-3" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-3" aria-expanded="false" aria-controls="accordion-dark-sect-3">
+    <h3 class="accordion-title">Section 3</h3>
   </div>
   <div class="accordion-block collapse" id="accordion-dark-sect-3" role="tabpanel" aria-labeledby="accordion-dark-head-3">
     <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
@@ -307,14 +313,14 @@
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse in"</span> <span class="na">id=</span><span class="s">"accordion-dark-sect-1"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-dark-head-1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"accordion-dark-head-2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-dark-sect-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-dark-sect-2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title collapsed"</span><span class="nt">&gt;</span>Section 2<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header collapsed"</span> <span class="na">id=</span><span class="s">"accordion-dark-head-2"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-dark-sect-2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-dark-sect-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title"</span><span class="nt">&gt;</span>Section 2<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse"</span> <span class="na">id=</span><span class="s">"accordion-dark-sect-2"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-dark-head-2"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header"</span> <span class="na">id=</span><span class="s">"accordion-dark-head-3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-dark-sect-3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-dark-sect-3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title collapsed"</span><span class="nt">&gt;</span>Section 3<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-header collapsed"</span> <span class="na">id=</span><span class="s">"accordion-dark-head-3"</span> <span class="na">role=</span><span class="s">"tab"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#accordion-dark-sect-3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"accordion-dark-sect-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"accordion-title"</span><span class="nt">&gt;</span>Section 3<span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-block collapse"</span> <span class="na">id=</span><span class="s">"accordion-dark-sect-3"</span> <span class="na">role=</span><span class="s">"tabpanel"</span> <span class="na">aria-labeledby=</span><span class="s">"accordion-dark-head-3"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.<span class="nt">&lt;/p&gt;</span>
@@ -331,11 +337,11 @@
     <!-- <footer class="docs-footer text-xs-center">
   <div class="container-fluid">
     <h5>Apollo UI Docs</h5>
-    <p>Version: 1.0.0-beta.3</p>
+    <p>Version: 1.0.0-beta.4</p>
   </div>
 </footer> -->
     <div id="drb-nav-wrapper"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="./js/apollo.js"></script>
 <!-- Script for DRB site menu -->
 <script src="/js/app.js"></script>
