@@ -7,7 +7,7 @@ body {
 }
 
 .docs-sidebar {
-  background-color: $charcoal-125;
+  // background-color: $charcoal-125;
 
   @include media-breakpoint-up(md) {
     position: fixed;
@@ -33,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   padding: .5rem 1rem;
-  color: #fff;
+  // color: #fff;
 }
 
 .docs-drb-menu-toggle {
@@ -42,7 +42,7 @@ body {
   line-height: 1;
   background: none;
   border: 0;
-  color: #fff;
+  // color: #fff;
 
   &:focus {
     outline: none;
@@ -71,8 +71,8 @@ body {
 .docs-page-nav-title {
   margin-top: .25rem;
   margin-bottom: $spacer-y;
-  color: #fff;
-  font-family: $font-family-serif;
+  // color: #fff;
+  // font-family: $font-family-serif;
   font-weight: $font-thin;
 }
 
@@ -103,12 +103,12 @@ body {
     display: inline-block;
     padding-top: $spacer-y / 2;
     padding-bottom: $spacer-y / 2;
-    color: #fff;
+    color: $charcoal;
     font-weight: $font-light;
   }
 
   &.active > a {
-    color: $teal;
+    color: $link-color;
     font-weight: $font-normal;
   }
 }

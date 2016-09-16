@@ -27,19 +27,6 @@
   }
 }
 
-.docs-page-title {
-  font-size: $font-size-base;
-  font-weight: $font-normal;
-
-  &::after {
-    @extend %separator-bar;
-    margin-top: 1.5rem;
-  }
-}
-
-
-
-
 
 ///
 /// Documentation sections
@@ -49,10 +36,6 @@
   @include make-container;
   padding-top: 3.375rem;
   padding-bottom: 3.375rem;
-
-  &:nth-of-type(even) {
-    background-color: $neutral-50;
-  }
 }
 
 /// Title and description
@@ -60,15 +43,10 @@
 .docs-section-title,
 .docs-example-title {
   padding-bottom: 2.25rem;
-
-  &::before {
-    @extend %separator-bar;
-  }
 }
 
 .docs-section-overview {
   margin-bottom: $spacer * 3;
-  font-family: $font-family-serif;
 }
 
 .docs-example-description {
@@ -89,34 +67,15 @@
 .docs-example-intro {
   margin-bottom: 3.375rem;
   margin-top: 1.5rem;
-
-  .docs-example + & {
-  }
-  // @include media-breakpoint-only(sm) {
-  //   width: percentage(1 / 3);
-  // }
-  // @include media-breakpoint-up(md) {
-  //   width: 25%;
-  // }
-}
-
-.docs-example-title,
-.docs-example-label {
-  font-weight: $font-semi-bold;
-}
-
-.docs-page-title,
-.docs-example-title,
-.docs-example-label {
-  text-transform: uppercase;
 }
 
 .docs-example {
   margin-bottom: 2.25rem;
+  border: $border-width solid darken($neutral, 5%);
 }
 
-.docs-example-rendered-group {
-  margin-bottom: $spacer-y * 2;
+.docs-example-rendered {
+  padding: $grid-gutter-width;
 }
 
 .docs-example-label {
@@ -124,77 +83,12 @@
   padding-bottom: $spacer-y;
 }
 
-
-///
-/// Example layouts
-///
-
-.docs-example-half,
-.docs-example-third,
-.docs-example-fourth {
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    margin-left: -$grid-gutter-width / 2;
-    margin-right: -$grid-gutter-width / 2;
-
-    .docs-example-rendered,
-    .docs-example-code {
-      padding-right: $grid-gutter-width / 2;
-      padding-left: $grid-gutter-width / 2;
-    }
-
-  }
-}
-
 @include media-breakpoint-up(lg) {
   .docs-section {
     padding-left: percentage(1 / 12);
     padding-right: percentage(1 / 12);
   }
-
-  // .docs-example {
-  //   padding-bottom: 2.25rem;
-  // }
-
-  .docs-example-full {
-    .docs-example-rendered {
-      padding-bottom: 2.25rem;
-    }
-  }
-
-  .docs-example-half {
-    .docs-example-rendered,
-    .docs-example-code {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
-  }
-
-  .docs-example-third {
-    .docs-example-rendered {
-      flex-basis: percentage(1 / 3);
-      max-width: percentage(1 / 3);
-    }
-
-    .docs-example-code {
-      flex-basis: percentage(2 / 3);
-      max-width: percentage(2 / 3);
-    }
-  }
-
-  .docs-example-fourth {
-    .docs-example-rendered {
-      flex-basis: 25%;
-      max-width: 25%;
-    }
-
-    .docs-example-code {
-      flex-basis: 75%;
-      max-width: 75%;
-    }
-  }
 }
-
 
 
 ///
