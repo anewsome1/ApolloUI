@@ -1,0 +1,12 @@
+$max-width-number: (map-get($container-max-widths, 'xl') / 16px);
+$docs-max-width: #{$max-width-number}rem;
+
+.docs {
+  position: relative;
+  padding-top: $navbar-height;
+}
+
+.docs-content {
+  @include make-container;
+  max-width: $docs-max-width;
+}
