@@ -3,14 +3,7 @@
 ///
 
 .docs-page-header {
-  @include make-container;
-
   padding-top: $spacer * 2;
-
-  @include media-breakpoint-up(lg) {
-    padding-right: percentage(1 / 12);
-    padding-left: percentage(1 / 12);
-  }
 }
 
 
@@ -19,7 +12,7 @@
 ///
 
 .docs-section {
-  @include make-container;
+  // @include make-container;
   padding-top: 3.375rem;
   padding-bottom: 3.375rem;
 }
@@ -68,13 +61,6 @@
 .docs-example-label {
   margin-bottom: 0;
   padding-bottom: $spacer-y;
-}
-
-@include media-breakpoint-up(lg) {
-  .docs-section {
-    padding-left: percentage(1 / 12);
-    padding-right: percentage(1 / 12);
-  }
 }
 
 
@@ -133,11 +119,6 @@
     color: #fff;
     background-color: $teal-125;
     border: $border-width solid #fff;
-
-    // + div[class^='col-'],
-    // + div[class*='col-'] {
-    //   border-left: 1px solid #fff;
-    // }
   }
 }
 

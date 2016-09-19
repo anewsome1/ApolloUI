@@ -192,29 +192,18 @@ body {
 }
 
 .docs-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
   max-width: 71.25rem;
 }
 
 .docs-page-header {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
   padding-top: 2rem;
 }
 
-@media (min-width: 992px) {
-  .docs-page-header {
-    padding-right: 8.33333%;
-    padding-left: 8.33333%;
-  }
-}
-
 .docs-section, .home-header {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
   padding-top: 3.375rem;
   padding-bottom: 3.375rem;
 }
@@ -255,13 +244,6 @@ body {
 .docs-example-label {
   margin-bottom: 0;
   padding-bottom: 1rem;
-}
-
-@media (min-width: 992px) {
-  .docs-section, .home-header {
-    padding-left: 8.33333%;
-    padding-right: 8.33333%;
-  }
 }
 
 @media (min-width: 992px) {
