@@ -1,18 +1,4 @@
 ///
-/// Page Layout
-///
-
-%separator-bar {
-  display: block;
-  width: 2rem;
-  height: $border-width * 3;
-  margin-bottom: $spacer-y;
-  background-color: $teal;
-  content: '';
-}
-
-
-///
 /// Page header
 ///
 
@@ -59,6 +45,7 @@
   }
 
 }
+
 
 ///
 /// Examples
@@ -117,6 +104,7 @@
   }
 }
 
+
 ///
 /// Hovering card style
 ///
@@ -152,7 +140,6 @@
     // }
   }
 }
-
 
 
 ///
@@ -201,8 +188,9 @@
   // padding-top: $spacer;
 }
 
+
 ///
-/// Vertical navbar
+/// Sidebar example
 ///
 
 .docs-example-rendered .sidebar {

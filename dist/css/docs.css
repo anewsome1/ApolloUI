@@ -90,7 +90,7 @@ body {
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 19rem;
+    margin-left: 25%;
   }
 }
 
@@ -119,8 +119,13 @@ body {
 }
 
 .docs-nav {
-  width: 19rem;
   padding: 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .docs-nav {
+    width: 25%;
+  }
 }
 
 .docs-content {
@@ -381,11 +386,6 @@ body {
 
 .docs-callout.docs-callout-info {
   border-left: 0.25rem solid #32b5fc;
-}
-
-.docs-callout-title {
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .docs-color-group {

@@ -1,7 +1,7 @@
 {% if include.label %}
 <h5 class="docs-example-label">{{ include.label }}</h5>
 {% endif %}
-<div class="docs-example {% if include.size %}docs-example-{{ include.size }}{% else %}docs-example-full{% endif %} ">
+<div class="docs-example">
   {% unless include.hide_output %}
   <div class="docs-example-rendered">{% include example-rendered.html code=include.code hide_output=include.hide_output %}</div>
   {% endunless %}
