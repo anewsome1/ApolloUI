@@ -90,7 +90,7 @@ body {
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 25%;
+    margin-left: 19rem;
   }
 }
 
@@ -124,7 +124,7 @@ body {
 
 @media (min-width: 768px) {
   .docs-nav {
-    width: 25%;
+    width: 19rem;
   }
 }
 
@@ -184,6 +184,14 @@ body {
 .docs-page-nav-item.active > a {
   color: #297dfd;
   font-weight: 400;
+}
+
+.docs {
+  position: relative;
+}
+
+.docs-content {
+  max-width: 71.25rem;
 }
 
 .docs-page-header {
