@@ -5,7 +5,7 @@
 .docs-page-header {
   @include make-container;
 
-  padding-top: 3.375rem;
+  padding-top: $spacer * 2;
 
   @include media-breakpoint-up(lg) {
     padding-right: percentage(1 / 12);

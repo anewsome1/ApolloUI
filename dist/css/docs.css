@@ -83,7 +83,7 @@ body {
 @media (min-width: 768px) {
   .docs-sidebar {
     position: fixed;
-    top: 0;
+    top: 5.5rem;
     left: 0;
     height: 100%;
     overflow-x: hidden;
@@ -133,7 +133,7 @@ body {
 }
 
 .docs-page-nav-title {
-  margin-top: .25rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 200;
 }
@@ -188,6 +188,7 @@ body {
 
 .docs {
   position: relative;
+  padding-top: 5.5rem;
 }
 
 .docs-content {
@@ -199,7 +200,7 @@ body {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  padding-top: 3.375rem;
+  padding-top: 2rem;
 }
 
 @media (min-width: 992px) {
