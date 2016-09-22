@@ -4232,14 +4232,15 @@ input[type='radio']:checked {
   left: 0;
   width: 15rem;
   height: auto;
-  padding-top: 2rem;
+  padding: 0.6625rem 1.5rem;
   font-size: 0.875rem;
   text-align: left;
   background-color: #3a4f5a;
 }
 
 .sidebar .search {
-  margin: 1rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .sidebar .search::before {
@@ -4256,6 +4257,12 @@ input[type='radio']:checked {
 
 .sidebar .search-input {
   padding-left: 2.5rem;
+}
+
+.sidebar .accordion {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+  margin-bottom: 0.6625rem;
 }
 
 .sidebar.off-canvas {
@@ -4293,6 +4300,8 @@ input[type='radio']:checked {
 .sidebar-link {
   display: block;
   padding: 0.6625rem 1.5rem 0.6625rem 3.25rem;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
   line-height: 1;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -4319,7 +4328,8 @@ input[type='radio']:checked {
 }
 
 .sidebar-title {
-  padding: 0.33125rem 1.5rem;
+  padding-top: 0.33125rem;
+  padding-bottom: 0.33125rem;
   font-size: 1rem;
   line-height: 1;
   color: #fff;

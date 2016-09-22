@@ -174,9 +174,13 @@
 /// Sidebar example
 ///
 
+.docs-sidebar-examples .docs-example-rendered {
+  position: relative;
+  min-height: 600px;
+}
+
 .docs-example-rendered .sidebar {
   position: absolute;
-  margin-top: 2.35rem;
 }
 
 

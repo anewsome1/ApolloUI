@@ -4,6 +4,7 @@ title: Sidebar
 category: components
 order: 31
 ---
+<div class="docs-sidebar-examples">
 
 <section class="docs-section">
 
@@ -32,9 +33,7 @@ order: 31
 </aside>
 {% endcapture %}
 
-  <div style="position: relative;">
-    {% include example.html label='Sidebar menu' size='fourth' code=example %}
-  </div>
+  {% include example.html label='Sidebar menu' size='fourth' code=example %}
 
 </section>
 
@@ -73,9 +72,7 @@ order: 31
 </aside>
 {% endcapture %}
 
-  <div style="position: relative;">
-    {% include example.html label='With icons'  size='fourth' code=example %}
-  </div>
+  {% include example.html label='With icons'  size='fourth' code=example %}
 
 
 {% capture example %}
@@ -101,9 +98,7 @@ order: 31
 </aside>
 {% endcapture %}
 
-  <div style="position: relative;">
-    {% include example.html label='Text only' size='fourth' code=example %}
-  </div>
+  {% include example.html label='Text only' size='fourth' code=example %}
 
 
 </section>
@@ -168,14 +163,15 @@ order: 31
       <!-- ... -->
     </div>
   </div>
+  <div class="form-group">
+    <button class="btn btn-primary btn-block">Close</button>
+  </div>
 </aside>
 <button class="btn btn-primary" data-toggle="off-canvas" data-target="#off-canvas-demo"><span class="icon icon-filter"></span> Filters</button>
 {% endcapture %}
 
-  <div style="position: relative;">
-    {% include example.html label='Filter panel' size='fourth' code=example %}
-  </div>
+  {% include example.html label='Filter panel' size='fourth' code=example %}
 
 </section>
 
-
+</div>

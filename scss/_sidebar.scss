@@ -11,7 +11,7 @@
   left: 0;
   width: $sidebar-width;
   height: auto;
-  padding-top: 2rem;
+  padding: $sidebar-padding-y $sidebar-padding-x;
   font-size: $font-size-sm;
   text-align: left;
   background-color: $sidebar-bg;
@@ -21,7 +21,8 @@
   ///
 
   .search {
-    margin: $spacer-y $sidebar-padding-x;
+    margin-top: $spacer-y;
+    margin-bottom: $spacer-y;
 
     &::before {
       padding-top: $search-icon-padding-sm;
@@ -48,6 +49,9 @@
 
   .accordion {
     @extend .bg-dark;
+    margin-right: (-$sidebar-padding-x);
+    margin-left: (-$sidebar-padding-x);
+    margin-bottom: $sidebar-padding-y;
   }
 
 
@@ -99,6 +103,8 @@
 .sidebar-link {
   display: block;
   padding: $sidebar-padding-y $sidebar-padding-x $sidebar-padding-y 3.25rem;
+  margin-right: -$sidebar-padding-x;
+  margin-left: -$sidebar-padding-x;
   line-height: 1;
   transition: all $transition-fast;
 
@@ -126,7 +132,8 @@
 
 
 .sidebar-title {
-  padding: ($sidebar-padding-y / 2) $sidebar-padding-x;
+  padding-top: ($sidebar-padding-y / 2);
+  padding-bottom: ($sidebar-padding-y / 2);
   font-size: $font-size-base;
   line-height: 1;
   color: #fff;
