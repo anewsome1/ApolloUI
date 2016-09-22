@@ -49,6 +49,46 @@
   .accordion {
     @extend .bg-dark;
   }
+
+
+  ///
+  /// Off-canvas
+  ///
+
+  &.off-canvas {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: $zindex-navbar-fixed;
+    width: $sidebar-width;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all $transition-fast;
+
+    &.open {
+      box-shadow: $shadow-hover;
+    }
+
+    &.off-canvas-left {
+      left: -$sidebar-width;
+
+      &.open {
+        // Use translate3d to engage gpu acceleration
+        transform: translate3d($sidebar-width,0,0);
+      }
+    }
+
+    &.off-canvas-right {
+      right: -$sidebar-width;
+
+      &.open {
+        // Use translate3d to engage gpu acceleration
+        transform: translate3d(-$sidebar-width,0,0);
+      }
+    }
+  }
 }
 
 
@@ -143,3 +183,5 @@
 .margin-left-sidebar {
   margin-left: $sidebar-width;
 }
+
+
