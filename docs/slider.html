@@ -25,13 +25,9 @@ description: Select a value from a range of options (styles only)
     <input id="approval" name="approval" type="hidden">
   </div>
 </div>
-{% endcapture %}
-
-{% include example.html size='third' label='Default' code=example %}
-
-{% capture example %}
+<!-- Disabled version -->
 <div class="form-group">
-  <label for="approval">Needed approval percentage</label>
+  <label for="approval">(Disabled styling)</label>
   <div class="slider disabled">
     <span class="slider-handle" style="left: 25%;">
       <span class="slider-value">25%</span>
@@ -42,7 +38,7 @@ description: Select a value from a range of options (styles only)
 </div>
 {% endcapture %}
 
-{% include example.html size='third' label='Disabled' code=example %}
+{% include example.html size='third' code=example %}
 
 </section>
 
@@ -66,11 +62,7 @@ description: Select a value from a range of options (styles only)
     <input id="date-max" name="date-max" type="hidden">
   </div>
 </div>
-{% endcapture %}
-
-{% include example.html size='third' label='Default' code=example %}
-
-{% capture example %}
+<!-- Disabled version -->
 <div class="form-group">
   <label for="date-min">Date range</label>
   <div class="slider disabled">
@@ -87,6 +79,6 @@ description: Select a value from a range of options (styles only)
 </div>
 {% endcapture %}
 
-{% include example.html size='third' label='Disabled' code=example %}
+{% include example.html size='third' code=example %}
 
 </section>

@@ -209,12 +209,10 @@ body {
 }
 
 .docs-section, .home-header {
-  padding-top: 3.375rem;
-  padding-bottom: 3.375rem;
+  margin-bottom: 2rem;
 }
 
-.docs-section-title,
-.docs-example-title {
+.docs-section-title {
   padding-bottom: 2.25rem;
 }
 
@@ -230,11 +228,6 @@ body {
 
 .docs-section > .docs-example-description, .home-header > .docs-example-description {
   margin-bottom: 2rem;
-}
-
-.docs-example-intro {
-  margin-bottom: 3.375rem;
-  margin-top: 1.5rem;
 }
 
 .docs-example {
