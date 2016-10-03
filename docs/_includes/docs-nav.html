@@ -3,7 +3,7 @@
 {% for group in site_sections %}
 <h3 class="docs-page-nav-title">{{ group.name | capitalize }}</h3>
 <ul class="docs-page-nav" role="navigation">
-  {% assign items_sorted = group.items | sort: 'order', 'last' %}
+  {% assign items_sorted = group.items %}
   {% for item in items_sorted %}
     {% assign is_active = nil %}
     {% if page.url == item.url %}

@@ -75,6 +75,10 @@ pre code {
   overflow-y: scroll;
 }
 
+.docs-navbar {
+  background-color: #2c3b44;
+}
+
 html,
 body {
   height: 100%;
