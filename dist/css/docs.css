@@ -80,20 +80,6 @@ body {
   height: 100%;
 }
 
-@media (min-width: 768px) {
-  .docs-sidebar {
-    position: fixed;
-    top: 5.5rem;
-    left: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  .docs-sidebar + .docs-content {
-    margin-left: 19rem;
-  }
-}
-
 .docs-sidebar-header {
   display: -ms-flexbox;
   display: flex;
@@ -197,11 +183,20 @@ body {
 }
 
 .docs-content {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
   max-width: 71.25rem;
+}
+
+@media (min-width: 768px) {
+  .docs-sidebar {
+    position: fixed;
+    top: 5.5rem;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .docs-sidebar + .docs-content {
+    margin-left: 19rem;
+  }
 }
 
 .docs-page-header {
@@ -218,12 +213,6 @@ body {
 
 .docs-section-overview {
   margin-bottom: 3rem;
-}
-
-@media (min-width: 992px) {
-  .docs-example-description {
-    width: 50%;
-  }
 }
 
 .docs-section > .docs-example-description, .home-header > .docs-example-description {

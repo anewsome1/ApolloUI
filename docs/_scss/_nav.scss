@@ -6,22 +6,6 @@ body {
   height: 100%;
 }
 
-.docs-sidebar {
-  @include media-breakpoint-up(md) {
-    position: fixed;
-    top: $navbar-height;
-    left: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-
-    + .docs-content {
-      margin-left: $docs-sidebar-width;
-    }
-  }
-}
-
 .docs-sidebar-header,
 .docs-nav {
   // padding: $grid-gutter-width;

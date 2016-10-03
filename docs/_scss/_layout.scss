@@ -7,6 +7,20 @@ $docs-max-width: #{$max-width-number}rem;
 }
 
 .docs-content {
-  @include make-container;
   max-width: $docs-max-width;
+}
+
+.docs-sidebar {
+  @include media-breakpoint-up(md) {
+    position: fixed;
+    top: $navbar-height;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+
+    + .docs-content {
+      margin-left: $docs-sidebar-width;
+    }
+  }
 }
