@@ -1,9 +1,13 @@
 {% include directory.html %}
+
 {% for collection in site.collections %}
 {% if collection.label == directory %}
+
+
 <h3 class="docs-page-nav-title">{{ collection.title | capitalize }}</h3>
 <ul class="docs-page-nav" role="navigation">
-  {% for item in collection.docs %}
+  {% assign pages_sorted = collection.docs | sort: 'order', 'last' %}
+  {% for item in pages_sorted %}
     {% assign is_active = nil %}
     {% if page.url == item.url %}
       {% assign is_active = 'active' %}

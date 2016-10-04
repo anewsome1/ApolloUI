@@ -3,6 +3,11 @@
 <nav class="navbar navbar-fixed-top docs-navbar" style="background-color: rgba(0,0,0,.85);">
   <div class="container">
     <ul class="navbar-links">
+      {% assign is_active = nil %}
+      {% if page.url == '/' %}
+        {% assign is_active = 'active' %}
+      {% endif %}
+      <li class="navbar-item {{ is_active }}"><a href="/">Home</a></li>
     {% for item in collections_sorted %}
       {% unless item.label == 'posts' %}
         {% assign is_active = nil %}

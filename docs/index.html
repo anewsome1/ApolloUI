@@ -1,8 +1,5 @@
 ---
 layout: default
-title: Getting started
-category: scaffolding
-order: 01
 ---
 <header class="home-header billboard">
   <h1 class="billboard-title">{{ site.title }}</h1>
@@ -50,42 +47,4 @@ order: 01
 {% endcapture %}
 
   {% include example.html hide_output=true code=example %}
-
-{% capture starter_template %}
-<p>Be sure to have your pages set up with the latest design and development standards, including:
-  <ul>
-    <li>Using an HTML5 doctype</li>
-    <li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
-    <li>And, utilizing the viewport meta tag.</li>
-  </ul>
-</p>
-<p>Put it all together and your pages should look something like this:</p>
-{% endcapture %}
-
-  {% include example-intro.html title='Starter Template' description=starter_template %}
-
-{% capture example %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <!-- Apollo CSS -->
-    <link rel="stylesheet" href="{{ site.cdn.css_min }}" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- jQuery first, then Apollo JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="{{ site.cdn.js_min }}" crossorigin="anonymous"></script>
-  </body>
-</html>
-{% endcapture %}
-
-{% include example.html hide_output=true code=example %}
-
 </section>

@@ -1,55 +1,10 @@
 ---
 layout: component
 title: Getting started
-category: scaffolding
-order: 01
+order: 0
 ---
-<header class="home-header billboard">
-  <h1 class="billboard-title">{{ site.title }}</h1>
-  <p class="billboard-description lead">{{ site.description }}</p>
-  <p><b>Version</b>: {{ site.current_version }}</p>
-  <p>
-    <a class="btn btn-primary" href="{{ site.gitlab_url }}">GitLab Project</a>
-  </p>
-</header>
 
 <section class="docs-section">
-
-  {% capture message %}
-  This project is currently in development.  The markup, styles and documentation are subject to change without notice until the first official release.  In the meantime, feel free to experiment with these components and report any issues you discover using the <a href="{{ site.issues_url }}">Issue Tracker</a>.
-  {% endcapture %}
-  {% include docs-callout.html state='info' title='Project in development' body=message %}
-
-
-  {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
-
-  <div class="row">
-    <div class="col-xs-12 col-lg-6">
-      {% capture example %}npm install apollo-ui@{{ site.current_version }} --save{% endcapture %}
-      {% include example.html hide_output=true label='NPM' code=example %}
-    </div>
-    <div class="col-xs-12 col-lg-6">
-      {% capture example %}bower install apollo-ui#{{ site.current_version }} --save{% endcapture %}
-      {% include example.html hide_output=true label='Bower' code=example %}
-    </div>
-  </div>
-
-
-  {% include example-intro.html title='Compiled stylesheets' description='You can easily access the compiled CSS for Apollo from our CDN.  This is the fastest way to start using Apollo styles in your project.' %}
-
-  {% capture example %}<link rel="stylesheet" href="{{ site.cdn.css_min }}">{% endcapture %}
-
-  {% include example.html hide_output=true code=example %}
-
-
-  {% include example-intro.html title='Compiled JavaScript' description='Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the bottom of your page, after including a current version of jQuery as shown below.' %}
-
-{% capture example %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="{{ site.cdn.js_min }}"></script>
-{% endcapture %}
-
-  {% include example.html hide_output=true code=example %}
 
 {% capture starter_template %}
 <p>Be sure to have your pages set up with the latest design and development standards, including:
