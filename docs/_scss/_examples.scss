@@ -3,7 +3,7 @@
 ///
 
 .docs-page-header {
-  padding-top: $spacer * 2;
+  padding-top: $spacer * 6;
 }
 
 
@@ -107,11 +107,11 @@
   }
 
   div[class^='col-'] {
-    padding-top: $spacer;
-    padding-bottom: $spacer;
+    padding-top: $spacer * 1.5;
+    padding-bottom: $spacer * 1.5;
     text-align: center;
     color: #fff;
-    background-color: $teal-125;
+    background-color: $blue;
     border: $border-width solid #fff;
   }
 }
@@ -177,13 +177,5 @@
   position: absolute;
 }
 
-
-///
-/// Home page
-///
-.home-header {
-  @extend .docs-section;
-  background-color: $neutral;
-}
 
 

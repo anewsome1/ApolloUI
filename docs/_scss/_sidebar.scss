@@ -38,8 +38,8 @@ body {
 .docs-nav {
   @include make-container;
 
-  padding-top: $spacer-y;
-  padding-bottom: $spacer-y;
+  padding-top: $spacer-y * 2;
+  padding-bottom: $spacer-y * 2;
 
   @include media-breakpoint-up(md) {
     width: $docs-sidebar-width;

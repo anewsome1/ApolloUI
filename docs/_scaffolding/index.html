@@ -1,6 +1,36 @@
 ---
 layout: component
-title: Scaffolding
-category: scaffolding
+title: Color Palette
+order: 1
 ---
+<section class="docs-section">
+  <p class="docs-example-description">Each color from the brand color palette is available as a variable when building Apollo UI with SCSS.  Below are all the available shades for each color, including the variable name and value for each.</p>
+</section>
+
+{% assign color_categories = site.data._palette.properties | group_by: 'category' %}
+
+{% for group in color_categories %}
+<section class="docs-section">
+      <h4 class="docs-example-title">{{ group.name | capitalize }} Colors</h4>
+
+      <div class="docs-color-group docs-color-group-{{ group.name }} docs-example-intro">
+
+        {% assign base_color = group.items | group_by: 'base' %}
+
+        {% for group in base_color %}
+          <div class="docs-color-swatch clearfix">
+            {% for shade in group.items %}
+            <div class="docs-color-block" style="background-color:{{ shade.value }}">
+              <div class="docs-color-props">
+                <div class="docs-color-name">${{ shade.name-raw }}</div>
+                <div class="docs-color-value">{{ shade.value }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        {% endfor %}
+      </div>
+</section>
+{% endfor %}
 
