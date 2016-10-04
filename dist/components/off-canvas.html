@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Off-canvas panel | Apollo UI</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/css/apollo.css">
+  <!-- Stylesheet for DRB site menu -->
+  <link rel="stylesheet" href="/css/docs.css">
+</head>
+
+  <body>
+    
+
+
+<nav class="navbar navbar-fixed-top docs-navbar" style="background-color: rgba(0,0,0,.85);">
+  <div class="container">
+    <ul class="navbar-links">
+    
+      
+    
+      
+        
+        
+        <li class="navbar-item "><a href="/scaffolding">Scaffolding</a></li>
+      
+    
+      
+        
+        
+        <li class="navbar-item active"><a href="/components">Components</a></li>
+      
+    
+      
+        
+        
+        <li class="navbar-item "><a href="/design">Design Resources</a></li>
+      
+    
+    </ul>
+  </div>
+</nav>
+
+    <main class="docs container">
+  <aside class="docs-sidebar">
+<!--   <div class="docs-sidebar-header">
+    <button class="docs-drb-menu-toggle panel-open">
+      <span class="icon icon-menu"></span>
+    </button>
+    <h6 class="docs-sidebar-title">Resources</h6>
+  </div> -->
+  <div class="docs-nav">
+    
+
+
+
+<h3 class="docs-page-nav-title">Components</h3>
+<ul class="docs-page-nav" role="navigation">
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/accordion.html">Accordion</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/alerts.html">Alerts</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/billboard.html">Billboard</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/breadcrumb.html">Breadcrumb</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/button.html">Button</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/cards.html">Cards</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/carousel.html">Carousel</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/dropdown.html">Dropdown</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/empty-space.html">Empty space prompt</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/forms.html">Forms</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/index.html">Getting started</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/loading.html">Loading animation</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/login.html">Login</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/modal.html">Modals</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/navbar.html">Navbar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item active">
+      <a href="/components/off-canvas.html">Off-canvas panel</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/pager.html">Pagination</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/search.html">Search</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/sidebar.html">Sidebar</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/slider.html">Slider</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/tables.html">Tables</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/tabs.html">Tabs</a>
+    </li>
+  
+</ul>
+
+
+
+
+
+
+
+
+
+  </div>
+</aside>
+  <article class="docs-content">
+    <header class="docs-page-header">
+  <h1>Off-canvas panel</h1>
+</header>
+
+    <section class="docs-section">
+
+<div class="docs-example-intro">
+  <h4 class="docs-example-title">Off-canvas menu</h4>
+  <p class="docs-example-description">This off-screen panel can be used to present navigation lists, filters and other controls.  These panels can be positioned on the left or right side of the screen and are opened by clicking on a button which can be placed anywhere on the page.</p>
+</div>
+
+
+
+
+
+<div class="docs-example">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<nav class="navbar navbar-primary">
+  <div class="container-fluid">
+    <button class="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Open menu</span>
+    </button>
+   <!-- ... -->
+  </div>
+</nav>
+<aside class="off-canvas off-canvas-left" id="off-canvas-demo">
+  <header class="off-canvas-header">
+    <button class="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
+      <span class="sr-only">Close menu</span>
+    </button>
+    <h3 class="off-canvas-title">Panel title</h3>
+  </header>
+  <div class="search">
+    <input class="search-input">
+  </div>
+  <ul class="off-canvas-menu">
+    <li>Group title 1
+      <ul class="off-canvas-submenu">
+        <li><a href="#0"><span class="icon icon-chart-line"></span>KPIs</a></li>
+        <li><a href="#0"><span class="icon icon-globe"></span>Social stream</a></li>
+        <li><a href="#0"><span class="icon icon-message-reply"></span>History</a></li>
+      </ul>
+    </li>
+    <li>Group title 2
+      <ul class="off-canvas-submenu">
+        <li><a href="#0"><span class="icon icon-alert-circle"></span>Alert</a></li>
+        <li><a href="#0"><span class="icon icon-notification"></span>Notifications</a></li>
+      </ul>
+    </li>
+    <li>Group title 3
+      <ul class="off-canvas-submenu">
+        <li><a href="#0"><span class="icon icon-settings"></span>Settings</a></li>
+        <li><a href="#0"><span class="icon icon-queue"></span>Data</a></li>
+        <li><a href="#0"><span class="icon icon-chart-bar"></span>Charts</a></li>
+      </ul>
+    </li>
+  </ul>
+</aside>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code"><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-open"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Open menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+   <span class="c">&lt;!-- ... --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">"off-canvas off-canvas-left"</span> <span class="na">id=</span><span class="s">"off-canvas-demo"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"off-canvas-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"off-canvas-close"</span> <span class="na">data-toggle=</span><span class="s">"off-canvas"</span> <span class="na">data-target=</span><span class="s">"#off-canvas-demo"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close menu<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"off-canvas-title"</span><span class="nt">&gt;</span>Panel title<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"search-input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Group title 1
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-submenu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-chart-line"</span><span class="nt">&gt;&lt;/span&gt;</span>KPIs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-globe"</span><span class="nt">&gt;&lt;/span&gt;</span>Social stream<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-message-reply"</span><span class="nt">&gt;&lt;/span&gt;</span>History<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Group title 2
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-submenu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-alert-circle"</span><span class="nt">&gt;&lt;/span&gt;</span>Alert<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-notification"</span><span class="nt">&gt;&lt;/span&gt;</span>Notifications<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Group title 3
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"off-canvas-submenu"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-settings"</span><span class="nt">&gt;&lt;/span&gt;</span>Settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-queue"</span><span class="nt">&gt;&lt;/span&gt;</span>Data<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-chart-bar"</span><span class="nt">&gt;&lt;/span&gt;</span>Charts<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/aside&gt;</span></code></pre></figure>
+</div>
+</div>
+
+</section>
+
+  </article>
+</main>
+
+    <!-- <footer class="docs-footer text-xs-center">
+  <div class="container-fluid">
+    <h5>Apollo UI Docs</h5>
+    <p>Version: 1.0.0-beta.4</p>
+  </div>
+</footer> -->
+    <div id="drb-nav-wrapper"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+<script src="./js/apollo.js"></script>
+<!-- Script for DRB site menu -->
+<script src="/js/app.js"></script>
+
+  </body>
+</html>

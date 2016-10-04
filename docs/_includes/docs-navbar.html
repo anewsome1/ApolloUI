@@ -1,0 +1,17 @@
+{% include directory.html %}
+{% assign collections_sorted = site.collections | sort: 'order' %}
+<nav class="navbar navbar-fixed-top docs-navbar" style="background-color: rgba(0,0,0,.85);">
+  <div class="container">
+    <ul class="navbar-links">
+    {% for item in collections_sorted %}
+      {% unless item.label == 'posts' %}
+        {% assign is_active = nil %}
+        {% if directory == item.label %}
+          {% assign is_active = 'active' %}
+        {% endif %}
+        <li class="navbar-item {{ is_active }}"><a href="/{{ item.label }}">{{ item.title }}</a></li>
+      {% endunless %}
+    {% endfor %}
+    </ul>
+  </div>
+</nav>

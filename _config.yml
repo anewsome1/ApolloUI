@@ -24,11 +24,19 @@ kramdown:
 # include:
 #   - components
 
-# collections:
-#   - components
-#   - styles
-#   - icons
-#   - page-templates
+collections:
+  components:
+    output: true
+    title: Components
+    order: 2
+  design:
+    output: true
+    title: Design Resources
+    order: 3
+  scaffolding:
+    output: true
+    title: Scaffolding
+    order: 1
 
 current_version: 1.0.0-beta.4
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
