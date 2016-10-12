@@ -21,8 +21,8 @@ kramdown:
 # exclude:
 #   - index.html
 
-# include:
-#   - components
+include:
+  - js
 
 collections:
   components:

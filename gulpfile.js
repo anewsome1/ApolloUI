@@ -38,6 +38,8 @@ const path = {
   DOCS_DATA: 'docs/_data/**/*',
   DOCS_SCSS_SRC_ALL: 'docs/_scss/**/*.scss',
   DOCS_SCSS_SRC_MAIN: 'docs/_scss/docs.scss',
+  DOCS_JS_SRC_ALL: 'docs/_js/**/*.js',
+  DOCS_JS_SRC_MAIN: 'docs/_js/docs.js',
   THEO_SRC_ALL: 'theo/**/*'
 };
 
@@ -64,6 +66,7 @@ gulp.task( 'watch', function() {
   gulp.watch( path.DOCS_PAGE_SRC_ALL, [ 'docs' ] );
   gulp.watch( path.DOCS_DATA, [ 'docs' ] );
   gulp.watch( path.DOCS_SCSS_SRC_ALL, [ 'docs-styles' ]);
+  gulp.watch( path.DOCS_JS_SRC_ALL, [ 'docs-scripts' ]);
   gulp.watch( path.THEO_SRC_ALL, [ 'theo' ]);
 });
 
@@ -93,6 +96,28 @@ gulp.task( 'apollo-scripts', function() {
     .pipe( gulp.dest( path.JS_DEST ))
     .pipe( browserSync.stream() );
 });
+
+
+///
+/// Docs JS bundle
+///
+
+gulp.task( 'docs-scripts', function() {
+  gulp.src( path.DOCS_JS_SRC_MAIN )
+    .pipe( webpack({
+      output: {
+        filename: 'docs.js'
+      }
+    }))
+    .pipe( gulp.dest( path.JS_DEST ))
+    .pipe( uglify() )
+    .pipe( rename({
+      suffix: '.min'
+    }))
+    .pipe( gulp.dest( path.JS_DEST ))
+    .pipe( browserSync.stream() );
+});
+
 
 ///
 /// SCSS compilation
@@ -278,5 +303,5 @@ gulp.task( 'publish-tags', function () {
 
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
-gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs' ]);
+gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs' ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);

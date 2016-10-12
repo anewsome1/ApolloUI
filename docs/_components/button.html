@@ -1,11 +1,17 @@
 ---
 layout: component
 title: Button
+description: Buttons are simple controls for executing in-page actions or navigating to another page.  Use them for actions in forms, dialogs, modals and more.  The button styles can also be applied to links when they require extra prominence as a call to action.
+guidelines:
+  do:
+    - Use a button to execute a single or compound command
+    - Use for links that require special attention
+    - Use to submit or cancel a form or dialog
+  dont:
+    - Use to adjust the value of an option
+    - Use to select from among a group of independent or mutually exclusive options
+    - Place buttons inline with a heading or paragraph of text
 ---
-
-<section class="docs-section">
-  <p class="docs-example-description">A button is a simple control for executing commands or navigation. It is the single most common affordance used throughout the Apollo interface.</p>
-</section>
 
 <section class="docs-section">
 
@@ -17,7 +23,7 @@ title: Button
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
 {% endcapture %}
-{% include example.html size='fourth' code=example %}
+{% include example.html size='fourth' code=example id='code-button-tags' %}
 
 </section>
 
@@ -31,7 +37,7 @@ title: Button
 <button class="btn btn-secondary" type="button">Cancel</button>
 <button class="btn btn-link" type="button">Password help</button>
 {% endcapture %}
-{% include example.html size='fourth' code=example_primary %}
+{% include example.html size='fourth' code=example_primary id='code-button-options' %}
 
 </section>
 
@@ -46,7 +52,7 @@ title: Button
 <!-- Using .disabled class -->
 <a class="btn btn-secondary disabled" href="#0" role="button">Cancel</a>
 {% endcapture %}
-{% include example.html size='fourth' code=example_primary_disabled %}
+{% include example.html size='fourth' code=example_primary_disabled id='code-button-disabled' %}
 
 </section>
 
@@ -59,12 +65,12 @@ title: Button
 <button class="btn btn-primary" type="button">Regular</button>
 <button class="btn btn-primary btn-lg" type="button">Large</button>
 {% endcapture %}
-{% include example.html size='fourth' code=example %}
+{% include example.html size='fourth' code=example id='code-button-sizes' %}
 
 {% capture example_block %}
 <button class="btn btn-primary btn-block" type="button">Edit</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Full-width' code=example_block %}
+{% include example.html size='fourth' label='Full-width' code=example_block id='code-button-block' %}
 
 </section>
 
@@ -76,15 +82,11 @@ title: Button
 <button class="btn btn-secondary" type="button">
   <span class="icon icon-edit"></span>
 </button>
-{% endcapture %}
-{% include example.html size='fourth' label='Icon only' code=example_icon_solo %}
-
-{% capture example_icon_label %}
 <button class="btn btn-secondary" type="button">
   <span class="icon icon-edit"></span>
   Edit
 </button>
 {% endcapture %}
-{% include example.html size='fourth' label='Icon with label' code=example_icon_label %}
+{% include example.html size='fourth' code=example_icon_solo id='code-button-icon' %}
 
 </section>

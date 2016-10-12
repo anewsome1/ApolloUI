@@ -5,6 +5,17 @@ layout: base
   {% include docs-sidebar.html %}
   <article class="docs-content">
     {% include page-header.html %}
+    <p>{{ page.description }}</p>
+    <ul>
+      {% for item in page.guidelines.do %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for item in page.guidelines.dont %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
     {{ content }}
   </article>
 </main>

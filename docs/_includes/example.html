@@ -5,5 +5,10 @@
   {% unless include.hide_output %}
   <div class="docs-example-rendered">{% include example-rendered.html code=include.code hide_output=include.hide_output %}</div>
   {% endunless %}
-  <div class="docs-example-code">{% include example-code.html code=include.code %}</div>
+  <div class="docs-example-code">
+    <button class="btn btn-secondary docs-code-copy js-code-copy" data-clipboard-target="#{{ include.id }}">Copy code</button>
+    <div id="{{ include.id }}">
+    {% include example-code.html code=include.code id=include.id %}
+    </div>
+  </div>
 </div>
