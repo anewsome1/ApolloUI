@@ -233,6 +233,33 @@ body {
   margin-bottom: 2rem;
 }
 
+.docs-guidelines {
+  padding-top: 1rem;
+}
+
+.docs-guidelines-heading-do,
+.docs-guidelines-heading-dont {
+  padding-bottom: .5rem;
+  border-bottom: 0.375rem solid #43b649;
+}
+
+.docs-guidelines-heading-do {
+  border-bottom-color: #43b649;
+}
+
+.docs-guidelines-heading-dont {
+  border-bottom-color: #fb4f39;
+}
+
+.docs-guidelines-list {
+  padding-left: 1.2rem;
+  margin-top: 2rem;
+}
+
+.docs-guidelines-list > li {
+  margin-bottom: 1rem;
+}
+
 .docs-example {
   margin-bottom: 2.25rem;
   border: 0.0625rem solid #ece8e5;
@@ -247,35 +274,15 @@ body {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 992px) {
-  .docs-illustration {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
-  .docs-illustration-copy {
-    padding-right: 8.33333%;
-  }
-  .docs-illustration-half .docs-illustration-copy {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    max-width: 50%;
-  }
-  .docs-illustration-third .docs-illustration-copy {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%;
-  }
+.docs-example-code {
+  position: relative;
 }
 
-@media (min-width: 768px) {
-  .docs-card {
-    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
-    padding: 1.875rem 6rem;
-  }
+.docs-code-copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: width 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .show-grid .row {

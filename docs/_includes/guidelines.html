@@ -1,0 +1,22 @@
+<section class="docs-section docs-guidelines row">
+  {% if include.guidelines.do %}
+  <div class="col-xs-12 col-sm-6 col-md-5">
+    <h3 class="docs-guidelines-heading-do">Do</h3>
+    <ul class="docs-guidelines-list">
+      {% for item in include.guidelines.do %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if include.guidelines.dont %}
+  <div class="col-xs-12 col-sm-6 col-md-5 offset-md-1">
+    <h3 class="docs-guidelines-heading-dont">Don't</h3>
+    <ul class="docs-guidelines-list">
+      {% for item in include.guidelines.dont %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>

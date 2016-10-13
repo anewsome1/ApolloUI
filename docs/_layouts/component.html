@@ -6,16 +6,9 @@ layout: base
   <article class="docs-content">
     {% include page-header.html %}
     <p>{{ page.description }}</p>
-    <ul>
-      {% for item in page.guidelines.do %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-    <ul>
-      {% for item in page.guidelines.dont %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
+    {% if page.guidelines %}
+      {% include guidelines.html guidelines=page.guidelines %}
+    {% endif %}
     {{ content }}
   </article>
 </main>

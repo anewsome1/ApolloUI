@@ -35,6 +35,38 @@
 
 
 ///
+/// Usage Guidelines
+///
+
+.docs-guidelines {
+  padding-top: $spacer-y;
+}
+
+.docs-guidelines-heading-do,
+.docs-guidelines-heading-dont {
+  padding-bottom: .5rem;
+  border-bottom: ($border-width * 6) solid $brand-success;
+}
+
+.docs-guidelines-heading-do {
+  border-bottom-color: $brand-success;
+}
+
+.docs-guidelines-heading-dont {
+  border-bottom-color: $brand-danger;
+}
+
+.docs-guidelines-list {
+  padding-left: 1.2rem;
+  margin-top: $spacer-y * 2;
+
+  > li {
+    margin-bottom: $spacer-y;
+  }
+}
+
+
+///
 /// Examples
 ///
 
@@ -57,44 +89,17 @@
   padding-bottom: $spacer-y;
 }
 
-
-///
-/// Illustrations
-///
-
-@include media-breakpoint-up(lg) {
-  .docs-illustration {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .docs-illustration-copy {
-    padding-right: percentage(1 / 12);
-
-    .docs-illustration-half & {
-      flex-basis: 50%;
-      max-width: 50%;
-    }
-
-    .docs-illustration-third & {
-      flex-basis: percentage(1 / 3);
-      max-width: percentage(1 / 3);
-    }
-  }
+.docs-example-code {
+  position: relative;
 }
 
-
-///
-/// Hovering card style
-///
-
-@include media-breakpoint-up(md) {
-  .docs-card {
-    box-shadow: $shadow-hover;
-    padding: $grid-gutter-width 6rem;
-  }
+.docs-code-copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: width $transition-fast;
 }
+
 
 
 ///

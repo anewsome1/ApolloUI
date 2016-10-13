@@ -65,9 +65,7 @@
 	  window.setTimeout(function() {
 	    event.trigger.textContent = btnText;
 	  }, 5000);
-	  event.clearSelection();
 	});
-
 
 
 /***/ },
