@@ -5,10 +5,11 @@ layout: base
   {% include docs-sidebar.html %}
   <article class="docs-content">
     {% include page-header.html %}
-    <p>{{ page.description }}</p>
-    {% if page.guidelines %}
-      {% include guidelines.html guidelines=page.guidelines %}
-    {% endif %}
+    <section class="docs-section" id="docs-overview">
+      {% if page.guidelines %}
+        {% include guidelines.html guidelines=page.guidelines %}
+      {% endif %}
+    </section>
     {{ content }}
   </article>
 </main>
