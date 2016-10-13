@@ -97,7 +97,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  transition: width $transition-fast;
+  margin-right: -$border-width;
 }
 
 

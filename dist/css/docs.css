@@ -282,7 +282,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  transition: width 0.25s cubic-bezier(0, 0, 0.5, 1);
+  margin-right: -0.0625rem;
 }
 
 .show-grid .row {
