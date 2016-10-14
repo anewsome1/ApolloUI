@@ -80,6 +80,30 @@ body {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .docs::before {
+    display: block;
+    position: absolute;
+    right: 100%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f5f4;
+    content: '';
+  }
+}
+
+.docs-sidebar {
+  margin-left: -0.9375rem;
+  background: #f7f5f4;
+}
+
+@media (max-width: 543px) {
+  .docs-sidebar {
+    margin-right: -0.9375rem;
+  }
+}
+
 .docs-sidebar-header {
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +139,7 @@ body {
 
 @media (min-width: 768px) {
   .docs-nav {
-    width: 19rem;
+    width: 18rem;
   }
 }
 
@@ -182,22 +206,28 @@ body {
 }
 
 .docs-navbar .navbar-brand {
-  margin-right: 7.8rem;
+  margin-right: 8.8rem;
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 90.25rem;
+    max-width: 89.25rem;
   }
 }
 
 .docs {
   position: relative;
-  padding-top: 5.5rem;
+  padding-top: 3.75rem;
+}
+
+@media (min-width: 544px) {
+  .docs {
+    padding-top: 5.5rem;
+  }
 }
 
 .docs-content {
-  max-width: 90.25rem;
+  max-width: 89.25rem;
 }
 
 @media (min-width: 768px) {
@@ -355,7 +385,7 @@ hr {
 
 .docs-icon .icon {
   width: 30%;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 

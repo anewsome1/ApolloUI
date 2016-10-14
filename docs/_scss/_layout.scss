@@ -8,7 +8,10 @@ $docs-max-width: 71.25rem + $docs-sidebar-width;
 
 .docs {
   position: relative;
-  padding-top: $navbar-height;
+  padding-top: $navbar-sm-height;
+  @include media-breakpoint-up(sm) {
+    padding-top: $navbar-height;
+  }
 }
 
 .docs-content {
@@ -25,7 +28,7 @@ $docs-max-width: 71.25rem + $docs-sidebar-width;
 
 
     + .docs-content {
-      margin-left: $docs-sidebar-width;
+      margin-left: $docs-sidebar-width + 1rem;
     }
   }
 }

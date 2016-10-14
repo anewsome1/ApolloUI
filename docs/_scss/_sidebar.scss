@@ -1,9 +1,36 @@
 
-$docs-sidebar-width: $off-canvas-width + 1rem;
+$docs-sidebar-width: $off-canvas-width;
 
 html,
 body {
   height: 100%;
+}
+
+
+///
+/// Sidebar full-bleed background stuffs
+///
+
+@include media-breakpoint-up(md) {
+  .docs::before {
+    display: block;
+    position: absolute;
+    right: 100%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: $neutral;
+    content: '';
+  }
+}
+
+.docs-sidebar {
+  margin-left: -$grid-gutter-width / 2;
+  background: $neutral;
+
+  @include media-breakpoint-only(xs) {
+    margin-right: -$grid-gutter-width / 2;
+  }
 }
 
 .docs-sidebar-header,
