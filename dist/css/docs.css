@@ -213,12 +213,23 @@ body {
   }
 }
 
+hr {
+  margin-top: 4rem;
+}
+
 .docs-page-header {
-  padding-top: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.0625rem solid rgba(156, 167, 172, 0.15);
+}
+
+.docs-page-contents {
+  line-height: 2;
 }
 
 .docs-section {
-  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .docs-section-title {
@@ -240,7 +251,7 @@ body {
 .docs-guidelines-heading-do,
 .docs-guidelines-heading-dont {
   padding-bottom: .5rem;
-  border-bottom: 0.375rem solid #43b649;
+  border-bottom: 0.1875rem solid #43b649;
 }
 
 .docs-guidelines-heading-do {
@@ -282,6 +293,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
   margin-right: -0.0625rem;
 }
 

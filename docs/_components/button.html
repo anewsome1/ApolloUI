@@ -11,9 +11,16 @@ guidelines:
     - Use to adjust the value of an option
     - Use to select from among a group of independent or mutually exclusive options
     - Place buttons inline with a heading or paragraph of text
+contents:
+  - Usage guidelines
+  - Button tags
+  - Color options
+  - Disabled styles
+  - Size options
+  - Using icons
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="button-tags">
 
 {% include example-intro.html title='Button tags' description='Use the button classes on a <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, or <code>&lt;input&gt;</code> element.  If an <code>&lt;a&gt;</code> element is used to act as a button &mdash; triggering in-page functionality, rather than navigating to another document or section within the current page &mdash; it should also be given an appropriate <code>role="button"</code>. As a best practice, we highly recommend using the <code>&lt;button&gt;</code> element whenever possible to ensure matching cross-browser rendering.' %}
 
@@ -28,9 +35,9 @@ guidelines:
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="color-options">
 
-{% include example-intro.html title='Options' description='Primary buttons are used to indicate a call to action, while secondary buttons present an alternative action.  Link style buttons are useful for vertically aligning a link that is adjacent to a primary or secondary button.' %}
+{% include example-intro.html title='Color options' description='Primary buttons are used to indicate a call to action, while secondary buttons present an alternative action.  Link style buttons are useful for vertically aligning a link that is adjacent to a primary or secondary button.' %}
 
 {% capture example_primary %}
 <button class="btn btn-primary" type="button">Sign in</button>
@@ -41,9 +48,9 @@ guidelines:
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="disabled-styles">
 
-{% include example-intro.html title='Disabled styling' description='When actions are disabled, you can apply disabled styling using the <code>disabled</code> attribute.  For elements like <code>&lt;a&gt;</code> that don\'t support the disabled attribute, you can use the <code>.disabled</code> class instead.' %}
+{% include example-intro.html title='Disabled styles' description='When actions are disabled, you can apply disabled styling using the <code>disabled</code> attribute.  For elements like <code>&lt;a&gt;</code> that don\'t support the disabled attribute, you can use the <code>.disabled</code> class instead.' %}
 
 {% capture example_primary_disabled %}
 <!-- Using disabled attribute -->
@@ -56,9 +63,9 @@ guidelines:
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="Size options">
 
-{% include example-intro.html title='Sizes' description='Large and small size options are available to use.  A large button works well for a prominent call to action, while small buttons are suited for use inside a table where space is limited.  Block-level buttons are full-width and can be combined with small or large button styles.' %}
+{% include example-intro.html title='Size options' description='Large and small size options are available to use.  A large button works well for a prominent call to action, while small buttons are suited for use inside a table where space is limited.  Block-level buttons are full-width and can be combined with small or large button styles.' %}
 
 {% capture example %}
 <button class="btn btn-primary btn-sm" type="button">Small</button>
@@ -74,9 +81,9 @@ guidelines:
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="using-icons">
 
-{% include example-intro.html title='Button with icon' description='Icons can be added to buttons by placing them inside the tag, either alone or alongside the button label.  Only buttons that use <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> tags can handle icons.' %}
+{% include example-intro.html title='Using icons' description='Icons can be added to buttons by placing them inside the tag, either alone or alongside the button label.  Only buttons that use <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> tags can handle icons.' %}
 
 {% capture example_icon_solo %}
 <button class="btn btn-secondary" type="button">
