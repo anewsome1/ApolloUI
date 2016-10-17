@@ -234,7 +234,8 @@ body {
   .docs-sidebar {
     position: fixed;
     top: 5.5rem;
-    height: 100%;
+    bottom: 0;
+    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
   }

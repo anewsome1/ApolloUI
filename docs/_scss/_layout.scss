@@ -22,7 +22,8 @@ $docs-max-width: 71.25rem + $docs-sidebar-width;
   @include media-breakpoint-up(md) {
     position: fixed;
     top: $navbar-height;
-    height: 100%;
+    bottom: 0;
+    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
 
