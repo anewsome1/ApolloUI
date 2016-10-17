@@ -11,18 +11,13 @@ baseurl:        ""
 # url:
 encoding:       UTF-8
 # exclude:
+# include:
 # permalink:
 markdown:       kramdown
 highlighter:    rouge
 
 kramdown:
   auto_ids:     true
-
-# exclude:
-#   - index.html
-
-include:
-  - js
 
 collections:
   components:

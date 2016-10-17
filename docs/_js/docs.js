@@ -1,3 +1,3 @@
 // Copy to clipboard stuff
-require('./clipboard');
+require('./code-example-copy');
 
