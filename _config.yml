@@ -29,6 +29,7 @@ collections:
     output: true
     title: Components
     order: 2
+    default_page: accordion.html
   design:
     output: true
     title: Design Resources
@@ -37,6 +38,7 @@ collections:
     output: true
     title: Scaffolding
     order: 1
+    default_page: colors.html
 
 current_version: 1.0.0-beta.4
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
