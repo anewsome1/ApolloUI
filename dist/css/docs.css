@@ -251,7 +251,7 @@ hr {
 .docs-page-header {
   padding-top: 3rem;
   padding-bottom: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: -2.75rem;
   border-bottom: 0.0625rem solid rgba(156, 167, 172, 0.15);
 }
 
@@ -274,10 +274,6 @@ hr {
 
 .docs-section > .docs-example-description {
   margin-bottom: 2rem;
-}
-
-.docs-guidelines {
-  padding-top: 1rem;
 }
 
 .docs-guidelines-heading-do,
