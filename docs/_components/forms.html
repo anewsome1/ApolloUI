@@ -34,7 +34,7 @@ contents:
 </form>
 {% endcapture %}
 
-{% include example.html size='third' code=example %}
+{% include example.html size='third' code=example id='example-' %}
 
 {% include docs-callout.html state='info' title='HTML5 input types' body='Be sure to use the appropriate <code>type</code> attribute that corresponds to the type of information being collected (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes">reference</a>).' %}
 
@@ -75,7 +75,7 @@ contents:
 </form>
 {% endcapture %}
 
-{% include example.html size='third' code=example %}
+{% include example.html size='third' code=example id='example-' %}
 
 </section>
 
@@ -90,7 +90,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Input box' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -110,7 +110,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Checkbox' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -130,7 +130,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Checkbox on dark' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -150,7 +150,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Radio' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -170,7 +170,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Radio on dark' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -184,7 +184,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Select' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -194,7 +194,7 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Textarea' code=example %}
+{% include example.html  code=example id='example-' %}
 
 </section>
 
@@ -213,7 +213,7 @@ contents:
   <label for="toggle-private">Private</label>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Basic toggle' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% capture example %}
@@ -224,7 +224,7 @@ contents:
   <label for="toggle-private-dark">Private</label>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Dark toggle' code=example %}
+{% include example.html  code=example id='example-' %}
 
 </section>
 
@@ -243,7 +243,7 @@ contents:
   <p class="form-msg">Looks good!</p>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Success message' code=example %}
+{% include example.html  code=example id='example-' %}
 
 {% capture example %}
 <fieldset class="form-group has-warning">
@@ -252,7 +252,7 @@ contents:
   <p class="form-msg">Please enter a valid email address</p>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Warning message' code=example %}
+{% include example.html  code=example id='example-' %}
 {% endcomment %}
 
 
@@ -263,7 +263,7 @@ contents:
   <p class="form-msg">Please enter a valid email address</p>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Error message' code=example %}
+{% include example.html  code=example id='example-' %}
 
 
 {% include example-intro.html title='Alternate markup' description='In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.' %}
@@ -276,6 +276,6 @@ contents:
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' code=example %}
+{% include example.html size='third' code=example id='example-' %}
 
 </section>
