@@ -2,10 +2,8 @@
 layout: base
 ---
 <main class="docs">
-  <article>
-    {% if page.title %}
-      {% include page-header.html %}
-    {% endif %}
-    {{ content }}
-  </article>
+  {% if page.title %}
+    {% include page-header.html %}
+  {% endif %}
+  {{ content }}
 </main>
