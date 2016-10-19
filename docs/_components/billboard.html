@@ -1,11 +1,29 @@
 ---
 layout: component
 title: Billboard
+description: A Billboard is a hero panel used to feature an important message and call to action at the top of a page, typically the home page of a website.  Billboards may use an image or graphic as the background to aid users in understanding the message and user desired action.
+guidelines:
+  do:
+    - Keep title and description brief
+    - Use a clear call to action to navigate to another page, screen, or UI
+    - Use when it is preferred that the presentation is visual in nature
+    - Add a color overlay when using a background image, for improved readability
+  dont:
+    - Include multiple billboards on a page
+    - Link to direct downloads as the call to action
+    - Use call to action to initiate a command or any process that is not navigation
+    - Include ambiguous, distracting, or unrelated background images
+contents:
+  - Usage guidelines
+  - Basic Billboard
+  - Fluid Billboard
+  - Dark background
+  - Background images
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="basic-billboard">
 
-{% include example-intro.html title='Basic Billboard' description='A billboard typically includes a headline, one or two sentences of lead copy and a call to action.' %}
+{% include example-intro.html title='Basic Billboard' description='Billboards typically includes a headline, one or two sentences of lead copy and a call to action.' %}
 
 {% capture example %}
 <div class="billboard bg-light">
@@ -22,7 +40,7 @@ title: Billboard
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="fluid-billboard">
 
 {% include example-intro.html title='Fluid Billboard' description='To eliminate the default side padding in favor of fluid container padding, add the <code>.billboard-fluid</code> modifier class with a <code>.container-fluid</code> inside.' %}
 
@@ -43,7 +61,7 @@ title: Billboard
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="dark-background">
 
 {% include example-intro.html title='Dark background' description='Adding <code>.bg-dark</code> to the billboard or its parent inverts the text and link colors for improved readability.' %}
 
@@ -61,9 +79,9 @@ title: Billboard
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="background-images">
 
-{% include section-intro.html title='Background images' body='When using an image background, it\'s a good idea to add a semi-opaque overlay to improve readability.  Below are examples of how to use CSS to add a light or dark overlay to a background image.' %}
+{% include example-intro.html title='Background images' description='When using an image background, it\'s a good idea to add a semi-opaque overlay to improve readability.  This example shows how to add a light overlay for a light background image.' %}
 
 {% capture example %}
 <div class="billboard" style="background-image: linear-gradient(to right, rgba(255,255,255,.8),rgba(255,255,255,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
@@ -75,12 +93,9 @@ title: Billboard
 </div>
 {% endcapture %}
 
-{% include example.html label='Light overlay' code=example %}
+{% include example.html code=example %}
 
-</section>
-
-
-<section class="docs-section">
+{% include example-intro.html description='If the background image is dark, use a darker color overlay, combined with the <code>.bg-dark</code> class to invert the text color.' %}
 
 {% capture example %}
 <div class="billboard bg-dark" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/400/tech'); background-size: cover;">
@@ -92,6 +107,6 @@ title: Billboard
 </div>
 {% endcapture %}
 
-{% include example.html label='Dark overlay' code=example %}
+{% include example.html code=example %}
 
 </section>

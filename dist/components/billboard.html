@@ -227,22 +227,67 @@
   <h1>Billboard</h1>
   <ul class="nav docs-page-contents">
     
+    <li><a href="#usage-guidelines">Usage guidelines</a></li>
+    
+    <li><a href="#basic-billboard">Basic Billboard</a></li>
+    
+    <li><a href="#fluid-billboard">Fluid Billboard</a></li>
+    
+    <li><a href="#dark-background">Dark background</a></li>
+    
+    <li><a href="#background-images">Background images</a></li>
+    
   </ul>
 </header>
 
     <section class="docs-section docs-guidelines" id="usage-guidelines">
   <h2>Usage Guidelines</h2>
-  <p></p>
+  <p>A Billboard is a hero panel used to feature an important message and call to action at the top of a page, typically the home page of a website.  Billboards may use an image or graphic as the background to aid users in understanding the message and user desired action.</p>
+  
+  <div class="row pad-top">
+    
+    <div class="col-xs-12 col-sm-6 col-md-5">
+      <h4 class="docs-guidelines-heading-do">Do</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Keep title and description brief</li>
+        
+        <li>Use a clear call to action to navigate to another page, screen, or UI</li>
+        
+        <li>Use when it is preferred that the presentation is visual in nature</li>
+        
+        <li>Add a color overlay when using a background image, for improved readability</li>
+        
+      </ul>
+    </div>
+    
+    
+    <div class="col-xs-12 col-sm-6 col-md-5 offset-md-1">
+      <h4 class="docs-guidelines-heading-dont">Don't</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Include multiple billboards on a page</li>
+        
+        <li>Link to direct downloads as the call to action</li>
+        
+        <li>Use call to action to initiate a command or any process that is not navigation</li>
+        
+        <li>Include ambiguous, distracting, or unrelated background images</li>
+        
+      </ul>
+    </div>
+    
+  </div>
   
 </section>
-    <section class="docs-section">
+    <section class="docs-section" id="basic-billboard">
 
 <div class="docs-example-intro">
   
   <h2 class="docs-example-title">Basic Billboard</h2>
   
   
-  <p class="docs-example-description">A billboard typically includes a headline, one or two sentences of lead copy and a call to action.</p>
+  <p class="docs-example-description">Billboards typically includes a headline, one or two sentences of lead copy and a call to action.</p>
   
 </div>
 
@@ -287,7 +332,7 @@
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="fluid-billboard">
 
 <div class="docs-example-intro">
   
@@ -343,7 +388,7 @@
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="dark-background">
 
 <div class="docs-example-intro">
   
@@ -394,18 +439,20 @@
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="background-images">
 
-<div class="docs-section-overview">
-  <h3 class="docs-section-title">Background images</h3>
-  When using an image background, it's a good idea to add a semi-opaque overlay to improve readability.  Below are examples of how to use CSS to add a light or dark overlay to a background image.
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Background images</h2>
+  
+  
+  <p class="docs-example-description">When using an image background, it's a good idea to add a semi-opaque overlay to improve readability.  This example shows how to add a light overlay for a light background image.</p>
+  
 </div>
 
 
 
 
-
-<h5 class="docs-example-label">Light overlay</h5>
 
 <div class="docs-example">
   
@@ -441,15 +488,16 @@
 </div>
 
 
-</section>
+<div class="docs-example-intro">
+  
+  
+  <p class="docs-example-description">If the background image is dark, use a darker color overlay, combined with the <code>.bg-dark</code> class to invert the text color.</p>
+  
+</div>
 
 
-<section class="docs-section">
 
 
-
-
-<h5 class="docs-example-label">Dark overlay</h5>
 
 <div class="docs-example">
   
