@@ -144,7 +144,6 @@
 	         * @param {String|HTMLElement|HTMLCollection|NodeList} trigger
 	         * @param {Object} options
 	         */
-
 	        function Clipboard(trigger, options) {
 	            _classCallCheck(this, Clipboard);
 
@@ -301,7 +300,6 @@
 	        /**
 	         * @param {Object} options
 	         */
-
 	        function ClipboardAction(options) {
 	            _classCallCheck(this, ClipboardAction);
 
@@ -358,7 +356,10 @@
 	            this.fakeElem.style.position = 'absolute';
 	            this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
 	            // Move element to the same position vertically
-	            this.fakeElem.style.top = (window.pageYOffset || document.documentElement.scrollTop) + 'px';
+	            var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+	            this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
+	            this.fakeElem.style.top = yPosition + 'px';
+
 	            this.fakeElem.setAttribute('readonly', '');
 	            this.fakeElem.value = this.text;
 
@@ -387,7 +388,7 @@
 	        };
 
 	        ClipboardAction.prototype.copyText = function copyText() {
-	            var succeeded = undefined;
+	            var succeeded = void 0;
 
 	            try {
 	                succeeded = document.execCommand(this.action);
@@ -399,20 +400,12 @@
 	        };
 
 	        ClipboardAction.prototype.handleResult = function handleResult(succeeded) {
-	            if (succeeded) {
-	                this.emitter.emit('success', {
-	                    action: this.action,
-	                    text: this.selectedText,
-	                    trigger: this.trigger,
-	                    clearSelection: this.clearSelection.bind(this)
-	                });
-	            } else {
-	                this.emitter.emit('error', {
-	                    action: this.action,
-	                    trigger: this.trigger,
-	                    clearSelection: this.clearSelection.bind(this)
-	                });
-	            }
+	            this.emitter.emit(succeeded ? 'success' : 'error', {
+	                action: this.action,
+	                text: this.selectedText,
+	                trigger: this.trigger,
+	                clearSelection: this.clearSelection.bind(this)
+	            });
 	        };
 
 	        ClipboardAction.prototype.clearSelection = function clearSelection() {
@@ -478,7 +471,12 @@
 	function select(element) {
 	    var selectedText;
 
-	    if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+	    if (element.nodeName === 'SELECT') {
+	        element.focus();
+
+	        selectedText = element.value;
+	    }
+	    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
 	        element.focus();
 	        element.setSelectionRange(0, element.value.length);
 
