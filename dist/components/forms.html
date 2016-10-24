@@ -46,19 +46,25 @@
       
         
         
-        <li class="navbar-item "><a href="/scaffolding">Scaffolding</a></li>
+        <li class="navbar-item ">
+          <a href="/scaffolding/colors.html">Scaffolding</a>
+        </li>
       
     
       
         
         
-        <li class="navbar-item active"><a href="/components">Components</a></li>
+        <li class="navbar-item active">
+          <a href="/components/accordion.html">Components</a>
+        </li>
       
     
       
         
         
-        <li class="navbar-item "><a href="/design">Design Resources</a></li>
+        <li class="navbar-item ">
+          <a href="/design">Design Resources</a>
+        </li>
       
     
     </ul>
@@ -78,11 +84,16 @@
 <h3 class="docs-page-nav-title">Components</h3>
 <ul class="docs-page-nav" role="navigation">
   
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/accordion.html">Accordion</a>
+    </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/index.html">Accordion</a>
+      <a href="/components/alerts.html">Alerts</a>
     </li>
   
     
@@ -118,7 +129,7 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/dropdown.html">Dropdown</a>
+      <a href="/components/dropdown.html">Dropdown menu</a>
     </li>
   
     
@@ -148,7 +159,7 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/modal.html">Modals</a>
+      <a href="/components/modal.html">Modal</a>
     </li>
   
     
@@ -196,12 +207,6 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/alerts.html">Alerts</a>
-    </li>
-  
-    
-    
-    <li class="docs-page-nav-item ">
       <a href="/components/tabs.html">Tabs</a>
     </li>
   
@@ -222,23 +227,78 @@
   <h1>Forms</h1>
   <ul class="nav docs-page-contents">
     
+    <li><a href="#usage-guidelines">Usage guidelines</a></li>
+    
+    <li><a href="#basic-form">Basic form</a></li>
+    
+    <li><a href="#input-field">Input field</a></li>
+    
+    <li><a href="#checkbox">Checkbox</a></li>
+    
+    <li><a href="#radio-button">Radio button</a></li>
+    
+    <li><a href="#toggle">Toggle</a></li>
+    
+    <li><a href="#select-menu">Select menu</a></li>
+    
+    <li><a href="#textarea">Textarea</a></li>
+    
+    <li><a href="#error-message">Error message</a></li>
+    
+    <li><a href="#alternate-error-markup">Alternate error markup</a></li>
+    
   </ul>
 </header>
 
-    <section class="docs-section docs-guidelines" id="usage-guidelines">
+    <section class="docs-section" id="usage-guidelines">
   <h2>Usage Guidelines</h2>
-  <p>Forms are used to gather input from the user.</p>
+  <p>Forms are a grouping of data input fields and controls into which the user can enter data. Forms can be used for a variety of cases, but the one constant is that they require the user to enter input and then submit it to the system for processing. Forms can appear on their own or inside another component, like a sidebar or modal. Forms should follow a logical flow based upon the task at hand and the kind of information required to complete it.</p>
+  
+  <div class="row pad-top">
+    
+    <div class="col-xs-12 col-sm-6 col-md-5">
+      <h4 class="docs-guidelines-heading-do">Do</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Organize forms in one column</li>
+        
+        <li>Group related information (e.g. personal, account, contact)</li>
+        
+        <li>Align labels with the top of controls</li>
+        
+        <li>Use appropriate type attribute (e.g. email, tel, number) to enable mobile-friendly input (<a href="" target="_blank">reference</a>)</li>
+        
+      </ul>
+    </div>
+    
+    
+    <div class="col-xs-12 col-sm-6 col-md-5 offset-md-1">
+      <h4 class="docs-guidelines-heading-dont">Don't</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Use form controls outside of a form (e.g. checkbox, radio button, input field)</li>
+        
+        <li>Use placeholder text as labels</li>
+        
+        <li>Make labels ALL-CAPS</li>
+        
+      </ul>
+    </div>
+    
+  </div>
   
 </section>
-    <section class="docs-section">
-  <p class="docs-example-description">Apollo UI provides several form control styles, layout options, and custom components for creating a wide variety of forms.</p>
-</section>
+    <section class="docs-section" id="basic-form">
 
-<section class="docs-section">
 <div class="docs-example-intro">
+  
   <h2 class="docs-example-title">Basic form</h2>
+  
+  
   <p class="docs-example-description">Use forms to collect information from users, such as contact information, status updates, or credentials.</p>
+  
 </div>
+
 
 
 
@@ -269,7 +329,9 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-basic">Copy code</button>
+    
+    <div  id="example-basic">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"full-name"</span><span class="nt">&gt;</span>Full name<span class="nt">&lt;/label&gt;</span>
@@ -289,116 +351,23 @@
 </div>
 
 
-<div class="docs-callout docs-callout-info">
-  <h4>HTML5 input types</h4>
-  <p>Be sure to use the appropriate <code>type</code> attribute that corresponds to the type of information being collected (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes">reference</a>).</p>
-</div>
-
-
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="input-field">
+
 <div class="docs-example-intro">
-  <h2 class="docs-example-title">Form with grid</h2>
-  <p class="docs-example-description">To make form labels appear alongside their corresponding controls, you can use grid columns and text alignment classes to create the desired layout.  The column width for the labels and controls should be made to accommodate the length of your labels at each breakpoint.  Labels should stack with controls for mobile screen sizes.</p>
-</div>
-
-
-
-
-<div class="docs-example">
   
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  <h2 class="docs-example-title">Input field</h2>
   
   
-  
-<form>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 text-md-right">
-        <label class="control-label" for="full-name">Name</label>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <input class="form-control" id="full-name" type="text" name="full-name"></input>
-      </div>
-    </div>
-  </fieldset>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 text-md-right">
-        <label class="control-label" for="email">Email</label>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <input class="form-control" id="email" type="email" name="email"></input>
-      </div>
-    </div>
-  </fieldset>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-4">
-        <button class="btn btn-primary" type="submit">Sign up</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-
+  <p class="docs-example-description"></p>
   
 </div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
-  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-4 text-md-right"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"full-name"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-8"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"full-name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"full-name"</span><span class="nt">&gt;&lt;/input&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/fieldset&gt;</span>
-  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-4 text-md-right"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-8"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/fieldset&gt;</span>
-  <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-8 col-md-offset-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign up<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/fieldset&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-
-<section class="docs-section">
-<div class="docs-example-intro">
-  <h2 class="docs-example-title">Available input controls</h2>
-  <p class="docs-example-description">Several input controls are available to choose from.  Each one has a specific intended use and offers unique interaction patterns that are familiar to users.</p>
-</div>
 
 
 
 
-
-<h5 class="docs-example-label">Input box</h5>
 
 <div class="docs-example">
   
@@ -417,7 +386,9 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-input">Copy code</button>
+    
+    <div  id="example-input">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"phone"</span><span class="nt">&gt;</span>Phone number<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">name=</span><span class="s">"phone"</span><span class="nt">&gt;&lt;/input&gt;</span>
@@ -427,12 +398,23 @@
   </div>
 </div>
 
+</section>
+
+
+<section class="docs-section" id="checkbox">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Checkbox</h2>
+  
+  
+  <p class="docs-example-description">A checkbox allows users to choose one or more values from a group of related options.  Use the <code>checked</code> attribute to pre-select a value and <code>disabled</code> to disable an option.</p>
+  
+</div>
 
 
 
 
-
-<h5 class="docs-example-label">Checkbox</h5>
 
 <div class="docs-example">
   
@@ -441,17 +423,22 @@
   
   
 <fieldset class="form-group">
+  <label class="control-label">Dietary restrictions</label>
   <div class="checkbox">
-    <input id="check1" name="check1" type="checkbox" checked>
-    <label for="check1">First option</label>
+    <input id="check-dairy" name="dairy" type="checkbox" checked>
+    <label for="check-dairy">Dairy free</label>
   </div>
   <div class="checkbox">
-    <input id="check2" name="check2" type="checkbox">
-    <label for="check2">And another</label>
+    <input id="check-gluten" name="gluten" type="checkbox">
+    <label for="check-gluten">Gluten free</label>
   </div>
   <div class="checkbox">
-    <input id="check3" name="check3" type="checkbox" disabled>
-    <label for="check3">Nope</label>
+    <input id="check-vegetarian" name="vegetarian" type="checkbox">
+    <label for="check-vegetarian">Vegetarian</label>
+  </div>
+  <div class="checkbox">
+    <input id="check-vegan" name="vegan" type="checkbox" disabled>
+    <label for="check-vegan">Vegan</label>
   </div>
 </fieldset>
 
@@ -461,73 +448,26 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-checkbox">Copy code</button>
+    
+    <div  id="example-checkbox">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span><span class="nt">&gt;</span>Dietary restrictions<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check1"</span> <span class="na">name=</span><span class="s">"check1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-dairy"</span> <span class="na">name=</span><span class="s">"dairy"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-dairy"</span><span class="nt">&gt;</span>Dairy free<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check2"</span> <span class="na">name=</span><span class="s">"check2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-gluten"</span> <span class="na">name=</span><span class="s">"gluten"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-gluten"</span><span class="nt">&gt;</span>Gluten free<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check3"</span> <span class="na">name=</span><span class="s">"check3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<h5 class="docs-example-label">Checkbox on dark</h5>
-
-<div class="docs-example">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
-<fieldset class="form-group bg-dark pad-all">
-  <div class="checkbox">
-    <input id="check-dark-1" name="check-dark-1" type="checkbox" checked>
-    <label for="check-dark-1">First option</label>
-  </div>
-  <div class="checkbox">
-    <input id="check-dark-2" name="check-dark-2" type="checkbox">
-    <label for="check-dark-2">And another</label>
-  </div>
-  <div class="checkbox">
-    <input id="check-dark-3" name="check-dark-3" type="checkbox" disabled>
-    <label for="check-dark-3">Nope</label>
-  </div>
-</fieldset>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group bg-dark pad-all"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-dark-1"</span> <span class="na">name=</span><span class="s">"check-dark-1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-dark-1"</span><span class="nt">&gt;</span>First option<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-vegetarian"</span> <span class="na">name=</span><span class="s">"vegetarian"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-vegetarian"</span><span class="nt">&gt;</span>Vegetarian<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-dark-2"</span> <span class="na">name=</span><span class="s">"check-dark-2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-dark-2"</span><span class="nt">&gt;</span>And another<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-dark-3"</span> <span class="na">name=</span><span class="s">"check-dark-3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-dark-3"</span><span class="nt">&gt;</span>Nope<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"check-vegan"</span> <span class="na">name=</span><span class="s">"vegan"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"check-vegan"</span><span class="nt">&gt;</span>Vegan<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
 
@@ -535,12 +475,22 @@
   </div>
 </div>
 
+</section>
+
+<section class="docs-section" id="radio-button">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Radio button</h2>
+  
+  
+  <p class="docs-example-description">Radio buttons allow users to choose a single value from between 2 to 5 options. Use the <code>checked</code> attribute to pre-select a value and <code>disabled</code> to disable an option.</p>
+  
+</div>
 
 
 
 
-
-<h5 class="docs-example-label">Radio</h5>
 
 <div class="docs-example">
   
@@ -549,17 +499,18 @@
   
   
 <fieldset class="form-group">
+  <label class="control-label">Favorite superhero</label>
   <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    <label for="optionsRadios1">Option one</label>
+    <input type="radio" name="optionsRadios" id="radio-batman" value="batman" checked>
+    <label for="radio-batman">Batman</label>
   </div>
   <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    <label for="optionsRadios2">Option two</label>
+    <input type="radio" name="optionsRadios" id="radio-superman" value="superman">
+    <label for="radio-superman">Superman</label>
   </div>
   <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    <label for="optionsRadios3">Option three is disabled</label>
+    <input type="radio" name="optionsRadios" id="radio-pilgrim" value="scott-pilgrim" disabled>
+    <label for="radio-pilgrim">Scott Pilgrim</label>
   </div>
 </fieldset>
 
@@ -569,19 +520,22 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-radio">Copy code</button>
+    
+    <div  id="example-radio">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span><span class="nt">&gt;</span>Favorite superhero<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"radio-batman"</span> <span class="na">value=</span><span class="s">"batman"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-batman"</span><span class="nt">&gt;</span>Batman<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"radio-superman"</span> <span class="na">value=</span><span class="s">"superman"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-superman"</span><span class="nt">&gt;</span>Superman<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"optionsRadios3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"radio-pilgrim"</span> <span class="na">value=</span><span class="s">"scott-pilgrim"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-pilgrim"</span><span class="nt">&gt;</span>Scott Pilgrim<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
 
@@ -589,12 +543,23 @@
   </div>
 </div>
 
+</section>
+
+
+<section class="docs-section" id="toggle">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Toggle</h2>
+  
+  
+  <p class="docs-example-description">The toggle control is a restyled version of the radio control and behaves the same way.  Use it to allow users to choose a single value when there are 2 to 5 options available.</p>
+  
+</div>
 
 
 
 
-
-<h5 class="docs-example-label">Radio on dark</h5>
 
 <div class="docs-example">
   
@@ -602,18 +567,17 @@
   
   
   
-<fieldset class="form-group bg-dark pad-all">
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-1" value="option1" checked>
-    <label for="radio-dark-1">Option one</label>
-  </div>
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-2" value="option2">
-    <label for="radio-dark-2">Option two</label>
-  </div>
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-3" value="option3" disabled>
-    <label for="radio-dark-3">Option three is disabled</label>
+<fieldset class="form-group">
+  <label class="form-label" for="toggle-demo">Time zone</label>
+  <div class="toggle">
+    <input id="toggle-pacific" type="radio" name="toggle-demo" checked>
+    <label for="toggle-pacific">Pacific</label>
+    <input id="toggle-mountain" type="radio" name="toggle-demo">
+    <label for="toggle-mountain">Mountain</label>
+    <input id="toggle-central" type="radio" name="toggle-demo">
+    <label for="toggle-central">Central</label>
+    <input id="toggle-eastern" type="radio" name="toggle-demo">
+    <label for="toggle-eastern">Eastern</label>
   </div>
 </fieldset>
 
@@ -623,19 +587,20 @@
   
   <div class="docs-example-code">
     
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group bg-dark pad-all"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-dark"</span> <span class="na">id=</span><span class="s">"radio-dark-1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-dark-1"</span><span class="nt">&gt;</span>Option one<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-dark"</span> <span class="na">id=</span><span class="s">"radio-dark-2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-dark-2"</span><span class="nt">&gt;</span>Option two<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-dark"</span> <span class="na">id=</span><span class="s">"radio-dark-3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radio-dark-3"</span><span class="nt">&gt;</span>Option three is disabled<span class="nt">&lt;/label&gt;</span>
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-toggle">Copy code</button>
+    
+    <div  id="example-toggle">
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>Time zone<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-pacific"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-pacific"</span><span class="nt">&gt;</span>Pacific<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-mountain"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-mountain"</span><span class="nt">&gt;</span>Mountain<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-central"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-central"</span><span class="nt">&gt;</span>Central<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-eastern"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-eastern"</span><span class="nt">&gt;</span>Eastern<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
 
@@ -644,11 +609,23 @@
 </div>
 
 
+</section>
+
+
+<section class="docs-section" id="select-menu">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Select menu</h2>
+  
+  
+  <p class="docs-example-description">Select menus allow users to choose a single value from a list of 6-25 options.  If more options are needed, like a list of countries or states, use a simple search control with dropdown results.</p>
+  
+</div>
 
 
 
 
-<h5 class="docs-example-label">Select</h5>
 
 <div class="docs-example">
   
@@ -657,11 +634,23 @@
   
   
 <fieldset class="form-group">
-  <label class="form-label" for="select-position">Position</label>
+  <label class="form-label" for="select-position">Marmot species</label>
   <select class="form-control" name="select-position">
-    <option>Primary</option>
-    <option>Secondary</option>
-    <option>Tertiary</option>
+    <option>Alpine marmot</option>
+    <option>Forest-steppe marmot</option>
+    <option>Gray marmot</option>
+    <option>Bobak marmot</option>
+    <option>Alaska marmot</option>
+    <option>Black-capped marmot</option>
+    <option>Long-tailed marmot</option>
+    <option>Himalayan marmot</option>
+    <option>Menzbier's marmot</option>
+    <option>Groundhog</option>
+    <option>Tarbagan marmot</option>
+    <option>Hoary marmot</option>
+    <option>Yellow-bellied marmot</option>
+    <option>Olympic marmot</option>
+    <option>Vancouver Island marmot</option>
   </select>
 </fieldset>
 
@@ -671,13 +660,27 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-select">Copy code</button>
+    
+    <div  id="example-select">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"select-position"</span><span class="nt">&gt;</span>Position<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"form-label"</span> <span class="na">for=</span><span class="s">"select-position"</span><span class="nt">&gt;</span>Marmot species<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"select-position"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Primary<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Secondary<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;option&gt;</span>Tertiary<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Alpine marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Forest-steppe marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Gray marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Bobak marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Alaska marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Black-capped marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Long-tailed marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Himalayan marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Menzbier's marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Groundhog<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Tarbagan marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Hoary marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Yellow-bellied marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Olympic marmot<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Vancouver Island marmot<span class="nt">&lt;/option&gt;</span>
   <span class="nt">&lt;/select&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
 
@@ -685,12 +688,23 @@
   </div>
 </div>
 
+</section>
+
+
+<section class="docs-section" id="textarea">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Textarea</h2>
+  
+  
+  <p class="docs-example-description">The <code>textarea</code> element is used for collecting long blocks of input from the user, like a comments field or long description.</p>
+  
+</div>
 
 
 
 
-
-<h5 class="docs-example-label">Textarea</h5>
 
 <div class="docs-example">
   
@@ -709,7 +723,9 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-textarea">Copy code</button>
+    
+    <div  id="example-textarea">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"textarea"</span> <span class="na">name=</span><span class="s">"username"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
@@ -723,108 +739,20 @@
 </section>
 
 
-
-
-<section class="docs-section">
+<section class="docs-section" id="error-message">
 
 <div class="docs-example-intro">
-  <h2 class="docs-example-title">Toggle</h2>
-  <p class="docs-example-description">The toggle control is a restyled version of a radio button and behaves the same way, so use it to allow users to choose a single value from two or more options.</p>
-</div>
-
-
-
-
-<h5 class="docs-example-label">Basic toggle</h5>
-
-<div class="docs-example">
   
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  <h2 class="docs-example-title">Error message</h2>
   
   
-  
-<fieldset class="toggle pad-all">
-  <input id="toggle-shared" type="radio" name="toggle-demo" checked>
-  <label for="toggle-shared">Shared</label>
-  <input id="toggle-private" type="radio" name="toggle-demo">
-  <label for="toggle-private">Private</label>
-</fieldset>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"toggle pad-all"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-shared"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-shared"</span><span class="nt">&gt;</span>Shared<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-private"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-private"</span><span class="nt">&gt;</span>Private<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<h5 class="docs-example-label">Dark toggle</h5>
-
-<div class="docs-example">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
-<fieldset class="toggle bg-dark pad-all">
-  <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
-  <label for="toggle-shared-dark">Shared</label>
-  <input id="toggle-private-dark" type="radio" name="toggle-demo-dark">
-  <label for="toggle-private-dark">Private</label>
-</fieldset>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"toggle bg-dark pad-all"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-shared-dark"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo-dark"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-shared-dark"</span><span class="nt">&gt;</span>Shared<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"toggle-private-dark"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"toggle-demo-dark"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggle-private-dark"</span><span class="nt">&gt;</span>Private<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/fieldset&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-
-
-<section class="docs-section">
-
-<div class="docs-example-intro">
-  <h2 class="docs-example-title">Validation states</h2>
   <p class="docs-example-description">Give users inline visual feedback to indicate the status of their input.</p>
+  
 </div>
 
 
 
 
-
-
-
-
-<h5 class="docs-example-label">Error message</h5>
 
 <div class="docs-example">
   
@@ -844,7 +772,9 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-error-message">Copy code</button>
+    
+    <div  id="example-error-message">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group has-danger"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>
@@ -855,11 +785,18 @@
   </div>
 </div>
 
+</section>
 
+
+<section class="docs-section" id="alternate-error-markup">
 
 <div class="docs-example-intro">
-  <h2 class="docs-example-title">Alternate markup</h2>
+  
+  <h2 class="docs-example-title">Alternate error markup</h2>
+  
+  
   <p class="docs-example-description">In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.</p>
+  
 </div>
 
 
@@ -871,7 +808,7 @@
   
   
   
-<!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+<!-- Class applied to `.form-control` and `.form-msg` directly -->
 <fieldset class="form-group">
   <label class="control-label" for="email">Email Address</label>
   <input class="form-control has-danger" id="email" type="email" name="email"></input>
@@ -884,8 +821,10 @@
   
   <div class="docs-example-code">
     
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) --&gt;</span>
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-error-alternate">Copy code</button>
+    
+    <div  id="example-error-alternate">
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Class applied to `.form-control` and `.form-msg` directly --&gt;</span>
 <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email Address<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control has-danger"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/input&gt;</span>

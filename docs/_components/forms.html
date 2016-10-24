@@ -1,15 +1,34 @@
 ---
 layout: component
 title: Forms
-description: Forms are used to gather input from the user.
+description: Forms are a grouping of data input fields and controls into which the user can enter data. Forms can be used for a variety of cases, but the one constant is that they require the user to enter input and then submit it to the system for processing. Forms can appear on their own or inside another component, like a sidebar or modal. Forms should follow a logical flow based upon the task at hand and the kind of information required to complete it.
+guidelines:
+  do:
+    - Organize forms in one column
+    - Group related information (e.g. personal, account, contact)
+    - Align labels with the top of controls
+    - Use appropriate type attribute (e.g. email, tel, number) to enable mobile-friendly input (<a href="" target="_blank">reference</a>)
+  dont:
+    - Use form controls outside of a form (e.g. checkbox, radio button, input field)
+    - Use placeholder text as labels
+    - Make labels ALL-CAPS
+contents:
+  - Usage guidelines
+  - Basic form
+  - Input field
+  - Checkbox
+  - Radio button
+  - Toggle
+  - Select menu
+  - Textarea
+  - Error message
+  - Alternate error markup
 ---
 
-<section class="docs-section">
-  <p class="docs-example-description">Apollo UI provides several form control styles, layout options, and custom components for creating a wide variety of forms.</p>
-</section>
+<section class="docs-section" id="basic-form">
 
-<section class="docs-section">
 {% include example-intro.html title='Basic form' description='Use forms to collect information from users, such as contact information, status updates, or credentials.' %}
+
 {% capture example %}
 <form>
   <fieldset class="form-group">
@@ -26,54 +45,14 @@ description: Forms are used to gather input from the user.
 </form>
 {% endcapture %}
 
-{% include example.html size='third' code=example %}
-
-{% include docs-callout.html state='info' title='HTML5 input types' body='Be sure to use the appropriate <code>type</code> attribute that corresponds to the type of information being collected (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Attributes">reference</a>).' %}
+{% include example.html size='third' code=example id='example-basic' %}
 
 </section>
 
 
-<section class="docs-section">
-{% include example-intro.html title='Form with grid' description='To make form labels appear alongside their corresponding controls, you can use grid columns and text alignment classes to create the desired layout.  The column width for the labels and controls should be made to accommodate the length of your labels at each breakpoint.  Labels should stack with controls for mobile screen sizes.' %}
-{% capture example %}
-<form>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 text-md-right">
-        <label class="control-label" for="full-name">Name</label>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <input class="form-control" id="full-name" type="text" name="full-name"></input>
-      </div>
-    </div>
-  </fieldset>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 text-md-right">
-        <label class="control-label" for="email">Email</label>
-      </div>
-      <div class="col-xs-12 col-md-8">
-        <input class="form-control" id="email" type="email" name="email"></input>
-      </div>
-    </div>
-  </fieldset>
-  <fieldset class="form-group">
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-4">
-        <button class="btn btn-primary" type="submit">Sign up</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-{% endcapture %}
+<section class="docs-section" id="input-field">
 
-{% include example.html size='third' code=example %}
-
-</section>
-
-
-<section class="docs-section">
-{% include example-intro.html title='Available input controls' description='Several input controls are available to choose from.  Each one has a specific intended use and offers unique interaction patterns that are familiar to users.' %}
+{% include example-intro.html title='Input field' description='' %}
 
 {% capture example %}
 <fieldset class="form-group">
@@ -82,102 +61,124 @@ description: Forms are used to gather input from the user.
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Input box' code=example %}
+{% include example.html  code=example id='example-input' %}
+</section>
 
 
-{% capture example %}
-<fieldset class="form-group">
-  <div class="checkbox">
-    <input id="check1" name="check1" type="checkbox" checked>
-    <label for="check1">First option</label>
-  </div>
-  <div class="checkbox">
-    <input id="check2" name="check2" type="checkbox">
-    <label for="check2">And another</label>
-  </div>
-  <div class="checkbox">
-    <input id="check3" name="check3" type="checkbox" disabled>
-    <label for="check3">Nope</label>
-  </div>
-</fieldset>
-{% endcapture %}
+<section class="docs-section" id="checkbox">
 
-{% include example.html size='third' label='Checkbox' code=example %}
-
-
-{% capture example %}
-<fieldset class="form-group bg-dark pad-all">
-  <div class="checkbox">
-    <input id="check-dark-1" name="check-dark-1" type="checkbox" checked>
-    <label for="check-dark-1">First option</label>
-  </div>
-  <div class="checkbox">
-    <input id="check-dark-2" name="check-dark-2" type="checkbox">
-    <label for="check-dark-2">And another</label>
-  </div>
-  <div class="checkbox">
-    <input id="check-dark-3" name="check-dark-3" type="checkbox" disabled>
-    <label for="check-dark-3">Nope</label>
-  </div>
-</fieldset>
-{% endcapture %}
-
-{% include example.html size='third' label='Checkbox on dark' code=example %}
-
+{% include example-intro.html title='Checkbox' description='A checkbox allows users to choose one or more values from a group of related options.  Use the <code>checked</code> attribute to pre-select a value and <code>disabled</code> to disable an option.' %}
 
 {% capture example %}
 <fieldset class="form-group">
-  <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    <label for="optionsRadios1">Option one</label>
+  <label class="control-label">Dietary restrictions</label>
+  <div class="checkbox">
+    <input id="check-dairy" name="dairy" type="checkbox" checked>
+    <label for="check-dairy">Dairy free</label>
   </div>
-  <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    <label for="optionsRadios2">Option two</label>
+  <div class="checkbox">
+    <input id="check-gluten" name="gluten" type="checkbox">
+    <label for="check-gluten">Gluten free</label>
   </div>
-  <div class="radio">
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-    <label for="optionsRadios3">Option three is disabled</label>
+  <div class="checkbox">
+    <input id="check-vegetarian" name="vegetarian" type="checkbox">
+    <label for="check-vegetarian">Vegetarian</label>
   </div>
-</fieldset>
-{% endcapture %}
-
-{% include example.html size='third' label='Radio' code=example %}
-
-
-{% capture example %}
-<fieldset class="form-group bg-dark pad-all">
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-1" value="option1" checked>
-    <label for="radio-dark-1">Option one</label>
-  </div>
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-2" value="option2">
-    <label for="radio-dark-2">Option two</label>
-  </div>
-  <div class="radio">
-    <input type="radio" name="radio-dark" id="radio-dark-3" value="option3" disabled>
-    <label for="radio-dark-3">Option three is disabled</label>
+  <div class="checkbox">
+    <input id="check-vegan" name="vegan" type="checkbox" disabled>
+    <label for="check-vegan">Vegan</label>
   </div>
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Radio on dark' code=example %}
+{% include example.html code=example id='example-checkbox' %}
+</section>
 
+<section class="docs-section" id="radio-button">
+
+{% include example-intro.html title='Radio button' description='Radio buttons allow users to choose a single value from between 2 to 5 options. Use the <code>checked</code> attribute to pre-select a value and <code>disabled</code> to disable an option.' %}
 
 {% capture example %}
 <fieldset class="form-group">
-  <label class="form-label" for="select-position">Position</label>
+  <label class="control-label">Favorite superhero</label>
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="radio-batman" value="batman" checked>
+    <label for="radio-batman">Batman</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="radio-superman" value="superman">
+    <label for="radio-superman">Superman</label>
+  </div>
+  <div class="radio">
+    <input type="radio" name="optionsRadios" id="radio-pilgrim" value="scott-pilgrim" disabled>
+    <label for="radio-pilgrim">Scott Pilgrim</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html code=example id='example-radio' %}
+</section>
+
+
+<section class="docs-section" id="toggle">
+
+{% include example-intro.html title='Toggle' description='The toggle control is a restyled version of the radio control and behaves the same way.  Use it to allow users to choose a single value when there are 2 to 5 options available.' %}
+
+{% capture example %}
+<fieldset class="form-group">
+  <label class="form-label" for="toggle-demo">Time zone</label>
+  <div class="toggle">
+    <input id="toggle-pacific" type="radio" name="toggle-demo" checked>
+    <label for="toggle-pacific">Pacific</label>
+    <input id="toggle-mountain" type="radio" name="toggle-demo">
+    <label for="toggle-mountain">Mountain</label>
+    <input id="toggle-central" type="radio" name="toggle-demo">
+    <label for="toggle-central">Central</label>
+    <input id="toggle-eastern" type="radio" name="toggle-demo">
+    <label for="toggle-eastern">Eastern</label>
+  </div>
+</fieldset>
+{% endcapture %}
+
+{% include example.html code=example id='example-toggle' %}
+
+</section>
+
+
+<section class="docs-section" id="select-menu">
+
+{% include example-intro.html title='Select menu' description='Select menus allow users to choose a single value from a list of 6-25 options.  If more options are needed, like a list of countries or states, use a simple search control with dropdown results.' %}
+
+{% capture example %}
+<fieldset class="form-group">
+  <label class="form-label" for="select-position">Marmot species</label>
   <select class="form-control" name="select-position">
-    <option>Primary</option>
-    <option>Secondary</option>
-    <option>Tertiary</option>
+    <option>Alpine marmot</option>
+    <option>Forest-steppe marmot</option>
+    <option>Gray marmot</option>
+    <option>Bobak marmot</option>
+    <option>Alaska marmot</option>
+    <option>Black-capped marmot</option>
+    <option>Long-tailed marmot</option>
+    <option>Himalayan marmot</option>
+    <option>Menzbier's marmot</option>
+    <option>Groundhog</option>
+    <option>Tarbagan marmot</option>
+    <option>Hoary marmot</option>
+    <option>Yellow-bellied marmot</option>
+    <option>Olympic marmot</option>
+    <option>Vancouver Island marmot</option>
   </select>
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Select' code=example %}
+{% include example.html code=example id='example-select' %}
+</section>
 
+
+<section class="docs-section" id="textarea">
+
+{% include example-intro.html title='Textarea' description='The <code>textarea</code> element is used for collecting long blocks of input from the user, like a comments field or long description.' %}
 
 {% capture example %}
 <fieldset class="form-group">
@@ -186,66 +187,14 @@ description: Forms are used to gather input from the user.
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' label='Textarea' code=example %}
+{% include example.html code=example id='example-textarea' %}
 
 </section>
 
 
+<section class="docs-section" id="error-message">
 
-
-<section class="docs-section">
-
-{% include example-intro.html title='Toggle' description='The toggle control is a restyled version of a radio button and behaves the same way, so use it to allow users to choose a single value from two or more options.' %}
-
-{% capture example %}
-<fieldset class="toggle pad-all">
-  <input id="toggle-shared" type="radio" name="toggle-demo" checked>
-  <label for="toggle-shared">Shared</label>
-  <input id="toggle-private" type="radio" name="toggle-demo">
-  <label for="toggle-private">Private</label>
-</fieldset>
-{% endcapture %}
-{% include example.html size='third' label='Basic toggle' code=example %}
-
-
-{% capture example %}
-<fieldset class="toggle bg-dark pad-all">
-  <input id="toggle-shared-dark" type="radio" name="toggle-demo-dark" checked>
-  <label for="toggle-shared-dark">Shared</label>
-  <input id="toggle-private-dark" type="radio" name="toggle-demo-dark">
-  <label for="toggle-private-dark">Private</label>
-</fieldset>
-{% endcapture %}
-{% include example.html size='third' label='Dark toggle' code=example %}
-
-</section>
-
-
-
-<section class="docs-section">
-
-{% include example-intro.html title='Validation states' description='Give users inline visual feedback to indicate the status of their input.' %}
-
-
-{% comment %}
-{% capture example %}
-<fieldset class="form-group has-success">
-  <label class="control-label" for="email">Email Address</label>
-  <input class="form-control" id="email" type="email" name="email"></input>
-  <p class="form-msg">Looks good!</p>
-</fieldset>
-{% endcapture %}
-{% include example.html size='third' label='Success message' code=example %}
-
-{% capture example %}
-<fieldset class="form-group has-warning">
-  <label class="control-label" for="email">Email Address</label>
-  <input class="form-control" id="email" type="email" name="email"></input>
-  <p class="form-msg">Please enter a valid email address</p>
-</fieldset>
-{% endcapture %}
-{% include example.html size='third' label='Warning message' code=example %}
-{% endcomment %}
+{% include example-intro.html title='Error message' description='Give users inline visual feedback to indicate the status of their input.' %}
 
 
 {% capture example %}
@@ -255,12 +204,15 @@ description: Forms are used to gather input from the user.
   <p class="form-msg">Please enter a valid email address</p>
 </fieldset>
 {% endcapture %}
-{% include example.html size='third' label='Error message' code=example %}
+{% include example.html code=example id='example-error-message' %}
+</section>
 
 
-{% include example-intro.html title='Alternate markup' description='In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.' %}
+<section class="docs-section" id="alternate-error-markup">
+
+{% include example-intro.html title='Alternate error markup' description='In cases where the validation state class needs to be applied diretly to the input control, use this modified markup.' %}
 {% capture example %}
-<!-- Class applied to `.form-control` and `.form-msg` directly (works for all states) -->
+<!-- Class applied to `.form-control` and `.form-msg` directly -->
 <fieldset class="form-group">
   <label class="control-label" for="email">Email Address</label>
   <input class="form-control has-danger" id="email" type="email" name="email"></input>
@@ -268,6 +220,6 @@ description: Forms are used to gather input from the user.
 </fieldset>
 {% endcapture %}
 
-{% include example.html size='third' code=example %}
+{% include example.html size='third' code=example id='example-error-alternate' %}
 
 </section>

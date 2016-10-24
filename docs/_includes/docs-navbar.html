@@ -28,7 +28,9 @@
         {% if directory == item.label %}
           {% assign is_active = 'active' %}
         {% endif %}
-        <li class="navbar-item {{ is_active }}"><a href="/{{ item.label }}">{{ item.title }}</a></li>
+        <li class="navbar-item {{ is_active }}">
+          <a href="/{{ item.label }}{% if item.default_page %}/{{ item.default_page }}{% endif %}">{{ item.title }}</a>
+        </li>
       {% endunless %}
     {% endfor %}
     </ul>
