@@ -46,19 +46,25 @@
       
         
         
-        <li class="navbar-item "><a href="/scaffolding">Scaffolding</a></li>
+        <li class="navbar-item ">
+          <a href="/scaffolding/colors.html">Scaffolding</a>
+        </li>
       
     
       
         
         
-        <li class="navbar-item active"><a href="/components">Components</a></li>
+        <li class="navbar-item active">
+          <a href="/components/accordion.html">Components</a>
+        </li>
       
     
       
         
         
-        <li class="navbar-item "><a href="/design">Design Resources</a></li>
+        <li class="navbar-item ">
+          <a href="/design">Design Resources</a>
+        </li>
       
     
     </ul>
@@ -78,11 +84,16 @@
 <h3 class="docs-page-nav-title">Components</h3>
 <ul class="docs-page-nav" role="navigation">
   
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/components/accordion.html">Accordion</a>
+    </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/index.html">Accordion</a>
+      <a href="/components/alerts.html">Alerts</a>
     </li>
   
     
@@ -118,7 +129,7 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/dropdown.html">Dropdown</a>
+      <a href="/components/dropdown.html">Dropdown menu</a>
     </li>
   
     
@@ -148,7 +159,7 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/modal.html">Modals</a>
+      <a href="/components/modal.html">Modal</a>
     </li>
   
     
@@ -196,12 +207,6 @@
     
     
     <li class="docs-page-nav-item ">
-      <a href="/components/alerts.html">Alerts</a>
-    </li>
-  
-    
-    
-    <li class="docs-page-nav-item ">
       <a href="/components/tabs.html">Tabs</a>
     </li>
   
@@ -222,24 +227,66 @@
   <h1>Breadcrumb</h1>
   <ul class="nav docs-page-contents">
     
+    <li><a href="#usage-guidelines">Usage guidelines</a></li>
+    
+    <li><a href="#basic-breadcrumb">Basic Breadcrumb</a></li>
+    
+    <li><a href="#collapsed-links">Collapsed links</a></li>
+    
   </ul>
 </header>
 
-    <section class="docs-section docs-guidelines" id="usage-guidelines">
+    <section class="docs-section" id="usage-guidelines">
   <h2>Usage Guidelines</h2>
-  <p></p>
+  <p>A breadcrumb trail is a type of secondary navigation scheme that reveals the user’s location in a website or Web application.  Since this component is designed to show users how to navigate back up the site hierarchy, it is unnecessary to show it on the home page of a website or application.</p>
+  
+  <div class="row pad-top">
+    
+    <div class="col-xs-12 col-sm-6 col-md-5">
+      <h4 class="docs-guidelines-heading-do">Do</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Begin with a link to the home page and end with the name of the current page</li>
+        
+        <li>Place at the top of the page, between the global navigation and the page title</li>
+        
+        <li>Use consistently throughout the site or app</li>
+        
+        <li>Use on down-level pages</li>
+        
+        <li>Apply the ellipsis dropdown pattern when the links are too long to display on a single line</li>
+        
+      </ul>
+    </div>
+    
+    
+    <div class="col-xs-12 col-sm-6 col-md-5 offset-md-1">
+      <h4 class="docs-guidelines-heading-dont">Don't</h4>
+      <ul class="docs-guidelines-list">
+        
+        <li>Use in place of global navigation</li>
+        
+        <li>Use inside another component like a modal, dialog or sidebar</li>
+        
+      </ul>
+    </div>
+    
+  </div>
   
 </section>
-    <section class="docs-section">
+    <section class="docs-section" id="basic-breadcrumb">
 
-  <p>Breadcrumb trails are a convenient way to show users where they are in the site hierarchy.</p>
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Basic breadcrumb</h2>
+  
+  
+  <p class="docs-example-description">Always begin with "Home" and end with the current page.</p>
+  
+</div>
 
-</section>
-
-<section class="docs-section">
 
 
-<h5 class="docs-example-label">Basic Breadcrumb</h5>
 
 <div class="docs-example">
   
@@ -248,9 +295,9 @@
   
   
 <ol class="breadcrumb">
-  <li><a href="#0">Level 1</a></li>
-  <li><a href="#0">Level 2</a></li>
-  <li>Level 3</li>
+  <li><a href="#0">Home</a></li>
+  <li><a href="#0">Alpine wildlife</a></li>
+  <li>Marmot</li>
 </ol>
 
   
@@ -259,11 +306,13 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-basic-breadcrumb">Copy code</button>
+    
+    <div  id="example-basic-breadcrumb">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Level 3<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Alpine wildlife<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Marmot<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span></code></pre></figure>
 
     </div>
@@ -271,11 +320,20 @@
 </div>
 
 
+</section>
+
+<section class="docs-section" id="collapsed-links">
 
 <div class="docs-example-intro">
-  <h2 class="docs-example-title">Collapsed breadcrumb</h2>
+  
+  <h2 class="docs-example-title">Collapsed links</h2>
+  
+  
   <p class="docs-example-description">When space is limited, you can move middle links of the breadcrumb trail into a dropdown menu.</p>
+  
 </div>
+
+
 
 
 <div class="docs-example">
@@ -285,18 +343,18 @@
   
   
 <ol class="breadcrumb">
-  <li><a href="#0">Level 1</a></li>
+  <li><a href="#0">Home</a></li>
   <li>
     <div class="dropdown">
       <button class="dropdown-toggle" type="button" id="breadcrumb-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</button>
       <ul class="dropdown-menu" aria-labeledby="breadcrumb-dropdown">
-        <li><a href="#0">Level 2</a></li>
-        <li><a href="#0">Level 3</a></li>
-        <li><a href="#0">Level 4</a></li>
+        <li><a href="#0">Continents</a></li>
+        <li><a href="#0">South America</a></li>
+        <li><a href="#0">Peru</a></li>
       </ul>
     </div>
   </li>
-  <li>Level 5</li>
+  <li>Machu Picchu</li>
 </ol>
 
   
@@ -305,20 +363,22 @@
   
   <div class="docs-example-code">
     
-    <div >
+    <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-collapsed-breadcrumb">Copy code</button>
+    
+    <div  id="example-collapsed-breadcrumb">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"breadcrumb-dropdown"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labeledby=</span><span class="s">"breadcrumb-dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Level 4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Continents<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>South America<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>Peru<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Level 5<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Machu Picchu<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span></code></pre></figure>
 
     </div>

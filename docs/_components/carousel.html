@@ -1,11 +1,27 @@
 ---
 layout: component
 title: Carousel
+description: A carousel is a hero panel used to feature navigational links, typically in the form of eye-catching photos or graphics. A Carousel differs from a Billboard in that it can have multiple presentations that automatically rotate every ~4 seconds (depending on amount of content to visually comprehend) and also have paging controls that allow the user to manually advance or return to the previous; Billboards contain a single presentation.
+guidelines:
+  do:
+    - Use a carousel when you need to draw the user's attention to featured content
+    - Use a carousel when there are at least two separate content blocks to display
+    - Provide a call to action and link to another page, screen, or UI
+    - Ensure carousel is visually appealing
+  dont:
+    - Use a carousel when you have more than four content blocks to display
+    - Link content to direct downloads or a command that is not part of the navigation
+    - Use carousel on lower level pages (in most cases)
+contents:
+  - Usage guidelines
+  - Basic Carousel
+  - Dark Carousel
+  - Side image
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="basic-carousel">
 
-<p class="docs-section-description">Carousels include left/right navigation controls, along with position indicators below.</p>
+{% include example-intro.html title='Basic Carousel' description='Carousels include left/right navigation controls, along with slide position indicators below.' %}
 
 {% capture example %}
 <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
@@ -50,12 +66,12 @@ title: Carousel
 </div>
 {% endcapture %}
 
-{% include example.html code=example %}
+{% include example.html code=example id='example-basic' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="dark-carousel">
 
 {% include example-intro.html title='Dark carousel' description='When you apply the <code>.carousel-dark</code> class to a carousel, the content and control colors are changed to improve legibility.  This example includes inline styles to show how you can use CSS to apply a color overlay to a background image to further improve text color contrast.' %}
 
@@ -102,14 +118,14 @@ title: Carousel
 </div>
 {% endcapture %}
 
-{% include example.html code=example %}
+{% include example.html code=example id='example-dark' %}
 </section>
 
 
 
-<section class="docs-section">
+<section class="docs-section" id="side-image">
 
-{% include example-intro.html title='Carousel with side image' description='Use a grid layout and some custom styles to add a side image to your carousel.' %}
+{% include example-intro.html title='Side image' description='Use a grid layout and some custom styles to add a side image to your carousel.' %}
 
 {% include docs-callout.html state='info' title='Inline styles' body='The inline styles below simply demonstrate which custom styles to use when adding a side image.  These rules should probably be added to your application stylesheet for better maintainability.' %}
 
@@ -163,7 +179,7 @@ title: Carousel
 </div>
 {% endcapture %}
 
-{% include example.html code=example %}
+{% include example.html code=example id='example-side-image' %}
 
 </section>
 

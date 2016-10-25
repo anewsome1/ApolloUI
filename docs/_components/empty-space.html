@@ -1,10 +1,31 @@
 ---
 layout: component
 title: Empty space prompt
-description: This component is for displaying a message to users about why there's no content in a region of the page.  Any icon can be used for the <code>.empty-space-icon</code>, as shown below.
+description: 'There are three primary uses for empty space prompts:
+<ol>
+<li>First use. The user begins to interact with the application/site.</li>
+<li>User cleared. The user has just completed a task or cleared all content associated with the app or site.</li>
+<li>The user has encountered a roadblock during the interaction.</li>
+</ol>
+Empty space prompts should help the user guide them along to the next logical step.'
+guidelines:
+  do:
+    - Use as a space for increasing adoption if the user has never used the application before
+    - Prompt users towards new interactions when they have completed required tasks
+    - Indicate that no results are available after the user has entered a search
+  dont:
+    - Use to indicate that there are unfinished tasks still available
+    - Use when there are available results
+contents:
+  - Usage guidelines
+  - Basic prompt
+  - Dark background
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="basic-prompt">
+
+{% include example-intro.html title='Basic prompt' description='' %}
+
 
 {% capture example %}
 <div class="empty-space">
@@ -15,7 +36,12 @@ description: This component is for displaying a message to users about why there
 </div>
 {% endcapture %}
 
-{% include example.html size='half' label='Basic example' code=example %}
+{% include example.html  code=example id='example-basic' %}
+</section>
+
+<section class="docs-section" id="dark-background">
+
+{% include example-intro.html title='Dark background' description='' %}
 
 {% capture example %}
 <div class="empty-space bg-dark">
@@ -26,6 +52,6 @@ description: This component is for displaying a message to users about why there
 </div>
 {% endcapture %}
 
-{% include example.html size='half' label='Dark example' code=example %}
+{% include example.html  code=example id='example-dark-bg' %}
 
 </section>

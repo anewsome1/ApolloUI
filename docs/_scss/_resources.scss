@@ -1,0 +1,11 @@
+.resource-download {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  .download-text {
+    margin-left: 1rem;
+    font-weight: 300;
+  }
+}
