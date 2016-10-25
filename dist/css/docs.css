@@ -476,18 +476,22 @@ hr {
   padding-bottom: 10rem;
 }
 
+.resources-container {
+  margin-bottom: 1rem;
+}
+
 .resource-download {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  -ms-flex-direction: resources-container;
+      flex-direction: resources-container;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  margin-left: 1.5rem;
   font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .resource-download .download-text {
-  margin-left: 1rem;
+  margin-left: .5rem;
   font-weight: 300;
 }
