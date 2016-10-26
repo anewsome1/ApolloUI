@@ -1,18 +1,28 @@
 ---
 layout: component
 title: Navbar
-description:
+description: 'The Navbar component is a global navigation pattern that allows the user to explore the top-level sections or pages of the site. For Apollo this appears as a blue bar at the top of the page with three main components:
+<ol>
+<li>A logo mark that identifies the branded tool and functions as a link to the default page (usually a home page of some kind)</li>
+<li>A series of links to the primary sections of the product with optional cascading sub-links to sub-sections on click</li>
+<li>A login control that either provides feedback to identify the user or provides the option to login</li>
+</ol>'
 guidelines:
   do:
-    -
+    - Use as the primary navigation control for a product or site
   dont:
-    -
+    - Use on any kind of sub-UI like a Modal, Dialog, or Card
+    - Use on a Table or List View
 contents:
   - Usage guidelines
-  -
+  - Basic navbar
+  - Environment indicator
+  - Command bar
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="basic-navbar">
+
+{% include example-intro.html title='Basic navbar' description='This example shows the three basic components of a global navigation menu.' %}
 
 {% capture example %}
 <nav class="navbar">
@@ -65,12 +75,14 @@ contents:
 </nav>
 {% endcapture %}
 
-{% include example.html label='Basic navbar' code=example id='example-' %}
+{% include example.html code=example id='example-navbar-basic' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="environment-indicator">
+
+{% include example-intro.html title='Environment indicator' description='When dealing with non-production environments, use the <code>.navbar-environment</code> section to indicate which environment is being used.' %}
 
 {% capture example %}
 <nav class="navbar">
@@ -108,12 +120,12 @@ contents:
 </nav>
 {% endcapture %}
 
-{% include example.html label='Environment indicator' code=example id='example-' %}
+{% include example.html code=example id='example-navbar-environment' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="command-bar">
 
 {% include example-intro.html title='Command bar' description='A command bar can be displayed below the navbar to show page-level actions, including actions that apply to a group of selected items.' %}
 
@@ -151,6 +163,6 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-' %}
+{% include example.html code=example id='example-command-bar' %}
 
 </section>
