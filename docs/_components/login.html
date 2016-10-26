@@ -1,18 +1,26 @@
 ---
 layout: component
 title: Login
-description:
+description: The Login component is a specific kind of form that allows users to provide their credentials to the system in order to access its data, content, tools, or services. Its sole purpose is to be the gateway to a system and requires accurate input or it will not allow access. Logins should always provide a method for the user to recover their username and password (even if is simply a link to contact their IT admin).
 guidelines:
   do:
-    -
+    - Use when user credentials are required for access to a system
+    - Offer option to remember user on that computer
+    - Offer secure password re-set option
+    - When credentials fail, tell user which credential - user name or password - they got wrong
+    - Adjust keyboard for mobile when logging in via a mobile device
   dont:
-    -
+    - Use for featured content
 contents:
   - Usage guidelines
-  -
+  - Basic login form
+  - Centered login form
 ---
-<section class="docs-section">
-  <p class="docs-example-description">The login component provides a standard way to present users with a login form for your application.</p>
+
+<section class="docs-section" id="basic-login-form">
+
+{% include example-intro.html title='Basic login form' description='The login component provides a standard way to present users with a login form for your application.' %}
+
 
 {% capture example %}
 <div class="login">
@@ -43,11 +51,11 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-' %}
+{% include example.html code=example id='example-login-basic' %}
 
 </section>
 
-<section class="docs-section">
+<section class="docs-section" id="centered-login-form">
 
 {% include example-intro.html title='Centered login form' description='Include the optional <code>.login-container</code> around the login form to center it vertically and horizontally on the page.' %}
 
@@ -83,7 +91,7 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-' %}
+{% include example.html code=example id='example-login-centered' %}
 
 </section>
 
