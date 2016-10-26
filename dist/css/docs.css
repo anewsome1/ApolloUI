@@ -131,8 +131,8 @@ body {
 .docs-nav {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -474,6 +474,10 @@ hr {
 .home-header {
   padding-top: 10rem;
   padding-bottom: 10rem;
+  background-image: linear-gradient(to right, rgba(41, 125, 253, 0.8), rgba(41, 125, 253, 0.8)), url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2e481631f9841642ba61e30d6c41f7ff");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .resources-container {
