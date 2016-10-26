@@ -2,26 +2,25 @@
 layout: component
 title: Search
 description: Use this component to show search results as users type (styles only).
-description:
+description: The search component is a specialized type of input field that enables a query against a data set. It can be assigned a global or contextual scope. It includes a search icon in the input field and has an optional search results list to display results below the search box as the user types. The query is initiated by pressing the ENTER key after entering the query string, or by pressing a "search" button.
 guidelines:
   do:
-    -
+    - Use when there is a large data set that the user should be able to explore in detail
   dont:
-    -
+    - Use when the data set is small enough to browse or enumerate in a list view (such as a table)
+    - Use as a substitute for navigation
 contents:
   - Usage guidelines
-  -
+  - Basic search box
+  - Inline results
+  - Dropdown results
+  - Dropdown result metadata
 ---
 
+<section class="docs-section" id="basic-search-box">
 
-<section class="docs-section">
-  <p class="docs-example-description">The search component is a specialized type of input field.  It includes a search icon in the input field and has an optional search results list to display results below the search box.</p>
+{% include docs-callout.html state='info' title='Styles only' body='This component only includes styling and layout.  Retrieving search results, including displaying results as users type, will need to be handled by your application.' %}
 
-  {% include docs-callout.html state='info' title='Styles only' body='This component only includes styling and layout.  Retrieving search results, including displaying results as users type, will need to be handled by your application.' %}
-</section>
-
-
-<section class="docs-section">
 
 {% include example-intro.html title='Basic search box' description='Use this standalone search box when your results are going to be displayed on a different page or another place on the current page.' %}
 
@@ -31,12 +30,12 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html size='third' code=example id='example-' %}
+{% include example.html code=example id='example-basic-search' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="inline-results">
 
 {% include example-intro.html title='Inline results' description='When you want to show users search results as they type, this style allows you to display the results with the matching characters highlighted.' %}
 
@@ -54,15 +53,15 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html size='third' code=example id='example-' %}
+{% include example.html code=example id='example-inline-results' %}
 
 </section>
 
 
 
-<section class="docs-section">
+<section class="docs-section" id="dropdown-results">
 
-{% include example-intro.html title='Dropdown-style results' description='Use this modified search pattern when you want the search results to appear as a dropdown list.' %}
+{% include example-intro.html title='Dropdown results' description='Use this modified search pattern when you want the search results to appear as a dropdown list.' %}
 
 
 {% capture example %}
@@ -79,7 +78,15 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html  code=example id='example-' %}
+{% include example.html  code=example id='example-dropdown-results' %}
+
+</section>
+
+
+<section class="docs-section" id="dropdown-result-metadata">
+
+{% include example-intro.html title='Dropdown result metadata' description='When appropriate, metadata can be added to each search result to give added context to the result.' %}
+
 
 {% capture example %}
 <div class="search dropdown">
@@ -101,7 +108,7 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html  code=example id='example-' %}
+{% include example.html  code=example id='example-dropdown-metadata' %}
 
 </section>
 
