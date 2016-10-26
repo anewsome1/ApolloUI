@@ -229,14 +229,14 @@
     
     <li><a href="#usage-guidelines">Usage guidelines</a></li>
     
-    <li><a href="#"></a></li>
+    <li><a href="#pagination-example">Pagination example</a></li>
     
   </ul>
 </header>
 
     <section class="docs-section" id="usage-guidelines">
   <h2>Usage Guidelines</h2>
-  <p></p>
+  <p>Pagination provides the user with a natural break from reading or scanning the contents of the dataset, and allows them to re-evaluate whether they wish to continue looking through more data, or navigate away from the page. A previous/next navigation control for a table or list view that segments large data sets into smaller views that are easier for the user to scan and parse. The control also lists which segment they are viewing out of the total number of segments, thus providing them with context and an idea of how large the data set is.</p>
   
   <div class="row pad-top">
     
@@ -244,7 +244,15 @@
       <h4 class="docs-guidelines-heading-do">Do</h4>
       <ul class="docs-guidelines-list">
         
-        <li></li>
+        <li>Use when the data set in a table or list view is large enough that it cannot be shown in its entirety within a single page view</li>
+        
+        <li>Use as part of a table or list view</li>
+        
+        <li>Use when it is unsuitable to display all the data on a single page/screen</li>
+        
+        <li>Use when the dataset is in some way ordered</li>
+        
+        <li>Use when significant technical performance can be achieved by only having to return subsets of the overall data</li>
         
       </ul>
     </div>
@@ -254,7 +262,13 @@
       <h4 class="docs-guidelines-heading-dont">Don't</h4>
       <ul class="docs-guidelines-list">
         
-        <li></li>
+        <li>Use when the data set in a table or list view can be shown in its entirety within a single page view</li>
+        
+        <li>Use as navigation for anything other than a table or list view</li>
+        
+        <li>Use when the size of the data set is undetermined or variable</li>
+        
+        <li>Use when you don’t want the user to pause for navigating to the next page</li>
         
       </ul>
     </div>
@@ -262,7 +276,17 @@
   </div>
   
 </section>
-    <section class="docs-section">
+    <section class="docs-section" id="pagination-example">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Pagination example</h2>
+  
+  
+  <p class="docs-example-description">The pagination controls have "previous" and "next" buttons on the left and right, respectively, with a page indicator in the middle.</p>
+  
+</div>
+
 
 
 
