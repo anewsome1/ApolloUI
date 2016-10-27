@@ -1,21 +1,27 @@
 ---
 layout: component
 title: Sidebar
-description:
+description: The sidebar is a secondary navigation pattern, typically used to provide navigation links to sub-pages in a complex navigation hierarchy or to different views in an application dashboard.
 guidelines:
   do:
-    -
+    - Provide links to 2nd or 3rd tier of navigation structure
+    - Use consistently between sibling pages
+    - Present secondary controls, such as a contextual form or set of controls (e.g. query filters)
   dont:
-    -
+    - Use as primary navigation (use navbar instead)
+    - Use as an alternative to a modal or dialog
 contents:
   - Usage guidelines
-  -
+  - Basic Sidebar
+  - Narrow version
+  - Narrow with icons
+  - Off-canvas filters
 ---
 <div class="docs-sidebar-examples">
 
-<section class="docs-section">
+<section class="docs-section" id="basic-sidebar">
 
-<p class="docs-example-description">Secondary navigation lists can be displayed using a sidebar.  The sidebar component is fixed to the left side of the page and will automatically scroll if its contents go beyond the viewport height.</p>
+{% include example-intro.html title='Basic sidebar' description='The sidebar component is fixed to the left side of the page and will automatically scroll if its contents go beyond the viewport height.' %}
 
 {% capture example %}
 <aside class="sidebar">
@@ -40,15 +46,51 @@ contents:
 </aside>
 {% endcapture %}
 
-  {% include example.html label='Sidebar menu' size='fourth' code=example id='example-' %}
+{% include example.html code=example id='example-sidebar-basic' %}
+
+</section>
+
+
+<section class="docs-section" id="narrow-version">
+
+{% include example-intro.html title='Narrow version' description='Add the class <code>.sidebar-sm</code> to a sidebar to make it more narrow, with larger links.' %}
+
+
+{% capture example %}
+<aside class="sidebar sidebar-sm">
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Essentials</span>
+  </a>
+  <a class="sidebar-link active" href="#0">
+    <span class="sidebar-link-title">Rating</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Identity</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Location Details</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Activity History</span>
+  </a>
+  <a class="sidebar-link" href="#0">
+    <span class="sidebar-link-title">Survey</span>
+  </a>
+</aside>
+{% endcapture %}
+
+{% include example.html  code=example id='example-sidebar-small' %}
+
 
 </section>
 
 
 
-<section class="docs-section">
+<section class="docs-section" id="narrow-with-icons">
 
-{% include example-intro.html title='Small sidebar' description='Add the class <code>.sidebar-sm</code> to a sidebar to make it more narrow, with larger links.' %}
+{% include example-intro.html title='Narrow with icons' description='Add the class <code>.sidebar-sm</code> to a sidebar to make it more narrow, with larger links.' %}
+
+
 
 {% capture example %}
 <aside class="sidebar sidebar-sm">
@@ -79,41 +121,13 @@ contents:
 </aside>
 {% endcapture %}
 
-  {% include example.html label='With icons'  size='fourth' code=example id='example-' %}
-
-
-{% capture example %}
-<aside class="sidebar sidebar-sm">
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Essentials</span>
-  </a>
-  <a class="sidebar-link active" href="#0">
-    <span class="sidebar-link-title">Rating</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Identity</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Location Details</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Activity History</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Survey</span>
-  </a>
-</aside>
-{% endcapture %}
-
-  {% include example.html label='Text only' size='fourth' code=example id='example-' %}
-
-
+{% include example.html code=example id='example-sidebar-small-icons' %}
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="off-canvas-filters">
 
-{% include example-intro.html title='Other content' description='A sidebar can be used for more than just a navigation menu.  This example shows how to create a filter panel using several different components together.' %}
+{% include example-intro.html title='Off-canvas filters' description='A sidebar can be used for more than just a navigation menu.  This example shows how to create a filter panel using several different components together.' %}
 
 {% capture example %}
 <aside class="sidebar off-canvas off-canvas-left" id="off-canvas-demo">
@@ -177,7 +191,7 @@ contents:
 <button class="btn btn-primary" data-toggle="off-canvas" data-target="#off-canvas-demo"><span class="icon icon-filter"></span> Filters</button>
 {% endcapture %}
 
-  {% include example.html label='Filter panel' size='fourth' code=example id='example-' %}
+{% include example.html code=example id='example-sidebar-offcanvas' %}
 
 </section>
 
