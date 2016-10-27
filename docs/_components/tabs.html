@@ -1,18 +1,32 @@
 ---
 layout: component
 title: Tabs
-description:
+description: Tabs are used as a metaphor for file folder tabs of related content, the experience is consistent from tab to tab with content changing within each tab. They are modular and segmented containers within a single control that are helpful in grouping and displaying content while also having the ability to occupy less screen space. They can contain forms or other interactive elements but only if there is a clear call to action and if there is a way to reset the data (such as an interactive data visualization).
 guidelines:
   do:
-    -
+    - Separate content into logical groupings
+    - Identify each tab group with easily understood labels
+    - Use when the content in each tab has a peer relationship
+    - Use if tabs are meant to be accessed in a non-sequential manner
+    - Use when space is limited
   dont:
-    -
+    - Use for a single tab
+    - Use for navigation
+    - Use when there is a hierarchical relationship between the tabs
+    - Use to represent different views of the same data
+    - Use when the user needs to access information from multiple tabs simultaneously
+    - Use if there is a need for more than 1 row of tabs
+    - Use if the tab contents will require a longer loading time
 contents:
   - Usage guidelines
-  -
+  - Basic tabs
+  - Tab bar
+  - Justified tabs
 ---
 
-<section class="docs-section">
+<section class="docs-section" id="basic-tabs">
+
+{% include example-intro.html title='Basic tabs' description='Tabs typically have three or more sections, but never less than two.  Use concise labels for each section so they fit in the available space.' %}
 
 {% capture example %}
 <!-- Nav tabs -->
@@ -35,12 +49,14 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html label='Traditional tabs' code=example id='example-' %}
+{% include example.html code=example id='example-basic-tabs' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="tab-bar">
+
+{% include example-intro.html title='Tab bar' description='The <code>.tab-bar</code> variation makes the tabs appear as a bar of button-like tabs, rather than the traditional file folder tab style.' %}
 
 {% capture example %}
 <!-- Nav tabs -->
@@ -63,12 +79,14 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html label='Tab bar' code=example id='example-' %}
+{% include example.html code=example id='example-tab-bar' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="justified-tabs">
+
+{% include example-intro.html title='Justified tabs' description='Adding <code>.tab-justified</code> makes the tabs evenly distributed to use the full available width.  This modifier works with or without the <code>.tab-bar</code> modifier.' %}
 
 {% capture example %}
 <!-- Nav tabs -->
@@ -95,6 +113,6 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html label='Justified tabs' code=example id='example-' %}
+{% include example.html code=example id='example-tab-justified' %}
 
 </section>
