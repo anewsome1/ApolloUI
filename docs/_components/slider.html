@@ -1,20 +1,23 @@
 ---
 layout: component
 title: Slider
-description:
+description: A slider allows users to choose from a contiguous range of values. This control has a bar that shows the range and a handle that allows the user to adjust the value. In some instances it can have two sliders to represent a to and from range.
 guidelines:
   do:
-    -
+    - Use when the user will benefit from instantaneous feedback
+    - Use when the value or the range does not have to be precise, and an approximation is good enough.
   dont:
-    -
+    - Use for date or time selection.
+    - Use when accessibility is a concern, particularly when designing touch interfaces.
+    - Use when the primary context of use is on a mobile device.
+    - Use to adjust audio volume.
 contents:
   - Usage guidelines
-  -
+  - One handle slider
+  - Two handle slider
 ---
 
-<section class="docs-section">
-
-<p class="docs-example-description">The slider component provides the styles for an input range control.  A slider can be useful as a volume control, date range picker, and more.</p>
+<section class="docs-section" id="one-handle-slider">
 
 {% include docs-callout.html state='info' title='Styles only' body='This pattern only provides the styles for the slider component.  See the <a href="http://foundation.zurb.com/sites/docs/slider.html">Foundation Docs</a> for an example of how to add the necessary JS to your application.  The styles that should be changed by your application JS are added inline below for reference.' %}
 
@@ -44,12 +47,12 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html size='third' code=example id='example-' %}
+{% include example.html size='third' code=example id='example-single-slider' %}
 
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="two-handle-slider">
 
 {% include example-intro.html title='Two handle slider' description='The two handle slider allows users to specify a minimum and maximum value from a predefined range.' %}
 
@@ -85,6 +88,6 @@ contents:
 </div>
 {% endcapture %}
 
-{% include example.html size='third' code=example id='example-' %}
+{% include example.html code=example id='example-double-slider' %}
 
 </section>
