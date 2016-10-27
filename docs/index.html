@@ -5,7 +5,7 @@ title: Home
 <header class="home-header billboard billboard-fluid carousel-dark">
   <div class="container">
     <h1 class="billboard-title">{{ site.title }}</h1>
-    <p class="billboard-description lead">{{ site.description }}</p>
+    <p class="billboard-description lead">Better user experience starts here.</p>
     <p><b>Version</b>: {{ site.current_version }}</p>
     <p>
       <a class="btn btn-primary" href="{{ site.gitlab_url }}">GitLab Project</a>
@@ -14,51 +14,52 @@ title: Home
 </header>
 
 <div class="container">
-
-<section class="docs-section">
-
-  {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
-
-  <div class="row">
-    <div class="col-xs-12 col-lg-6">
-      {% capture example %}npm install apollo-ui@{{ site.current_version }} --save{% endcapture %}
-      {% include example.html hide_output=true label='NPM' code=example %}
-    </div>
-    <div class="col-xs-12 col-lg-6">
-      {% capture example %}bower install apollo-ui#{{ site.current_version }} --save{% endcapture %}
-      {% include example.html hide_output=true label='Bower' code=example %}
-    </div>
+  <div class="docs-page-header">
+    <h1>Getting started</h1>
   </div>
+  <section class="docs-section">
+    {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
+
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        {% capture example %}npm install apollo-ui@{{ site.current_version }} --save{% endcapture %}
+        {% include example.html hide_output=true label='NPM' code=example %}
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        {% capture example %}bower install apollo-ui#{{ site.current_version }} --save{% endcapture %}
+        {% include example.html hide_output=true label='Bower' code=example %}
+      </div>
+    </div>
 
 
-  {% include example-intro.html title='Compiled stylesheets' description='You can easily access the compiled CSS for Apollo from our CDN.  This is the fastest way to start using Apollo styles in your project.' %}
+    {% include example-intro.html title='Compiled stylesheets' description='You can easily access the compiled CSS for Apollo from our CDN.  This is the fastest way to start using Apollo styles in your project.' %}
 
-  {% capture example %}<link rel="stylesheet" href="{{ site.cdn.css_min }}">{% endcapture %}
+    {% capture example %}<link rel="stylesheet" href="{{ site.cdn.css_min }}">{% endcapture %}
 
-  {% include example.html hide_output=true code=example %}
+    {% include example.html hide_output=true code=example %}
 
 
-  {% include example-intro.html title='Compiled JavaScript' description='Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the bottom of your page, after including a current version of jQuery as shown below.' %}
+    {% include example-intro.html title='Compiled JavaScript' description='Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the bottom of your page, after including a current version of jQuery as shown below.' %}
 
 {% capture example %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="{{ site.cdn.js_min }}"></script>
 {% endcapture %}
 
-  {% include example.html hide_output=true code=example %}
+    {% include example.html hide_output=true code=example %}
 
-{% capture starter_template %}
-<p>Be sure to have your pages set up with the latest design and development standards, including:
-  <ul>
-    <li>Using an HTML5 doctype</li>
-    <li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
-    <li>And, utilizing the viewport meta tag.</li>
-  </ul>
-</p>
-<p>Put it all together and your pages should look something like this:</p>
-{% endcapture %}
+    {% capture starter_template %}
+    <p>Be sure to have your pages set up with the latest design and development standards, including:
+      <ul>
+        <li>Using an HTML5 doctype</li>
+        <li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
+        <li>And, utilizing the viewport meta tag.</li>
+      </ul>
+    </p>
+    <p>Put it all together and your pages should look something like this:</p>
+    {% endcapture %}
 
-  {% include example-intro.html title='Starter Template' description=starter_template %}
+    {% include example-intro.html title='Starter Template' description=starter_template %}
 
 {% capture example %}
 <!DOCTYPE html>
@@ -83,7 +84,68 @@ title: Home
 </html>
 {% endcapture %}
 
-{% include example.html hide_output=true code=example %}
+    {% include example.html hide_output=true code=example %}
 
-</section>
+  </section>
+
+
+  <section class="docs-section">
+    <br><br><br>
+  </section>
+
+  <div class="docs-page-header">
+    <h1>Design resources</h1>
+  </div>
+
+  <section class="docs-section">
+    {% include example-intro.html title='UI Kits' description='Apollo is our new design language at IMS Health. It represents weightless conversation better than the Apollo orbiter. While we cannot walk every step of your journey with you, it is our sincere desire to layout principles that guide the direction of your odyssey.' %}
+    <div class="row resources-container">
+
+        <a href="http://cdn.ims.io/design/IMS-Responsive-UI-Kit_Version-1.1.1.5.sketch.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">UI Kit - Sketch<span></button>
+        </a>
+
+
+        <a href="http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">UI Kit - Illustrator</span></button>
+        </a>
+
+    </div>
+  </section>
+  <section class="docs-section">
+    {% include example-intro.html title='Color Swatches' description='The color palette is broken down into brand, support, and functional colors. Swatches are available in both Adobe and Sketch formats for your project.' %}
+    <div class="row resources-container">
+
+        <a href="http://cdn.ims.io/design/apollo-color-swatches-sketch-1.0.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">Color Swatch - Sketch</span></button>
+        </a>
+
+        <a href="http://cdn.ims.io/design/apollo-color-swatches-illustrator-1.0.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">Color Swatch - Illustrator</span></button>
+        </a>
+
+    </div>
+  </section>
+  <section class="docs-section">
+    {% include example-intro.html title='Display Fonts' description='Proxima Nova Light is our primary typeface. If using Proxima Nova at sizes smaller than 10 point use Proxima Nova Book. For print and marketing materials, Proxima Nova is used primarily for display and title case scenarios. User interfaces utilize Proxima Nova exclusively. Merriweather Light is our secondary typeface, used for body copy and large areas of non-interactive text.' %}
+    <div class="row resources-container">
+
+        <a href="http://cdn.ims.io/design/proxima-nova-font.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">Proxima Nova</span></button>
+        </a>
+
+        <a href="http://cdn.ims.io/design/merriweather-font.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">Merriweather</span></button>
+        </a>
+
+    </div>
+  </section>
+  <section class="docs-section">
+    {% include example-intro.html title='Icon Font' description='The Apollo icon font provides icons that support overarching design consistency as well as supporting a variety of icon need unique to QuintilesIMS’s needs.' %}
+    <div class="row resources-container">
+        <a href="http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip">
+          <button class="resource-download btn btn-link btn-large" type="button"><span class="icon icon-cloud-download"></span><span class="download-text">Apollo Icons</span></button>
+        </a>
+    </div>
+  </section>
 </div>
