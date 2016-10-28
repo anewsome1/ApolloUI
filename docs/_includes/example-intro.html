@@ -1,4 +1,8 @@
 <div class="docs-example-intro">
-  <h4 class="docs-example-title">{{ include.title }}</h4>
+  {% if include.title %}
+  <h2 class="docs-example-title">{{ include.title }}</h2>
+  {% endif %}
+  {% if include.description %}
   <p class="docs-example-description">{{ include.description }}</p>
+  {% endif %}
 </div>
