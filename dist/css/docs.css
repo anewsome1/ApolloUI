@@ -210,7 +210,8 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .docs.container,
+  .docs > .container {
     max-width: 89.25rem;
   }
 }

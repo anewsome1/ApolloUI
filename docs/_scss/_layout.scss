@@ -1,6 +1,7 @@
 $docs-max-width: 71.25rem + $docs-sidebar-width;
 
-.container {
+.docs.container,
+.docs > .container {
   @include media-breakpoint-only(xl) {
     max-width: $docs-max-width;
   }
