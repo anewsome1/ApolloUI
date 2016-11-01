@@ -108,19 +108,22 @@ gulp.task( 'apollo-scripts', function( callback ) {
 ///
 
 gulp.task( 'docs-scripts', function() {
-  gulp.src( path.DOCS_JS_SRC_MAIN )
-    .pipe( webpack({
-      output: {
-        filename: 'docs.js'
-      }
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( uglify() )
-    .pipe( rename({
-      suffix: '.min'
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( browserSync.stream() );
+  pump([
+      gulp.src( path.DOCS_JS_SRC_MAIN ),
+      webpack({
+        output: {
+          filename: 'docs.js'
+        }
+      }),
+      gulp.dest( path.JS_DEST ),
+      uglify(),
+      rename({
+        suffix: '.min'
+      }),
+      gulp.dest( path.JS_DEST ),
+      browserSync.stream()
+    ]
+  );
 });
 
 
