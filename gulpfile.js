@@ -9,6 +9,7 @@ const insert        = require( 'gulp-insert' );
 const browserSync   = require( 'browser-sync' );
 const webpack       = require( 'webpack-stream' );
 const uglify        = require( 'gulp-uglify' );
+const pump          = require( 'pump' );
 const sass          = require( 'gulp-sass' );
 const postcss       = require( 'gulp-postcss' );
 const autoprefixer  = require( 'autoprefixer' );
@@ -80,21 +81,25 @@ gulp.task( 'watch', function() {
 /// for bundle
 ///
 
-gulp.task( 'apollo-scripts', function() {
-  gulp.src( path.JS_SRC_MAIN )
-    .pipe( webpack({
-      output: {
-        filename: 'apollo.js'
-      }
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( uglify() )
-    .pipe( insert.prepend( strings.VERSION_COMMENT ))
-    .pipe( rename({
-      suffix: '.min'
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( browserSync.stream() );
+gulp.task( 'apollo-scripts', function( callback ) {
+  pump([
+      gulp.src( path.JS_SRC_MAIN ),
+      webpack({
+        output: {
+          filename: 'apollo.js'
+        }
+      }),
+      gulp.dest( path.JS_DEST ),
+      uglify(),
+      insert.prepend( strings.VERSION_COMMENT ),
+      rename({
+        suffix: '.min'
+      }),
+      gulp.dest( path.JS_DEST ),
+      browserSync.stream()
+    ],
+    callback
+  );
 });
 
 
@@ -103,19 +108,22 @@ gulp.task( 'apollo-scripts', function() {
 ///
 
 gulp.task( 'docs-scripts', function() {
-  gulp.src( path.DOCS_JS_SRC_MAIN )
-    .pipe( webpack({
-      output: {
-        filename: 'docs.js'
-      }
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( uglify() )
-    .pipe( rename({
-      suffix: '.min'
-    }))
-    .pipe( gulp.dest( path.JS_DEST ))
-    .pipe( browserSync.stream() );
+  pump([
+      gulp.src( path.DOCS_JS_SRC_MAIN ),
+      webpack({
+        output: {
+          filename: 'docs.js'
+        }
+      }),
+      gulp.dest( path.JS_DEST ),
+      uglify(),
+      rename({
+        suffix: '.min'
+      }),
+      gulp.dest( path.JS_DEST ),
+      browserSync.stream()
+    ]
+  );
 });
 
 
