@@ -3819,6 +3819,40 @@ input[type='radio']:checked {
   overflow-x: auto;
 }
 
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+  display: block;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-timing-function: ease;
+  transition-duration: .35s;
+  transition-property: height;
+}
+
 .dropdown-toggle {
   position: relative;
   padding: 0.5rem 1rem;
@@ -4827,20 +4861,6 @@ input[type='radio']:checked {
   color: #37dad3;
 }
 
-.accordion-block.collapse {
-  display: none;
-  height: 0;
-  visibility: hidden;
-}
-
-.accordion-block.collapsing, .accordion-block.collapse.in {
-  display: block;
-  visibility: visible;
-  overflow: hidden;
-  height: auto;
-  transition: height 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
 .accordion-header,
 .accordion-block {
   padding: 0.75rem 1.5rem;
@@ -4849,10 +4869,11 @@ input[type='radio']:checked {
 .accordion-header {
   background-color: #f7f5f4;
   cursor: pointer;
+  border-top: 0.0625rem solid #ced3d6;
 }
 
-.accordion-block + .accordion-header {
-  border-top: 0.0625rem solid #ced3d6;
+.accordion > .card:first-of-type > .accordion-header {
+  border-top: 0;
 }
 
 .accordion-title {
@@ -4874,6 +4895,13 @@ input[type='radio']:checked {
 
 .collapsed .accordion-title::before {
   transform: rotate(180deg);
+}
+
+.accordion > .card {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .billboard {

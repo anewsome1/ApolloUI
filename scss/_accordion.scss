@@ -31,23 +31,6 @@
   }
 }
 
-// Visiblility
-.accordion-block {
-  &.collapse {
-    display: none;
-    height: 0;
-    visibility: hidden;
-  }
-
-  &.collapsing,
-  &.collapse.in {
-    display: block;
-    visibility: visible;
-    overflow: hidden;
-    height: auto;
-    transition: height $transition-fast;
-  }
-}
 
 // Padding
 .accordion-header,
@@ -59,9 +42,10 @@
 .accordion-header {
   background-color: $accordion-head-bg;
   cursor: pointer;
+  border-top: $border-width solid $accordion-border-color;
 
-  .accordion-block + & {
-    border-top: $border-width solid $accordion-border-color;
+  .accordion > .card:first-of-type > & {
+    border-top: 0; // Reset border for first section's header
   }
 }
 
@@ -88,4 +72,11 @@
   }
 }
 
+// Reset card styles (`.card` class required in markup by Bootstrap JS plugin)
+.accordion > .card {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
 
