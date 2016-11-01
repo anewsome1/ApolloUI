@@ -42,7 +42,7 @@
     "pump": "^1.0.1",
     "shelljs": "^0.7.5",
     "theo": "^4.2.1",
-    "webpack-stream": "^3.1.0"
+    "webpack-stream": "^3.2.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.5"
