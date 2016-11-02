@@ -3060,6 +3060,7 @@ dd {
 
 .alert.alert-bottom, .alert-bottom.form-msg {
   margin-top: 2.25rem;
+  margin-bottom: 0;
 }
 
 .alert .close, .form-msg .close {
