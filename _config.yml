@@ -1,6 +1,7 @@
 # Site settings
 title: Apollo UI
 description: HTML and CSS for the Apollo visual language.
+current_version: 1.0.0-beta.4
 
 # Build settings
 source:         docs
@@ -35,9 +36,21 @@ collections:
     order: 1
     default_page: colors.html
 
-current_version: 1.0.0-beta.4
+
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
 issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
+
+ui_kit:
+  sketch: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.sketch.zip
+  illustrator: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+
+colors:
+  sketch: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
+  illustrator: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
+
+fonts:
+  merriweather: http://cdn.ims.io/design/drb-downloads/merriweather-font.zip
+  apollo: http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip
 
 cdn:
   css: //cdn.ims.io/design/css/1.0.0-beta.4/apollo.css
