@@ -1,0 +1,15 @@
+.resources-container {
+  margin-bottom: 1rem;
+}
+
+.resource-download {
+  display: flex;
+  flex-direction: resources-container;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin-left: 1rem;
+
+  .download-text {
+    margin-left: .5rem;
+  }
+}

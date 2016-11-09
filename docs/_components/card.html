@@ -1,0 +1,237 @@
+---
+layout: component
+title: Card
+description: A card is a flexible and extensible content container. It includes options for headers and footers and a wide variety of content. Like many other components, cards are fluid. Their width can be organized by putting them inside grid columns. If you want your cards to be equal height, use a card deck or ensure that the card content is the same height. The card also acts as a link to a detailed view of the content. In fact, it should always drill down to more detailed information.
+guidelines:
+  do:
+    - Use to demonstrate a set of KPIs
+    - Use to provide at-a-glance content
+    - Use in the context of an Overview or Dashboard
+  dont:
+    - Use for featured content
+    - Use for extensive content
+    - Use as a button for executing a command
+    - Use as primary navigation
+contents:
+  - Usage guidelines
+  - Cards with grid
+  - Card deck
+---
+
+<section class="docs-section" id="cards-with-grid">
+
+{% include example-intro.html title='Cards with grid' description='Cards are fluid width and can be organized by putting them inside grid columns, as shown here.  If you want your cards to be equal height, use a card deck or ensure that the card content is the same height.' %}
+
+{% capture example %}
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card card-text-center">
+      <div class="card-header">
+        <h4 class="card-title">First card</h4>
+        <p class="card-caption">Some pretty neat stuff.</p>
+      </div>
+      <div class="card-block">
+        <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card">
+      <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+      <div class="card-header">
+        <h3 class="card-title">Second card</h3>
+        <p class="card-caption">This one is different.</p>
+      </div>
+      <div class="card-block">
+        <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card card-text-center">
+      <div class="card-header">
+        <h4 class="card-title">Third card</h4>
+        <p class="card-caption">Not at all like the others.</p>
+      </div>
+      <div class="card-block">
+        <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example id='example-card-grid' %}
+
+</section>
+
+
+<section class="docs-section" id="card-deck">
+
+{% include example-intro.html title='Card deck' description='Use the card deck to make a group of cards equal height.' %}
+
+{% capture example %}
+
+<!-- Only include .card-deck-wrapper if flexbox is disabled -->
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">First card</h4>
+        <p class="card-caption">Some pretty neat stuff.</p>
+      </div>
+      <div class="card-block">
+        <p>Because cards are fluid-width, any sort of content can be put inside a card.  Just keep in mind that fluid images will scale to fit and may get very small, depending on how much space you have allocated for the card.</p>
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+      <div class="card-block">
+        <h3 class="card-title">Second card</h3>
+        <p class="card-caption">This one is different.</p>
+        <p>Notice how the title is different on this card.  Only titles inside <code>.card-header</code> are given a predetermined color and size.</p>
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Third card</h4>
+        <p class="card-caption">Not at all like the others.</p>
+      </div>
+      <div class="card-block">
+        <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+      </div>
+      <div class="card-footer">
+        <div class="card-cta">
+          <button class="btn btn-primary">See data</button>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-link">
+            <span class="icon icon-star"></span>
+          </button>
+          <button class="btn btn-link">
+            <span class="icon icon-campaign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% include example.html code=example id='example-card-deck' %}
+
+</section>
+
+
+
+{% comment %}
+<!-- TODO: Remove this example and its corresponding styles if these variants aren't being used anymore -->
+
+<section class="docs-section">
+
+{% include example-intro.html title='Card states' description='' %}
+
+{% capture example %}
+<div class="card-deck">
+  <div class="card card-info">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Information</h4>
+      <p>Interesting data to look at.</p>
+    </div>
+  </div>
+  <div class="card card-success">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Success</h4>
+      <p>Useful for positive metrics.</p>
+    </div>
+  </div>
+  <div class="card card-warning">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Warning</h4>
+      <p>This one may be at risk.</p>
+    </div>
+  </div>
+  <div class="card card-danger">
+    <img class="img-fluid" src="http://placehold.it/640x480/f5f5f5">
+    <div class="card-block">
+      <h4 class="card-title">Danger!</h4>
+      <p>This item needs immediate attention.</p>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+{% include example.html code=example id='example-card-states' %}
+
+</section>
+
+
+
+{% endcomment %}

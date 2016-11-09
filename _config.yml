@@ -1,6 +1,7 @@
 # Site settings
 title: Apollo UI
 description: HTML and CSS for the Apollo visual language.
+current_version: 1.0.0
 
 # Build settings
 source:         docs
@@ -11,6 +12,7 @@ baseurl:        ""
 # url:
 encoding:       UTF-8
 # exclude:
+# include:
 # permalink:
 markdown:       kramdown
 highlighter:    rouge
@@ -18,24 +20,40 @@ highlighter:    rouge
 kramdown:
   auto_ids:     true
 
-# exclude:
-#   - index.html
+collections:
+  components:
+    output: true
+    title: Components
+    order: 2
+    default_page: accordion.html
+  design:
+    output: true
+    title: Design Resources
+    order: 3
+  scaffolding:
+    output: true
+    title: Scaffolding
+    order: 1
+    default_page: colors.html
 
-# include:
-#   - components
 
-# collections:
-#   - components
-#   - styles
-#   - icons
-#   - page-templates
-
-current_version: 1.0.0-beta.4
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
 issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
 
+ui_kit:
+  sketch: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.sketch.zip
+  illustrator: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+
+colors:
+  sketch: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
+  illustrator: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
+
+fonts:
+  merriweather: http://cdn.ims.io/design/drb-downloads/merriweather-font.zip
+  apollo: http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip
+
 cdn:
-  css: //cdn.ims.io/design/css/1.0.0-beta.4/apollo.css
-  css_min: //cdn.ims.io/design/css/1.0.0-beta.4/apollo.min.css
-  js: //cdn.ims.io/design/js/1.0.0-beta.4/apollo.js
-  js_min: //cdn.ims.io/design/js/1.0.0-beta.4/apollo.min.js
+  css: //cdn.ims.io/design/css/1.0.0/apollo.css
+  css_min: //cdn.ims.io/design/css/1.0.0/apollo.min.css
+  js: //cdn.ims.io/design/js/1.0.0/apollo.js
+  js_min: //cdn.ims.io/design/js/1.0.0/apollo.min.js

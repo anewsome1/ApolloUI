@@ -1,18 +1,20 @@
-{% include path.html %}
-{% assign site_sections = site.pages | group_by: 'category' | reverse %}
-{% for group in site_sections %}
-<h3 class="docs-page-nav-title">{{ group.name | capitalize }}</h3>
+{% include directory.html %}
+
+{% for collection in site.collections %}
+{% if collection.label == directory %}
+
+
+<h3 class="docs-page-nav-title">{{ collection.title | capitalize }}</h3>
 <ul class="docs-page-nav" role="navigation">
-  {% assign items_sorted = group.items | sort: 'order', 'last' %}
-  {% for item in items_sorted %}
+  {% for item in collection.docs %}
     {% assign is_active = nil %}
     {% if page.url == item.url %}
       {% assign is_active = 'active' %}
     {% endif %}
     <li class="docs-page-nav-item {{is_active}}">
-      <a href="{{ base }}{{ item.url }}">{{ item.title | capitalize }}</a>
+      <a href="{{ item.url }}">{{ item.title | capitalize }}</a>
     </li>
   {% endfor %}
 </ul>
+{% endif %}
 {% endfor %}
-

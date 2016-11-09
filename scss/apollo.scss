@@ -1,5 +1,5 @@
 /*!
- * Apollo CSS v1.0.0-beta.4
+ * Apollo CSS v1.0.0
  */
 
 // Scaffolding
@@ -27,6 +27,7 @@
 @import 'tables';
 
 // Components
+@import 'bootstrap/scss/animation';
 @import 'dropdown';
 @import 'nav';
 @import 'navbar';
@@ -40,7 +41,6 @@
 @import 'carousel';
 @import 'login';
 @import 'search';
-@import 'off-canvas';
 @import 'loading';
 @import 'empty-space';
 @import 'pager';

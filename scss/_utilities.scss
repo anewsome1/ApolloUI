@@ -1,3 +1,7 @@
+///
+/// Close icon (x)
+///
+
 .close {
   @extend .icon;
 
@@ -8,6 +12,7 @@
     content: map-get($_icons-map, 'close');
   }
 }
+
 
 ///
 /// Padding and margins
@@ -35,4 +40,14 @@
   &-y {
     @extend .pad-top, .pad-bottom;
   }
+}
+
+///
+/// Pointer cursor for components that use data-target="..."
+///
+
+[data-target],
+[data-toggle],
+[data-dismiss] {
+  cursor: pointer;
 }
