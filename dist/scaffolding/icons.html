@@ -125,6 +125,16 @@
   <h1>Icons</h1>
   <ul class="nav docs-page-contents">
     
+    <li><a href="#basic-usage">Basic usage</a></li>
+    
+    <li><a href="#adding-color">Adding color</a></li>
+    
+    <li><a href="#adjusting-size">Adjusting size</a></li>
+    
+    <li><a href="#vertical-alignment">Vertical alignment</a></li>
+    
+    <li><a href="#icon-list">Icon list</a></li>
+    
   </ul>
 </header>
 
@@ -133,10 +143,10 @@
   
   
 </section>
-    <section class="docs-section">
+    <section class="docs-section" id="basic-usage">
 <div class="docs-example-intro">
   
-  <h2 class="docs-example-title">Basic icons</h2>
+  <h2 class="docs-example-title">Basic usage</h2>
   
   
   <p class="docs-example-description">Add Apollo icons to a page using the <code>.icon</code> base class, followed by the character-specific <code>.icon-{name}</code> modifier class.</p>
@@ -177,10 +187,10 @@
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="adding-color">
 <div class="docs-example-intro">
   
-  <h2 class="docs-example-title">Icon color</h2>
+  <h2 class="docs-example-title">Adding color</h2>
   
   
   <p class="docs-example-description">Change the color of an icon using the <code>color</code> property, as you would for changing the color of text.</p>
@@ -221,10 +231,10 @@
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="adjusting-size">
 <div class="docs-example-intro">
   
-  <h2 class="docs-example-title">Icon size</h2>
+  <h2 class="docs-example-title">Adjusting size</h2>
   
   
   <p class="docs-example-description">To change the size of an icon, simply change the <code>font-size</code> property of the icon itself or its parent element.</p>
@@ -270,7 +280,7 @@
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="vertical-alignment">
 <div class="docs-example-intro">
   
   <h2 class="docs-example-title">Vertical alignment</h2>
@@ -282,7 +292,7 @@
 
 
 
-<h5 class="docs-example-label">Default alignment</h5>
+
 
 <div class="docs-example">
   
@@ -290,43 +300,24 @@
   
   
   
-  <a href="#0">
-    <span class="icon icon-information-circle"></span>
-    Request information
-  </a>
+<!-- Default alignment -->
+<a href="#0">
+  <span class="icon icon-information-circle"></span>
+  Request information
+</a>
 
-  
-</div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-information-circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Request information
-  <span class="nt">&lt;/a&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-
-
-<h5 class="docs-example-label">Middle alignment</h5>
-
-<div class="docs-example">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
+<!-- Middle aligned -->
 <h3>
   <span class="icon icon-search" style="vertical-align: middle;"></span>
   Searching...
 </h3>
 
+<!-- Alignment adjusted with `position: relative` -->
+<button class="btn btn-primary btn-lg">
+  <span class="icon icon-campaign" style="position: relative; top: 2px;"></span>
+  Send
+</button>
+
   
 </div>
 </div>
@@ -334,47 +325,27 @@
   <div class="docs-example-code">
     
     <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default alignment --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-information-circle"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Request information
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="c">&lt;!-- Middle aligned --&gt;</span>
+<span class="nt">&lt;h3&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-search"</span> <span class="na">style=</span><span class="s">"vertical-align: middle;"</span><span class="nt">&gt;&lt;/span&gt;</span>
   Searching...
-<span class="nt">&lt;/h3&gt;</span></code></pre></figure>
+<span class="nt">&lt;/h3&gt;</span>
+
+<span class="c">&lt;!-- Alignment adjusted with `position: relative` --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span> <span class="na">style=</span><span class="s">"position: relative; top: 2px;"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Send
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
     </div>
   </div>
 </div>
-
-
-
-
-<h5 class="docs-example-label">Relative positioning</h5>
-
-<div class="docs-example">
-  
-  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
-  
-  
-  
-  <button class="btn btn-primary btn-lg">
-    <span class="icon icon-campaign" style="position: relative; top: 2px;"></span>
-    Send
-  </button>
-
-  
-</div>
-</div>
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-campaign"</span> <span class="na">style=</span><span class="s">"position: relative; top: 2px;"</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Send
-  <span class="nt">&lt;/button&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
 
 
 </section>

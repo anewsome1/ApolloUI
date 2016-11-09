@@ -1,9 +1,15 @@
 ---
 layout: component
 title: Icons
+contents:
+  - Basic usage
+  - Adding color
+  - Adjusting size
+  - Vertical alignment
+  - Icon list
 ---
-<section class="docs-section">
-{% include example-intro.html title='Basic icons' description='Add Apollo icons to a page using the <code>.icon</code> base class, followed by the character-specific <code>.icon-{name}</code> modifier class.' %}
+<section class="docs-section" id="basic-usage">
+{% include example-intro.html title='Basic usage' description='Add Apollo icons to a page using the <code>.icon</code> base class, followed by the character-specific <code>.icon-{name}</code> modifier class.' %}
 {% capture example %}
 <span class="icon icon-information-circle"></span>
 <span class="icon icon-help-circle"></span>
@@ -15,8 +21,8 @@ title: Icons
 </section>
 
 
-<section class="docs-section">
-{% include example-intro.html title='Icon color' description='Change the color of an icon using the <code>color</code> property, as you would for changing the color of text.' %}
+<section class="docs-section" id="adding-color">
+{% include example-intro.html title='Adding color' description='Change the color of an icon using the <code>color</code> property, as you would for changing the color of text.' %}
 {% capture example %}
 <span class="icon icon-information-circle text-primary"></span>
 <span class="icon icon-help-circle text-info"></span>
@@ -28,8 +34,8 @@ title: Icons
 </section>
 
 
-<section class="docs-section">
-{% include example-intro.html title='Icon size' description='To change the size of an icon, simply change the <code>font-size</code> property of the icon itself or its parent element.' %}
+<section class="docs-section" id="adjusting-size">
+{% include example-intro.html title='Adjusting size' description='To change the size of an icon, simply change the <code>font-size</code> property of the icon itself or its parent element.' %}
 {% capture example %}
 <!-- Change size of icon -->
 <span class="icon icon-help-circle" style="font-size: 64px;"></span>
@@ -44,32 +50,30 @@ title: Icons
 </section>
 
 
-<section class="docs-section">
+<section class="docs-section" id="vertical-alignment">
 {% include example-intro.html title='Vertical alignment' description='Icons are aligned with inline text using the <code>vertical-align</code> property.  In most cases, the default alignment works well, but here are some examples of how to modify the alignment using different <code>vertical-align</code> values or relative positioning.' %}
-{% capture example %}
-  <a href="#0">
-    <span class="icon icon-information-circle"></span>
-    Request information
-  </a>
-{% endcapture %}
-{% include example.html size='fourth' label='Default alignment' code=example %}
 
 {% capture example %}
+<!-- Default alignment -->
+<a href="#0">
+  <span class="icon icon-information-circle"></span>
+  Request information
+</a>
+
+<!-- Middle aligned -->
 <h3>
   <span class="icon icon-search" style="vertical-align: middle;"></span>
   Searching...
 </h3>
-{% endcapture %}
-{% include example.html size='fourth' label='Middle alignment' code=example %}
 
-{% capture example %}
-  <button class="btn btn-primary btn-lg">
-    <span class="icon icon-campaign" style="position: relative; top: 2px;"></span>
-    Send
-  </button>
+<!-- Alignment adjusted with `position: relative` -->
+<button class="btn btn-primary btn-lg">
+  <span class="icon icon-campaign" style="position: relative; top: 2px;"></span>
+  Send
+</button>
 {% endcapture %}
-{% include example.html size='fourth' label='Relative positioning' code=example %}
 
+{% include example.html code=example %}
 
 </section>
 
