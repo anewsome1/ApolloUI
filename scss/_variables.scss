@@ -108,21 +108,21 @@ $font-size-lg:                1.25rem;  // ~20px
 $font-size-sm:                .875rem;  // ~14px
 $font-size-xs:                .75rem;   // ~12px
 
-$font-size-hero:              4rem;     // ~64px
+$font-size-hero:              3.75rem;  // ~60px
 $font-size-h1:                2.25rem;  // ~36px
 $font-size-h2:                1.5rem;   // ~24px
-$font-size-h3:                $font-size-base;
+$font-size-h3:                1.125rem; // ~18px
 $font-size-h4:                $font-size-sm;
 $font-size-h5:                $font-size-xs;
 $font-size-h6:                $font-size-xs;
 
 
 // Weights
-$font-thin:                   200;
 $font-light:                  300;
 $font-normal:                 400;
 $font-semi-bold:              600;
-$font-weight-base:            $font-light;
+$font-bold:                   700;
+$font-weight-base:            $font-normal;
 
 $line-height:                 1.5;
 
@@ -132,8 +132,8 @@ $headings-font-weight:        $font-normal;
 $headings-line-height:        $line-height;
 $headings-color:              inherit;
 
-$lead-font-size:              1.25rem;
-$lead-font-weight:            $font-light;
+$lead-font-size:              $font-size-lg;
+$lead-font-weight:            $font-normal;
 
 $text-muted:                  $charcoal-50;
 

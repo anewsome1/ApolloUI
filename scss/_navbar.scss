@@ -48,11 +48,6 @@
 }
 
 
-
-
-
-
-
 ///
 /// Brand (application name)
 ///
@@ -60,7 +55,7 @@
 .navbar-brand {
   margin-right: 3rem;
   font-size: $navbar-brand-font-size;
-  font-weight: $font-thin;
+  font-weight: $font-light;
   white-space: nowrap;
 
   @if $enable-flex {
