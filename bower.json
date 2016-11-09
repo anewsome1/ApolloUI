@@ -1,6 +1,6 @@
 {
   "name": "apollo-ui",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0",
   "description": "HTML and CSS framework to implement the Apollo visual language.",
   "main": "gulpfile.js",
   "authors": [

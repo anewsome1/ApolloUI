@@ -2,6 +2,24 @@
 
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [v1.0.0] - 2016-11-09
+
+### Changed
+- Redesigned documentation site
+- Sorted component navigation list alphabetically
+- Updated font sizes and weights throughout
+- Upgraded Bootstrap to v4.0.0-alpha.5
+- Bumped all other NPM dependencies to latest stable version
+- Off-canvas example moved to Sidebar component
+
+### Added
+- UX guidelines for all components
+- Page contents navigation for all pages
+- Design resources page (download AI/Sketch assets)
+- "Copy Code" button for all code examples
+
+
 ## [v1.0.0-beta.4] - 2016-09-02
 
 ### Changed
