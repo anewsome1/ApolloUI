@@ -101,13 +101,13 @@
   ///
 
   &:not(.tab-bar) {
-    border-left: $border-width solid $charcoal-25;
+    border-left: $border-width solid $gray-200;
 
     .nav-link {
       padding: $btn-lg-padding-y ($btn-padding-x * 2);
       border-width: $border-width $border-width 0 0;
       border-style: solid;
-      border-color: $charcoal-25;
+      border-color: $gray-200;
       border-left: 0;
       color: $body-color;
 
@@ -120,7 +120,7 @@
         color: $link-color;
 
         .bg-dark & {
-          color: $teal;
+          color: $atmosphere-300;
         }
       }
 
@@ -137,7 +137,7 @@
 
           .bg-dark & {
             // border-color: $teal;
-            color: $teal;
+            color: $atmosphere-300;
           }
         }
       }
@@ -145,7 +145,7 @@
 
     + .tab-content {
       padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
-      border: $border-width solid $charcoal-25;
+      border: $border-width solid $gray-200;
     }
 
     @include media-breakpoint-up(sm) {
