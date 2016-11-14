@@ -264,9 +264,9 @@ $modal-sm:                    22.5rem;  // ~360px
 /// Shared component values
 ///
 
-$component-height:            2.5rem;
-$component-height-sm:         1.875rem;
-$component-height-lg:         3.125rem;
+$component-height-sm:         1.875rem; // 30px
+$component-height:            2.5rem;   // 40px
+$component-height-lg:         3.125rem; // 50px
 
 
 ///
@@ -337,9 +337,7 @@ $input-msg-shadow-height:        .625rem;  // ~10px
 /// Buttons
 ///
 
-// $btn-border-width:    $border-width;
-$btn-min-width:       6.25rem;  // ~100px
-$btn-padding-x:       1.5rem; // ~24px
+$btn-padding-x:       .9375rem; // ~15px
 $btn-padding-y:       $input-padding-y - $border-width;
 $btn-margin-x:        1.125rem;
 $btn-line-height:     1;
@@ -347,10 +345,8 @@ $btn-line-height:     1;
 $btn-sm-padding-x:    1.25rem; // ~20px
 $btn-sm-padding-y:    $input-sm-padding-y - $border-width;  // Padding makes sm button ~30px tall
 
-$btn-lg-min-width:    8.75rem;  // ~140px
 $btn-lg-padding-y:    $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
 
-$btn-pulse-size:      8.75rem;
 $btn-link-padding-x:  .5rem;
 $btn-link-disabled:   $gray-500;
 
