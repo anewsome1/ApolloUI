@@ -5,11 +5,11 @@
 /// Colors
 ///
 
-$brand-primary:               $blue;
-$brand-info:                  $atmosphere;
-$brand-success:               $green;
-$brand-warning:               $yellow;
-$brand-danger:                $coral;
+$brand-primary:               $water-300;
+$brand-info:                  $atmosphere-300;
+$brand-success:               $green-300;
+$brand-warning:               $yellow-300;
+$brand-danger:                $red-300;
 
 
 // Options
@@ -39,16 +39,16 @@ $border-width:               .0625rem;
 // Settings for the `<body>` element.
 
 $body-bg:                    #fff;
-$body-color:                 $charcoal;
+$body-color:                 $gray-700;
 
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                  $blue;
+$link-color:                  $brand-primary;
 $link-decoration:             none;
-$link-hover-color:            $blue-125;
+$link-hover-color:            $water-400;
 $link-hover-decoration:       none;
 
 
@@ -135,15 +135,15 @@ $headings-color:              inherit;
 $lead-font-size:              $font-size-lg;
 $lead-font-weight:            $font-normal;
 
-$text-muted:                  $charcoal-50;
+$text-muted:                  $gray-500;
 
-$abbr-border-color:           $charcoal-50;
+$abbr-border-color:           $gray-500;
 
-$blockquote-small-color:      $charcoal-50;
+$blockquote-small-color:      $gray-500;
 $blockquote-font-size:        ($font-size-base * 1.25);
-$blockquote-border-color:     $charcoal-25;
+$blockquote-border-color:     $gray-200;
 
-$hr-border-color:             rgba($charcoal-50, .15);
+$hr-border-color:             rgba($gray-500, .15);
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              $font-semi-bold;
@@ -206,7 +206,7 @@ $alert-states: (
   ),
   warning: (
     bg: $brand-warning,
-    color: $charcoal,
+    color: $body-color,
     icon: 'alert-circle'
   ),
   danger: (
@@ -223,8 +223,8 @@ $alert-states: (
 $card-spacer-x:             $grid-gutter-width;
 $card-spacer-y:             $card-spacer-x * 2 / 3;
 $card-border-width:         $border-width;
-$card-border-color:         $charcoal-25;
-$card-cap-bg:               $neutral;
+$card-border-color:         $gray-200;
+$card-cap-bg:               $gray-50;
 $card-cap-height:           3.75rem;
 $card-bg:                   #fff;
 
@@ -235,12 +235,12 @@ $card-bg:                   #fff;
 
 $accordion-head-font-weight:    $font-normal;
 $accordion-head-font-size:      $font-size-sm;
-$accordion-head-bg:             $neutral;
+$accordion-head-bg:             $gray-50;
 $accordion-head-pad-y:          .75rem;  // Makes total height ~42px
 $accordion-head-pad-x:          1.5rem;
-$accordion-border-color:        $charcoal-25;
-$accordion-dark-header-bg:      $charcoal;
-$accordion-dark-active-bg:      $charcoal-125;
+$accordion-border-color:        $gray-200;
+$accordion-dark-header-bg:      $gray-700;
+$accordion-dark-active-bg:      $gray-700;
 
 
 ///
@@ -252,7 +252,7 @@ $modal-inner-padding:         $grid-gutter-width;
 $modal-content-bg:            #fff;
 $modal-backdrop-bg:           #000;
 $modal-backdrop-opacity:      .4;
-$modal-header-border-color:   $neutral;
+$modal-header-border-color:   $gray-50;
 $modal-footer-border-color:   $modal-header-border-color;
 
 $modal-lg:                    56.25rem; // ~900px
@@ -278,12 +278,12 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       #fff;
-$input-bg-disabled:              darken($neutral, 2.5%);
+$input-bg-disabled:              darken($gray-50, 2.5%);
 $input-bg-focus:                 #fff;
 
-$input-color:                    $charcoal;
-$input-color-disabled:           $charcoal-50;
-$input-border-color:             $charcoal-25;
+$input-color:                    $gray-700;
+$input-color-disabled:           $gray-500;
+$input-border-color:             $gray-200;
 $input-btn-border-width:         $border-width; // For form controls and buttons
 
 $input-border-radius:            $border-radius;
@@ -294,7 +294,7 @@ $input-border-focus:             transparent;
 $input-box-shadow-focus:         $shadow-hover;
 $input-outline:                  $border-width solid transparent;
 
-$input-color-placeholder:        $charcoal-50;
+$input-color-placeholder:        $gray-500;
 
 $input-sm-padding-x:             $input-padding-x;
 $input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size-base);
@@ -308,7 +308,7 @@ $input-height-sm:                $component-height-sm;
 
 $form-group-margin-bottom:       $spacer-y;
 
-$input-group-addon-bg:           $charcoal-25;
+$input-group-addon-bg:           $gray-200;
 $input-group-addon-border-color: $input-border-color;
 
 $cursor-disabled:                not-allowed;
@@ -316,13 +316,13 @@ $cursor-disabled:                not-allowed;
 // Data URI encoded images
 $svg-check-blue:                 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjazwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2siIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzMsNjAgTDMzLDMwIEwyMywzMCBMMjMsNjUgTDIzLDcwIEw5Nyw3MCBMOTcsNjAgTDMzLDYwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuMDAwMDAwLCA1MC4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTYwLjAwMDAwMCwgLTUwLjAwMDAwMCkgIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 $svg-check-solid-blue:           url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGVjay1zb2xpZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJHZW5lcmljLUljb25zIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQiIGZpbGw9IiMyOTc0RTkiPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEwyNi43NjU5ODEzLDU0Ljk0OTc0NzUgTDE5LjY5NDkxMzUsNjIuMDIwODE1MyBMNDQuNDQzNjUwOCw4Ni43Njk1NTI2IEw0Ny45NzkxODQ3LDkwLjMwNTA4NjUgTDEwMC4zMDUwODcsMzcuOTc5MTg0NyBMOTMuMjM0MDE4NywzMC45MDgxMTY5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
-$svg-check-solid-teal:           url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMzkuMSAoMzE3MjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmNoZWNrLXNvbGlkLXRlYWw8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQtdGVhbCIgZmlsbD0iIzM3REFEMyI+CiAgICAgICAgICAgIDxnIGlkPSJHZW5lcmljLUljb25zIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJjaGVjay1zb2xpZCI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQ3Ljk3OTE4NDcsNzYuMTYyOTUwOSBMMjYuNzY1OTgxMyw1NC45NDk3NDc1IEwxOS42OTQ5MTM1LDYyLjAyMDgxNTMgTDQ0LjQ0MzY1MDgsODYuNzY5NTUyNiBMNDcuOTc5MTg0Nyw5MC4zMDUwODY1IEwxMDAuMzA1MDg3LDM3Ljk3OTE4NDcgTDkzLjIzNDAxODcsMzAuOTA4MTE2OSBMNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBMMCwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+// $svg-check-solid-teal:           url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMzkuMSAoMzE3MjApIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmNoZWNrLXNvbGlkLXRlYWw8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iY2hlY2stc29saWQtdGVhbCIgZmlsbD0iIzM3REFEMyI+CiAgICAgICAgICAgIDxnIGlkPSJHZW5lcmljLUljb25zIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJjaGVjay1zb2xpZCI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTQ3Ljk3OTE4NDcsNzYuMTYyOTUwOSBMMjYuNzY1OTgxMyw1NC45NDk3NDc1IEwxOS42OTQ5MTM1LDYyLjAyMDgxNTMgTDQ0LjQ0MzY1MDgsODYuNzY5NTUyNiBMNDcuOTc5MTg0Nyw5MC4zMDUwODY1IEwxMDAuMzA1MDg3LDM3Ljk3OTE4NDcgTDkzLjIzNDAxODcsMzAuOTA4MTE2OSBMNDcuOTc5MTg0Nyw3Ni4xNjI5NTA5IEw0Ny45NzkxODQ3LDc2LjE2Mjk1MDkgWiBNMCwwIEwxMjAsMCBMMTIwLDEyMCBMMCwxMjAgTDAsMCBMMCwwIFoiIGlkPSJDb21iaW5lZC1TaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 $svg-box-gray:                   url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy43LjEgKDI4MjE1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5zcXVhcmU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9InNxdWFyZSIgZmlsbD0iI0NDQ0NDQyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLDAgTDEyMCwwIEwxMjAsMTIwIEwwLDEyMCBMMCwwIFogTTEwLDEwIEwxMTAsMTAgTDExMCwxMTAgTDEwLDExMCBMMTAsMTAgWiIgaWQ9IlJlY3RhbmdsZS0yMDYiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
 $svg-chevron-down-blue:          url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjEyMHB4IiBoZWlnaHQ9IjEyMHB4IiB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy42LjEgKDI2MzEzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iR2VuZXJpYy1JY29ucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImNoZXZyb24tZG93biIgZmlsbD0iIzI5NzVFOSI+CiAgICAgICAgICAgIDxnIGlkPSJleHBhbmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1LjAwMDAwMCwgMzQuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTAuMyw3LjcxMjc5NTAzIEw4LjA3MzkxMzA0LDAuOTc1NDAzNzI3IEw0NSwzNy41NDk4MTM3IEw4MS45MjYwODcsMC4wMTI5MTkyNTQ3IEw4OS43LDcuNzEyNzk1MDMgTDQ1LDUxLjk4NzA4MDcgTDAuMyw3LjcxMjc5NTAzIFoiIGlkPSJTaGFwZSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 
 // Checkbox
 $checkbox-size:                  1.125rem;
-$checkbox-color:                 $blue;
+$checkbox-color:                 $brand-primary;
 
 // Error message
 $input-msg-font-size:            $font-size-sm;
@@ -352,27 +352,27 @@ $btn-lg-padding-y:    $input-lg-padding-y - $border-width; // Padding makes lg b
 
 $btn-pulse-size:      8.75rem;
 $btn-link-padding-x:  .5rem;
-$btn-link-disabled:   $charcoal-50;
+$btn-link-disabled:   $gray-500;
 
 $btn-variants: (
   primary: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $blue-150,
+    bg-active: $link-hover-color,
     color-active: #fff,
-    bg-disabled: $blue-25,
-    color-disabled: $charcoal-50
+    bg-disabled: $water-50,
+    color-disabled: $gray-500
   ),
   secondary: (
     bg: #fff,
-    color: $charcoal,
-    border-color: $charcoal-25,
-    bg-active: $charcoal-50,
+    color: $body-color,
+    border-color: $gray-50,
+    bg-active: $gray-500,
     color-active: #fff,
     bg-disabled: #fff,
-    color-disabled: $charcoal-50,
-    border-disabled: darken($neutral, 2.5%) // TODO: Update with palette color when designs get updated
+    color-disabled: $gray-500,
+    border-disabled: darken($gray-50, 2.5%) // TODO: Update with palette color when designs get updated
   )
 );
 
@@ -385,10 +385,10 @@ $toggle-height:         2.75rem;
 $toggle-font-size:      $font-size-base;
 $toggle-padding-y:      calc-padding-y($toggle-height, $toggle-font-size);
 $toggle-padding-x:      $btn-padding-x;
-$toggle-border-color:   $charcoal-25;
+$toggle-border-color:   $gray-200;
 $toggle-default-bg:     #fff;
-$toggle-selected-bg:    $blue;
-$toggle-active-bg:      $blue-125;
+$toggle-selected-bg:    $brand-primary;
+$toggle-active-bg:      $link-hover-color;
 
 
 // Tables
@@ -399,18 +399,18 @@ $table-cell-padding-x:          1.5rem;
 $table-cell-padding-y:          .85rem;
 $table-sm-cell-padding-y:       .5rem;
 
-$table-header-bg:               $neutral;
-$table-header-color:            $charcoal;
+$table-header-bg:               $gray-50;
+$table-header-color:            $gray-700;
 $table-header-padding-y:        1rem;
-$table-header-sorted-bg:        $charcoal-25;
+$table-header-sorted-bg:        $gray-200;
 
 $table-bg:                      transparent;
-$table-bg-accent:               $neutral-25;
-$table-bg-hover:                $atmosphere-25;
-$table-bg-active:               $atmosphere; // Lightened using rgba in implementation
+$table-bg-accent:               $gray-50;
+$table-bg-hover:                $atmosphere-50;
+$table-bg-active:               $atmosphere-300; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
-$table-border-color:            $charcoal-25;
+$table-border-color:            $gray-200;
 $table-border-color-hover:      $link-color;
 
 $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
@@ -490,7 +490,7 @@ $profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
 /// Command bar
 ///
 
-$command-bar-bg:          $neutral;
+$command-bar-bg:          $gray-50;
 $command-bar-padding-y:   .5rem;
 
 
@@ -499,13 +499,13 @@ $command-bar-padding-y:   .5rem;
 ///
 
 $sidebar-width:           15rem;
-$sidebar-bg:              $charcoal;
+$sidebar-bg:              $gray-700;
 $sidebar-link-color:      #fff;
 $sidebar-padding-x:       1.5rem;
 $sidebar-padding-y:       calc-padding-y(2.2rem, $font-size-sm);
 $sidebar-icon-size:       .875rem;
-$sidebar-active-color:    $teal;
-$sidebar-active-bg:       $charcoal-125;
+$sidebar-active-color:    $atmosphere-300;
+$sidebar-active-bg:       $gray-700;
 $sidebar-hover-bg:        rgba($sidebar-active-bg, .5);
 
 
@@ -525,11 +525,11 @@ $login-width:   28rem;
 
 $empty-space-padding-y:         4.5rem;
 $empty-space-padding-x:         2.625rem;
-$empty-space-border-color:      $charcoal-25;
+$empty-space-border-color:      $gray-200;
 $empty-space-icon-size:         1.5rem;  // ~24px
 $empty-space-icon-close-size:   $empty-space-icon-size * 1.65; // Account for whitespace around "x" icon
 $empty-space-icon-border-size:  4.5rem; // ~72px
-$empty-space-icon-color:        $charcoal;
+$empty-space-icon-color:        $gray-700;
 $empty-space-icon-color-dark:   #fff;
 
 
@@ -563,7 +563,7 @@ $carousel-control-font-size:        1.25rem;
 $carousel-control-padding:          calc-padding-y($carousel-control-width, $carousel-control-font-size);
 
 $carousel-indicator-active-bg:      $link-color;
-$carousel-indicator-inactive-bg:    rgba($charcoal, .2);
+$carousel-indicator-inactive-bg:    rgba($body-color, .2);
 $carousel-indicator-border-color:   #fff;
 $carousel-indicator-size:           .625rem;
 
@@ -589,7 +589,7 @@ $slider-position-min:         25%;  // For demo purposes only
 $slider-position-max:         85%;  // For demo purposes only
 
 $slider-height:               .1875rem;  // ~3px
-$slider-bg:                   $charcoal-25;
+$slider-bg:                   $gray-200;
 
 // Fill
 $slider-fill-bg:              $brand-primary;
@@ -597,7 +597,7 @@ $slider-fill-bg:              $brand-primary;
 // Handle
 $slider-handle-size:          2rem;  // ~32px
 $slider-handle-bg:            #fff;
-$slider-handle-border:        $border-width solid $charcoal-25;
+$slider-handle-border:        $border-width solid $gray-200;
 
 // Value label
 $slider-value-width:          10rem;
@@ -606,8 +606,8 @@ $slider-value-width:          10rem;
 $slider-active-handle-bg:     $brand-primary;
 
 // Disabled
-$slider-disabled-fill-bg:     $charcoal-50;
-$slider-disabled-handle-bg:   $neutral;
+$slider-disabled-fill-bg:     $gray-500;
+$slider-disabled-handle-bg:   $gray-50;
 
 
 ///

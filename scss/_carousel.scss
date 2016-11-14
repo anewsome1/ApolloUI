@@ -4,7 +4,7 @@
 
 .carousel {
   position: relative;
-  border: $border-width solid $charcoal-25;
+  border: $border-width solid $gray-200;
 
   .billboard {
     margin-bottom: 0;
@@ -156,7 +156,7 @@
     justify-content: center;
     width: 100%;
     height: $component-height;
-    background-color: $neutral;
+    background-color: $gray-100;
 
     .carousel-dark & {
       background-color: $brand-primary;

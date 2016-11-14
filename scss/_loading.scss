@@ -15,10 +15,10 @@
   &-outer {
     position: absolute;
     border-radius: 50%;
-    background-image: radial-gradient(circle, rgba($teal, .15) 36%, transparent 36%);
+    background-image: radial-gradient(circle, rgba($atmosphere-300, .15) 36%, transparent 36%);
 
     .spinner {
-      stroke: rgba($teal, .5);
+      stroke: rgba($atmosphere-300, .5);
       stroke-alignment: inner;
       fill: transparent;
     }
@@ -75,7 +75,7 @@
     height: $loader-planet-size-inner;
     margin-top: -$loader-planet-size-inner / 2;
     margin-left: -$loader-planet-size-inner / 2;
-    background-color: rgba($teal, .75);
+    background-color: rgba($atmosphere-300, .75);
     animation: orbit-inner 2s linear infinite;
   }
   &.middle {
@@ -83,7 +83,7 @@
     height: $loader-planet-size-middle;
     margin-top: -$loader-planet-size-middle / 2;
     margin-left: -$loader-planet-size-middle / 2;
-    background-color: rgba($teal, .5);
+    background-color: rgba($atmosphere-300, .5);
     animation: orbit-middle 3s linear infinite;
   }
   &.outer {
@@ -91,7 +91,7 @@
     height: $loader-planet-size-outer;
     margin-top: -$loader-planet-size-outer / 2;
     margin-left: -$loader-planet-size-outer / 2;
-    background-color: rgba($teal, .25);
+    background-color: rgba($atmosphere-300, .25);
     animation: orbit-outer 4s linear infinite;
   }
 

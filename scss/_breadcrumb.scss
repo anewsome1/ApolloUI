@@ -51,11 +51,11 @@
       }
     }
     &.open .dropdown-toggle {
-        color: $blue-150;
+        color: $water-400;
 
         &::after {
-          background-color: rgba($blue, .8);
-          box-shadow: 0 0 0 .5625rem rgba($blue, .5);
+          background-color: rgba($brand-primary, .8);
+          box-shadow: 0 0 0 .5625rem rgba($brand-primary, .5);
         }
       }
   }

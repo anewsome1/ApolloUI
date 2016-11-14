@@ -81,11 +81,11 @@
   }
 
   &::before {
-    background-color: rgba($blue,.5);
+    background-color: rgba($brand-primary,.5);
   }
 
   &::after {
-    border: 1px solid $blue;
+    border: 1px solid $brand-primary;
   }
 
   // using `:focus` instead of `:active` because the latter only applies `onMouseDown`
