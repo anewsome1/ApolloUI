@@ -3,45 +3,39 @@
 ///
 
 .docs-color-group {
-  column-gap: $grid-gutter-width;
-
-  &-primary,
-  &-neutral {
-    @include media-breakpoint-up(md) {
-      columns: 3;
-    }
-  }
-
-  &-supporting {
-    @include media-breakpoint-up(md) {
-      columns: 4;
-    }
-  }
+  @include make-row();
 }
 
 
 .docs-color-swatch {
-  @include media-breakpoint-down(sm) {
-    margin-bottom: $spacer-y * 2;
+  @include make-col-ready();
+  @include make-col(12);
+
+  @include media-breakpoint-only(md) {
+    @include make-col(6);
   }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+
+  margin-bottom: $spacer-y * 2;
+  color: $gray-400;
+  font-size: $font-size-sm;
+
+  .docs-color-group-neutral > &:last-of-type > .docs-color-block {
+    border: $border-width solid $gray-100;
+  }
+
 }
 
 .docs-color-block {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-  height: 8rem;
-
-  &:first-child {
-    height: 16rem;
-  }
-
-  .docs-color-props {
-    display: flex;
-    justify-content: space-between;
-    padding: ($spacer / 2) $spacer;
-    color: #fff;
-    background-color: rgba(#000,.3);
-  }
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.125rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: $white;
 }

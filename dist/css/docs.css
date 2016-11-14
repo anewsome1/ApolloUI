@@ -427,54 +427,117 @@ hr {
 }
 
 .docs-color-group {
-  -moz-column-gap: 1.875rem;
-       column-gap: 1.875rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-@media (min-width: 768px) {
-  .docs-color-group-primary, .docs-color-group-neutral {
-    -moz-columns: 3;
-         columns: 3;
+@media (min-width: 544px) {
+  .docs-color-group {
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
 
 @media (min-width: 768px) {
-  .docs-color-group-supporting {
-    -moz-columns: 4;
-         columns: 4;
+  .docs-color-group {
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 992px) {
+  .docs-color-group {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .docs-color-group {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.docs-color-swatch {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  color: #b2b2b2;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 544px) {
   .docs-color-swatch {
-    margin-bottom: 2rem;
+    padding-right: 15px;
+    padding-left: 15px;
   }
+}
+
+@media (min-width: 768px) {
+  .docs-color-swatch {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .docs-color-swatch {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .docs-color-swatch {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .docs-color-swatch {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .docs-color-swatch {
+    -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+.docs-color-group-neutral > .docs-color-swatch:last-of-type > .docs-color-block {
+  border: 0.0625rem solid #e5e5e5;
 }
 
 .docs-color-block {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  height: 8rem;
-}
-
-.docs-color-block:first-child {
-  height: 16rem;
-}
-
-.docs-color-block .docs-color-props {
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
+  height: 3.125rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: #ffffff;
 }
 
 .home-header {
