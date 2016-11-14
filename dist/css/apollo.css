@@ -319,7 +319,7 @@ a {
 
 a:focus, a:hover {
   color: #1f5ebe;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -3181,8 +3181,8 @@ dd {
 }
 
 .btn-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
   color: #297dfd;
 }
 

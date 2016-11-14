@@ -49,7 +49,7 @@ $body-color:                 $gray-700;
 $link-color:                  $brand-primary;
 $link-decoration:             none;
 $link-hover-color:            $water-400;
-$link-hover-decoration:       none;
+$link-hover-decoration:       underline;
 
 
 // Grid breakpoints
@@ -347,7 +347,8 @@ $btn-sm-padding-y:    $input-sm-padding-y - $border-width;  // Padding makes sm 
 
 $btn-lg-padding-y:    $input-lg-padding-y - $border-width; // Padding makes lg button ~50px tall
 
-$btn-link-padding-x:  .5rem;
+$btn-link-padding-x:  .625rem;
+$btn-link-bg-hover:   $gray-50;
 $btn-link-disabled:   $gray-500;
 
 $btn-variants: (
