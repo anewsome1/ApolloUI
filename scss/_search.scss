@@ -33,7 +33,7 @@
 
     .search-input:focus {
       border-color: transparent;
-      border-bottom: $border-width solid $neutral;
+      border-bottom: $border-width solid $gray-100;
       box-shadow: none;
     }
   }
@@ -53,7 +53,7 @@
 // Make icon and placeholder text match
 .bg-dark .search::before,
 .bg-dark .search-input::placeholder {
-  color: $charcoal-50;
+  color: $gray-400;
 }
 
 
@@ -115,17 +115,13 @@
 .search-highlight {
   color: $link-color;
   font-weight: $font-semi-bold;
-
-  .bg-dark & {
-    color: $teal;
-  }
 }
 
 .search-meta {
   display: block;
   font-size: $font-size-sm;
   margin-top: .25rem;
-  color: $charcoal-50;
+  color: $gray-400;
 }
 
 

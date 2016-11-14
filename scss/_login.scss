@@ -15,7 +15,7 @@
   @include media-breakpoint-up(sm) {
     width: $login-width;
     padding: $grid-gutter-width;
-    border: $border-width solid $charcoal-25;
+    border: $border-width solid $gray-200;
     background-color: $body-bg;
   }
 }

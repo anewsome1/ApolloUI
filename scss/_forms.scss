@@ -29,7 +29,7 @@
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  border: $border-width solid $charcoal-25;
+  border: $border-width solid $gray-200;
   background-color: $input-bg;
   transition: border $transition-fast,
               background-color $transition-fast,
@@ -205,7 +205,7 @@ input[type='checkbox'] {
   }
 
   .bg-dark &:checked {
-    background-image: $svg-check-solid-teal;
+    background-image: $svg-check-solid-blue;
   }
 }
 
@@ -219,7 +219,7 @@ input[type='radio'] {
   }
 
   .bg-dark &:checked {
-    background-color: $teal;
+    background-color: $brand-primary;
   }
 }
 
@@ -242,7 +242,7 @@ input[type='radio'] {
 
   &,
   .bg-dark & {
-    color: $blue;
+    color: $brand-primary;
   }
 }
 
