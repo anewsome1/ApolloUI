@@ -6,10 +6,15 @@
   column-gap: $grid-gutter-width;
 
   &-primary,
-  &-secondary,
-  &-functional {
+  &-neutral {
     @include media-breakpoint-up(md) {
       columns: 3;
+    }
+  }
+
+  &-supporting {
+    @include media-breakpoint-up(md) {
+      columns: 4;
     }
   }
 }
