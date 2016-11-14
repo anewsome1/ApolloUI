@@ -132,7 +132,8 @@
 }
 
 .btn-sm {
-  padding-top: $btn-sm-padding-y $btn-sm-padding-x;
+  padding-top: $btn-sm-padding-y;
+  padding-bottom: $btn-sm-padding-y;
 }
 
 .btn-block {
