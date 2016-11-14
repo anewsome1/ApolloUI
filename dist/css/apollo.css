@@ -2986,16 +2986,8 @@ dd {
   color: #fff;
 }
 
-.bg-dark a.btn-primary:active, .sidebar .accordion a.btn-primary:active {
-  color: #fff;
-}
-
 .bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .sidebar .accordion .carousel-dark a.btn-primary, .carousel-dark .sidebar .accordion a.btn-primary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .sidebar .accordion .carousel-dark a.btn-primary:hover, .carousel-dark .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .sidebar .accordion .carousel-dark a.btn-primary:visited, .carousel-dark .sidebar .accordion a.btn-primary:visited {
-  color: #333333;
-}
-
-.bg-dark a.btn-secondary:active, .sidebar .accordion a.btn-secondary:active, .bg-dark .carousel-dark a.btn-primary:active, .carousel-dark .bg-dark a.btn-primary:active, .sidebar .accordion .carousel-dark a.btn-primary:active, .carousel-dark .sidebar .accordion a.btn-primary:active {
-  color: #fff;
+  color: #666666;
 }
 
 .alert, .form-msg {
@@ -3139,20 +3131,11 @@ dd {
   text-decoration: none;
 }
 
-.btn:hover, .btn.hover {
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
-}
-
 .btn:focus {
   outline: none;
 }
 
-.btn:active, .btn.active {
-  box-shadow: none;
-}
-
 .btn:disabled, .btn.disabled {
-  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -3167,34 +3150,28 @@ dd {
 
 .btn-primary:hover, .btn-primary.hover, .btn-primary:active, .btn-primary.active {
   border-color: transparent;
-}
-
-.btn-primary:active, .btn-primary.active {
   background-color: #1f5ebe;
   color: #fff;
 }
 
 .btn-primary:disabled, .btn-primary.disabled {
-  background-color: #c9defe;
-  color: #999999;
+  background-color: #f2f2f2;
+  color: #b2b2b2;
 }
 
 .btn-secondary, .carousel-dark .btn-primary {
-  border-color: #f2f2f2;
-  background-color: #fff;
+  border-color: #999999;
+  background-color: #ffffff;
 }
 
 .btn-secondary, .carousel-dark .btn-primary, .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary:focus, .carousel-dark .btn-primary:focus {
-  color: #333333;
+  color: #666666;
 }
 
 .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary.hover, .carousel-dark .hover.btn-primary, .btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
-  border-color: transparent;
-}
-
-.btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
-  background-color: #999999;
-  color: #fff;
+  border-color: #297dfd;
+  background-color: #ffffff;
+  color: #297dfd;
 }
 
 .btn-secondary:disabled, .carousel-dark .btn-primary:disabled, .btn-secondary.disabled, .carousel-dark .disabled.btn-primary {
@@ -3212,7 +3189,6 @@ dd {
 .btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
   background: none;
   border: 0;
-  box-shadow: none;
 }
 
 .btn-link:hover, .btn-link:active, .btn-link:focus {

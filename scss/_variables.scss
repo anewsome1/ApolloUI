@@ -355,17 +355,19 @@ $btn-variants: (
     bg: $link-color,
     color: #fff,
     border-color: transparent,
-    bg-active: $link-hover-color,
-    color-active: #fff,
-    bg-disabled: $water-50,
-    color-disabled: $gray-500
+    bg-hover: $link-hover-color,
+    color-hover: #fff,
+    border-color-hover: transparent,
+    bg-disabled: $gray-50,
+    color-disabled: $gray-400
   ),
   secondary: (
-    bg: #fff,
-    color: $body-color,
-    border-color: $gray-50,
-    bg-active: $gray-500,
-    color-active: #fff,
+    bg: $white,
+    color: $gray-600,
+    border-color: $gray-500,
+    bg-hover: $white,
+    color-hover: $link-color,
+    border-color-hover: $link-color,
     bg-disabled: #fff,
     color-disabled: $gray-500,
     border-disabled: darken($gray-50, 2.5%) // TODO: Update with palette color when designs get updated

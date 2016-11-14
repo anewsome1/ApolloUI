@@ -43,7 +43,6 @@
 
   &:hover,
   &.hover {
-    box-shadow: $shadow-hover;
   }
 
   &:focus {
@@ -52,12 +51,10 @@
 
   &:active,
   &.active {
-    box-shadow: none;
   }
 
   &:disabled,
   &.disabled {
-    box-shadow: none;
     cursor: not-allowed;
   }
 }
@@ -82,13 +79,9 @@
     &.hover,
     &:active,
     &.active {
-      border-color: transparent;
-    }
-
-    &:active,
-    &.active {
-      background-color: map-get($btn-props, bg-active);
-      color: map-get($btn-props, color-active);
+      border-color: map-get($btn-props, border-color-hover);
+      background-color: map-get($btn-props, bg-hover);
+      color: map-get($btn-props, color-hover);
     }
 
     &:disabled,
@@ -116,7 +109,6 @@
   &:disabled {
     background: none;
     border: 0;
-    box-shadow: none;
   }
 
   &:hover,
