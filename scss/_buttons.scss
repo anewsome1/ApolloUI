@@ -104,17 +104,15 @@
 
   &,
   &:hover,
-  &:active,
-  &:focus,
-  &:disabled {
+  &:active {
     background: none;
-    border: 0;
+    border-color: transparent;
   }
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: $link-hover-color;
+    background-color: $btn-link-bg-hover;
   }
 
   &:disabled,
@@ -141,12 +139,6 @@
 .btn-block {
   display: block;
   width: 100%;
-}
-
-// Larger size for touch-enabled devices
-.touchevents .btn {
-  padding-top: $btn-lg-padding-y;
-  padding-bottom: $btn-lg-padding-y;
 }
 
 ///
