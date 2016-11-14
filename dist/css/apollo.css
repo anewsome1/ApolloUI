@@ -3157,34 +3157,6 @@ dd {
   cursor: not-allowed;
 }
 
-.btn::before, .btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: -1;
-  width: 8.75rem;
-  height: 8.75rem;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%) scale(0);
-}
-
-.btn::before {
-  background-color: rgba(41, 125, 253, 0.5);
-}
-
-.btn::after {
-  border: 1px solid #297dfd;
-}
-
-.btn:not(.disabled):focus::before {
-  animation: pulse 0.5s 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.btn:not(.disabled):focus::after {
-  animation: pulse 0.5s cubic-bezier(0, 0, 0.5, 1);
-}
-
 .btn-primary {
   border-color: transparent;
   background-color: #297dfd;
