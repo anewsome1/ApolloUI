@@ -3214,10 +3214,6 @@ dd {
   width: 100%;
 }
 
-.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary {
-  border: none;
-}
-
 .form-group {
   margin-bottom: 1rem;
 }

@@ -135,15 +135,7 @@
   padding: $btn-sm-padding-y $btn-sm-padding-x;
 }
 
-
 .btn-block {
   display: block;
   width: 100%;
-}
-
-///
-/// Fix border for dark bg
-///
-.bg-dark .btn-secondary {
-  border: none;
 }
