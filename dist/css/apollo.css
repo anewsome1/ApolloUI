@@ -3777,6 +3777,11 @@ tbody.collapse.in {
   margin-left: .125rem;
   content: "";
   vertical-align: bottom;
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.dropdown.open .dropdown-toggle::after {
+  transform: scaleY(-1);
 }
 
 .dropdown-toggle:focus {
