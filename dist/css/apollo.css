@@ -2970,7 +2970,7 @@ dd {
 }
 
 .bg-dark, .sidebar .accordion {
-  background-color: #333333;
+  background-color: #002c44;
   color: #fff;
 }
 
@@ -4749,37 +4749,31 @@ tbody.collapse.in {
   border: 0.0625rem solid #d9d9d9;
 }
 
-.bg-dark .accordion, .sidebar .accordion .accordion, .accordion.bg-dark, .sidebar .accordion {
-  background-color: #333333;
-  border: 0;
-}
-
-.bg-dark .accordion .accordion-header, .sidebar .accordion .accordion .accordion-header, .accordion.bg-dark .accordion-header, .sidebar .accordion .accordion-header {
-  background-color: #333333;
-  border: 0;
-}
-
-.bg-dark .accordion .accordion-header.collapsed, .sidebar .accordion .accordion .accordion-header.collapsed, .accordion.bg-dark .accordion-header.collapsed, .sidebar .accordion .accordion-header.collapsed {
-  background-color: #333333;
-}
-
-.bg-dark .accordion .accordion-header .accordion-title, .sidebar .accordion .accordion .accordion-header .accordion-title, .accordion.bg-dark .accordion-header .accordion-title, .sidebar .accordion .accordion-header .accordion-title {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.bg-dark .accordion .accordion-header:not(.collapsed) .accordion-title, .sidebar .accordion .accordion .accordion-header:not(.collapsed) .accordion-title, .accordion.bg-dark .accordion-header:not(.collapsed) .accordion-title, .sidebar .accordion .accordion-header:not(.collapsed) .accordion-title {
-  color: #32b5fc;
-}
-
 .accordion-header,
 .accordion-block {
   padding: 0.6575rem 30px;
 }
 
 .accordion-header {
-  background-color: #f2f2f2;
   cursor: pointer;
   border-top: 0.0625rem solid #d9d9d9;
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.accordion-header .accordion-title {
+  font-weight: 600;
+}
+
+.accordion-header.collapsed {
+  background-color: #f2f2f2;
+}
+
+.accordion-header.collapsed:hover {
+  background-color: #e5e5e5;
+}
+
+.accordion-header.collapsed .accordion-title {
+  font-weight: 400;
 }
 
 .accordion > .card:first-of-type > .accordion-header {
@@ -4790,8 +4784,7 @@ tbody.collapse.in {
   position: relative;
   margin: 0;
   font-size: 1rem;
-  font-weight: 400;
-  color: #297dfd;
+  color: #333333;
   text-align: inherit;
 }
 
@@ -4805,6 +4798,39 @@ tbody.collapse.in {
 
 .collapsed .accordion-title::before {
   transform: rotate(180deg);
+}
+
+.sidebar .accordion,
+.accordion.bg-dark,
+.sidebar .accordion {
+  background-color: #002c44;
+  border: 0;
+}
+
+.sidebar .accordion .card,
+.accordion.bg-dark .card, .sidebar .accordion .card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .accordion .accordion-header,
+.accordion.bg-dark .accordion-header, .sidebar .accordion .accordion-header {
+  border: 0;
+}
+
+.sidebar .accordion .accordion-header .accordion-title,
+.accordion.bg-dark .accordion-header .accordion-title, .sidebar .accordion .accordion-header .accordion-title {
+  color: #32b5fc;
+  font-weight: 600;
+}
+
+.sidebar .accordion .accordion-header.collapsed,
+.accordion.bg-dark .accordion-header.collapsed, .sidebar .accordion .accordion-header.collapsed {
+  background-color: #002c44;
+}
+
+.sidebar .accordion .accordion-header.collapsed .accordion-title,
+.accordion.bg-dark .accordion-header.collapsed .accordion-title, .sidebar .accordion .accordion-header.collapsed .accordion-title {
+  color: #ffffff;
 }
 
 .accordion > .card {

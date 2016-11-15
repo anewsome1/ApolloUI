@@ -233,15 +233,17 @@ $card-bg:                   #fff;
 /// Accordion
 ///
 
-$accordion-head-font-weight:    $font-normal;
-$accordion-head-font-size:      $font-size-base;
-$accordion-head-color:          $body-color;
-$accordion-head-bg:             $gray-50;
-$accordion-head-pad-y:          .6575rem;  // Makes total height ~42px
-$accordion-head-pad-x:          $grid-gutter-width-base;
-$accordion-border-color:        $gray-200;
-$accordion-dark-header-bg:      $gray-700;
-$accordion-dark-active-bg:      $gray-700;
+$accordion-head-font-weight:        $font-normal;
+$accordion-head-font-weight-active: $font-semi-bold;
+$accordion-head-font-size:          $font-size-base;
+$accordion-head-color:              $body-color;
+$accordion-head-bg:                 $gray-50;
+$accordion-head-bg-hover:           $gray-100;
+$accordion-head-pad-y:              .6575rem;  // Makes total height ~42px
+$accordion-head-pad-x:              $grid-gutter-width-base;
+$accordion-border-color:            $gray-200;
+$accordion-dark-bg:                 $atmosphere-600;
+$accordion-dark-active-bg:          rgba($black, .3);
 
 
 ///

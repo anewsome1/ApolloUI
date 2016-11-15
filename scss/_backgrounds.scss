@@ -3,5 +3,5 @@
 }
 
 .bg-dark {
-  @include bg-color($bg-color: $gray-700, $text-color: #fff, $link-color: $atmosphere-300);
+  @include bg-color($bg-color: $atmosphere-600, $text-color: #fff, $link-color: $atmosphere-300);
 }
