@@ -12,13 +12,12 @@ guidelines:
     - Display multiple messages at the same time
 contents:
   - Usage guidelines
-  - Alert variants
-  - Bottom positioning
+  - Alert options
 ---
 
-<section class="docs-section" id="alert-variants">
+<section class="docs-section" id="alert-options">
 
-{% include example-intro.html title='Alert variants' description='Alerts come in three colors to represent three categories of Alerts: green for positive messages and confirmations, yellow for warnings, and red for incomplete operations or significant errors.' %}
+{% include example-intro.html title='Alert options' description='Alerts come in three colors to represent three categories of Alerts: green for positive messages and confirmations, yellow for warnings, and red for incomplete operations or significant errors.' %}
 
 {% capture example %}
 <div class="alert alert-success" role="alert">
@@ -37,20 +36,5 @@ contents:
 </div>
 {% endcapture %}
 {% include example.html code=example id='example-alert-variants' %}
-
-</section>
-
-
-<section class="docs-section" id="bottom-positioning">
-
-{% include example-intro.html title='Bottom positioning' description='Adding the <code>.alert-bottom</code> class to any alert message reverses the position of the fade-out shadow.  Use this when your alert message is shown at the bottom of a page or section.' %}
-
-{% capture example %}
-<div class="alert alert-success alert-bottom" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
-  Changes saved.
-</div>
-{% endcapture %}
-{% include example.html code=example id='example-alert-bottom' %}
 
 </section>

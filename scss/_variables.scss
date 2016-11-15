@@ -183,13 +183,11 @@ $shadow-lg-hover:       0 1.875rem 3.75rem 0 rgba(#000, .15);
 ///
 
 // Sizing
-$alert-padding-y:             calc-padding-y(2.5, $font-size-base); // Make height ~40px
-$alert-padding-x:             $grid-gutter-width-base;
+$alert-padding-y:             $btn-padding-y; // Make height ~40px
+$alert-padding-x:             $grid-gutter-width-base / 2;
 $alert-font-size:             $font-size-base;
-$alert-icon-size:             $font-size-sm;
-$alert-icon-margin:           $alert-padding-x * 2 / 3;
-$alert-line-height:           $alert-font-size * 1.2;
-$alert-shadow-height:         .75rem;  // ~12px
+$alert-font-weight:           $font-semi-bold;
+$alert-icon-size:             1.5rem;
 
 // Colors
 $alert-states: (
