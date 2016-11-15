@@ -61,12 +61,12 @@
 
 @mixin alert-bg($bg-color, $text-color: null, $link-color: null, $icon: null) {
   @include bg-color($bg-color, $text-color, $link-color);
-  @if($icon) {
-    &::before {
-      content: map-get($_icons-map, $icon);
-      color: $text-color;
-    }
-  }
+  // @if($icon) {
+  //   &::before {
+  //     content: map-get($_icons-map, $icon);
+  //     color: $text-color;
+  //   }
+  // }
 }
 
 ///
