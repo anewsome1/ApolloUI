@@ -4794,10 +4794,11 @@ tbody.collapse.in {
   top: 0;
   content: "";
   transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transform-origin: center center;
 }
 
 .collapsed .accordion-title::before {
-  transform: rotate(180deg);
+  transform: scaleY(-1);
 }
 
 .sidebar .accordion {

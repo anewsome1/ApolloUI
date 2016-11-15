@@ -53,10 +53,11 @@
     top: 0;
     content: map-get($_icons-map, 'chevron-up');
     transition: transform $transition-fast;
+    transform-origin: center center;
   }
 
   .collapsed &::before {
-    transform: rotate(180deg);
+    transform: scaleY(-1);
   }
 }
 
