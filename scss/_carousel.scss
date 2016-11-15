@@ -178,7 +178,7 @@
   border-radius: 50%;
 
   & + & {
-    margin-left: $grid-gutter-width;
+    margin-left: $grid-gutter-width-base;
   }
 
   @include media-breakpoint-up(sm) {

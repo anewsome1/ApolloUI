@@ -41,7 +41,7 @@
 
 .modal-dialog {
   position: relative; // For close button
-  margin: $grid-gutter-width / 2;
+  margin: $grid-gutter-width-base / 2;
   background-color: $modal-content-bg;
   box-shadow: $shadow-hover;
   opacity: .5;
