@@ -18,8 +18,8 @@
   }
 
   tr {
-    padding-right: $grid-gutter-width;
-    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width-base;
+    padding-left: $grid-gutter-width-base;
   }
 
 
@@ -134,7 +134,7 @@
   ///
 
   .btn-link {
-    margin-right: $grid-gutter-width / 3;
+    margin-right: $grid-gutter-width-base / 3;
 
     + .btn-link {
         margin-left: 0;
