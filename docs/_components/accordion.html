@@ -13,7 +13,6 @@ guidelines:
 contents:
   - Usage guidelines
   - Basic accordion
-  - Dark background
 ---
 
 <section class="docs-section" id="basic-accordion">
@@ -26,7 +25,7 @@ contents:
     <div class="accordion-header" id="accordion-head-1" role="tab" data-toggle="collapse" data-target="#accordion-sect-1" data-parent="#accordion-demo-light" aria-expanded="true" aria-controls="accordion-sect-1">
       <h3 class="accordion-title">Section 1</h3>
     </div>
-    <div class="collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
+    <div class="accordion-content collapse in" id="accordion-sect-1" role="tabpanel" aria-labeledby="accordion-head-1">
       <div class="accordion-block">
         <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
       </div>
@@ -36,7 +35,7 @@ contents:
     <div class="accordion-header collapsed" id="accordion-head-2" role="tab" data-toggle="collapse" data-target="#accordion-sect-2" data-parent="#accordion-demo-light" aria-expanded="false" aria-controls="accordion-sect-2">
       <h3 class="accordion-title">Section 2</h3>
     </div>
-    <div class="collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
+    <div class="accordion-content collapse" id="accordion-sect-2" role="tabpanel" aria-labeledby="accordion-head-2">
       <div class="accordion-block">
         <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
       </div>
@@ -46,7 +45,7 @@ contents:
     <div class="accordion-header collapsed" id="accordion-head-3" role="tab" data-toggle="collapse" data-target="#accordion-sect-3" data-parent="#accordion-demo-light" aria-expanded="false" aria-controls="accordion-sect-3">
       <h3 class="accordion-title">Section 3</h3>
     </div>
-    <div class="collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
+    <div class="accordion-content collapse" id="accordion-sect-3" role="tabpanel" aria-labeledby="accordion-head-3">
       <div class="accordion-block">
         <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
       </div>
@@ -58,45 +57,3 @@ contents:
 </section>
 
 
-<section class="docs-section" id="dark-background">
-
-{% include example-intro.html title='Dark background' description='' %}
-
-{% capture example %}
-<div class="accordion bg-dark" id="accordion-demo-dark" role="tablist" aria-multiselectable="true">
-  <div class="card">
-    <div class="accordion-header" id="accordion-dark-head-1" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-1" data-parent="#accordion-demo-dark" aria-expanded="true" aria-controls="accordion-dark-sect-1">
-      <h3 class="accordion-title">Section 1</h3>
-    </div>
-    <div class="collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
-      <div class="accordion-block">
-        <p>Tacos selvage bushwick, craft beer bitters small batch keffiyeh deep v. Kale chips actually listicle neutra, squid occupy brooklyn raw denim tacos lumberjack cardigan.</p>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="accordion-header collapsed" id="accordion-dark-head-2" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-2" data-parent="#accordion-demo-dark" aria-expanded="false" aria-controls="accordion-dark-sect-2">
-      <h3 class="accordion-title">Section 2</h3>
-    </div>
-    <div class="collapse" id="accordion-dark-sect-2" role="tabpanel" aria-labeledby="accordion-dark-head-2">
-      <div class="accordion-block">
-        <p>Crucifix kale chips mumblecore ramps keffiyeh authentic. Plaid schlitz vinyl, yr chartreuse shoreditch chambray occupy mlkshk narwhal try-hard letterpress williamsburg church-key cardigan.</p>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="accordion-header collapsed" id="accordion-dark-head-3" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-3" data-parent="#accordion-demo-dark" aria-expanded="false" aria-controls="accordion-dark-sect-3">
-      <h3 class="accordion-title">Section 3</h3>
-    </div>
-    <div class="collapse" id="accordion-dark-sect-3" role="tabpanel" aria-labeledby="accordion-dark-head-3">
-      <div class="accordion-block">
-        <p>Occupy leggings offal, craft beer austin tumblr retro plaid hashtag umami kombucha mustache. Raw denim gochujang portland brooklyn, butcher fixie whatever pinterest vegan organic intelligentsia VHS.</p>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}
-
-{% include example.html code=example id='example-dark-accordion' %}
-
-</section>
