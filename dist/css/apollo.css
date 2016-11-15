@@ -4757,7 +4757,7 @@ tbody.collapse.in {
 .accordion-header {
   cursor: pointer;
   border-top: 0.0625rem solid #d9d9d9;
-  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1), color 0.25s cubic-bezier(0, 0, 0.5, 1), font-weight 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .accordion-header .accordion-title {
@@ -4800,37 +4800,40 @@ tbody.collapse.in {
   transform: rotate(180deg);
 }
 
-.sidebar .accordion,
-.accordion.bg-dark,
 .sidebar .accordion {
   background-color: #002c44;
   border: 0;
 }
 
-.sidebar .accordion .card,
-.accordion.bg-dark .card, .sidebar .accordion .card {
-  background-color: rgba(0, 0, 0, 0.3);
+.sidebar .accordion .card {
+  background-color: transparent;
 }
 
-.sidebar .accordion .accordion-header,
-.accordion.bg-dark .accordion-header, .sidebar .accordion .accordion-header {
+.sidebar .accordion .accordion-header {
   border: 0;
 }
 
-.sidebar .accordion .accordion-header .accordion-title,
-.accordion.bg-dark .accordion-header .accordion-title, .sidebar .accordion .accordion-header .accordion-title {
+.sidebar .accordion .accordion-header .accordion-title {
   color: #32b5fc;
   font-weight: 600;
 }
 
-.sidebar .accordion .accordion-header.collapsed,
-.accordion.bg-dark .accordion-header.collapsed, .sidebar .accordion .accordion-header.collapsed {
-  background-color: #002c44;
+.sidebar .accordion .accordion-header.collapsed {
+  background-color: transparent;
 }
 
-.sidebar .accordion .accordion-header.collapsed .accordion-title,
-.accordion.bg-dark .accordion-header.collapsed .accordion-title, .sidebar .accordion .accordion-header.collapsed .accordion-title {
+.sidebar .accordion .accordion-header.collapsed:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .accordion .accordion-header.collapsed .accordion-title {
   color: #ffffff;
+}
+
+.sidebar .accordion .accordion-header:not(.collapsed),
+.sidebar .accordion .accordion-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 5px 0 0 0 #32b5fc;
 }
 
 .accordion > .card {

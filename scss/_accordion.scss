@@ -13,7 +13,9 @@
 .accordion-header {
   cursor: pointer;
   border-top: $border-width solid $accordion-border-color;
-  transition: all $transition-fast;
+  transition: background-color $transition-fast,
+              color $transition-fast,
+              font-weight $transition-fast;
 
   .accordion-title {
     font-weight: $accordion-head-font-weight-active;
@@ -59,35 +61,45 @@
 }
 
 ///
-/// Dark background
+/// Sidebar-specific styles for dark accordion
 ///
 
-.sidebar .accordion,
-.accordion.bg-dark {
+.sidebar .accordion {
   background-color: $accordion-dark-bg;
   border: 0;
 
   .card {
-    background-color: $accordion-dark-active-bg;    
+    background-color: transparent;    
   }
 
   .accordion-header {
     border: 0;
 
     .accordion-title {
-      color: $atmosphere-300;
+      color: $accordion-head-color-active;
       font-weight: $accordion-head-font-weight-active;
     }
 
     &.collapsed {
-      background-color: $accordion-dark-bg;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $accordion-dark-hover-bg;
+      }
 
       .accordion-title {
         color: $white;
       }
     }
   }
+
+  .accordion-header:not(.collapsed),
+  .accordion-content {
+    background-color: $accordion-dark-active-bg;
+    box-shadow: inset 5px 0 0 0 $accordion-head-color-active;
+  }  
 }
+
 
 // Reset card styles (`.card` class required in markup by Bootstrap JS plugin)
 .accordion > .card {
