@@ -162,7 +162,7 @@
     .nav-link {
       @extend %toggle-base;
       display: block;
-      min-width: $btn-lg-min-width;
+      // min-width: $btn-lg-min-width;
       padding: $btn-lg-padding-y $btn-padding-x;
 
       @include hover-focus {

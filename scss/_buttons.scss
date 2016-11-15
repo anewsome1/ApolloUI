@@ -7,7 +7,6 @@
   position: relative;
   z-index: 1;
   display: inline-block;
-  min-width: $btn-min-width;
   padding: $btn-padding-y $btn-padding-x;
   border: $border-width solid transparent;
   line-height: $btn-line-height;
@@ -44,7 +43,6 @@
 
   &:hover,
   &.hover {
-    box-shadow: $shadow-hover;
   }
 
   &:focus {
@@ -53,52 +51,14 @@
 
   &:active,
   &.active {
-    box-shadow: none;
   }
 
   &:disabled,
   &.disabled {
-    box-shadow: none;
     cursor: not-allowed;
   }
-
-
-  ///
-  /// Pulse animation
-  ///
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: -1;
-    width: $btn-pulse-size;
-    height: $btn-pulse-size;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(0);
-  }
-
-  &::before {
-    background-color: rgba($brand-primary,.5);
-  }
-
-  &::after {
-    border: 1px solid $brand-primary;
-  }
-
-  // using `:focus` instead of `:active` because the latter only applies `onMouseDown`
-  &:not(.disabled):focus {
-    &::before {
-      animation: pulse .5s .25s cubic-bezier(0, 0, .5, 1);
-    }
-
-    &::after {
-      animation: pulse .5s cubic-bezier(0, 0, .5, 1);
-    }
-  }
 }
+
 
 ///
 /// Button variant styles
@@ -119,13 +79,9 @@
     &.hover,
     &:active,
     &.active {
-      border-color: transparent;
-    }
-
-    &:active,
-    &.active {
-      background-color: map-get($btn-props, bg-active);
-      color: map-get($btn-props, color-active);
+      border-color: map-get($btn-props, border-color-hover);
+      background-color: map-get($btn-props, bg-hover);
+      color: map-get($btn-props, color-hover);
     }
 
     &:disabled,
@@ -142,25 +98,21 @@
 ///
 
 .btn-link {
-  min-width: unset;
   padding-right: $btn-link-padding-x;
   padding-left: $btn-link-padding-x;
   color: $link-color;
 
   &,
   &:hover,
-  &:active,
-  &:focus,
-  &:disabled {
+  &:active {
     background: none;
-    border: 0;
-    box-shadow: none;
+    border-color: transparent;
   }
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: $link-hover-color;
+    background-color: $btn-link-bg-hover;
   }
 
   &:disabled,
@@ -175,31 +127,16 @@
 ///
 
 .btn-lg {
-  // min-width: $btn-lg-min-width;
   padding-top: $btn-lg-padding-y;
   padding-bottom: $btn-lg-padding-y;
 }
 
 .btn-sm {
-  min-width: unset;
-  padding: $btn-sm-padding-y $btn-sm-padding-x;
+  padding-top: $btn-sm-padding-y;
+  padding-bottom: $btn-sm-padding-y;
 }
-
 
 .btn-block {
   display: block;
   width: 100%;
-}
-
-// Larger size for touch-enabled devices
-.touchevents .btn {
-  padding-top: $btn-lg-padding-y;
-  padding-bottom: $btn-lg-padding-y;
-}
-
-///
-/// Fix border for dark bg
-///
-.bg-dark .btn-secondary {
-  border: none;
 }

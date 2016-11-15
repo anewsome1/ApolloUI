@@ -319,7 +319,7 @@ a {
 
 a:focus, a:hover {
   color: #1f5ebe;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -2986,16 +2986,8 @@ dd {
   color: #fff;
 }
 
-.bg-dark a.btn-primary:active, .sidebar .accordion a.btn-primary:active {
-  color: #fff;
-}
-
 .bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .sidebar .accordion .carousel-dark a.btn-primary, .carousel-dark .sidebar .accordion a.btn-primary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .sidebar .accordion .carousel-dark a.btn-primary:hover, .carousel-dark .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .sidebar .accordion .carousel-dark a.btn-primary:visited, .carousel-dark .sidebar .accordion a.btn-primary:visited {
-  color: #333333;
-}
-
-.bg-dark a.btn-secondary:active, .sidebar .accordion a.btn-secondary:active, .bg-dark .carousel-dark a.btn-primary:active, .carousel-dark .bg-dark a.btn-primary:active, .sidebar .accordion .carousel-dark a.btn-primary:active, .carousel-dark .sidebar .accordion a.btn-primary:active {
-  color: #fff;
+  color: #666666;
 }
 
 .alert, .form-msg {
@@ -3105,8 +3097,7 @@ dd {
   position: relative;
   z-index: 1;
   display: inline-block;
-  min-width: 6.25rem;
-  padding: 0.6875rem 1.5rem;
+  padding: 0.6875rem 0.9375rem;
   border: 0.0625rem solid transparent;
   line-height: 1;
   text-align: center;
@@ -3140,49 +3131,12 @@ dd {
   text-decoration: none;
 }
 
-.btn:hover, .btn.hover {
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
-}
-
 .btn:focus {
   outline: none;
 }
 
-.btn:active, .btn.active {
-  box-shadow: none;
-}
-
 .btn:disabled, .btn.disabled {
-  box-shadow: none;
   cursor: not-allowed;
-}
-
-.btn::before, .btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: -1;
-  width: 8.75rem;
-  height: 8.75rem;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%) scale(0);
-}
-
-.btn::before {
-  background-color: rgba(41, 125, 253, 0.5);
-}
-
-.btn::after {
-  border: 1px solid #297dfd;
-}
-
-.btn:not(.disabled):focus::before {
-  animation: pulse 0.5s 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.btn:not(.disabled):focus::after {
-  animation: pulse 0.5s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .btn-primary {
@@ -3196,34 +3150,28 @@ dd {
 
 .btn-primary:hover, .btn-primary.hover, .btn-primary:active, .btn-primary.active {
   border-color: transparent;
-}
-
-.btn-primary:active, .btn-primary.active {
   background-color: #1f5ebe;
   color: #fff;
 }
 
 .btn-primary:disabled, .btn-primary.disabled {
-  background-color: #c9defe;
-  color: #999999;
+  background-color: #f2f2f2;
+  color: #b2b2b2;
 }
 
 .btn-secondary, .carousel-dark .btn-primary {
-  border-color: #f2f2f2;
-  background-color: #fff;
+  border-color: #999999;
+  background-color: #ffffff;
 }
 
 .btn-secondary, .carousel-dark .btn-primary, .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary:focus, .carousel-dark .btn-primary:focus {
-  color: #333333;
+  color: #666666;
 }
 
 .btn-secondary:hover, .carousel-dark .btn-primary:hover, .btn-secondary.hover, .carousel-dark .hover.btn-primary, .btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
-  border-color: transparent;
-}
-
-.btn-secondary:active, .carousel-dark .btn-primary:active, .btn-secondary.active, .carousel-dark .active.btn-primary {
-  background-color: #999999;
-  color: #fff;
+  border-color: #297dfd;
+  background-color: #ffffff;
+  color: #297dfd;
 }
 
 .btn-secondary:disabled, .carousel-dark .btn-primary:disabled, .btn-secondary.disabled, .carousel-dark .disabled.btn-primary {
@@ -3233,20 +3181,19 @@ dd {
 }
 
 .btn-link {
-  min-width: unset;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
   color: #297dfd;
 }
 
-.btn-link, .btn-link:hover, .btn-link:active, .btn-link:focus, .btn-link:disabled {
+.btn-link, .btn-link:hover, .btn-link:active {
   background: none;
-  border: 0;
-  box-shadow: none;
+  border-color: transparent;
 }
 
-.btn-link:hover, .btn-link:active, .btn-link:focus {
+.btn-link:hover, .btn-link:active {
   color: #1f5ebe;
+  background-color: #f2f2f2;
 }
 
 .btn-link:disabled, .btn-link.disabled {
@@ -3259,22 +3206,13 @@ dd {
 }
 
 .btn-sm {
-  min-width: unset;
-  padding: 0.375rem 1.25rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 
 .btn-block {
   display: block;
   width: 100%;
-}
-
-.touchevents .btn {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary {
-  border: none;
 }
 
 .form-group {
@@ -3577,7 +3515,7 @@ input[type='radio']:checked {
 .toggle input[type="radio"] + label, .nav-tabs.tab-bar .nav-link {
   position: relative;
   z-index: 1;
-  padding: 0.875rem 1.5rem;
+  padding: 0.875rem 0.9375rem;
   margin-right: -0.0625rem;
   margin-bottom: -0.0625rem;
   border: 0.0625rem solid #d9d9d9;
@@ -3977,7 +3915,7 @@ tbody.collapse.in {
 }
 
 .nav-tabs:not(.tab-bar) .nav-link {
-  padding: 1rem 3rem;
+  padding: 1rem 1.875rem;
   border-width: 0.0625rem 0.0625rem 0 0;
   border-style: solid;
   border-color: #d9d9d9;
@@ -4011,7 +3949,7 @@ tbody.collapse.in {
 }
 
 .nav-tabs:not(.tab-bar) + .tab-content {
-  padding: 1.375rem 3rem;
+  padding: 1.375rem 1.875rem;
   border: 0.0625rem solid #d9d9d9;
 }
 
@@ -4023,8 +3961,7 @@ tbody.collapse.in {
 
 .nav-tabs.tab-bar .nav-link {
   display: block;
-  min-width: 8.75rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0.9375rem;
 }
 
 .nav-tabs.tab-bar .nav-link.disabled, .nav-tabs.tab-bar .nav-link.disabled:focus, .nav-tabs.tab-bar .nav-link.disabled:hover {
@@ -4139,15 +4076,15 @@ tbody.collapse.in {
 
 .navbar-actions-item > a {
   position: relative;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 .navbar-actions-item > a .badge {
   position: absolute;
   display: block;
   top: -0.3rem;
-  right: 0.75rem;
+  right: 0.46875rem;
   width: 1.2rem;
   height: 1.2rem;
   padding-top: .34rem;
