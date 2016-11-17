@@ -14,15 +14,14 @@
 
   @include media-breakpoint-up(sm) {
     width: $login-width;
-    padding: $grid-gutter-width-base;
-    border: $border-width solid $gray-200;
+    padding: $login-padding-y $login-padding-x;
+    border: $border-width solid $login-border-color;
     background-color: $body-bg;
   }
 }
 
 .login-brand-logo {
-  width: 20%;
-  margin-top: $spacer * 2;
+  width: $login-logo-width;
   @if $enable-flex {
     align-self: center;
   } @else {
@@ -43,15 +42,15 @@
 
   color: $brand-primary;
   margin-bottom: $spacer;
+}
 
-  .login-brand-logo + & {
-    margin-top: $spacer;
-  }
+.login .form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 
 ///
-///
+/// Remember me and forgot password links
 ///
 
 .login-help {

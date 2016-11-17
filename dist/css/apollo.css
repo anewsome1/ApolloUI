@@ -4550,7 +4550,7 @@ tbody.collapse.in {
 
 @media (min-width: 576px) {
   .modal-login .modal-dialog {
-    max-width: 28rem;
+    max-width: 23.75rem;
   }
 }
 
@@ -5032,16 +5032,15 @@ tbody.collapse.in {
 
 @media (min-width: 576px) {
   .login {
-    width: 28rem;
-    padding: 1.25rem;
-    border: 0.0625rem solid #d9d9d9;
+    width: 23.75rem;
+    padding: 2.5rem 1.875rem;
+    border: 0.0625rem solid #b2b2b2;
     background-color: #fff;
   }
 }
 
 .login-brand-logo {
-  width: 20%;
-  margin-top: 2rem;
+  width: 4rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -5055,8 +5054,8 @@ tbody.collapse.in {
   margin-bottom: 1rem;
 }
 
-.login-brand-logo + .login-brand-name {
-  margin-top: 1rem;
+.login .form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 .login-help {

@@ -519,7 +519,11 @@ $sidebar-sm-link-height:  5.5rem;   // ~88px
 /// Login component
 ///
 
-$login-width:   28rem;
+$login-width:         23.75rem; // ~380px
+$login-padding-x:     1.875rem; // ~30px
+$login-padding-y:     2.5rem;   // ~40px
+$login-border-color:  $gray-400;
+$login-logo-width:    4rem;     // ~64px
 
 
 ///
