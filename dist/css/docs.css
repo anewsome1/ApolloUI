@@ -283,10 +283,12 @@ hr {
 
 .docs-guidelines-heading-do {
   border-bottom-color: #43b649;
+  color: #43b649;
 }
 
 .docs-guidelines-heading-dont {
   border-bottom-color: #ff1d00;
+  color: #ff1d00;
 }
 
 .docs-guidelines-list {
