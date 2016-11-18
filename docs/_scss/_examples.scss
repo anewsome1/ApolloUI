@@ -60,10 +60,12 @@ hr {
 
 .docs-guidelines-heading-do {
   border-bottom-color: $brand-success;
+  color: $brand-success;
 }
 
 .docs-guidelines-heading-dont {
   border-bottom-color: $brand-danger;
+  color: $brand-danger;
 }
 
 .docs-guidelines-list {
