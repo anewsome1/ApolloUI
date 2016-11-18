@@ -85,7 +85,7 @@
 select.form-control {
   appearance: none;
   border: $input-btn-border-width solid $input-border-color;
-  background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
+  background: $input-bg $svg-chevron-down-gray no-repeat right $input-padding-x center;
   background-size: $font-size-base;
 
   &,
