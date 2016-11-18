@@ -2990,7 +2990,7 @@ dd {
   color: #666666;
 }
 
-.alert, .form-msg {
+.alert {
   position: relative;
   padding: 0.5rem 0.625rem;
   margin-bottom: 1rem;
@@ -2999,7 +2999,7 @@ dd {
   text-align: center;
 }
 
-.alert .close, .form-msg .close {
+.alert .close {
   position: absolute;
   top: 50%;
   right: 0.625rem;
@@ -3009,22 +3009,22 @@ dd {
   color: #fff;
 }
 
-.alert.alert-info, .alert-info.form-msg {
+.alert.alert-info {
   background-color: #32b5fc;
   color: #fff;
 }
 
-.alert.alert-success, .alert-success.form-msg {
+.alert.alert-success {
   background-color: #43b649;
   color: #fff;
 }
 
-.alert.alert-warning, .alert-warning.form-msg {
+.alert.alert-warning {
   background-color: #fece34;
   color: #333333;
 }
 
-.alert.alert-danger, .alert-danger.form-msg {
+.alert.alert-danger {
   background-color: #ff1d00;
   color: #fff;
 }
@@ -3163,8 +3163,8 @@ dd {
 
 .control-label {
   display: block;
-  margin-bottom: 0;
-  line-height: 2.5rem;
+  margin-bottom: .625rem;
+  line-height: 1;
   color: #666666;
 }
 
@@ -3276,56 +3276,47 @@ textarea.form-control, textarea.search-input {
 }
 
 .form-msg {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
-}
-
-.form-msg, .form-msg::before {
-  line-height: 1;
-}
-
-.form-msg::before {
-  font-size: 0.875rem;
+  padding-top: .25rem;
 }
 
 .has-info .form-control, .has-info .search-input, .has-info.form-control, .has-info.search-input {
   border-color: #32b5fc;
+  border-width: 0.125rem;
 }
 
+.has-info .control-label, .has-info.control-label,
 .has-info .form-msg, .has-info.form-msg {
-  background-color: #32b5fc;
-  color: #fff;
+  color: #32b5fc;
 }
 
 .has-success .form-control, .has-success .search-input, .has-success.form-control, .has-success.search-input {
   border-color: #43b649;
+  border-width: 0.125rem;
 }
 
+.has-success .control-label, .has-success.control-label,
 .has-success .form-msg, .has-success.form-msg {
-  background-color: #43b649;
-  color: #fff;
+  color: #43b649;
 }
 
 .has-warning .form-control, .has-warning .search-input, .has-warning.form-control, .has-warning.search-input {
   border-color: #fece34;
+  border-width: 0.125rem;
 }
 
+.has-warning .control-label, .has-warning.control-label,
 .has-warning .form-msg, .has-warning.form-msg {
-  background-color: #fece34;
-  color: #333333;
+  color: #fece34;
 }
 
 .has-danger .form-control, .has-danger .search-input, .has-danger.form-control, .has-danger.search-input {
   border-color: #ff1d00;
+  border-width: 0.125rem;
 }
 
+.has-danger .control-label, .has-danger.control-label,
 .has-danger .form-msg, .has-danger.form-msg {
-  background-color: #ff1d00;
-  color: #fff;
+  color: #ff1d00;
 }
 
 input[type='checkbox'],

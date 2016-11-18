@@ -33,11 +33,11 @@ contents:
 <form>
   <fieldset class="form-group">
     <label class="control-label required" for="full-name">Full name</label>
-    <input class="form-control" id="full-name" type="text" name="full-name" placeholder="George Clinton"></input>
+    <input class="form-control" id="full-name" type="text" name="full-name"></input>
   </fieldset>
   <fieldset class="form-group">
     <label class="control-label required" for="email">Email address</label>
-    <input class="form-control" id="email" type="email" name="email" placeholder="george@thefunk.com"></input>
+    <input class="form-control" id="email" type="email" name="email"></input>
   </fieldset>
   <fieldset class="form-group">
     <button class="btn btn-primary" type="submit">Sign up</button>
@@ -214,9 +214,9 @@ contents:
 {% capture example %}
 <!-- Class applied to `.form-control` and `.form-msg` directly -->
 <fieldset class="form-group">
-  <label class="control-label" for="email">Email Address</label>
+  <label class="control-label has-danger" for="email">Email Address</label>
   <input class="form-control has-danger" id="email" type="email" name="email"></input>
-  <p class="form-msg has-danger">Please enter a valid email address</p>
+  <p class="form-msg has-danger">Please enter a valid email address.</p>
 </fieldset>
 {% endcapture %}
 
