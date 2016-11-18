@@ -282,7 +282,7 @@ $input-padding-y:                calc-padding-y($component-height, $font-size-ba
 $input-line-height:              1;
 
 $input-bg:                       $white;
-$input-bg-disabled:              darken($gray-50, 2.5%);
+$input-bg-disabled:              $gray-50;
 $input-bg-focus:                 $input-bg;
 
 $input-color:                    $body-color;

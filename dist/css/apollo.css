@@ -3224,7 +3224,7 @@ label:active + .search-input {
 }
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
-  background-color: #ececec;
+  background-color: #f2f2f2;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -3358,7 +3358,7 @@ input[type='radio']:hover.disabled + label {
 input[type='checkbox']:disabled, input[type='checkbox'].disabled,
 input[type='radio']:disabled,
 input[type='radio'].disabled {
-  background-color: #ececec;
+  background-color: #f2f2f2;
 }
 
 input[type='checkbox']:disabled + label, input[type='checkbox'].disabled + label,
