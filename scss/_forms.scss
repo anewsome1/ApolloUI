@@ -8,9 +8,10 @@
   display: block;
   margin-bottom: 0;
   line-height: $component-height;
+  color: $input-label-color;
 
   &.disabled {
-    color: $input-color-disabled;
+    color: $input-label-color-disabled;
   }
 
   &.required::after {
@@ -29,11 +30,10 @@
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  border: $border-width solid $gray-200;
+  border: $border-width solid $input-border-color;
   background-color: $input-bg;
   transition: border $transition-fast,
-              background-color $transition-fast,
-              box-shadow $transition-fast;
+              background-color $transition-fast;
 
   // Placeholder
   &::placeholder {
@@ -47,22 +47,9 @@
   &:active,
   &.active,
   label:active + & {
-    border-color: transparent;
-    background-color: $input-bg-focus;
+    border-color: $input-border-focus;
     outline: none;
   }
-
-  &:focus,
-  &.focus {
-    box-shadow: $shadow-hover;
-  }
-
-  &:active,
-  &.active,
-  label:active + & {
-    box-shadow: $shadow-active;
-  }
-
 
   &:disabled,
   &.disabled {
@@ -87,6 +74,7 @@ select.form-control {
   border: $input-btn-border-width solid $input-border-color;
   background: $input-bg $svg-chevron-down-gray no-repeat right $input-padding-x center;
   background-size: $font-size-base;
+  border-radius: 0;
 
   &,
   &::placeholder {
@@ -199,13 +187,13 @@ input[type='checkbox'] {
   background-size: 100%;
 
   &:checked {
-    background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
+    background: $input-bg-focus $svg-check-solid-water no-repeat center center;
     background-size: 100%;
     border: 0;
   }
 
   .bg-dark &:checked {
-    background-image: $svg-check-solid-blue;
+    background-image: $svg-check-solid-atmosphere;
   }
 }
 
