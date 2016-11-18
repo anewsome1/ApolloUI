@@ -3,6 +3,9 @@
   margin-bottom: $form-group-margin-bottom;
 }
 
+label {
+  margin-bottom: .3rem;
+}
 
 .control-label {
   display: block;
@@ -132,8 +135,6 @@ input[type='radio'] {
   transition: box-shadow $transition-fast;
 
   &:hover {
-    box-shadow: $shadow-hover;
-
     &,
     & + label {
       cursor: pointer;
@@ -141,8 +142,6 @@ input[type='radio'] {
 
     &:disabled,
     &.disabled {
-      box-shadow: none;
-
       &,
       & + label {
         cursor: not-allowed;
@@ -164,11 +163,11 @@ input[type='radio'] {
   }
 }
 
-.checkbox {
-  label {
-    margin-bottom: 0;
-  }
-}
+// .checkbox {
+//   label {
+//     margin-bottom: 0;
+//   }
+// }
 
 input[type='checkbox'] {
   background-size: 100%;
