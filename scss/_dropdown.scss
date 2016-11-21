@@ -2,9 +2,17 @@
   position: relative;
   padding: $dropdown-padding-y $dropdown-padding-x;
   background: none;
-  border: 0;
+  // border: ;
   color: $link-color;
   outline: none;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
 
   &::after {
     @extend %icon-base;
@@ -17,10 +25,6 @@
 
   .dropdown.open &::after {
     transform: scaleY(-1);
-  }
-
-  &:focus {
-    outline: none;
   }
 }
 
