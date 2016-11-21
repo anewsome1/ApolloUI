@@ -47,13 +47,6 @@
   }
 }
 
-.card-text-center {
-  .card-header,
-  .card-block {
-    text-align: center;
-  }
-}
-
 .card-footer {
   background-color: $card-cap-bg;
   height: $card-cap-height;
@@ -94,8 +87,13 @@
 /// Card title and caption
 ///
 
+.card-title,
+.card-caption {
+  text-align: center;
+}
+
 .card-title {
-  @extend .h1;
+  @extend .h2;
   line-height: 1;
   margin-top: $card-spacer-y;
   margin-bottom: 0;
