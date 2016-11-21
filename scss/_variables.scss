@@ -217,12 +217,12 @@ $alert-states: (
 /// Cards
 ///
 
-$card-spacer-x:             $grid-gutter-width-base;
-$card-spacer-y:             $card-spacer-x * 2 / 3;
+$card-spacer-x:             .9375rem; // ~15px
+$card-spacer-y:             $grid-gutter-width-base;
 $card-border-width:         $border-width;
-$card-border-color:         $gray-200;
+$card-border-color:         $gray-100;
 $card-cap-bg:               $gray-50;
-$card-cap-height:           3.75rem;
+$card-cap-height:           3.125rem;
 $card-bg:                   #fff;
 
 
