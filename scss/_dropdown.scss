@@ -6,6 +6,14 @@
   color: $link-color;
   outline: none;
 
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   &::after {
     @extend %icon-base;
 
@@ -18,10 +26,6 @@
   .dropdown.open &::after {
     transform: scaleY(-1);
   }
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .dropdown-menu {
@@ -31,6 +35,7 @@
   min-width: $dropdown-menu-min-width;
   padding: 0;
   background: $dropdown-menu-bg;
+  border: $border-width solid $dropdown-menu-border-color;
   box-shadow: $shadow-hover;
 
   // Display menu when `.open` class is added
