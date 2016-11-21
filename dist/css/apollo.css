@@ -2731,10 +2731,9 @@ output {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-.card-title,
 .billboard-title,
 .login-brand-name,
-.empty-space-title, .h2, .modal-title, .h3, .h4, .h5, .h6 {
+.empty-space-title, .h2, .modal-title, .card-title, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -2742,11 +2741,11 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 
-h1, .h1, .card-title, .billboard-title, .login-brand-name, .empty-space-title {
+h1, .h1, .billboard-title, .login-brand-name, .empty-space-title {
   font-size: 2.25rem;
 }
 
-h2, .h2, .modal-title {
+h2, .h2, .modal-title, .card-title {
   font-size: 1.5rem;
 }
 
@@ -2875,7 +2874,6 @@ html {
 .heading-hero,
 h1,
 .h1,
-.card-title,
 .billboard-title,
 .login-brand-name,
 .empty-space-title {
@@ -4532,7 +4530,7 @@ tbody.collapse.in {
 
 .card {
   margin-bottom: 1.25rem;
-  border: 0.0625rem solid #d9d9d9;
+  border: 0.0625rem solid #e5e5e5;
   background-color: #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -4549,8 +4547,8 @@ tbody.collapse.in {
 .card-header,
 .card-block,
 .card-footer {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 .card-header::after,
@@ -4563,8 +4561,8 @@ tbody.collapse.in {
 
 .card-header,
 .card-block {
-  padding-top: 0.83333rem;
-  padding-bottom: 0.83333rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .card-header + .card-block {
@@ -4582,14 +4580,9 @@ tbody.collapse.in {
   padding-top: 0;
 }
 
-.card-text-center .card-header,
-.card-text-center .card-block {
-  text-align: center;
-}
-
 .card-footer {
   background-color: #f2f2f2;
-  height: 3.75rem;
+  height: 3.125rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -4611,9 +4604,14 @@ tbody.collapse.in {
   margin-left: 0;
 }
 
+.card-title,
+.card-caption {
+  text-align: center;
+}
+
 .card-title {
   line-height: 1;
-  margin-top: 0.83333rem;
+  margin-top: 1.25rem;
   margin-bottom: 0;
 }
 
