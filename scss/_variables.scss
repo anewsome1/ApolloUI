@@ -167,7 +167,7 @@ $transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
 $shadow-color:          rgba(#000, .15);
 
 $shadow-border:        0 0 0 $border-width $shadow-color;
-$shadow-hover:         0 .625rem 2.5rem $shadow-color;  // ~5px 5px 16px
+$shadow-hover:         0 .625rem .9375rem $shadow-color;  // ~0 10px 15px
 $shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
 $shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
 
@@ -426,6 +426,7 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 $dropdown-padding-x:          1rem;
 $dropdown-padding-y:          calc-padding-y(2.1875rem, $font-size-base); // Total height ~35px
 $dropdown-menu-bg:            #fff;
+$dropdown-menu-border-color:  $gray-200;
 $dropdown-menu-color:         $body-color;
 $dropdown-menu-bg-hover:      $link-color;
 $dropdown-menu-color-hover:   #fff;

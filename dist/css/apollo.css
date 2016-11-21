@@ -3428,7 +3428,7 @@ input[type='radio']:checked {
 
 .toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
   z-index: 2;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .toggle input[type="radio"] + label:active:hover, .nav-tabs.tab-bar .nav-link:active:focus, .nav-tabs.tab-bar .nav-link:active:hover {
@@ -3444,7 +3444,7 @@ input[type='radio']:checked {
   color: #fff;
   background-color: #297dfd;
   border-color: transparent;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .toggle {
@@ -3656,6 +3656,7 @@ tbody.collapse.in {
   position: relative;
   padding: 0.59375rem 1rem;
   background: none;
+  border: 0;
   color: #297dfd;
   outline: none;
 }
@@ -3686,7 +3687,8 @@ tbody.collapse.in {
   min-width: 10rem;
   padding: 0;
   background: #fff;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  border: 0.0625rem solid #d9d9d9;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .dropdown.open > .dropdown-menu {
@@ -3882,7 +3884,7 @@ tbody.collapse.in {
 .navbar {
   z-index: 1000;
   background-color: #297dfd;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar a,
@@ -4088,7 +4090,7 @@ tbody.collapse.in {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f2f2f2;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .command-bar.command-bar-fixed-bottom {
@@ -4174,7 +4176,7 @@ tbody.collapse.in {
 }
 
 .sidebar.off-canvas.open {
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .sidebar.off-canvas.off-canvas-left {
@@ -4348,7 +4350,7 @@ tbody.collapse.in {
 }
 
 .slider-handle:hover {
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .slider-handle:active {
@@ -4423,7 +4425,7 @@ tbody.collapse.in {
   position: relative;
   margin: 0.625rem;
   background-color: #fff;
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
   opacity: .5;
   transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1), transform 0.5s cubic-bezier(0, 0, 0.5, 1);
   transform: translateY(-100%);
@@ -5073,7 +5075,7 @@ tbody.collapse.in {
 }
 
 .search.dropdown.open {
-  box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .search.dropdown .search-input {
