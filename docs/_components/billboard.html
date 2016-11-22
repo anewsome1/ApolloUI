@@ -16,7 +16,7 @@ guidelines:
 contents:
   - Usage guidelines
   - Basic Billboard
-  - Fluid Billboard
+  - Centered text
   - Dark background
   - Background images
 ---
@@ -27,7 +27,7 @@ contents:
 
 {% capture example %}
 <div class="billboard bg-light">
-  <h1 class="billboard-title">Important Headline</h1>
+  <h1 class="billboard-title text-white">Important Headline</h1>
   <p class="billboard-description">Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.</p>
   <div>
     <a class="btn btn-primary" href="#0" role="button">Action</a>
@@ -40,15 +40,15 @@ contents:
 </section>
 
 
-<section class="docs-section" id="fluid-billboard">
+<section class="docs-section" id="centered-text">
 
-{% include example-intro.html title='Fluid Billboard' description='To eliminate the default side padding in favor of fluid container padding, add the <code>.billboard-fluid</code> modifier class with a <code>.container-fluid</code> inside.' %}
+{% include example-intro.html title='Centered text' description='To make the text centered, simply use the responsive text alignment utility as shown below.' %}
 
 {% capture example %}
-<div class="billboard billboard-fluid bg-light">
+<div class="billboard bg-light text-xs-center">
   <div class="container-fluid">
-    <h1 class="billboard-title">No side padding</h1>
-    <p class="billboard-description">Ok, well there <em>is</em> side padding, but not on the billboard itself.  The side padding here comes from the <code>.container-fluid</code> <em>inside</em> the billboard.</p>
+    <h1 class="billboard-title">Centered text</h1>
+    <p class="billboard-description">Applying</p>
     <div>
       <a class="btn btn-primary" href="#0" role="button">Got it</a>
     </div>

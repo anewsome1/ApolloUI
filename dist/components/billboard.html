@@ -225,7 +225,7 @@
     
     <li><a href="#basic-billboard">Basic Billboard</a></li>
     
-    <li><a href="#fluid-billboard">Fluid Billboard</a></li>
+    <li><a href="#centered-text">Centered text</a></li>
     
     <li><a href="#dark-background">Dark background</a></li>
     
@@ -300,7 +300,7 @@
   
   
 <div class="billboard bg-light">
-  <h1 class="billboard-title">Important Headline</h1>
+  <h1 class="billboard-title text-white">Important Headline</h1>
   <p class="billboard-description">Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.</p>
   <div>
     <a class="btn btn-primary" href="#0" role="button">Action</a>
@@ -317,7 +317,7 @@
     
     <div  id="example-basic-billboard">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"billboard bg-light"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"billboard-title"</span><span class="nt">&gt;</span>Important Headline<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"billboard-title text-white"</span><span class="nt">&gt;</span>Important Headline<span class="nt">&lt;/h1&gt;</span>
   <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"billboard-description"</span><span class="nt">&gt;</span>Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.<span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;div&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;</span>
@@ -332,14 +332,14 @@
 </section>
 
 
-<section class="docs-section" id="fluid-billboard">
+<section class="docs-section" id="centered-text">
 
 <div class="docs-example-intro">
   
-  <h2 class="docs-example-title">Fluid Billboard</h2>
+  <h2 class="docs-example-title">Centered text</h2>
   
   
-  <p class="docs-example-description">To eliminate the default side padding in favor of fluid container padding, add the <code>.billboard-fluid</code> modifier class with a <code>.container-fluid</code> inside.</p>
+  <p class="docs-example-description">To make the text centered, simply use the responsive text alignment utility as shown below.</p>
   
 </div>
 
@@ -353,10 +353,10 @@
   
   
   
-<div class="billboard billboard-fluid bg-light">
+<div class="billboard bg-light text-xs-center">
   <div class="container-fluid">
-    <h1 class="billboard-title">No side padding</h1>
-    <p class="billboard-description">Ok, well there <em>is</em> side padding, but not on the billboard itself.  The side padding here comes from the <code>.container-fluid</code> <em>inside</em> the billboard.</p>
+    <h1 class="billboard-title">Centered text</h1>
+    <p class="billboard-description">Applying</p>
     <div>
       <a class="btn btn-primary" href="#0" role="button">Got it</a>
     </div>
@@ -372,10 +372,10 @@
     <button class="btn btn-secondary btn-sm docs-code-copy js-code-copy" data-clipboard-target="#example-fluid-billboard">Copy code</button>
     
     <div  id="example-fluid-billboard">
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"billboard billboard-fluid bg-light"</span><span class="nt">&gt;</span>
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"billboard bg-light text-xs-center"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"billboard-title"</span><span class="nt">&gt;</span>No side padding<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"billboard-description"</span><span class="nt">&gt;</span>Ok, well there <span class="nt">&lt;em&gt;</span>is<span class="nt">&lt;/em&gt;</span> side padding, but not on the billboard itself.  The side padding here comes from the <span class="nt">&lt;code&gt;</span>.container-fluid<span class="nt">&lt;/code&gt;</span> <span class="nt">&lt;em&gt;</span>inside<span class="nt">&lt;/em&gt;</span> the billboard.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"billboard-title"</span><span class="nt">&gt;</span>Centered text<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"billboard-description"</span><span class="nt">&gt;</span>Applying<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;div&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#0"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Got it<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
