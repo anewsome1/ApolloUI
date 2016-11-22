@@ -3,5 +3,26 @@
 }
 
 .bg-dark {
-  @include bg-color($bg-color: $gray-700, $text-color: #fff, $link-color: $atmosphere-300);
+  @include bg-color($bg-color: $gray-700, $text-color: #fff);
+
+  .btn-primary,
+  .btn-secondary {
+    &,
+    &:hover,
+    &:active {
+      border-color: transparent;
+    }
+  }
+
+  .btn-secondary {
+    &,
+    &:active,
+    &:visited {
+      color: $link-color;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
 }

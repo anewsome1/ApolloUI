@@ -2972,20 +2972,25 @@ dd {
   color: #fff;
 }
 
-.bg-dark a, .sidebar .accordion a, .bg-dark a:visited, .sidebar .accordion a:visited {
-  color: #32b5fc;
+.bg-dark .btn-primary, .sidebar .accordion .btn-primary, .bg-dark .btn-primary:hover, .sidebar .accordion .btn-primary:hover, .bg-dark .btn-primary:active, .sidebar .accordion .btn-primary:active,
+.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary,
+.bg-dark .carousel-dark .btn-primary, .carousel-dark
+.bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary,
+.bg-dark .btn-secondary:hover, .sidebar .accordion .btn-secondary:hover,
+.bg-dark .carousel-dark .btn-primary:hover, .carousel-dark
+.bg-dark .btn-primary:hover, .sidebar .accordion .carousel-dark .btn-primary:hover, .carousel-dark .sidebar .accordion .btn-primary:hover,
+.bg-dark .btn-secondary:active, .sidebar .accordion .btn-secondary:active,
+.bg-dark .carousel-dark .btn-primary:active, .carousel-dark
+.bg-dark .btn-primary:active, .sidebar .accordion .carousel-dark .btn-primary:active, .carousel-dark .sidebar .accordion .btn-primary:active {
+  border-color: transparent;
 }
 
-.bg-dark a:hover, .sidebar .accordion a:hover, .bg-dark a:active, .sidebar .accordion a:active {
-  color: #04a2f7;
+.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary, .bg-dark .btn-secondary:active, .sidebar .accordion .btn-secondary:active, .bg-dark .carousel-dark .btn-primary:active, .carousel-dark .bg-dark .btn-primary:active, .sidebar .accordion .carousel-dark .btn-primary:active, .carousel-dark .sidebar .accordion .btn-primary:active, .bg-dark .btn-secondary:visited, .sidebar .accordion .btn-secondary:visited, .bg-dark .carousel-dark .btn-primary:visited, .carousel-dark .bg-dark .btn-primary:visited, .sidebar .accordion .carousel-dark .btn-primary:visited, .carousel-dark .sidebar .accordion .btn-primary:visited {
+  color: #297dfd;
 }
 
-.bg-dark a.btn-primary, .sidebar .accordion a.btn-primary, .bg-dark a.btn-primary:hover, .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-primary:visited, .sidebar .accordion a.btn-primary:visited {
-  color: #fff;
-}
-
-.bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .sidebar .accordion .carousel-dark a.btn-primary, .carousel-dark .sidebar .accordion a.btn-primary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .sidebar .accordion .carousel-dark a.btn-primary:hover, .carousel-dark .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .sidebar .accordion .carousel-dark a.btn-primary:visited, .carousel-dark .sidebar .accordion a.btn-primary:visited {
-  color: #666666;
+.bg-dark .btn-secondary:hover, .sidebar .accordion .btn-secondary:hover, .bg-dark .carousel-dark .btn-primary:hover, .carousel-dark .bg-dark .btn-primary:hover, .sidebar .accordion .carousel-dark .btn-primary:hover, .carousel-dark .sidebar .accordion .btn-primary:hover {
+  color: #1f5ebe;
 }
 
 .alert {
