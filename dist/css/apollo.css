@@ -2968,7 +2968,7 @@ dd {
 }
 
 .bg-dark, .sidebar .accordion {
-  background-color: #002c44;
+  background-color: #333333;
   color: #fff;
 }
 
@@ -4739,13 +4739,13 @@ tbody.collapse.in {
 }
 
 .billboard {
-  padding: 1.25rem 2.5rem;
-  margin-bottom: 1.25rem;
+  padding: 5.25rem 6.25rem;
+  margin-bottom: 5.25rem;
 }
 
 @media (min-width: 576px) {
   .billboard {
-    padding: 1.25rem 2.5rem;
+    padding: 5.25rem 6.25rem;
   }
 }
 
@@ -4865,9 +4865,9 @@ tbody.collapse.in {
   display: flex;
   -ms-flex-align: end;
       align-items: flex-end;
-  padding-right: 2.5rem;
-  padding-bottom: 1.25rem;
-  padding-left: 2.5rem;
+  padding-right: 6.25rem;
+  padding-bottom: 5.25rem;
+  padding-left: 6.25rem;
 }
 
 @media (max-width: 767px) {
