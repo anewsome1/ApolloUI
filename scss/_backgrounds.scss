@@ -1,10 +1,9 @@
-.bg-light {
+.bg-gray-light {
   @include bg-color($bg-color: $gray-50);
 }
 
-.bg-dark {
-  @include bg-color($bg-color: $gray-700, $text-color: #fff);
-
+.bg-primary,
+.bg-gray-dark {
   .btn-primary,
   .btn-secondary {
     &,
@@ -13,6 +12,14 @@
       border-color: transparent;
     }
   }
+}
+
+.bg-gray-dark {
+  @include bg-color($bg-color: $gray-700, $text-color: #fff);
+}
+
+.bg-primary {
+  @include bg-color($bg-color: $brand-primary, $text-color: #fff);
 
   .btn-secondary {
     &,

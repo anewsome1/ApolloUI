@@ -2963,33 +2963,50 @@ dd {
   color: #818a91;
 }
 
-.bg-light {
+.bg-gray-light {
   background-color: #f2f2f2;
 }
 
-.bg-dark, .sidebar .accordion {
+.bg-primary .btn-primary, .bg-primary .btn-primary:hover, .bg-primary .btn-primary:active,
+.bg-primary .btn-secondary,
+.bg-primary .carousel-dark .btn-primary, .carousel-dark
+.bg-primary .btn-primary,
+.bg-primary .btn-secondary:hover,
+.bg-primary .carousel-dark .btn-primary:hover, .carousel-dark
+.bg-primary .btn-primary:hover,
+.bg-primary .btn-secondary:active,
+.bg-primary .carousel-dark .btn-primary:active, .carousel-dark
+.bg-primary .btn-primary:active,
+.bg-gray-dark .btn-primary,
+.bg-gray-dark .btn-primary:hover,
+.bg-gray-dark .btn-primary:active,
+.bg-gray-dark .btn-secondary,
+.bg-gray-dark .carousel-dark .btn-primary, .carousel-dark
+.bg-gray-dark .btn-primary,
+.bg-gray-dark .btn-secondary:hover,
+.bg-gray-dark .carousel-dark .btn-primary:hover, .carousel-dark
+.bg-gray-dark .btn-primary:hover,
+.bg-gray-dark .btn-secondary:active,
+.bg-gray-dark .carousel-dark .btn-primary:active, .carousel-dark
+.bg-gray-dark .btn-primary:active {
+  border-color: transparent;
+}
+
+.bg-gray-dark {
   background-color: #333333;
   color: #fff;
 }
 
-.bg-dark .btn-primary, .sidebar .accordion .btn-primary, .bg-dark .btn-primary:hover, .sidebar .accordion .btn-primary:hover, .bg-dark .btn-primary:active, .sidebar .accordion .btn-primary:active,
-.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary,
-.bg-dark .carousel-dark .btn-primary, .carousel-dark
-.bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary,
-.bg-dark .btn-secondary:hover, .sidebar .accordion .btn-secondary:hover,
-.bg-dark .carousel-dark .btn-primary:hover, .carousel-dark
-.bg-dark .btn-primary:hover, .sidebar .accordion .carousel-dark .btn-primary:hover, .carousel-dark .sidebar .accordion .btn-primary:hover,
-.bg-dark .btn-secondary:active, .sidebar .accordion .btn-secondary:active,
-.bg-dark .carousel-dark .btn-primary:active, .carousel-dark
-.bg-dark .btn-primary:active, .sidebar .accordion .carousel-dark .btn-primary:active, .carousel-dark .sidebar .accordion .btn-primary:active {
-  border-color: transparent;
+.bg-primary {
+  background-color: #297dfd;
+  color: #fff;
 }
 
-.bg-dark .btn-secondary, .sidebar .accordion .btn-secondary, .bg-dark .carousel-dark .btn-primary, .carousel-dark .bg-dark .btn-primary, .sidebar .accordion .carousel-dark .btn-primary, .carousel-dark .sidebar .accordion .btn-primary, .bg-dark .btn-secondary:active, .sidebar .accordion .btn-secondary:active, .bg-dark .carousel-dark .btn-primary:active, .carousel-dark .bg-dark .btn-primary:active, .sidebar .accordion .carousel-dark .btn-primary:active, .carousel-dark .sidebar .accordion .btn-primary:active, .bg-dark .btn-secondary:visited, .sidebar .accordion .btn-secondary:visited, .bg-dark .carousel-dark .btn-primary:visited, .carousel-dark .bg-dark .btn-primary:visited, .sidebar .accordion .carousel-dark .btn-primary:visited, .carousel-dark .sidebar .accordion .btn-primary:visited {
+.bg-primary .btn-secondary, .bg-primary .carousel-dark .btn-primary, .carousel-dark .bg-primary .btn-primary, .bg-primary .btn-secondary:active, .bg-primary .carousel-dark .btn-primary:active, .carousel-dark .bg-primary .btn-primary:active, .bg-primary .btn-secondary:visited, .bg-primary .carousel-dark .btn-primary:visited, .carousel-dark .bg-primary .btn-primary:visited {
   color: #297dfd;
 }
 
-.bg-dark .btn-secondary:hover, .sidebar .accordion .btn-secondary:hover, .bg-dark .carousel-dark .btn-primary:hover, .carousel-dark .bg-dark .btn-primary:hover, .sidebar .accordion .carousel-dark .btn-primary:hover, .carousel-dark .sidebar .accordion .btn-primary:hover {
+.bg-primary .btn-secondary:hover, .bg-primary .carousel-dark .btn-primary:hover, .carousel-dark .bg-primary .btn-primary:hover {
   color: #1f5ebe;
 }
 
