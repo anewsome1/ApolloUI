@@ -403,7 +403,7 @@ hr {
   padding: 2rem 1.25rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
 }
 
 .docs-callout p:last-of-type {
@@ -424,10 +424,6 @@ hr {
 
 .docs-callout.docs-callout-danger {
   border-left: 0.25rem solid #ff1d00;
-}
-
-.docs-callout.docs-callout-info {
-  border-left: 0.25rem solid #32b5fc;
 }
 
 .docs-color-group {

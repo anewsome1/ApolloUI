@@ -32,24 +32,11 @@
       &:visited {
         color: $link-color;
       }
+
       &:hover,
       &:active {
         color: darken($link-color, 10%);
       }
-
-      // Reset button link colors
-      @each $btn-name, $btn-props in $btn-variants {
-        &.btn-#{ $btn-name },
-        &.btn-#{ $btn-name }:hover,
-        &.btn-#{ $btn-name }:visited {
-          color: map-get($btn-props, 'color');
-        }
-
-        &.btn-#{ $btn-name }:active {
-          color: map-get($btn-props, 'color-active');
-        }
-      }
-
     }
   }
 }

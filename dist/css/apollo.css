@@ -2963,29 +2963,51 @@ dd {
   color: #818a91;
 }
 
-.bg-light {
+.bg-gray-light {
   background-color: #f2f2f2;
 }
 
-.bg-dark, .sidebar .accordion {
-  background-color: #002c44;
+.bg-primary .btn-primary, .bg-primary .btn-primary:hover, .bg-primary .btn-primary:active,
+.bg-primary .btn-secondary,
+.bg-primary .carousel-dark .btn-primary, .carousel-dark
+.bg-primary .btn-primary,
+.bg-primary .btn-secondary:hover,
+.bg-primary .carousel-dark .btn-primary:hover, .carousel-dark
+.bg-primary .btn-primary:hover,
+.bg-primary .btn-secondary:active,
+.bg-primary .carousel-dark .btn-primary:active, .carousel-dark
+.bg-primary .btn-primary:active,
+.bg-gray-dark .btn-primary,
+.bg-gray-dark .btn-primary:hover,
+.bg-gray-dark .btn-primary:active,
+.bg-gray-dark .btn-secondary,
+.bg-gray-dark .carousel-dark .btn-primary, .carousel-dark
+.bg-gray-dark .btn-primary,
+.bg-gray-dark .btn-secondary:hover,
+.bg-gray-dark .carousel-dark .btn-primary:hover, .carousel-dark
+.bg-gray-dark .btn-primary:hover,
+.bg-gray-dark .btn-secondary:active,
+.bg-gray-dark .carousel-dark .btn-primary:active, .carousel-dark
+.bg-gray-dark .btn-primary:active {
+  border-color: transparent;
+}
+
+.bg-gray-dark {
+  background-color: #333333;
   color: #fff;
 }
 
-.bg-dark a, .sidebar .accordion a, .bg-dark a:visited, .sidebar .accordion a:visited {
-  color: #32b5fc;
-}
-
-.bg-dark a:hover, .sidebar .accordion a:hover, .bg-dark a:active, .sidebar .accordion a:active {
-  color: #04a2f7;
-}
-
-.bg-dark a.btn-primary, .sidebar .accordion a.btn-primary, .bg-dark a.btn-primary:hover, .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-primary:visited, .sidebar .accordion a.btn-primary:visited {
+.bg-primary {
+  background-color: #297dfd;
   color: #fff;
 }
 
-.bg-dark a.btn-secondary, .sidebar .accordion a.btn-secondary, .bg-dark .carousel-dark a.btn-primary, .carousel-dark .bg-dark a.btn-primary, .sidebar .accordion .carousel-dark a.btn-primary, .carousel-dark .sidebar .accordion a.btn-primary, .bg-dark a.btn-secondary:hover, .sidebar .accordion a.btn-secondary:hover, .bg-dark .carousel-dark a.btn-primary:hover, .carousel-dark .bg-dark a.btn-primary:hover, .sidebar .accordion .carousel-dark a.btn-primary:hover, .carousel-dark .sidebar .accordion a.btn-primary:hover, .bg-dark a.btn-secondary:visited, .sidebar .accordion a.btn-secondary:visited, .bg-dark .carousel-dark a.btn-primary:visited, .carousel-dark .bg-dark a.btn-primary:visited, .sidebar .accordion .carousel-dark a.btn-primary:visited, .carousel-dark .sidebar .accordion a.btn-primary:visited {
-  color: #666666;
+.bg-primary .btn-secondary, .bg-primary .carousel-dark .btn-primary, .carousel-dark .bg-primary .btn-primary, .bg-primary .btn-secondary:active, .bg-primary .carousel-dark .btn-primary:active, .carousel-dark .bg-primary .btn-primary:active, .bg-primary .btn-secondary:visited, .bg-primary .carousel-dark .btn-primary:visited, .carousel-dark .bg-primary .btn-primary:visited {
+  color: #297dfd;
+}
+
+.bg-primary .btn-secondary:hover, .bg-primary .carousel-dark .btn-primary:hover, .carousel-dark .bg-primary .btn-primary:hover {
+  color: #1f5ebe;
 }
 
 .alert {
@@ -4739,13 +4761,13 @@ tbody.collapse.in {
 }
 
 .billboard {
-  padding: 1.25rem 2.5rem;
-  margin-bottom: 1.25rem;
+  padding: 5.25rem 6.25rem;
+  margin-bottom: 5.25rem;
 }
 
 @media (min-width: 576px) {
   .billboard {
-    padding: 1.25rem 2.5rem;
+    padding: 5.25rem 6.25rem;
   }
 }
 
@@ -4755,12 +4777,12 @@ tbody.collapse.in {
 }
 
 .billboard-title {
-  margin-top: .625rem;
-  margin-bottom: .625rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .billboard-description {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
 }
 
 .carousel {
@@ -4865,9 +4887,9 @@ tbody.collapse.in {
   display: flex;
   -ms-flex-align: end;
       align-items: flex-end;
-  padding-right: 2.5rem;
-  padding-bottom: 1.25rem;
-  padding-left: 2.5rem;
+  padding-right: 6.25rem;
+  padding-bottom: 5.25rem;
+  padding-left: 6.25rem;
 }
 
 @media (max-width: 767px) {
