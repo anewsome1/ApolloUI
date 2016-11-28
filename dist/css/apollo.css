@@ -4046,6 +4046,7 @@ tbody.collapse.in {
   margin-right: -0.9375rem;
   text-align: right;
   height: 100%;
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .navbar-profile:hover {
@@ -4095,24 +4096,6 @@ tbody.collapse.in {
 .navbar .dropdown-menu {
   width: 100%;
   min-width: initial;
-}
-
-.navbar-environment {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 16.66667%;
-  margin-right: -0.9375rem;
-  margin-left: 0.9375rem;
-  color: #fff;
-  background-color: #1f5ebe;
 }
 
 @media (max-width: 575px) {

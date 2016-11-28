@@ -188,6 +188,7 @@
   margin-right: (-$grid-gutter-width-base / 2);
   text-align: right;
   height: 100%;
+  transition: background-color $transition-fast;
 
   &:hover {
     background-color: $navbar-link-bg-hover;
@@ -252,31 +253,6 @@
 // .navbar-item.dropdown > a {
 //   padding-right: 1.5rem; // ~28px
 // }
-
-
-///
-/// Environment
-///
-
-.navbar-environment {
-  @if $enable-flex {
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-  } @else {
-    // TODO: Add better fallback here later
-    float: right;
-    text-align: center;
-  }
-
-  width: percentage(2 / 12);
-  margin-right: (-$grid-gutter-width-base / 2);
-  margin-left: $grid-gutter-width-base / 2;
-  color: #fff;
-  background-color: $water-400;
-}
 
 
 // Utility for shifting content down when using navbar-fixed-top
