@@ -80,7 +80,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:               12;
-$grid-gutter-width-base:     1.25rem;
+$grid-gutter-width-base:     1.875rem; // ~30px
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,
   sm: $grid-gutter-width-base,
@@ -459,18 +459,18 @@ $zindex-modal:             1025;
 
 $off-canvas-width:                  18rem; // ~256px
 
-$navbar-height:             5.5rem; // ~88px
-$navbar-brand-font-size:    $font-size-h2;
-$navbar-brand-logo-size:    $navbar-brand-font-size;
-$navbar-link-font-size:     $font-size-base;
-$navbar-link-padding-y:     $btn-padding-y;
-$navbar-link-padding-x:     $btn-padding-x;
-$navbar-brand-margin-top:   ($navbar-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-link-margin-top:    ($navbar-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+$navbar-height:             4.375rem; // ~70px
+$navbar-brand-font-size:    1.125rem; // ~18px
+$navbar-brand-logo-size:    1.5rem;   // ~24px
+$navbar-link-font-size:     1.125rem; // ~18px
+$navbar-link-padding-y:     calc-padding-y($navbar-height, $navbar-link-font-size);
+$navbar-link-padding-x:     1.5625rem; // ~25px
 
 $navbar-bg:                 $brand-primary;
-$navbar-link-color:         rgba(#fff, .8);
-$navbar-link-color-active:  #fff;
+$navbar-link-color:         #fff;
+$navbar-link-bg-hover:      rgba($black, .1);
+$navbar-link-bg-active:     rgba($black, .3);
+
 
 $off-canvas-toggle-size:            1.125rem;
 // $off-canvas-toggle-padding-y:       $navbar-link-padding-y;
@@ -494,8 +494,9 @@ $profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
 /// Command bar
 ///
 
+$command-bar-height:      $component-height-lg;
 $command-bar-bg:          $gray-50;
-$command-bar-padding-y:   .5rem;
+$command-bar-padding-y:   calc-padding-y($command-bar-height, $component-height);
 
 
 ///

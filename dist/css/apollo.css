@@ -453,8 +453,8 @@ output {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 @media (min-width: 576px) {
@@ -488,8 +488,8 @@ output {
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 .row {
@@ -497,35 +497,35 @@ output {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media (min-width: 576px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -533,35 +533,35 @@ output {
   position: relative;
   min-height: 1px;
   width: 100%;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 @media (min-width: 576px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -2901,35 +2901,35 @@ dd {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media (min-width: 576px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -3012,7 +3012,7 @@ dd {
 
 .alert {
   position: relative;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.9375rem;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
@@ -3022,7 +3022,7 @@ dd {
 .alert .close {
   position: absolute;
   top: 50%;
-  right: 0.625rem;
+  right: 0.9375rem;
   margin-top: -0.75rem;
   font-size: 1.5rem;
   line-height: 1;
@@ -3079,7 +3079,7 @@ dd {
 
 @media (max-width: 575px) {
   .btn {
-    margin-right: 0.625rem;
+    margin-right: 0.9375rem;
   }
 }
 
@@ -3512,8 +3512,8 @@ input[type='radio']:checked {
 }
 
 .table tr {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .table th {
@@ -3614,7 +3614,7 @@ input[type='radio']:checked {
 }
 
 .table .btn-link {
-  margin-right: 0.41667rem;
+  margin-right: 0.625rem;
 }
 
 .table .btn-link + .btn-link {
@@ -3904,13 +3904,14 @@ tbody.collapse.in {
 .navbar {
   z-index: 1000;
   background-color: #297dfd;
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar a,
 .navbar a:hover,
-.navbar a:focus {
+.navbar a:focus,
+.navbar a:active {
   text-decoration: none;
+  color: #fff;
 }
 
 .navbar.navbar-fixed-top {
@@ -3918,6 +3919,7 @@ tbody.collapse.in {
   top: 0;
   z-index: 1030;
   width: 100%;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar > .container,
@@ -3932,14 +3934,13 @@ tbody.collapse.in {
 @media (min-width: 576px) {
   .navbar > .container,
   .navbar > .container-fluid {
-    height: 5.5rem;
+    height: 4.375rem;
   }
 }
 
 .navbar-brand {
   margin-right: 3rem;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.125rem;
   white-space: nowrap;
   display: -ms-flexbox;
   display: flex;
@@ -3951,15 +3952,10 @@ tbody.collapse.in {
       justify-content: space-between;
 }
 
-.navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:active {
-  color: #fff;
-}
-
 .navbar-brand-logo {
-  position: relative;
-  top: 0rem;
   width: 1.5rem;
-  margin-right: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
 }
 
 .navbar-links {
@@ -3972,15 +3968,27 @@ tbody.collapse.in {
   margin-bottom: 0;
 }
 
-.navbar-item > a, .navbar-actions-item > a {
-  padding: 0.6875rem 0.625rem;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  white-space: nowrap;
+.navbar-item, .navbar-actions-item {
+  position: relative;
 }
 
-.navbar-item.active > a, .active.navbar-actions-item > a {
+.navbar-item > a, .navbar-actions-item > a {
+  display: block;
+  padding: 1.625rem 1.5625rem;
+  font-size: 1.125rem;
+  line-height: 1;
   color: #fff;
+  white-space: nowrap;
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.navbar-item:hover > a, .navbar-actions-item:hover > a {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-item.active > a, .active.navbar-actions-item > a,
+.navbar-item.dropdown.open > a, .dropdown.open.navbar-actions-item > a {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-actions {
@@ -3988,7 +3996,7 @@ tbody.collapse.in {
   list-style: none;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 1.25rem;
+  margin-right: 1.875rem;
   margin-bottom: 0;
 }
 
@@ -4034,63 +4042,60 @@ tbody.collapse.in {
 }
 
 .navbar-profile {
+  position: relative;
+  margin-right: -0.9375rem;
   text-align: right;
+  height: 100%;
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.navbar-profile:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-profile.open {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-profile .profile-credential,
 .navbar-profile .profile-credential > a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
 }
 
 .navbar-profile .profile-username,
 .navbar-profile .profile-credential {
   display: block;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .navbar-profile .profile-username {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  padding: 1.625rem 0.9375rem;
+  margin-top: -.5rem;
+  margin-bottom: -1.2rem;
+}
+
+.navbar-profile .profile-credential,
+.navbar-profile .dropdown-menu > li > a {
+  padding-right: 2.6875rem;
 }
 
 .navbar-profile .profile-credential {
   font-size: 0.875rem;
 }
 
-.navbar-profile .profile-credential.dropdown {
-  position: relative;
-  margin-right: -1rem;
-  margin-top: -.25rem;
-  white-space: nowrap;
+.navbar-profile .dropdown-menu {
+  top: 4.375rem;
 }
 
-.navbar-profile .profile-credential > a {
-  display: block;
+.navbar .dropdown-toggle::after {
+  margin-left: .25rem;
 }
 
-.navbar-profile .profile-credential .dropdown-menu {
-  text-align: initial;
-  left: auto;
-  right: 0;
-  font-size: 1rem;
-}
-
-.navbar-environment {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 16.66667%;
-  margin-right: -0.625rem;
-  margin-left: 0.625rem;
-  color: #fff;
-  background-color: #1f5ebe;
+.navbar .dropdown-menu {
+  width: 100%;
+  min-width: initial;
 }
 
 @media (max-width: 575px) {
@@ -4101,15 +4106,18 @@ tbody.collapse.in {
 
 @media (min-width: 576px) {
   .margin-top-navbar {
-    margin-top: 5.5rem;
+    margin-top: 4.375rem;
   }
 }
 
 .command-bar {
-  z-index: 1000;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   background-color: #f2f2f2;
+}
+
+.navbar-fixed-top .command-bar {
+  z-index: 1000;
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
@@ -4133,7 +4141,7 @@ tbody.collapse.in {
 }
 
 .command-bar-actions > li + li {
-  margin-left: 1rem;
+  margin-left: .625rem;
 }
 
 .command-bar-actions .icon, .command-bar-actions .close {
@@ -4443,7 +4451,7 @@ tbody.collapse.in {
 
 .modal-dialog {
   position: relative;
-  margin: 0.625rem;
+  margin: 0.9375rem;
   background-color: #fff;
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
   opacity: .5;
@@ -4460,7 +4468,7 @@ tbody.collapse.in {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    margin: 5.5rem auto;
+    margin: 4.375rem auto;
   }
 }
 
@@ -4471,8 +4479,8 @@ tbody.collapse.in {
 
 .modal-dialog .close {
   position: absolute;
-  right: 0.625rem;
-  top: 0.625rem;
+  right: 0.9375rem;
+  top: 0.9375rem;
   font-size: 1.25rem;
   color: #b2b2b2;
 }
@@ -4480,18 +4488,18 @@ tbody.collapse.in {
 .modal-header,
 .modal-body,
 .modal-footer {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .modal-header {
-  padding-top: 1.25rem;
-  padding-bottom: 0.41667rem;
+  padding-top: 1.875rem;
+  padding-bottom: 0.625rem;
 }
 
 .modal-body {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
 }
 
 .modal-header + .modal-body {
@@ -4500,11 +4508,11 @@ tbody.collapse.in {
 
 .modal-title {
   margin-bottom: 0;
-  margin-right: 1.25rem;
+  margin-right: 1.875rem;
 }
 
 .modal-body {
-  padding: 0 1.25rem 1.25rem;
+  padding: 0 1.875rem 1.875rem;
 }
 
 .modal-body p:last-child {
@@ -4512,7 +4520,7 @@ tbody.collapse.in {
 }
 
 .modal-footer {
-  padding: 0.625rem 1.25rem 1.25rem;
+  padding: 0.9375rem 1.875rem 1.875rem;
 }
 
 .modal-backdrop {
@@ -4551,7 +4559,7 @@ tbody.collapse.in {
 }
 
 .card {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
   border: 0.0625rem solid #e5e5e5;
   background-color: #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
@@ -4583,8 +4591,8 @@ tbody.collapse.in {
 
 .card-header,
 .card-block {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
 }
 
 .card-header + .card-block {
@@ -4633,7 +4641,7 @@ tbody.collapse.in {
 
 .card-title {
   line-height: 1;
-  margin-top: 1.25rem;
+  margin-top: 1.875rem;
   margin-bottom: 0;
 }
 
@@ -4650,14 +4658,14 @@ tbody.collapse.in {
     display: flex;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
   .card-deck .card {
     -ms-flex: 1 0 0;
         flex: 1 0 0;
-    margin-right: 0.625rem;
-    margin-left: 0.625rem;
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
   }
 }
 
@@ -4667,7 +4675,7 @@ tbody.collapse.in {
 
 .accordion-header,
 .accordion-block {
-  padding: 0.6575rem 1.25rem;
+  padding: 0.6575rem 1.875rem;
 }
 
 .accordion-header {
@@ -4969,7 +4977,7 @@ tbody.collapse.in {
 }
 
 .carousel-control + .carousel-control {
-  margin-left: 1.25rem;
+  margin-left: 1.875rem;
 }
 
 @media (min-width: 576px) {

@@ -1,12 +1,13 @@
 .navbar {
   z-index: $zindex-navbar;
   background-color: $navbar-bg;
-  box-shadow: $shadow-hover;
 
   a,
   a:hover,
-  a:focus {
+  a:focus,
+  a:active {
     text-decoration: none;
+    color: $navbar-link-color;
   }
 
   &.navbar-fixed-top {
@@ -14,6 +15,7 @@
     top: 0;
     z-index: $zindex-navbar-fixed;
     width: 100%;
+    box-shadow: $shadow-hover;
   }
 
   ///
@@ -55,7 +57,6 @@
 .navbar-brand {
   margin-right: 3rem;
   font-size: $navbar-brand-font-size;
-  font-weight: $font-light;
   white-space: nowrap;
 
   @if $enable-flex {
@@ -67,18 +68,15 @@
     margin-top: calc-padding-y($navbar-height, $navbar-brand-font-size * $line-height);
   }
 
-  &,
-  &:hover,
-  &:visited,
-  &:active {
-    color: #fff;
-  }
-
   &-logo {
-    position: relative;
-    top: $navbar-brand-logo-size - $navbar-brand-font-size;
+    @if $enable-flex == false {
+      position: relative;
+      top: $navbar-brand-logo-size - $navbar-brand-font-size;
+    }
+
     width: $navbar-brand-logo-size;
-    margin-right: $navbar-brand-logo-size;
+    height: $navbar-brand-logo-size;
+    margin-right: $font-size-xs;
   }
 }
 
@@ -102,11 +100,16 @@
     display: inline-block;
   }
 
+  position: relative;
+
   > a {
-    padding: $btn-padding-y ($grid-gutter-width-base / 2);
+    display: block;
+    padding: $navbar-link-padding-y $navbar-link-padding-x;
     font-size: $navbar-link-font-size;
+    line-height: 1;
     color: $navbar-link-color;
     white-space: nowrap;
+    transition: background-color $transition-fast;
 
     @if $enable-flex == false {
       display: block;
@@ -114,9 +117,17 @@
     }
   }
 
-  &.active > a {
-    color: $navbar-link-color-active;
+  &:hover > a {
+    background-color: $navbar-link-bg-hover;
   }
+
+
+}
+
+.navbar-item.active > a,
+.navbar-item.dropdown.open > a,
+ {
+  background-color: $navbar-link-bg-active;
 }
 
 
@@ -173,7 +184,19 @@
 ///
 
 .navbar-profile {
+  position: relative;
+  margin-right: (-$grid-gutter-width-base / 2);
   text-align: right;
+  height: 100%;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $navbar-link-bg-hover;
+  }
+
+  &.open {
+    background-color: $navbar-link-bg-active;
+  }
 
   @if $enable-flex == false {
     margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
@@ -187,63 +210,49 @@
   .profile-username,
   .profile-credential {
     display: block;
-    line-height: 1.2;
+    line-height: 1;
   }
 
   .profile-username {
-    color: $navbar-link-color-active;
+    color: $navbar-link-color;
     font-size: $navbar-link-font-size;
+    padding: $navbar-link-padding-y ($grid-gutter-width-base / 2);
+    margin-top: -.5rem;
+    margin-bottom: -1.2rem;
+  }
+
+  .profile-credential,
+  .dropdown-menu > li > a {
+    padding-right: ($grid-gutter-width-base / 2) + 1.75rem;
   }
 
   .profile-credential {
     font-size: $font-size-sm;
-
-    &.dropdown {
-      position: relative;
-      margin-right: -$dropdown-padding-x;
-      margin-top: -.25rem;
-      white-space: nowrap;
-    }
-
-    > a {
-      display: block;
-    }
-
-    .dropdown-menu {
-      text-align: initial;
-      left: auto;
-      right: 0;
-      font-size: $font-size-base;
-    }
   }
 
-  .profile-credential-dropdown {
+  .dropdown-menu {
+    top: $navbar-height;
   }
 }
 
 
-///
-/// Environment
-///
-.navbar-environment {
-  @if $enable-flex {
-    display: flex;
-    flex-direction: column;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-  } @else {
-    // TODO: Add better fallback here later
-    float: right;
-    text-align: center;
-  }
 
-  width: percentage(2 / 12);
-  margin-right: (-$grid-gutter-width-base / 2);
-  margin-left: $grid-gutter-width-base / 2;
-  color: #fff;
-  background-color: $water-400;
+///
+/// Dropdown menus
+///
+
+.navbar .dropdown-toggle::after {
+  margin-left: .25rem;
 }
+
+.navbar .dropdown-menu {
+  width: 100%;
+  min-width: initial;
+}
+
+// .navbar-item.dropdown > a {
+//   padding-right: 1.5rem; // ~28px
+// }
 
 
 // Utility for shifting content down when using navbar-fixed-top
@@ -266,11 +275,14 @@
 ///
 
 .command-bar {
-  z-index: $zindex-navbar;
   padding-top: $command-bar-padding-y;
   padding-bottom: $command-bar-padding-y;
   background-color: $command-bar-bg;
-  box-shadow: $shadow-hover;
+
+  .navbar-fixed-top & {
+    z-index: $zindex-navbar;
+    box-shadow: $shadow-hover;
+  }
 
   &.command-bar-fixed-bottom {
     position: fixed;
@@ -291,12 +303,12 @@
     display: inline-block;
 
     + li {
-      margin-left: 1rem;
+      margin-left: .625rem; // ~10px
     }
   }
 
   .icon {
-    padding-right: .25rem;
+    padding-right: .25rem; // ~4px
   }
 }
 
