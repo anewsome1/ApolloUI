@@ -3968,18 +3968,26 @@ tbody.collapse.in {
   margin-bottom: 0;
 }
 
+.navbar-item, .navbar-actions-item {
+  position: relative;
+}
+
 .navbar-item > a, .navbar-actions-item > a {
-  padding: 1.5rem 1.5625rem;
+  display: block;
+  padding: 1.625rem 1.5625rem;
   font-size: 1.125rem;
+  line-height: 1;
   color: #fff;
   white-space: nowrap;
+  transition: background-color 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .navbar-item:hover > a, .navbar-actions-item:hover > a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-item.active > a, .active.navbar-actions-item > a {
+.navbar-item.active > a, .active.navbar-actions-item > a,
+.navbar-item.dropdown.open > a, .dropdown.open.navbar-actions-item > a {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -4034,7 +4042,18 @@ tbody.collapse.in {
 }
 
 .navbar-profile {
+  position: relative;
+  margin-right: -0.625rem;
   text-align: right;
+  height: 100%;
+}
+
+.navbar-profile:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-profile.open {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-profile .profile-credential,
@@ -4045,34 +4064,37 @@ tbody.collapse.in {
 .navbar-profile .profile-username,
 .navbar-profile .profile-credential {
   display: block;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .navbar-profile .profile-username {
   color: #fff;
   font-size: 1.125rem;
+  padding: 1.625rem 0.625rem;
+  margin-top: -.5rem;
+  margin-bottom: -1.2rem;
+}
+
+.navbar-profile .profile-credential,
+.navbar-profile .dropdown-menu > li > a {
+  padding-right: 2.375rem;
 }
 
 .navbar-profile .profile-credential {
   font-size: 0.875rem;
 }
 
-.navbar-profile .profile-credential.dropdown {
-  position: relative;
-  margin-right: -1rem;
-  margin-top: -.25rem;
-  white-space: nowrap;
+.navbar-profile .dropdown-menu {
+  top: 4.375rem;
 }
 
-.navbar-profile .profile-credential > a {
-  display: block;
+.navbar .dropdown-toggle::after {
+  margin-left: .25rem;
 }
 
-.navbar-profile .profile-credential .dropdown-menu {
-  text-align: initial;
-  left: auto;
-  right: 0;
-  font-size: 1rem;
+.navbar .dropdown-menu {
+  width: 100%;
+  min-width: initial;
 }
 
 .navbar-environment {

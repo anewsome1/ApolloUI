@@ -459,12 +459,12 @@ $zindex-modal:             1025;
 
 $off-canvas-width:                  18rem; // ~256px
 
-$navbar-height:             4.375rem;   // ~70px
-$navbar-brand-font-size:    1.125rem;   // ~18px
-$navbar-brand-logo-size:    1.5rem;     // ~24px
-$navbar-link-font-size:     1.125rem;   // ~18px
-$navbar-link-padding-y:     1.5rem;     // ~24px
-$navbar-link-padding-x:     1.5625rem;  // ~25px
+$navbar-height:             4.375rem; // ~70px
+$navbar-brand-font-size:    1.125rem; // ~18px
+$navbar-brand-logo-size:    1.5rem;   // ~24px
+$navbar-link-font-size:     1.125rem; // ~18px
+$navbar-link-padding-y:     calc-padding-y($navbar-height, $navbar-link-font-size);
+$navbar-link-padding-x:     1.5625rem; // ~25px
 
 $navbar-bg:                 $brand-primary;
 $navbar-link-color:         #fff;

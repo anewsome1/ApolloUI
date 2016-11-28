@@ -100,11 +100,16 @@
     display: inline-block;
   }
 
+  position: relative;
+
   > a {
+    display: block;
     padding: $navbar-link-padding-y $navbar-link-padding-x;
     font-size: $navbar-link-font-size;
+    line-height: 1;
     color: $navbar-link-color;
     white-space: nowrap;
+    transition: background-color $transition-fast;
 
     @if $enable-flex == false {
       display: block;
@@ -116,9 +121,13 @@
     background-color: $navbar-link-bg-hover;
   }
 
-  &.active > a {
-    background-color: $navbar-link-bg-active;
-  }
+
+}
+
+.navbar-item.active > a,
+.navbar-item.dropdown.open > a,
+ {
+  background-color: $navbar-link-bg-active;
 }
 
 
@@ -175,7 +184,18 @@
 ///
 
 .navbar-profile {
+  position: relative;
+  margin-right: (-$grid-gutter-width-base / 2);
   text-align: right;
+  height: 100%;
+
+  &:hover {
+    background-color: $navbar-link-bg-hover;
+  }
+
+  &.open {
+    background-color: $navbar-link-bg-active;
+  }
 
   @if $enable-flex == false {
     margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
@@ -189,44 +209,55 @@
   .profile-username,
   .profile-credential {
     display: block;
-    line-height: 1.2;
+    line-height: 1;
   }
 
   .profile-username {
     color: $navbar-link-color;
     font-size: $navbar-link-font-size;
+    padding: $navbar-link-padding-y ($grid-gutter-width-base / 2);
+    margin-top: -.5rem;
+    margin-bottom: -1.2rem;
+  }
+
+  .profile-credential,
+  .dropdown-menu > li > a {
+    padding-right: ($grid-gutter-width-base / 2) + 1.75rem;
   }
 
   .profile-credential {
     font-size: $font-size-sm;
-
-    &.dropdown {
-      position: relative;
-      margin-right: -$dropdown-padding-x;
-      margin-top: -.25rem;
-      white-space: nowrap;
-    }
-
-    > a {
-      display: block;
-    }
-
-    .dropdown-menu {
-      text-align: initial;
-      left: auto;
-      right: 0;
-      font-size: $font-size-base;
-    }
   }
 
-  .profile-credential-dropdown {
+  .dropdown-menu {
+    top: $navbar-height;
   }
 }
+
+
+
+///
+/// Dropdown menus
+///
+
+.navbar .dropdown-toggle::after {
+  margin-left: .25rem;
+}
+
+.navbar .dropdown-menu {
+  width: 100%;
+  min-width: initial;
+}
+
+// .navbar-item.dropdown > a {
+//   padding-right: 1.5rem; // ~28px
+// }
 
 
 ///
 /// Environment
 ///
+
 .navbar-environment {
   @if $enable-flex {
     display: flex;
