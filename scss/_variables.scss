@@ -494,8 +494,9 @@ $profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
 /// Command bar
 ///
 
+$command-bar-height:      $component-height-lg;
 $command-bar-bg:          $gray-50;
-$command-bar-padding-y:   .5rem;
+$command-bar-padding-y:   calc-padding-y($command-bar-height, $component-height);
 
 
 ///

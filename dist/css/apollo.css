@@ -4111,8 +4111,8 @@ tbody.collapse.in {
 }
 
 .command-bar {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   background-color: #f2f2f2;
 }
 
@@ -4141,7 +4141,7 @@ tbody.collapse.in {
 }
 
 .command-bar-actions > li + li {
-  margin-left: 1rem;
+  margin-left: .625rem;
 }
 
 .command-bar-actions .icon, .command-bar-actions .close {

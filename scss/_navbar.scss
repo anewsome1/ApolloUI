@@ -303,12 +303,12 @@
     display: inline-block;
 
     + li {
-      margin-left: 1rem;
+      margin-left: .625rem; // ~10px
     }
   }
 
   .icon {
-    padding-right: .25rem;
+    padding-right: .25rem; // ~4px
   }
 }
 
