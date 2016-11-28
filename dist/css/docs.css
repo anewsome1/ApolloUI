@@ -5,7 +5,7 @@
 }
 
 .highlight pre {
-  padding: 1.25rem;
+  padding: 1.875rem;
   margin-bottom: 0;
 }
 
@@ -94,13 +94,13 @@ body {
 }
 
 .docs-sidebar {
-  margin-left: -0.625rem;
+  margin-left: -0.9375rem;
   background: #f2f2f2;
 }
 
 @media (max-width: 575px) {
   .docs-sidebar {
-    margin-right: -0.625rem;
+    margin-right: -0.9375rem;
   }
 }
 
@@ -131,8 +131,8 @@ body {
 .docs-nav {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -172,14 +172,14 @@ body {
 
 @media (max-width: 767px) {
   .docs-page-nav {
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    -moz-column-gap: 1.875rem;
+         column-gap: 1.875rem;
   }
 }
 
 @media (min-width: 768px) {
   .docs-page-nav {
-    padding-left: 0.625rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 .docs-navbar {
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: #002c44;
 }
 
 .docs-navbar .navbar-brand {
@@ -221,7 +221,7 @@ body {
 
 @media (min-width: 576px) {
   .docs {
-    padding-top: 5.5rem;
+    padding-top: 4.375rem;
   }
 }
 
@@ -232,7 +232,7 @@ body {
 @media (min-width: 768px) {
   .docs-sidebar {
     position: fixed;
-    top: 5.5rem;
+    top: 4.375rem;
     bottom: 0;
     height: auto;
     overflow-x: hidden;
@@ -250,7 +250,7 @@ hr {
 .docs-page-header {
   padding-top: 3rem;
   padding-bottom: 4rem;
-  margin-bottom: -2.75rem;
+  margin-bottom: -2.1875rem;
   border-bottom: 0.0625rem solid rgba(153, 153, 153, 0.15);
 }
 
@@ -259,8 +259,8 @@ hr {
 }
 
 .docs-section {
-  padding-top: 6.5rem;
-  margin-bottom: -5.5rem;
+  padding-top: 5.375rem;
+  margin-bottom: -4.375rem;
 }
 
 .docs-section-title {
@@ -306,7 +306,7 @@ hr {
 }
 
 .docs-example-rendered {
-  padding: 1.25rem;
+  padding: 1.875rem;
 }
 
 .docs-example-label {
@@ -400,7 +400,7 @@ hr {
 }
 
 .docs-callout {
-  padding: 2rem 1.25rem;
+  padding: 2rem 1.875rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   background-color: #f2f2f2;
@@ -431,35 +431,35 @@ hr {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media (min-width: 576px) {
   .docs-color-group {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .docs-color-group {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .docs-color-group {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .docs-color-group {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -467,8 +467,8 @@ hr {
   position: relative;
   min-height: 1px;
   width: 100%;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   max-width: 100%;
@@ -479,29 +479,29 @@ hr {
 
 @media (min-width: 576px) {
   .docs-color-swatch {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .docs-color-swatch {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .docs-color-swatch {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .docs-color-swatch {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
