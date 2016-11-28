@@ -3904,7 +3904,6 @@ tbody.collapse.in {
 .navbar {
   z-index: 1000;
   background-color: #297dfd;
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar a,
@@ -3918,6 +3917,7 @@ tbody.collapse.in {
   top: 0;
   z-index: 1030;
   width: 100%;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar > .container,
@@ -3927,6 +3927,7 @@ tbody.collapse.in {
   -ms-flex-align: center;
       align-items: center;
   height: 3.75rem;
+  overflow: hidden;
 }
 
 @media (min-width: 576px) {
@@ -3971,14 +3972,18 @@ tbody.collapse.in {
 }
 
 .navbar-item > a, .navbar-actions-item > a {
-  padding: 0.6875rem 0.625rem;
+  padding: 1.625rem 1.5625rem;
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   white-space: nowrap;
 }
 
+.navbar-item:hover > a, .navbar-actions-item:hover > a {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .navbar-item.active > a, .active.navbar-actions-item > a {
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar-actions {
@@ -4037,7 +4042,7 @@ tbody.collapse.in {
 
 .navbar-profile .profile-credential,
 .navbar-profile .profile-credential > a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
 }
 
 .navbar-profile .profile-username,
@@ -4104,10 +4109,13 @@ tbody.collapse.in {
 }
 
 .command-bar {
-  z-index: 1000;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: #f2f2f2;
+}
+
+.navbar-fixed-top .command-bar {
+  z-index: 1000;
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 

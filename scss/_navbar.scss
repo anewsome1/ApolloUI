@@ -1,7 +1,6 @@
 .navbar {
   z-index: $zindex-navbar;
   background-color: $navbar-bg;
-  box-shadow: $shadow-hover;
 
   a,
   a:hover,
@@ -14,6 +13,7 @@
     top: 0;
     z-index: $zindex-navbar-fixed;
     width: 100%;
+    box-shadow: $shadow-hover;
   }
 
   ///
@@ -28,6 +28,7 @@
     }
 
     height: $navbar-sm-height;
+    overflow: hidden;
 
     @include media-breakpoint-up(sm) {
       height: $navbar-height;
@@ -74,6 +75,11 @@
   }
 
   &-logo {
+    @if $enable-flex == false {
+      position: relative;
+      top: $navbar-brand-logo-size - $navbar-brand-font-size;
+    }
+
     width: $navbar-brand-logo-size;
     height: $navbar-brand-logo-size;
     margin-right: $font-size-xs;
@@ -101,7 +107,7 @@
   }
 
   > a {
-    padding: $btn-padding-y ($grid-gutter-width-base / 2);
+    padding: $navbar-link-padding-y $navbar-link-padding-x;
     font-size: $navbar-link-font-size;
     color: $navbar-link-color;
     white-space: nowrap;
@@ -112,8 +118,12 @@
     }
   }
 
+  &:hover > a {
+    background-color: $navbar-link-bg-hover;
+  }
+
   &.active > a {
-    color: $navbar-link-color-active;
+    background-color: $navbar-link-bg-active;
   }
 }
 
@@ -189,7 +199,7 @@
   }
 
   .profile-username {
-    color: $navbar-link-color-active;
+    color: $navbar-link-color;
     font-size: $navbar-link-font-size;
   }
 
@@ -264,11 +274,14 @@
 ///
 
 .command-bar {
-  z-index: $zindex-navbar;
   padding-top: $command-bar-padding-y;
   padding-bottom: $command-bar-padding-y;
   background-color: $command-bar-bg;
-  box-shadow: $shadow-hover;
+
+  .navbar-fixed-top & {
+    z-index: $zindex-navbar;
+    box-shadow: $shadow-hover;
+  }
 
   &.command-bar-fixed-bottom {
     position: fixed;
