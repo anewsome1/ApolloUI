@@ -453,8 +453,8 @@ output {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 @media (min-width: 576px) {
@@ -488,8 +488,8 @@ output {
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 .row {
@@ -497,35 +497,35 @@ output {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media (min-width: 576px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .row {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -533,35 +533,35 @@ output {
   position: relative;
   min-height: 1px;
   width: 100%;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 @media (min-width: 576px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -2901,35 +2901,35 @@ dd {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media (min-width: 576px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 768px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 992px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media (min-width: 1200px) {
   .dl-horizontal {
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -3012,7 +3012,7 @@ dd {
 
 .alert {
   position: relative;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.9375rem;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
@@ -3022,7 +3022,7 @@ dd {
 .alert .close {
   position: absolute;
   top: 50%;
-  right: 0.625rem;
+  right: 0.9375rem;
   margin-top: -0.75rem;
   font-size: 1.5rem;
   line-height: 1;
@@ -3079,7 +3079,7 @@ dd {
 
 @media (max-width: 575px) {
   .btn {
-    margin-right: 0.625rem;
+    margin-right: 0.9375rem;
   }
 }
 
@@ -3512,8 +3512,8 @@ input[type='radio']:checked {
 }
 
 .table tr {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .table th {
@@ -3614,7 +3614,7 @@ input[type='radio']:checked {
 }
 
 .table .btn-link {
-  margin-right: 0.41667rem;
+  margin-right: 0.625rem;
 }
 
 .table .btn-link + .btn-link {
@@ -3996,7 +3996,7 @@ tbody.collapse.in {
   list-style: none;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 1.25rem;
+  margin-right: 1.875rem;
   margin-bottom: 0;
 }
 
@@ -4043,7 +4043,7 @@ tbody.collapse.in {
 
 .navbar-profile {
   position: relative;
-  margin-right: -0.625rem;
+  margin-right: -0.9375rem;
   text-align: right;
   height: 100%;
 }
@@ -4070,14 +4070,14 @@ tbody.collapse.in {
 .navbar-profile .profile-username {
   color: #fff;
   font-size: 1.125rem;
-  padding: 1.625rem 0.625rem;
+  padding: 1.625rem 0.9375rem;
   margin-top: -.5rem;
   margin-bottom: -1.2rem;
 }
 
 .navbar-profile .profile-credential,
 .navbar-profile .dropdown-menu > li > a {
-  padding-right: 2.375rem;
+  padding-right: 2.6875rem;
 }
 
 .navbar-profile .profile-credential {
@@ -4109,8 +4109,8 @@ tbody.collapse.in {
   -ms-flex-pack: center;
       justify-content: center;
   width: 16.66667%;
-  margin-right: -0.625rem;
-  margin-left: 0.625rem;
+  margin-right: -0.9375rem;
+  margin-left: 0.9375rem;
   color: #fff;
   background-color: #1f5ebe;
 }
@@ -4468,7 +4468,7 @@ tbody.collapse.in {
 
 .modal-dialog {
   position: relative;
-  margin: 0.625rem;
+  margin: 0.9375rem;
   background-color: #fff;
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
   opacity: .5;
@@ -4496,8 +4496,8 @@ tbody.collapse.in {
 
 .modal-dialog .close {
   position: absolute;
-  right: 0.625rem;
-  top: 0.625rem;
+  right: 0.9375rem;
+  top: 0.9375rem;
   font-size: 1.25rem;
   color: #b2b2b2;
 }
@@ -4505,18 +4505,18 @@ tbody.collapse.in {
 .modal-header,
 .modal-body,
 .modal-footer {
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
 }
 
 .modal-header {
-  padding-top: 1.25rem;
-  padding-bottom: 0.41667rem;
+  padding-top: 1.875rem;
+  padding-bottom: 0.625rem;
 }
 
 .modal-body {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
 }
 
 .modal-header + .modal-body {
@@ -4525,11 +4525,11 @@ tbody.collapse.in {
 
 .modal-title {
   margin-bottom: 0;
-  margin-right: 1.25rem;
+  margin-right: 1.875rem;
 }
 
 .modal-body {
-  padding: 0 1.25rem 1.25rem;
+  padding: 0 1.875rem 1.875rem;
 }
 
 .modal-body p:last-child {
@@ -4537,7 +4537,7 @@ tbody.collapse.in {
 }
 
 .modal-footer {
-  padding: 0.625rem 1.25rem 1.25rem;
+  padding: 0.9375rem 1.875rem 1.875rem;
 }
 
 .modal-backdrop {
@@ -4576,7 +4576,7 @@ tbody.collapse.in {
 }
 
 .card {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.875rem;
   border: 0.0625rem solid #e5e5e5;
   background-color: #fff;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
@@ -4608,8 +4608,8 @@ tbody.collapse.in {
 
 .card-header,
 .card-block {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
 }
 
 .card-header + .card-block {
@@ -4658,7 +4658,7 @@ tbody.collapse.in {
 
 .card-title {
   line-height: 1;
-  margin-top: 1.25rem;
+  margin-top: 1.875rem;
   margin-bottom: 0;
 }
 
@@ -4675,14 +4675,14 @@ tbody.collapse.in {
     display: flex;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-    margin-right: -0.625rem;
-    margin-left: -0.625rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
   .card-deck .card {
     -ms-flex: 1 0 0;
         flex: 1 0 0;
-    margin-right: 0.625rem;
-    margin-left: 0.625rem;
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
   }
 }
 
@@ -4692,7 +4692,7 @@ tbody.collapse.in {
 
 .accordion-header,
 .accordion-block {
-  padding: 0.6575rem 1.25rem;
+  padding: 0.6575rem 1.875rem;
 }
 
 .accordion-header {
@@ -4994,7 +4994,7 @@ tbody.collapse.in {
 }
 
 .carousel-control + .carousel-control {
-  margin-left: 1.25rem;
+  margin-left: 1.875rem;
 }
 
 @media (min-width: 576px) {
