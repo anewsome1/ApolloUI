@@ -3939,7 +3939,6 @@ tbody.collapse.in {
 .navbar-brand {
   margin-right: 3rem;
   font-size: 1.125rem;
-  font-weight: 300;
   white-space: nowrap;
   display: -ms-flexbox;
   display: flex;
@@ -3956,10 +3955,9 @@ tbody.collapse.in {
 }
 
 .navbar-brand-logo {
-  position: relative;
-  top: 0.375rem;
   width: 1.5rem;
-  margin-right: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
 }
 
 .navbar-links {
