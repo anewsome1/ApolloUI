@@ -3908,8 +3908,10 @@ tbody.collapse.in {
 
 .navbar a,
 .navbar a:hover,
-.navbar a:focus {
+.navbar a:focus,
+.navbar a:active {
   text-decoration: none;
+  color: #fff;
 }
 
 .navbar.navbar-fixed-top {
@@ -3927,7 +3929,6 @@ tbody.collapse.in {
   -ms-flex-align: center;
       align-items: center;
   height: 3.75rem;
-  overflow: hidden;
 }
 
 @media (min-width: 576px) {
@@ -3951,10 +3952,6 @@ tbody.collapse.in {
       justify-content: space-between;
 }
 
-.navbar-brand, .navbar-brand:hover, .navbar-brand:visited, .navbar-brand:active {
-  color: #fff;
-}
-
 .navbar-brand-logo {
   width: 1.5rem;
   height: 1.5rem;
@@ -3972,7 +3969,7 @@ tbody.collapse.in {
 }
 
 .navbar-item > a, .navbar-actions-item > a {
-  padding: 1.625rem 1.5625rem;
+  padding: 1.5rem 1.5625rem;
   font-size: 1.125rem;
   color: #fff;
   white-space: nowrap;
