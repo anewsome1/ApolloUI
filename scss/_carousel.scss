@@ -104,16 +104,18 @@
 
 .carousel-indicators {
   position: absolute;
-  bottom: 0;
-  z-index: 1;
-  height: $component-height;
+  bottom: $grid-gutter-width-base;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
   padding-left: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: -40%;
+  text-align: center;
+  list-style: none;
 
   li {
-    display: block;
-    float: left;
+    display: inline-block;
     width: $carousel-indicator-size;
     height: $carousel-indicator-size;
     margin: 0;

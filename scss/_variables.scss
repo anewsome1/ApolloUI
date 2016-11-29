@@ -164,7 +164,7 @@ $transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
 /// Lighting
 ///
 
-$shadow-color:          rgba(#000, .15);
+$shadow-color:          rgba($black, .15);
 
 $shadow-border:        0 0 0 $border-width $shadow-color;
 $shadow-hover:         0 .625rem .9375rem $shadow-color;  // ~0 10px 15px
