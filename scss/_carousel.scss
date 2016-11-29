@@ -4,7 +4,6 @@
 
 .carousel {
   position: relative;
-  border: $border-width solid $gray-200;
 
   .billboard {
     margin-bottom: 0;
@@ -106,6 +105,7 @@
 .carousel-indicators {
   position: absolute;
   bottom: 0;
+  z-index: 1;
   height: $component-height;
   padding-left: 0;
   margin-left: auto;
@@ -121,16 +121,20 @@
     cursor: pointer;
     background-color: $carousel-indicator-inactive-bg;
     border-radius: 50%;
+    transition: all $transition-fast;
+
+    &:hover,
+    &.active {
+      background-color: $carousel-indicator-active-bg;
+      box-shadow: $shadow-border;
+    }
 
     + li {
       margin-left: $carousel-indicator-size;
     }
   }
 
-  .active {
-    background-color: $carousel-indicator-active-bg;
-    box-shadow: $shadow-border;
-  }
+
 }
 
 ///
@@ -150,7 +154,8 @@
   background-color: $carousel-control-bg;
   color: $carousel-control-color;
   opacity: 0;
-  transition: opacity $transition-fast;
+  transition: opacity $transition-fast,
+              background-color $transition-fast;
 
   &.left {
     left: $carousel-control-margin;
@@ -168,6 +173,11 @@
   @include hover-focus {
     text-decoration: none;
     outline: 0;
+    color: $carousel-control-color;
+  }
+
+  &:hover {
+    background-color: $carousel-control-bg-hover;
   }
 
   // Toggles
@@ -200,19 +210,6 @@
   .btn-primary {
     @extend .btn-secondary;
     border: 0;
-  }
-
-  .carousel-control {
-    border-color: #fff;
-    color: #fff;
-  }
-
-  .carousel-indicators li {
-    background-color: rgba(#fff, .2);
-
-    &.active {
-      background-color: #fff;
-    }
   }
 }
 
