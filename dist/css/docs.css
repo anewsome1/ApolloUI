@@ -104,6 +104,10 @@ body {
   }
 }
 
+.docs-sidebar a:hover {
+  text-decoration: none;
+}
+
 .docs-sidebar-header {
   display: -ms-flexbox;
   display: flex;
