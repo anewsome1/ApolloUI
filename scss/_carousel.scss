@@ -100,30 +100,16 @@
 
 
 ///
-/// Left/right controls for nav
-///
-
-.carousel-controls {
-  display: flex;
-  align-items: flex-end;
-  padding-right: $billboard-padding-x;
-  padding-bottom: $billboard-padding-y;
-  padding-left: $billboard-padding-x;
-
-  @include media-breakpoint-down(sm) {
-    padding-top: 2.5rem;
-  }
-}
-
-///
 /// Carousel position indicators
 ///
 
 .carousel-indicators {
-  flex-grow: 1;
-  list-style: none;
+  position: absolute;
+  bottom: 0;
+  height: $component-height;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   li {
     display: block;
@@ -143,55 +129,48 @@
 
   .active {
     background-color: $carousel-indicator-active-bg;
-  }
-
-  @include media-breakpoint-down(sm) {
-    position: absolute;
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: $component-height;
-    background-color: $gray-100;
-
-    .carousel-dark & {
-      background-color: $brand-primary;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    order: -1;
+    box-shadow: $shadow-border;
   }
 }
 
+///
+/// Carousel controls (left/right)
+///
+
 .carousel-control {
+  position: absolute;
+  top: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: $carousel-control-width;
   height: $carousel-control-width;
-  border: ($border-width * 2) solid $carousel-indicator-active-bg;
+  margin-top: (-$carousel-control-width / 2);
   border-radius: 50%;
+  background-color: $carousel-control-bg;
+  color: $carousel-control-color;
+  opacity: 0;
+  transition: opacity $transition-fast;
 
-  & + & {
-    margin-left: $grid-gutter-width-base;
+  &.left {
+    left: $carousel-control-margin;
   }
 
-  @include media-breakpoint-up(sm) {
-    width: $carousel-control-width;
+  &.right {
+    right: $carousel-control-margin;
   }
 
-  /// Hover/focus state
+  .carousel:hover & {
+    opacity: 1;
+  }
+
+  // Hover/focus state
   @include hover-focus {
     text-decoration: none;
     outline: 0;
   }
 
-  /// Toggles
+  // Toggles
   .icon-prev,
   .icon-next {
     @extend %icon-base;

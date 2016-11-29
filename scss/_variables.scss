@@ -566,17 +566,20 @@ $billboard-padding-y: 5.25rem; // ~84px
 
 $carousel-text-shadow:              0 .0625rem .125rem rgba(0,0,0,.6);
 
-$carousel-control-color:            #fff;
-$carousel-control-width:            2.5rem;
-$carousel-control-font-size:        1.25rem;
+$carousel-control-color:            $white;
+$carousel-control-bg:               rgba($black, .4);
+$carousel-control-bg-hover:         rgba($black, .5);
+$carousel-control-width:            2.375rem; // ~38px
+$carousel-control-font-size:        1.25rem;  // ~20px
 $carousel-control-padding:          calc-padding-y($carousel-control-width, $carousel-control-font-size);
+$carousel-control-margin:           1.25rem;  // ~20px
 
-$carousel-indicator-active-bg:      $link-color;
-$carousel-indicator-inactive-bg:    rgba($body-color, .2);
+$carousel-indicator-active-bg:      $white;
+$carousel-indicator-inactive-bg:    $carousel-control-bg;
 $carousel-indicator-border-color:   #fff;
 $carousel-indicator-size:           .625rem;
 
-$carousel-caption-color:            #fff;
+$carousel-caption-color:            $white;
 
 
 ///

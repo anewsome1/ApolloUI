@@ -4890,28 +4890,13 @@ tbody.collapse.in {
   left: 0;
 }
 
-.carousel-controls {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  padding-right: 6.25rem;
-  padding-bottom: 5.25rem;
-  padding-left: 6.25rem;
-}
-
-@media (max-width: 767px) {
-  .carousel-controls {
-    padding-top: 2.5rem;
-  }
-}
-
 .carousel-indicators {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  list-style: none;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-indicators li {
@@ -4922,7 +4907,7 @@ tbody.collapse.in {
   margin: 0;
   padding: 0;
   cursor: pointer;
-  background-color: rgba(51, 51, 51, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
 }
 
@@ -4931,59 +4916,39 @@ tbody.collapse.in {
 }
 
 .carousel-indicators .active {
-  background-color: #297dfd;
-}
-
-@media (max-width: 767px) {
-  .carousel-indicators {
-    position: absolute;
-    top: auto;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #e5e5e5;
-  }
-  .carousel-dark .carousel-indicators {
-    background-color: #297dfd;
-  }
-}
-
-@media (min-width: 768px) {
-  .carousel-indicators {
-    -ms-flex-order: -1;
-        order: -1;
-  }
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.15);
 }
 
 .carousel-control {
+  position: absolute;
+  top: 50%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 0.125rem solid #297dfd;
+  width: 2.375rem;
+  height: 2.375rem;
+  margin-top: -1.1875rem;
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.carousel-control + .carousel-control {
-  margin-left: 1.875rem;
+.carousel-control.left {
+  left: 1.25rem;
 }
 
-@media (min-width: 576px) {
-  .carousel-control {
-    width: 2.5rem;
-  }
+.carousel-control.right {
+  right: 1.25rem;
+}
+
+.carousel:hover .carousel-control {
+  opacity: 1;
 }
 
 .carousel-control:focus, .carousel-control:hover {

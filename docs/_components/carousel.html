@@ -24,7 +24,12 @@ contents:
 {% include example-intro.html title='Basic Carousel' description='Carousels include left/right navigation controls, along with slide position indicators below.' %}
 
 {% capture example %}
-<div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+<div class="carousel slide" id="carousel-example-generic" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(255,255,255,.8),rgba(255,255,255,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="billboard">
@@ -47,22 +52,15 @@ contents:
         <a class="btn btn-primary" href="#0">Action</a>
       </div>
     </div>
-    <div class="carousel-controls">
-      <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="icon-prev" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="icon-next" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-    </div>
   </div>
+  <a class="carousel-control left" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control right" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 {% endcapture %}
 
@@ -77,6 +75,11 @@ contents:
 
 {% capture example %}
 <div class="carousel carousel-dark slide" id="carousel-example-dark" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(41,125,253,.8),rgba(41,125,253,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+    <ol class="carousel-indicators">
+    <li data-target="#carousel-example-dark" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="1"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="2"></li>
+  </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="billboard">
@@ -99,87 +102,66 @@ contents:
         <a class="btn btn-primary" href="#0">Action</a>
       </div>
     </div>
-    <div class="carousel-controls">
-      <a class="carousel-control left" href="#carousel-example-dark" role="button" data-slide="prev">
-        <span class="icon-prev" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control right" href="#carousel-example-dark" role="button" data-slide="next">
-        <span class="icon-next" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-dark" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-dark" data-slide-to="1"></li>
-        <li data-target="#carousel-example-dark" data-slide-to="2"></li>
-      </ol>
-    </div>
   </div>
+  <a class="carousel-control left" href="#carousel-example-dark" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control right" href="#carousel-example-dark" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-dark' %}
+{% include example.html code=example id='example-blue' %}
 </section>
 
+<section class="docs-section" id="dark-carousel">
 
-
-<section class="docs-section" id="side-image">
-
-{% include example-intro.html title='Side image' description='Use a grid layout and some custom styles to add a side image to your carousel.' %}
-
-{% include docs-callout.html state='info' title='Inline styles' body='The inline styles below simply demonstrate which custom styles to use when adding a side image.  These rules should probably be added to your application stylesheet for better maintainability.' %}
+{% include example-intro.html title='Dark carousel' description='When you apply the <code>.carousel-dark</code> class to a carousel, the content and control colors are changed to improve legibility.  This example includes inline styles to show how you can use CSS to apply a color overlay to a background image to further improve text color contrast.' %}
 
 {% capture example %}
-<div class="carousel slide" id="carousel-example-image" data-ride="carousel">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <div style="height:100%;min-height:15rem;background:url('http://placeimg.com/1024/768/tech/grayscale') no-repeat center center;background-size:cover;"></div>
+<div class="carousel carousel-dark slide" id="carousel-example-dark" data-ride="carousel" style="background-image: linear-gradient(to right, rgba(0,0,0,.8),rgba(0,0,0,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
+    <ol class="carousel-indicators">
+    <li data-target="#carousel-example-dark" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="1"></li>
+    <li data-target="#carousel-example-dark" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="billboard">
+        <h3 class="billboard-title">First slide</h3>
+        <p class="billboard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod fringilla lectus, vel vehicula ante vulputate id.</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-8">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <div class="billboard">
-            <h3 class="billboard-title">First slide</h3>
-            <p class="billboard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod fringilla lectus, vel vehicula ante vulputate id.</p>
-            <a class="btn btn-primary" href="#0">Action</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="billboard">
-            <h3 class="billboard-title">Numero dos</h3>
-            <p class="billboard-description">Integer euismod laoreet diam at vulputate. Suspendisse elementum lacus et risus pretium dictum.</p>
-            <a class="btn btn-primary" href="#0">Action</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="billboard">
-            <h3 class="billboard-title">Slide the third</h3>
-            <p class="billboard-description">Donec id magna vehicula, fermentum purus in, lacinia erat. Praesent tempor egestas nibh a semper.</p>
-            <a class="btn btn-primary" href="#0">Action</a>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <a class="carousel-control left" href="#carousel-example-image" role="button" data-slide="prev">
-            <span class="icon-prev" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control right" href="#carousel-example-image" role="button" data-slide="next">
-            <span class="icon-next" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
-        </div>
+    <div class="carousel-item">
+      <div class="billboard">
+        <h3 class="billboard-title">Numero dos</h3>
+        <p class="billboard-description">Integer euismod laoreet diam at vulputate. Suspendisse elementum lacus et risus pretium dictum.</p>
+        <a class="btn btn-primary" href="#0">Action</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="billboard">
+        <h3 class="billboard-title">Slide the third</h3>
+        <p class="billboard-description">Donec id magna vehicula, fermentum purus in, lacinia erat. Praesent tempor egestas nibh a semper.</p>
+        <a class="btn btn-primary" href="#0">Action</a>
       </div>
     </div>
   </div>
+  <a class="carousel-control left" href="#carousel-example-dark" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control right" href="#carousel-example-dark" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-side-image' %}
-
+{% include example.html code=example id='example-gray' %}
 </section>
 
