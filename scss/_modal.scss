@@ -99,7 +99,7 @@
 }
 
 .modal-title {
-  @extend .h2;
+  @extend .h1;
 
   margin-bottom: 0;
   margin-right: $modal-inner-padding;  // Make room for close button
