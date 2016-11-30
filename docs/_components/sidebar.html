@@ -25,6 +25,7 @@ contents:
 
 {% capture example %}
 <aside class="sidebar">
+  <h3 class="sidebar-title">Sidebar header</h3>
   <a class="sidebar-link" href="#0">
     <span class="sidebar-link-title">Essentials</span>
   </a>
@@ -51,39 +52,6 @@ contents:
 </section>
 
 
-<section class="docs-section" id="narrow-version">
-
-{% include example-intro.html title='Narrow version' description='Add the class <code>.sidebar-sm</code> to a sidebar to make it more narrow, with larger links.' %}
-
-
-{% capture example %}
-<aside class="sidebar sidebar-sm">
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Essentials</span>
-  </a>
-  <a class="sidebar-link active" href="#0">
-    <span class="sidebar-link-title">Rating</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Identity</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Location Details</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Activity History</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="sidebar-link-title">Survey</span>
-  </a>
-</aside>
-{% endcapture %}
-
-{% include example.html  code=example id='example-sidebar-small' %}
-
-</section>
-
-
 <section class="docs-section" id="narrow-with-icons">
 
 {% include example-intro.html title='Narrow with icons' description='Icons can be added to the narrow sidebar to help make the links more easily recognizable.' %}
@@ -92,27 +60,19 @@ contents:
 <aside class="sidebar sidebar-sm">
   <a class="sidebar-link" href="#0">
     <span class="icon icon-alert-circle"></span>
-    <span class="sidebar-link-title">Essentials</span>
+    <span class="sidebar-link-title">Alerts</span>
   </a>
   <a class="sidebar-link active" href="#0">
     <span class="icon icon-star"></span>
-    <span class="sidebar-link-title">Rating</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="icon icon-contact"></span>
-    <span class="sidebar-link-title">Identity</span>
+    <span class="sidebar-link-title">Ratings</span>
   </a>
   <a class="sidebar-link" href="#0">
     <span class="icon icon-location"></span>
-    <span class="sidebar-link-title">Location Details</span>
+    <span class="sidebar-link-title">Location</span>
   </a>
   <a class="sidebar-link" href="#0">
-    <span class="icon icon-user-history"></span>
-    <span class="sidebar-link-title">Activity History</span>
-  </a>
-  <a class="sidebar-link" href="#0">
-    <span class="icon icon-survey"></span>
-    <span class="sidebar-link-title">Survey</span>
+    <span class="icon icon-user"></span>
+    <span class="sidebar-link-title">Profile</span>
   </a>
 </aside>
 {% endcapture %}
@@ -129,43 +89,37 @@ contents:
 <aside class="sidebar off-canvas off-canvas-left" id="off-canvas-demo">
   <h2 class="sidebar-title">Global Filters</h2>
   <div class="search">
-    <input class="search-input" type="search">
+    <input class="search-input" type="search" placeholder="Search">
   </div>
   <div class="accordion" id="sidebar-accordion" role="tablist" aria-multiselectable="true">
     <div class="card">
       <div class="accordion-header" id="accordion-dark-head-1" role="tab" data-toggle="collapse" data-target="#accordion-dark-sect-1" data-parent="#sidebar-accordion" aria-expanded="true" aria-controls="accordion-dark-sect-1">
-        <h3 class="accordion-title">Marketing Campaign</h3>
+        <h3 class="accordion-title">Campaigns</h3>
       </div>
       <div class="accordion-content collapse in" id="accordion-dark-sect-1" role="tabpanel" aria-labeledby="accordion-dark-head-1">
         <div class="accordion-block">
           <div class="form-group">
             <div class="checkbox">
               <input id="call-center" name="call-center" type="checkbox" checked>
-              <label for="call-center">Call Center (6,234)</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <input id="congress" name="congress" type="checkbox" checked>
-              <label for="congress">Congress (3,245)</label>
+              <label for="call-center">Call Center</label>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
               <input id="mail" name="mail" type="checkbox">
-              <label for="mail">Direct Mail (8,690)</label>
+              <label for="mail">Direct Mail</label>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
               <input id="phone" name="phone" type="checkbox">
-              <label for="phone">Direct Phone (8,353)</label>
+              <label for="phone">Direct Phone</label>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
               <input id="email" name="email" type="checkbox">
-              <label for="email">Email (45,244)</label>
+              <label for="email">Email</label>
             </div>
           </div>
         </div>

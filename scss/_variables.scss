@@ -503,19 +503,24 @@ $command-bar-padding-y:   calc-padding-y($command-bar-height, $component-height)
 /// Vertical navbar
 ///
 
-$sidebar-width:           15rem;
-$sidebar-bg:              $gray-700;
-$sidebar-link-color:      #fff;
-$sidebar-padding-x:       1.5rem;
-$sidebar-padding-y:       calc-padding-y(2.2rem, $font-size-sm);
-$sidebar-icon-size:       .875rem;
+$sidebar-color:      #fff;
+$sidebar-header-color:    $gray-400;
+$sidebar-font-size:       $font-size-sm;
+$sidebar-font-weight:     $font-semi-bold;
+$sidebar-icon-size:       1.125rem; // ~18px
+
+$sidebar-width:           10.625rem; // ~170px
+$sidebar-bg:              $atmosphere-600;
+$sidebar-padding-x:       $grid-gutter-width-base / 2;
+$sidebar-padding-y:       1.25rem;
+$sidebar-link-padding-y:  calc-padding-y(2.1875rem, $sidebar-font-size);
 $sidebar-active-color:    $atmosphere-300;
-$sidebar-active-bg:       $gray-700;
-$sidebar-hover-bg:        rgba($sidebar-active-bg, .5);
+$sidebar-active-bg:       rgba($black, .3);
+$sidebar-hover-bg:        $sidebar-active-bg;
 
+$sidebar-sm-width:        4.375rem; // ~70px
+$sidebar-sm-link-height:  5rem;     // ~80px
 
-$sidebar-sm-width:        5.125rem; // ~82px
-$sidebar-sm-link-height:  5.5rem;   // ~88px
 
 ///
 /// Login component
