@@ -31,8 +31,10 @@
     margin-bottom: $spacer-y;
 
     &::before {
-      padding-top: $search-icon-padding-sm;
+      padding-top: .55rem;
+      padding-left: .625rem;
       color: $gray-200;
+      font-size: .6875rem;
     }
   }
 
@@ -46,7 +48,7 @@
   .search-input {
     @extend .input-sm;
 
-    padding-left: $search-padding-left;
+    padding-left: 1.75rem;
   }
 
   ///

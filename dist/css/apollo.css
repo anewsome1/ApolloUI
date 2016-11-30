@@ -4176,8 +4176,10 @@ tbody.collapse.in {
 }
 
 .sidebar .search::before {
-  padding-top: 0.4375rem;
+  padding-top: .55rem;
+  padding-left: .625rem;
   color: #d9d9d9;
+  font-size: .6875rem;
 }
 
 .sidebar .form-control, .sidebar .search-input,
@@ -4188,7 +4190,7 @@ tbody.collapse.in {
 }
 
 .sidebar .search-input {
-  padding-left: 2.5rem;
+  padding-left: 1.75rem;
 }
 
 .sidebar .accordion {
