@@ -85,6 +85,26 @@
 
 
   ///
+  /// Checkboxes
+  ///
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: .9375rem; // ~15px
+    height: .9375rem; // ~15px
+
+    + label {
+      transition: all $transition-fast;
+    }
+
+    &:checked + label,
+    + label:hover {
+      color: $sidebar-active-color;
+    }
+  }
+
+
+  ///
   /// Off-canvas
   ///
 

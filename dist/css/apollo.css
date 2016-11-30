@@ -4219,6 +4219,24 @@ tbody.collapse.in {
   padding: 0 0.9375rem;
 }
 
+.sidebar input[type='checkbox'],
+.sidebar input[type='radio'] {
+  width: .9375rem;
+  height: .9375rem;
+}
+
+.sidebar input[type='checkbox'] + label,
+.sidebar input[type='radio'] + label {
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.sidebar input[type='checkbox']:checked + label,
+.sidebar input[type='checkbox'] + label:hover,
+.sidebar input[type='radio']:checked + label,
+.sidebar input[type='radio'] + label:hover {
+  color: #32b5fc;
+}
+
 .sidebar.off-canvas {
   position: fixed;
   top: 0;
