@@ -5,17 +5,37 @@
     display: inline-block;
     list-style-type: none;
 
-    + li {
-      &::before {
-        @extend %icon-base;
+    a {
+      transition: all $transition-fast;
+    }
 
-        display: inline-block;
-        padding-left: $breadcrumb-spacing;
-        padding-right: $breadcrumb-spacing;
-        font-size: $font-size-sm;
-        content: map-get($_icons-map, 'chevron-right');
-        vertical-align: text-top;
-      }
+    a,
+    &:last-of-type {
+      padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+      margin-right: -$breadcrumb-padding-x;
+      margin-left: -$breadcrumb-padding-x;
+    }
+
+    a,
+    + li::before {
+      color: $gray-500;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: $link-color;
+      background-color: $gray-50;
+    }
+
+    // Separator chevron icon
+    + li::before {
+      @extend %icon-base;
+
+      display: inline;
+      padding-right: $breadcrumb-padding-x;
+      font-size: $font-size-sm;
+      content: map-get($_icons-map, 'chevron-right');
+      vertical-align: text-top;
     }
   }
 
@@ -38,18 +58,10 @@
 
 
       &::after {
-        position: absolute;
-        z-index: -1;
-        top: 60%;
-        left: 45%;
-        width: $breadcrumb-ellipse-circle-size;
-        height: $breadcrumb-ellipse-circle-size;
-        margin-top: -$breadcrumb-ellipse-circle-size / 2;
-        margin-left: -$breadcrumb-ellipse-circle-size / 2;
-        content: ''; // Hide down chevron icon
-        border-radius: 50%;
+        display: none;
       }
     }
+    
     &.open .dropdown-toggle {
         color: $water-400;
 

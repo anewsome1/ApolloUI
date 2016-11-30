@@ -552,9 +552,9 @@ $empty-space-icon-color-dark:   #fff;
 ///
 
 $breadcrumb-font-size:                $font-size-base;
-$breadcrumb-spacing:                  .25rem; // ~4px;
-$breadcrumb-ellipse-letter-spacing:   .125rem;
-$breadcrumb-ellipse-circle-size:      1.5rem;
+$breadcrumb-padding-x:                .3125rem; // ~5px
+$breadcrumb-padding-y:                .15625rem;   // ~2.5px
+$breadcrumb-ellipse-letter-spacing:   .125rem;  // ~2px
 
 
 ///
