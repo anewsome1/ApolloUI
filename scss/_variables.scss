@@ -423,7 +423,7 @@ $table-highlight-shadow:        inset .5rem 0 0 -.25rem;
 /// Dropdowns
 ///
 
-$dropdown-padding-x:          1rem;
+$dropdown-padding-x:          $grid-gutter-width-base / 2;
 $dropdown-padding-y:          calc-padding-y(2.1875rem, $font-size-base); // Total height ~35px
 $dropdown-menu-bg:            #fff;
 $dropdown-menu-border-color:  $gray-200;

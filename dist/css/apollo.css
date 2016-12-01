@@ -3676,7 +3676,7 @@ tbody.collapse.in {
 
 .dropdown-toggle {
   position: relative;
-  padding: 0.59375rem 1rem;
+  padding: 0.59375rem 0.9375rem;
   background: none;
   border: 0;
   color: #297dfd;
@@ -3727,7 +3727,7 @@ tbody.collapse.in {
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 0.59375rem 1rem;
+  padding: 0.59375rem 0.9375rem;
   line-height: 1;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -4344,27 +4344,37 @@ tbody.collapse.in {
 }
 
 .breadcrumb > li {
-  display: inline-block;
+  display: inline;
   list-style-type: none;
 }
 
-.breadcrumb > li a {
+.breadcrumb > li > a {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.breadcrumb > li a, .breadcrumb > li:last-of-type {
+.breadcrumb > li > a,
+.breadcrumb > li .dropdown-toggle, .breadcrumb > li:last-of-type {
+  display: inline-block;
+  height: 1.5625rem;
   padding: 0.15625rem 0.3125rem;
   margin-right: -0.3125rem;
   margin-left: -0.3125rem;
 }
 
-.breadcrumb > li a,
+.breadcrumb > li > a,
+.breadcrumb > li .dropdown-toggle,
 .breadcrumb > li + li::before {
   color: #999999;
 }
 
-.breadcrumb > li a:hover {
+.breadcrumb > li > a:hover, .breadcrumb > li > a:focus,
+.breadcrumb > li .dropdown-toggle:hover,
+.breadcrumb > li .dropdown-toggle:focus {
   text-decoration: none;
+}
+
+.breadcrumb > li > a:hover,
+.breadcrumb > li .dropdown-toggle:hover {
   color: #297dfd;
   background-color: #f2f2f2;
 }
@@ -4383,12 +4393,8 @@ tbody.collapse.in {
 }
 
 .breadcrumb .dropdown .dropdown-toggle {
-  position: relative;
-  z-index: 1;
-  padding: 0;
   font-weight: 600;
   letter-spacing: 0.125rem;
-  margin-right: -0.125rem;
 }
 
 .breadcrumb .dropdown .dropdown-toggle, .breadcrumb .dropdown .dropdown-toggle::after {
