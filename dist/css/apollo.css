@@ -3676,7 +3676,7 @@ tbody.collapse.in {
 
 .dropdown-toggle {
   position: relative;
-  padding: 0.59375rem 1rem;
+  padding: 0.59375rem 0.9375rem;
   background: none;
   border: 0;
   color: #297dfd;
@@ -3727,7 +3727,7 @@ tbody.collapse.in {
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 0.59375rem 1rem;
+  padding: 0.59375rem 0.9375rem;
   line-height: 1;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
@@ -4344,14 +4344,44 @@ tbody.collapse.in {
 }
 
 .breadcrumb > li {
-  display: inline-block;
+  display: inline;
   list-style-type: none;
 }
 
-.breadcrumb > li + li::before {
+.breadcrumb > li > a {
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.breadcrumb > li > a,
+.breadcrumb > li .dropdown-toggle, .breadcrumb > li:last-of-type {
   display: inline-block;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  height: 1.5625rem;
+  padding: 0.15625rem 0.3125rem;
+  margin-right: -0.3125rem;
+  margin-left: -0.3125rem;
+}
+
+.breadcrumb > li > a,
+.breadcrumb > li .dropdown-toggle,
+.breadcrumb > li + li::before {
+  color: #999999;
+}
+
+.breadcrumb > li > a:hover, .breadcrumb > li > a:focus,
+.breadcrumb > li .dropdown-toggle:hover,
+.breadcrumb > li .dropdown-toggle:focus {
+  text-decoration: none;
+}
+
+.breadcrumb > li > a:hover,
+.breadcrumb > li .dropdown-toggle:hover {
+  color: #297dfd;
+  background-color: #f2f2f2;
+}
+
+.breadcrumb > li + li::before {
+  display: inline;
+  padding-right: 0.3125rem;
   font-size: 0.875rem;
   content: "";
   vertical-align: text-top;
@@ -4363,12 +4393,8 @@ tbody.collapse.in {
 }
 
 .breadcrumb .dropdown .dropdown-toggle {
-  position: relative;
-  z-index: 1;
-  padding: 0;
   font-weight: 600;
   letter-spacing: 0.125rem;
-  margin-right: -0.125rem;
 }
 
 .breadcrumb .dropdown .dropdown-toggle, .breadcrumb .dropdown .dropdown-toggle::after {
@@ -4376,16 +4402,7 @@ tbody.collapse.in {
 }
 
 .breadcrumb .dropdown .dropdown-toggle::after {
-  position: absolute;
-  z-index: -1;
-  top: 60%;
-  left: 45%;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: -0.75rem;
-  margin-left: -0.75rem;
-  content: '';
-  border-radius: 50%;
+  display: none;
 }
 
 .breadcrumb .dropdown.open .dropdown-toggle {
