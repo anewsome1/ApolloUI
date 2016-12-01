@@ -9,12 +9,6 @@
     padding: $table-cell-padding-y $table-cell-padding-x;
     line-height: $line-height;
     vertical-align: middle;
-    &:first-child {
-      padding-left: $table-cell-padding-x * 2;
-    }
-    &:last-child {
-      padding-right: $table-cell-padding-x * 2;
-    }
   }
 
   tr {

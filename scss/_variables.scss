@@ -398,13 +398,13 @@ $toggle-active-bg:      $link-hover-color;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding-x:          1.5rem;
-$table-cell-padding-y:          .85rem;
+$table-cell-padding-x:          $grid-gutter-width-base / 2;
+$table-cell-padding-y:          calc-padding-y($component-height, $font-size-base);
 $table-sm-cell-padding-y:       .5rem;
 
 $table-header-bg:               $gray-50;
 $table-header-color:            $gray-700;
-$table-header-padding-y:        1rem;
+$table-header-padding-y:        $table-cell-padding-y;
 $table-header-sorted-bg:        $gray-200;
 
 $table-bg:                      transparent;
