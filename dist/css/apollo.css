@@ -5321,6 +5321,15 @@ tbody.collapse.in {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.pager a {
+  transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.pager a:hover, .pager a:focus {
+  text-decoration: none;
 }
 
 .pager-prev,
@@ -5347,28 +5356,33 @@ tbody.collapse.in {
   cursor: not-allowed;
 }
 
-.pager-prev.disabled:hover,
-.pager-next.disabled:hover {
-  text-decoration: none;
-}
-
 .pager-next {
   text-align: right;
 }
 
 .pager-prev::before,
 .pager-next::after {
+  font-size: 0.75rem;
   vertical-align: text-bottom;
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .pager-prev::before {
   content: "";
-  padding-right: .5rem;
+  padding-right: .1875rem;
+}
+
+.pager-prev:not(.disabled):hover::before {
+  transform: translateX(-0.1875rem);
 }
 
 .pager-next::after {
   content: "";
-  padding-left: .5rem;
+  padding-left: .1875rem;
+}
+
+.pager-next:not(.disabled):hover::after {
+  transform: translateX(0.1875rem);
 }
 
 @keyframes pulse {
