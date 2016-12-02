@@ -28,11 +28,15 @@ td > dl {
 }
 
 dt {
-  color: $link-hover-color;
+  color: $text-muted;
 }
 
 dd {
   margin-bottom: $spacer-y;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .dl-horizontal {

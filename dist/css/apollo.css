@@ -2891,11 +2891,15 @@ td > dl {
 }
 
 dt {
-  color: #1f5ebe;
+  color: #999999;
 }
 
 dd {
   margin-bottom: 1rem;
+}
+
+dd:last-of-type {
+  margin-bottom: 0;
 }
 
 .dl-horizontal {
