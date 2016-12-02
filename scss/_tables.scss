@@ -2,12 +2,14 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
+  font-size: $table-font-size;
   background-color: $body-bg;
+  border: $border-width solid $table-border-color;
 
   th,
   td {
     padding: $table-cell-padding-y $table-cell-padding-x;
-    line-height: $line-height;
+    line-height: 1;
     vertical-align: middle;
   }
 
@@ -25,12 +27,16 @@
     font-weight: $font-semi-bold;
   }
 
-  thead th {
-    padding: $table-header-padding-y $table-cell-padding-x;
-    line-height: 1;
-    color: $table-header-color;
-    background-color: $table-header-bg;
-    vertical-align: bottom;
+  thead {
+    border-bottom: $border-width solid $table-border-color;
+
+    th {
+      padding: $table-header-padding-y $table-cell-padding-x;
+      line-height: 1;
+      color: $table-header-color;
+      background-color: $table-header-bg;
+      vertical-align: bottom;
+    }
   }
 
 
@@ -59,7 +65,7 @@
       }
 
       &.table-#{ $state } {
-        background-color: rgba($state-bg, .1);
+        background-color: rgba($state-bg, .2);
       }
     }
   }
@@ -81,25 +87,37 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: $body-color;
 
         &,
         &:hover {
           background-color: $table-header-sorted-bg;
         }
 
+        ///
+        ///  Triangle sorting icons
+        ///  
+
         &::after {
-          @extend %icon-base;
+          display: block;
+          width: 0;
+          height: 0;
+          content: '';
+          border-right: .3125rem solid transparent;
+          border-left: .3125rem solid transparent;
         }
 
         &.table-sorted-ascend::after {
-          content: map-get($_icons-map, 'chevron-up');
+          border-bottom: .4375rem solid $body-color;
         }
+
         &.table-sorted-descend::after {
-          content: map-get($_icons-map, 'chevron-down');
+          border-top: .4375rem solid $body-color;
         }
       }
     }
   }
+
 
   ///
   ///  Hover/active row highlighting
@@ -109,7 +127,9 @@
   tbody tr.table-active {
     background-color: rgba($table-bg-active, .1);
     cursor: pointer;
+  }
 
+  tbody tr.table-active {
     > td:first-child {
       box-shadow: $table-highlight-shadow $table-bg-active;
     }
@@ -134,6 +154,16 @@
         margin-left: 0;
     }
   }
+
+  ///
+  /// Checkbox headings/cells
+  ///
+  
+  .table-checkbox {
+    width: $checkbox-size;
+  }
+
+
 }
 
 
@@ -150,19 +180,9 @@
 }
 
 
-// Bordered version
-//
-// Add borders all around the table and between all the columns.
-
-.table-bordered {
-  border: $border-width solid $table-border-color;
-}
-
-
 // Hover effect
 //
 // Placed here since it has to come after the potential zebra striping
-
 
 
 

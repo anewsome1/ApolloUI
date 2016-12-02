@@ -14,7 +14,6 @@ guidelines:
 contents:
   - Usage guidelines
   - Basic table
-  - Adding borders
   - Sortable columns
   - Hover rows
   - Row status
@@ -28,6 +27,14 @@ contents:
 {% include example-intro.html title='Basic table' description='Adding the base <code>.table</code> class adds the basic table styling, such as headers, padding, alternating row striping, etc.' %}
 
 {% capture example %}
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <h2>Table Header</h2>
+  </div>
+  <div class="col-xs-12 col-md-6 text-md-right">
+    <button class="btn btn-primary">Action</button>
+  </div>
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -45,12 +52,7 @@ contents:
       <td>309 million</td>
       <td>English</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <tr>
@@ -59,12 +61,7 @@ contents:
       <td>81 million</td>
       <td>German</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <tr>
@@ -73,12 +70,7 @@ contents:
       <td>9 million</td>
       <td>Swedish</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
   </tbody>
@@ -90,71 +82,6 @@ contents:
 </section>
 
 
-<section class="docs-section" id="adding-borders">
-
-{% include example-intro.html title='Adding borders' description='Add a border to any table by adding the <code>.table-bordered</code> class.' %}
-
-{% capture example %}
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th>Capital</th>
-      <th>Population</th>
-      <th>Language</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>USA</td>
-      <td>Washington D.C.</td>
-      <td>309 million</td>
-      <td>English</td>
-      <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Germany</td>
-      <td>Berlin</td>
-      <td>81 million</td>
-      <td>German</td>
-      <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>Sweden</td>
-      <td>Stockholm</td>
-      <td>9 million</td>
-      <td>Swedish</td>
-      <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-{% endcapture %}
-
-{% include example.html code=example id='example-borders' %}
-
-</section>
 
 <section class="docs-section" id="sortable-columns">
 
@@ -178,12 +105,7 @@ contents:
       <td>309 million</td>
       <td>English</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <tr>
@@ -192,12 +114,7 @@ contents:
       <td>81 million</td>
       <td>German</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <tr>
@@ -206,12 +123,7 @@ contents:
       <td>9 million</td>
       <td>Swedish</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
   </tbody>
@@ -232,6 +144,11 @@ contents:
 <table class="table table-hover">
   <thead>
     <tr>
+      <th class="table-checkbox">
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+      </th>
       <th>Country</th>
       <th>Capital</th>
       <th>Population</th>
@@ -241,46 +158,46 @@ contents:
   </thead>
   <tbody>
     <tr>
+      <td>
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+      </td>
       <td>USA</td>
       <td>Washington D.C.</td>
       <td>309 million</td>
       <td>English</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <tr>
+      <td>
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+      </td>
       <td>Germany</td>
       <td>Berlin</td>
       <td>81 million</td>
       <td>German</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
     <!-- `.table-active` class to be added by JavaScript -->
     <tr class="table-active">
+      <td>
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+      </td>
       <td>Sweden</td>
       <td>Stockholm</td>
       <td>9 million</td>
       <td>Swedish</td>
       <td>
-        <button class="btn btn-link">
-          <span class="icon icon-edit"></span>
-        </button>
-        <button class="btn btn-link">
-          <span class="icon icon-trash"></span>
-        </button>
+        <a href="#0">Action</a>
       </td>
     </tr>
   </tbody>
@@ -412,12 +329,7 @@ contents:
         <td>309 million</td>
         <td>English</td>
         <td>
-          <button class="btn btn-link">
-            <span class="icon icon-edit"></span>
-          </button>
-          <button class="btn btn-link">
-            <span class="icon icon-trash"></span>
-          </button>
+          <a href="#0">Action</a>
         </td>
       </tr>
       <tr>
@@ -426,12 +338,7 @@ contents:
         <td>81 million</td>
         <td>German</td>
         <td>
-          <button class="btn btn-link">
-            <span class="icon icon-edit"></span>
-          </button>
-          <button class="btn btn-link">
-            <span class="icon icon-trash"></span>
-          </button>
+          <a href="#0">Action</a>
         </td>
       </tr>
       <tr>
@@ -440,12 +347,7 @@ contents:
         <td>9 million</td>
         <td>Swedish</td>
         <td>
-          <button class="btn btn-link">
-            <span class="icon icon-edit"></span>
-          </button>
-          <button class="btn btn-link">
-            <span class="icon icon-trash"></span>
-          </button>
+          <a href="#0">Action</a>
         </td>
       </tr>
     </tbody>

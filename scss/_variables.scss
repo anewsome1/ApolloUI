@@ -6,7 +6,7 @@
 ///
 
 $brand-primary:               $water-300;
-$brand-info:                  $atmosphere-300;
+$brand-info:                  $brand-primary;
 $brand-success:               $green-300;
 $brand-warning:               $yellow-300;
 $brand-danger:                $red-300;
@@ -398,12 +398,13 @@ $toggle-active-bg:      $link-hover-color;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
+$table-font-size:               $font-size-sm;
 $table-cell-padding-x:          $grid-gutter-width-base / 2;
-$table-cell-padding-y:          calc-padding-y($component-height, $font-size-base);
+$table-cell-padding-y:          calc-padding-y($component-height, $table-font-size);
 $table-sm-cell-padding-y:       .5rem;
 
 $table-header-bg:               $gray-50;
-$table-header-color:            $gray-700;
+$table-header-color:            $gray-600;
 $table-header-padding-y:        $table-cell-padding-y;
 $table-header-sorted-bg:        $gray-200;
 
