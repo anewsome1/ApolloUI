@@ -3539,7 +3539,7 @@ input[type='radio']:checked {
 }
 
 .table tbody tr.table-info > td:first-child, .table tbody tr.table-border-info > td:first-child {
-  box-shadow: inset 0.5rem 0 0 -0.25rem #297dfd;
+  box-shadow: inset 0.625rem 0 0 -0.3125rem #297dfd;
 }
 
 .table tbody tr.table-info {
@@ -3547,7 +3547,7 @@ input[type='radio']:checked {
 }
 
 .table tbody tr.table-success > td:first-child, .table tbody tr.table-border-success > td:first-child {
-  box-shadow: inset 0.5rem 0 0 -0.25rem #43b649;
+  box-shadow: inset 0.625rem 0 0 -0.3125rem #43b649;
 }
 
 .table tbody tr.table-success {
@@ -3555,7 +3555,7 @@ input[type='radio']:checked {
 }
 
 .table tbody tr.table-warning > td:first-child, .table tbody tr.table-border-warning > td:first-child {
-  box-shadow: inset 0.5rem 0 0 -0.25rem #fece34;
+  box-shadow: inset 0.625rem 0 0 -0.3125rem #fece34;
 }
 
 .table tbody tr.table-warning {
@@ -3563,7 +3563,7 @@ input[type='radio']:checked {
 }
 
 .table tbody tr.table-danger > td:first-child, .table tbody tr.table-border-danger > td:first-child {
-  box-shadow: inset 0.5rem 0 0 -0.25rem #ff1d00;
+  box-shadow: inset 0.625rem 0 0 -0.3125rem #ff1d00;
 }
 
 .table tbody tr.table-danger {
@@ -3608,12 +3608,12 @@ input[type='radio']:checked {
 
 .table.table-hover tbody tr:hover,
 .table tbody tr.table-active {
-  background-color: rgba(50, 181, 252, 0.1);
+  background-color: rgba(41, 125, 253, 0.2);
   cursor: pointer;
 }
 
 .table tbody tr.table-active > td:first-child {
-  box-shadow: inset 0.5rem 0 0 -0.25rem #32b5fc;
+  box-shadow: inset 0.625rem 0 0 -0.3125rem #297dfd;
 }
 
 .table tbody + tbody {
