@@ -52,7 +52,7 @@
 
   .nav-link {
     display: block;
-    padding: .5rem 1.25rem;
+    padding: $tab-padding-y $tab-padding-x;
     border-width: $border-width $border-width 0 0;
     border-style: solid;
     border-color: $gray-200;
@@ -93,7 +93,7 @@
   }
 
   + .tab-content {
-    padding: ($btn-padding-y * 2) ($btn-padding-x * 2);
+    padding: ($tab-padding-y * 2) $tab-padding-x;
     border: $border-width solid $gray-200;
   }
 
