@@ -5364,6 +5364,7 @@ tbody.collapse.in {
 .pager-next::after {
   font-size: 0.75rem;
   vertical-align: text-bottom;
+  transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .pager-prev::before {
@@ -5371,9 +5372,17 @@ tbody.collapse.in {
   padding-right: .1875rem;
 }
 
+.pager-prev:not(.disabled):hover::before {
+  transform: translateX(-0.1875rem);
+}
+
 .pager-next::after {
   content: "";
   padding-left: .1875rem;
+}
+
+.pager-next:not(.disabled):hover::after {
+  transform: translateX(0.1875rem);
 }
 
 @keyframes pulse {

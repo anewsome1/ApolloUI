@@ -65,14 +65,28 @@
   @extend %icon-base;
   font-size: $font-size-xs;
   vertical-align: text-bottom;
+  transition: transform $transition-fast;
 }
+
+/// Backward
 
 .pager-prev::before {
   content: map-get($_icons-map, 'chevron-left');
-  padding-right: .1875rem;
+  padding-right: .1875rem; // ~3px
 }
+
+.pager-prev:not(.disabled):hover::before {
+  transform: translateX(-.1875rem);
+}
+
+/// Forward
 
 .pager-next::after {
   content: map-get($_icons-map, 'chevron-right');
-  padding-left: .1875rem;
+  padding-left: .1875rem; // ~3px
 }
+
+.pager-next:not(.disabled):hover::after {
+  transform: translateX(.1875rem);
+}
+
