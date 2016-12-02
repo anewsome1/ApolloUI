@@ -4,6 +4,7 @@
 
 .search {
   position: relative;
+  display: flex;
 
   &::before {
     @extend %icon-base;
@@ -19,25 +20,26 @@
   }
 
 
-  &.dropdown {
-    background-color: #fff;
+  // &.dropdown {
+  //   background-color: #fff;
 
-    &.open {
-      box-shadow: $shadow-hover;
-    }
+  //   &.open {
+  //     box-shadow: $shadow-hover;
+  //   }
 
-    .search-input {
-      border: $border-width solid $input-border-color;
-      color: $input-color;
-    }
+  //   .search-input {
+  //     border: $border-width solid $input-border-color;
+  //     color: $input-color;
+  //   }
 
-    .search-input:focus {
-      border-color: transparent;
-      border-bottom: $border-width solid $gray-100;
-      box-shadow: none;
-    }
-  }
+  //   .search-input:focus {
+  //     border-color: transparent;
+  //     border-bottom: $border-width solid $gray-100;
+  //     box-shadow: none;
+  //   }
+  // }
 }
+
 
 ///
 /// Input field
@@ -56,57 +58,61 @@
   color: $gray-400;
 }
 
-
 ///
-/// Results list
+/// Search button
 ///
 
-.search-results {
-  list-style-type: none;
-  padding-left: 0;
-  width: 100%;
 
-  > .search-result {
-    border: 0;
+// ///
+// /// Results list
+// ///
 
-    > .search-link {
-      display: block;
-      padding: $search-item-padding;
-      line-height: 1;
+// .search-results {
+//   list-style-type: none;
+//   padding-left: 0;
+//   width: 100%;
 
-      &,
-      &:link,
-      &:visited,
-      &:hover,
-      &:focus {
-        text-decoration: none;
+//   > .search-result {
+//     border: 0;
 
-        .bg-dark & {
-          color: #fff;
-        }
-      }
+//     > .search-link {
+//       display: block;
+//       padding: $search-item-padding;
+//       line-height: 1;
 
-      &:link,
-      &:visited {
-        color: $body-color;
-      }
+//       &,
+//       &:link,
+//       &:visited,
+//       &:hover,
+//       &:focus {
+//         text-decoration: none;
 
-      &:hover,
-      &:focus {
-        background-color: $brand-primary;
+//         .bg-dark & {
+//           color: #fff;
+//         }
+//       }
 
-        &,
-        & .search-meta {
-          color: rgba(#fff, .8);
-        }
+//       &:link,
+//       &:visited {
+//         color: $body-color;
+//       }
 
-        .search-highlight {
-          color: #fff;
-        }
-      }
-    }
-  }
-}
+//       &:hover,
+//       &:focus {
+//         background-color: $brand-primary;
+
+//         &,
+//         & .search-meta {
+//           color: rgba(#fff, .8);
+//         }
+
+//         .search-highlight {
+//           color: #fff;
+//         }
+//       }
+//     }
+//   }
+// }
 
 ///
 ///  Character highlighting
