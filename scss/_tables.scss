@@ -79,8 +79,9 @@
       transition: background-color $transition-fast;
       cursor: pointer;
 
-      &:hover {
-        background-color: rgba($table-header-sorted-bg, .5);
+      &:hover,
+      &.table-sorted {
+        background-color: $table-header-sorted-bg;
       }
 
       &.table-sorted {
@@ -88,11 +89,6 @@
         align-items: center;
         justify-content: space-between;
         color: $body-color;
-
-        &,
-        &:hover {
-          background-color: $table-header-sorted-bg;
-        }
 
         ///
         ///  Triangle sorting icons

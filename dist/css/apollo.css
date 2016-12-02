@@ -3575,8 +3575,8 @@ input[type='radio']:checked {
   cursor: pointer;
 }
 
-.table.table-sortable thead th:hover {
-  background-color: rgba(217, 217, 217, 0.5);
+.table.table-sortable thead th:hover, .table.table-sortable thead th.table-sorted {
+  background-color: #e5e5e5;
 }
 
 .table.table-sortable thead th.table-sorted {
@@ -3587,10 +3587,6 @@ input[type='radio']:checked {
   -ms-flex-pack: justify;
       justify-content: space-between;
   color: #333333;
-}
-
-.table.table-sortable thead th.table-sorted, .table.table-sortable thead th.table-sorted:hover {
-  background-color: #d9d9d9;
 }
 
 .table.table-sortable thead th.table-sorted::after {
