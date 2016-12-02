@@ -12,15 +12,10 @@ guidelines:
 contents:
   - Usage guidelines
   - Basic search box
-  - Inline results
-  - Dropdown results
-  - Dropdown result metadata
+  - Search box with button
 ---
 
 <section class="docs-section" id="basic-search-box">
-
-{% include docs-callout.html state='info' title='Styles only' body='This component only includes styling and layout.  Retrieving search results, including displaying results as users type, will need to be handled by your application.' %}
-
 
 {% include example-intro.html title='Basic search box' description='Use this standalone search box when your results are going to be displayed on a different page or another place on the current page.' %}
 
@@ -35,82 +30,19 @@ contents:
 </section>
 
 
-<section class="docs-section" id="inline-results">
+<section class="docs-section" id="search-box-with-button">
 
-{% include example-intro.html title='Inline results' description='When you want to show users search results as they type, this style allows you to display the results with the matching characters highlighted.' %}
+
+{% include example-intro.html title='Search box with button' description='This example adds a button to the search box for better accessibility.' %}
 
 {% capture example %}
 <div class="search">
-  <input class="search-input" type="search" value="Vi">
-  <ul class="search-results">
-    <li class="search-result">
-      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atribunali</a>
-    </li>
-    <li class="search-result">
-      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atryl A</a>
-    </li>
-  </ul>
+  <input class="search-input" type="search">
+  <button class="btn btn-primary" type="submit">Search</button>
 </div>
 {% endcapture %}
 
-{% include example.html code=example id='example-inline-results' %}
+{% include example.html code=example id='example-basic-search' %}
 
 </section>
-
-
-
-<section class="docs-section" id="dropdown-results">
-
-{% include example-intro.html title='Dropdown results' description='Use this modified search pattern when you want the search results to appear as a dropdown list.' %}
-
-
-{% capture example %}
-<div class="search dropdown">
-  <input class="search-input dropdown-toggle" type="search" data-toggle="dropdown" value="Vi">
-  <ul class="search-results dropdown-menu" aria-labeledby="dropdownDemo1">
-    <li class="search-result">
-      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atribunali</a>
-    </li>
-    <li class="search-result">
-      <a class="search-link" href="#0"><span class="search-highlight">Vi</span>atryl A</a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}
-
-{% include example.html  code=example id='example-dropdown-results' %}
-
-</section>
-
-
-<section class="docs-section" id="dropdown-result-metadata">
-
-{% include example-intro.html title='Dropdown result metadata' description='When appropriate, metadata can be added to each search result to give added context to the result.' %}
-
-
-{% capture example %}
-<div class="search dropdown">
-  <input class="search-input dropdown-toggle" type="search" data-toggle="dropdown" value="Ch">
-  <ul class="search-results dropdown-menu" aria-labeledby="dropdownDemo1">
-    <li class="search-result">
-      <a class="search-link" href="#0">
-        <span class="search-highlight">Ch</span>ris Irwin
-        <span class="search-meta">IMS Health</span>
-      </a>
-    </li>
-    <li class="search-result">
-      <a class="search-link" href="#0">
-        <span class="search-highlight">Ch</span>ristina Lewis
-        <span class="search-meta">Knife and Fox</span>
-      </a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}
-
-{% include example.html  code=example id='example-dropdown-metadata' %}
-
-</section>
-
-
 
