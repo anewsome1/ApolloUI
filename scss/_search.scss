@@ -16,6 +16,7 @@
     padding: $search-icon-padding;
     font-size: $search-icon-size;
     line-height: 1;
+    color: $gray-400;
     content: map-get($_icons-map, 'search');
   }
 
@@ -53,10 +54,10 @@
 }
 
 // Make icon and placeholder text match
-.bg-dark .search::before,
-.bg-dark .search-input::placeholder {
-  color: $gray-400;
-}
+// .bg-dark .search::before,
+// .bg-dark .search-input::placeholder {
+//   color: $gray-400;
+// }
 
 ///
 /// Search button

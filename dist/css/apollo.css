@@ -5131,32 +5131,13 @@ tbody.collapse.in {
   padding: 0.75rem;
   font-size: 1rem;
   line-height: 1;
+  color: #b2b2b2;
   content: "";
 }
 
 .search-input {
   position: relative;
   padding-left: 2.5rem;
-}
-
-.bg-dark .search::before, .sidebar .accordion .search::before,
-.bg-dark .search-input::-webkit-input-placeholder, .sidebar .accordion .search-input::-webkit-input-placeholder {
-  color: #b2b2b2;
-}
-
-.bg-dark .search::before, .sidebar .accordion .search::before,
-.bg-dark .search-input::-moz-placeholder, .sidebar .accordion .search-input::-moz-placeholder {
-  color: #b2b2b2;
-}
-
-.bg-dark .search::before, .sidebar .accordion .search::before,
-.bg-dark .search-input:-ms-input-placeholder, .sidebar .accordion .search-input:-ms-input-placeholder {
-  color: #b2b2b2;
-}
-
-.bg-dark .search::before, .sidebar .accordion .search::before,
-.bg-dark .search-input::placeholder, .sidebar .accordion .search-input::placeholder {
-  color: #b2b2b2;
 }
 
 .search-highlight {
