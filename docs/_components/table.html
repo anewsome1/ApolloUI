@@ -214,7 +214,7 @@ contents:
 {% include example-intro.html title='Row status' description='Styling options are available to highlight data to indicate status or draw attention to some needed action.' %}
 
 {% capture example %}
-<table class="table table-bordered">
+<table class="table">
   <thead>
     <tr>
       <th>Project ID</th>
@@ -361,58 +361,62 @@ contents:
 
 <section class="docs-section" id="mobile-layout">
 
-{% include docs-callout.html state='info' title='Mobile-only pattern' body='The example above is <em>not</em> responsive.  To use it in a responsive application, you will need to have two tables on the page and use the responsive visibility classes to show and hide each as needed.' %}
+{% include docs-callout.html state='info' title='Mobile-only pattern' body='The example below is <em>not</em> responsive.  To use it in a responsive application, you will need to have two tables on the page and use the responsive visibility classes to show and hide each as needed.' %}
 
 {% include example-intro.html title='Mobile layout' description='When displaying tables on small screens, you can use definition lists to repeat column headings in each cell.' %}
 
 {% capture example %}
-<table class="table table-bordered">
+<h2>Mobile Table Header</h2>
+<div class="form-group">
+  <button class="btn btn-primary btn-block">Action</button>
+</div>
+<table class="table table-mobile">
   <tbody>
     <tr>
       <td>
         <dl class="dl-horizontal">
-          <dt class="col-xs-3 text-xs-right">Contact</dt>
-          <dd class="col-xs-9">Hilder, James</dd>
-          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
-          <dd class="col-xs-9">+1 718 596 4785</dd>
-          <dt class="col-xs-3 text-xs-right">Address</dt>
-          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+          <dt class="col-xs-4 text-xs-right">Contact</dt>
+          <dd class="col-xs-8">Hilder, James</dd>
+          <dt class="col-xs-4 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-8">+1 718 596 4785</dd>
+          <dt class="col-xs-4 text-xs-right">Address</dt>
+          <dd class="col-xs-8">4 St. Pancras Way<br>New York, NY 10012</dd>
         </dl>
       </td>
     </tr>
     <tr>
       <td>
         <dl class="dl-horizontal">
-          <dt class="col-xs-3 text-xs-right">Contact</dt>
-          <dd class="col-xs-9">Hilder, James</dd>
-          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
-          <dd class="col-xs-9">+1 718 596 4785</dd>
-          <dt class="col-xs-3 text-xs-right">Address</dt>
-          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+          <dt class="col-xs-4 text-xs-right">Contact</dt>
+          <dd class="col-xs-8">Hilder, James</dd>
+          <dt class="col-xs-4 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-8">+1 718 596 4785</dd>
+          <dt class="col-xs-4 text-xs-right">Address</dt>
+          <dd class="col-xs-8">4 St. Pancras Way<br>New York, NY 10012</dd>
         </dl>
       </td>
     </tr>
     <tr>
       <td>
         <dl class="dl-horizontal">
-          <dt class="col-xs-3 text-xs-right">Contact</dt>
-          <dd class="col-xs-9">Hilder, James</dd>
-          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
-          <dd class="col-xs-9">+1 718 596 4785</dd>
-          <dt class="col-xs-3 text-xs-right">Address</dt>
-          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+          <dt class="col-xs-4 text-xs-right">Contact</dt>
+          <dd class="col-xs-8">Hilder, James</dd>
+          <dt class="col-xs-4 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-8">+1 718 596 4785</dd>
+          <dt class="col-xs-4 text-xs-right">Address</dt>
+          <dd class="col-xs-8">4 St. Pancras Way<br>New York, NY 10012</dd>
         </dl>
       </td>
     </tr>
     <tr>
       <td>
         <dl class="dl-horizontal">
-          <dt class="col-xs-3 text-xs-right">Contact</dt>
-          <dd class="col-xs-9">Hilder, James</dd>
-          <dt class="col-xs-3 text-xs-right">Phone Number</dt>
-          <dd class="col-xs-9">+1 718 596 4785</dd>
-          <dt class="col-xs-3 text-xs-right">Address</dt>
-          <dd class="col-xs-9">4 St. Pancras Way<br>New York, NY 10012</dd>
+          <dt class="col-xs-4 text-xs-right">Contact</dt>
+          <dd class="col-xs-8">Hilder, James</dd>
+          <dt class="col-xs-4 text-xs-right">Phone Number</dt>
+          <dd class="col-xs-8">+1 718 596 4785</dd>
+          <dt class="col-xs-4 text-xs-right">Address</dt>
+          <dd class="col-xs-8">4 St. Pancras Way<br>New York, NY 10012</dd>
         </dl>
       </td>
     </tr>
