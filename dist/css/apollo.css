@@ -3426,7 +3426,7 @@ input[type='radio']:checked {
   background-color: #297dfd;
 }
 
-.toggle input[type="radio"] + label, .nav-tabs.tab-bar .nav-link {
+.toggle input[type="radio"] + label {
   position: relative;
   z-index: 1;
   padding: 0.875rem 0.9375rem;
@@ -3440,32 +3440,27 @@ input[type='radio']:checked {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.toggle input[type="radio"] + label, .nav-tabs.tab-bar .nav-link,
+.toggle input[type="radio"] + label,
 .bg-dark .toggle input[type="radio"] + label, .toggle
-.bg-dark input[type="radio"] + label, .sidebar .accordion .toggle input[type="radio"] + label, .toggle .sidebar .accordion input[type="radio"] + label,
-.bg-dark .nav-tabs.tab-bar .nav-link, .nav-tabs.tab-bar
-.bg-dark .nav-link, .sidebar .accordion .nav-tabs.tab-bar .nav-link, .nav-tabs.tab-bar .sidebar .accordion .nav-link {
+.bg-dark input[type="radio"] + label, .sidebar .accordion .toggle input[type="radio"] + label, .toggle .sidebar .accordion input[type="radio"] + label {
   color: #297dfd;
 }
 
-.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
+.toggle input[type="radio"] + label:hover {
   border-color: transparent;
 }
 
-.toggle input[type="radio"] + label:hover, .nav-tabs.tab-bar .nav-link:focus, .nav-tabs.tab-bar .nav-link:hover {
+.toggle input[type="radio"] + label:hover {
   z-index: 2;
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
-.toggle input[type="radio"] + label:active:hover, .nav-tabs.tab-bar .nav-link:active:focus, .nav-tabs.tab-bar .nav-link:active:hover {
+.toggle input[type="radio"] + label:active:hover {
   color: #fff;
   background-color: #1f5ebe;
 }
 
-.toggle input[type="radio"]:checked + label, .nav-tabs.tab-bar .nav-link.active, .nav-tabs.tab-bar .nav-link.active:focus, .nav-tabs.tab-bar .nav-link.active:hover,
-.nav-item.open .nav-tabs.tab-bar .nav-link,
-.nav-item.open .nav-tabs.tab-bar .nav-link:focus,
-.nav-item.open .nav-tabs.tab-bar .nav-link:hover {
+.toggle input[type="radio"]:checked + label {
   z-index: 2;
   color: #fff;
   background-color: #297dfd;
@@ -3823,6 +3818,7 @@ tbody.collapse.in {
 }
 
 .nav-tabs {
+  border-left: 0.0625rem solid #d9d9d9;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -3831,6 +3827,49 @@ tbody.collapse.in {
 
 .nav-tabs .nav-link {
   display: block;
+  padding: 0.5rem 1.25rem;
+  border-width: 0.0625rem 0.0625rem 0 0;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-left: 0;
+  color: #666666;
+  text-align: center;
+}
+
+.bg-dark .nav-tabs .nav-link, .sidebar .accordion .nav-tabs .nav-link {
+  color: #fff;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:active {
+  color: #297dfd;
+}
+
+.bg-dark .nav-tabs .nav-link:hover, .sidebar .accordion .nav-tabs .nav-link:hover, .bg-dark .nav-tabs .nav-link:active, .sidebar .accordion .nav-tabs .nav-link:active {
+  color: #32b5fc;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #fff;
+  box-shadow: inset 0 0.3125rem 0 #297dfd;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link.active:hover, .nav-tabs .nav-link.active:active, .nav-tabs .nav-link.active:visited {
+  color: #297dfd;
+}
+
+.bg-dark .nav-tabs .nav-link.active, .sidebar .accordion .nav-tabs .nav-link.active, .bg-dark .nav-tabs .nav-link.active:hover, .sidebar .accordion .nav-tabs .nav-link.active:hover, .bg-dark .nav-tabs .nav-link.active:active, .sidebar .accordion .nav-tabs .nav-link.active:active, .bg-dark .nav-tabs .nav-link.active:visited, .sidebar .accordion .nav-tabs .nav-link.active:visited {
+  color: #32b5fc;
+}
+
+.nav-tabs + .tab-content {
+  padding: 1rem 1.25rem;
+  border: 0.0625rem solid #d9d9d9;
+}
+
+@media (min-width: 576px) {
+  .nav-tabs {
+    margin-bottom: -0.0625rem;
+  }
 }
 
 .nav-tabs.tab-justified .nav-item {
@@ -3846,71 +3885,6 @@ tbody.collapse.in {
   .nav-tabs .nav-link {
     text-align: center;
   }
-}
-
-.nav-tabs:not(.tab-bar) {
-  border-left: 0.0625rem solid #d9d9d9;
-}
-
-.nav-tabs:not(.tab-bar) .nav-link {
-  padding: 1rem 1.875rem;
-  border-width: 0.0625rem 0.0625rem 0 0;
-  border-style: solid;
-  border-color: #d9d9d9;
-  border-left: 0;
-  color: #333333;
-}
-
-.bg-dark .nav-tabs:not(.tab-bar) .nav-link, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link {
-  color: #fff;
-}
-
-.nav-tabs:not(.tab-bar) .nav-link:hover, .nav-tabs:not(.tab-bar) .nav-link:active {
-  color: #297dfd;
-}
-
-.bg-dark .nav-tabs:not(.tab-bar) .nav-link:hover, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link:hover, .bg-dark .nav-tabs:not(.tab-bar) .nav-link:active, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link:active {
-  color: #32b5fc;
-}
-
-.nav-tabs:not(.tab-bar) .nav-link.active {
-  background-color: #fff;
-  box-shadow: inset 0 0.1875rem 0 #297dfd;
-}
-
-.nav-tabs:not(.tab-bar) .nav-link.active, .nav-tabs:not(.tab-bar) .nav-link.active:hover, .nav-tabs:not(.tab-bar) .nav-link.active:active, .nav-tabs:not(.tab-bar) .nav-link.active:visited {
-  color: #297dfd;
-}
-
-.bg-dark .nav-tabs:not(.tab-bar) .nav-link.active, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link.active, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:hover, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link.active:hover, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:active, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link.active:active, .bg-dark .nav-tabs:not(.tab-bar) .nav-link.active:visited, .sidebar .accordion .nav-tabs:not(.tab-bar) .nav-link.active:visited {
-  color: #32b5fc;
-}
-
-.nav-tabs:not(.tab-bar) + .tab-content {
-  padding: 1.375rem 1.875rem;
-  border: 0.0625rem solid #d9d9d9;
-}
-
-@media (min-width: 576px) {
-  .nav-tabs:not(.tab-bar) {
-    margin-bottom: -0.0625rem;
-  }
-}
-
-.nav-tabs.tab-bar .nav-link {
-  display: block;
-  padding: 1rem 0.9375rem;
-}
-
-.nav-tabs.tab-bar .nav-link.disabled, .nav-tabs.tab-bar .nav-link.disabled:focus, .nav-tabs.tab-bar .nav-link.disabled:hover {
-  color: #818a91;
-  background-color: transparent;
-  border-color: transparent;
-  cursor: not-allowed;
-}
-
-.nav-tabs.tab-bar + .tab-content {
-  margin-top: 1rem;
 }
 
 .tab-content > .tab-pane {
