@@ -30,7 +30,7 @@ This log provides an overview of the significant changes in each version release
 - "Copy Code" button for all code examples
 
 
-## [v1.1.0-beta.4] - 2016-09-02
+## [v1.0.0-beta.4] - 2016-09-02
 
 ### Changed
 - Updated font sizes and weights throughout
@@ -42,7 +42,7 @@ This log provides an overview of the significant changes in each version release
 - New sidebar component to replace vertical navbar
 
 
-## [v1.1.0-beta.3] - 2016-07-01
+## [v1.0.0-beta.3] - 2016-07-01
 
 ### Changed
 - Removed shared card styles from accordion
@@ -57,7 +57,7 @@ This log provides an overview of the significant changes in each version release
 - Changelog
 
 
-## [v1.1.0-beta.2] - 2016-06-14
+## [v1.0.0-beta.2] - 2016-06-14
 
 ### Changed
 - Grouped and sorted docs navigation links
@@ -71,7 +71,7 @@ This log provides an overview of the significant changes in each version release
 - Merriweather Light font face
 
 
-## [v1.1.0-beta] - 2016-05-03
+## [v1.0.0-beta] - 2016-05-03
 
 ### Changed
 - Fixed alignment issue on login component
