@@ -255,7 +255,7 @@ hr {
   padding-top: 3rem;
   padding-bottom: 4rem;
   margin-bottom: -2.1875rem;
-  border-bottom: 0.0625rem solid rgba(153, 153, 153, 0.15);
+  border-bottom: 0.0625rem solid rgba(51, 51, 51, 0.15);
 }
 
 .docs-page-contents {
@@ -415,7 +415,7 @@ hr {
 }
 
 .docs-callout.docs-callout-info {
-  border-left: 0.25rem solid #32b5fc;
+  border-left: 0.25rem solid #297dfd;
 }
 
 .docs-callout.docs-callout-success {
