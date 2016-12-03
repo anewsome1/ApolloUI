@@ -60,10 +60,12 @@ hr {
 
 .docs-guidelines-heading-do {
   border-bottom-color: $brand-success;
+  color: $brand-success;
 }
 
 .docs-guidelines-heading-dont {
   border-bottom-color: $brand-danger;
+  color: $brand-danger;
 }
 
 .docs-guidelines-list {
@@ -87,11 +89,11 @@ hr {
 
 .docs-example {
   margin-bottom: 2.25rem;
-  border: $border-width solid darken($neutral, 5%);
+  border: $border-width solid $gray-200;
 }
 
 .docs-example-rendered {
-  padding: $grid-gutter-width;
+  padding: $grid-gutter-width-base;
 }
 
 .docs-example-label {
@@ -122,11 +124,13 @@ hr {
   }
 
   div[class^='col-'] {
-    padding-top: $spacer * 1.5;
-    padding-bottom: $spacer * 1.5;
+    padding-top: $btn-lg-padding-y;
+    padding-bottom: $btn-lg-padding-y;
     text-align: center;
+    line-height: 1;
+    font-weight: $font-semi-bold;
     color: #fff;
-    background-color: $blue;
+    background-color: $brand-primary;
     border: $border-width solid #fff;
   }
 }
@@ -146,7 +150,7 @@ hr {
   flex-direction: row;
   align-items: center;
   padding: ($spacer * 2) $spacer;
-  background-color: $neutral;
+  background-color: $gray-100;
   border: 1px solid #fff;
   transition: all $transition-fast;
 
@@ -163,7 +167,7 @@ hr {
   }
 
   &:hover {
-    background-color: $blue;
+    background-color: $brand-primary;
     color: #fff;
   }
 

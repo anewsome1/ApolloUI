@@ -1,9 +1,9 @@
 .docs-callout {
-  padding: ($spacer * 2) $grid-gutter-width;
+  padding: ($spacer * 2) $grid-gutter-width-base;
   margin-top: $spacer;
   margin-bottom: $spacer * 2;
   // box-shadow: $shadow-resting;
-  background-color: $neutral;
+  background-color: $gray-50;
 
   p:last-of-type {
     margin-bottom: 0;
@@ -14,9 +14,5 @@
     &.docs-callout-#{ $state } {
       border-left: .25rem solid $color;
     }
-  }
-
-  &.docs-callout-info {
-    border-left: .25rem solid $brand-info;
   }
 }

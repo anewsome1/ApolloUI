@@ -2,12 +2,12 @@
 layout: component
 title: Color Palette
 order: 1
-description: Each color from the brand color palette is available as a variable when building Apollo UI with SCSS.  Below are all the available shades for each color, including the variable name and value for each.
+description: The signature colors of IMS Health are made up of cooler hues that drive our brand recognition. With a mix of trust, loyalty, and playful sophistication, these colors make our branding immediately recognizable. It’s best to use one to two primary colors as your dominant color within an app/design, refrain from using all 3 at once. Primary colors help determine your dominant app color ie. text links, buttons, navigation and overall look and feel. Use variations of that color to show interactivity, i.e. all buttons are Water 300, and hover interaction uses Water 400.
 contents:
   - Usage guidelines
   - Primary colors
-  - Secondary colors
-  - Functional colors
+  - Neutral colors
+  - Supporting colors
 ---
 
 {% assign color_categories = site.data._palette.properties | group_by: 'category' %}
@@ -25,12 +25,11 @@ contents:
 
     {% for group in base_color %}
       <div class="docs-color-swatch clearfix">
+        <p>{{ group.name | capitalize }}</p>
         {% for shade in group.items %}
-        <div class="docs-color-block" style="background-color:{{ shade.value }}">
-          <div class="docs-color-props">
-            <div class="docs-color-name">${{ shade.name-raw }}</div>
-            <div class="docs-color-value">{{ shade.value }}</div>
-          </div>
+        <div class="docs-color-block" style="background-color:{{ shade.value }};{% if shade.text-color %} color: {{ shade.text-color  }};{% endif %}">
+          <span class="docs-color-name">{{ shade.shade }}</span>
+          <span class="docs-color-value">{{ shade.value | upcase }}</span>
         </div>
         {% endfor %}
       </div>
@@ -39,4 +38,3 @@ contents:
   </div>
 </section>
 {% endfor %}
-

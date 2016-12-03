@@ -2,12 +2,12 @@
 /// Variables
 ///
 
-$background:        $neutral;
-$tag:               $blue-125;
-$attr-name:         $atmosphere;
-$attr-value:        $coral-125;
-$contents:          $charcoal;
-$comments:          $neutral-125;
+$background:        $gray-50;
+$tag:               $water-400;
+$attr-name:         $atmosphere-300;
+$attr-value:        $red-400;
+$contents:          $gray-700;
+$comments:          $gray-400;
 
 ///
 /// Classes
@@ -19,7 +19,7 @@ $comments:          $neutral-125;
   color: $contents;
 
   pre {
-    padding: $grid-gutter-width;
+    padding: $grid-gutter-width-base;
     margin-bottom: 0;
   }
 

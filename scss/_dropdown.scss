@@ -6,16 +6,25 @@
   color: $link-color;
   outline: none;
 
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   &::after {
     @extend %icon-base;
 
     margin-left: .125rem;
     content: map-get($_icons-map, 'chevron-down');
     vertical-align: bottom;
+    transition: transform $transition-fast;
   }
 
-  &:focus {
-    outline: none;
+  .dropdown.open &::after {
+    transform: scaleY(-1);
   }
 }
 
@@ -26,6 +35,7 @@
   min-width: $dropdown-menu-min-width;
   padding: 0;
   background: $dropdown-menu-bg;
+  border: $border-width solid $dropdown-menu-border-color;
   box-shadow: $shadow-hover;
 
   // Display menu when `.open` class is added
@@ -38,7 +48,7 @@
     list-style-type: none;
 
     &.separator {
-      border-top: $border-width solid $charcoal-25;
+      border-top: $border-width solid $gray-200;
     }
 
     > a {

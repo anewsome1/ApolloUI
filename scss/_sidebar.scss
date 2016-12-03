@@ -12,9 +12,15 @@
   width: $sidebar-width;
   height: auto;
   padding: $sidebar-padding-y $sidebar-padding-x;
-  font-size: $font-size-sm;
-  text-align: left;
+  font-size: $sidebar-font-size;
+  font-weight: $sidebar-font-weight;
   background-color: $sidebar-bg;
+
+  a {
+    @include hover-focus() {
+      text-decoration: none;
+    }
+  }
 
   ///
   /// Search
@@ -25,8 +31,10 @@
     margin-bottom: $spacer-y;
 
     &::before {
-      padding-top: $search-icon-padding-sm;
-      color: $charcoal-25;
+      padding-top: .55rem;
+      padding-left: .625rem;
+      color: $gray-200;
+      font-size: .6875rem;
     }
   }
 
@@ -40,7 +48,7 @@
   .search-input {
     @extend .input-sm;
 
-    padding-left: $search-padding-left;
+    padding-left: 1.75rem;
   }
 
   ///
@@ -49,9 +57,50 @@
 
   .accordion {
     @extend .bg-dark;
+
     margin-right: (-$sidebar-padding-x);
     margin-left: (-$sidebar-padding-x);
     margin-bottom: $sidebar-padding-y;
+
+    label {
+      color: $sidebar-color;
+    }
+
+    .form-group {
+      margin-bottom: .625rem;
+    }
+  }
+
+  .accordion-header {
+    padding: $sidebar-link-padding-y ($sidebar-padding-x + $sidebar-font-size) $sidebar-link-padding-y $sidebar-padding-x;
+  }
+
+  .accordion-title {
+    font-size: $sidebar-font-size;
+  }
+
+  .accordion-block {
+    padding: 0 $sidebar-padding-x;
+  }
+
+
+  ///
+  /// Checkboxes
+  ///
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: .9375rem; // ~15px
+    height: .9375rem; // ~15px
+
+    + label {
+      transition: all $transition-fast;
+    }
+
+    &:checked + label,
+    + label:hover {
+      color: $sidebar-active-color;
+    }
   }
 
 
@@ -95,6 +144,16 @@
   }
 }
 
+///
+/// Sidebar title
+///
+
+.sidebar-title {
+  font-size: $sidebar-font-size;
+  font-weight: $sidebar-font-weight;
+  color: $sidebar-header-color;
+}
+
 
 ///
 /// Sidebar link styles
@@ -102,7 +161,7 @@
 
 .sidebar-link {
   display: block;
-  padding: $sidebar-padding-y $sidebar-padding-x $sidebar-padding-y 3.25rem;
+  padding: $sidebar-link-padding-y $sidebar-padding-x;
   margin-right: -$sidebar-padding-x;
   margin-left: -$sidebar-padding-x;
   line-height: 1;
@@ -112,7 +171,7 @@
   &:active,
   &:visited,
   &:hover {
-    color: $sidebar-link-color;
+    color: $sidebar-color;
   }
 
   &:hover {
@@ -128,15 +187,6 @@
       color: $sidebar-active-color;
     }
   }
-}
-
-
-.sidebar-title {
-  padding-top: $sidebar-padding-y * 2;
-  padding-bottom: ($sidebar-padding-y / 2);
-  font-size: $font-size-base;
-  line-height: 1;
-  color: #fff;
 }
 
 
@@ -177,8 +227,8 @@
   .icon {
     display: block;
     font-size: $sidebar-icon-size;
-    margin-bottom: $sidebar-icon-size;
-    color: rgba($sidebar-link-color, .5);
+    margin-bottom: .3125rem; // ~5px
+    // color: rgba($sidebar-color, .5);
   }
 }
 

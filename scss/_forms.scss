@@ -3,14 +3,18 @@
   margin-bottom: $form-group-margin-bottom;
 }
 
+label {
+  margin-bottom: .3rem;
+}
 
 .control-label {
   display: block;
-  margin-bottom: 0;
-  line-height: $component-height;
+  margin-bottom: .625rem;
+  line-height: 1;
+  color: $input-label-color;
 
   &.disabled {
-    color: $input-color-disabled;
+    color: $input-label-color-disabled;
   }
 
   &.required::after {
@@ -29,11 +33,10 @@
   line-height: $input-line-height;
   white-space: nowrap;
   text-overflow: ellipsis;
-  border: $border-width solid $charcoal-25;
+  border: $border-width solid $input-border-color;
   background-color: $input-bg;
   transition: border $transition-fast,
-              background-color $transition-fast,
-              box-shadow $transition-fast;
+              background-color $transition-fast;
 
   // Placeholder
   &::placeholder {
@@ -47,22 +50,9 @@
   &:active,
   &.active,
   label:active + & {
-    border-color: transparent;
-    background-color: $input-bg-focus;
+    border-color: $input-border-focus;
     outline: none;
   }
-
-  &:focus,
-  &.focus {
-    box-shadow: $shadow-hover;
-  }
-
-  &:active,
-  &.active,
-  label:active + & {
-    box-shadow: $shadow-active;
-  }
-
 
   &:disabled,
   &.disabled {
@@ -85,8 +75,9 @@
 select.form-control {
   appearance: none;
   border: $input-btn-border-width solid $input-border-color;
-  background: $input-bg $svg-chevron-down-blue no-repeat right $input-padding-x center;
-  background-size: $font-size-base;
+  background: $input-bg $svg-chevron-down-gray no-repeat right $input-padding-x center;
+  background-size: $font-size-sm;
+  border-radius: 0;
 
   &,
   &::placeholder {
@@ -103,37 +94,24 @@ textarea.form-control {
 }
 
 .form-msg {
-  &,
-  &::before {
-    line-height: 1;
-  }
-
-  @extend .alert;
-  display: flex;
-  align-items: center;
-  padding: $input-msg-padding-y $input-msg-padding-x;
-  font-size: $input-msg-font-size;
-
-  &::before {
-    font-size: $input-msg-icon-size;
-  }
+  padding-top: .25rem;
 }
 
 @each $state, $state-props in $alert-states {
-  $state-color: map-get($state-props, color);
-  $state-bg: map-get($state-props, bg);
-  $state-link-color: map-get($state-props, link);
-  $state-icon: map-get($state-props, icon);
+  $state-color: map-get($state-props, bg);
 
   .has-#{ $state } {
     & .form-control,
     &.form-control {
-      border-color: $state-bg;
+      border-color: $state-color;
+      border-width: $border-width * 2;
     }
 
+    & .control-label,
+    &.control-label,
     & .form-msg,
     &.form-msg {
-      @include alert-bg($bg-color: $state-bg, $text-color: $state-color, $icon: $state-icon);
+      color: $state-color;
     }
   }
 }
@@ -147,18 +125,16 @@ textarea.form-control {
 input[type='checkbox'],
 input[type='radio'] {
   position: relative;
-  top: .125rem;
-  width: $font-size-base;
-  height: $font-size-base;
-  margin-right: .125rem;
+  top: .2rem;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  margin-right: .25rem;
   border: $input-btn-border-width solid $input-border-color;
   background-color: $input-bg;
   appearance: none; // Appearance of native control
   transition: box-shadow $transition-fast;
 
   &:hover {
-    box-shadow: $shadow-hover;
-
     &,
     & + label {
       cursor: pointer;
@@ -166,8 +142,6 @@ input[type='radio'] {
 
     &:disabled,
     &.disabled {
-      box-shadow: none;
-
       &,
       & + label {
         cursor: not-allowed;
@@ -189,23 +163,23 @@ input[type='radio'] {
   }
 }
 
-.checkbox {
-  label {
-    margin-bottom: 0;
-  }
-}
+// .checkbox {
+//   label {
+//     margin-bottom: 0;
+//   }
+// }
 
 input[type='checkbox'] {
   background-size: 100%;
 
   &:checked {
-    background: $input-bg-focus $svg-check-solid-blue no-repeat center center;
+    background: $input-bg-focus $svg-check-solid-water no-repeat center center;
     background-size: 100%;
     border: 0;
   }
 
   .bg-dark &:checked {
-    background-image: $svg-check-solid-teal;
+    background-image: $svg-check-solid-atmosphere;
   }
 }
 
@@ -215,11 +189,11 @@ input[type='radio'] {
 
   &:checked {
     background-color: $brand-primary;
-    box-shadow: inset 0 0 0 ($border-width * 2) #fff;
+    box-shadow: inset 0 0 0 ($border-width * 2.5) #fff;
   }
 
   .bg-dark &:checked {
-    background-color: $teal;
+    background-color: $brand-primary;
   }
 }
 
@@ -227,63 +201,36 @@ input[type='radio'] {
 /// Toggle (Radio variation)
 ///
 
-%toggle-base {
-  position: relative;
-  z-index: 1;
-  padding: $toggle-padding-y $toggle-padding-x;
-  margin-right: -$border-width;
-  margin-bottom: -$border-width;
-  border: $border-width solid $toggle-border-color;
-  line-height: 1;
-  text-align: center;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all $transition-fast;
-
-  &,
-  .bg-dark & {
-    color: $blue;
-  }
-}
-
-%toggle-hover,
-%toggle-active {
-  border-color: transparent;
-}
-
-%toggle-hover {
-  z-index: 2;
-  box-shadow: $shadow-hover;
-
-  &:active {
-    color: #fff;
-    background-color: $toggle-active-bg;
-  }
-}
-
-%toggle-selected {
-  z-index: 2;
-  color: #fff;
-  background-color: $toggle-selected-bg;
-  border-color: transparent;
-  box-shadow: $shadow-hover;
-}
 
 .toggle {
-  @if $enable-flex {
-    display: flex;
-    flex-wrap: wrap;
-  } @else {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
+  @include clearfix();
 
   input[type="radio"] {
     display: none;
 
     + label {
-      @extend %toggle-base;
+      display: block;
+      float: left;
+      position: relative;
+      z-index: 1;
+      padding: $toggle-padding-y $toggle-padding-x;
+      margin-right: -$border-width;
+      margin-bottom: -$border-width;
+      border: $border-width solid $toggle-border-color;
+      line-height: 1;
+      text-align: center;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        background-color: rgba($brand-primary, .1);
+      }
+
+      &,
+      .bg-dark & {
+        color: $brand-primary;
+      }
 
       @if $enable-flex {
         flex: 1;
@@ -297,17 +244,20 @@ input[type='radio'] {
       }
 
       &:hover {
-        @extend %toggle-hover;
-      }
+        z-index: 2;
 
-      // &:active {
-      //   background-color: $charcoal;
-      //   color: #fff;
-      // }
+        &:active {
+          color: #fff;
+          background-color: $toggle-active-bg;
+        }
+      }
     }
 
     &:checked + label {
-      @extend %toggle-selected;
+      z-index: 2;
+      color: #fff;
+      background-color: $toggle-selected-bg;
+      border-color: transparent;
     }
   }
 }

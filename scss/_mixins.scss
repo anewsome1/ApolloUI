@@ -32,24 +32,11 @@
       &:visited {
         color: $link-color;
       }
+
       &:hover,
       &:active {
         color: darken($link-color, 10%);
       }
-
-      // Reset button link colors
-      @each $btn-name, $btn-props in $btn-variants {
-        &.btn-#{ $btn-name },
-        &.btn-#{ $btn-name }:hover,
-        &.btn-#{ $btn-name }:visited {
-          color: map-get($btn-props, 'color');
-        }
-
-        &.btn-#{ $btn-name }:active {
-          color: map-get($btn-props, 'color-active');
-        }
-      }
-
     }
   }
 }
@@ -61,12 +48,12 @@
 
 @mixin alert-bg($bg-color, $text-color: null, $link-color: null, $icon: null) {
   @include bg-color($bg-color, $text-color, $link-color);
-  @if($icon) {
-    &::before {
-      content: map-get($_icons-map, $icon);
-      color: $text-color;
-    }
-  }
+  // @if($icon) {
+  //   &::before {
+  //     content: map-get($_icons-map, $icon);
+  //     color: $text-color;
+  //   }
+  // }
 }
 
 ///

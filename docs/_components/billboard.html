@@ -16,21 +16,23 @@ guidelines:
 contents:
   - Usage guidelines
   - Basic Billboard
-  - Fluid Billboard
-  - Dark background
-  - Background images
+  - Centered text
+  - Alternate backgrounds
 ---
 
 <section class="docs-section" id="basic-billboard">
 
+{% include docs-callout.html state='info' title='Inline styles' body='Inline styles are used in these examples to illustrate how to use CSS to create an image overlay effect.  Try to avoid using inline styles in your project by adding them to your application stylesheet.' %}
+
+
 {% include example-intro.html title='Basic Billboard' description='Billboards typically includes a headline, one or two sentences of lead copy and a call to action.' %}
 
 {% capture example %}
-<div class="billboard bg-light">
-  <h1 class="billboard-title">Important Headline</h1>
-  <p class="billboard-description">Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.</p>
+<div class="billboard bg-primary" style="background-image: linear-gradient(to right, rgba(41,125,253,.8),rgba(41,125,253,.8)), url('http://placeimg.com/1000/400/tech/grayscale'); background-size: cover;">
+  <h1 class="billboard-title">Say hello to Apollo</h1>
+  <p class="billboard-description">Our next generation interface for our next generation applications</p>
   <div>
-    <a class="btn btn-primary" href="#0" role="button">Action</a>
+    <a class="btn btn-secondary" href="#0" role="button">Learn more</a>
   </div>
 </div>
 {% endcapture %}
@@ -40,17 +42,17 @@ contents:
 </section>
 
 
-<section class="docs-section" id="fluid-billboard">
+<section class="docs-section" id="centered-text">
 
-{% include example-intro.html title='Fluid Billboard' description='To eliminate the default side padding in favor of fluid container padding, add the <code>.billboard-fluid</code> modifier class with a <code>.container-fluid</code> inside.' %}
+{% include example-intro.html title='Centered text' description='To make the text centered, apply the responsive text alignment utility to the billboard as shown below.' %}
 
 {% capture example %}
-<div class="billboard billboard-fluid bg-light">
+<div class="billboard bg-primary text-xs-center" style="background-image: linear-gradient(to right, rgba(41,125,253,.8),rgba(41,125,253,.8)), url('http://placeimg.com/1000/400/tech/grayscale'); background-size: cover;">
   <div class="container-fluid">
-    <h1 class="billboard-title">No side padding</h1>
-    <p class="billboard-description">Ok, well there <em>is</em> side padding, but not on the billboard itself.  The side padding here comes from the <code>.container-fluid</code> <em>inside</em> the billboard.</p>
+  <h1 class="billboard-title">Say hello to Apollo</h1>
+  <p class="billboard-description">Our next generation interface for our next generation applications</p>
     <div>
-      <a class="btn btn-primary" href="#0" role="button">Got it</a>
+      <a class="btn btn-secondary" href="#0" role="button">Learn more</a>
     </div>
   </div>
 </div>
@@ -61,48 +63,30 @@ contents:
 </section>
 
 
-<section class="docs-section" id="dark-background">
+<section class="docs-section" id="alternate-backgrounds">
 
-{% include example-intro.html title='Dark background' description='Adding <code>.bg-dark</code> to the billboard or its parent inverts the text and link colors for improved readability.' %}
-
-{% capture example %}
-<div class="billboard bg-dark">
-  <h1 class="billboard-title">Important Headline</h1>
-  <p class="billboard-description">Create interactive, decision logic based experiences for your customers!  A Journey can house anything from a simple email to a complex year-long multi-stage campaign that reacts to the actions taken by the recipients along the way.</p>
-  <div>
-    <a class="btn btn-primary" href="#0" role="button">Action</a>
-  </div>
-</div>
-{% endcapture %}
-
-{% include example.html code=example id='example-dark-billboard' %}
-
-</section>
-
-<section class="docs-section" id="background-images">
-
-{% include example-intro.html title='Background images' description='When using an image background, it\'s a good idea to add a semi-opaque overlay to improve readability.  This example shows how to add a light overlay for a light background image.' %}
+{% include example-intro.html title='Alternate backgrounds' description='When using an image background, it\'s a good idea to add a semi-opaque overlay to improve readability.  This example shows how to add a light overlay for a light background image.' %}
 
 {% capture example %}
-<div class="billboard" style="background-image: linear-gradient(to right, rgba(255,255,255,.8),rgba(255,255,255,.8)), url('http://placeimg.com/1000/420/tech'); background-size: cover;">
-  <h1 class="billboard-title">Light background image</h1>
-  <p class="billboard-description">This example uses a background image with a semi-transparent white linear gradient to add a light color mask to the background image and ensure readability.</p>
+<div class="billboard" style="background-image: linear-gradient(to right, rgba(255,255,255,.8),rgba(255,255,255,.8)), url('http://placeimg.com/1000/400/tech/grayscale'); background-size: cover;">
+  <h1 class="billboard-title">Say hello to Apollo</h1>
+  <p class="billboard-description">Our next generation interface for our next generation applications</p>
   <div>
-    <a class="btn btn-primary" href="#0" role="button">Sweet</a>
+    <a class="btn btn-primary" href="#0" role="button">Learn more</a>
   </div>
 </div>
 {% endcapture %}
 
 {% include example.html code=example id='example-billboard-image-light' %}
 
-{% include example-intro.html description='If the background image is dark, use a darker color overlay, combined with the <code>.bg-dark</code> class to invert the text color.' %}
+{% include example-intro.html description='The same technique can be applied using a transparent black overlay to darken an image.' %}
 
 {% capture example %}
-<div class="billboard bg-dark" style="background-image: linear-gradient(to right, rgba(0,0,0,.6),rgba(0,0,0,.6)), url('http://placeimg.com/1000/400/tech'); background-size: cover;">
-  <h1 class="billboard-title">Dark background image</h1>
-  <p class="billboard-description">Adding the <code>bg-dark</code> class takes care of inverting the text, and then the same linear gradient trick is used to add a dark color overlay to ensure that the white text stands out.</p>
+<div class="billboard bg-gray-dark" style="background-image: linear-gradient(to right, rgba(51,51,51,.8),rgba(51,51,51,.8)), url('http://placeimg.com/1000/400/tech/grayscale'); background-size: cover;">
+  <h1 class="billboard-title">Say hello to Apollo</h1>
+  <p class="billboard-description">Our next generation interface for our next generation applications</p>
   <div>
-    <a class="btn btn-primary" href="#0" role="button">Nice</a>
+    <a class="btn btn-primary" href="#0" role="button">Learn more</a>
   </div>
 </div>
 {% endcapture %}

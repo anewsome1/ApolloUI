@@ -2,20 +2,52 @@
   padding-left: 0;
 
   > li {
-    display: inline-block;
+    display: inline;
     list-style-type: none;
 
-    + li {
-      &::before {
-        @extend %icon-base;
+    > a {
+      transition: all $transition-fast;
+    }
 
-        display: inline-block;
-        padding-left: $breadcrumb-spacing;
-        padding-right: $breadcrumb-spacing;
-        font-size: $font-size-sm;
-        content: map-get($_icons-map, 'chevron-right');
-        vertical-align: text-top;
+    > a,
+    .dropdown-toggle,
+    &:last-of-type {
+      display: inline-block;
+      height: 1.5625rem;  // ~25px
+      padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+      margin-right: -$breadcrumb-padding-x;
+      margin-left: -$breadcrumb-padding-x;
+    }
+
+    > a,
+    .dropdown-toggle,
+    + li::before {
+      color: $gray-500;
+    }
+
+    > a,
+    .dropdown-toggle {
+      &:hover,
+      &:focus {
+        text-decoration: none;
       }
+    }
+
+    > a:hover,
+    .dropdown-toggle:hover {
+      color: $link-color;
+      background-color: $gray-50;
+    }
+
+    // Separator chevron icon
+    + li::before {
+      @extend %icon-base;
+
+      display: inline;
+      padding-right: $breadcrumb-padding-x;
+      font-size: $font-size-sm;
+      content: map-get($_icons-map, 'chevron-right');
+      vertical-align: text-top;
     }
   }
 
@@ -24,12 +56,12 @@
     padding: 0;
 
     .dropdown-toggle {
-      position: relative;
-      z-index: 1;
-      padding: 0;
+      // position: relative;
+      // z-index: 1;
+      // padding: 0;
       font-weight: $font-semi-bold;
       letter-spacing: $breadcrumb-ellipse-letter-spacing;
-      margin-right: -$breadcrumb-ellipse-letter-spacing;
+      // margin-right: -$breadcrumb-ellipse-letter-spacing;
 
       &,
       &::after {
@@ -38,24 +70,16 @@
 
 
       &::after {
-        position: absolute;
-        z-index: -1;
-        top: 60%;
-        left: 45%;
-        width: $breadcrumb-ellipse-circle-size;
-        height: $breadcrumb-ellipse-circle-size;
-        margin-top: -$breadcrumb-ellipse-circle-size / 2;
-        margin-left: -$breadcrumb-ellipse-circle-size / 2;
-        content: ''; // Hide down chevron icon
-        border-radius: 50%;
+        display: none;
       }
     }
+
     &.open .dropdown-toggle {
-        color: $blue-150;
+        color: $water-400;
 
         &::after {
-          background-color: rgba($blue, .8);
-          box-shadow: 0 0 0 .5625rem rgba($blue, .5);
+          background-color: rgba($brand-primary, .8);
+          box-shadow: 0 0 0 .5625rem rgba($brand-primary, .5);
         }
       }
   }

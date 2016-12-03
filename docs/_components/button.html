@@ -86,12 +86,15 @@ contents:
 {% include example-intro.html title='Using icons' description='Icons can be added to buttons by placing them inside the tag, either alone or alongside the button label.  Only buttons that use <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> tags can handle icons.' %}
 
 {% capture example_icon_solo %}
-<button class="btn btn-secondary" type="button">
-  <span class="icon icon-edit"></span>
-</button>
-<button class="btn btn-secondary" type="button">
+<!-- Icon and text -->
+<button class="btn btn-link btn-sm" type="button">
   <span class="icon icon-edit"></span>
   Edit
+</button>
+
+<!-- Icon only -->
+<button class="btn btn-link btn-sm" type="button">
+  <span class="icon icon-edit"></span>
 </button>
 {% endcapture %}
 {% include example.html size='fourth' code=example_icon_solo id='code-button-icon' %}
