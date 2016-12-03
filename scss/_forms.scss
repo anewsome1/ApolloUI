@@ -201,63 +201,36 @@ input[type='radio'] {
 /// Toggle (Radio variation)
 ///
 
-%toggle-base {
-  position: relative;
-  z-index: 1;
-  padding: $toggle-padding-y $toggle-padding-x;
-  margin-right: -$border-width;
-  margin-bottom: -$border-width;
-  border: $border-width solid $toggle-border-color;
-  line-height: 1;
-  text-align: center;
-  background-color: #fff;
-  cursor: pointer;
-  transition: all $transition-fast;
-
-  &,
-  .bg-dark & {
-    color: $brand-primary;
-  }
-}
-
-%toggle-hover,
-%toggle-active {
-  border-color: transparent;
-}
-
-%toggle-hover {
-  z-index: 2;
-  box-shadow: $shadow-hover;
-
-  &:active {
-    color: #fff;
-    background-color: $toggle-active-bg;
-  }
-}
-
-%toggle-selected {
-  z-index: 2;
-  color: #fff;
-  background-color: $toggle-selected-bg;
-  border-color: transparent;
-  box-shadow: $shadow-hover;
-}
 
 .toggle {
-  @if $enable-flex {
-    display: flex;
-    flex-wrap: wrap;
-  } @else {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
+  @include clearfix();
 
   input[type="radio"] {
     display: none;
 
     + label {
-      @extend %toggle-base;
+      display: block;
+      float: left;
+      position: relative;
+      z-index: 1;
+      padding: $toggle-padding-y $toggle-padding-x;
+      margin-right: -$border-width;
+      margin-bottom: -$border-width;
+      border: $border-width solid $toggle-border-color;
+      line-height: 1;
+      text-align: center;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &:hover {
+        background-color: rgba($brand-primary, .1);
+      }
+
+      &,
+      .bg-dark & {
+        color: $brand-primary;
+      }
 
       @if $enable-flex {
         flex: 1;
@@ -271,17 +244,20 @@ input[type='radio'] {
       }
 
       &:hover {
-        @extend %toggle-hover;
-      }
+        z-index: 2;
 
-      // &:active {
-      //   background-color: $charcoal;
-      //   color: #fff;
-      // }
+        &:active {
+          color: #fff;
+          background-color: $toggle-active-bg;
+        }
+      }
     }
 
     &:checked + label {
-      @extend %toggle-selected;
+      z-index: 2;
+      color: #fff;
+      background-color: $toggle-selected-bg;
+      border-color: transparent;
     }
   }
 }
