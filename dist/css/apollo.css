@@ -3426,36 +3426,52 @@ input[type='radio']:checked {
   background-color: #297dfd;
 }
 
+.toggle::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.toggle input[type="radio"] {
+  display: none;
+}
+
 .toggle input[type="radio"] + label {
+  display: block;
+  float: left;
   position: relative;
   z-index: 1;
-  padding: 0.875rem 0.9375rem;
+  padding: 0.375rem 0.625rem;
   margin-right: -0.0625rem;
   margin-bottom: -0.0625rem;
-  border: 0.0625rem solid #d9d9d9;
+  border: 0.0625rem solid #297dfd;
   line-height: 1;
   text-align: center;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
-}
-
-.toggle input[type="radio"] + label,
-.bg-dark .toggle input[type="radio"] + label, .toggle
-.bg-dark input[type="radio"] + label, .sidebar .accordion .toggle input[type="radio"] + label, .toggle .sidebar .accordion input[type="radio"] + label {
-  color: #297dfd;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .toggle input[type="radio"] + label:hover {
-  border-color: transparent;
+  background-color: rgba(41, 125, 253, 0.1);
+}
+
+.toggle input[type="radio"] + label,
+.bg-dark .toggle input[type="radio"] + label, .sidebar .accordion .toggle input[type="radio"] + label {
+  color: #297dfd;
+}
+
+.toggle input[type="radio"] + label:hover, .toggle input[type="radio"] + label:active {
+  z-index: 2;
 }
 
 .toggle input[type="radio"] + label:hover {
   z-index: 2;
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
-.toggle input[type="radio"] + label:active:hover {
+.toggle input[type="radio"] + label:hover:active {
   color: #fff;
   background-color: #1f5ebe;
 }
@@ -3465,27 +3481,6 @@ input[type='radio']:checked {
   color: #fff;
   background-color: #297dfd;
   border-color: transparent;
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
-}
-
-.toggle {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.toggle input[type="radio"] {
-  display: none;
-}
-
-.toggle input[type="radio"] + label {
-  -ms-flex: 1;
-      flex: 1;
-}
-
-.toggle input[type="radio"] + label:hover, .toggle input[type="radio"] + label:active {
-  z-index: 2;
 }
 
 .table {
