@@ -10,12 +10,12 @@ Use Apollo UI as a dependency of your application with [NPM](http://npmjs.com) o
 
 #### NPM
 ```
-npm install apollo-ui@1.0.0 --save
+npm install apollo-ui@1.1.0 --save
 ```
 
 #### Bower
 ```
-bower install apollo-ui#1.0.0 --save
+bower install apollo-ui#1.1.0 --save
 ```
 
 
@@ -24,7 +24,7 @@ bower install apollo-ui#1.0.0 --save
 You can easily access the compiled CSS for Apollo from our CDN. This is the fastest way to start using Apollo styles in your project.
 
 ```
-<link rel="stylesheet" href="//cdn.ims.io/design/css/1.0.0/apollo.min.css">
+<link rel="stylesheet" href="//cdn.ims.io/design/css/1.1.0/apollo.min.css">
 ```
 
 ### Compiled JavaScript
@@ -33,7 +33,7 @@ Some JavaScript is required to enable the behavior of components like Dropdowns,
 
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//cdn.ims.io/design/js/1.0.0/apollo.min.js"></script>
+<script src="//cdn.ims.io/design/js/1.1.0/apollo.min.js"></script>
 ```
 
 

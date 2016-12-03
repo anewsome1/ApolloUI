@@ -3,6 +3,16 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.1.0] - 2016-12-02
+
+### Changed
+- Updated color palette
+- Simplified typography options and scale
+- Updated layout of carousel component
+- Updated size, padding and color of most components
+- Removed extraneous examples
+
+
 ## [v1.0.0] - 2016-11-09
 
 ### Changed
