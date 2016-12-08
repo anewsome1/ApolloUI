@@ -4087,6 +4087,24 @@ tbody.collapse.in {
   min-width: initial;
 }
 
+.navbar-environment {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 16.66667%;
+  margin-right: -0.9375rem;
+  margin-left: 0.9375rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 575px) {
   .margin-top-navbar {
     margin-top: 3.75rem;
