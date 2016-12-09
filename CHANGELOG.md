@@ -3,6 +3,12 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.1.1] - 2016-12-09
+
+### Changed
+- Replaced deprecated `.navbar-environment` styles
+
+
 ## [v1.1.0] - 2016-12-02
 
 ### Changed
