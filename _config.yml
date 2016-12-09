@@ -30,9 +30,9 @@ collections:
     output: true
     title: Design Resources
     order: 3
-  scaffolding:
+  styles:
     output: true
-    title: Scaffolding
+    title: Styles
     order: 1
     default_page: colors.html
 
