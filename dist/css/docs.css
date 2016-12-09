@@ -220,6 +220,7 @@ body {
 
 .docs {
   position: relative;
+  min-height: 100%;
   padding-top: 3.75rem;
 }
 
