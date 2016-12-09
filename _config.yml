@@ -21,20 +21,20 @@ kramdown:
   auto_ids:     true
 
 collections:
-  components:
-    output: true
-    title: Components
-    order: 2
-    default_page: accordion.html
   design:
     output: true
-    title: Design Resources
-    order: 3
+    title: Design
+    order: 1
   styles:
     output: true
     title: Styles
-    order: 1
+    order: 2
     default_page: colors.html
+  components:
+    output: true
+    title: Components
+    order: 3
+    default_page: accordion.html
 
 
 gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
