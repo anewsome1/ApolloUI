@@ -1,7 +1,7 @@
 # Site settings
 title: Apollo UI
 description: HTML and CSS for the Apollo visual language.
-current_version: 1.1.0
+current_version: 1.1.1
 
 # Build settings
 source:         docs
@@ -41,8 +41,11 @@ gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
 issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
 
 ui_kit:
-  sketch: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.sketch.zip
-  illustrator: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+  web:
+    sketch: http://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.1.sketch.zip
+    illustrator: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+  ios:
+    sketch: http://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
 
 colors:
   sketch: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
@@ -53,7 +56,7 @@ fonts:
   apollo: http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip
 
 cdn:
-  css: //cdn.ims.io/design/css/1.1.0/apollo.css
-  css_min: //cdn.ims.io/design/css/1.1.0/apollo.min.css
-  js: //cdn.ims.io/design/js/1.1.0/apollo.js
-  js_min: //cdn.ims.io/design/js/1.1.0/apollo.min.js
+  css: //cdn.ims.io/design/css/1.1.1/apollo.css
+  css_min: //cdn.ims.io/design/css/1.1.1/apollo.min.css
+  js: //cdn.ims.io/design/js/1.1.1/apollo.js
+  js_min: //cdn.ims.io/design/js/1.1.1/apollo.min.js

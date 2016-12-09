@@ -24,8 +24,8 @@ const AWS           = require( 'aws-sdk' );
 ///
 
 const strings = {
-  VERSION_COMMENT: '/*! Apollo JS v1.1.0 */',
-  VERSION: '1.1.0'
+  VERSION_COMMENT: '/*! Apollo JS v1.1.1 */',
+  VERSION: '1.1.1'
 };
 
 const path = {
