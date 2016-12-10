@@ -113,24 +113,6 @@
 	        }
 	    }
 
-	    var _createClass = function () {
-	        function defineProperties(target, props) {
-	            for (var i = 0; i < props.length; i++) {
-	                var descriptor = props[i];
-	                descriptor.enumerable = descriptor.enumerable || false;
-	                descriptor.configurable = true;
-	                if ("value" in descriptor) descriptor.writable = true;
-	                Object.defineProperty(target, descriptor.key, descriptor);
-	            }
-	        }
-
-	        return function (Constructor, protoProps, staticProps) {
-	            if (protoProps) defineProperties(Constructor.prototype, protoProps);
-	            if (staticProps) defineProperties(Constructor, staticProps);
-	            return Constructor;
-	        };
-	    }();
-
 	    function _possibleConstructorReturn(self, call) {
 	        if (!self) {
 	            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -165,7 +147,7 @@
 	        function Clipboard(trigger, options) {
 	            _classCallCheck(this, Clipboard);
 
-	            var _this = _possibleConstructorReturn(this, (Clipboard.__proto__ || Object.getPrototypeOf(Clipboard)).call(this));
+	            var _this = _possibleConstructorReturn(this, _Emitter.call(this));
 
 	            _this.resolveOptions(options);
 	            _this.listenClick(trigger);
@@ -179,71 +161,62 @@
 	         */
 
 
-	        _createClass(Clipboard, [{
-	            key: 'resolveOptions',
-	            value: function resolveOptions() {
-	                var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	        Clipboard.prototype.resolveOptions = function resolveOptions() {
+	            var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-	                this.action = typeof options.action === 'function' ? options.action : this.defaultAction;
-	                this.target = typeof options.target === 'function' ? options.target : this.defaultTarget;
-	                this.text = typeof options.text === 'function' ? options.text : this.defaultText;
-	            }
-	        }, {
-	            key: 'listenClick',
-	            value: function listenClick(trigger) {
-	                var _this2 = this;
+	            this.action = typeof options.action === 'function' ? options.action : this.defaultAction;
+	            this.target = typeof options.target === 'function' ? options.target : this.defaultTarget;
+	            this.text = typeof options.text === 'function' ? options.text : this.defaultText;
+	        };
 
-	                this.listener = (0, _goodListener2.default)(trigger, 'click', function (e) {
-	                    return _this2.onClick(e);
-	                });
-	            }
-	        }, {
-	            key: 'onClick',
-	            value: function onClick(e) {
-	                var trigger = e.delegateTarget || e.currentTarget;
+	        Clipboard.prototype.listenClick = function listenClick(trigger) {
+	            var _this2 = this;
 
-	                if (this.clipboardAction) {
-	                    this.clipboardAction = null;
-	                }
+	            this.listener = (0, _goodListener2.default)(trigger, 'click', function (e) {
+	                return _this2.onClick(e);
+	            });
+	        };
 
-	                this.clipboardAction = new _clipboardAction2.default({
-	                    action: this.action(trigger),
-	                    target: this.target(trigger),
-	                    text: this.text(trigger),
-	                    trigger: trigger,
-	                    emitter: this
-	                });
-	            }
-	        }, {
-	            key: 'defaultAction',
-	            value: function defaultAction(trigger) {
-	                return getAttributeValue('action', trigger);
-	            }
-	        }, {
-	            key: 'defaultTarget',
-	            value: function defaultTarget(trigger) {
-	                var selector = getAttributeValue('target', trigger);
+	        Clipboard.prototype.onClick = function onClick(e) {
+	            var trigger = e.delegateTarget || e.currentTarget;
 
-	                if (selector) {
-	                    return document.querySelector(selector);
-	                }
+	            if (this.clipboardAction) {
+	                this.clipboardAction = null;
 	            }
-	        }, {
-	            key: 'defaultText',
-	            value: function defaultText(trigger) {
-	                return getAttributeValue('text', trigger);
-	            }
-	        }, {
-	            key: 'destroy',
-	            value: function destroy() {
-	                this.listener.destroy();
 
-	                if (this.clipboardAction) {
-	                    this.clipboardAction.destroy();
-	                    this.clipboardAction = null;
-	                }
+	            this.clipboardAction = new _clipboardAction2.default({
+	                action: this.action(trigger),
+	                target: this.target(trigger),
+	                text: this.text(trigger),
+	                trigger: trigger,
+	                emitter: this
+	            });
+	        };
+
+	        Clipboard.prototype.defaultAction = function defaultAction(trigger) {
+	            return getAttributeValue('action', trigger);
+	        };
+
+	        Clipboard.prototype.defaultTarget = function defaultTarget(trigger) {
+	            var selector = getAttributeValue('target', trigger);
+
+	            if (selector) {
+	                return document.querySelector(selector);
 	            }
-	        }]);
+	        };
+
+	        Clipboard.prototype.defaultText = function defaultText(trigger) {
+	            return getAttributeValue('text', trigger);
+	        };
+
+	        Clipboard.prototype.destroy = function destroy() {
+	            this.listener.destroy();
+
+	            if (this.clipboardAction) {
+	                this.clipboardAction.destroy();
+	                this.clipboardAction = null;
+	            }
+	        };
 
 	        return Clipboard;
 	    }(_tinyEmitter2.default);
@@ -296,7 +269,7 @@
 	    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
 	        return typeof obj;
 	    } : function (obj) {
-	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	        return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj;
 	    };
 
 	    function _classCallCheck(instance, Constructor) {
@@ -340,126 +313,117 @@
 	         */
 
 
+	        ClipboardAction.prototype.resolveOptions = function resolveOptions() {
+	            var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+	            this.action = options.action;
+	            this.emitter = options.emitter;
+	            this.target = options.target;
+	            this.text = options.text;
+	            this.trigger = options.trigger;
+
+	            this.selectedText = '';
+	        };
+
+	        ClipboardAction.prototype.initSelection = function initSelection() {
+	            if (this.text) {
+	                this.selectFake();
+	            } else if (this.target) {
+	                this.selectTarget();
+	            }
+	        };
+
+	        ClipboardAction.prototype.selectFake = function selectFake() {
+	            var _this = this;
+
+	            var isRTL = document.documentElement.getAttribute('dir') == 'rtl';
+
+	            this.removeFake();
+
+	            this.fakeHandlerCallback = function () {
+	                return _this.removeFake();
+	            };
+	            this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
+
+	            this.fakeElem = document.createElement('textarea');
+	            // Prevent zooming on iOS
+	            this.fakeElem.style.fontSize = '12pt';
+	            // Reset box model
+	            this.fakeElem.style.border = '0';
+	            this.fakeElem.style.padding = '0';
+	            this.fakeElem.style.margin = '0';
+	            // Move element out of screen horizontally
+	            this.fakeElem.style.position = 'absolute';
+	            this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
+	            // Move element to the same position vertically
+	            var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+	            this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
+	            this.fakeElem.style.top = yPosition + 'px';
+
+	            this.fakeElem.setAttribute('readonly', '');
+	            this.fakeElem.value = this.text;
+
+	            document.body.appendChild(this.fakeElem);
+
+	            this.selectedText = (0, _select2.default)(this.fakeElem);
+	            this.copyText();
+	        };
+
+	        ClipboardAction.prototype.removeFake = function removeFake() {
+	            if (this.fakeHandler) {
+	                document.body.removeEventListener('click', this.fakeHandlerCallback);
+	                this.fakeHandler = null;
+	                this.fakeHandlerCallback = null;
+	            }
+
+	            if (this.fakeElem) {
+	                document.body.removeChild(this.fakeElem);
+	                this.fakeElem = null;
+	            }
+	        };
+
+	        ClipboardAction.prototype.selectTarget = function selectTarget() {
+	            this.selectedText = (0, _select2.default)(this.target);
+	            this.copyText();
+	        };
+
+	        ClipboardAction.prototype.copyText = function copyText() {
+	            var succeeded = void 0;
+
+	            try {
+	                succeeded = document.execCommand(this.action);
+	            } catch (err) {
+	                succeeded = false;
+	            }
+
+	            this.handleResult(succeeded);
+	        };
+
+	        ClipboardAction.prototype.handleResult = function handleResult(succeeded) {
+	            this.emitter.emit(succeeded ? 'success' : 'error', {
+	                action: this.action,
+	                text: this.selectedText,
+	                trigger: this.trigger,
+	                clearSelection: this.clearSelection.bind(this)
+	            });
+	        };
+
+	        ClipboardAction.prototype.clearSelection = function clearSelection() {
+	            if (this.target) {
+	                this.target.blur();
+	            }
+
+	            window.getSelection().removeAllRanges();
+	        };
+
+	        ClipboardAction.prototype.destroy = function destroy() {
+	            this.removeFake();
+	        };
+
 	        _createClass(ClipboardAction, [{
-	            key: 'resolveOptions',
-	            value: function resolveOptions() {
-	                var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-	                this.action = options.action;
-	                this.emitter = options.emitter;
-	                this.target = options.target;
-	                this.text = options.text;
-	                this.trigger = options.trigger;
-
-	                this.selectedText = '';
-	            }
-	        }, {
-	            key: 'initSelection',
-	            value: function initSelection() {
-	                if (this.text) {
-	                    this.selectFake();
-	                } else if (this.target) {
-	                    this.selectTarget();
-	                }
-	            }
-	        }, {
-	            key: 'selectFake',
-	            value: function selectFake() {
-	                var _this = this;
-
-	                var isRTL = document.documentElement.getAttribute('dir') == 'rtl';
-
-	                this.removeFake();
-
-	                this.fakeHandlerCallback = function () {
-	                    return _this.removeFake();
-	                };
-	                this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
-
-	                this.fakeElem = document.createElement('textarea');
-	                // Prevent zooming on iOS
-	                this.fakeElem.style.fontSize = '12pt';
-	                // Reset box model
-	                this.fakeElem.style.border = '0';
-	                this.fakeElem.style.padding = '0';
-	                this.fakeElem.style.margin = '0';
-	                // Move element out of screen horizontally
-	                this.fakeElem.style.position = 'absolute';
-	                this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
-	                // Move element to the same position vertically
-	                var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-	                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
-	                this.fakeElem.style.top = yPosition + 'px';
-
-	                this.fakeElem.setAttribute('readonly', '');
-	                this.fakeElem.value = this.text;
-
-	                document.body.appendChild(this.fakeElem);
-
-	                this.selectedText = (0, _select2.default)(this.fakeElem);
-	                this.copyText();
-	            }
-	        }, {
-	            key: 'removeFake',
-	            value: function removeFake() {
-	                if (this.fakeHandler) {
-	                    document.body.removeEventListener('click', this.fakeHandlerCallback);
-	                    this.fakeHandler = null;
-	                    this.fakeHandlerCallback = null;
-	                }
-
-	                if (this.fakeElem) {
-	                    document.body.removeChild(this.fakeElem);
-	                    this.fakeElem = null;
-	                }
-	            }
-	        }, {
-	            key: 'selectTarget',
-	            value: function selectTarget() {
-	                this.selectedText = (0, _select2.default)(this.target);
-	                this.copyText();
-	            }
-	        }, {
-	            key: 'copyText',
-	            value: function copyText() {
-	                var succeeded = void 0;
-
-	                try {
-	                    succeeded = document.execCommand(this.action);
-	                } catch (err) {
-	                    succeeded = false;
-	                }
-
-	                this.handleResult(succeeded);
-	            }
-	        }, {
-	            key: 'handleResult',
-	            value: function handleResult(succeeded) {
-	                this.emitter.emit(succeeded ? 'success' : 'error', {
-	                    action: this.action,
-	                    text: this.selectedText,
-	                    trigger: this.trigger,
-	                    clearSelection: this.clearSelection.bind(this)
-	                });
-	            }
-	        }, {
-	            key: 'clearSelection',
-	            value: function clearSelection() {
-	                if (this.target) {
-	                    this.target.blur();
-	                }
-
-	                window.getSelection().removeAllRanges();
-	            }
-	        }, {
-	            key: 'destroy',
-	            value: function destroy() {
-	                this.removeFake();
-	            }
-	        }, {
 	            key: 'action',
 	            set: function set() {
-	                var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'copy';
+	                var action = arguments.length <= 0 || arguments[0] === undefined ? 'copy' : arguments[0];
 
 	                this._action = action;
 
@@ -806,7 +770,7 @@
 	 */
 	function listener(element, selector, type, callback) {
 	    return function(e) {
-	        e.delegateTarget = closest(e.target, selector);
+	        e.delegateTarget = closest(e.target, selector, true);
 
 	        if (e.delegateTarget) {
 	            callback.call(element, e);
@@ -819,36 +783,127 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Module Dependencies
+	 */
+
+	try {
+	  var matches = __webpack_require__(10)
+	} catch (err) {
+	  var matches = __webpack_require__(10)
+	}
+
+	/**
+	 * Export `closest`
+	 */
+
+	module.exports = closest
+
+	/**
+	 * Closest
+	 *
+	 * @param {Element} el
+	 * @param {String} selector
+	 * @param {Element} scope (optional)
+	 */
+
+	function closest (el, selector, scope) {
+	  scope = scope || document.documentElement;
+
+	  // walk up the dom
+	  while (el && el !== scope) {
+	    if (matches(el, selector)) return el;
+	    el = el.parentNode;
+	  }
+
+	  // check scope for match
+	  return matches(el, selector) ? el : null;
+	}
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Module dependencies.
+	 */
+
+	try {
+	  var query = __webpack_require__(11);
+	} catch (err) {
+	  var query = __webpack_require__(11);
+	}
+
+	/**
+	 * Element prototype.
+	 */
+
+	var proto = Element.prototype;
+
+	/**
+	 * Vendor function.
+	 */
+
+	var vendor = proto.matches
+	  || proto.webkitMatchesSelector
+	  || proto.mozMatchesSelector
+	  || proto.msMatchesSelector
+	  || proto.oMatchesSelector;
+
+	/**
+	 * Expose `match()`.
+	 */
+
+	module.exports = match;
+
+	/**
+	 * Match `el` to `selector`.
+	 *
+	 * @param {Element} el
+	 * @param {String} selector
+	 * @return {Boolean}
+	 * @api public
+	 */
+
+	function match(el, selector) {
+	  if (!el || el.nodeType !== 1) return false;
+	  if (vendor) return vendor.call(el, selector);
+	  var nodes = query.all(selector, el.parentNode);
+	  for (var i = 0; i < nodes.length; ++i) {
+	    if (nodes[i] == el) return true;
+	  }
+	  return false;
+	}
+
+
+/***/ },
+/* 11 */
 /***/ function(module, exports) {
 
-	/**
-	 * A polyfill for Element.matches()
-	 */
-	if (Element && !Element.prototype.matches) {
-	    var proto = Element.prototype;
-
-	    proto.matches = proto.matchesSelector ||
-	                    proto.mozMatchesSelector ||
-	                    proto.msMatchesSelector ||
-	                    proto.oMatchesSelector ||
-	                    proto.webkitMatchesSelector;
+	function one(selector, el) {
+	  return el.querySelector(selector);
 	}
 
-	/**
-	 * Finds the closest parent that matches a selector.
-	 *
-	 * @param {Element} element
-	 * @param {String} selector
-	 * @return {Function}
-	 */
-	function closest (element, selector) {
-	    while (element && element !== document) {
-	        if (element.matches(selector)) return element;
-	        element = element.parentNode;
-	    }
-	}
+	exports = module.exports = function(selector, el){
+	  el = el || document;
+	  return one(selector, el);
+	};
 
-	module.exports = closest;
+	exports.all = function(selector, el){
+	  el = el || document;
+	  return el.querySelectorAll(selector);
+	};
+
+	exports.engine = function(obj){
+	  if (!obj.one) throw new Error('.one callback required');
+	  if (!obj.all) throw new Error('.all callback required');
+	  one = obj.one;
+	  exports.all = obj.all;
+	  return exports;
+	};
 
 
 /***/ }

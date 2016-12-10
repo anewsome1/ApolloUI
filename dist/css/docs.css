@@ -135,8 +135,8 @@ body {
 .docs-nav {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -436,78 +436,22 @@ hr {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -0.9375rem;
-  margin-left: -0.9375rem;
-}
-
-@media (min-width: 576px) {
-  .docs-color-group {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .docs-color-group {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .docs-color-group {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .docs-color-group {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
-  }
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .docs-color-swatch {
   position: relative;
   min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
   width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 2rem;
   color: #b2b2b2;
   font-size: 0.875rem;
-}
-
-@media (min-width: 576px) {
-  .docs-color-swatch {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .docs-color-swatch {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .docs-color-swatch {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .docs-color-swatch {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -571,4 +515,8 @@ hr {
 
 .resource-download .download-text {
   margin-left: .5rem;
+}
+
+.physics-body .row, .mechanics-body .row {
+  margin-bottom: 150px;
 }
