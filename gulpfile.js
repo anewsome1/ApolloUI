@@ -175,7 +175,7 @@ gulp.task( 'docs-styles', function () {
 ///
 
 gulp.task( 'docs', [ 'jekyll' ], function() {
-  gulp.src( 'docs-temp/**/*.html' )
+  gulp.src( 'docs-temp/**/*' )
     .pipe( gulp.dest( 'dist' ) )
     .pipe( browserSync.stream() );
 });
