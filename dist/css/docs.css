@@ -211,15 +211,9 @@ body {
   margin-right: 10.6rem;
 }
 
-@media (min-width: 1200px) {
-  .docs.container,
-  .docs > .container {
-    max-width: 89.25rem;
-  }
-}
-
 .docs {
   position: relative;
+  min-height: 100%;
   padding-top: 3.75rem;
 }
 
@@ -227,10 +221,6 @@ body {
   .docs {
     padding-top: 4.375rem;
   }
-}
-
-.docs-content {
-  max-width: 89.25rem;
 }
 
 @media (min-width: 768px) {
@@ -570,4 +560,8 @@ hr {
 
 .resource-download .download-text {
   margin-left: .5rem;
+}
+
+.docs-design-page .docs-section {
+  margin-bottom: 3rem;
 }
