@@ -4424,53 +4424,77 @@ tbody.collapse.in {
   position: relative;
   width: 100%;
   height: 0.1875rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  background-color: #d9d9d9;
+  margin-top: 1.875rem;
+  margin-bottom: 0.78125rem;
+  background-color: #e5e5e5;
 }
 
 .slider-handle {
+  position: relative;
+}
+
+.slider-handle::before {
+  display: block;
   position: absolute;
   z-index: 10;
-  width: 2rem;
-  height: 2rem;
-  margin-top: -1rem;
-  margin-left: -1rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-top: -0.78125rem;
+  margin-left: -0.78125rem;
   background-color: #fff;
-  border: 0.0625rem solid #d9d9d9;
-  cursor: pointer;
+  border: 0.0625rem solid #cccccc;
+  cursor: -webkit-grab;
+  cursor: grab;
+  content: '';
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.slider-handle:hover {
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
-}
-
-.slider-handle:active {
-  background-color: #297dfd;
-  border-color: transparent;
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
-}
-
-.disabled .slider-handle {
+.disabled .slider-handle::before {
   background-color: #f2f2f2;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.disabled .slider-handle:active {
-  border: 0.0625rem solid #d9d9d9;
+.disabled .slider-handle::before:active {
+  border: 0.0625rem solid #cccccc;
+}
+
+.slider-handle:hover::before {
+  transform: scale(1.2);
+}
+
+.disabled .slider-handle:hover::before {
+  transform: none;
+}
+
+.slider-handle:active .slider-value {
+  color: #297dfd;
+}
+
+.slider-handle:active::before {
+  background-color: #297dfd;
+  border-color: transparent;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.disabled .slider-handle:active::before {
+  background-color: #f2f2f2;
+  border-color: #cccccc;
+  cursor: not-allowed;
 }
 
 .slider-value {
   position: absolute;
-  top: 2.4rem;
+  bottom: 0.9375rem;
   left: 50%;
   width: 10rem;
   margin-left: -5rem;
   font-size: 0.875rem;
   text-align: center;
+  transition: color 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-fill {
@@ -4482,7 +4506,7 @@ tbody.collapse.in {
 }
 
 .disabled .slider-fill {
-  background-color: #999999;
+  background-color: #b2b2b2;
 }
 
 .slider-handle:nth-of-type(2) + .slider-fill {

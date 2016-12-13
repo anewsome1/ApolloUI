@@ -168,8 +168,8 @@ $shadow-color:          rgba($black, .15);
 
 $shadow-border:        0 0 0 $border-width $shadow-color;
 $shadow-hover:         0 .625rem .9375rem $shadow-color;  // ~0 10px 15px
-$shadow-active:        .25rem .5rem 1.25rem $shadow-color;  // ~3px 3px 8px
-$shadow-resting:       .125rem .25rem .85rem $shadow-color;  // ~3px 3px 8px
+$shadow-active:        $shadow-hover;
+$shadow-resting:       0 .1875rem .25rem $shadow-color;  // ~0 3px 4px
 
 // Shadow sizes
 $shadow-sm:             0 .625rem 1.25rem 0 rgba(#000, .1);
@@ -615,24 +615,25 @@ $slider-position-min:         25%;  // For demo purposes only
 $slider-position-max:         85%;  // For demo purposes only
 
 $slider-height:               .1875rem;  // ~3px
-$slider-bg:                   $gray-200;
+$slider-bg:                   $gray-100;
 
 // Fill
 $slider-fill-bg:              $brand-primary;
 
 // Handle
-$slider-handle-size:          2rem;  // ~32px
+$slider-handle-size:          1.5625rem;  // ~25px
+$slider-handle-size-hover:    1.875rem;   // ~30px
 $slider-handle-bg:            #fff;
-$slider-handle-border:        $border-width solid $gray-200;
+$slider-handle-border-color:  $gray-300;
 
 // Value label
 $slider-value-width:          10rem;
 
 // Active
-$slider-active-handle-bg:     $brand-primary;
+$slider-active-color:         $brand-primary;
 
 // Disabled
-$slider-disabled-fill-bg:     $gray-500;
+$slider-disabled-fill-bg:     $gray-400;
 $slider-disabled-handle-bg:   $gray-50;
 
 
