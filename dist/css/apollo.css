@@ -4469,6 +4469,10 @@ tbody.collapse.in {
   transform: none;
 }
 
+.slider-handle:active .slider-value {
+  color: #297dfd;
+}
+
 .slider-handle:active::before {
   background-color: #297dfd;
   border-color: transparent;
@@ -4490,6 +4494,7 @@ tbody.collapse.in {
   margin-left: -5rem;
   font-size: 0.875rem;
   text-align: center;
+  transition: color 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-fill {
