@@ -3178,7 +3178,7 @@ dd:last-of-type {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5625rem;
 }
 
 .form-group::after {
@@ -3307,6 +3307,7 @@ textarea.form-control, textarea.search-input {
 
 .form-msg {
   padding-top: .25rem;
+  margin-bottom: initial;
 }
 
 .has-info .form-control, .has-info .search-input, .has-info.form-control, .has-info.search-input {
@@ -5133,7 +5134,7 @@ tbody.collapse.in {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3.125rem;
 }
 
 .login-container {

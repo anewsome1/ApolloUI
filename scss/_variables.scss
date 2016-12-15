@@ -312,7 +312,7 @@ $input-height:                   $component-height;
 $input-height-lg:                $component-height-lg;
 $input-height-sm:                $component-height-sm;
 
-$form-group-margin-bottom:       $spacer-y;
+$form-group-margin-bottom:       1.5625rem; // ~25px
 
 $input-group-addon-bg:           $gray-200;
 $input-group-addon-border-color: $input-border-color;

@@ -95,6 +95,7 @@ textarea.form-control {
 
 .form-msg {
   padding-top: .25rem;
+  margin-bottom: initial;
 }
 
 @each $state, $state-props in $alert-states {
