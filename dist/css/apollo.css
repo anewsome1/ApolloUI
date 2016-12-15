@@ -3178,7 +3178,7 @@ dd:last-of-type {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5625rem;
 }
 
 .form-group::after {
@@ -5133,7 +5133,7 @@ tbody.collapse.in {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3.125rem;
 }
 
 .login-container {
