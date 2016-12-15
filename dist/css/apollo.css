@@ -3223,22 +3223,22 @@ label {
 }
 
 .form-control::-webkit-input-placeholder, .search-input::-webkit-input-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control::-moz-placeholder, .search-input::-moz-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder, .search-input:-ms-input-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control::placeholder, .search-input::placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
@@ -3251,8 +3251,12 @@ label:active + .search-input {
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
   background-color: #f2f2f2;
-  box-shadow: none;
+  color: #b2b2b2;
   cursor: not-allowed;
+}
+
+.form-control:disabled:active, .search-input:disabled:active, .form-control:disabled.disabled, .search-input:disabled.disabled, .form-control.disabled:active, .disabled.search-input:active, .form-control.disabled.disabled, .disabled.disabled.search-input {
+  border-color: #cccccc;
 }
 
 .form-control.input-sm, .sidebar .search-input, .input-sm.search-input {
@@ -3391,7 +3395,7 @@ input[type='radio'].disabled {
 input[type='checkbox']:disabled + label, input[type='checkbox'].disabled + label,
 input[type='radio']:disabled + label,
 input[type='radio'].disabled + label {
-  color: #999999;
+  color: #b2b2b2;
 }
 
 input[type='checkbox']:focus,

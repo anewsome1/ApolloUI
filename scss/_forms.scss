@@ -56,9 +56,14 @@ label {
 
   &:disabled,
   &.disabled {
-    background-color: $input-bg-disabled; // @TODO: replace with light gray from palette
-    box-shadow: none;
+    background-color: $input-bg-disabled;
+    color: $input-color-disabled;
     cursor: not-allowed;
+
+    &:active,
+    &.disabled {
+      border-color: $input-border-color;
+    }
   }
 
   &.input-sm {
