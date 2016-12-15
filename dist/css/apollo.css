@@ -3307,6 +3307,7 @@ textarea.form-control, textarea.search-input {
 
 .form-msg {
   padding-top: .25rem;
+  margin-bottom: initial;
 }
 
 .has-info .form-control, .has-info .search-input, .has-info.form-control, .has-info.search-input {
