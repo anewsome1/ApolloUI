@@ -53,8 +53,13 @@ colors:
   illustrator: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
 
 fonts:
-  merriweather: http://cdn.ims.io/design/drb-downloads/merriweather-font.zip
-  apollo: http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip
+  proxima_nova: https://typekit.com/fonts/proxima-nova
+
+icons:
+  png: cdn.ims.io/design/apollo-icons/apollo-icons-png.zip
+  font: cdn.ims.io/design/apollo-icons/apollo-icons-font.zip
+  svg: cdn.ims.io/design/apollo-icons/apollo-icons-svg.zip
+  sketch: cdn.ims.io/design/apollo-icons/apollo-icons-sketch.zip
 
 cdn:
   css: //cdn.ims.io/design/css/1.1.1/apollo.css
