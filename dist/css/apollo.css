@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Apollo CSS v1.1.1
+ * Apollo CSS v1.2.0
  */
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -2767,7 +2767,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
 }
 
@@ -3178,7 +3178,7 @@ dd:last-of-type {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5625rem;
 }
 
 .form-group::after {
@@ -3223,22 +3223,22 @@ label {
 }
 
 .form-control::-webkit-input-placeholder, .search-input::-webkit-input-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control::-moz-placeholder, .search-input::-moz-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control:-ms-input-placeholder, .search-input:-ms-input-placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
 .form-control::placeholder, .search-input::placeholder {
-  color: #b2b2b2;
+  color: #cccccc;
   opacity: 1;
 }
 
@@ -3251,8 +3251,12 @@ label:active + .search-input {
 
 .form-control:disabled, .search-input:disabled, .form-control.disabled, .disabled.search-input {
   background-color: #f2f2f2;
-  box-shadow: none;
+  color: #b2b2b2;
   cursor: not-allowed;
+}
+
+.form-control:disabled:active, .search-input:disabled:active, .form-control:disabled.disabled, .search-input:disabled.disabled, .form-control.disabled:active, .disabled.search-input:active, .form-control.disabled.disabled, .disabled.disabled.search-input {
+  border-color: #cccccc;
 }
 
 .form-control.input-sm, .sidebar .search-input, .input-sm.search-input {
@@ -3307,6 +3311,7 @@ textarea.form-control, textarea.search-input {
 
 .form-msg {
   padding-top: .25rem;
+  margin-bottom: initial;
 }
 
 .has-info .form-control, .has-info .search-input, .has-info.form-control, .has-info.search-input {
@@ -3390,7 +3395,7 @@ input[type='radio'].disabled {
 input[type='checkbox']:disabled + label, input[type='checkbox'].disabled + label,
 input[type='radio']:disabled + label,
 input[type='radio'].disabled + label {
-  color: #999999;
+  color: #b2b2b2;
 }
 
 input[type='checkbox']:focus,
@@ -4424,53 +4429,77 @@ tbody.collapse.in {
   position: relative;
   width: 100%;
   height: 0.1875rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  background-color: #d9d9d9;
+  margin-top: 1.875rem;
+  margin-bottom: 0.78125rem;
+  background-color: #e5e5e5;
 }
 
 .slider-handle {
+  position: relative;
+}
+
+.slider-handle::before {
+  display: block;
   position: absolute;
   z-index: 10;
-  width: 2rem;
-  height: 2rem;
-  margin-top: -1rem;
-  margin-left: -1rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-top: -0.78125rem;
+  margin-left: -0.78125rem;
   background-color: #fff;
-  border: 0.0625rem solid #d9d9d9;
-  cursor: pointer;
+  border: 0.0625rem solid #cccccc;
+  cursor: -webkit-grab;
+  cursor: grab;
+  content: '';
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.slider-handle:hover {
-  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
-}
-
-.slider-handle:active {
-  background-color: #297dfd;
-  border-color: transparent;
-  box-shadow: 0.25rem 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
-}
-
-.disabled .slider-handle {
+.disabled .slider-handle::before {
   background-color: #f2f2f2;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-.disabled .slider-handle:active {
-  border: 0.0625rem solid #d9d9d9;
+.disabled .slider-handle::before:active {
+  border: 0.0625rem solid #cccccc;
+}
+
+.slider-handle:hover::before {
+  transform: scale(1.2);
+}
+
+.disabled .slider-handle:hover::before {
+  transform: none;
+}
+
+.slider-handle:active .slider-value {
+  color: #297dfd;
+}
+
+.slider-handle:active::before {
+  background-color: #297dfd;
+  border-color: transparent;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.disabled .slider-handle:active::before {
+  background-color: #f2f2f2;
+  border-color: #cccccc;
+  cursor: not-allowed;
 }
 
 .slider-value {
   position: absolute;
-  top: 2.4rem;
+  bottom: 0.9375rem;
   left: 50%;
   width: 10rem;
   margin-left: -5rem;
   font-size: 0.875rem;
   text-align: center;
+  transition: color 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .slider-fill {
@@ -4482,7 +4511,7 @@ tbody.collapse.in {
 }
 
 .disabled .slider-fill {
-  background-color: #999999;
+  background-color: #b2b2b2;
 }
 
 .slider-handle:nth-of-type(2) + .slider-fill {
@@ -4869,7 +4898,7 @@ tbody.collapse.in {
 
 @media (min-width: 768px) {
   .billboard-description {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -5109,7 +5138,7 @@ tbody.collapse.in {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3.125rem;
 }
 
 .login-container {

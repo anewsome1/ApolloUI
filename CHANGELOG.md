@@ -3,6 +3,15 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.2.0] - 2016-12-20
+
+### Changed
+- Updated disabled field styles
+- Increased `.form-group` margin
+- Updated slider styles
+- Fixed `.carousel-description` font size
+
+
 ## [v1.1.1] - 2016-12-09
 
 ### Changed

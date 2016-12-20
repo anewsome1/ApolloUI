@@ -24,8 +24,8 @@ const AWS           = require( 'aws-sdk' );
 ///
 
 const strings = {
-  VERSION_COMMENT: '/*! Apollo JS v1.1.1 */',
-  VERSION: '1.1.1'
+  VERSION_COMMENT: '/*! Apollo JS v1.2.0 */',
+  VERSION: '1.2.0'
 };
 
 const path = {
@@ -175,7 +175,7 @@ gulp.task( 'docs-styles', function () {
 ///
 
 gulp.task( 'docs', [ 'jekyll' ], function() {
-  gulp.src( 'docs-temp/**/*.html' )
+  gulp.src( 'docs-temp/**/*' )
     .pipe( gulp.dest( 'dist' ) )
     .pipe( browserSync.stream() );
 });
