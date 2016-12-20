@@ -43,21 +43,26 @@ issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
 
 ui_kit:
   web:
-    sketch: http://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.1.sketch.zip
-    illustrator: http://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.1.sketch.zip
+    illustrator: https://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
   ios:
-    sketch: http://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
+    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
 
 colors:
-  sketch: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
-  illustrator: http://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
+  sketch: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
+  illustrator: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
 
 fonts:
-  merriweather: http://cdn.ims.io/design/drb-downloads/merriweather-font.zip
-  apollo: http://cdn.ims.io/design/drb-downloads/apollo-icons-2.0.zip
+  proxima_nova: https://typekit.com/fonts/proxima-nova
+
+icons:
+  png: https://cdn.ims.io/design/apollo-icons/apollo-icons-png.zip
+  font: https://cdn.ims.io/design/apollo-icons/apollo-icons-font.zip
+  svg: https://cdn.ims.io/design/apollo-icons/apollo-icons-svg.zip
+  sketch: https://cdn.ims.io/design/apollo-icons/apollo-icons-sketch.zip
 
 cdn:
-  css: //cdn.ims.io/design/css/1.1.1/apollo.css
-  css_min: //cdn.ims.io/design/css/1.1.1/apollo.min.css
-  js: //cdn.ims.io/design/js/1.1.1/apollo.js
-  js_min: //cdn.ims.io/design/js/1.1.1/apollo.min.js
+  css: https://cdn.ims.io/design/css/1.1.1/apollo.css
+  css_min: https://cdn.ims.io/design/css/1.1.1/apollo.min.css
+  js: https://cdn.ims.io/design/js/1.1.1/apollo.js
+  js_min: https://cdn.ims.io/design/js/1.1.1/apollo.min.js
