@@ -1,7 +1,7 @@
 # Site settings
 title: Apollo UI
 description: HTML and CSS for the Apollo visual language.
-current_version: 1.1.1
+current_version: 1.2.0
 
 # Build settings
 source:         docs
