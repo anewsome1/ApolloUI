@@ -6,7 +6,7 @@ contents:
   - UI Kits
   - Color Swatches
   - Display Fonts
-  - Icon Font
+  - Apollo Icons
 ---
 <div class="docs-design-page">
   <section class="docs-section" id="ui-kits">
@@ -37,19 +37,28 @@ contents:
   </section>
 
   <section class="docs-section" id="display-fonts">
-    {% include example-intro.html title='Display Fonts' description='Merriweather Light is our secondary typeface, used for body copy and large areas of non-interactive text.' %}
+    {% include example-intro.html title='Display Fonts' description='Proxima Nova is our primary typeface.  Access to this font is available through Typekit, which is included with Adobe Creative Cloud.' %}
     <div>
-      <a class="btn btn-secondary" href="{{ site.fonts.merriweather }}">
-        <span class="icon icon-cloud-download"></span> Merriweather
+      <a class="btn btn-secondary" href="{{ site.fonts.proxima_nova }}" target="_blank">
+        <span class="icon icon-cloud-sync"></span> Proxima Nova - Typekit
       </a>
     </div>
   </section>
 
-  <section class="docs-section" id="icon-font">
-    {% include example-intro.html title='Icon Font' description='The Apollo icon font provides icons that support overarching design consistency as well as supporting a variety of icon needs unique to IMS Health.' %}
+  <section class="docs-section" id="apollo-icons">
+    {% include example-intro.html title='Apollo Icons' description='The Apollo icon set provides icons that support overarching design consistency as well as supporting a variety of icon needs unique to IMS Health.' %}
     <div>
-      <a class="btn btn-secondary" href="{{ site.fonts.apollo }}">
-        <span class="icon icon-cloud-download"></span> Apollo Icons
+      <a class="btn btn-secondary" href="{{ site.icons.png }}">
+        <span class="icon icon-cloud-download"></span> Apollo Icons - PNG
+      </a>
+      <a class="btn btn-secondary" href="{{ site.icons.svg }}">
+        <span class="icon icon-cloud-download"></span> Apollo Icons - SVG
+      </a>
+      <a class="btn btn-secondary" href="{{ site.icons.sketch }}">
+        <span class="icon icon-cloud-download"></span> Apollo Icons - Sketch
+      </a>
+      <a class="btn btn-secondary" href="{{ site.icons.font }}">
+        <span class="icon icon-cloud-download"></span> Apollo Icons - Font
       </a>
     </div>
   </section>
