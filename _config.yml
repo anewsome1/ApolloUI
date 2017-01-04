@@ -43,10 +43,11 @@ issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
 
 ui_kit:
   web:
-    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.1.sketch.zip
-    illustrator: https://cdn.ims.io/design/drb-downloads/IMS-Responsive-UI-Kit_Version-1.1.1.5.ai.zip
+    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.sketch.zip
+    illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.ai.zip
   ios:
     sketch: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
+    illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.ai.zip
 
 colors:
   sketch: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
