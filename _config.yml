@@ -38,8 +38,8 @@ collections:
     default_page: accordion.html
 
 
-gitlab_url: https://gitlab.imshealth.com/apollo/apollo-ui
-issues_url: https://gitlab.imshealth.com/apollo/apollo-ui/issues
+gitlab_url: https://gitlab.ims.io/apollo/apollo-ui
+issues_url: https://gitlab.ims.io/apollo/apollo-ui/issues
 
 ui_kit:
   web:
