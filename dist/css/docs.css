@@ -325,8 +325,8 @@ hr {
 }
 
 .show-grid div[class^='col-'] {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.03125rem;
+  padding-bottom: 1.03125rem;
   text-align: center;
   line-height: 1;
   font-weight: 600;
