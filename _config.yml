@@ -21,11 +21,11 @@ kramdown:
   auto_ids:     true
 
 collections:
-  design:
+  introduction:
     output: true
-    title: Design
+    title: Introduction
     order: 1
-    default_page: downloads.html
+    default_page: index.html
   styles:
     output: true
     title: Styles
@@ -36,6 +36,11 @@ collections:
     title: Components
     order: 3
     default_page: accordion.html
+  resources:
+    output: true
+    title: Resources
+    order: 4
+    default_page: design.html
 
 
 gitlab_url: https://gitlab.ims.io/apollo/apollo-ui

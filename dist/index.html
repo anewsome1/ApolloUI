@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/css/docs.css">
 </head>
 
-  <body>
+  <body class="docs-home">
     
 
 
@@ -39,310 +39,54 @@
     <ul class="navbar-links">
       
       
-      <li class="navbar-item active"><a href="/">Home</a></li>
-    
-      
-    
+        
       
         
+          
+          
+          <li class="navbar-item ">
+            <a href="/introduction/index.html">Introduction</a>
+          </li>
         
-        <li class="navbar-item ">
-          <a href="/design/downloads.html">Design</a>
-        </li>
-      
-    
-      
-        
-        
-        <li class="navbar-item ">
-          <a href="/styles/colors.html">Styles</a>
-        </li>
-      
-    
       
         
+          
+          
+          <li class="navbar-item ">
+            <a href="/styles/colors.html">Styles</a>
+          </li>
         
-        <li class="navbar-item ">
-          <a href="/components/accordion.html">Components</a>
-        </li>
       
-    
+        
+          
+          
+          <li class="navbar-item ">
+            <a href="/components/accordion.html">Components</a>
+          </li>
+        
+      
+        
+          
+          
+          <li class="navbar-item ">
+            <a href="/resources/design.html">Resources</a>
+          </li>
+        
+      
     </ul>
   </div>
 </nav>
 
-    <main class="docs">
-  <header class="home-header billboard billboard-fluid carousel-dark">
-  <div class="container">
-    <h1 class="billboard-title">Apollo UI</h1>
-    <p class="billboard-description lead">Better user experience starts here.</p>
-    <p><b>Version</b>: 1.2.0</p>
-    <p>
-      <a class="btn btn-primary" href="https://gitlab.ims.io/apollo/apollo-ui">GitLab Project</a>
-    </p>
-  </div>
+    <header class="docs-home-header">
+  <p class="docs-home-description">Think of our new design language as a North Star.</p>
+<h1 class="docs-home-title">Welcome to Apollo UI</h1>
+<div>
+  <a class="btn docs-btn-home" href="/introduction/index.html">Learn More</a>
+  <a class="btn docs-btn-home" href="/resources/design.html">Download Resources</a>
+</div>
+
+
 </header>
-
-<div class="container">
-  <div class="docs-page-header">
-    <h1>Getting started</h1>
-  </div>
-  <section class="docs-section">
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Package management</h2>
-  
-  
-  <p class="docs-example-description">Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.</p>
-  
-</div>
-
-
-    <div class="row">
-      <div class="col-xs-12 col-lg-6">
-        
-        
-<h3 class="docs-example-label">NPM</h3>
-
-<div class="docs-example">
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html">npm install apollo-ui@1.2.0 --save</code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-      </div>
-      <div class="col-xs-12 col-lg-6">
-        
-        
-<h3 class="docs-example-label">Bower</h3>
-
-<div class="docs-example">
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html">bower install apollo-ui#1.2.0 --save</code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-      </div>
-    </div>
-
-
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Compiled stylesheets</h2>
-  
-  
-  <p class="docs-example-description">You can easily access the compiled CSS for Apollo from our CDN.  This is the fastest way to start using Apollo styles in your project.</p>
-  
-</div>
-
-
-    
-
-    
-<div class="docs-example">
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.ims.io/design/css/1.1.1/apollo.min.css"</span><span class="nt">&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Compiled JavaScript</h2>
-  
-  
-  <p class="docs-example-description">Some JavaScript is required to enable the behavior of components like Dropdowns, Modals and Carousel.  Include this script at the bottom of your page, after including a current version of jQuery as shown below.</p>
-  
-</div>
-
-
-
-
-    
-<div class="docs-example">
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.ims.io/design/js/1.1.1/apollo.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-    
-
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Starter Template</h2>
-  
-  
-  <p class="docs-example-description">
-    <p>Be sure to have your pages set up with the latest design and development standards, including:
-      <ul>
-        <li>Using an HTML5 doctype</li>
-        <li>Forcing Internet Explorer to use its latest rendering mode (<a href="http://stackoverflow.com/q/6771258">read more</a>)</li>
-        <li>And, utilizing the viewport meta tag.</li>
-      </ul>
-    </p>
-    <p>Put it all together and your pages should look something like this:</p>
-    </p>
-  
-</div>
-
-
-
-
-    
-<div class="docs-example">
-  
-  <div class="docs-example-code">
-    
-    <div >
-    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- Required meta tags always come first --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"x-ua-compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- Apollo CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.ims.io/design/css/1.1.1/apollo.min.css"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-
-    <span class="c">&lt;!-- jQuery first, then Apollo JS. --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.ims.io/design/js/1.1.1/apollo.min.js"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
-
-    </div>
-  </div>
-</div>
-
-
-  </section>
-
-
-  <section class="docs-section">
-    <br><br><br>
-  </section>
-
-  <div class="docs-page-header">
-    <h1>Design resources</h1>
-  </div>
-  <section class="docs-section" id="ui-kits">
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">UI Kits</h2>
-  
-  
-  <p class="docs-example-description">Apollo is our new design language at IMS Health. It represents weightless conversation better than the Apollo orbiter. While we cannot walk every step of your journey with you, it is our sincere desire to layout principles that guide the direction of your odyssey.</p>
-  
-</div>
-
-    <div>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.sketch.zip">
-        <span class="icon icon-cloud-download"></span> Web UI Kit - Sketch
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.ai.zip">
-        <span class="icon icon-cloud-download"></span> Web UI Kit - Illustrator
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip">
-        <span class="icon icon-cloud-download"></span> iOS UI Kit - Sketch
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.ai.zip">
-        <span class="icon icon-cloud-download"></span> iOS UI Kit - Illustrator
-      </a>
-    </div>
-  </section>
-
-  <section class="docs-section" id="color-swatches">
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Color Swatches</h2>
-  
-  
-  <p class="docs-example-description">The color palette is broken down into brand, support, and functional colors. Swatches are available in both Adobe and Sketch formats for your project.</p>
-  
-</div>
-
-    <div>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip">
-        <span class="icon icon-cloud-download"></span> Color Swatch - Sketch
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip">
-        <span class="icon icon-cloud-download"></span> Color Swatch - Illustrator
-      </a>
-    </div>
-  </section>
-
-  <section class="docs-section" id="display-fonts">
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Display Fonts</h2>
-  
-  
-  <p class="docs-example-description">Proxima Nova is our primary typeface.  Access to this font is available through Typekit, which is included with Adobe Creative Cloud.</p>
-  
-</div>
-
-    <div>
-      <a class="btn btn-secondary" href="https://typekit.com/fonts/proxima-nova" target="_blank">
-        <span class="icon icon-cloud-sync"></span> Proxima Nova - Typekit
-      </a>
-    </div>
-  </section>
-
-  <section class="docs-section" id="apollo-icons">
-    <div class="docs-example-intro">
-  
-  <h2 class="docs-example-title">Apollo Icons</h2>
-  
-  
-  <p class="docs-example-description">The Apollo icon set provides icons that support overarching design consistency as well as supporting a variety of icon needs unique to IMS Health.</p>
-  
-</div>
-
-    <div>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/apollo-icons/apollo-icons-png.zip">
-        <span class="icon icon-cloud-download"></span> Apollo Icons - PNG
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/apollo-icons/apollo-icons-svg.zip">
-        <span class="icon icon-cloud-download"></span> Apollo Icons - SVG
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/apollo-icons/apollo-icons-sketch.zip">
-        <span class="icon icon-cloud-download"></span> Apollo Icons - Sketch
-      </a>
-      <a class="btn btn-secondary" href="https://cdn.ims.io/design/apollo-icons/apollo-icons-font.zip">
-        <span class="icon icon-cloud-download"></span> Apollo Icons - Font
-      </a>
-    </div>
-  </section>
-</div>
-</main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <!-- Tether (Bootstrap dependency) -->

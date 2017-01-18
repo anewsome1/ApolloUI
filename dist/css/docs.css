@@ -207,8 +207,26 @@ body {
   background-color: rgba(0, 0, 0, 0.95);
 }
 
+.docs-navbar .navbar-brand-logo {
+  position: relative;
+  top: -.125rem;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
 .docs-navbar .navbar-brand {
+  -ms-flex-positive: 1000;
+      flex-grow: 1000;
+  -ms-flex-pack: initial;
+      justify-content: initial;
   margin-right: 10.6rem;
+  font-size: 1.25rem;
+}
+
+.docs-navbar .navbar-item > a {
+  font-size: 1rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 .docs {
@@ -219,14 +237,14 @@ body {
 
 @media (min-width: 576px) {
   .docs {
-    padding-top: 4.375rem;
+    padding-top: 3.75rem;
   }
 }
 
 @media (min-width: 768px) {
   .docs-sidebar {
     position: fixed;
-    top: 4.375rem;
+    top: 3.75rem;
     bottom: 0;
     height: auto;
     overflow-x: hidden;
@@ -244,7 +262,7 @@ hr {
 .docs-page-header {
   padding-top: 3rem;
   padding-bottom: 4rem;
-  margin-bottom: -2.1875rem;
+  margin-bottom: -1.875rem;
   border-bottom: 0.0625rem solid rgba(51, 51, 51, 0.15);
 }
 
@@ -253,8 +271,8 @@ hr {
 }
 
 .docs-section {
-  padding-top: 5.375rem;
-  margin-bottom: -4.375rem;
+  padding-top: 4.75rem;
+  margin-bottom: -3.75rem;
 }
 
 .docs-section-title {
@@ -534,13 +552,60 @@ hr {
   color: #ffffff;
 }
 
-.home-header {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-image: linear-gradient(to right, rgba(41, 125, 253, 0.8), rgba(41, 125, 253, 0.8)), url("https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2e481631f9841642ba61e30d6c41f7ff");
+html,
+.docs-home,
+.docs-home-header {
+  height: 100%;
+}
+
+.docs-home-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-image: url("/img/img-index@2x.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.docs-home-title,
+.docs-home-description {
+  color: #ffffff;
+}
+
+.docs-home-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.docs-home-description {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+}
+
+.docs-btn-home {
+  border: 0.0625rem solid #32b5fc;
+  color: #32b5fc;
+  width: 10.625rem;
+}
+
+.docs-btn-home:hover, .docs-btn-home:active {
+  border-color: #e5e5e5;
+  color: #e5e5e5;
+}
+
+.docs-btn-home + .docs-btn-home {
+  margin-left: 1.875rem;
+}
+
+.docs-home .docs-footer {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .resources-container {

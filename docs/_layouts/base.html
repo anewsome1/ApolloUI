@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body {% if layout.class %}class="{{ layout.class }}"{% endif %}>
     {% include docs-navbar.html %}
     {{ content }}
     {% include scripts.html %}

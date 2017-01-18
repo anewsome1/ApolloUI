@@ -1,9 +1,70 @@
-.home-header {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-image: linear-gradient(to right, rgba(41,125,253,.8),rgba(41,125,253,.8)),
-                    url('https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=2e481631f9841642ba61e30d6c41f7ff');
+$docs-btn-home-color: $atmosphere-300;
+
+
+
+///
+/// Page layout
+///
+
+html,
+.docs-home,
+.docs-home-header {
+  height: 100%;
+}
+
+.docs-home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/img/img-index@2x.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+///
+/// Headings
+///
+
+.docs-home-title,
+.docs-home-description {
+  color: $white;
+}
+
+.docs-home-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.docs-home-description {
+  margin-bottom: 0;
+  font-size: $font-size-lg;
+}
+
+///
+/// Button styling
+///
+
+.docs-btn-home {
+  border: $border-width solid $docs-btn-home-color;
+  color: $docs-btn-home-color;
+  width: 10.625rem;
+
+  &:hover,
+  &:active {
+    border-color: $gray-100;
+    color: $gray-100;
+  }
+
+  & + & {
+    margin-left: $grid-gutter-width-base;
+  }
+}
+
+.docs-home {
+  .docs-footer {
+    justify-content: flex-end;
+  }
 }
