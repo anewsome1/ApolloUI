@@ -75,11 +75,6 @@ pre code {
   overflow-y: scroll;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 @media (min-width: 768px) {
   .docs::before {
     display: block;
@@ -88,14 +83,13 @@ body {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: #f2f2f2;
+    background-image: #f2f2f2;
     content: '';
   }
 }
 
 .docs-sidebar {
   margin-left: -0.9375rem;
-  background: #f2f2f2;
 }
 
 @media (max-width: 575px) {
@@ -106,14 +100,6 @@ body {
 
 .docs-sidebar a:hover {
   text-decoration: none;
-}
-
-.docs-sidebar-header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  padding: .5rem 1rem;
 }
 
 .docs-drb-menu-toggle {
@@ -204,7 +190,7 @@ body {
 }
 
 .docs-navbar {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: #000000;
 }
 
 .docs-navbar .navbar-brand-logo {
@@ -234,9 +220,26 @@ body {
   color: #ffffff;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/img-index@2x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .docs {
-  position: relative;
-  min-height: 100%;
   padding-top: 3.75rem;
 }
 
@@ -256,8 +259,28 @@ body {
     overflow-y: auto;
   }
   .docs-sidebar + .docs-content {
-    margin-left: 19rem;
+    margin-left: 18rem;
   }
+}
+
+.docs-content {
+  min-height: 100%;
+  padding-right: 1.875rem;
+  padding-bottom: 3.75rem;
+  padding-left: 1.875rem;
+  background-color: #fff;
+}
+
+.docs-content::after {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  right: -50%;
+  top: 0;
+  bottom: 0;
+  content: '';
+  background-color: #fff;
 }
 
 hr {
@@ -278,6 +301,10 @@ hr {
 .docs-section {
   padding-top: 4.75rem;
   margin-bottom: -3.75rem;
+}
+
+.docs-section:last-of-type {
+  margin-bottom: 0;
 }
 
 .docs-section-title {
@@ -557,7 +584,6 @@ hr {
   color: #ffffff;
 }
 
-html,
 .docs-home,
 .docs-home-header {
   height: 100%;
@@ -572,10 +598,6 @@ html,
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  background-image: url("/img/img-index@2x.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .docs-home-title,

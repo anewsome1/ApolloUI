@@ -29,6 +29,10 @@ hr {
 .docs-section {
   padding-top: $navbar-height + 1rem;
   margin-bottom: -$navbar-height;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 /// Title and description
