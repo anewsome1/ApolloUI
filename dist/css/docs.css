@@ -227,6 +227,11 @@ body {
   font-size: 1rem;
   padding-right: 1.25rem;
   padding-left: 1.25rem;
+  color: #999999;
+}
+
+.docs-navbar .navbar-item.active > a {
+  color: #ffffff;
 }
 
 .docs {
