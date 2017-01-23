@@ -76,7 +76,7 @@ $docs-sidebar-width: $off-canvas-width;
 .docs-page-nav-title {
   margin-top: $spacer * 1.5;
   margin-bottom: $spacer-y;
-  // color: #fff;
+  color: #fff;
   // font-family: $font-family-serif;
   // font-weight: $font-thin;
 }
@@ -108,12 +108,12 @@ $docs-sidebar-width: $off-canvas-width;
     display: inline-block;
     padding-top: $spacer-y / 2;
     padding-bottom: $spacer-y / 2;
-    color: $body-color;
-    // font-weight: $font-light;
+    color: $gray-500;
+    cursor: pointer;
   }
 
   &.active > a {
-    color: $link-color;
+    color: $white;
     font-weight: $font-normal;
   }
 }

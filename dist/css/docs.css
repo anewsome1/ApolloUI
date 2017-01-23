@@ -140,6 +140,7 @@ pre code {
 .docs-page-nav-title {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .docs-page-nav {
@@ -181,11 +182,12 @@ pre code {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: #333333;
+  color: #999999;
+  cursor: pointer;
 }
 
 .docs-page-nav-item.active > a {
-  color: #297dfd;
+  color: #ffffff;
   font-weight: 400;
 }
 
