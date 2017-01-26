@@ -665,6 +665,11 @@ hr {
   margin-bottom: 3rem;
 }
 
+.docs-design-page .docs-section .row {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
 .docs-resource-grid {
   display: -ms-flexbox;
   display: flex;
