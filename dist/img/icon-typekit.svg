@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>D14911FB-3A7A-4F13-8D41-D04BDAD6E8BA</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="85.2549016%" y1="91.0358843%" x2="60.6393945%" y2="10.2511226%" id="linearGradient-1">
+            <stop stop-color="#152600" offset="0%"></stop>
+            <stop stop-color="#152600" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="40" height="40"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+    </defs>
+    <g id="Resources" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05.-Resources" transform="translate(-550.000000, -532.000000)">
+            <g id="Content" transform="translate(435.000000, 110.000000)">
+                <g id="Fonts" transform="translate(0.000000, 305.000000)">
+                    <g id="icon-typekit" transform="translate(115.000000, 117.000000)">
+                        <use id="Rectangle" stroke="#87EC00" mask="url(#mask-3)" stroke-width="4" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <text id="Tk" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="25" font-weight="400" fill="#87EC00">
+                            <tspan x="5.875" y="28">Tk</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
