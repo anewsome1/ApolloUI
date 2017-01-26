@@ -53,6 +53,17 @@ $docs-btn-home-color: $atmosphere-300;
     color: $gray-100;
   }
 
+  &.docs-btn-secondary {
+    border-color: $gray-100;
+    color: $gray-100;
+
+    &:hover,
+    &:active {
+      border-color: $docs-btn-home-color;
+      color: $docs-btn-home-color;
+    }
+  }
+
   & + & {
     margin-left: $grid-gutter-width-base;
   }
