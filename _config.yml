@@ -63,7 +63,7 @@ icons:
   sketch: https://cdn.ims.io/design/apollo-icons/apollo-icons-sketch.zip
 
 cdn:
-  css: https://cdn.ims.io/design/css/1.1.1/apollo.css
-  css_min: https://cdn.ims.io/design/css/1.1.1/apollo.min.css
-  js: https://cdn.ims.io/design/js/1.1.1/apollo.js
-  js_min: https://cdn.ims.io/design/js/1.1.1/apollo.min.js
+  css: https://cdn.ims.io/design/css/1.2.0/apollo.css
+  css_min: https://cdn.ims.io/design/css/1.2.0/apollo.min.css
+  js: https://cdn.ims.io/design/js/1.2.0/apollo.js
+  js_min: https://cdn.ims.io/design/js/1.2.0/apollo.min.js
