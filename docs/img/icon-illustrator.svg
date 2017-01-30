@@ -21,9 +21,7 @@
                         <g id="icon-illustrator" transform="translate(29.000000, 0.000000)">
                             <g id="Group-2">
                                 <use id="Rectangle" stroke="#FF7F18" mask="url(#mask-3)" stroke-width="4" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
-                                <text id="Ai" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="25" font-weight="400" fill="#FF7F18">
-                                    <tspan x="8.65" y="28">Ai</tspan>
-                                </text>
+                                <path d="M15.325,10.15 L18.65,10.15 L25.525,28 L22.175,28 L20.5,23.275 L13.375,23.275 L11.7,28 L8.475,28 L15.325,10.15 Z M14.225,20.9 L19.675,20.9 L17,13.225 L16.925,13.225 L14.225,20.9 Z M26.9,10.15 L29.75,10.15 L29.75,12.85 L26.9,12.85 L26.9,10.15 Z M26.9,15.075 L29.75,15.075 L29.75,28 L26.9,28 L26.9,15.075 Z" id="Ai" fill="#FF7F18"></path>
                             </g>
                         </g>
                     </g>
