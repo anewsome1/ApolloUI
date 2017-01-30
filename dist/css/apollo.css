@@ -2733,8 +2733,7 @@ h1, h2, h3, h4, h5, h6,
 .h1,
 .modal-title,
 .billboard-title,
-.login-brand-name,
-.empty-space-title, .h2, .card-title, .h3, .h4, .h5, .h6 {
+.login-brand-name, .h2, .card-title, .empty-space-title, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 400;
@@ -2742,11 +2741,11 @@ h1, h2, h3, h4, h5, h6,
   color: inherit;
 }
 
-h1, .h1, .modal-title, .billboard-title, .login-brand-name, .empty-space-title {
+h1, .h1, .modal-title, .billboard-title, .login-brand-name {
   font-size: 2.25rem;
 }
 
-h2, .h2, .card-title {
+h2, .h2, .card-title, .empty-space-title {
   font-size: 1.5rem;
 }
 
@@ -2877,8 +2876,7 @@ h1,
 .h1,
 .modal-title,
 .billboard-title,
-.login-brand-name,
-.empty-space-title {
+.login-brand-name {
   font-weight: 300;
 }
 
@@ -5289,17 +5287,20 @@ tbody.collapse.in {
   text-align: center;
 }
 
+.table + .empty-space {
+  margin-top: -1rem;
+  border-top: 0;
+}
+
 .empty-space-icon {
   position: relative;
   display: inline-block;
-  width: 4.5rem;
-  height: 4.5rem;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  color: #333333;
-  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+  color: #999999;
+  font-size: 2.5rem;
   line-height: 1;
-  border: 0.0625rem dashed #333333;
+  border: 0.0625rem dashed #999999;
   border-radius: 50%;
 }
 
@@ -5307,30 +5308,30 @@ tbody.collapse.in {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -0.75rem;
-  margin-left: -0.75rem;
+  margin-top: -1.25rem;
+  margin-left: -1.25rem;
 }
 
 .empty-space-icon.icon-close {
-  font-size: 2.475rem;
+  font-size: 4.125rem;
 }
 
 .empty-space-icon.icon-close::before {
-  margin-top: -1.2375rem;
-  margin-left: -1.2375rem;
+  margin-top: -2.0625rem;
+  margin-left: -2.0625rem;
 }
 
-.bg-dark .empty-space-icon, .sidebar .accordion .empty-space-icon {
-  color: #fff;
-  border-color: #fff;
+.empty-space-title,
+.empty-space-body {
+  color: #666666;
 }
 
 .empty-space-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: .25rem;
 }
 
 .empty-space-body {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .pager {
