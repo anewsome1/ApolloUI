@@ -402,6 +402,7 @@ $table-font-size:               $font-size-sm;
 $table-cell-padding-x:          $grid-gutter-width-base / 2;
 $table-cell-padding-y:          calc-padding-y($component-height, $table-font-size);
 $table-sm-cell-padding-y:       .5rem;
+$table-margin-bottom:           $spacer-y;
 
 $table-header-bg:               $gray-50;
 $table-header-color:            $gray-600;

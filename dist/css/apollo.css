@@ -5289,6 +5289,10 @@ tbody.collapse.in {
   text-align: center;
 }
 
+.table + .empty-space {
+  margin-top: -1rem;
+}
+
 .empty-space-icon {
   position: relative;
   display: inline-block;

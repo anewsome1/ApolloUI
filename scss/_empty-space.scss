@@ -2,6 +2,10 @@
   padding: $empty-space-padding-y $empty-space-padding-x;
   border: $border-width solid $empty-space-border-color;
   text-align: center;
+
+  .table + & {
+    margin-top: -$table-margin-bottom;
+  }
 }
 
 
