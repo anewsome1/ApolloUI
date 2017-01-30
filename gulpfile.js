@@ -107,7 +107,7 @@ gulp.task( 'apollo-scripts', function( callback ) {
 /// Docs JS bundle
 ///
 
-gulp.task( 'docs-scripts', function() {
+gulp.task( 'docs-scripts', function( callback ) {
   pump([
       gulp.src( path.DOCS_JS_SRC_MAIN ),
       webpack({
@@ -122,7 +122,8 @@ gulp.task( 'docs-scripts', function() {
       }),
       gulp.dest( path.JS_DEST ),
       browserSync.stream()
-    ]
+    ],
+    callback
   );
 });
 
