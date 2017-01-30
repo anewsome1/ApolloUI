@@ -550,11 +550,11 @@ $login-logo-width:    4rem;     // ~64px
 $empty-space-padding-y:         4.5rem;
 $empty-space-padding-x:         2.625rem;
 $empty-space-border-color:      $gray-200;
-$empty-space-icon-size:         1.5rem;  // ~24px
+$empty-space-icon-size:         2.5rem;  // ~40px
 $empty-space-icon-close-size:   $empty-space-icon-size * 1.65; // Account for whitespace around "x" icon
 $empty-space-icon-border-size:  4.5rem; // ~72px
-$empty-space-icon-color:        $gray-700;
-$empty-space-icon-color-dark:   #fff;
+$empty-space-icon-color:        $gray-500;
+$empty-space-font-color:        $gray-600;
 
 
 ///
