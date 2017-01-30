@@ -47,6 +47,9 @@
 	// Copy to clipboard stuff
 	__webpack_require__(1);
 
+	// Smooth scrolling thing
+	__webpack_require__(10);
+
 
 /***/ },
 /* 1 */
@@ -848,6 +851,28 @@
 	}
 
 	module.exports = closest;
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	const $ = window.jQuery;
+
+	$(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      let target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 750);
+	        return false;
+	      }
+	    }
+	  });
+	});
 
 
 /***/ }
