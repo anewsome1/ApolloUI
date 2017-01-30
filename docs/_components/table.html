@@ -8,6 +8,7 @@ guidelines:
     - Display all properties or attributes of a data set as well as their explicit values
     - Provide an exhaustive listing of all data
     - View and edit a complete or semi-complete set of objects/entities
+    - Limit tables to 20 rows before pagination
   dont:
     - Use for viewing relational data across data sets
     - Guide the user to a specific conclusion with data
@@ -84,6 +85,8 @@ contents:
 
 
 <section class="docs-section" id="empty-table">
+
+{% include example-intro.html title='Empty table' description='When a table is empty due to lack of results or filters applied, use the <code>.empty-space</code> component as shown below.  This component can be used with or without an icon or call to action, as appropriate.' %}
 
 {% capture example %}
 <div class="row">
