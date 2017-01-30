@@ -2,6 +2,11 @@
   padding: $empty-space-padding-y $empty-space-padding-x;
   border: $border-width solid $empty-space-border-color;
   text-align: center;
+
+  .table + & {
+    margin-top: -$table-margin-bottom;
+    border-top: 0;
+  }
 }
 
 
@@ -14,10 +19,8 @@
 
   position: relative;
   display: inline-block;
-  width: $empty-space-icon-border-size;
-  height: $empty-space-icon-border-size;
-  margin-top: $spacer;
-  margin-bottom: $spacer * 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
   color: $empty-space-icon-color;
   font-size: $empty-space-icon-size;
   line-height: 1;
@@ -41,23 +44,23 @@
       margin-left: (-$empty-space-icon-close-size / 2);
     }
   }
-
-  .bg-dark & {
-    color: $empty-space-icon-color-dark;
-    border-color: $empty-space-icon-color-dark;
-  }
 }
 
 ///
 /// Title and body copy
 ///
 
+.empty-space-title,
+.empty-space-body {
+  color: $empty-space-font-color;
+}
+
 .empty-space-title {
-  @extend .h1;
-  margin-bottom: $spacer * 1.5;
+  @extend .h2;
+  margin-bottom: .25rem;
 }
 
 .empty-space-body {
-  margin-bottom: $spacer * 3;
+  margin-bottom: 1.5rem;
 }
 

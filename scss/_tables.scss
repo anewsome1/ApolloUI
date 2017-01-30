@@ -1,7 +1,7 @@
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $spacer;
+  margin-bottom: $table-margin-bottom;
   font-size: $table-font-size;
   background-color: $table-bg;
   border: $border-width solid $table-border-color;
@@ -92,7 +92,7 @@
 
         ///
         ///  Triangle sorting icons
-        ///  
+        ///
 
         &::after {
           display: block;
@@ -154,7 +154,7 @@
   ///
   /// Checkbox headings/cells
   ///
-  
+
   .table-checkbox {
     width: $checkbox-size;
   }
