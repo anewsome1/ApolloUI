@@ -275,6 +275,8 @@
         
         <li>Use appropriate type attribute (e.g. email, tel, number) to enable mobile-friendly input (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-type" target="_blank">reference</a>)</li>
         
+        <li>Add the <code>.optional</code> class to a control's label when it is not required</li>
+        
       </ul>
     </div>
     
@@ -319,12 +321,12 @@
   
 <form>
   <fieldset class="form-group">
-    <label class="control-label required" for="full-name">Full name</label>
+    <label class="control-label optional" for="full-name">Full name</label>
     <input class="form-control" id="full-name" type="text" name="full-name">
   </fieldset>
   <fieldset class="form-group">
-    <label class="control-label required" for="email">Email address</label>
-    <input class="form-control" id="email" type="email" name="email">
+    <label class="control-label" for="email">Email address</label>
+    <input class="form-control" id="email" type="email" name="email" required>
   </fieldset>
   <fieldset class="form-group">
     <button class="btn btn-primary" type="submit">Sign up</button>
@@ -342,12 +344,12 @@
     <div  id="example-basic">
     <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
   <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"full-name"</span><span class="nt">&gt;</span>Full name<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label optional"</span> <span class="na">for=</span><span class="s">"full-name"</span><span class="nt">&gt;</span>Full name<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"full-name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"full-name"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
   <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label required"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">required</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/fieldset&gt;</span>
   <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign up<span class="nt">&lt;/button&gt;</span>
