@@ -1,0 +1,10 @@
+.docs-footer {
+  width: 100%;
+  color: $gray-400;
+  text-align: center;
+
+  .docs-home & {
+    position: absolute;
+    bottom: 2.5rem;
+  }
+}

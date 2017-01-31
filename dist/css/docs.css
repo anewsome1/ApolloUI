@@ -265,7 +265,7 @@ body.docs-component::before {
 .docs-content {
   min-height: 100%;
   padding-right: 1.875rem;
-  padding-bottom: 3.75rem;
+  padding-bottom: 1.875rem;
   padding-left: 1.875rem;
   background-color: #fff;
 }
@@ -767,4 +767,15 @@ hr {
 
 .dropdown-menu > li > a:hover .docs-resource-version {
   color: #ffffff;
+}
+
+.docs-footer {
+  width: 100%;
+  color: #b2b2b2;
+  text-align: center;
+}
+
+.docs-home .docs-footer {
+  position: absolute;
+  bottom: 2.5rem;
 }
