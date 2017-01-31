@@ -8,9 +8,7 @@ hr {
 
 .docs-page-header {
   padding-top: $spacer * 3;
-  padding-bottom: 4rem;
   margin-bottom: -($navbar-height / 2);
-  border-bottom: $border-width solid $hr-border-color;
 }
 
 ///
@@ -18,7 +16,9 @@ hr {
 ///
 
 .docs-page-contents {
+  padding-bottom: 4rem;
   line-height: 2;
+  border-bottom: $border-width solid $hr-border-color;
 }
 
 
@@ -29,6 +29,10 @@ hr {
 .docs-section {
   padding-top: $navbar-height + 1rem;
   margin-bottom: -$navbar-height;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 /// Title and description

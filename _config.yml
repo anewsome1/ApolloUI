@@ -21,11 +21,11 @@ kramdown:
   auto_ids:     true
 
 collections:
-  design:
+  introduction:
     output: true
-    title: Design
+    title: Introduction
     order: 1
-    default_page: downloads.html
+    default_page: index.html
   styles:
     output: true
     title: Styles
@@ -36,6 +36,11 @@ collections:
     title: Components
     order: 3
     default_page: accordion.html
+  resources:
+    output: true
+    title: Resources
+    order: 4
+    default_page: design.html
 
 
 gitlab_url: https://gitlab.ims.io/apollo/apollo-ui
@@ -45,13 +50,16 @@ ui_kit:
   web:
     sketch: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.sketch.zip
     illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.2.ai.zip
+    version: v1.2
   ios:
     sketch: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
     illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.ai.zip
+    version: v1.0
 
 colors:
   sketch: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
   illustrator: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
+  version: v1.0
 
 fonts:
   proxima_nova: https://typekit.com/fonts/proxima-nova
