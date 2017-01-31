@@ -25,7 +25,8 @@ body {
   }
 
   &.docs-component::before {
-    background-color: rgba($black, .5);
+    background-image: linear-gradient(to right, rgba($black, .5),rgba($black, .5)),
+                      url('/img/img-index@2x.jpg');
   }
 }
 

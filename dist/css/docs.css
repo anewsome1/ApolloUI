@@ -239,7 +239,7 @@ body::before {
 }
 
 body.docs-component::before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/img-index@2x.jpg");
 }
 
 .docs {
@@ -572,6 +572,11 @@ hr {
   border: 0.0625rem solid #e5e5e5;
 }
 
+.docs-color-name {
+  margin-bottom: .3125rem;
+  font-size: 0.875rem;
+}
+
 .docs-color-block {
   display: -ms-flexbox;
   display: flex;
@@ -648,34 +653,6 @@ hr {
       justify-content: flex-end;
 }
 
-.resources-container {
-  margin-bottom: 1rem;
-}
-
-.resource-download {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: resources-container;
-      flex-direction: resources-container;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  font-size: 1rem;
-  margin-left: 1rem;
-}
-
-.resource-download .download-text {
-  margin-left: .5rem;
-}
-
-.docs-design-page .docs-section {
-  margin-bottom: 3rem;
-}
-
-.docs-design-page .docs-section .row {
-  -ms-flex-align: center;
-      align-items: center;
-}
-
 .docs-resource-grid {
   display: -ms-flexbox;
   display: flex;
@@ -699,6 +676,15 @@ hr {
 
 .docs-resource-tile:hover {
   background-color: rgba(242, 242, 242, 0.4);
+}
+
+.docs-resource-tile .dropdown-toggle,
+.docs-resource-tile .btn-link {
+  padding-top: 0;
+}
+
+.docs-resource-tile .btn-link:hover {
+  background-color: transparent;
 }
 
 .docs-resource-tile .btn-link > .icon-arrow-right {
@@ -759,6 +745,8 @@ hr {
 }
 
 .docs-resource-icon.icon {
+  position: relative;
+  bottom: .5rem;
   font-size: 2.5rem;
   text-align: center;
 }
@@ -773,8 +761,17 @@ hr {
   color: #ffffff;
 }
 
+.docs-design-page .docs-section {
+  margin-bottom: 3rem;
+}
+
+.docs-design-page .docs-section .row {
+  -ms-flex-align: center;
+      align-items: center;
+}
+
 .docs-footer {
-  width: 100%;
+  display: block;
   color: #b2b2b2;
   text-align: center;
 }
@@ -782,4 +779,10 @@ hr {
 .docs-home .docs-footer {
   position: absolute;
   bottom: 2.5rem;
+}
+
+.docs-component .docs-footer {
+  margin-left: 18rem;
+  padding-bottom: 2.5rem;
+  background-color: #fff;
 }
