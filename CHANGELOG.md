@@ -3,6 +3,18 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.3.0] - 2017-01-31
+
+### Changed
+- Updated site design and some page layouts
+- Replaced required field label indicator with `.optional` style
+
+### Added
+- Site updated date
+- Smooth scrolling for in-page anchor links
+- Guideline for number of table rows per page when pagination is used
+
+
 ## [v1.2.0] - 2016-12-20
 
 ### Changed

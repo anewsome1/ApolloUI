@@ -26,7 +26,11 @@
   .docs-color-group-neutral > &:last-of-type > .docs-color-block {
     border: $border-width solid $gray-100;
   }
+}
 
+.docs-color-name {
+  margin-bottom: .3125rem;
+  font-size: $font-size-sm;
 }
 
 .docs-color-block {

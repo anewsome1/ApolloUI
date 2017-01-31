@@ -18,21 +18,17 @@
     </a>
     <ul class="navbar-links">
       {% assign is_active = nil %}
-      {% if page.url == '/' %}
-        {% assign is_active = 'active' %}
-      {% endif %}
-      <li class="navbar-item {{ is_active }}"><a href="/">Home</a></li>
-    {% for item in collections_sorted %}
-      {% unless item.label == 'posts' %}
-        {% assign is_active = nil %}
-        {% if directory == item.label %}
-          {% assign is_active = 'active' %}
-        {% endif %}
-        <li class="navbar-item {{ is_active }}">
-          <a href="/{{ item.label }}{% if item.default_page %}/{{ item.default_page }}{% endif %}">{{ item.title }}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
+      {% for item in collections_sorted %}
+        {% unless item.label == 'posts' %}
+          {% assign is_active = nil %}
+          {% if directory == item.label %}
+            {% assign is_active = 'active' %}
+          {% endif %}
+          <li class="navbar-item {{ is_active }}">
+            <a href="/{{ item.label }}{% if item.default_page %}/{{ item.default_page }}{% endif %}">{{ item.title }}</a>
+          </li>
+        {% endunless %}
+      {% endfor %}
     </ul>
   </div>
 </nav>

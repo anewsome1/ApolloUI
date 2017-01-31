@@ -8,6 +8,7 @@ guidelines:
     - Group related information (e.g. personal, account, contact)
     - Align labels with the top of controls
     - Use appropriate type attribute (e.g. email, tel, number) to enable mobile-friendly input (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-type" target="_blank">reference</a>)
+    - Add the <code>.optional</code> class to a control's label when it is not required
   dont:
     - Use form controls outside of a form (e.g. checkbox, radio button, input field)
     - Use placeholder text as labels
@@ -32,12 +33,12 @@ contents:
 {% capture example %}
 <form>
   <fieldset class="form-group">
-    <label class="control-label required" for="full-name">Full name</label>
+    <label class="control-label optional" for="full-name">Full name</label>
     <input class="form-control" id="full-name" type="text" name="full-name">
   </fieldset>
   <fieldset class="form-group">
-    <label class="control-label required" for="email">Email address</label>
-    <input class="form-control" id="email" type="email" name="email">
+    <label class="control-label" for="email">Email address</label>
+    <input class="form-control" id="email" type="email" name="email" required>
   </fieldset>
   <fieldset class="form-group">
     <button class="btn btn-primary" type="submit">Sign up</button>

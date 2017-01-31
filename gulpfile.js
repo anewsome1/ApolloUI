@@ -24,8 +24,8 @@ const AWS           = require( 'aws-sdk' );
 ///
 
 const strings = {
-  VERSION_COMMENT: '/*! Apollo JS v1.2.0 */',
-  VERSION: '1.2.0'
+  VERSION_COMMENT: '/*! Apollo JS v1.3.0 */',
+  VERSION: '1.3.0'
 };
 
 const path = {
@@ -107,7 +107,7 @@ gulp.task( 'apollo-scripts', function( callback ) {
 /// Docs JS bundle
 ///
 
-gulp.task( 'docs-scripts', function() {
+gulp.task( 'docs-scripts', function( callback ) {
   pump([
       gulp.src( path.DOCS_JS_SRC_MAIN ),
       webpack({
@@ -122,7 +122,8 @@ gulp.task( 'docs-scripts', function() {
       }),
       gulp.dest( path.JS_DEST ),
       browserSync.stream()
-    ]
+    ],
+    callback
   );
 });
 

@@ -47,6 +47,9 @@
 	// Copy to clipboard stuff
 	__webpack_require__(1);
 
+	// Smooth scrolling thing
+	__webpack_require__(10);
+
 
 /***/ },
 /* 1 */
@@ -848,6 +851,35 @@
 	}
 
 	module.exports = closest;
+
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	const $ = window.jQuery;
+
+	const scrollTiming = 500;
+
+	const SELECTORS = {
+	  ANCHOR_TAGS: 'a[href*="#"]:not([href="#"])',
+	  SCROLL_AREA: 'html, body'
+	}
+
+	$(function() {
+	  $( SELECTORS.ANCHOR_TAGS ).click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $( SELECTORS.SCROLL_AREA ).animate({
+	          scrollTop: target.offset().top
+	        }, scrollTiming);
+	        return false;
+	      }
+	    }
+	  });
+	});
 
 
 /***/ }
