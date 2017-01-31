@@ -3200,8 +3200,9 @@ label {
   color: #b2b2b2;
 }
 
-.control-label.required::after {
-  content: "*";
+.control-label.optional::after {
+  content: " (Optional)";
+  color: #b2b2b2;
 }
 
 .form-control, .search-input {

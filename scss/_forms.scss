@@ -17,8 +17,9 @@ label {
     color: $input-label-color-disabled;
   }
 
-  &.required::after {
-    content: "*";
+  &.optional::after {
+    content: " (Optional)";
+    color: $input-color-optional;
   }
 }
 
