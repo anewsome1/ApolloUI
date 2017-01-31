@@ -105,12 +105,13 @@ $docs-sidebar-width: $off-canvas-width;
     padding-top: $spacer-y / 2;
     padding-bottom: $spacer-y / 2;
     color: $gray-500;
+    font-weight: $font-normal;
     cursor: pointer;
+    transition: color $transition-fast;
   }
 
-  &.active > a {
+  &.active > a,
+  > a:hover {
     color: $white;
-    font-weight: $font-normal;
   }
 }
-
