@@ -862,7 +862,7 @@
 	const scrollTiming = 500;
 
 	const SELECTORS = {
-	  ANCHOR_TAGS: 'a[href*="#"]:not([href="#"])',
+	  ANCHOR_TAGS: '.docs-page-contents a[href*="#"]:not([href="#"])',
 	  SCROLL_AREA: 'html, body'
 	}
 
