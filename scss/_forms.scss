@@ -81,8 +81,8 @@ label {
 select.form-control {
   appearance: none;
   border: $input-btn-border-width solid $input-border-color;
-  background: $input-bg $svg-chevron-down-black no-repeat right $input-padding-x center;
-  background-size: $font-size-sm;
+  background: $input-bg $svg-chevron-down-gray-dark no-repeat right $input-padding-x center;
+  background-size: .85rem;
   border-radius: 0;
 
   &,

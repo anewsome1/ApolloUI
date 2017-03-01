@@ -3273,8 +3273,8 @@ select.form-control, select.search-input {
      -moz-appearance: none;
           appearance: none;
   border: 0.0625rem solid #cccccc;
-  background: #ffffff url("//cdn.ims.io/design/assets/icons/chevron-down-black.svg") no-repeat right 0.625rem center;
-  background-size: 0.875rem;
+  background: #ffffff url("//cdn.ims.io/design/assets/icons/chevron-down-gray-dark.svg") no-repeat right 0.625rem center;
+  background-size: .85rem;
   border-radius: 0;
 }
 
