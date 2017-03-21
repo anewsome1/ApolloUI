@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Mechanics | Apollo UI</title>
+  <title>Typography | Apollo UI</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,16 +44,16 @@
         
           
           
-          <li class="navbar-item active">
-            <a href="/introduction/index.html">Introduction</a>
+          <li class="navbar-item ">
+            <a href="/getting-started/development.html">Getting Started</a>
           </li>
         
       
         
           
           
-          <li class="navbar-item ">
-            <a href="/styles/colors.html">Styles</a>
+          <li class="navbar-item active">
+            <a href="/scaffolding/colors.html">Scaffolding</a>
           </li>
         
       
@@ -62,14 +62,6 @@
           
           <li class="navbar-item ">
             <a href="/components/accordion.html">Components</a>
-          </li>
-        
-      
-        
-          
-          
-          <li class="navbar-item ">
-            <a href="/resources/design.html">Resources</a>
           </li>
         
       
@@ -89,34 +81,38 @@
 
 
 
-<h3 class="docs-page-nav-title">Introduction</h3>
+
+
+
+
+<h3 class="docs-page-nav-title">Scaffolding</h3>
 <ul class="docs-page-nav" role="navigation">
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="/introduction/index.html">What is apollo?</a>
-    </li>
-  
-    
-    
-    <li class="docs-page-nav-item active">
-      <a href="/introduction/mechanics.html">Mechanics</a>
+      <a href="/scaffolding/colors.html">Color palette</a>
     </li>
   
     
     
     <li class="docs-page-nav-item ">
-      <a href="/introduction/physics.html">Physics</a>
+      <a href="/scaffolding/grid.html">Grid layout</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item ">
+      <a href="/scaffolding/icons.html">Icons</a>
+    </li>
+  
+    
+    
+    <li class="docs-page-nav-item active">
+      <a href="/scaffolding/typography.html">Typography</a>
     </li>
   
 </ul>
-
-
-
-
-
-
 
 
 
@@ -124,106 +120,116 @@
 </aside>
   <article class="docs-content">
     <header class="docs-page-header">
-  <h1>Mechanics</h1>
+  <h1>Typography</h1>
   
   <ul class="nav docs-page-contents">
     
-    <li><a href="#focal-depth">Focal Depth</a></li>
+    <li><a href="#headings">Headings</a></li>
     
-    <li><a href="#material">Material</a></li>
-    
-    <li><a href="#reverb">Reverb</a></li>
-    
-    <li><a href="#position-and-rotation">Position and Rotation</a></li>
-    
-    <li><a href="#scale-and-transform">Scale and Transform</a></li>
-    
-    <li><a href="#translucency">Translucency</a></li>
+    <li><a href="#body-copy">Body copy</a></li>
     
   </ul>
   
 </header>
 
     
-    <div class="docs-design-page row">
-  <div class="col-xs-12 col-md-10 offset-md-1">
+<section class="docs-section" id="usage-guidelines">
+  <h2>Usage Guidelines</h2>
+  
+  <p>For access to the fonts used in Apollo UI, visit the <a href="/resources/design.html">Design Resources</a> page.</p>
+  
+  
+</section>
 
-    <section class="docs-section" id="focal-depth">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Focal Depth</h2>
-          <p>Elements along the z-axis use shortened focal depth to draw attention to the object in the foreground. Elements in the background may or may not have a subtle blur eﬀect.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/focaldepth.gif" class="img-fluid">
-          </div>
-      </div>
-    </section>
+    <section class="docs-section" id="headings">
 
-    <section class="docs-section" id="material">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Material</h2>
-          <p>The core material feels like it is in a 3D environment. It ﬂoats ﬂuidly along, x, y, and z-axis. Objects should have a sense of weightlessness and should ﬂoat through space with zero friction.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/material.gif" class="img-fluid">
-        </div>
-      </div>
-    </section>
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Headings</h2>
+  
+  
+  <p class="docs-example-description">All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+  
+</div>
 
-    <section class="docs-section" id="reverb">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Reverb</h2>
-          <p>Short, light, quick ripples from a circular shape convey a signal sent or a reaction that is about to take place such as launching a menu overlay.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/reverb.gif" class="img-fluid">
-          </div>
-      </div>
-    </section>
 
-    <section class="docs-section" id="position-and-rotation">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Position and Rotation</h2>
-          <p>Elements that change position, transform or rotate should use a curve that eases in, speeds up a little, and slows down.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/easeinout.gif" class="img-fluid">
-        </div>
-      </div>
-    </section>
 
-    <section class="docs-section" id="scale-and-transform">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Scale and Transform</h2>
-          <p>Elements that scale up, down, or transform should use a curve that eases out.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/easeout.gif" class="img-fluid">
-          </div>
-      </div>
-    </section>
 
-    <section class="docs-section" id="translucency">
-      <div class="row">
-        <div class="col-sm-7">
-          <h2>Translucency</h2>
-          <p>To reinforce the weightless quality of elements, some items closer to the camera/on top may have a translucent quality to them. The recommendation is to apply a just enough opacity so that when transitions occur, it has a more dramatic eﬀect.</p>
-        </div>
-        <div class="col-sm-5">
-          <img src="../img/translucency.gif" class="img-fluid">
-        </div>
-      </div>
-    </section>
+
+<div class="docs-example">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<h1 class="heading-hero">Hero</h1>
+<h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code">
+    
+    <div >
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"heading-hero"</span><span class="nt">&gt;</span>Hero<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1&gt;</span>H1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>H2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>H3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>H4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>H5<span class="nt">&lt;/h5&gt;</span></code></pre></figure>
+
+    </div>
   </div>
 </div>
 
+
+</section>
+
+<section class="docs-section" id="body-copy">
+
+<div class="docs-example-intro">
+  
+  <h2 class="docs-example-title">Body copy</h2>
+  
+  
+  <p class="docs-example-description">Body copy is used as the standard text size and treatment throughout the user interface.  Most components use the body copy style by default, with some exceptions being titles, headings and labels.</p>
+  
+</div>
+
+
+
+
+
+<div class="docs-example">
+  
+  <div class="docs-example-rendered"><div class="docs-example-rendered-group">
+  
+  
+  
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  
+</div>
+</div>
+  
+  <div class="docs-example-code">
+    
+    <div >
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
   </article>
-  <footer class="docs-footer">Resource base last updated January 31, 2017</footer>
+  <footer class="docs-footer">Resource base last updated March 21, 2017</footer>
 </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
