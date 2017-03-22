@@ -245,6 +245,20 @@
 	                    this.clipboardAction = null;
 	                }
 	            }
+	        }], [{
+	            key: 'isSupported',
+	            value: function isSupported() {
+	                var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['copy', 'cut'];
+
+	                var actions = typeof action === 'string' ? [action] : action;
+	                var support = !!document.queryCommandSupported;
+
+	                actions.forEach(function (action) {
+	                    support = support && !!document.queryCommandSupported(action);
+	                });
+
+	                return support;
+	            }
 	        }]);
 
 	        return Clipboard;
@@ -390,7 +404,6 @@
 	                this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
 	                // Move element to the same position vertically
 	                var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-	                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
 	                this.fakeElem.style.top = yPosition + 'px';
 
 	                this.fakeElem.setAttribute('readonly', '');
@@ -515,8 +528,18 @@
 	        selectedText = element.value;
 	    }
 	    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
-	        element.focus();
+	        var isReadOnly = element.hasAttribute('readonly');
+
+	        if (!isReadOnly) {
+	            element.setAttribute('readonly', '');
+	        }
+
+	        element.select();
 	        element.setSelectionRange(0, element.value.length);
+
+	        if (!isReadOnly) {
+	            element.removeAttribute('readonly');
+	        }
 
 	        selectedText = element.value;
 	    }
@@ -823,10 +846,12 @@
 /* 9 */
 /***/ function(module, exports) {
 
+	var DOCUMENT_NODE_TYPE = 9;
+
 	/**
 	 * A polyfill for Element.matches()
 	 */
-	if (Element && !Element.prototype.matches) {
+	if (typeof Element !== 'undefined' && !Element.prototype.matches) {
 	    var proto = Element.prototype;
 
 	    proto.matches = proto.matchesSelector ||
@@ -844,7 +869,7 @@
 	 * @return {Function}
 	 */
 	function closest (element, selector) {
-	    while (element && element !== document) {
+	    while (element && element.nodeType !== DOCUMENT_NODE_TYPE) {
 	        if (element.matches(selector)) return element;
 	        element = element.parentNode;
 	    }
@@ -862,7 +887,7 @@
 	const scrollTiming = 500;
 
 	const SELECTORS = {
-	  ANCHOR_TAGS: 'a[href*="#"]:not([href="#"])',
+	  ANCHOR_TAGS: '.js-docs-smooth-scroll',
 	  SCROLL_AREA: 'html, body'
 	}
 
