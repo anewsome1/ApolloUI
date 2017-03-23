@@ -3,6 +3,9 @@ node_modules
 bower_components
 docs-temp
 npm-debug.log
-dist/*
-!dist/css/
-!dist/js/
+
+# Ignore compiled docs, except css and js
+!/dist/
+/dist/**
+!/dist/css/
+!/dist/js/

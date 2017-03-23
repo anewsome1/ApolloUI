@@ -40,17 +40,11 @@ code {
   border-radius: 0.25rem;
 }
 
-a > code {
-  padding: 0;
-  color: inherit;
-  background-color: inherit;
-}
-
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #fff;
-  background-color: #292b2c;
+  background-color: #333;
   border-radius: 0.2rem;
 }
 
@@ -65,7 +59,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  color: #292b2c;
+  color: #373a3c;
 }
 
 pre code {
@@ -518,8 +512,8 @@ hr {
 
 .docs-color-swatch {
   position: relative;
-  width: 100%;
   min-height: 1px;
+  width: 100%;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   -ms-flex: 0 0 100%;
@@ -698,7 +692,7 @@ hr {
 }
 
 .docs-resource-grid > .docs-resource-tile {
-  -ms-flex: 1 0 0px;
+  -ms-flex: 1 0 0;
       flex: 1 0 0;
   -ms-flex-preferred-size: 33.33333%;
       flex-basis: 33.33333%;
