@@ -3,6 +3,4 @@ node_modules
 bower_components
 docs-temp
 npm-debug.log
-dist/*
-!dist/css/
-!dist/js/
+dist
