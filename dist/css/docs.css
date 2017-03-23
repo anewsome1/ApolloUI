@@ -615,11 +615,11 @@ hr {
 
 .docs-home-title {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .docs-home-description {
-  margin-bottom: 0;
+  margin-bottom: 3.5rem;
   font-size: 1.125rem;
 }
 
@@ -692,7 +692,7 @@ hr {
 }
 
 .docs-resource-grid > .docs-resource-tile {
-  -ms-flex: 1 0 0px;
+  -ms-flex: 1 0 0;
       flex: 1 0 0;
   -ms-flex-preferred-size: 33.33333%;
       flex-basis: 33.33333%;

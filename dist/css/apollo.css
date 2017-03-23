@@ -3226,6 +3226,11 @@ label {
   opacity: 1;
 }
 
+.form-control::-moz-placeholder, .search-input::-moz-placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+
 .form-control:-ms-input-placeholder, .search-input:-ms-input-placeholder {
   color: #cccccc;
   opacity: 1;
@@ -3274,6 +3279,12 @@ select.form-control, select.search-input {
 }
 
 select.form-control, select.search-input, select.form-control::-webkit-input-placeholder, select.search-input::-webkit-input-placeholder {
+  height: 2.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+select.form-control, select.search-input, select.form-control::-moz-placeholder, select.search-input::-moz-placeholder {
   height: 2.5rem;
   padding-top: 0;
   padding-bottom: 0;
@@ -4745,7 +4756,7 @@ tbody.collapse.in {
     margin-left: -0.9375rem;
   }
   .card-deck .card {
-    -ms-flex: 1 0 0px;
+    -ms-flex: 1 0 0;
         flex: 1 0 0;
     margin-right: 0.9375rem;
     margin-left: 0.9375rem;
