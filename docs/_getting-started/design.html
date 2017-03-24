@@ -2,7 +2,12 @@
 layout: component
 title: Design
 ---
-<div class="docs-resource-grid docs-section">
+
+<section class="docs-section">
+{% include docs-callout.html state='info' title='Accessing Gitlab' body='These design resources are hosted internally on Gitlab.  To sign into Gitlab, select "LDAP" and use your Windows/Exchange username and password.' %}
+</section>
+
+<section class="docs-resource-grid docs-section">
   <div class="docs-resource-tile">
     <h2 class="docs-resource-title">UI Kit</h2>
     <p class="docs-resource-description">Download UI kits for Web and iOS.</p>
@@ -77,8 +82,4 @@ title: Design
     </div>
   </div>
 
-</div>
-
-<section class="docs-section">
-{% include docs-callout.html state='info' title='Accessing Gitlab' body='These design resources are hosted internally on Gitlab.  To sign into Gitlab, select "LDAP" and use your Windows/Exchange username and password.' %}
 </section>
