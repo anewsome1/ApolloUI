@@ -23,7 +23,7 @@
     transition: transform $transition-fast;
   }
 
-  .dropdown.open &::after {
+  .dropdown.show &::after {
     transform: scaleY(-1);
   }
 }
@@ -40,7 +40,7 @@
 
   // Display menu when `.open` class is added
   // to `.dropdown` parent element via JS
-  .dropdown.open > & {
+  .dropdown.show > & {
     display: block;
   }
 

@@ -3808,7 +3808,7 @@ tbody.collapse.show {
   transition: transform 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.dropdown.open .dropdown-toggle::after {
+.dropdown.show .dropdown-toggle::after {
   transform: scaleY(-1);
 }
 
@@ -3823,7 +3823,7 @@ tbody.collapse.show {
   box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15);
 }
 
-.dropdown.open > .dropdown-menu {
+.dropdown.show > .dropdown-menu {
   display: block;
 }
 
