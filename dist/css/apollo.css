@@ -4636,7 +4636,7 @@ tbody.collapse.show {
   display: none;
 }
 
-.modal.in {
+.modal.show {
   display: block;
 }
 
@@ -4663,7 +4663,7 @@ tbody.collapse.show {
   }
 }
 
-.in .modal-dialog {
+.show .modal-dialog {
   opacity: 1;
   transform: translateY(0);
 }
@@ -4720,7 +4720,7 @@ tbody.collapse.show {
   transition: all 0.25s cubic-bezier(0, 0, 0.5, 1);
 }
 
-.modal-backdrop.in {
+.modal-backdrop.show {
   background-color: rgba(0, 0, 0, 0.4);
 }
 

@@ -29,7 +29,7 @@
     display: none;
   }
 
-  &.in {
+  &.show {
     display: block;
   }
 }
@@ -59,7 +59,7 @@
   }
 
 
-  .in & {
+  .show & {
     opacity: 1;
     transform: translateY(0);
   }
@@ -127,7 +127,7 @@
   cursor: pointer;
   transition: all $transition-fast;
 
-  &.in {
+  &.show {
     background-color: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
   }
 }
