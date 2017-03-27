@@ -19,81 +19,205 @@
     padding-bottom: $component-height; // Make room for carousel indicators
   }
 
-  > .carousel-item {
-    position: relative;
-    display: none;
-    transition: left $transition-medium;
+  // > .active,
+  // > .next,
+  // > .prev {
+  //   display: block;
+  // }
 
-    /// Account for jankitude on images
-    > img,
-    > a > img {
-      @extend .img-fluid;
-      line-height: 1;
-    }
+  // > .active {
+  //   left: 0;
 
-    /// WebKit CSS3 transforms for supported devices
-    @media all and (transform-3d), (-webkit-transform-3d) {
-      transition: transform $transition-medium;
-      backface-visibility: hidden;
-      perspective: 1000px;
+  //   &.left {
+  //     left: -100%;
+  //   }
 
-      &.next,
-      &.active.right {
-        left: 0;
-        transform: translate3d(100%, 0, 0);
-      }
-      &.prev,
-      &.active.left {
-        left: 0;
-        transform: translate3d(-100%, 0, 0);
-      }
-      &.next.left,
-      &.prev.right,
-      &.active {
-        left: 0;
-        transform: translate3d(0, 0, 0);
-      }
-    }
+  //   &.right {
+  //     left: 100%;
+  //   }
+  // }
 
-    @include media-breakpoint-down(sm) {
-      padding-top: 6.5rem; // Make the carousel taller on mobile
-    }
+  // > .next,
+  // > .prev {
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  // }
+
+  // > .next {
+  //   left: 100%;
+  // }
+  // > .prev {
+  //   left: -100%;
+  // }
+  // > .next.left,
+  // > .prev.right {
+  //   left: 0;
+  // }
+}
+
+
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+
+  @include if-supports-3d-transforms() {
+    @include transition($carousel-transition);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 
-  > .active,
-  > .next,
-  > .prev {
-    display: block;
+  // /// Account for jankitude on images
+  // > img,
+  // > a > img {
+  //   @extend .img-fluid;
+  //   line-height: 1;
+  // }
+
+  // // CSS3 transforms when supported by the browser
+  // @include if-supports-3d-transforms() {
+  //   .carousel-item-next.carousel-item-left,
+  //   .carousel-item-prev.carousel-item-right {
+  //     transform: translate3d(0, 0, 0);
+  //   }
+
+  //   .carousel-item-next,
+  //   .active.carousel-item-right {
+  //     transform: translate3d(100%, 0, 0);
+  //   }
+
+  //   .carousel-item-prev,
+  //   .active.carousel-item-left {
+  //     transform: translate3d(-100%, 0, 0);
+  //   }
+  // }
+
+  // @include media-breakpoint-down(sm) {
+  //   padding-top: 6.5rem; // Make the carousel taller on mobile
+  // }
+}
+
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: flex;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+}
+
+
+// CSS3 transforms when supported by the browser
+@include if-supports-3d-transforms() {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    transform: translate3d(0, 0, 0);
   }
 
-  > .active {
-    left: 0;
-
-    &.left {
-      left: -100%;
-    }
-
-    &.right {
-      left: 100%;
-    }
+  .carousel-item-next,
+  .active.carousel-item-right {
+    transform: translate3d(100%, 0, 0);
   }
 
-  > .next,
-  > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
+  .carousel-item-prev,
+  .active.carousel-item-left {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+
+///
+/// Carousel controls (left/right)
+///
+
+//  !! DEPRECATED: .carousel-control.[right|left]
+//     Continuing to use these class names will result
+//     in the loss of slide animations.
+
+.carousel-control-prev,
+.carousel-control-next,
+// deprecated selectors
+.carousel-control.left,
+.carousel-control.right {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: $carousel-control-width;
+  height: $carousel-control-width;
+  margin-top: (-$carousel-control-width / 2);
+  border-radius: 50%;
+  background-color: $carousel-control-bg;
+  color: $carousel-control-color;
+  opacity: 0;
+  transition: opacity $transition-fast,
+              background-color $transition-fast;
+
+  .carousel:hover & {
+    opacity: 1;
   }
 
-  > .next {
-    left: 100%;
+  // Hover/focus state
+  @include hover-focus {
+    text-decoration: none;
+    outline: 0;
+    color: $carousel-control-color;
   }
-  > .prev {
-    left: -100%;
+
+  &:hover {
+    background-color: $carousel-control-bg-hover;
   }
-  > .next.left,
-  > .prev.right {
-    left: 0;
+
+  // Toggles
+  .icon-prev,
+  .icon-next {
+    @extend %icon-base;
+
+    font-size: $carousel-control-font-size;
+  }
+
+  .icon-prev::before {
+    content: map-get($_icons_map, 'chevron-left');
+  }
+
+  .icon-next::before {
+    content: map-get($_icons_map, 'chevron-right');
+  }
+}
+
+// !! DEPRECATED: .carousel-control.left
+.carousel-control-prev,
+.carousel-control.left {
+  left: $carousel-control-margin;
+}
+
+// !! DEPRECATED: .carousel-control.right
+.carousel-control-next,
+.carousel-control.right {
+  right: $carousel-control-margin;
+}
+
+
+///
+/// Dark background
+///
+
+.carousel-dark {
+  border: 0;
+  background-color: rgba($brand-primary, .8);
+  color: #fff;
+
+  .btn-primary {
+    @extend .btn-secondary;
+    border: 0;
   }
 }
 
@@ -135,83 +259,4 @@
       margin-left: $carousel-indicator-size;
     }
   }
-
-
 }
-
-///
-/// Carousel controls (left/right)
-///
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: $carousel-control-width;
-  height: $carousel-control-width;
-  margin-top: (-$carousel-control-width / 2);
-  border-radius: 50%;
-  background-color: $carousel-control-bg;
-  color: $carousel-control-color;
-  opacity: 0;
-  transition: opacity $transition-fast,
-              background-color $transition-fast;
-
-  &.left {
-    left: $carousel-control-margin;
-  }
-
-  &.right {
-    right: $carousel-control-margin;
-  }
-
-  .carousel:hover & {
-    opacity: 1;
-  }
-
-  // Hover/focus state
-  @include hover-focus {
-    text-decoration: none;
-    outline: 0;
-    color: $carousel-control-color;
-  }
-
-  &:hover {
-    background-color: $carousel-control-bg-hover;
-  }
-
-  // Toggles
-  .icon-prev,
-  .icon-next {
-    @extend %icon-base;
-
-    font-size: $carousel-control-font-size;
-  }
-
-  .icon-prev::before {
-    content: map-get($_icons_map, 'chevron-left');
-  }
-
-  .icon-next::before {
-    content: map-get($_icons_map, 'chevron-right');
-  }
-}
-
-
-///
-/// Dark background
-///
-
-.carousel-dark {
-  border: 0;
-  background-color: rgba($brand-primary, .8);
-  color: #fff;
-
-  .btn-primary {
-    @extend .btn-secondary;
-    border: 0;
-  }
-}
-
