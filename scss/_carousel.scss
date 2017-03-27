@@ -18,44 +18,7 @@
   @include media-breakpoint-down(sm) {
     padding-bottom: $component-height; // Make room for carousel indicators
   }
-
-  // > .active,
-  // > .next,
-  // > .prev {
-  //   display: block;
-  // }
-
-  // > .active {
-  //   left: 0;
-
-  //   &.left {
-  //     left: -100%;
-  //   }
-
-  //   &.right {
-  //     left: 100%;
-  //   }
-  // }
-
-  // > .next,
-  // > .prev {
-  //   position: absolute;
-  //   top: 0;
-  //   width: 100%;
-  // }
-
-  // > .next {
-  //   left: 100%;
-  // }
-  // > .prev {
-  //   left: -100%;
-  // }
-  // > .next.left,
-  // > .prev.right {
-  //   left: 0;
-  // }
 }
-
 
 
 .carousel-item {
@@ -69,34 +32,16 @@
     perspective: 1000px;
   }
 
-  // /// Account for jankitude on images
-  // > img,
-  // > a > img {
-  //   @extend .img-fluid;
-  //   line-height: 1;
-  // }
+  /// Account for jankitude on images
+  > img,
+  > a > img {
+    @extend .img-fluid;
+    line-height: 1;
+  }
 
-  // // CSS3 transforms when supported by the browser
-  // @include if-supports-3d-transforms() {
-  //   .carousel-item-next.carousel-item-left,
-  //   .carousel-item-prev.carousel-item-right {
-  //     transform: translate3d(0, 0, 0);
-  //   }
-
-  //   .carousel-item-next,
-  //   .active.carousel-item-right {
-  //     transform: translate3d(100%, 0, 0);
-  //   }
-
-  //   .carousel-item-prev,
-  //   .active.carousel-item-left {
-  //     transform: translate3d(-100%, 0, 0);
-  //   }
-  // }
-
-  // @include media-breakpoint-down(sm) {
-  //   padding-top: 6.5rem; // Make the carousel taller on mobile
-  // }
+  @include media-breakpoint-down(sm) {
+    padding-top: 6.5rem; // Make the carousel taller on mobile
+  }
 }
 
 
@@ -130,7 +75,6 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 
 
 ///

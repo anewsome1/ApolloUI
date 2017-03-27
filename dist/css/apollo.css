@@ -3048,7 +3048,8 @@ dd:last-of-type {
   }
 }
 
-.img-fluid {
+.img-fluid, .carousel-item > img,
+.carousel-item > a > img {
   max-width: 100%;
   height: auto;
 }
@@ -5039,6 +5040,17 @@ tbody.collapse.show {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     perspective: 1000px;
+  }
+}
+
+.carousel-item > img,
+.carousel-item > a > img {
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .carousel-item {
+    padding-top: 6.5rem;
   }
 }
 
