@@ -21,14 +21,14 @@ kramdown:
   auto_ids:     true
 
 collections:
-  introduction:
+  getting-started:
     output: true
-    title: Introduction
+    title: Getting Started
     order: 1
-    default_page: index.html
-  styles:
+    default_page: development.html
+  scaffolding:
     output: true
-    title: Styles
+    title: Scaffolding
     order: 2
     default_page: colors.html
   components:
@@ -36,11 +36,7 @@ collections:
     title: Components
     order: 3
     default_page: accordion.html
-  resources:
-    output: true
-    title: Resources
-    order: 4
-    default_page: design.html
+
 
 
 gitlab_url: https://gitlab.ims.io/apollo/apollo-ui
@@ -48,27 +44,26 @@ issues_url: https://gitlab.ims.io/apollo/apollo-ui/issues
 
 ui_kit:
   web:
-    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.3.sketch.zip
-    illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-Web-v1.3.ai.zip
-    version: v1.2
+    sketch: https://gitlab.ims.io/apollo/design-assets/tree/master/ui-kits/web/Apollo-Web-v1.3.sketch
+    illustrator: https://gitlab.ims.io/apollo/design-assets/blob/master/ui-kits/web/Apollo-Web-v1.3.ai
+    version: v1.3
   ios:
-    sketch: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.sketch.zip
-    illustrator: https://cdn.ims.io/design/drb-downloads/Apollo-iOS-v1.0.ai.zip
-    version: v1.0
+    sketch: https://gitlab.ims.io/apollo/design-assets/tree/master/ui-kits/ios/Apollo-iOS-v1.1.sketch
+    illustrator: https://gitlab.ims.io/apollo/design-assets/tree/master/ui-kits/ios/Apollo-iOS-v1.1.ai
+    version: v1.1
 
 colors:
-  sketch: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-sketch-1.0.zip
-  illustrator: https://cdn.ims.io/design/drb-downloads/apollo-color-swatches-illustrator-1.0.zip
+  sketch: https://gitlab.ims.io/apollo/design-assets/tree/master/palettes
   version: v1.0
 
 fonts:
   proxima_nova: https://typekit.com/fonts/proxima-nova
 
 icons:
-  png: https://cdn.ims.io/design/apollo-icons/apollo-icons-png.zip
-  font: https://cdn.ims.io/design/apollo-icons/apollo-icons-font.zip
-  svg: https://cdn.ims.io/design/apollo-icons/apollo-icons-svg.zip
-  sketch: https://cdn.ims.io/design/apollo-icons/apollo-icons-sketch.zip
+  png: https://gitlab.ims.io/apollo/design-assets/tree/master/icons/png
+  font: https://gitlab.ims.io/apollo/design-assets/tree/master/icons/icon-font
+  svg: https://gitlab.ims.io/apollo/design-assets/tree/master/icons/svg
+  sketch: https://gitlab.ims.io/apollo/design-assets/tree/master/icons/sketch
 
 cdn:
   css: https://cdn.ims.io/design/css/1.3.0/apollo.css

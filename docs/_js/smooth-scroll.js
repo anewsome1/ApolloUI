@@ -3,7 +3,7 @@ const $ = window.jQuery;
 const scrollTiming = 500;
 
 const SELECTORS = {
-  ANCHOR_TAGS: '.docs-page-contents a[href*="#"]:not([href="#"])',
+  ANCHOR_TAGS: '.js-docs-smooth-scroll',
   SCROLL_AREA: 'html, body'
 }
 

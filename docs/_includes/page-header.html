@@ -3,7 +3,7 @@
   {% if page.contents %}
   <ul class="nav docs-page-contents">
     {% for item in page.contents %}
-    <li><a href="#{{ item | slugify }}">{{ item }}</a></li>
+    <li><a class="js-docs-smooth-scroll" href="#{{ item | slugify }}">{{ item }}</a></li>
     {% endfor %}
   </ul>
   {% endif %}
