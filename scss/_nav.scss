@@ -20,7 +20,7 @@
     color: $nav-disabled-link-color;
 
     @include plain-hover-focus {
-      color: $nav-disabled-link-hover-color;
+      color: $nav-disabled-link-color;
       cursor: $cursor-disabled;
       background-color: transparent;
     }

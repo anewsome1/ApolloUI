@@ -40,11 +40,17 @@ code {
   border-radius: 0.25rem;
 }
 
+a > code {
+  padding: 0;
+  color: inherit;
+  background-color: inherit;
+}
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #fff;
-  background-color: #333;
+  background-color: #292b2c;
   border-radius: 0.2rem;
 }
 
@@ -59,7 +65,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  color: #373a3c;
+  color: #292b2c;
 }
 
 pre code {
@@ -512,8 +518,8 @@ hr {
 
 .docs-color-swatch {
   position: relative;
-  min-height: 1px;
   width: 100%;
+  min-height: 1px;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   -ms-flex: 0 0 100%;
@@ -615,11 +621,11 @@ hr {
 
 .docs-home-title {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .docs-home-description {
-  margin-bottom: 0;
+  margin-bottom: 3.5rem;
   font-size: 1.125rem;
 }
 
