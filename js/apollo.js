@@ -1,5 +1,5 @@
 /*!
- * Apollo JS v1.3.0
+ * Apollo JS v1.3.1
  */
 
 ///
