@@ -1,7 +1,7 @@
 # Site settings
 title: Apollo UI
 description: HTML and CSS for the Apollo visual language.
-current_version: 1.3.0
+current_version: 1.3.1
 
 # Build settings
 source:         docs
@@ -66,7 +66,7 @@ icons:
   sketch: https://gitlab.ims.io/apollo/design-assets/tree/master/icons/sketch
 
 cdn:
-  css: https://cdn.ims.io/design/css/1.3.0/apollo.css
-  css_min: https://cdn.ims.io/design/css/1.3.0/apollo.min.css
-  js: https://cdn.ims.io/design/js/1.3.0/apollo.js
-  js_min: https://cdn.ims.io/design/js/1.3.0/apollo.min.js
+  css: https://cdn.ims.io/design/css/1.3.1/apollo.css
+  css_min: https://cdn.ims.io/design/css/1.3.1/apollo.min.css
+  js: https://cdn.ims.io/design/js/1.3.1/apollo.js
+  js_min: https://cdn.ims.io/design/js/1.3.1/apollo.min.js

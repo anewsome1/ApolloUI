@@ -3,6 +3,19 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.3.1] - 2017-03-28
+
+### Changed
+- Updated Bootstrap dependency to 4.0.0-alpha.6
+- Removed compiled docs from Git tracking
+- Reorganized docs to be more developer focused
+- Moved design files to Gitlab for access control
+- Replaced Base64 encoded images with references to images stored on CDN
+
+### Added
+- Current version number added to footer throughout docs
+
+
 ## [v1.3.0] - 2017-01-31
 
 ### Changed
