@@ -10,6 +10,7 @@ const browserSync   = require( 'browser-sync' );
 const webpack       = require( 'webpack-stream' );
 const uglify        = require( 'gulp-uglify' );
 const pump          = require( 'pump' );
+const styleLint     = require( 'gulp-stylelint' );
 const sass          = require( 'gulp-sass' );
 const postcss       = require( 'gulp-postcss' );
 const autoprefixer  = require( 'autoprefixer' );
@@ -128,11 +129,37 @@ gulp.task( 'docs-scripts', function( callback ) {
 });
 
 
+//
+// SCSS linting
+//
+
+gulp.task('lint-apollo-styles', function () {
+  return gulp
+    .src(path.SCSS_SRC_ALL)
+    .pipe(styleLint({
+      reporters: [
+        { formatter: 'string', console: true },
+      ],
+    }));
+});
+
+gulp.task('lint-docs-styles', function () {
+  return gulp
+    .src(path.DOCS_SCSS_SRC_ALL)
+    .pipe(styleLint({
+      reporters: [
+        { formatter: 'string', console: true },
+      ],
+    }));
+});
+
+
 ///
 /// SCSS compilation
 ///
 
-gulp.task( 'apollo-styles', function () {
+
+gulp.task( 'apollo-styles', ['lint-apollo-styles'], function () {
   gulp.src( path.SCSS_SRC_MAIN )
     .pipe( sass({
         includePaths: [ 'node_modules' ],
@@ -154,8 +181,9 @@ gulp.task( 'apollo-styles', function () {
     .pipe( browserSync.stream() );
 });
 
-gulp.task( 'docs-styles', function () {
+gulp.task( 'docs-styles', ['lint-docs-styles'], function () {
   gulp.src( path.DOCS_SCSS_SRC_MAIN )
+    .pipe()
     .pipe( sass({
         includePaths: [ 'node_modules' ],
         outputStyle: 'expanded'  // expanded for development
@@ -310,6 +338,7 @@ gulp.task( 'publish-tags', function () {
 /// Conglomerate tasks
 ///
 
+gulp.task('lint-styles', ['lint-apollo-styles', 'lint-docs-styles']);
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs' ]);
