@@ -51,7 +51,7 @@ const path = {
 // Development server
 //
 
-gulp.task('server', function () {
+gulp.task('server', () => {
   browserSync.init({
     server: 'dist',
     ghostMode: false,
@@ -63,7 +63,7 @@ gulp.task('server', function () {
 // Watch files
 //
 
-gulp.task('watch', function () {
+gulp.task('watch', () => {
   gulp.watch(path.SCSS_SRC_ALL, ['apollo-styles']);
   gulp.watch(path.JS_SRC_ALL, ['apollo-scripts']);
   gulp.watch(path.DOCS_PAGE_SRC_ALL, ['docs']);
@@ -95,7 +95,7 @@ gulp.task('lint-docs-scripts', () => {
 // Apollo JS bundle
 //
 
-gulp.task('apollo-scripts', ['lint-apollo-scripts'], function (callback) {
+gulp.task('apollo-scripts', ['lint-apollo-scripts'], (callback) => {
   pump([
     gulp.src(path.JS_SRC_MAIN),
     webpack({
@@ -121,7 +121,7 @@ gulp.task('apollo-scripts', ['lint-apollo-scripts'], function (callback) {
 // Docs JS bundle
 //
 
-gulp.task('docs-scripts', ['lint-docs-scripts'], function (callback) {
+gulp.task('docs-scripts', ['lint-docs-scripts'], (callback) => {
   pump([
     gulp.src(path.DOCS_JS_SRC_MAIN),
     webpack({
@@ -146,24 +146,24 @@ gulp.task('docs-scripts', ['lint-docs-scripts'], function (callback) {
 // SCSS linting
 //
 
-gulp.task('lint-apollo-styles', function () {
-  return gulp
-    .src(path.SCSS_SRC_ALL)
+gulp.task('lint-apollo-styles', () => {
+  const lint = gulp.src(path.SCSS_SRC_ALL)
     .pipe(styleLint({
       reporters: [
         { formatter: 'string', console: true },
       ],
     }));
+  return lint;
 });
 
-gulp.task('lint-docs-styles', function () {
-  return gulp
-    .src(path.DOCS_SCSS_SRC_ALL)
+gulp.task('lint-docs-styles', () => {
+  const lint = gulp.src(path.DOCS_SCSS_SRC_ALL)
     .pipe(styleLint({
       reporters: [
         { formatter: 'string', console: true },
       ],
     }));
+  return lint;
 });
 
 
@@ -172,13 +172,12 @@ gulp.task('lint-docs-styles', function () {
 //
 
 
-gulp.task('apollo-styles', ['lint-apollo-styles'], function () {
+gulp.task('apollo-styles', ['lint-apollo-styles'], () => {
   gulp.src(path.SCSS_SRC_MAIN)
     .pipe(sass({
       includePaths: ['node_modules'],
       outputStyle: 'expanded',
-    })
-    .on('error', sass.logError))
+    }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({
         browsers: ['last 2 versions'],
@@ -194,14 +193,12 @@ gulp.task('apollo-styles', ['lint-apollo-styles'], function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('docs-styles', ['lint-docs-styles'], function () {
+gulp.task('docs-styles', ['lint-docs-styles'], () => {
   gulp.src(path.DOCS_SCSS_SRC_MAIN)
-    .pipe()
     .pipe(sass({
       includePaths: ['node_modules'],
       outputStyle: 'expanded',
-    })
-    .on('error', sass.logError))
+    }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({
         browsers: ['last 2 versions'],
@@ -216,15 +213,15 @@ gulp.task('docs-styles', ['lint-docs-styles'], function () {
 // Documentation static site generator
 //
 
-gulp.task('docs', ['jekyll'], function () {
+gulp.task('docs', ['jekyll'], () => {
   gulp.src('docs-temp/**/*')
     .pipe(gulp.dest('dist'))
     .pipe(browserSync.stream());
 });
 
 
-gulp.task('jekyll', function (gulpCallBack) {
-  exec('jekyll build', function (err) {
+gulp.task('jekyll', (gulpCallBack) => {
+  exec('jekyll build', (err) => {
     gulpCallBack(err);
   });
 });
@@ -234,21 +231,21 @@ gulp.task('jekyll', function (gulpCallBack) {
 // Theo transformations
 //
 
-gulp.task('clean:theo', function () {
-  return del([
+gulp.task('clean:theo', () => {
+  del([
     'scss/_props/*.scss',
     'docs/_data/*.json',
   ]);
 });
 
-gulp.task('theo-colors-scss', ['clean:theo'], function () {
+gulp.task('theo-colors-scss', ['clean:theo'], () => {
   gulp.src('theo/_palette.json')
     .pipe(theo.plugins.transform('raw'))
     .pipe(theo.plugins.format('scss'))
     .pipe(gulp.dest('scss/_props'));
 });
 
-gulp.task('theo-colors-json', ['clean:theo'], function () {
+gulp.task('theo-colors-json', ['clean:theo'], () => {
   gulp.src('theo/_palette.json')
     .pipe(theo.plugins.transform('raw'))
     .pipe(theo.plugins.format('ios.json'))
@@ -256,14 +253,14 @@ gulp.task('theo-colors-json', ['clean:theo'], function () {
     .pipe(gulp.dest('docs/_data'));
 });
 
-gulp.task('theo-icons-scss', ['clean:theo'], function () {
+gulp.task('theo-icons-scss', ['clean:theo'], () => {
   gulp.src('theo/_icons.json')
     .pipe(theo.plugins.transform('raw'))
     .pipe(theo.plugins.format('map.scss'))
     .pipe(gulp.dest('scss/_props'));
 });
 
-gulp.task('theo-icons-json', ['clean:theo'], function () {
+gulp.task('theo-icons-json', ['clean:theo'], () => {
   gulp.src('theo/_icons.json')
     .pipe(theo.plugins.transform('raw'))
     .pipe(theo.plugins.format('json'))
@@ -275,7 +272,7 @@ gulp.task('theo-icons-json', ['clean:theo'], function () {
 // Publish to CDN
 //
 
-gulp.task('publish-css', function () {
+gulp.task('publish-css', () => {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
@@ -289,7 +286,7 @@ gulp.task('publish-css', function () {
     .pipe(publisher.publish());
 });
 
-gulp.task('publish-js', function () {
+gulp.task('publish-js', () => {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
@@ -303,7 +300,7 @@ gulp.task('publish-js', function () {
     .pipe(publisher.publish());
 });
 
-gulp.task('publish-docs', function () {
+gulp.task('publish-docs', () => {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
@@ -322,7 +319,7 @@ gulp.task('publish-docs', function () {
 // Tag and publish to npm
 //
 
-gulp.task('publish-tags', function () {
+gulp.task('publish-tags', () => {
   function handleErrors(err, stdout, stderr) {
     if (err) {
       process.stdout.write(err);
@@ -336,7 +333,7 @@ gulp.task('publish-tags', function () {
                    git push --tags
                    npm publish`;
 
-  exec(command, function (err, stdout, stderr) {
+  exec(command, (err, stdout, stderr) => {
     handleErrors(err, stdout, stderr);
   });
 });
