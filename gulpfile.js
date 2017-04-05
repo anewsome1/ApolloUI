@@ -10,7 +10,6 @@ const browserSync   = require( 'browser-sync' );
 const webpack       = require( 'webpack-stream' );
 const uglify        = require( 'gulp-uglify' );
 const pump          = require( 'pump' );
-const styleLint     = require( 'gulp-stylelint' );
 const sass          = require( 'gulp-sass' );
 const postcss       = require( 'gulp-postcss' );
 const autoprefixer  = require( 'autoprefixer' );
@@ -19,6 +18,8 @@ const exec          = require( 'child_process' ).exec;
 const theo          = require( 'theo' );
 const awspublish    = require( 'gulp-awspublish' );
 const AWS           = require( 'aws-sdk' );
+const styleLint     = require( 'gulp-stylelint' );
+const eslint        = require( 'gulp-eslint' );
 
 ///
 /// Local variables
@@ -73,16 +74,28 @@ gulp.task( 'watch', function() {
 });
 
 
-///
-/// JS bundler
-///
+//
+// JS Linting
+//
+
+gulp.task('lint-apollo-scripts', () => {
+  gulp.src(path.JS_SRC_ALL)
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+
+gulp.task('lint-docs-scripts', () => {
+  gulp.src(path.DOCS_JS_SRC_ALL)
+    .pipe(eslint())
+    .pipe(eslint.format());
+});
+
 
 ///
-/// TODO: Figure out what to do with webpack [hash]
-/// for bundle
+/// Apollo JS bundle
 ///
 
-gulp.task( 'apollo-scripts', function( callback ) {
+gulp.task( 'apollo-scripts', ['lint-apollo-scripts'], function( callback ) {
   pump([
       gulp.src( path.JS_SRC_MAIN ),
       webpack({
@@ -108,7 +121,7 @@ gulp.task( 'apollo-scripts', function( callback ) {
 /// Docs JS bundle
 ///
 
-gulp.task( 'docs-scripts', function( callback ) {
+gulp.task( 'docs-scripts', ['lint-docs-scripts'], function( callback ) {
   pump([
       gulp.src( path.DOCS_JS_SRC_MAIN ),
       webpack({
@@ -152,6 +165,7 @@ gulp.task('lint-docs-styles', function () {
       ],
     }));
 });
+
 
 
 ///
@@ -339,6 +353,8 @@ gulp.task( 'publish-tags', function () {
 ///
 
 gulp.task('lint-styles', ['lint-apollo-styles', 'lint-docs-styles']);
+gulp.task('lint-scripts', ['lint-apollo-scripts', 'lint-docs-scripts']);
+gulp.task('lint', ['lint-scripts', 'lint-styles']);
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
 gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs' ]);
