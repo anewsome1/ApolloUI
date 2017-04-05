@@ -1,6 +1,6 @@
-///
-/// Dependencies
-///
+//
+// Dependencies
+//
 
 import gulp from 'gulp';
 import del from 'del';
@@ -21,13 +21,13 @@ import AWS from 'aws-sdk';
 import styleLint from 'gulp-stylelint';
 import eslint from 'gulp-eslint';
 
-///
-/// Local variables
-///
+//
+// Local variables
+//
 
 const strings = {
   VERSION_COMMENT: '/*! Apollo JS v1.3.1 */',
-  VERSION: '1.3.1'
+  VERSION: '1.3.1',
 };
 
 const path = {
@@ -43,34 +43,34 @@ const path = {
   DOCS_SCSS_SRC_MAIN: 'docs/_scss/docs.scss',
   DOCS_JS_SRC_ALL: 'docs/_js/**/*.js',
   DOCS_JS_SRC_MAIN: 'docs/_js/docs.js',
-  THEO_SRC_ALL: 'theo/**/*'
+  THEO_SRC_ALL: 'theo/**/*',
 };
 
 
-///
-/// Development server
-///
+//
+// Development server
+//
 
-gulp.task( 'server', function() {
+gulp.task('server', function () {
   browserSync.init({
     server: 'dist',
-    ghostMode: false
+    ghostMode: false,
   });
 });
 
 
-///
-/// Watch files
-///
+//
+// Watch files
+//
 
-gulp.task( 'watch', function() {
-  gulp.watch( path.SCSS_SRC_ALL, [ 'apollo-styles' ]);
-  gulp.watch( path.JS_SRC_ALL, [ 'apollo-scripts' ]);
-  gulp.watch( path.DOCS_PAGE_SRC_ALL, [ 'docs' ] );
-  gulp.watch( path.DOCS_DATA, [ 'docs' ] );
-  gulp.watch( path.DOCS_SCSS_SRC_ALL, [ 'docs-styles' ]);
-  gulp.watch( path.DOCS_JS_SRC_ALL, [ 'docs-scripts' ]);
-  gulp.watch( path.THEO_SRC_ALL, [ 'theo' ]);
+gulp.task('watch', function () {
+  gulp.watch(path.SCSS_SRC_ALL, ['apollo-styles']);
+  gulp.watch(path.JS_SRC_ALL, ['apollo-scripts']);
+  gulp.watch(path.DOCS_PAGE_SRC_ALL, ['docs']);
+  gulp.watch(path.DOCS_DATA, ['docs']);
+  gulp.watch(path.DOCS_SCSS_SRC_ALL, ['docs-styles']);
+  gulp.watch(path.DOCS_JS_SRC_ALL, ['docs-scripts']);
+  gulp.watch(path.THEO_SRC_ALL, ['theo']);
 });
 
 
@@ -91,54 +91,54 @@ gulp.task('lint-docs-scripts', () => {
 });
 
 
-///
-/// Apollo JS bundle
-///
+//
+// Apollo JS bundle
+//
 
-gulp.task( 'apollo-scripts', ['lint-apollo-scripts'], function( callback ) {
+gulp.task('apollo-scripts', ['lint-apollo-scripts'], function (callback) {
   pump([
-      gulp.src( path.JS_SRC_MAIN ),
-      webpack({
-        output: {
-          filename: 'apollo.js'
-        }
-      }),
-      gulp.dest( path.JS_DEST ),
-      uglify(),
-      insert.prepend( strings.VERSION_COMMENT ),
-      rename({
-        suffix: '.min'
-      }),
-      gulp.dest( path.JS_DEST ),
-      browserSync.stream()
-    ],
-    callback
-  );
+    gulp.src(path.JS_SRC_MAIN),
+    webpack({
+      output: {
+        filename: 'apollo.js',
+      },
+    }),
+    gulp.dest(path.JS_DEST),
+    uglify(),
+    insert.prepend(strings.VERSION_COMMENT),
+    rename({
+      suffix: '.min',
+    }),
+    gulp.dest(path.JS_DEST),
+    browserSync.stream(),
+  ],
+  callback,
+ );
 });
 
 
-///
-/// Docs JS bundle
-///
+//
+// Docs JS bundle
+//
 
-gulp.task( 'docs-scripts', ['lint-docs-scripts'], function( callback ) {
+gulp.task('docs-scripts', ['lint-docs-scripts'], function (callback) {
   pump([
-      gulp.src( path.DOCS_JS_SRC_MAIN ),
-      webpack({
-        output: {
-          filename: 'docs.js'
-        }
-      }),
-      gulp.dest( path.JS_DEST ),
-      uglify(),
-      rename({
-        suffix: '.min'
-      }),
-      gulp.dest( path.JS_DEST ),
-      browserSync.stream()
-    ],
-    callback
-  );
+    gulp.src(path.DOCS_JS_SRC_MAIN),
+    webpack({
+      output: {
+        filename: 'docs.js',
+      },
+    }),
+    gulp.dest(path.JS_DEST),
+    uglify(),
+    rename({
+      suffix: '.min',
+    }),
+    gulp.dest(path.JS_DEST),
+    browserSync.stream(),
+  ],
+  callback,
+ );
 });
 
 
@@ -167,195 +167,189 @@ gulp.task('lint-docs-styles', function () {
 });
 
 
+//
+// SCSS compilation
+//
 
-///
-/// SCSS compilation
-///
 
-
-gulp.task( 'apollo-styles', ['lint-apollo-styles'], function () {
-  gulp.src( path.SCSS_SRC_MAIN )
-    .pipe( sass({
-        includePaths: [ 'node_modules' ],
-        outputStyle: 'expanded'  // expanded for development
-      })
-      .on( 'error', sass.logError ))
-    .pipe( postcss([
+gulp.task('apollo-styles', ['lint-apollo-styles'], function () {
+  gulp.src(path.SCSS_SRC_MAIN)
+    .pipe(sass({
+      includePaths: ['node_modules'],
+      outputStyle: 'expanded',
+    })
+    .on('error', sass.logError))
+    .pipe(postcss([
       autoprefixer({
-        browsers: [ 'last 2 versions' ]
-      })
+        browsers: ['last 2 versions'],
+      }),
     ]))
-    .pipe( gulp.dest( path.CSS_DEST ))
-    .pipe( browserSync.stream() )
-    .pipe( postcss([ cssnano() ]))
-    .pipe( rename({
-      suffix: '.min'
+    .pipe(gulp.dest(path.CSS_DEST))
+    .pipe(browserSync.stream())
+    .pipe(postcss([cssnano()]))
+    .pipe(rename({
+      suffix: '.min',
     }))
-    .pipe( gulp.dest( path.CSS_DEST ))
-    .pipe( browserSync.stream() );
+    .pipe(gulp.dest(path.CSS_DEST))
+    .pipe(browserSync.stream());
 });
 
-gulp.task( 'docs-styles', ['lint-docs-styles'], function () {
-  gulp.src( path.DOCS_SCSS_SRC_MAIN )
+gulp.task('docs-styles', ['lint-docs-styles'], function () {
+  gulp.src(path.DOCS_SCSS_SRC_MAIN)
     .pipe()
-    .pipe( sass({
-        includePaths: [ 'node_modules' ],
-        outputStyle: 'expanded'  // expanded for development
-      })
-      .on( 'error', sass.logError ))
-    .pipe( postcss([
+    .pipe(sass({
+      includePaths: ['node_modules'],
+      outputStyle: 'expanded',
+    })
+    .on('error', sass.logError))
+    .pipe(postcss([
       autoprefixer({
-        browsers: [ 'last 2 versions' ]
-      })
+        browsers: ['last 2 versions'],
+      }),
     ]))
-    .pipe( gulp.dest( path.CSS_DEST ))
-    .pipe( browserSync.stream() );
+    .pipe(gulp.dest(path.CSS_DEST))
+    .pipe(browserSync.stream());
 });
 
 
-///
-/// Documentation static site generator
-///
+//
+// Documentation static site generator
+//
 
-gulp.task( 'docs', [ 'jekyll' ], function() {
-  gulp.src( 'docs-temp/**/*' )
-    .pipe( gulp.dest( 'dist' ) )
-    .pipe( browserSync.stream() );
+gulp.task('docs', ['jekyll'], function () {
+  gulp.src('docs-temp/**/*')
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
 });
 
 
-gulp.task( 'jekyll', function ( gulpCallBack ) {
-  exec( 'jekyll build', function( err, stdout, stderr ) {
-    console.log( stdout );
-    console.error( stderr );
-    gulpCallBack( err );
+gulp.task('jekyll', function (gulpCallBack) {
+  exec('jekyll build', function (err) {
+    gulpCallBack(err);
   });
 });
 
 
-///
-/// Theo transformations
-///
+//
+// Theo transformations
+//
 
-gulp.task( 'clean:theo', function() {
+gulp.task('clean:theo', function () {
   return del([
     'scss/_props/*.scss',
-    'docs/_data/*.json'
+    'docs/_data/*.json',
   ]);
 });
 
-gulp.task( 'theo-colors-scss', [ 'clean:theo' ], function() {
-  gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'scss' ))
-    .pipe( gulp.dest( 'scss/_props' ));
+gulp.task('theo-colors-scss', ['clean:theo'], function () {
+  gulp.src('theo/_palette.json')
+    .pipe(theo.plugins.transform('raw'))
+    .pipe(theo.plugins.format('scss'))
+    .pipe(gulp.dest('scss/_props'));
 });
 
-gulp.task( 'theo-colors-json', [ 'clean:theo' ], function() {
-  gulp.src( 'theo/_palette.json')
-    .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'ios.json' ))
-    .pipe( rename( '_palette.json' )) // overwrite ios renaming scheme
-    .pipe( gulp.dest( 'docs/_data' ));
+gulp.task('theo-colors-json', ['clean:theo'], function () {
+  gulp.src('theo/_palette.json')
+    .pipe(theo.plugins.transform('raw'))
+    .pipe(theo.plugins.format('ios.json'))
+    .pipe(rename('_palette.json')) // overwrite ios renaming scheme
+    .pipe(gulp.dest('docs/_data'));
 });
 
-gulp.task( 'theo-icons-scss', [ 'clean:theo' ], function() {
-  gulp.src( 'theo/_icons.json')
-    .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'map.scss' ))
-    .pipe( gulp.dest( 'scss/_props' ));
+gulp.task('theo-icons-scss', ['clean:theo'], function () {
+  gulp.src('theo/_icons.json')
+    .pipe(theo.plugins.transform('raw'))
+    .pipe(theo.plugins.format('map.scss'))
+    .pipe(gulp.dest('scss/_props'));
 });
 
-gulp.task( 'theo-icons-json', [ 'clean:theo' ], function() {
-  gulp.src( 'theo/_icons.json')
-    .pipe( theo.plugins.transform( 'raw' ))
-    .pipe( theo.plugins.format( 'json' ))
-    .pipe( gulp.dest( 'docs/_data' ));
+gulp.task('theo-icons-json', ['clean:theo'], function () {
+  gulp.src('theo/_icons.json')
+    .pipe(theo.plugins.transform('raw'))
+    .pipe(theo.plugins.format('json'))
+    .pipe(gulp.dest('docs/_data'));
 });
 
 
-///
-/// Publish to CDN
-///
+//
+// Publish to CDN
+//
 
-gulp.task( 'publish-css', function() {
+gulp.task('publish-css', function () {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
-      Bucket: `nexxus-marketing-staticcontent/design/css/${ strings.VERSION }`
+      Bucket: `nexxus-marketing-staticcontent/design/css/${strings.VERSION}`,
     },
     signatureVersion: 'v3',
-    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' }),
   });
 
-  return gulp.src( './dist/css/apollo*.css' )
-    .pipe( publisher.publish() );
+  return gulp.src('./dist/css/apollo*.css')
+    .pipe(publisher.publish());
 });
 
-gulp.task( 'publish-js', function() {
+gulp.task('publish-js', function () {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
-      Bucket: `nexxus-marketing-staticcontent/design/js/${ strings.VERSION }`
+      Bucket: `nexxus-marketing-staticcontent/design/js/${strings.VERSION}`,
     },
     signatureVersion: 'v3',
-    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' })
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'default' }),
   });
 
-  return gulp.src( './dist/js/apollo*.js' )
-    .pipe( publisher.publish() );
+  return gulp.src('./dist/js/apollo*.js')
+    .pipe(publisher.publish());
 });
 
-gulp.task( 'publish-docs', function() {
+gulp.task('publish-docs', function () {
   const publisher = awspublish.create({
     region: 'us-west-2', // US West Oregon
     params: {
-      Bucket: 'design.imshealth.com/resources/interfaces/components/'
+      Bucket: 'design.imshealth.com/resources/interfaces/components/',
     },
     signatureVersion: 'v3',
-    credentials: new AWS.SharedIniFileCredentials({ profile: 'drb-docs' })
+    credentials: new AWS.SharedIniFileCredentials({ profile: 'drb-docs' }),
   });
 
-  return gulp.src( './dist/*.html' )
-    .pipe( publisher.publish() );
+  return gulp.src('./dist/*.html')
+    .pipe(publisher.publish());
 });
 
 
-///
-/// Tag and publish to npm
-///
+//
+// Tag and publish to npm
+//
 
-gulp.task( 'publish-tags', function () {
-
-  // Error handling for shell commands
-  function handleErrors( err, stdout, stderr ) {
-    if( err ) {
-      console.error( err );
+gulp.task('publish-tags', function () {
+  function handleErrors(err, stdout, stderr) {
+    if (err) {
+      process.stdout.write(err);
       return;
     }
-    console.log( stdout );
-    console.error( stderr );
+    process.stdout.write(stdout);
+    process.stdout.write(stderr);
   }
 
-  const command = `git tag v${ strings.VERSION }
+  const command = `git tag v${strings.VERSION}
                    git push --tags
                    npm publish`;
 
-  exec( command, function( err, stdout, stderr ) {
-    handleErrors( err, stdout, stderr );
+  exec(command, function (err, stdout, stderr) {
+    handleErrors(err, stdout, stderr);
   });
 });
 
 
-
-///
-/// Conglomerate tasks
-///
+//
+// Conglomerate tasks
+//
 
 gulp.task('lint-styles', ['lint-apollo-styles', 'lint-docs-styles']);
 gulp.task('lint-scripts', ['lint-apollo-scripts', 'lint-docs-scripts']);
 gulp.task('lint', ['lint-scripts', 'lint-styles']);
-gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
-gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
-gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs' ]);
-gulp.task( 'serve', [ 'default', 'server', 'watch' ]);
+gulp.task('theo', ['clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json']);
+gulp.task('publish', ['publish-css', 'publish-js', 'publish-tags']);
+gulp.task('default', ['apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs']);
+gulp.task('serve', ['default', 'server', 'watch']);
