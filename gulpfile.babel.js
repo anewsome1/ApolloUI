@@ -21,6 +21,7 @@ import AWS from 'aws-sdk';
 import styleLint from 'gulp-stylelint';
 import eslint from 'gulp-eslint';
 
+
 //
 // Local variables
 //
@@ -170,7 +171,6 @@ gulp.task('lint-docs-styles', () => {
 //
 // SCSS compilation
 //
-
 
 gulp.task('apollo-styles', ['lint-apollo-styles'], () => {
   gulp.src(path.SCSS_SRC_MAIN)
