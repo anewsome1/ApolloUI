@@ -698,7 +698,7 @@ hr {
 }
 
 .docs-resource-grid > .docs-resource-tile {
-  -ms-flex: 1 0 0;
+  -ms-flex: 1 0 0px;
       flex: 1 0 0;
   -ms-flex-preferred-size: 33.33333%;
       flex-basis: 33.33333%;
