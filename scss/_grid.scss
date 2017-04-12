@@ -1,0 +1,10 @@
+///
+/// @DEPRECATED: `.col-xs-*` classes deprecated in favor of `.col-*` in v4.0.0-alpha.6
+///
+
+@for $i from 1 through $grid-columns {
+  .col-xs-#{$i} {
+    // @extend %grid-column;
+    @include make-col($i, $grid-columns);
+  }
+}
