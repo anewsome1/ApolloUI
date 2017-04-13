@@ -1,5 +1,5 @@
 /*!
- * Apollo CSS v1.3.1
+ * Apollo CSS v1.3.2
  */
 
 // Scaffolding
@@ -12,6 +12,7 @@
 
 // Grid
 @import 'bootstrap/scss/grid';
+@import 'grid';
 
 // Core styles
 @import 'fonts';

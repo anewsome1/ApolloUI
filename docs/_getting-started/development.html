@@ -10,7 +10,7 @@ contents:
 ---
 <section class="docs-section" id="project-repository">
   <div class="row">
-    <div class="col-xs-12 col-md-6 offset-md-3">
+    <div class="col-12 col-md-6 offset-md-3">
       <div class="docs-resource-tile">
         <h2 class="docs-resource-title">Project Repository</h2>
         <p class="docs-resource-description">Check out our project on Gitlab to stay up to date on the development of Apollo UI.</p>
@@ -29,11 +29,11 @@ contents:
   {% include example-intro.html title='Package management' description='Use Apollo UI as a dependency of your application with <a href="http://npmjs.com">NPM</a> or <a href="http://bower.io">Bower</a>.  This gives you access to the variables, mixins and other goodies so you can make your application-specific styles consistent with the rest of the framework.' %}
 
   <div class="row">
-    <div class="col-xs-12 col-lg-6">
+    <div class="col-12 col-lg-6">
       {% capture example %}npm install apollo-ui@{{ site.current_version }} --save{% endcapture %}
       {% include example.html hide_output=true label='NPM' code=example %}
     </div>
-    <div class="col-xs-12 col-lg-6">
+    <div class="col-12 col-lg-6">
       {% capture example %}bower install apollo-ui#{{ site.current_version }} --save{% endcapture %}
       {% include example.html hide_output=true label='Bower' code=example %}
     </div>

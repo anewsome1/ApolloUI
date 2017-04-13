@@ -22,43 +22,43 @@ contents:
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">6 col</div>
-    <div class="col-xs-6">6 col</div>
+    <div class="col-6">6 col</div>
+    <div class="col-6">6 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-5">5 col</div>
-    <div class="col-xs-7">7 col</div>
+    <div class="col-5">5 col</div>
+    <div class="col-7">7 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-4">4 col</div>
-    <div class="col-xs-8">8 col</div>
+    <div class="col-4">4 col</div>
+    <div class="col-8">8 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-3">3 col</div>
-    <div class="col-xs-9">9 col</div>
+    <div class="col-3">3 col</div>
+    <div class="col-9">9 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-10">10 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-10">10 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-4">4 col</div>
-    <div class="col-xs-4">4 col</div>
-    <div class="col-xs-4">4 col</div>
+    <div class="col-4">4 col</div>
+    <div class="col-4">4 col</div>
+    <div class="col-4">4 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-3">3 col</div>
-    <div class="col-xs-3">3 col</div>
-    <div class="col-xs-3">3 col</div>
-    <div class="col-xs-3">3 col</div>
+    <div class="col-3">3 col</div>
+    <div class="col-3">3 col</div>
+    <div class="col-3">3 col</div>
+    <div class="col-3">3 col</div>
   </div>
   <div class="row">
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-2">2 col</div>
-    <div class="col-xs-2">2 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-2">2 col</div>
+    <div class="col-2">2 col</div>
   </div>
 </div>
 {% endcapture %}
@@ -70,11 +70,11 @@ contents:
 
   <section class="docs-section" id="responsive-columns">
 
-  {% include example-intro.html title='Responsive columns' description='The grid is responsive using the mobile-first approach.  So you start by defining the column width for the <code>xs</code> screen size, then again for each screen size where you want the column width to change. If you skip a screen size, it will automatically inherit the size from the next smaller size that was specified.  For example, <code>.col-xs-12 .col-md-6</code> would apply 12 column width to <code>sm</code> screens since the next smaller size is <code>.col-xs-12</code>.' %}
+  {% include example-intro.html title='Responsive columns' description='The grid is responsive using the mobile-first approach.  So you start by defining the column width for the <code>xs</code> screen size, then again for each screen size where you want the column width to change. If you skip a screen size, it will automatically inherit the size from the next smaller size that was specified.  For example, <code>.col-12 .col-md-6</code> would apply 12 column width to <code>sm</code> screens since the next smaller size is <code>.col-12</code>.' %}
 {% capture example %}
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-8 col-xl-6">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-8 col-xl-6">
       <!-- Breakpoint-specific messages for demo purposes --><span class="hidden-sm-up">12 col on XS</span><span class="hidden-xs-down hidden-md-up">6 columns on SM</span><span class="hidden-sm-down hidden-lg-up">4 col on MD</span><span class="hidden-md-down hidden-xl-up">8 col on LG</span><span class="hidden-lg-down">6 col on XL</span>
     </div>
   </div>
@@ -93,17 +93,17 @@ contents:
 <div class="container">
   <!-- Center content -->
   <div class="row">
-    <div class="col-xs-6 offset-xs-3">6 col, offset by 3</div>
+    <div class="col-6 offset-3">6 col, offset by 3</div>
   </div>
   <div class="row">
-    <div class="col-xs-4 offset-xs-4">4 col, offset by 4</div>
+    <div class="col-4 offset-4">4 col, offset by 4</div>
   </div>
   <!-- Shift content to the right -->
   <div class="row">
-    <div class="col-xs-6 offset-xs-6">6 col, offset by 6</div>
+    <div class="col-6 offset-6">6 col, offset by 6</div>
   </div>
   <div class="row">
-    <div class="col-xs-4 offset-xs-8">4 col, offset by 8</div>
+    <div class="col-4 offset-8">4 col, offset by 8</div>
   </div>
 </div>
 {% endcapture %}
@@ -118,8 +118,8 @@ contents:
   {% capture example %}
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 push-md-8">A</div>
-      <div class="col-xs-8 pull-md-4">B</div>
+      <div class="col-4 push-md-8">A</div>
+      <div class="col-8 pull-md-4">B</div>
     </div>
   </div>
   {% endcapture %}
