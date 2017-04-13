@@ -96,7 +96,7 @@ gulp.task('lint-docs-scripts', () => {
 // Apollo JS bundle
 //
 
-gulp.task('apollo-scripts', ['lint-apollo-scripts'], (callback) => {
+gulp.task('apollo-scripts', (callback) => {
   pump([
     gulp.src(path.JS_SRC_MAIN),
     webpack({
@@ -122,7 +122,7 @@ gulp.task('apollo-scripts', ['lint-apollo-scripts'], (callback) => {
 // Docs JS bundle
 //
 
-gulp.task('docs-scripts', ['lint-docs-scripts'], (callback) => {
+gulp.task('docs-scripts', (callback) => {
   pump([
     gulp.src(path.DOCS_JS_SRC_MAIN),
     webpack({
@@ -172,7 +172,7 @@ gulp.task('lint-docs-styles', () => {
 // SCSS compilation
 //
 
-gulp.task('apollo-styles', ['lint-apollo-styles'], () => {
+gulp.task('apollo-styles', () => {
   gulp.src(path.SCSS_SRC_MAIN)
     .pipe(sass({
       includePaths: ['node_modules'],
@@ -193,7 +193,7 @@ gulp.task('apollo-styles', ['lint-apollo-styles'], () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('docs-styles', ['lint-docs-styles'], () => {
+gulp.task('docs-styles', () => {
   gulp.src(path.DOCS_SCSS_SRC_MAIN)
     .pipe(sass({
       includePaths: ['node_modules'],
@@ -348,5 +348,5 @@ gulp.task('lint-scripts', ['lint-apollo-scripts', 'lint-docs-scripts']);
 gulp.task('lint', ['lint-scripts', 'lint-styles']);
 gulp.task('theo', ['clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json']);
 gulp.task('publish', ['publish-css', 'publish-js', 'publish-tags']);
-gulp.task('default', ['apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs']);
+gulp.task('default', ['apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs', 'lint' ]);
 gulp.task('serve', ['default', 'server', 'watch']);
