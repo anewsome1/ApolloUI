@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	// Copy to clipboard stuff
 	__webpack_require__(1);
@@ -51,9 +51,9 @@
 	__webpack_require__(10);
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var Clipboard = __webpack_require__( 2 );
 	var clipboard = new Clipboard('.js-code-copy');
@@ -78,9 +78,9 @@
 	});
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
 	    if (true) {
@@ -282,9 +282,9 @@
 	    module.exports = Clipboard;
 	});
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
 	    if (true) {
@@ -515,9 +515,9 @@
 	    module.exports = ClipboardAction;
 	});
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	function select(element) {
 	    var selectedText;
@@ -564,9 +564,9 @@
 	module.exports = select;
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	function E () {
 	  // Keep this empty so it's easier to inherit from
@@ -636,9 +636,9 @@
 	module.exports = E;
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var is = __webpack_require__(7);
 	var delegate = __webpack_require__(8);
@@ -737,9 +737,9 @@
 	module.exports = listen;
 
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/**
 	 * Check if argument is a HTML element.
@@ -792,9 +792,9 @@
 	};
 
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var closest = __webpack_require__(9);
 
@@ -842,9 +842,9 @@
 	module.exports = delegate;
 
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	var DOCUMENT_NODE_TYPE = 9;
 
@@ -878,9 +878,9 @@
 	module.exports = closest;
 
 
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	const $ = window.jQuery;
 
@@ -907,5 +907,5 @@
 	});
 
 
-/***/ }
+/***/ })
 /******/ ]);

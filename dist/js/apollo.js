@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*!
 	 * Apollo JS v1.3.2
@@ -65,9 +65,9 @@
 	  offCanvas.init();
 	});
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*!
 	 * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
@@ -3606,9 +3606,9 @@
 	}();
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var $ = window.jQuery;
 
@@ -3639,9 +3639,9 @@
 	};
 
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = {
 	  strings: {
@@ -3656,5 +3656,5 @@
 	};
 
 
-/***/ }
+/***/ })
 /******/ ]);
