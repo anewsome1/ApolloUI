@@ -3,6 +3,16 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.3.2] - 2017-04-13
+
+### Changed
+- Fixed markup in grid examples to match new class names
+- Added fallback styles for previous markup structure
+
+### Added
+- Linting for JS and CSS as Gulp tasks
+
+
 ## [v1.3.1] - 2017-03-28
 
 ### Changed
