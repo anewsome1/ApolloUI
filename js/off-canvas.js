@@ -1,3 +1,5 @@
+/* global window */
+
 var $ = window.jQuery;
 
 var STRINGS = require( './util/strings' ).strings;
@@ -10,7 +12,7 @@ var SELECTORS = require( './util/strings' ).selectors;
  *                            that should be bound to toggle the off-canvas menu.
  */
 function bindOffCanvasToggle( $el ) {
-  $el.click( function() {
+  $el.click( function () {
     var targetString = $( this ).data( STRINGS.target );
     var $target = $( targetString );
 
@@ -20,7 +22,7 @@ function bindOffCanvasToggle( $el ) {
   });
 }
 
-module.exports.init = function() {
+module.exports.init = function () {
   var $offCanvasToggle = $( SELECTORS.offCanvasToggle );
 
   bindOffCanvasToggle( $offCanvasToggle );

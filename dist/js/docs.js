@@ -45,36 +45,38 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	// Copy to clipboard stuff
-	__webpack_require__(1);
+	__webpack_require__( 1 );
 
 	// Smooth scrolling thing
-	__webpack_require__(10);
+	__webpack_require__( 10 );
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+	/* global window */
+
 	var Clipboard = __webpack_require__( 2 );
-	var clipboard = new Clipboard('.js-code-copy');
+	var clipboard = new Clipboard( '.js-code-copy' );
 
 	// Success!
-	clipboard.on( 'success', function( event ) {
+	clipboard.on( 'success', function ( event ) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Copied!';
-	  window.setTimeout(function() {
+	  window.setTimeout( function () {
 	    event.trigger.textContent = btnText;
-	  }, 2000);
+	  }, 2000 );
 	  event.clearSelection();
 	});
 
 	// Oh noes!
-	clipboard.on( 'error', function( event ) {
+	clipboard.on( 'error', function ( event ) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Press "⌘ + C" to copy';
-	  window.setTimeout(function() {
+	  window.setTimeout( function () {
 	    event.trigger.textContent = btnText;
-	  }, 5000);
+	  }, 5000 );
 	});
 
 
@@ -882,6 +884,8 @@
 /* 10 */
 /***/ (function(module, exports) {
 
+	/* global window location */
+
 	const $ = window.jQuery;
 
 	const scrollTiming = 500;
@@ -889,17 +893,17 @@
 	const SELECTORS = {
 	  ANCHOR_TAGS: '.js-docs-smooth-scroll',
 	  SCROLL_AREA: 'html, body'
-	}
+	};
 
-	$(function() {
-	  $( SELECTORS.ANCHOR_TAGS ).click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
+	$( function () {
+	  $( SELECTORS.ANCHOR_TAGS ).click( function () {
+	    if ( location.pathname.replace( /^\//, '' ) === this.pathname.replace( /^\//, '' ) && location.hostname == this.hostname) {
+	      var target = $( this.hash );
+	      target = target.length ? target : $( '[name=' + this.hash.slice( 1 ) + ']' );
+	      if ( target.length ) {
 	        $( SELECTORS.SCROLL_AREA ).animate({
 	          scrollTop: target.offset().top
-	        }, scrollTiming);
+	        }, scrollTiming );
 	        return false;
 	      }
 	    }

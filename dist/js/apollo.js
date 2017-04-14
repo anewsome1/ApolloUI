@@ -48,25 +48,82 @@
 	 * Apollo JS v1.3.2
 	 */
 
-	///
-	/// Bootstrap jQuery Plugins
-	///
+	/* global window, document */
 
-	__webpack_require__( 1 );
+	var $ = window.jQuery;
+	var offCanvas = __webpack_require__( 1 );
+
+	//
+	// Bootstrap jQuery Plugins
+	//
+
+	__webpack_require__( 3 );
 
 
-	///
-	/// Custom scripts
-	///
+	//
+	// Custom scripts
+	//
 
-	var offCanvas = __webpack_require__( 2 );
 
-	$( document ).ready( function() {
+	$( document ).ready( function () {
 	  offCanvas.init();
 	});
 
+
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	/* global window */
+
+	var $ = window.jQuery;
+
+	var STRINGS = __webpack_require__( 2 ).strings;
+	var CLASSES = __webpack_require__( 2 ).classes;
+	var SELECTORS = __webpack_require__( 2 ).selectors;
+
+	/**
+	 * Binds a click handler to the given jQuery object
+	 * @param  { Object }   $el   jQuery object which represents the element(s)
+	 *                            that should be bound to toggle the off-canvas menu.
+	 */
+	function bindOffCanvasToggle( $el ) {
+	  $el.click( function () {
+	    var targetString = $( this ).data( STRINGS.target );
+	    var $target = $( targetString );
+
+	    $target.toggleClass( CLASSES.open );
+
+	    return false;
+	  });
+	}
+
+	module.exports.init = function () {
+	  var $offCanvasToggle = $( SELECTORS.offCanvasToggle );
+
+	  bindOffCanvasToggle( $offCanvasToggle );
+	};
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  strings: {
+	    target: 'target'
+	  },
+	  classes: {
+	    open: 'open'
+	  },
+	  selectors: {
+	    offCanvasToggle: '[data-toggle="off-canvas"]'
+	  }
+	};
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 	/*!
@@ -3604,56 +3661,6 @@
 	}(jQuery);
 
 	}();
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var $ = window.jQuery;
-
-	var STRINGS = __webpack_require__( 3 ).strings;
-	var CLASSES = __webpack_require__( 3 ).classes;
-	var SELECTORS = __webpack_require__( 3 ).selectors;
-
-	/**
-	 * Binds a click handler to the given jQuery object
-	 * @param  { Object }   $el   jQuery object which represents the element(s)
-	 *                            that should be bound to toggle the off-canvas menu.
-	 */
-	function bindOffCanvasToggle( $el ) {
-	  $el.click( function() {
-	    var targetString = $( this ).data( STRINGS.target );
-	    var $target = $( targetString );
-
-	    $target.toggleClass( CLASSES.open );
-
-	    return false;
-	  });
-	}
-
-	module.exports.init = function() {
-	  var $offCanvasToggle = $( SELECTORS.offCanvasToggle );
-
-	  bindOffCanvasToggle( $offCanvasToggle );
-	};
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  strings: {
-	    target: 'target'
-	  },
-	  classes: {
-	    open: 'open'
-	  },
-	  selectors: {
-	    offCanvasToggle: '[data-toggle="off-canvas"]'
-	  }
-	};
 
 
 /***/ })
