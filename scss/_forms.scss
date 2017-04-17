@@ -19,7 +19,7 @@ label {
   }
 
   &.optional::after {
-    content: " ( Optional )";
+    content: " (Optional)";
     color: $input-color-optional;
   }
 }
