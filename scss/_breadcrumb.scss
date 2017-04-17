@@ -46,7 +46,7 @@
       display: inline;
       padding-right: $breadcrumb-padding-x;
       font-size: $font-size-sm;
-      content: map-get($_icons-map, 'chevron-right');
+      content: map-get( $_icons-map, 'chevron-right' );
       vertical-align: text-top;
     }
   }
@@ -68,19 +68,18 @@
         transition: all $transition-fast;
       }
 
-
       &::after {
         display: none;
       }
     }
 
     &.open .dropdown-toggle {
-        color: $water-400;
+      color: $water-400;
 
-        &::after {
-          background-color: rgba($brand-primary, .8);
-          box-shadow: 0 0 0 .5625rem rgba($brand-primary, .5);
-        }
+      &::after {
+        background-color: rgba( $brand-primary, .8 );
+        box-shadow: 0 0 0 .5625rem rgba( $brand-primary, .5 );
       }
+    }
   }
 }

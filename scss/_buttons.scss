@@ -17,7 +17,7 @@
   transition: all $transition-fast;
 
   & + & {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up( sm ) {
       margin-left: $btn-margin-x;
     }
   }
@@ -27,7 +27,7 @@
     margin-left: 0;
   }
 
-  @include media-breakpoint-only(xs) {
+  @include media-breakpoint-only( xs ) {
     margin-right: $grid-gutter-width-base / 2;
   }
 
@@ -41,16 +41,8 @@
     text-decoration: none;
   }
 
-  &:hover,
-  &.hover {
-  }
-
   &:focus {
     outline: none;
-  }
-
-  &:active,
-  &.active {
   }
 
   &:disabled,
@@ -66,29 +58,29 @@
 
 @each $btn-name, $btn-props in $btn-variants {
   .btn-#{ $btn-name } {
-    border-color: map-get($btn-props, border-color);
-    background-color: map-get($btn-props, bg);
+    border-color: map-get( $btn-props, border-color );
+    background-color: map-get( $btn-props, bg );
 
     &,
     &:hover,
     &:focus {
-      color: map-get($btn-props, color);
+      color: map-get( $btn-props, color );
     }
 
     &:hover,
     &.hover,
     &:active,
     &.active {
-      border-color: map-get($btn-props, border-color-hover);
-      background-color: map-get($btn-props, bg-hover);
-      color: map-get($btn-props, color-hover);
+      border-color: map-get( $btn-props, border-color-hover );
+      background-color: map-get( $btn-props, bg-hover );
+      color: map-get( $btn-props, color-hover );
     }
 
     &:disabled,
     &.disabled {
-      background-color: map-get($btn-props, bg-disabled);
-      color: map-get($btn-props, color-disabled);
-      border-color: map-get($btn-props, border-disabled);
+      background-color: map-get( $btn-props, bg-disabled );
+      color: map-get( $btn-props, color-disabled );
+      border-color: map-get( $btn-props, border-disabled );
     }
   }
 }

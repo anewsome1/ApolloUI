@@ -1,5 +1,5 @@
 .bg-gray-light {
-  @include bg-color($bg-color: $gray-50);
+  @include bg-color( $bg-color: $gray-50 );
 }
 
 .bg-primary,
@@ -15,11 +15,11 @@
 }
 
 .bg-gray-dark {
-  @include bg-color($bg-color: $gray-700, $text-color: #fff);
+  @include bg-color( $bg-color: $gray-700, $text-color: #fff );
 }
 
 .bg-primary {
-  @include bg-color($bg-color: $brand-primary, $text-color: #fff);
+  @include bg-color( $bg-color: $brand-primary, $text-color: #fff );
 
   .btn-secondary {
     &,
