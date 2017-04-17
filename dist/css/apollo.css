@@ -3536,7 +3536,7 @@ label {
 }
 
 .control-label.optional::after {
-  content: " (Optional)";
+  content: " ( Optional )";
   color: #b2b2b2;
 }
 
