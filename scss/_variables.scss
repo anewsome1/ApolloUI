@@ -1,6 +1,5 @@
 @import '_props/palette';
 
-
 ///
 /// Colors
 ///
@@ -24,7 +23,6 @@ $enable-flex:               true;
 // $enable-hover-media-query:  false;
 // $enable-grid-classes:       true;
 
-
 ///
 /// Spacing
 ///
@@ -41,7 +39,6 @@ $border-width:               .0625rem;
 $body-bg:                    #fff;
 $body-color:                 $gray-700;
 
-
 // Links
 //
 // Style anchor elements.
@@ -51,7 +48,6 @@ $link-decoration:             none;
 $link-hover-color:            $water-400;
 $link-hover-decoration:       underline;
 
-
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -59,8 +55,8 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px
 );
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
+@include _assert-ascending( $grid-breakpoints, "$grid-breakpoints" );
 
 // Grid containers
 //
@@ -72,8 +68,8 @@ $container-max-widths: (
   lg: 960px,
   xl: 1180px
 );
-@include _assert-ascending($container-max-widths, "$container-max-widths");
 
+@include _assert-ascending( $container-max-widths, "$container-max-widths" );
 
 // Grid columns
 //
@@ -88,7 +84,6 @@ $grid-gutter-widths: (
   lg: $grid-gutter-width-base,
   xl: $grid-gutter-width-base
 );
-
 
 ///
 /// Typography
@@ -115,7 +110,6 @@ $font-size-h4:                $font-size-sm;
 $font-size-h5:                $font-size-xs;
 $font-size-h6:                $font-size-xs;
 
-
 // Weights
 $font-light:                  300;
 $font-normal:                 400;
@@ -125,7 +119,7 @@ $font-weight-base:            $font-normal;
 
 $line-height:                 1.5;
 
-$headings-margin-bottom:      ($spacer / 2);
+$headings-margin-bottom:      ( $spacer / 2 );
 $headings-font-family:        inherit;
 $headings-font-weight:        $font-normal;
 $headings-line-height:        $line-height;
@@ -139,10 +133,10 @@ $text-muted:                  $gray-500;
 $abbr-border-color:           $gray-500;
 
 $blockquote-small-color:      $gray-500;
-$blockquote-font-size:        ($font-size-base * 1.25);
+$blockquote-font-size:        ( $font-size-base * 1.25 );
 $blockquote-border-color:     $gray-200;
 
-$hr-border-color:             rgba($gray-700, .15);
+$hr-border-color:             rgba( $gray-700, .15 );
 $hr-border-width:             $border-width;
 
 $dt-font-weight:              $font-semi-bold;
@@ -151,20 +145,19 @@ $nested-kbd-font-weight:      $font-semi-bold;
 
 $list-inline-padding:         .5rem;
 
-
 ///
 /// Transitions
 ///
 
-$transition-fast:       .25s cubic-bezier(0, 0, .5, 1);
-$transition-medium:     .5s cubic-bezier(0, 0, .5, 1);
+$transition-fast:       .25s cubic-bezier( 0, 0, .5, 1 );
+$transition-medium:     .5s cubic-bezier( 0, 0, .5, 1 );
 
 
 ///
 /// Lighting
 ///
 
-$shadow-color:          rgba($black, .15);
+$shadow-color:          rgba( $black, .15 );
 
 $shadow-border:        0 0 0 $border-width $shadow-color;
 $shadow-hover:         0 .625rem .9375rem $shadow-color;  // ~0 10px 15px
@@ -172,11 +165,11 @@ $shadow-active:        $shadow-hover;
 $shadow-resting:       0 .1875rem .25rem $shadow-color;  // ~0 3px 4px
 
 // Shadow sizes
-$shadow-sm:             0 .625rem 1.25rem 0 rgba(#000, .1);
-$shadow-sm-hover:       0 .9375rem 1.875rem 0 rgba(#000, .15);
+$shadow-sm:             0 .625rem 1.25rem 0 rgba( #000, .1 );
+$shadow-sm-hover:       0 .9375rem 1.875rem 0 rgba( #000, .15 );
 
-$shadow-lg:             0 .625rem 3.125rem 0 rgba(#000, .1);
-$shadow-lg-hover:       0 1.875rem 3.75rem 0 rgba(#000, .15);
+$shadow-lg:             0 .625rem 3.125rem 0 rgba( #000, .1 );
+$shadow-lg-hover:       0 1.875rem 3.75rem 0 rgba( #000, .15 );
 
 ///
 /// Alerts
@@ -225,7 +218,6 @@ $card-cap-bg:               $gray-50;
 $card-cap-height:           3.125rem;
 $card-bg:                   #fff;
 
-
 ///
 /// Accordion
 ///
@@ -243,9 +235,8 @@ $accordion-border-color:            $gray-200;
 
 // Dark styles for sidebar implementation
 $accordion-dark-bg:                 $atmosphere-600;
-$accordion-dark-hover-bg:           rgba($black, .15);
-$accordion-dark-active-bg:          rgba($black, .3);
-
+$accordion-dark-hover-bg:           rgba( $black, .15 );
+$accordion-dark-active-bg:          rgba( $black, .3 );
 
 ///
 /// Modals
@@ -263,7 +254,6 @@ $modal-lg:                    56.25rem; // ~900px
 $modal-md:                    33.75rem; // ~540px
 $modal-sm:                    22.5rem;  // ~360px
 
-
 ///
 /// Shared component values
 ///
@@ -272,13 +262,12 @@ $component-height-sm:         1.875rem; // 30px
 $component-height:            2.5rem;   // 40px
 $component-height-lg:         3.125rem; // 50px
 
-
 ///
 /// Forms
 ///
 
 $input-padding-x:                .625rem;
-$input-padding-y:                calc-padding-y($component-height, $font-size-base);
+$input-padding-y:                calc-padding-y( $component-height, $font-size-base );
 $input-line-height:              1;
 
 $input-bg:                       $white;
@@ -304,10 +293,10 @@ $input-label-color:              $gray-600;
 $input-label-color-disabled:     $gray-400;
 
 $input-sm-padding-x:             $input-padding-x;
-$input-sm-padding-y:             calc-padding-y($component-height-sm, $font-size-base);
+$input-sm-padding-y:             calc-padding-y( $component-height-sm, $font-size-base );
 
 $input-lg-padding-x:             $input-padding-x * 2;
-$input-lg-padding-y:             calc-padding-y($component-height-lg, $font-size-base);
+$input-lg-padding-y:             calc-padding-y( $component-height-lg, $font-size-base );
 
 $input-height:                   $component-height;
 $input-height-lg:                $component-height-lg;
@@ -321,9 +310,9 @@ $input-group-addon-border-color: $input-border-color;
 $cursor-disabled:                not-allowed;
 
 // Data URI encoded images
-$svg-check-solid-water:          url('//cdn.ims.io/design/assets/icons/check-solid-water.svg');
-$svg-check-solid-atmosphere:     url('//cdn.ims.io/design/assets/icons/check-solid-atmosphere.svg');
-$svg-chevron-down-gray-dark:     url('//cdn.ims.io/design/assets/icons/chevron-down-gray-dark.svg');
+$svg-check-solid-water:          url( '//cdn.ims.io/design/assets/icons/check-solid-water.svg' );
+$svg-check-solid-atmosphere:     url( '//cdn.ims.io/design/assets/icons/check-solid-atmosphere.svg' );
+$svg-chevron-down-gray-dark:     url( '//cdn.ims.io/design/assets/icons/chevron-down-gray-dark.svg' );
 
 // Checkbox
 $checkbox-size:                  1.125rem; // ~18px
@@ -331,12 +320,11 @@ $checkbox-color:                 $brand-primary;
 
 // Error message
 $input-msg-font-size:            $font-size-sm;
-$input-msg-padding-y:            calc-padding-y(1.875, $input-msg-font-size);
+$input-msg-padding-y:            calc-padding-y( 1.875, $input-msg-font-size );
 $input-msg-padding-x:            $input-padding-x;
 $input-msg-icon-size:            $font-size-sm;
 $input-msg-line-height:          $input-msg-font-size;
 $input-msg-shadow-height:        .625rem;  // ~10px
-
 
 ///
 /// Buttons
@@ -376,10 +364,8 @@ $btn-variants: (
     border-color-hover: $link-color,
     bg-disabled: #fff,
     color-disabled: $gray-500,
-    border-disabled: darken($gray-50, 2.5%) // TODO: Update with palette color when designs get updated
-  )
-);
-
+    border-disabled: darken( $gray-50, 2.5% ) // TODO: Update with palette color when designs get updated
+));
 
 ///
 /// Toggle
@@ -387,7 +373,7 @@ $btn-variants: (
 
 $toggle-height:         1.75rem;
 $toggle-font-size:      $font-size-base;
-$toggle-padding-y:      calc-padding-y($toggle-height, $toggle-font-size);
+$toggle-padding-y:      calc-padding-y( $toggle-height, $toggle-font-size );
 $toggle-padding-x:      .625rem;
 $toggle-border-color:   $brand-primary;
 $toggle-default-bg:     #fff;
@@ -401,7 +387,7 @@ $toggle-active-bg:      $link-hover-color;
 
 $table-font-size:               $font-size-sm;
 $table-cell-padding-x:          $grid-gutter-width-base / 2;
-$table-cell-padding-y:          calc-padding-y($component-height, $table-font-size);
+$table-cell-padding-y:          calc-padding-y( $component-height, $table-font-size );
 $table-sm-cell-padding-y:       .5rem;
 $table-margin-bottom:           $spacer-y;
 
@@ -412,7 +398,7 @@ $table-header-sorted-bg:        $gray-100;
 
 $table-bg:                      transparent;
 $table-bg-accent:               $gray-50;
-$table-bg-hover:                rgba($brand-primary, .2);
+$table-bg-hover:                rgba( $brand-primary, .2 );
 $table-bg-active:               $table-bg-hover; // Lightened using rgba in implementation
 
 $table-border-width:            $border-width;
@@ -420,7 +406,6 @@ $table-border-color:            $gray-200;
 $table-border-color-hover:      $link-color;
 
 $table-highlight-shadow:        inset .625rem 0 0 -.3125rem;
-
 
 ///
 /// Tabs
@@ -435,14 +420,13 @@ $tab-padding-x:               1.25rem;
 ///
 
 $dropdown-padding-x:          $grid-gutter-width-base / 2;
-$dropdown-padding-y:          calc-padding-y(2.1875rem, $font-size-base); // Total height ~35px
+$dropdown-padding-y:          calc-padding-y( 2.1875rem, $font-size-base ); // Total height ~35px
 $dropdown-menu-bg:            #fff;
 $dropdown-menu-border-color:  $gray-200;
 $dropdown-menu-color:         $body-color;
 $dropdown-menu-bg-hover:      $link-color;
 $dropdown-menu-color-hover:   #fff;
 $dropdown-menu-min-width:     10.625rem;
-
 
 ///
 /// Z Index
@@ -465,7 +449,7 @@ $zindex-modal:             1025;
 
 /// !!!
 /// @FIXME: vertical alignment of navbar items
-/// (maybe flexbox layout?)
+/// ( maybe flexbox layout? )
 /// !!!
 
 $off-canvas-width:                  18rem; // ~256px
@@ -474,32 +458,29 @@ $navbar-height:             4.375rem; // ~70px
 $navbar-brand-font-size:    1.125rem; // ~18px
 $navbar-brand-logo-size:    1.5rem;   // ~24px
 $navbar-link-font-size:     1.125rem; // ~18px
-$navbar-link-padding-y:     calc-padding-y($navbar-height, $navbar-link-font-size);
+$navbar-link-padding-y:     calc-padding-y( $navbar-height, $navbar-link-font-size );
 $navbar-link-padding-x:     1.5625rem; // ~25px
 
 $navbar-bg:                 $brand-primary;
 $navbar-link-color:         #fff;
-$navbar-link-bg-hover:      rgba($black, .1);
-$navbar-link-bg-active:     rgba($black, .3);
-
+$navbar-link-bg-hover:      rgba( $black, .1 );
+$navbar-link-bg-active:     rgba( $black, .3 );
 
 $off-canvas-toggle-size:            1.125rem;
 // $off-canvas-toggle-padding-y:       $navbar-link-padding-y;
 // $off-canvas-toggle-margin-y:        $navbar-brand-margin-top;
 
-
 // Small variation
 $navbar-sm-height:                  3.75rem; // ~60px
-$navbar-sm-brand-margin-top:        ($navbar-sm-height / 2) - ($navbar-brand-font-size / 2) - $navbar-link-padding-y;
-$navbar-sm-link-margin-top:         ($navbar-sm-height / 2) - ($navbar-link-font-size / 2) - $navbar-link-padding-y;
+$navbar-sm-brand-margin-top:        ( $navbar-sm-height / 2 ) - ( $navbar-brand-font-size / 2 ) - $navbar-link-padding-y;
+$navbar-sm-link-margin-top:         ( $navbar-sm-height / 2 ) - ( $navbar-link-font-size / 2 ) - $navbar-link-padding-y;
 
 $off-canvas-jumbo-toggle-margin-y:  $navbar-sm-brand-margin-top;
 
 // Profile
 $profile-img-size:        2.4375rem;  // ~39px
 $profile-img-text-size:   $font-size-h4;
-$profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
-
+$profile-margin-top:      ( $navbar-height / 2 ) - ( $profile-img-size / 2 );
 
 ///
 /// Command bar
@@ -507,7 +488,7 @@ $profile-margin-top:      ($navbar-height / 2) - ($profile-img-size / 2);
 
 $command-bar-height:      $component-height-lg;
 $command-bar-bg:          $gray-50;
-$command-bar-padding-y:   calc-padding-y($command-bar-height, $component-height);
+$command-bar-padding-y:   calc-padding-y( $command-bar-height, $component-height );
 
 
 ///
@@ -524,14 +505,13 @@ $sidebar-width:           10.625rem; // ~170px
 $sidebar-bg:              $atmosphere-600;
 $sidebar-padding-x:       $grid-gutter-width-base / 2;
 $sidebar-padding-y:       1.25rem;
-$sidebar-link-padding-y:  calc-padding-y(2.1875rem, $sidebar-font-size);
+$sidebar-link-padding-y:  calc-padding-y( 2.1875rem, $sidebar-font-size );
 $sidebar-active-color:    $atmosphere-300;
-$sidebar-active-bg:       rgba($black, .3);
+$sidebar-active-bg:       rgba( $black, .3 );
 $sidebar-hover-bg:        $sidebar-active-bg;
 
 $sidebar-sm-width:        4.375rem; // ~70px
 $sidebar-sm-link-height:  5rem;     // ~80px
-
 
 ///
 /// Login component
@@ -542,7 +522,6 @@ $login-padding-x:     1.875rem; // ~30px
 $login-padding-y:     2.5rem;   // ~40px
 $login-border-color:  $gray-400;
 $login-logo-width:    4rem;     // ~64px
-
 
 ///
 /// Empty space
@@ -557,7 +536,6 @@ $empty-space-icon-border-size:  4.5rem; // ~72px
 $empty-space-icon-color:        $gray-500;
 $empty-space-font-color:        $gray-600;
 
-
 ///
 /// Breadcrumbs
 ///
@@ -567,7 +545,6 @@ $breadcrumb-padding-x:                .3125rem; // ~5px
 $breadcrumb-padding-y:                .15625rem;   // ~2.5px
 $breadcrumb-ellipse-letter-spacing:   .125rem;  // ~2px
 
-
 ///
 /// Billboard
 ///
@@ -575,19 +552,18 @@ $breadcrumb-ellipse-letter-spacing:   .125rem;  // ~2px
 $billboard-padding-x: 6.25rem; // ~100px
 $billboard-padding-y: 5.25rem; // ~84px
 
-
 ///
 /// Carousel
 ///
 
-$carousel-text-shadow:              0 .0625rem .125rem rgba(0,0,0,.6);
+$carousel-text-shadow:              0 .0625rem .125rem rgba( 0, 0, 0, .6 );
 
 $carousel-control-color:            $white;
-$carousel-control-bg:               rgba($black, .4);
-$carousel-control-bg-hover:         rgba($black, .5);
+$carousel-control-bg:               rgba( $black, .4 );
+$carousel-control-bg-hover:         rgba( $black, .5 );
 $carousel-control-width:            2.375rem; // ~38px
 $carousel-control-font-size:        1.25rem;  // ~20px
-$carousel-control-padding:          calc-padding-y($carousel-control-width, $carousel-control-font-size);
+$carousel-control-padding:          calc-padding-y( $carousel-control-width, $carousel-control-font-size );
 $carousel-control-margin:           1.25rem;  // ~20px
 
 $carousel-indicator-active-bg:      $white;
@@ -597,16 +573,15 @@ $carousel-indicator-size:           .625rem;
 
 $carousel-caption-color:            $white;
 
-
 ///
 /// Search
 ///
 
 $search-icon-size:        $font-size-base;
-$search-icon-padding:     calc-padding-y($component-height, $search-icon-size);
-$search-padding-left:     $search-icon-size + ($search-icon-padding * 2);
+$search-icon-padding:     calc-padding-y( $component-height, $search-icon-size );
+$search-padding-left:     $search-icon-size + ( $search-icon-padding * 2 );
 $search-item-padding:     $input-padding-y $input-padding-x $input-padding-y $search-padding-left;
-$search-icon-padding-sm:  calc-padding-y($component-height-sm, $search-icon-size);
+$search-icon-padding-sm:  calc-padding-y( $component-height-sm, $search-icon-size );
 
 
 ///
@@ -638,7 +613,6 @@ $slider-active-color:         $brand-primary;
 $slider-disabled-fill-bg:     $gray-400;
 $slider-disabled-handle-bg:   $gray-50;
 
-
 ///
 /// Loading indicators
 ///
@@ -646,7 +620,7 @@ $slider-disabled-handle-bg:   $gray-50;
 // Animation stuff
 $loader-arc-timing:           linear;
 $loader-spin-timing:          linear;
-$loader-spin-duration:        (4s / 3);
+$loader-spin-duration:        ( 4s / 3 );
 $loader-grow-duration:        .5s;
 
 // Spinner sizes
@@ -668,4 +642,4 @@ $loader-planet-size-outer:    1.75rem;
 
 // Overall sizes
 $loader-size:                 $loader-circle-outer;
-$loader-size-complex:         ($loader-planet-orbit-outer * 2) + ($loader-planet-size-outer / 2) + $spacer;
+$loader-size-complex:         ( $loader-planet-orbit-outer * 2 ) + ( $loader-planet-size-outer / 2 ) + $spacer;
