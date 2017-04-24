@@ -1,10 +1,9 @@
 /* global window */
 
-var $ = window.jQuery;
-
-var STRINGS = require( './util/strings' ).strings;
-var CLASSES = require( './util/strings' ).classes;
-var SELECTORS = require( './util/strings' ).selectors;
+const $ = window.jQuery;
+const STRINGS = require( './util/strings' ).strings;
+const CLASSES = require( './util/strings' ).classes;
+const SELECTORS = require( './util/strings' ).selectors;
 
 /**
  * Binds a click handler to the given jQuery object
@@ -12,9 +11,9 @@ var SELECTORS = require( './util/strings' ).selectors;
  *                            that should be bound to toggle the off-canvas menu.
  */
 function bindOffCanvasToggle( $el ) {
-  $el.click( function () {
-    var targetString = $( this ).data( STRINGS.target );
-    var $target = $( targetString );
+  $el.click(() => {
+    const targetString = $( this ).data( STRINGS.target );
+    const $target = $( targetString );
 
     $target.toggleClass( CLASSES.open );
 
@@ -22,8 +21,8 @@ function bindOffCanvasToggle( $el ) {
   });
 }
 
-module.exports.init = function () {
-  var $offCanvasToggle = $( SELECTORS.offCanvasToggle );
+module.exports.init = () => {
+  const $offCanvasToggle = $( SELECTORS.offCanvasToggle );
 
   bindOffCanvasToggle( $offCanvasToggle );
 };

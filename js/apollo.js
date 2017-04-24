@@ -4,8 +4,8 @@
 
 /* global window, document */
 
-var $ = window.jQuery;
-var offCanvas = require( './off-canvas' );
+const $ = window.jQuery;
+const offCanvas = require( './off-canvas' );
 
 //
 // Bootstrap jQuery Plugins
@@ -19,6 +19,6 @@ require( '../node_modules/bootstrap/dist/js/bootstrap' );
 //
 
 
-$( document ).ready( function () {
+$( document ).ready(() => {
   offCanvas.init();
 });

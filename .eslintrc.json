@@ -12,6 +12,7 @@
     "space-in-parens": [ "warn", "always", {
       "exceptions": [ "{}", "[]", "()", "empty" ]
     }],
-    "template-curly-spacing": [ "warn", "always" ]
+    "template-curly-spacing": [ "warn", "always" ],
+    "no-param-reassign": "off"
   }
 }

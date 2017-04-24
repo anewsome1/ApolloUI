@@ -1,5 +1,5 @@
 // Copy to clipboard stuff
-require( './code-example-copy' );
+import './code-example-copy';
 
 // Smooth scrolling thing
-require( './smooth-scroll' );
+import './smooth-scroll';

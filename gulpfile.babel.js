@@ -7,7 +7,8 @@ import del from 'del';
 import rename from 'gulp-rename';
 import insert from 'gulp-insert';
 import browserSync from 'browser-sync';
-import webpack from 'webpack-stream';
+import webpackStream from 'webpack-stream';
+import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import pump from 'pump';
 import sass from 'gulp-sass';
@@ -99,7 +100,12 @@ gulp.task( 'lint-docs-scripts', () => {
 gulp.task( 'apollo-scripts', ( callback ) => {
   pump([
     gulp.src( path.JS_SRC_MAIN ),
-    webpack({
+    webpackStream({
+      module: {
+        loaders: [
+          { test: /\.js$/, loader: 'babel-loader' }
+        ]
+      },
       output: {
         filename: 'apollo.js'
       }
@@ -113,7 +119,7 @@ gulp.task( 'apollo-scripts', ( callback ) => {
     gulp.dest( path.JS_DEST ),
     browserSync.stream()
   ],
-  callback,
+  callback
  );
 });
 
@@ -125,7 +131,12 @@ gulp.task( 'apollo-scripts', ( callback ) => {
 gulp.task( 'docs-scripts', ( callback ) => {
   pump([
     gulp.src( path.DOCS_JS_SRC_MAIN ),
-    webpack({
+    webpackStream({
+      module: {
+        loaders: [
+          { test: /\.js$/, loader: 'babel-loader' }
+        ]
+      },
       output: {
         filename: 'docs.js'
       }
@@ -138,7 +149,7 @@ gulp.task( 'docs-scripts', ( callback ) => {
     gulp.dest( path.JS_DEST ),
     browserSync.stream()
   ],
-  callback,
+  callback
  );
 });
 

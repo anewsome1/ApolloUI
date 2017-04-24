@@ -44,47 +44,56 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	// Copy to clipboard stuff
-	__webpack_require__( 1 );
+	'use strict';
 
-	// Smooth scrolling thing
-	__webpack_require__( 10 );
+	__webpack_require__(1);
 
+	__webpack_require__(10);
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* global window */
+	'use strict';
 
-	var Clipboard = __webpack_require__( 2 );
-	var clipboard = new Clipboard( '.js-code-copy' );
+	var _clipboard = __webpack_require__(2);
+
+	var _clipboard2 = _interopRequireDefault(_clipboard);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var clipboard = new _clipboard2.default('.js-code-copy');
 
 	// Success!
-	clipboard.on( 'success', function ( event ) {
+	/* global window */
+
+	clipboard.on('success', function (event) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Copied!';
-	  window.setTimeout( function () {
+	  window.setTimeout(function () {
 	    event.trigger.textContent = btnText;
-	  }, 2000 );
+	  }, 2000);
 	  event.clearSelection();
 	});
 
 	// Oh noes!
-	clipboard.on( 'error', function ( event ) {
+	clipboard.on('error', function (event) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Press "⌘ + C" to copy';
-	  window.setTimeout( function () {
+	  window.setTimeout(function () {
 	    event.trigger.textContent = btnText;
-	  }, 5000 );
+	  }, 5000);
 	});
-
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	(function (global, factory) {
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(3), __webpack_require__(5), __webpack_require__(6)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
@@ -96,7 +105,7 @@
 	        factory(mod, global.clipboardAction, global.tinyEmitter, global.goodListener);
 	        global.clipboard = mod.exports;
 	    }
-	})(this, function (module, _clipboardAction, _tinyEmitter, _goodListener) {
+	})(undefined, function (module, _clipboardAction, _tinyEmitter, _goodListener) {
 	    'use strict';
 
 	    var _clipboardAction2 = _interopRequireDefault(_clipboardAction);
@@ -140,12 +149,12 @@
 	            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
 	        }
 
-	        return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	        return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 	    }
 
 	    function _inherits(subClass, superClass) {
 	        if (typeof superClass !== "function" && superClass !== null) {
-	            throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	            throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
 	        }
 
 	        subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -181,7 +190,6 @@
 	         * or custom functions that were passed in the constructor.
 	         * @param {Object} options
 	         */
-
 
 	        _createClass(Clipboard, [{
 	            key: 'resolveOptions',
@@ -247,20 +255,6 @@
 	                    this.clipboardAction = null;
 	                }
 	            }
-	        }], [{
-	            key: 'isSupported',
-	            value: function isSupported() {
-	                var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['copy', 'cut'];
-
-	                var actions = typeof action === 'string' ? [action] : action;
-	                var support = !!document.queryCommandSupported;
-
-	                actions.forEach(function (action) {
-	                    support = support && !!document.queryCommandSupported(action);
-	                });
-
-	                return support;
-	            }
 	        }]);
 
 	        return Clipboard;
@@ -288,7 +282,11 @@
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	(function (global, factory) {
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
@@ -300,7 +298,7 @@
 	        factory(mod, global.select);
 	        global.clipboardAction = mod.exports;
 	    }
-	})(this, function (module, _select) {
+	})(undefined, function (module, _select) {
 	    'use strict';
 
 	    var _select2 = _interopRequireDefault(_select);
@@ -311,10 +309,10 @@
 	        };
 	    }
 
-	    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-	        return typeof obj;
+	    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 	    } : function (obj) {
-	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 	    };
 
 	    function _classCallCheck(instance, Constructor) {
@@ -356,7 +354,6 @@
 	         * Defines base properties passed from constructor.
 	         * @param {Object} options
 	         */
-
 
 	        _createClass(ClipboardAction, [{
 	            key: 'resolveOptions',
@@ -406,6 +403,7 @@
 	                this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
 	                // Move element to the same position vertically
 	                var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+	                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
 	                this.fakeElem.style.top = yPosition + 'px';
 
 	                this.fakeElem.setAttribute('readonly', '');
@@ -521,6 +519,8 @@
 /* 4 */
 /***/ (function(module, exports) {
 
+	'use strict';
+
 	function select(element) {
 	    var selectedText;
 
@@ -528,8 +528,7 @@
 	        element.focus();
 
 	        selectedText = element.value;
-	    }
-	    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+	    } else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
 	        var isReadOnly = element.hasAttribute('readonly');
 
 	        if (!isReadOnly) {
@@ -544,8 +543,7 @@
 	        }
 
 	        selectedText = element.value;
-	    }
-	    else {
+	    } else {
 	        if (element.hasAttribute('contenteditable')) {
 	            element.focus();
 	        }
@@ -565,18 +563,19 @@
 
 	module.exports = select;
 
-
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-	function E () {
+	"use strict";
+
+	function E() {
 	  // Keep this empty so it's easier to inherit from
 	  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 	}
 
 	E.prototype = {
-	  on: function (name, callback, ctx) {
+	  on: function on(name, callback, ctx) {
 	    var e = this.e || (this.e = {});
 
 	    (e[name] || (e[name] = [])).push({
@@ -587,18 +586,18 @@
 	    return this;
 	  },
 
-	  once: function (name, callback, ctx) {
+	  once: function once(name, callback, ctx) {
 	    var self = this;
-	    function listener () {
+	    function listener() {
 	      self.off(name, listener);
 	      callback.apply(ctx, arguments);
 	    };
 
-	    listener._ = callback
+	    listener._ = callback;
 	    return this.on(name, listener, ctx);
 	  },
 
-	  emit: function (name) {
+	  emit: function emit(name) {
 	    var data = [].slice.call(arguments, 1);
 	    var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
 	    var i = 0;
@@ -611,15 +610,14 @@
 	    return this;
 	  },
 
-	  off: function (name, callback) {
+	  off: function off(name, callback) {
 	    var e = this.e || (this.e = {});
 	    var evts = e[name];
 	    var liveEvents = [];
 
 	    if (evts && callback) {
 	      for (var i = 0, len = evts.length; i < len; i++) {
-	        if (evts[i].fn !== callback && evts[i].fn._ !== callback)
-	          liveEvents.push(evts[i]);
+	        if (evts[i].fn !== callback && evts[i].fn._ !== callback) liveEvents.push(evts[i]);
 	      }
 	    }
 
@@ -627,9 +625,7 @@
 	    // Suggested by https://github.com/lazd
 	    // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
 
-	    (liveEvents.length)
-	      ? e[name] = liveEvents
-	      : delete e[name];
+	    liveEvents.length ? e[name] = liveEvents : delete e[name];
 
 	    return this;
 	  }
@@ -637,10 +633,11 @@
 
 	module.exports = E;
 
-
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	var is = __webpack_require__(7);
 	var delegate = __webpack_require__(8);
@@ -669,14 +666,11 @@
 
 	    if (is.node(target)) {
 	        return listenNode(target, type, callback);
-	    }
-	    else if (is.nodeList(target)) {
+	    } else if (is.nodeList(target)) {
 	        return listenNodeList(target, type, callback);
-	    }
-	    else if (is.string(target)) {
+	    } else if (is.string(target)) {
 	        return listenSelector(target, type, callback);
-	    }
-	    else {
+	    } else {
 	        throw new TypeError('First argument must be a String, HTMLElement, HTMLCollection, or NodeList');
 	    }
 	}
@@ -694,10 +688,10 @@
 	    node.addEventListener(type, callback);
 
 	    return {
-	        destroy: function() {
+	        destroy: function destroy() {
 	            node.removeEventListener(type, callback);
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -710,17 +704,17 @@
 	 * @return {Object}
 	 */
 	function listenNodeList(nodeList, type, callback) {
-	    Array.prototype.forEach.call(nodeList, function(node) {
+	    Array.prototype.forEach.call(nodeList, function (node) {
 	        node.addEventListener(type, callback);
 	    });
 
 	    return {
-	        destroy: function() {
-	            Array.prototype.forEach.call(nodeList, function(node) {
+	        destroy: function destroy() {
+	            Array.prototype.forEach.call(nodeList, function (node) {
 	                node.removeEventListener(type, callback);
 	            });
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -738,10 +732,11 @@
 
 	module.exports = listen;
 
-
 /***/ }),
 /* 7 */
 /***/ (function(module, exports) {
+
+	'use strict';
 
 	/**
 	 * Check if argument is a HTML element.
@@ -749,10 +744,8 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.node = function(value) {
-	    return value !== undefined
-	        && value instanceof HTMLElement
-	        && value.nodeType === 1;
+	exports.node = function (value) {
+	  return value !== undefined && value instanceof HTMLElement && value.nodeType === 1;
 	};
 
 	/**
@@ -761,13 +754,10 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.nodeList = function(value) {
-	    var type = Object.prototype.toString.call(value);
+	exports.nodeList = function (value) {
+	  var type = Object.prototype.toString.call(value);
 
-	    return value !== undefined
-	        && (type === '[object NodeList]' || type === '[object HTMLCollection]')
-	        && ('length' in value)
-	        && (value.length === 0 || exports.node(value[0]));
+	  return value !== undefined && (type === '[object NodeList]' || type === '[object HTMLCollection]') && 'length' in value && (value.length === 0 || exports.node(value[0]));
 	};
 
 	/**
@@ -776,9 +766,8 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.string = function(value) {
-	    return typeof value === 'string'
-	        || value instanceof String;
+	exports.string = function (value) {
+	  return typeof value === 'string' || value instanceof String;
 	};
 
 	/**
@@ -787,16 +776,17 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.fn = function(value) {
-	    var type = Object.prototype.toString.call(value);
+	exports.fn = function (value) {
+	  var type = Object.prototype.toString.call(value);
 
-	    return type === '[object Function]';
+	  return type === '[object Function]';
 	};
-
 
 /***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	var closest = __webpack_require__(9);
 
@@ -816,10 +806,10 @@
 	    element.addEventListener(type, listenerFn, useCapture);
 
 	    return {
-	        destroy: function() {
+	        destroy: function destroy() {
 	            element.removeEventListener(type, listenerFn, useCapture);
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -832,21 +822,22 @@
 	 * @return {Function}
 	 */
 	function listener(element, selector, type, callback) {
-	    return function(e) {
+	    return function (e) {
 	        e.delegateTarget = closest(e.target, selector);
 
 	        if (e.delegateTarget) {
 	            callback.call(element, e);
 	        }
-	    }
+	    };
 	}
 
 	module.exports = delegate;
 
-
 /***/ }),
 /* 9 */
 /***/ (function(module, exports) {
+
+	'use strict';
 
 	var DOCUMENT_NODE_TYPE = 9;
 
@@ -856,11 +847,7 @@
 	if (typeof Element !== 'undefined' && !Element.prototype.matches) {
 	    var proto = Element.prototype;
 
-	    proto.matches = proto.matchesSelector ||
-	                    proto.mozMatchesSelector ||
-	                    proto.msMatchesSelector ||
-	                    proto.oMatchesSelector ||
-	                    proto.webkitMatchesSelector;
+	    proto.matches = proto.matchesSelector || proto.mozMatchesSelector || proto.msMatchesSelector || proto.oMatchesSelector || proto.webkitMatchesSelector;
 	}
 
 	/**
@@ -870,7 +857,7 @@
 	 * @param {String} selector
 	 * @return {Function}
 	 */
-	function closest (element, selector) {
+	function closest(element, selector) {
 	    while (element && element.nodeType !== DOCUMENT_NODE_TYPE) {
 	        if (element.matches(selector)) return element;
 	        element = element.parentNode;
@@ -879,37 +866,37 @@
 
 	module.exports = closest;
 
-
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
+	'use strict';
+
 	/* global window location */
 
-	const $ = window.jQuery;
+	var $ = window.jQuery;
 
-	const scrollTiming = 500;
+	var scrollTiming = 500;
 
-	const SELECTORS = {
+	var SELECTORS = {
 	  ANCHOR_TAGS: '.js-docs-smooth-scroll',
 	  SCROLL_AREA: 'html, body'
 	};
 
-	$( function () {
-	  $( SELECTORS.ANCHOR_TAGS ).click( function () {
-	    if ( location.pathname.replace( /^\//, '' ) === this.pathname.replace( /^\//, '' ) && location.hostname == this.hostname) {
-	      var target = $( this.hash );
-	      target = target.length ? target : $( '[name=' + this.hash.slice( 1 ) + ']' );
-	      if ( target.length ) {
-	        $( SELECTORS.SCROLL_AREA ).animate({
+	$(function () {
+	  $(SELECTORS.ANCHOR_TAGS).click(function () {
+	    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	      if (target.length) {
+	        $(SELECTORS.SCROLL_AREA).animate({
 	          scrollTop: target.offset().top
-	        }, scrollTiming );
+	        }, scrollTiming);
 	        return false;
 	      }
 	    }
 	  });
 	});
-
 
 /***/ })
 /******/ ]);
