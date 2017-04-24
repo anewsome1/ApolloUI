@@ -89,10 +89,8 @@
 	 *                            that should be bound to toggle the off-canvas menu.
 	 */
 	function bindOffCanvasToggle($el) {
-	  var _this = this;
-
-	  $el.click(function () {
-	    var targetString = $(_this).data(STRINGS.target);
+	  $el.on('click', function (event) {
+	    var targetString = event.target.attributes.getNamedItem('data-' + STRINGS.target).value;
 	    var $target = $(targetString);
 
 	    $target.toggleClass(CLASSES.open);

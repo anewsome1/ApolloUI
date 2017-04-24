@@ -11,8 +11,8 @@ const SELECTORS = require( './util/strings' ).selectors;
  *                            that should be bound to toggle the off-canvas menu.
  */
 function bindOffCanvasToggle( $el ) {
-  $el.click(() => {
-    const targetString = $( this ).data( STRINGS.target );
+  $el.on( 'click', ( event ) => {
+    const targetString = event.target.attributes.getNamedItem( `data-${ STRINGS.target }` ).value;
     const $target = $( targetString );
 
     $target.toggleClass( CLASSES.open );
