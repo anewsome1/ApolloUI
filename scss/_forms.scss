@@ -1,5 +1,6 @@
 .form-group {
-  @include clearfix();
+  @include clearfix(  );
+
   margin-bottom: $form-group-margin-bottom;
 }
 
@@ -36,8 +37,9 @@ label {
   text-overflow: ellipsis;
   border: $border-width solid $input-border-color;
   background-color: $input-bg;
-  transition: border $transition-fast,
-              background-color $transition-fast;
+  transition:
+    border $transition-fast,
+    background-color $transition-fast;
 
   // Placeholder
   &::placeholder {
@@ -105,7 +107,7 @@ textarea.form-control {
 }
 
 @each $state, $state-props in $alert-states {
-  $state-color: map-get($state-props, bg);
+  $state-color: map-get( $state-props, bg );
 
   .has-#{ $state } {
     & .form-control,
@@ -123,14 +125,12 @@ textarea.form-control {
   }
 }
 
-
-
 ///
 /// Checkbox and Radio controls
 ///
 
-input[type='checkbox'],
-input[type='radio'] {
+input[ type='checkbox' ],
+input[ type='radio' ] {
   position: relative;
   top: .2rem;
   width: $checkbox-size;
@@ -176,7 +176,7 @@ input[type='radio'] {
 //   }
 // }
 
-input[type='checkbox'] {
+input[ type='checkbox' ] {
   background-size: 100%;
 
   &:checked {
@@ -190,14 +190,14 @@ input[type='checkbox'] {
   }
 }
 
-input[type='radio'] {
+input[ type='radio' ] {
   border-radius: 50%;
   transition: background-color $transition-fast;
 
   &:checked {
     background-color: $brand-primary;
     border-color: $brand-primary;
-    box-shadow: inset 0 0 0 ($border-width * 2.4) #fff;
+    box-shadow: inset 0 0 0 ( $border-width * 2.4 ) #fff;
   }
 
   .bg-dark &:checked {
@@ -206,14 +206,14 @@ input[type='radio'] {
 }
 
 ///
-/// Toggle (Radio variation)
+/// Toggle ( Radio variation )
 ///
 
 
 .toggle {
   @include clearfix();
 
-  input[type="radio"] {
+  input[ type="radio" ] {
     display: none;
 
     + label {
@@ -232,7 +232,7 @@ input[type='radio'] {
       transition: all $transition-fast;
 
       &:hover {
-        background-color: rgba($brand-primary, .1);
+        background-color: rgba( $brand-primary, .1 );
       }
 
       &,
@@ -242,7 +242,9 @@ input[type='radio'] {
 
       @if $enable-flex {
         flex: 1;
-      } @else {
+      }
+
+      @else {
         display: table-cell;
       }
 
@@ -269,5 +271,3 @@ input[type='radio'] {
     }
   }
 }
-
-

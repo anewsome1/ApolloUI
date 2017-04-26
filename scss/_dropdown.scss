@@ -18,13 +18,13 @@
     @extend %icon-base;
 
     margin-left: .125rem;
-    content: map-get($_icons-map, 'chevron-down');
+    content: map-get( $_icons-map, 'chevron-down' );
     vertical-align: bottom;
     transition: transform $transition-fast;
   }
 
   .dropdown.show &::after {
-    transform: scaleY(-1);
+    transform: scaleY( -1 );
   }
 }
 
@@ -88,17 +88,16 @@
     // height: auto;
   }
 
-
   .dropdown-submenu-toggle {
     display: flex;
     justify-content: space-between;
 
     &::after {
       @extend %icon-base;
-      content: map-get($_icons-map, 'chevron-right');
+
+      content: map-get( $_icons-map, 'chevron-right' );
       padding-left: .5rem;
       margin-right: -.5rem;
     }
-
   }
 }

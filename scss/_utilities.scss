@@ -9,7 +9,7 @@
   border: 0;
 
   &::before {
-    content: map-get($_icons-map, 'close');
+    content: map-get( $_icons-map, 'close' );
   }
 }
 
@@ -22,21 +22,27 @@
   &-all {
     padding: $spacer;
   }
+
   &-top {
     padding-top: $spacer;
   }
+
   &-right {
     padding-right: $spacer;
   }
+
   &-bottom {
     padding-bottom: $spacer;
   }
+
   &-left {
     padding-left: $spacer;
   }
+
   &-x {
     @extend .pad-right, .pad-left;
   }
+
   &-y {
     @extend .pad-top, .pad-bottom;
   }
@@ -46,8 +52,8 @@
 /// Pointer cursor for components that use data-target="..."
 ///
 
-[data-target],
-[data-toggle],
-[data-dismiss] {
+[ data-target ],
+[ data-toggle ],
+[ data-dismiss ] {
   cursor: pointer;
 }
