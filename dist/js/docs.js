@@ -255,6 +255,20 @@
 	                    this.clipboardAction = null;
 	                }
 	            }
+	        }], [{
+	            key: 'isSupported',
+	            value: function isSupported() {
+	                var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['copy', 'cut'];
+
+	                var actions = typeof action === 'string' ? [action] : action;
+	                var support = !!document.queryCommandSupported;
+
+	                actions.forEach(function (action) {
+	                    support = support && !!document.queryCommandSupported(action);
+	                });
+
+	                return support;
+	            }
 	        }]);
 
 	        return Clipboard;
@@ -403,7 +417,6 @@
 	                this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
 	                // Move element to the same position vertically
 	                var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-	                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
 	                this.fakeElem.style.top = yPosition + 'px';
 
 	                this.fakeElem.setAttribute('readonly', '');
