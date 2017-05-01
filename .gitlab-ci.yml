@@ -3,7 +3,7 @@ image: ruby:2.4.1
 before_script:
   - gem install jekyll bundler
   - apt-get update -qq
-  - curl -sL https://deb.nodesource.com/setup_7.x | -E bash -
+  - curl -sL https://deb.nodesource.com/setup_7.x | bash -
   - apt-get install -y nodejs
   - npm install -g gulp
   - npm install
