@@ -1,0 +1,14 @@
+image: ruby:2.4.1
+
+before_script:
+  - gem install jekyll bundler
+  - apt-get update && apt-get install nodejs
+  - npm install -g gulp
+  - npm install
+
+stages:
+  - build
+
+build:
+  stage: build
+  script: gulp
