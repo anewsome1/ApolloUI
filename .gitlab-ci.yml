@@ -4,7 +4,7 @@ before_script:
   - gem install jekyll bundler
   - apt-get update
   - curl -sL https://deb.nodesource.com/setup_7.x | bash -
-  - apt-get install -y nodejs python python-pip ca-certificates
+  - apt-get install -y nodejs python python-pip libpython-dev ca-certificates
   - pip install awscli
   - npm install -g gulp
   - npm install
