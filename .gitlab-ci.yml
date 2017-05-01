@@ -19,4 +19,4 @@ build:
 
 deploy:
   stage: deploy
-  script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com.s3.amazonaws.com
+  script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://s3.amazonaws.com/stage.design.imshealth.com/
