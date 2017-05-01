@@ -2,9 +2,10 @@ image: ruby:2.4.1
 
 before_script:
   - gem install jekyll bundler
-  - apt-get update -qq
+  - apt-get update
   - curl -sL https://deb.nodesource.com/setup_7.x | bash -
-  - apt-get install -y nodejs
+  - apt-get install -y nodejs python python-pip ca-certificates
+  - pip install awscli
   - npm install -g gulp
   - npm install
 
