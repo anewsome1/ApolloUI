@@ -14,7 +14,8 @@ build:
   stage: build
   script: gulp
   artifacts:
-    - dist/
+    paths:
+      - dist/
 
 deploy:
   image: python:3.6
