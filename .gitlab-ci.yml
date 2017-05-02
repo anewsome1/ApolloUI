@@ -4,6 +4,7 @@ stages:
 
 build:
   image: ruby:2.4.1
+  stage: build
   before_script:
     - gem install jekyll bundler
     - apt-get update
@@ -11,7 +12,6 @@ build:
     - apt-get install -y nodejs
     - npm install -g gulp
     - npm install
-  stage: build
   script: gulp
   artifacts:
     paths:
@@ -23,7 +23,5 @@ deploy:
   dependencies:
     - build
   before_script:
-    - apt-get update
-    - apt-get install -y libpython-dev ca-certificates
     - pip install awscli
   script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com/
