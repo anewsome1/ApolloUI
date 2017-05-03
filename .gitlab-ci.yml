@@ -3,11 +3,12 @@ stages:
   - deploy
 
 build:
-  image: jekyll/jekyll
+  image: ruby:2.4.1
   stage: build
   before_script:
+    # Install Jekyll and Bundler gems
+    - gem install jekyll bundler
     # Install Node
-    - apt-get update
     - curl -sL https://deb.nodesource.com/setup_7.x | bash -
     - apt-get install -y nodejs
     # Install Gulp globally and project dependencies locally
