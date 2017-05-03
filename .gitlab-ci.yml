@@ -17,11 +17,22 @@ build:
     paths:
       - dist/
 
-deploy:
+deploy_stage:
   image: python:3.6
   stage: deploy
+  only: development
   dependencies:
     - build
   before_script:
     - pip install awscli
   script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com/
+
+deploy_prod:
+  image: python:3.6
+  stage: deploy
+  only: master
+  dependencies:
+    - build
+  before_script:
+    - pip install awscli
+  script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://design.imshealth.com/
