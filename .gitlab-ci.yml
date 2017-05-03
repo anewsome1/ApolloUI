@@ -3,16 +3,18 @@ stages:
   - deploy
 
 build:
-  image: ruby:2.4.1
+  image: jekyll/jekyll
   stage: build
   before_script:
-    - gem install jekyll bundler
+    # Install Node
     - apt-get update
     - curl -sL https://deb.nodesource.com/setup_7.x | bash -
     - apt-get install -y nodejs
+    # Install Gulp globally and project dependencies locally
     - npm install -g gulp
     - npm install
   script: gulp
+  # Make `dist` directory available to other jobs
   artifacts:
     paths:
       - dist/
@@ -23,10 +25,17 @@ deploy_stage:
   only:
     - development
   dependencies:
+    # Gives this job access to the artifacts from `build` job
     - build
   before_script:
+    # Install AWS Command Line Interface tools
     - pip install awscli
-  script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com/
+  # Variables stored in Gitlab (e.g. $AWS_ID_DOCS) for security
+  script:
+    >
+      AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
+      AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
+      aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com/
 
 deploy_prod:
   image: python:3.6
@@ -34,7 +43,14 @@ deploy_prod:
   only:
     - master
   dependencies:
+    # Gives this job access to the artifacts from `build` job
     - build
   before_script:
+    # Install AWS Command Line Interface tools
     - pip install awscli
-  script: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS aws s3 cp --recursive ./dist/ s3://design.imshealth.com/
+  # Variables stored in Gitlab (e.g. $AWS_ID_DOCS) for security
+  script:
+    >
+      AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
+      AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
+      aws s3 cp --recursive ./dist/ s3://design.imshealth.com/
