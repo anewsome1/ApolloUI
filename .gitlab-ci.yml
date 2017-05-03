@@ -1,6 +1,8 @@
 variables:
   STAGE_URL: "stage.design.imshealth.com"
   PROD_URL: "design.imshealth.com"
+  CDN_URL: "cdn.ims.io/design"
+  AUTH_DOCS: AWS_ACCESS_KEY_ID=$AWS_ID_DOCS AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
 
 stages:
   - build
@@ -39,11 +41,7 @@ deploy_stage:
     # Install AWS Command Line Interface tools
     - pip install awscli
   # Variables stored in Gitlab (e.g. $AWS_ID_DOCS) for security
-  script:
-    >
-      AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
-      AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
-      aws s3 cp --recursive ./dist/ s3://$STAGE_URL/
+  script: $AUTH_DOCS aws s3 cp --recursive ./dist/ s3://$STAGE_URL/
 
 deploy_prod:
   image: python:3.6
@@ -62,3 +60,19 @@ deploy_prod:
       AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
       AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
       aws s3 cp --recursive ./dist/ s3://PROD_URL/
+
+# deploy_cdn:
+#   image: python:3.6
+#   stage: deploy
+#   only:
+#     - tags
+#   dependencies:
+#     - build
+#   before_script:
+#     - pip install awscli
+#   variables:
+#     - CREDENTIALS: AWS_ACCESS_KEY_ID=$AWS_ID_CDN AWS_SECRET_ACCESS_KEY=$AWS_SECRET_CDN
+#   script:
+#     - $CREDENTIALS aws s3 cp --recursive ./dist/js/apollo*.js s3://CDN_URL/js/$CI_COMMIT_TAG
+#     - $CREDENTIALS aws s3 cp --recursive ./dist/css/apollo*.js s3://CDN_URL/css/$CI_COMMIT_TAG
+
