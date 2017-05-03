@@ -1,6 +1,6 @@
 variables:
-  STAGE_URL: stage.design.imshealth.com
-  PROD_URL: design.imshealth.com
+  STAGE_URL: "stage.design.imshealth.com"
+  PROD_URL: "design.imshealth.com"
 
 stages:
   - build
@@ -28,7 +28,7 @@ deploy_stage:
   image: python:3.6
   stage: deploy
   environment:
-    name: staging
+    name: Staging
     url: http://$STAGE_URL
   # only:
   #   - development
@@ -49,7 +49,7 @@ deploy_prod:
   image: python:3.6
   stage: deploy
   environment:
-    name: production
+    name: Production
     url: http://$PROD_URL
   only:
     - master
