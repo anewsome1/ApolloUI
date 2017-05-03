@@ -20,7 +20,8 @@ build:
 deploy_stage:
   image: python:3.6
   stage: deploy
-  only: development
+  only:
+    - development
   dependencies:
     - build
   before_script:
@@ -30,7 +31,8 @@ deploy_stage:
 deploy_prod:
   image: python:3.6
   stage: deploy
-  only: master
+  only:
+    - master
   dependencies:
     - build
   before_script:
