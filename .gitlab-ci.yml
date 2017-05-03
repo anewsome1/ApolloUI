@@ -1,3 +1,7 @@
+variables:
+  STAGE_URL: stage.design.imshealth.com
+  PROD_URL: design.imshealth.com
+
 stages:
   - build
   - deploy
@@ -23,8 +27,11 @@ build:
 deploy_stage:
   image: python:3.6
   stage: deploy
-  only:
-    - development
+  environment:
+    name: staging
+    url: http://$STAGE_URL
+  # only:
+  #   - development
   dependencies:
     # Gives this job access to the artifacts from `build` job
     - build
@@ -36,22 +43,22 @@ deploy_stage:
     >
       AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
       AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
-      aws s3 cp --recursive ./dist/ s3://stage.design.imshealth.com/
+      aws s3 cp --recursive ./dist/ s3://$STAGE_URL/
 
 deploy_prod:
   image: python:3.6
   stage: deploy
+  environment:
+    name: production
+    url: http://$PROD_URL
   only:
     - master
   dependencies:
-    # Gives this job access to the artifacts from `build` job
     - build
   before_script:
-    # Install AWS Command Line Interface tools
     - pip install awscli
-  # Variables stored in Gitlab (e.g. $AWS_ID_DOCS) for security
   script:
     >
       AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
       AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
-      aws s3 cp --recursive ./dist/ s3://design.imshealth.com/
+      aws s3 cp --recursive ./dist/ s3://PROD_URL/
