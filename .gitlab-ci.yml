@@ -1,7 +1,7 @@
 variables:
   STAGE_URL: "stage.design.imshealth.com"
   PROD_URL: "design.imshealth.com"
-  CDN_URL: "cdn.ims.io/design"
+  CDN_URL: "nexxus-marketing-staticcontent/design/"
 
 stages:
   - build
