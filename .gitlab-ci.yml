@@ -7,6 +7,10 @@ stages:
   - build
   - deploy
 
+#
+# Build project, including docs and static assets
+#
+
 build:
   image: ruby:2.4.1
   stage: build
@@ -25,14 +29,18 @@ build:
     paths:
       - dist/
 
+#
+# Deploy docs on push to development branch
+#
+
 deploy_stage:
   image: python:3.6
   stage: deploy
   environment:
     name: Staging
     url: http://$STAGE_URL
-  # only:
-  #   - development
+  only:
+    - development
   dependencies:
     # Gives this job access to the artifacts from `build` job
     - build
@@ -45,6 +53,10 @@ deploy_stage:
       AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
       AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
       aws s3 cp --recursive ./dist/ s3://$STAGE_URL/
+
+#
+# Deploy docs on push to master
+#
 
 deploy_prod:
   image: python:3.6
@@ -63,6 +75,10 @@ deploy_prod:
       AWS_ACCESS_KEY_ID=$AWS_ID_DOCS
       AWS_SECRET_ACCESS_KEY=$AWS_SECRET_DOCS
       aws s3 cp --recursive ./dist/ s3://PROD_URL/
+
+#
+# Deploy JS and CSS on new tag creation
+#
 
 deploy_cdn:
   image: python:3.6
