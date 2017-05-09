@@ -28,8 +28,8 @@ import eslint from 'gulp-eslint';
 //
 
 const strings = {
-  VERSION_COMMENT: '/*! Apollo JS v1.3.2 */',
-  VERSION: '1.3.2'
+  VERSION_COMMENT: '/*! Apollo JS v1.3.3 */',
+  VERSION: '1.3.3'
 };
 
 const path = {

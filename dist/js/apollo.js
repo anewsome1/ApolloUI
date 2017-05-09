@@ -47,7 +47,7 @@
 	'use strict';
 
 	/*!
-	 * Apollo JS v1.3.2
+	 * Apollo JS v1.3.3
 	 */
 
 	/* global window, document */
