@@ -3,6 +3,15 @@
 This log provides an overview of the significant changes in each version release.  This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [v1.3.3] - 2017-05-09
+
+### Changed
+- Removed unused animation files
+
+### Added
+- Continuous Integration configuration
+
+
 ## [v1.3.2] - 2017-04-13
 
 ### Changed
