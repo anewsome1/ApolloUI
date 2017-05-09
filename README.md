@@ -2,6 +2,12 @@
 
 Apollo UI is the CSS framework for implementing the Apollo visual language for IMS Health web applications.  HTML documentation and examples can be found at [devdocs.design.imshealth.com](http://devdocs.design.imshealth.com) or by running the docs locally using the instructions below.
 
+## Status
+
+[![build status](https://gitlab.ims.io/apollo/apollo-ui/badges/master/build.svg)](https://gitlab.ims.io/apollo/apollo-ui/commits/master)
+[![npm version](https://badge.fury.io/js/apollo-ui.svg)](https://badge.fury.io/js/apollo-ui)
+
+
 ## Getting started
 
 ### Package Management
