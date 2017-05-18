@@ -12,7 +12,6 @@
   transition: all $transition-fast;
 }
 
-
 ///
 /// Card main sections
 ///
@@ -21,6 +20,7 @@
 .card-block,
 .card-footer {
   @include clearfix;
+
   padding-right: $card-spacer-x;
   padding-left: $card-spacer-x;
 }
@@ -59,7 +59,9 @@
     .card-cta {
       flex-grow: 1;
     }
-  } @else {
+  }
+
+  @else {
     @include clearfix;
 
     .card-cta {
@@ -94,6 +96,7 @@
 
 .card-title {
   @extend .h2;
+
   line-height: 1;
   margin-top: $card-spacer-y;
   margin-bottom: 0;
@@ -126,7 +129,9 @@
       }
     }
   }
-} @else {
+}
+
+@else {
   @include media-breakpoint-up(sm) {
     .card-deck {
       display: table;
@@ -148,31 +153,10 @@
         width: 100%;
       }
     }
+
     .card-deck-wrapper {
       margin-right: (-$grid-gutter-width-base / 2);
       margin-left: (-$grid-gutter-width-base / 2);
     }
   }
 }
-
-
-///
-/// Card states
-///
-
-// @each $state, $state-props in $alert-states {
-//   $state-bg: map-get($state-props, bg);
-
-//   .card-#{ $state } {
-//     position: relative;
-//     &::before {
-//       position: absolute;
-//       top: 0;
-//       content: '';
-//       width: 100%;
-//       height: $card-spacer-y;
-//       background-color: $state-bg;
-//       box-shadow: 0 ($card-spacer-y / 2) 0 0 transparentize($state-bg, .5);
-//     }
-//   }
-// }

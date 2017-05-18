@@ -27,7 +27,6 @@
   }
 }
 
-
 // Nav inline
 
 .nav-inline {
@@ -41,13 +40,11 @@
   }
 }
 
-
 ///
 /// Tabs
 ///
 
 .nav-tabs {
-
   border-left: $border-width solid $gray-200;
 
   .nav-link {
@@ -104,8 +101,9 @@
   @if $enable-flex {
     display: flex;
     flex-wrap: wrap;
+  }
 
-  } @else {
+  @else {
     @include clearfix;
 
     .nav-item {
@@ -118,7 +116,9 @@
       .nav-item {
         flex: 1;
       }
-    } @else {
+    }
+
+    @else {
       display: table;
       width: 100%;
 
@@ -135,12 +135,12 @@
         flex: 1;
       }
     }
+
     .nav-link {
       text-align: center;
     }
   }
 }
-
 
 ///
 /// Tabbable tabs
@@ -151,6 +151,7 @@
   > .tab-pane {
     display: none;
   }
+
   > .active {
     display: block;
   }

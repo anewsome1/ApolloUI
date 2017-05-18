@@ -2,7 +2,6 @@
   border: $border-width solid $accordion-border-color;
 }
 
-
 // Padding
 .accordion-header,
 .accordion-block {
@@ -13,9 +12,10 @@
 .accordion-header {
   cursor: pointer;
   border-top: $border-width solid $accordion-border-color;
-  transition: background-color $transition-fast,
-              color $transition-fast,
-              font-weight $transition-fast;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast,
+    font-weight $transition-fast;
 
   .accordion-title {
     font-weight: $accordion-head-font-weight-active;
@@ -48,16 +48,17 @@
 
   &::before {
     @extend %icon-base;
+
     position: absolute;
     right: 0;
     top: 0;
-    content: map-get($_icons-map, 'chevron-up');
+    content: map-get( $_icons-map, 'chevron-up' );
     transition: transform $transition-fast;
     transform-origin: center center;
   }
 
   .collapsed &::before {
-    transform: scaleY(-1);
+    transform: scaleY( -1 );
   }
 }
 
@@ -70,7 +71,7 @@
   border: 0;
 
   .card {
-    background-color: transparent;    
+    background-color: transparent;
   }
 
   .accordion-header {
@@ -94,11 +95,11 @@
     }
   }
 
-  .accordion-header:not(.collapsed),
+  .accordion-header:not( .collapsed ),
   .accordion-content {
     background-color: $accordion-dark-active-bg;
     box-shadow: inset 5px 0 0 0 $accordion-head-color-active;
-  }  
+  }
 }
 
 

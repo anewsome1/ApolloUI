@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Apollo CSS v1.3.2
+ * Apollo CSS v1.3.3
  */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -3973,7 +3973,7 @@ input[type='radio']:checked {
 .table-responsive {
   display: block;
   width: 100%;
-  min-height: 0.01%;
+  min-height: .01%;
   overflow-x: auto;
 }
 

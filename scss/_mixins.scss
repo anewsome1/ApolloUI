@@ -2,13 +2,14 @@
 ///  Creates font-face declaration with optional font weight and style
 ///
 
-@mixin font-face($family, $path, $filename: '', $weight: normal, $style: normal) {
+@mixin font-face( $family, $path, $filename: '', $weight: normal, $style: normal ) {
   @font-face {
     font-family: $family;
-    src: url('#{ $path }#{ $filename }.eot');
-    src: url('#{ $path }#{ $filename }.eot?#iefix') format('embedded-opentype'),
-         url('#{ $path }#{ $filename }.woff') format('woff'),
-         url('#{ $path }#{ $filename }.ttf') format('truetype');
+    src: url( '#{ $path }#{ $filename }.eot' );
+    src:
+      url( '#{ $path }#{ $filename }.eot?#iefix' ) format( 'embedded-opentype' ),
+      url( '#{ $path }#{ $filename }.woff' ) format( 'woff' ),
+      url( '#{ $path }#{ $filename }.ttf' ) format( 'truetype' );
     font-weight: $weight;
     font-style: $style;
   }
@@ -19,14 +20,14 @@
 ///  Background colors
 ///
 
-@mixin bg-color($bg-color, $text-color: null, $link-color: null) {
+@mixin bg-color( $bg-color, $text-color: null, $link-color: null ) {
   background-color: $bg-color;
 
-  @if($text-color) {
+  @if ( $text-color ) {
     color: $text-color;
   }
 
-  @if($link-color) {
+  @if ( $link-color ) {
     a {
       &,
       &:visited {
@@ -35,7 +36,7 @@
 
       &:hover,
       &:active {
-        color: darken($link-color, 10%);
+        color: darken( $link-color, 10% );
       }
     }
   }
@@ -46,14 +47,8 @@
 /// Error states
 ///
 
-@mixin alert-bg($bg-color, $text-color: null, $link-color: null, $icon: null) {
-  @include bg-color($bg-color, $text-color, $link-color);
-  // @if($icon) {
-  //   &::before {
-  //     content: map-get($_icons-map, $icon);
-  //     color: $text-color;
-  //   }
-  // }
+@mixin alert-bg( $bg-color, $text-color: null, $link-color: null, $icon: null ) {
+  @include bg-color( $bg-color, $text-color, $link-color );
 }
 
 ///

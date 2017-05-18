@@ -2,6 +2,12 @@
 
 Apollo UI is the CSS framework for implementing the Apollo visual language for IMS Health web applications.  HTML documentation and examples can be found at [devdocs.design.imshealth.com](http://devdocs.design.imshealth.com) or by running the docs locally using the instructions below.
 
+## Status
+
+[![build status](https://gitlab.ims.io/apollo/apollo-ui/badges/master/build.svg)](https://gitlab.ims.io/apollo/apollo-ui/commits/master)
+[![npm version](https://badge.fury.io/js/apollo-ui.svg)](https://badge.fury.io/js/apollo-ui)
+
+
 ## Getting started
 
 ### Package Management
@@ -10,12 +16,12 @@ Use Apollo UI as a dependency of your application with [NPM](http://npmjs.com) o
 
 #### NPM
 ```
-npm install apollo-ui@1.3.2 --save
+npm install apollo-ui@1.3.3 --save
 ```
 
 #### Bower
 ```
-bower install apollo-ui#1.3.2 --save
+bower install apollo-ui#1.3.3 --save
 ```
 
 
@@ -24,7 +30,7 @@ bower install apollo-ui#1.3.2 --save
 You can easily access the compiled CSS for Apollo from our CDN. This is the fastest way to start using Apollo styles in your project.
 
 ```
-<link rel="stylesheet" href="//cdn.ims.io/design/css/1.3.2/apollo.min.css">
+<link rel="stylesheet" href="//cdn.ims.io/design/css/1.3.3/apollo.min.css">
 ```
 
 ### Compiled JavaScript
@@ -33,7 +39,7 @@ Some JavaScript is required to enable the behavior of components like Dropdowns,
 
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//cdn.ims.io/design/js/1.3.2/apollo.min.js"></script>
+<script src="//cdn.ims.io/design/js/1.3.3/apollo.min.js"></script>
 ```
 
 

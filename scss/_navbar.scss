@@ -31,7 +31,7 @@
 
     height: $navbar-sm-height;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up( sm ) {
       height: $navbar-height;
     }
   }
@@ -64,8 +64,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  } @else {
-    margin-top: calc-padding-y($navbar-height, $navbar-brand-font-size * $line-height);
+  }
+
+  @else {
+    margin-top: calc-padding-y( $navbar-height, $navbar-brand-font-size * $line-height );
   }
 
   &-logo {
@@ -113,20 +115,17 @@
 
     @if $enable-flex == false {
       display: block;
-      margin-top: calc-padding-y($navbar-height, ($btn-padding-y + $navbar-link-font-size * $line-height) );
+      margin-top: calc-padding-y( $navbar-height, ( $btn-padding-y + $navbar-link-font-size * $line-height ) );
     }
   }
 
   &:hover > a {
     background-color: $navbar-link-bg-hover;
   }
-
-
 }
 
 .navbar-item.active > a,
-.navbar-item.dropdown.open > a,
- {
+.navbar-item.dropdown.open > a {
   background-color: $navbar-link-bg-active;
 }
 
@@ -153,9 +152,10 @@
 
       .badge {
         $icon-badge-size: 1.2rem;
+
         position: absolute;
         display: block;
-        top: (-$icon-badge-size / 4);
+        top: ( -$icon-badge-size / 4 );
         right: $btn-padding-x / 2;
         width: $icon-badge-size;
         height: $icon-badge-size;
@@ -167,8 +167,9 @@
         border-radius: 50%;
 
         @each $state, $props in $alert-states {
-          $bg: map-get($props, bg);
-          $color: map-get($props, color);
+          $bg: map-get( $props, bg );
+          $color: map-get( $props, color );
+
           &.badge-#{ $state } {
             color: $color;
             background-color: $bg;
@@ -185,7 +186,7 @@
 
 .navbar-profile {
   position: relative;
-  margin-right: (-$grid-gutter-width-base / 2);
+  margin-right: ( -$grid-gutter-width-base / 2 );
   text-align: right;
   height: 100%;
   transition: background-color $transition-fast;
@@ -199,7 +200,7 @@
   }
 
   @if $enable-flex == false {
-    margin-top: calc-padding-y($navbar-height, $navbar-link-font-size * 1.85 * 1.2);
+    margin-top: calc-padding-y( $navbar-height, $navbar-link-font-size * 1.85 * 1.2 );
   }
 
   .profile-credential,
@@ -216,14 +217,14 @@
   .profile-username {
     color: $navbar-link-color;
     font-size: $navbar-link-font-size;
-    padding: $navbar-link-padding-y ($grid-gutter-width-base / 2);
+    padding: $navbar-link-padding-y ( $grid-gutter-width-base / 2 );
     margin-top: -.5rem;
     margin-bottom: -1.2rem;
   }
 
   .profile-credential,
   .dropdown-menu > li > a {
-    padding-right: ($grid-gutter-width-base / 2) + 1.75rem;
+    padding-right: ( $grid-gutter-width-base / 2 ) + 1.75rem;
   }
 
   .profile-credential {
@@ -254,7 +255,6 @@
 //   padding-right: 1.5rem; // ~28px
 // }
 
-
 ///
 /// Environment
 /// DEPRECATED in v1.1.0
@@ -267,34 +267,31 @@
     align-self: stretch;
     align-items: center;
     justify-content: center;
-  } @else {
+  }
+
+  @else {
     // TODO: Add better fallback here later
     float: right;
     text-align: center;
   }
 
-  width: percentage(2 / 12);
-  margin-right: (-$grid-gutter-width-base / 2);
+  width: percentage( 2 / 12 );
+  margin-right: ( -$grid-gutter-width-base / 2 );
   margin-left: $grid-gutter-width-base / 2;
   color: #fff;
   background-color: $navbar-link-bg-active;
 }
 
-
 // Utility for shifting content down when using navbar-fixed-top
 .margin-top-navbar {
-
-  @include media-breakpoint-only(xs) {
+  @include media-breakpoint-only( xs ) {
     margin-top: $navbar-sm-height;
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up( sm ) {
     margin-top: $navbar-height;
   }
-
 }
-
-
 
 ///
 /// Command bar
@@ -337,4 +334,3 @@
     padding-right: .25rem; // ~4px
   }
 }
-

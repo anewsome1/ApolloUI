@@ -42,47 +42,58 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	// Copy to clipboard stuff
+	'use strict';
+
 	__webpack_require__(1);
 
-	// Smooth scrolling thing
 	__webpack_require__(10);
 
-
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var Clipboard = __webpack_require__( 2 );
-	var clipboard = new Clipboard('.js-code-copy');
+	'use strict';
+
+	var _clipboard = __webpack_require__(2);
+
+	var _clipboard2 = _interopRequireDefault(_clipboard);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var clipboard = new _clipboard2.default('.js-code-copy');
 
 	// Success!
-	clipboard.on( 'success', function( event ) {
+	/* global window */
+
+	clipboard.on('success', function (event) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Copied!';
-	  window.setTimeout(function() {
+	  window.setTimeout(function () {
 	    event.trigger.textContent = btnText;
 	  }, 2000);
 	  event.clearSelection();
 	});
 
 	// Oh noes!
-	clipboard.on( 'error', function( event ) {
+	clipboard.on('error', function (event) {
 	  var btnText = event.trigger.textContent;
 	  event.trigger.textContent = 'Press "⌘ + C" to copy';
-	  window.setTimeout(function() {
+	  window.setTimeout(function () {
 	    event.trigger.textContent = btnText;
 	  }, 5000);
 	});
 
-
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	(function (global, factory) {
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(3), __webpack_require__(5), __webpack_require__(6)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
@@ -94,7 +105,7 @@
 	        factory(mod, global.clipboardAction, global.tinyEmitter, global.goodListener);
 	        global.clipboard = mod.exports;
 	    }
-	})(this, function (module, _clipboardAction, _tinyEmitter, _goodListener) {
+	})(undefined, function (module, _clipboardAction, _tinyEmitter, _goodListener) {
 	    'use strict';
 
 	    var _clipboardAction2 = _interopRequireDefault(_clipboardAction);
@@ -138,12 +149,12 @@
 	            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
 	        }
 
-	        return call && (typeof call === "object" || typeof call === "function") ? call : self;
+	        return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 	    }
 
 	    function _inherits(subClass, superClass) {
 	        if (typeof superClass !== "function" && superClass !== null) {
-	            throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	            throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
 	        }
 
 	        subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -179,7 +190,6 @@
 	         * or custom functions that were passed in the constructor.
 	         * @param {Object} options
 	         */
-
 
 	        _createClass(Clipboard, [{
 	            key: 'resolveOptions',
@@ -282,11 +292,15 @@
 	    module.exports = Clipboard;
 	});
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	(function (global, factory) {
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [module, __webpack_require__(4)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof exports !== "undefined") {
@@ -298,7 +312,7 @@
 	        factory(mod, global.select);
 	        global.clipboardAction = mod.exports;
 	    }
-	})(this, function (module, _select) {
+	})(undefined, function (module, _select) {
 	    'use strict';
 
 	    var _select2 = _interopRequireDefault(_select);
@@ -309,10 +323,10 @@
 	        };
 	    }
 
-	    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-	        return typeof obj;
+	    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 	    } : function (obj) {
-	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
 	    };
 
 	    function _classCallCheck(instance, Constructor) {
@@ -354,7 +368,6 @@
 	         * Defines base properties passed from constructor.
 	         * @param {Object} options
 	         */
-
 
 	        _createClass(ClipboardAction, [{
 	            key: 'resolveOptions',
@@ -515,9 +528,11 @@
 	    module.exports = ClipboardAction;
 	});
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
+
+	'use strict';
 
 	function select(element) {
 	    var selectedText;
@@ -526,8 +541,7 @@
 	        element.focus();
 
 	        selectedText = element.value;
-	    }
-	    else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+	    } else if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
 	        var isReadOnly = element.hasAttribute('readonly');
 
 	        if (!isReadOnly) {
@@ -542,8 +556,7 @@
 	        }
 
 	        selectedText = element.value;
-	    }
-	    else {
+	    } else {
 	        if (element.hasAttribute('contenteditable')) {
 	            element.focus();
 	        }
@@ -563,18 +576,19 @@
 
 	module.exports = select;
 
-
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
-	function E () {
+	"use strict";
+
+	function E() {
 	  // Keep this empty so it's easier to inherit from
 	  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 	}
 
 	E.prototype = {
-	  on: function (name, callback, ctx) {
+	  on: function on(name, callback, ctx) {
 	    var e = this.e || (this.e = {});
 
 	    (e[name] || (e[name] = [])).push({
@@ -585,18 +599,18 @@
 	    return this;
 	  },
 
-	  once: function (name, callback, ctx) {
+	  once: function once(name, callback, ctx) {
 	    var self = this;
-	    function listener () {
+	    function listener() {
 	      self.off(name, listener);
 	      callback.apply(ctx, arguments);
 	    };
 
-	    listener._ = callback
+	    listener._ = callback;
 	    return this.on(name, listener, ctx);
 	  },
 
-	  emit: function (name) {
+	  emit: function emit(name) {
 	    var data = [].slice.call(arguments, 1);
 	    var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
 	    var i = 0;
@@ -609,15 +623,14 @@
 	    return this;
 	  },
 
-	  off: function (name, callback) {
+	  off: function off(name, callback) {
 	    var e = this.e || (this.e = {});
 	    var evts = e[name];
 	    var liveEvents = [];
 
 	    if (evts && callback) {
 	      for (var i = 0, len = evts.length; i < len; i++) {
-	        if (evts[i].fn !== callback && evts[i].fn._ !== callback)
-	          liveEvents.push(evts[i]);
+	        if (evts[i].fn !== callback && evts[i].fn._ !== callback) liveEvents.push(evts[i]);
 	      }
 	    }
 
@@ -625,9 +638,7 @@
 	    // Suggested by https://github.com/lazd
 	    // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
 
-	    (liveEvents.length)
-	      ? e[name] = liveEvents
-	      : delete e[name];
+	    liveEvents.length ? e[name] = liveEvents : delete e[name];
 
 	    return this;
 	  }
@@ -635,10 +646,11 @@
 
 	module.exports = E;
 
-
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	var is = __webpack_require__(7);
 	var delegate = __webpack_require__(8);
@@ -667,14 +679,11 @@
 
 	    if (is.node(target)) {
 	        return listenNode(target, type, callback);
-	    }
-	    else if (is.nodeList(target)) {
+	    } else if (is.nodeList(target)) {
 	        return listenNodeList(target, type, callback);
-	    }
-	    else if (is.string(target)) {
+	    } else if (is.string(target)) {
 	        return listenSelector(target, type, callback);
-	    }
-	    else {
+	    } else {
 	        throw new TypeError('First argument must be a String, HTMLElement, HTMLCollection, or NodeList');
 	    }
 	}
@@ -692,10 +701,10 @@
 	    node.addEventListener(type, callback);
 
 	    return {
-	        destroy: function() {
+	        destroy: function destroy() {
 	            node.removeEventListener(type, callback);
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -708,17 +717,17 @@
 	 * @return {Object}
 	 */
 	function listenNodeList(nodeList, type, callback) {
-	    Array.prototype.forEach.call(nodeList, function(node) {
+	    Array.prototype.forEach.call(nodeList, function (node) {
 	        node.addEventListener(type, callback);
 	    });
 
 	    return {
-	        destroy: function() {
-	            Array.prototype.forEach.call(nodeList, function(node) {
+	        destroy: function destroy() {
+	            Array.prototype.forEach.call(nodeList, function (node) {
 	                node.removeEventListener(type, callback);
 	            });
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -736,10 +745,11 @@
 
 	module.exports = listen;
 
-
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
+
+	'use strict';
 
 	/**
 	 * Check if argument is a HTML element.
@@ -747,10 +757,8 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.node = function(value) {
-	    return value !== undefined
-	        && value instanceof HTMLElement
-	        && value.nodeType === 1;
+	exports.node = function (value) {
+	  return value !== undefined && value instanceof HTMLElement && value.nodeType === 1;
 	};
 
 	/**
@@ -759,13 +767,10 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.nodeList = function(value) {
-	    var type = Object.prototype.toString.call(value);
+	exports.nodeList = function (value) {
+	  var type = Object.prototype.toString.call(value);
 
-	    return value !== undefined
-	        && (type === '[object NodeList]' || type === '[object HTMLCollection]')
-	        && ('length' in value)
-	        && (value.length === 0 || exports.node(value[0]));
+	  return value !== undefined && (type === '[object NodeList]' || type === '[object HTMLCollection]') && 'length' in value && (value.length === 0 || exports.node(value[0]));
 	};
 
 	/**
@@ -774,9 +779,8 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.string = function(value) {
-	    return typeof value === 'string'
-	        || value instanceof String;
+	exports.string = function (value) {
+	  return typeof value === 'string' || value instanceof String;
 	};
 
 	/**
@@ -785,16 +789,17 @@
 	 * @param {Object} value
 	 * @return {Boolean}
 	 */
-	exports.fn = function(value) {
-	    var type = Object.prototype.toString.call(value);
+	exports.fn = function (value) {
+	  var type = Object.prototype.toString.call(value);
 
-	    return type === '[object Function]';
+	  return type === '[object Function]';
 	};
 
-
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
 
 	var closest = __webpack_require__(9);
 
@@ -814,10 +819,10 @@
 	    element.addEventListener(type, listenerFn, useCapture);
 
 	    return {
-	        destroy: function() {
+	        destroy: function destroy() {
 	            element.removeEventListener(type, listenerFn, useCapture);
 	        }
-	    }
+	    };
 	}
 
 	/**
@@ -830,21 +835,22 @@
 	 * @return {Function}
 	 */
 	function listener(element, selector, type, callback) {
-	    return function(e) {
+	    return function (e) {
 	        e.delegateTarget = closest(e.target, selector);
 
 	        if (e.delegateTarget) {
 	            callback.call(element, e);
 	        }
-	    }
+	    };
 	}
 
 	module.exports = delegate;
 
-
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
+
+	'use strict';
 
 	var DOCUMENT_NODE_TYPE = 9;
 
@@ -854,11 +860,7 @@
 	if (typeof Element !== 'undefined' && !Element.prototype.matches) {
 	    var proto = Element.prototype;
 
-	    proto.matches = proto.matchesSelector ||
-	                    proto.mozMatchesSelector ||
-	                    proto.msMatchesSelector ||
-	                    proto.oMatchesSelector ||
-	                    proto.webkitMatchesSelector;
+	    proto.matches = proto.matchesSelector || proto.mozMatchesSelector || proto.msMatchesSelector || proto.oMatchesSelector || proto.webkitMatchesSelector;
 	}
 
 	/**
@@ -868,7 +870,7 @@
 	 * @param {String} selector
 	 * @return {Function}
 	 */
-	function closest (element, selector) {
+	function closest(element, selector) {
 	    while (element && element.nodeType !== DOCUMENT_NODE_TYPE) {
 	        if (element.matches(selector)) return element;
 	        element = element.parentNode;
@@ -877,35 +879,215 @@
 
 	module.exports = closest;
 
-
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	const $ = window.jQuery;
+	'use strict';
 
-	const scrollTiming = 500;
+	var _jump = __webpack_require__(11);
 
-	const SELECTORS = {
+	var _jump2 = _interopRequireDefault(_jump);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var $ = window.jQuery; /* global window */
+
+	var scrollTiming = 500;
+	var SELECTORS = {
 	  ANCHOR_TAGS: '.js-docs-smooth-scroll',
 	  SCROLL_AREA: 'html, body'
-	}
+	};
 
-	$(function() {
-	  $( SELECTORS.ANCHOR_TAGS ).click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $( SELECTORS.SCROLL_AREA ).animate({
-	          scrollTop: target.offset().top
-	        }, scrollTiming);
-	        return false;
-	      }
-	    }
+	$(function () {
+	  $(SELECTORS.ANCHOR_TAGS).on('click', function (event) {
+	    (0, _jump2.default)(event.target.hash, {
+	      duration: scrollTiming
+	    });
 	  });
 	});
 
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ }
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	(function (global, factory) {
+	  ( false ? 'undefined' : _typeof2(exports)) === 'object' && typeof module !== 'undefined' ? module.exports = factory() :  true ? !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : global.Jump = factory();
+	})(undefined, function () {
+	  'use strict';
+
+	  // Robert Penner's easeInOutQuad
+
+	  // find the rest of his easing functions here: http://robertpenner.com/easing/
+	  // find them exported for ES6 consumption here: https://github.com/jaxgeller/ez.js
+
+	  var easeInOutQuad = function easeInOutQuad(t, b, c, d) {
+	    t /= d / 2;
+	    if (t < 1) return c / 2 * t * t + b;
+	    t--;
+	    return -c / 2 * (t * (t - 2) - 1) + b;
+	  };
+
+	  var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	    return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+	  } : function (obj) {
+	    return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+	  };
+
+	  var jumper = function jumper() {
+	    // private variable cache
+	    // no variables are created during a jump, preventing memory leaks
+
+	    var element = void 0; // element to scroll to                   (node)
+
+	    var start = void 0; // where scroll starts                    (px)
+	    var stop = void 0; // where scroll stops                     (px)
+
+	    var offset = void 0; // adjustment from the stop position      (px)
+	    var easing = void 0; // easing function                        (function)
+	    var a11y = void 0; // accessibility support flag             (boolean)
+
+	    var distance = void 0; // distance of scroll                     (px)
+	    var duration = void 0; // scroll duration                        (ms)
+
+	    var timeStart = void 0; // time scroll started                    (ms)
+	    var timeElapsed = void 0; // time spent scrolling thus far          (ms)
+
+	    var next = void 0; // next scroll position                   (px)
+
+	    var callback = void 0; // to call when done scrolling            (function)
+
+	    // scroll position helper
+
+	    function location() {
+	      return window.scrollY || window.pageYOffset;
+	    }
+
+	    // element offset helper
+
+	    function top(element) {
+	      return element.getBoundingClientRect().top + start;
+	    }
+
+	    // rAF loop helper
+
+	    function loop(timeCurrent) {
+	      // store time scroll started, if not started already
+	      if (!timeStart) {
+	        timeStart = timeCurrent;
+	      }
+
+	      // determine time spent scrolling so far
+	      timeElapsed = timeCurrent - timeStart;
+
+	      // calculate next scroll position
+	      next = easing(timeElapsed, start, distance, duration);
+
+	      // scroll to it
+	      window.scrollTo(0, next);
+
+	      // check progress
+	      timeElapsed < duration ? window.requestAnimationFrame(loop) // continue scroll loop
+	      : done(); // scrolling is done
+	    }
+
+	    // scroll finished helper
+
+	    function done() {
+	      // account for rAF time rounding inaccuracies
+	      window.scrollTo(0, start + distance);
+
+	      // if scrolling to an element, and accessibility is enabled
+	      if (element && a11y) {
+	        // add tabindex indicating programmatic focus
+	        element.setAttribute('tabindex', '-1');
+
+	        // focus the element
+	        element.focus();
+	      }
+
+	      // if it exists, fire the callback
+	      if (typeof callback === 'function') {
+	        callback();
+	      }
+
+	      // reset time for next jump
+	      timeStart = false;
+	    }
+
+	    // API
+
+	    function jump(target) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	      // resolve options, or use defaults
+	      duration = options.duration || 1000;
+	      offset = options.offset || 0;
+	      callback = options.callback; // "undefined" is a suitable default, and won't be called
+	      easing = options.easing || easeInOutQuad;
+	      a11y = options.a11y || false;
+
+	      // cache starting position
+	      start = location();
+
+	      // resolve target
+	      switch (typeof target === 'undefined' ? 'undefined' : _typeof(target)) {
+	        // scroll from current position
+	        case 'number':
+	          element = undefined; // no element to scroll to
+	          a11y = false; // make sure accessibility is off
+	          stop = start + target;
+	          break;
+
+	        // scroll to element (node)
+	        // bounding rect is relative to the viewport
+	        case 'object':
+	          element = target;
+	          stop = top(element);
+	          break;
+
+	        // scroll to element (selector)
+	        // bounding rect is relative to the viewport
+	        case 'string':
+	          element = document.querySelector(target);
+	          stop = top(element);
+	          break;
+	      }
+
+	      // resolve scroll distance, accounting for offset
+	      distance = stop - start + offset;
+
+	      // resolve duration
+	      switch (_typeof(options.duration)) {
+	        // number in ms
+	        case 'number':
+	          duration = options.duration;
+	          break;
+
+	        // function passed the distance of the scroll
+	        case 'function':
+	          duration = options.duration(distance);
+	          break;
+	      }
+
+	      // start the loop
+	      window.requestAnimationFrame(loop);
+	    }
+
+	    // expose only the jump method
+	    return jump;
+	  };
+
+	  // export singleton
+
+	  var singleton = jumper();
+
+	  return singleton;
+	});
+
+/***/ })
 /******/ ]);

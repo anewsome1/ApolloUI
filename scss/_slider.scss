@@ -35,11 +35,10 @@
         border: $border-width solid $slider-handle-border-color;
       }
     }
-
   }
 
   &:hover::before {
-    transform: scale(1.2);
+    transform: scale( 1.2 );
 
     .disabled & {
       transform: none;
@@ -63,10 +62,6 @@
       }
     }
   }
-
-
-
-
 }
 
 .slider-value {
@@ -80,7 +75,6 @@
   transition: color $transition-fast;
 }
 
-
 .slider-fill {
   position: absolute;
   top: 0;
@@ -93,7 +87,7 @@
     background-color: $slider-disabled-fill-bg;
   }
 
-  .slider-handle:nth-of-type(2) + & {
+  .slider-handle:nth-of-type( 2 ) + & {
     // left: $slider-position-min;
     // right: 100% - $slider-position-max;
     width: auto;

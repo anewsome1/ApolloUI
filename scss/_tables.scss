@@ -18,7 +18,6 @@
     padding-left: $grid-gutter-width-base;
   }
 
-
   ///
   /// Table header
   ///
@@ -47,7 +46,7 @@
   tbody tr {
     transition: all $transition-fast;
 
-    &:nth-of-type(even) {
+    &:nth-of-type( even ) {
       background-color: $table-bg-accent;
     }
 
@@ -55,7 +54,7 @@
     ///  Row status highlighting
     ///
     @each $state, $state-props in $alert-states {
-      $state-bg: map-get($state-props, bg);
+      $state-bg: map-get( $state-props, bg );
 
       &.table-#{ $state },
       &.table-border-#{ $state } {
@@ -65,7 +64,7 @@
       }
 
       &.table-#{ $state } {
-        background-color: rgba($state-bg, .2);
+        background-color: rgba( $state-bg, .2 );
       }
     }
   }
@@ -147,7 +146,7 @@
     margin-right: $grid-gutter-width-base / 3;
 
     + .btn-link {
-        margin-left: 0;
+      margin-left: 0;
     }
   }
 
@@ -175,8 +174,6 @@
       }
     }
   }
-
-
 }
 
 
@@ -192,13 +189,6 @@
   }
 }
 
-
-// Hover effect
-//
-// Placed here since it has to come after the potential zebra striping
-
-
-
 // Responsive tables
 //
 // Wrap your tables in `.table-responsive` and we'll make them mobile friendly
@@ -208,12 +198,6 @@
 .table-responsive {
   display: block;
   width: 100%;
-  min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+  min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
   overflow-x: auto;
-
-  // TODO: find out if we need this still.
-  //
-  // border: $table-border-width solid $table-border-color;
-  // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
 }
-
