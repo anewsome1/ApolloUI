@@ -147,22 +147,19 @@ pre code {
 
 @media (max-width: 575px) {
   .docs-page-nav {
-    -moz-column-count: 2;
-         column-count: 2;
+    column-count: 2;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .docs-page-nav {
-    -moz-column-count: 3;
-         column-count: 3;
+    column-count: 3;
   }
 }
 
 @media (max-width: 767px) {
   .docs-page-nav {
-    -moz-column-gap: 1.875rem;
-         column-gap: 1.875rem;
+    column-gap: 1.875rem;
   }
 }
 
@@ -596,6 +593,44 @@ hr {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   color: #ffffff;
+}
+
+.login-overlay {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 2000;
+}
+
+.login-overlay .login {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 1%;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.login-overlay .login .loading-indicator {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.login-overlay .login:hover {
+  margin-left: -2px;
+  margin-top: -2px;
+  box-shadow: 0 14px 28px rgba(204, 204, 204, 0.25), 6px 10px 10px rgba(204, 204, 204, 0.22);
+}
+
+.blur {
+  filter: blur(2.5px);
 }
 
 .docs-home,

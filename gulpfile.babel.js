@@ -123,14 +123,13 @@ gulp.task( 'apollo-scripts', ( callback ) => {
  );
 });
 
-
 //
 // Docs JS bundle
 //
 
 gulp.task( 'docs-scripts', ( callback ) => {
   pump([
-    gulp.src( path.DOCS_JS_SRC_MAIN ),
+    gulp.src( path.DOCS_JS_SRC_MAIN  ),
     webpackStream({
       module: {
         loaders: [
@@ -359,5 +358,5 @@ gulp.task( 'lint-scripts', [ 'lint-apollo-scripts', 'lint-docs-scripts' ]);
 gulp.task( 'lint', [ 'lint-scripts', 'lint-styles' ]);
 gulp.task( 'theo', [ 'clean:theo', 'theo-colors-scss', 'theo-colors-json', 'theo-icons-scss', 'theo-icons-json' ]);
 gulp.task( 'publish', [ 'publish-css', 'publish-js', 'publish-tags' ]);
-gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs', 'lint' ]);
+gulp.task( 'default', [ 'apollo-styles', 'apollo-scripts', 'docs-styles', 'docs-scripts', 'docs', 'lint', ]);
 gulp.task( 'serve', [ 'default', 'server', 'watch' ]);

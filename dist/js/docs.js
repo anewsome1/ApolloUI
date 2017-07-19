@@ -91,7 +91,7 @@
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	(function (global, factory) {
 	    if (true) {
@@ -119,6 +119,12 @@
 	            default: obj
 	        };
 	    }
+
+	    var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	        return typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+	    } : function (obj) {
+	        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === 'undefined' ? 'undefined' : _typeof2(obj);
+	    };
 
 	    function _classCallCheck(instance, Constructor) {
 	        if (!(instance instanceof Constructor)) {
@@ -149,12 +155,12 @@
 	            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
 	        }
 
-	        return call && ((typeof call === 'undefined' ? 'undefined' : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+	        return call && ((typeof call === 'undefined' ? 'undefined' : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
 	    }
 
 	    function _inherits(subClass, superClass) {
 	        if (typeof superClass !== "function" && superClass !== null) {
-	            throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof(superClass)));
+	            throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === 'undefined' ? 'undefined' : _typeof2(superClass)));
 	        }
 
 	        subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -199,6 +205,7 @@
 	                this.action = typeof options.action === 'function' ? options.action : this.defaultAction;
 	                this.target = typeof options.target === 'function' ? options.target : this.defaultTarget;
 	                this.text = typeof options.text === 'function' ? options.text : this.defaultText;
+	                this.container = _typeof(options.container) === 'object' ? options.container : document.body;
 	            }
 	        }, {
 	            key: 'listenClick',
@@ -222,6 +229,7 @@
 	                    action: this.action(trigger),
 	                    target: this.target(trigger),
 	                    text: this.text(trigger),
+	                    container: this.container,
 	                    trigger: trigger,
 	                    emitter: this
 	                });
@@ -375,6 +383,7 @@
 	                var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 	                this.action = options.action;
+	                this.container = options.container;
 	                this.emitter = options.emitter;
 	                this.target = options.target;
 	                this.text = options.text;
@@ -403,7 +412,7 @@
 	                this.fakeHandlerCallback = function () {
 	                    return _this.removeFake();
 	                };
-	                this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
+	                this.fakeHandler = this.container.addEventListener('click', this.fakeHandlerCallback) || true;
 
 	                this.fakeElem = document.createElement('textarea');
 	                // Prevent zooming on iOS
@@ -422,7 +431,7 @@
 	                this.fakeElem.setAttribute('readonly', '');
 	                this.fakeElem.value = this.text;
 
-	                document.body.appendChild(this.fakeElem);
+	                this.container.appendChild(this.fakeElem);
 
 	                this.selectedText = (0, _select2.default)(this.fakeElem);
 	                this.copyText();
@@ -431,13 +440,13 @@
 	            key: 'removeFake',
 	            value: function removeFake() {
 	                if (this.fakeHandler) {
-	                    document.body.removeEventListener('click', this.fakeHandlerCallback);
+	                    this.container.removeEventListener('click', this.fakeHandlerCallback);
 	                    this.fakeHandler = null;
 	                    this.fakeHandlerCallback = null;
 	                }
 
 	                if (this.fakeElem) {
-	                    document.body.removeChild(this.fakeElem);
+	                    this.container.removeChild(this.fakeElem);
 	                    this.fakeElem = null;
 	                }
 	            }
@@ -473,8 +482,8 @@
 	        }, {
 	            key: 'clearSelection',
 	            value: function clearSelection() {
-	                if (this.target) {
-	                    this.target.blur();
+	                if (this.trigger) {
+	                    this.trigger.focus();
 	                }
 
 	                window.getSelection().removeAllRanges();
@@ -872,7 +881,9 @@
 	 */
 	function closest(element, selector) {
 	    while (element && element.nodeType !== DOCUMENT_NODE_TYPE) {
-	        if (element.matches(selector)) return element;
+	        if (typeof element.matches === 'function' && element.matches(selector)) {
+	            return element;
+	        }
 	        element = element.parentNode;
 	    }
 	}

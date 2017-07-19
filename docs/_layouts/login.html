@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <div class="login-overlay">
+    <div class="login">
+      <div class="loading-indicator">
+        <svg class="spinner-inner" viewbox="0 0 64 64">
+          <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+        </svg>
+        <svg class="spinner-outer" viewbox="0 0 64 64">
+          <circle class="spinner" r="25%" cx="50%" cy="50%"></circle>
+        </svg>
+      </div>
+      <h1 class="login-brand-name">Apollo UI</h1>
+      <div class="form-group text-xs-center">
+        <button class="btn btn-primary btn-block" id="btn-login" type="submit">Login</button>
+      </div>
+    </div>
+  </div>
+  <body {% if layout.class %}class="{{ layout.class }}"{% endif %}>
+    <span class="blur">{% include docs-navbar.html %}</span>
+    {{ content }}
+    {% include home-scripts.html %}
+  </body>
+</html>
